@@ -31,7 +31,7 @@ class StressManagementAssessment(BaseAssessment):
             4: 2,
             5: 0
         }
-        stress_level = int(answers.get('Leidest du unter Stress?', 0))
+        stress_level = int(answers.get('Leidest du aktuell unter Stress?', 0))
         stress_level_value = stress_level_mapping.get(stress_level, 0)
         stress_situations_response = answers.get('Welche der folgenden Stresssituationen trifft momentan auf dich zu?', '')
         stress_symptoms_response = answers.get('Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?', '')
@@ -127,7 +127,7 @@ class StressManagementAssessment(BaseAssessment):
 if __name__ == "__main__":
     stress_management = StressManagementAssessment(
         answers={
-            'Leidest du unter Stress?': '1',
+            'Leidest aktuell du unter Stress?': '1',
             'Ich versuche, die positive Seite von Stress und Druck zu sehen.': '5',
             'Ich tue alles, damit Stress erst gar nicht entsteht.': '5',
             'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.': '5',

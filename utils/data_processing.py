@@ -38,7 +38,7 @@ def integrate_answers(answers):
             'Fühlst du dich einsam?': answers.get('Fühlst du dich einsam?')
         },
         'stress_management': {
-            'Leidest du unter Stress?': answers.get('Leidest du unter Stress?'),
+            'Leidest du aktuell unter Stress?': answers.get('Leidest du aktuell unter Stress?'),
             'Welche der folgenden Stresssituationen trifft momentan auf dich zu?': answers.get(
                 'Welche der folgenden Stresssituationen trifft momentan auf dich zu?'),
             'Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?': answers.get(
