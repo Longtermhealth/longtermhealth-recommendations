@@ -30,6 +30,10 @@ def main():
     field_mapping = get_field_mapping()
     responses = get_responses()
 
+@app.route('/')
+def hello():
+    return "Hello, Flask is working!"
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     data = request.json
@@ -109,11 +113,14 @@ def webhook():
             schedule = generate_schedule(answers, scores, routines, rules)
             routines = display_monthly_plan(schedule)
             task_id = create_clickup_task(lastname, scores, answers, total_score, routines,
-                                           "(scores:weighting 70:30 with daily time 60)")
+                                           "")
             upload_file_to_clickup(task_id, image_path)
             os.remove(image_path)
 
     return jsonify({'status': 'success'}), 200
+
+
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
