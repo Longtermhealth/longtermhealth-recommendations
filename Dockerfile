@@ -18,5 +18,4 @@ COPY . .
 
 EXPOSE 80
 # Specify the command to run the Flask app
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:80", "main_flask:app"]
-
+CMD ["python", "main_flask.py"]
