@@ -16,5 +16,6 @@ ENV PYTHONPATH=/app
 # Copy the rest of the application code into the container
 COPY . .
 
+EXPOSE 80
 # Specify the command to run the Flask app
 CMD ["python", "main_flask.py"]
