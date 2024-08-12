@@ -23,6 +23,20 @@ class CognitionAssessment(BaseAssessment):
         forgetfulness = int(answers.get('Wie würdest du deine Vergesslichkeit einstufen?', 0))
         forgetfulness = 6 - forgetfulness
 
+
+        concentration = answers.get('Wie gut ist dein Konzentrationsvermögen?')
+        if concentration is None:
+            concentration = 0
+        else:
+            concentration = int(concentration)
+        #screentime_work_mapping = {'0-2 Stunden': 1, '2-4 Stunden': 2, '4-6 Stunden': 3, '6-8 Stunden': 5, '> 8 Stunden': 5}
+        #screentime_work = screentime_work_mapping.get(answers.get('Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?', ''), 0)
+
+
+        #screentime_private_mapping = {'0-1 Stunde': 5, '1-2 Stunden': 4, '2-3 Stunden': 3, '3-4 Stunden': 2, '> 4 Stunden': 1}
+        #screentime_private = screentime_private_mapping.get(answers.get('Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?', ''), 0)
+
+
         color_puzzle = int(answers.get('Welche Zahl gehört unter die letzte Abbildung?', 0))
         if color_puzzle == 2002:
             color_puzzle = 5
@@ -47,7 +61,7 @@ class CognitionAssessment(BaseAssessment):
         else:
             word_allocation = 0
 
-        return forgetfulness, color_puzzle, numerical_series, form_quiz, word_allocation
+        return forgetfulness, concentration, color_puzzle, numerical_series, form_quiz, word_allocation
 
     def calculate_cognition_score(self):
         """
@@ -55,9 +69,9 @@ class CognitionAssessment(BaseAssessment):
 
         :return: The calculated cognition score as a float
         """
-        forgetfulness, color_puzzle, numerical_series, form_quiz, word_allocation = self.cognition
-        total_points = forgetfulness + color_puzzle + numerical_series + form_quiz + word_allocation
-        score = total_points / 25 * 100
+        forgetfulness, concentration, color_puzzle, numerical_series, form_quiz, word_allocation = self.cognition
+        total_points = forgetfulness + concentration + color_puzzle + numerical_series + form_quiz + word_allocation
+        score = total_points / 30 * 100
         return score
 
     def report(self):

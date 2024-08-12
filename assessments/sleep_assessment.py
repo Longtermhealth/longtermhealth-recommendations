@@ -33,11 +33,11 @@ class SleepAssessment(BaseAssessment):
         :param time_outside_evening: Time spent outside in the evening
         :return: A list of scores for each sleep-related question
         """
-        sleep_quality_mapping = {'sehr gut': 5, 'gut': 4, 'mittel': 3, 'ich habe leichte Schlafprobleme': 2, 'Ich habe schwere Schlafprobleme': 0}
-        sleep_hours_mapping = {'0-3': 1, '4-6': 3, '7-9': 5, '10-12': 3, 'mehr als 12': 2}
+        sleep_quality_mapping = {'Sehr gut': 5, 'Gut': 4, 'Mittel': 3, 'Ich habe leichte Schlafprobleme': 2, 'Ich habe schwere Schlafprobleme': 0}
+        sleep_hours_mapping = {'0-3': 1, '4-6': 3, '7-9': 5, '10-12': 3, '> 12': 2}
         sleep_problems_mapping = {'Einschlafprobleme': 1, 'Durchschlafprobleme': 1, 'Sonstige': 1}
-        time_outside_morning_mapping = {'mehr als 60 min': 5, '30-60 min': 4, '15-30 min': 3, '0-15 min': 2, 'gar keine': 0}
-        time_outside_evening_mapping = {'mehr als 60 min': 5, '30-60 min': 4, '15-30 min': 3, '0-15 min': 2, 'gar keine': 0}
+        time_outside_morning_mapping = {'> 20 min': 5, '11-20 min': 4, '5-10 min': 3, '< 5 min': 2}
+        time_outside_evening_mapping = {'> 20 min': 5, '11-20 min': 4, '5-10 min': 3, '< 5 min': 2}
 
         sleep_quality_value = sleep_quality_mapping[sleep_quality]
         sleep_hours_value = sleep_hours_mapping[sleep_hours]
@@ -45,7 +45,7 @@ class SleepAssessment(BaseAssessment):
         time_outside_morning_value = time_outside_morning_mapping[time_outside_morning]
         time_outside_evening_value = time_outside_evening_mapping[time_outside_evening]
 
-        if sleep_quality in ['sehr gut', 'gut', 'mittel']:
+        if sleep_quality in ['Sehr gut', 'Gut', 'Mittel']:
             sleep_problems_value = 5
         else:
             sleep_problems_value = 5 - sum(

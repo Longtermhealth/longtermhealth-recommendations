@@ -12,8 +12,8 @@ class SocialConnectionsAssessment(BaseAssessment):
         :param answers: A dictionary containing the answers to the social connections assessment questions
         """
         super().__init__()
-        activities = answers.get('Wie oft unternimmst du etwas mit anderen Menschen ?', 'fast täglich')
-        friends = answers.get('Hast du gute Freunde?', 'keine gute Freunde')
+        activities = answers.get('Wie oft unternimmst du etwas mit anderen Menschen ?', 'Fast täglich')
+        friends = answers.get('Hast du gute Freunde?', 'Keine gute Freunde')
         engagement = answers.get('Bist du sozial engagiert?', False)
         loneliness = answers.get('Fühlst du dich einsam?', 0)
 
@@ -34,8 +34,8 @@ class SocialConnectionsAssessment(BaseAssessment):
         :param loneliness: Level of loneliness
         :return: A list of scores for each social connections-related question
         """
-        activities_mapping = {'weniger als 2x pro Monat': 1, 'ca. 3-4x pro Monat': 3, 'mehrmals pro Woche': 4, 'fast täglich': 5}
-        friends_mapping = {'viele gute Freunde': 5, 'ein paar gute Freunde': 4, 'wenige gute Freunde': 2, 'keine gute Freunde': 0}
+        activities_mapping = {'Weniger als 2x pro Monat': 1, 'Ca. 3-4x pro Monat': 3, 'Mehrmals pro Woche': 4, 'Fast täglich': 5}
+        friends_mapping = {'Viele gute Freunde': 5, 'Ein paar gute Freunde': 4, 'Wenige gute Freunde': 2, 'Keine gute Freunde': 0}
         engagement_points = 5 if engagement else 0
 
         activities_value = activities_mapping[activities]

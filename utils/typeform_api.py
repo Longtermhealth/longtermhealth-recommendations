@@ -37,13 +37,15 @@ def get_field_mapping():
         print(f"Response: {response.text}")
         return None
 
+
 def process_latest_response(responses, field_mapping):
     if not responses or 'items' not in responses or not responses['items']:
         print("No responses found.")
         return None
 
-    latest_response = responses['items'][0]
-    print("Latest response",latest_response)
+    latest_response = responses['items'][1]
+    print("Latest response", latest_response)
+
     special_field_labels = {
         '7RNIAzXy1eCa': 'Vorname',
         'ANmNYBscN0R5': 'Nachname',
@@ -58,22 +60,26 @@ def process_latest_response(responses, field_mapping):
         field_label = special_field_labels.get(field_id, field_mapping.get(field_id, f"Unknown Field ({field_id})"))
 
         answer_type = answer['type']
+        value = None
+
         if answer_type == 'choice':
-            value = answer['choice']['label']
+            value = answer.get('choice', {}).get('label', 'No label')
         elif answer_type == 'choices':
-            value = ", ".join(answer['choices'].get('labels', []))
+            value = ", ".join(answer.get('choices', {}).get('labels', []))
         elif answer_type == 'boolean':
-            value = answer['boolean']
+            value = answer.get('boolean', 'No boolean value')
         elif answer_type == 'number':
-            value = answer['number']
+            value = answer.get('number', 'No number value')
         elif answer_type == 'text':
-            value = answer['text']
+            value = answer.get('text', 'No text value')
         else:
-            value = answer.get(answer_type, 'Unknown Type')
+            value = 'Unknown Type'
+
         answers[field_label] = value
 
-    print('answers',answers)
+    print('answers', answers)
     return answers
+
 
 def get_last_name(responses):
     if not responses or 'items' not in responses or not responses['items']:
@@ -81,7 +87,7 @@ def get_last_name(responses):
 
     first_name = None
     last_name = None
-    latest_response = responses['items'][0]
+    latest_response = responses['items'][1]
     for answer in latest_response['answers']:
         field_id = answer['field']['id']
         if field_id == 'ANmNYBscN0R5':

@@ -112,7 +112,7 @@ def main():
             schedule = generate_schedule(answers, scores, routines, rules)
             routines = display_monthly_plan(schedule)
             task_id = create_clickup_task(lastname, scores, answers, total_score, routines,
-                                           "(scores:weighting 70:30 with daily time 60)")
+                                           "")
             upload_file_to_clickup(task_id, image_path)
             os.remove(image_path)
 

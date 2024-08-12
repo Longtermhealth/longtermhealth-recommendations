@@ -96,7 +96,7 @@ def fill_day_with_routines_by_pillar(routines, daily_allocations, remaining_time
 
 def generate_schedule(responses, scores, routines, rules, score_weight=0.7):
     daily_time = responses.get('VIELEN DANK!\nWir erstellen nun deine erste individuelle Routine. Dazu müssen wir nur noch wissen, wie viel Zeit du täglich für deine langfristige Gesundheit investieren kannst.', 0)
-
+    #daily_time = 60
     # Calculate allocations by scores
     allocations_by_scores = calculate_daily_allocations_by_scores(daily_time, scores, THRESHOLDS)
 

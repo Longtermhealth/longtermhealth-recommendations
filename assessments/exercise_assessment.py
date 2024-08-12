@@ -53,9 +53,6 @@ class ExerciseAssessment(BaseAssessment):
                 total_points += points_mapping[sport]
 
         sports = total_points
-        test = answers.get('Wie aktiv bist du im Alltag?')
-        print('test',test)
-        print('flexibility, activity, sports_per_week, sports',flexibility, activity, sports_per_week, sports)
         return [flexibility, activity, sports_per_week, sports]
 
     def calculate_exercise_score(self):

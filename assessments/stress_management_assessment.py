@@ -36,8 +36,8 @@ class StressManagementAssessment(BaseAssessment):
         stress_situations_response = answers.get('Welche der folgenden Stresssituationen trifft momentan auf dich zu?', '')
         stress_symptoms_response = answers.get('Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?', '')
 
-        stress_situations = 5 if stress_situations_response == 'gar keine' else len(stress_situations_response.split(', '))
-        stress_symptoms = 5 if stress_symptoms_response == 'gar keine' else len(stress_symptoms_response.split(', '))
+        stress_situations = 5 if stress_situations_response == 'Gar keine' else len(stress_situations_response.split(', '))
+        stress_symptoms = 5 if stress_symptoms_response == 'Gar keine' else len(stress_symptoms_response.split(', '))
 
         def calculate_points(length):
             if length == 1:

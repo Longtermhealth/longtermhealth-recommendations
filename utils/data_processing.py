@@ -12,7 +12,7 @@ def integrate_answers(answers):
         'nutrition': {
             'Welcher Ernährungsstil trifft bei dir am ehesten zu?': answers.get(
                 'Welcher Ernährungsstil trifft bei dir am ehesten zu?'),
-            'Wie viel Fleisch nimmst du zu dir?': answers.get('Wie viel Fleisch nimmst du zu dir?'),
+            #'Wie viel Fleisch nimmst du zu dir?': answers.get('Wie viel Fleisch nimmst du zu dir?'),
             'Wie viel zuckerhaltige Produkte nimmst du zu dir?': answers.get('Wie viel zuckerhaltige Produkte nimmst du zu dir?'),
             'Wie viel Gemüse nimmst du pro Tag zu dir?': answers.get('Wie viel Gemüse nimmst du pro Tag zu dir?'),
             'Wie viel Obst nimmst du pro Tag zu dir?': answers.get('Wie viel Obst nimmst du pro Tag zu dir?'),
@@ -68,6 +68,8 @@ def integrate_answers(answers):
         'cognition': {
             'Wie würdest du deine Vergesslichkeit einstufen?': answers.get(
                 'Wie würdest du deine Vergesslichkeit einstufen?'),
+            'Wie gut ist dein Konzentrationsvermögen?': answers.get(
+                'Wie gut ist dein Konzentrationsvermögen?'),
             'Welche Zahl gehört unter die letzte Abbildung?': answers.get(
                 'Welche Zahl gehört unter die letzte Abbildung?'),
             'Ergänze die Zahlenreihenfolge 3,6,18,21,?': answers.get('Ergänze die Zahlenreihenfolge 3,6,18,21,?'),

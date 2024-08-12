@@ -34,9 +34,9 @@ class NutritionAssessment(BaseAssessment):
         else:
             fasting = 1
 
-        fluids_mapping = {'0-3': 1, '4-6': 2, '7-9': 3, '10-12': 5, 'mehr als 12': 5}
+        fluids_mapping = {'0-3': 1, '4-6': 2, '7-9': 3, '10-12': 5, '> 12': 5}
         fluids = fluids_mapping.get(answers.get('Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?', ''), 0)
-        alcohol_mapping = {'gar keinen': 5, '1-3': 4, '4-6': 3, '7-9': 2, '10-12': 1, 'mehr als 12': 0}
+        alcohol_mapping = {'Gar keinen': 5, '1-3': 4, '4-6': 3, '7-9': 2, '10-12': 1, '> 12': 0}
         alcohol = alcohol_mapping.get(answers.get('Wie viel Alkohol trinkst du in der Woche?', ''), 0)
 
         sugar = int(answers.get('Wie viel zuckerhaltige Produkte nimmst du zu dir?', 0))
@@ -47,20 +47,20 @@ class NutritionAssessment(BaseAssessment):
         if fruits >= 3:
             fruits = 5
         vegetables = int(answers.get('Wie viel Gemüse nimmst du pro Tag zu dir?', 0))
-
+        """
         meat = int(answers.get('Wie viel Fleisch nimmst du zu dir?', 0) or 0)
         if meat != 0:
             meat = 6 - meat
         elif meat == 0:
             meat = 5
-
+        """
         processed = int(answers.get('Wie häufig nimmst du Fertiggerichte zu dir?', 0))
         if processed != 0:
             processed = 6 - processed
 
         whole_grain = int(answers.get('Wie viel Vollkorn nimmst du zu dir?', 0))
 
-        return fasting, fasting_type, fluids, alcohol, sugar, fruits, vegetables, meat, processed, whole_grain
+        return fasting, fasting_type, fluids, alcohol, sugar, fruits, vegetables, processed, whole_grain
 
     def calculate_nutrition_score(self):
         """
@@ -68,19 +68,19 @@ class NutritionAssessment(BaseAssessment):
 
         :return: The calculated nutrition score as a float
         """
-        fasting, fasting_type, fluids, alcohol, sugar, fruits, vegetables, meat, processed, whole_grain = self.nutrition
+        fasting, fasting_type, fluids, alcohol, sugar, fruits, vegetables, processed, whole_grain = self.nutrition
 
         weight_sugar = 0.20
         weight_fruits = 0.10
-        weight_vegetables = 0.20
-        weight_meat = 0.10
+        weight_vegetables = 0.25
+        #weight_meat = 0.10
         weight_processed = 0.25
-        weight_whole_grain = 0.15
+        weight_whole_grain = 0.20
 
         nutri_score = (weight_sugar * sugar +
                        weight_fruits * fruits +
                        weight_vegetables * vegetables +
-                       weight_meat * meat +
+                       #weight_meat * meat +
                        weight_processed * processed +
                        weight_whole_grain * whole_grain)
 
