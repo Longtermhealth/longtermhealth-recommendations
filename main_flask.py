@@ -32,7 +32,18 @@ def main():
 
 @app.route('/')
 def hello():
-    return "Hello, Flask is working!"
+    response = {
+        "CLICKUP_API_KEY": os.getenv("CLICKUP_API_KEY"),
+        "CLICKUP_LIST_ID": os.getenv("CLICKUP_LIST_ID"),
+        "SCORES_FIELD_ID": os.getenv("SCORES_FIELD_ID"),
+        "PLOT_FIELD_ID": os.getenv("PLOT_FIELD_ID"),
+        "ANSWERS_FIELD_ID": os.getenv("ANSWERS_FIELD_ID"),
+        "ROUTINES_FIELD_ID": os.getenv("ROUTINES_FIELD_ID"),
+        "TYPEFORM_API_KEY": os.getenv("TYPEFORM_API_KEY"),
+        "FORM_ID": os.getenv("FORM_ID")
+    }
+    return jsonify(response)
+    #return "Hello, Flask is working!"
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
