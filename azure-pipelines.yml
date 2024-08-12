@@ -1,6 +1,5 @@
-# Docker
+# azure-pipelines.yml
 # Build and push an image to Azure Container Registry
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
 - main
@@ -37,4 +36,21 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-  
+        buildArgs: |
+          CLICKUP_API_KEY=$(CLICKUP_API_KEY)
+          CLICKUP_LIST_ID=$(CLICKUP_LIST_ID)
+          SCORES_FIELD_ID=$(SCORES_FIELD_ID)
+          PLOT_FIELD_ID=$(PLOT_FIELD_ID)
+          ANSWERS_FIELD_ID=$(ANSWERS_FIELD_ID)
+          ROUTINES_FIELD_ID=$(ROUTINES_FIELD_ID)
+          TYPEFORM_API_KEY=$(TYPEFORM_API_KEY)
+          FORM_ID=$(FORM_ID)
+    env:
+      CLICKUP_API_KEY: $(CLICKUP_API_KEY)
+      CLICKUP_LIST_ID: $(CLICKUP_LIST_ID)
+      SCORES_FIELD_ID: $(SCORES_FIELD_ID)
+      PLOT_FIELD_ID: $(PLOT_FIELD_ID)
+      ANSWERS_FIELD_ID: $(ANSWERS_FIELD_ID)
+      ROUTINES_FIELD_ID: $(ROUTINES_FIELD_ID)
+      TYPEFORM_API_KEY: $(TYPEFORM_API_KEY)
+      FORM_ID: $(FORM_ID)
