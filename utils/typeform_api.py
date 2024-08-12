@@ -43,7 +43,7 @@ def process_latest_response(responses, field_mapping):
         print("No responses found.")
         return None
 
-    latest_response = responses['items'][1]
+    latest_response = responses['items'][0]
     print("Latest response", latest_response)
 
     special_field_labels = {
@@ -87,7 +87,7 @@ def get_last_name(responses):
 
     first_name = None
     last_name = None
-    latest_response = responses['items'][1]
+    latest_response = responses['items'][0]
     for answer in latest_response['answers']:
         field_id = answer['field']['id']
         if field_id == 'ANmNYBscN0R5':
