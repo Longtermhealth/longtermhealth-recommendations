@@ -5,14 +5,12 @@ resources:
 - repo: self
 
 variables:
-  # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'a4f04d2d-a3e1-40ae-80aa-321005f23c28'
   imageRepository: 'lthrecommendations'
   containerRegistry: 'lthrecommendations.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
-  # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
@@ -33,7 +31,6 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-        arguments: '--no-cache'
         buildArgs: |
           CLICKUP_API_KEY=$(CLICKUP_API_KEY)
           CLICKUP_LIST_ID=$(CLICKUP_LIST_ID)

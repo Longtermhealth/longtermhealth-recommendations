@@ -32,12 +32,7 @@ def main():
 
 @app.route('/')
 def hello():
-    response = {
-        "FORM_ID": os.getenv("FORM_ID"),
-        "test": "test env3"
-    }
-    return jsonify(response)
-    #return "Hello, Flask is working!"
+    return "Hello, Flask is working!"
 
 @app.route('/webhook', methods=['POST'])
 def webhook():

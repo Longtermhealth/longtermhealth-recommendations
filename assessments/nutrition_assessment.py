@@ -46,14 +46,9 @@ class NutritionAssessment(BaseAssessment):
         fruits = int(answers.get('Wie viel Obst nimmst du pro Tag zu dir?', 0))
         if fruits >= 3:
             fruits = 5
+
         vegetables = int(answers.get('Wie viel Gemüse nimmst du pro Tag zu dir?', 0))
-        """
-        meat = int(answers.get('Wie viel Fleisch nimmst du zu dir?', 0) or 0)
-        if meat != 0:
-            meat = 6 - meat
-        elif meat == 0:
-            meat = 5
-        """
+
         processed = int(answers.get('Wie häufig nimmst du Fertiggerichte zu dir?', 0))
         if processed != 0:
             processed = 6 - processed
@@ -73,14 +68,12 @@ class NutritionAssessment(BaseAssessment):
         weight_sugar = 0.20
         weight_fruits = 0.10
         weight_vegetables = 0.25
-        #weight_meat = 0.10
         weight_processed = 0.25
         weight_whole_grain = 0.20
 
         nutri_score = (weight_sugar * sugar +
                        weight_fruits * fruits +
                        weight_vegetables * vegetables +
-                       #weight_meat * meat +
                        weight_processed * processed +
                        weight_whole_grain * whole_grain)
 
@@ -155,7 +148,6 @@ if __name__ == "__main__":
         'Wie viel zuckerhaltige Produkte nimmst du zu dir?': '1',
         'Wie viel Obst nimmst du pro Tag zu dir?': '5',
         'Wie viel Gemüse nimmst du pro Tag zu dir?': '5',
-        'Wie viel Fleisch nimmst du zu dir?': '1',
         'Wie häufig nimmst du Fertiggerichte zu dir?': '1',
         'Wie viel Vollkorn nimmst du zu dir?': '5',
         'Praktizierst du Intervallfasten und auf welche Art??': '16:8 (täglich 14-16 Stunden fasten)'

@@ -12,7 +12,6 @@ def integrate_answers(answers):
         'nutrition': {
             'Welcher Ernährungsstil trifft bei dir am ehesten zu?': answers.get(
                 'Welcher Ernährungsstil trifft bei dir am ehesten zu?'),
-            #'Wie viel Fleisch nimmst du zu dir?': answers.get('Wie viel Fleisch nimmst du zu dir?'),
             'Wie viel zuckerhaltige Produkte nimmst du zu dir?': answers.get('Wie viel zuckerhaltige Produkte nimmst du zu dir?'),
             'Wie viel Gemüse nimmst du pro Tag zu dir?': answers.get('Wie viel Gemüse nimmst du pro Tag zu dir?'),
             'Wie viel Obst nimmst du pro Tag zu dir?': answers.get('Wie viel Obst nimmst du pro Tag zu dir?'),
