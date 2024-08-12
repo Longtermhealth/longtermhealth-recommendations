@@ -33,7 +33,8 @@ def main():
 @app.route('/')
 def hello():
     response = {
-        "test": "test"
+        "test": "test",
+        "test2": "test2"
     }
     return jsonify(response)
     #return "Hello, Flask is working!"
