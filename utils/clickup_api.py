@@ -58,3 +58,19 @@ def upload_file_to_clickup(task_id, file_path):
         print(f"Failed to upload file to ClickUp: {response.content}")
         raise Exception("Failed to upload file to ClickUp")
     print("Successfully uploaded file to ClickUp")
+
+
+def update_clickup_custom_field(task_id, field_id, value):
+    url = f"https://api.clickup.com/api/v2/task/{task_id}/field/{field_id}"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": Config.CLICKUP_API_KEY
+    }
+    payload = {"value": value}
+
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 200:
+        print(f"Successfully updated ClickUp task {task_id} with {field_id}")
+    else:
+        print(f"Failed to update ClickUp task {task_id}. Response: {response.content}")
+        raise Exception(f"Failed to update task {task_id}")
