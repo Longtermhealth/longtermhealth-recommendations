@@ -4,7 +4,6 @@ from flask import Flask, request, jsonify
 from config import Config
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
 from utils.clickup_api import create_clickup_task, upload_file_to_clickup, update_clickup_custom_field
-#from utils.data_loader import load_routines, load_rules
 from utils.data_processing import integrate_answers
 from utils.link_summary import fetch_url_content, generate_summary
 from assessments.health_assessment import HealthAssessment
