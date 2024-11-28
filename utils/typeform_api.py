@@ -55,6 +55,9 @@ def process_latest_response(responses, field_mapping):
     }
 
     answers = {}
+    account_id = latest_response.get('hidden', {}).get('accountid', 'Unknown')
+    answers['accountid'] = account_id
+
     for answer in latest_response['answers']:
         field_id = answer['field']['id']
         field_label = special_field_labels.get(field_id, field_mapping.get(field_id, f"Unknown Field ({field_id})"))

@@ -1,0 +1,841 @@
+{
+  "data": {
+    "accountId": "107",
+    "totalDailyTimeInMins": 45,
+    "routines": [
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/203.jpg",
+        "routineId": 6314,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Minuten",
+            "amountUnit_en": ""
+          },
+          "value": 4
+        },
+        "description": "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.",
+        "displayName": "Fullbody Workout",
+        "durationCalculated": 4,
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9126,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "REPETITIONS",
+            "amountUnit_de": "Wdh.",
+            "amountUnit_en": ""
+          },
+          "value": 20
+        },
+        "description": "Ausfallschritte mit Sprüngen sind ein intensives Cardiotaining, das vor allem die Beine, das Gesäß und die Ausdauer stärkt.",
+        "displayName": "Ausfallschritte mit Sprüngen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9128,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTE",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.",
+        "displayName": "Hampelmänner",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9130,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTE",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.",
+        "displayName": "Bergsteiger",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9166,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTE",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Die stehende Katze-Kuh-Dehnung ist eine Mobilitätsübung, die vor allem die Flexibilität der Wirbelsäule verbessert.",
+        "displayName": "Stehende Katze-Kuh-Dehnung",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9170,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "SECONDS",
+            "amountUnit_de": "Sek.",
+            "amountUnit_en": ""
+          },
+          "value": 20
+        },
+        "description": "Die Vorwärts-Nacken-Dehnung ist eine sanfte Mobilitätsübung, die die Flexibilität und Haltung des Nackens verbessert.",
+        "displayName": "Vorwärts-Nacken-Dehnung",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/204.jpg",
+        "routineId": 6315,
+        "timeOfDay": "EVENING",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Minuten",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern.",
+        "displayName": "Abendritual",
+        "durationCalculated": 0,
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9208,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Der Verzicht auf Alkohol vor dem Schlafengehen fördert einen besseren Schlaf und verbessert das allgemeine Wohlbefinden.",
+        "displayName": "Kein Alkohol vor dem Schlafengehen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9212,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Das Dunkeln des Schlafzimmers ist eine Maßnahme zur Verbesserung des Schlafes und fördert eine bessere Einschlafqualität.",
+        "displayName": "Dunkles Schlafzimmer",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9213,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Schlafzimmer nur zum Schlafen ist eine Maßnahme zur Verbesserung der Schlafqualität und Reduzierung von Stress.",
+        "displayName": "Schlafzimmer nur zum Schlafen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/205.jpg",
+        "routineId": 6316,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Minuten",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.",
+        "displayName": "Gesunde Ernährung",
+        "durationCalculated": 0,
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/128.jpg",
+        "routineId": 9192,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Täglicher Verzehr von Hülsenfrüchten fördert eine gesunde Ernährung und verbessert die allgemeine Verdauung und Herzgesundheit.",
+        "displayName": "Täglich Hülsenfrüchte",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/129.jpg",
+        "routineId": 9193,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Olivenöl ist eine gesunde Ernährungsoption, die entzündungshemmend wirkt und die Herzgesundheit fördert.",
+        "displayName": "Olivenöl oder kaltgepresstes Öl",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/124.jpg",
+        "routineId": 9188,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Der tägliche Verzehr von drei Handvoll Gemüse fördert eine bessere Ernährung und unterstützt die Verdauung und das Immunsystem.",
+        "displayName": "3 Handvoll Gemüse täglich",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "GRATITUDE",
+          "pillar_de": "Dankbarkeit",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/154.jpg",
+        "routineId": 9218,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
+        "displayName": "Maui-Gewohnheit",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/186.jpg",
+        "routineId": 9250,
+        "durationCalculated": 3,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 3
+        },
+        "description": "Die 3-minütige Atemübung ist eine einfache Routine zur Stressreduktion, die die emotionale Regulation und Entspannung fördert.",
+        "displayName": "3-minütige Atemübung",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/190.jpg",
+        "routineId": 9254,
+        "durationCalculated": 5,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 5
+        },
+        "description": "Die To-Do-Liste ist eine einfache Methode zur Stressreduzierung und Verbesserung der Produktivität durch effektives Zeitmanagement.",
+        "displayName": "To-Do-Listen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "COGNITIVE_ENHANCEMENT",
+          "pillar_de": "Kognition",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/193.jpg",
+        "routineId": 9257,
+        "durationCalculated": 15,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 15
+        },
+        "description": "Das Schreiben von Gedichten fördert die Kreativität und verbessert die kognitiven Fähigkeiten sowie die Stressbewältigung.",
+        "displayName": "Lerne Poesie zu schreiben",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "COGNITIVE_ENHANCEMENT",
+          "pillar_de": "Kognition",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/194.jpg",
+        "routineId": 9258,
+        "durationCalculated": 5,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 5
+        },
+        "description": "Gedichte lesen ist eine geistige Aktivität, die vor allem das kognitive Denken und die Sprachfähigkeiten fördert.",
+        "displayName": "Gedichte lesen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/195.jpg",
+        "routineId": 9259,
+        "durationCalculated": 5,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 5
+        },
+        "description": "Lesen fördert die Entspannung und verbessert die kognitive Klarheit sowie die Sprachfähigkeiten.",
+        "displayName": "Aus Spaß lesen ",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "pillar_de": "Sozial",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/166.jpg",
+        "routineId": 9230,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Diese Routine fördert soziale Verbindungen und stärkt die zwischenmenschlichen Beziehungen, was das emotionale Wohlbefinden verbessert.",
+        "displayName": "Schreibe eine positive Nachricht",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "COGNITIVE_ENHANCEMENT",
+          "pillar_de": "Kognition",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/198.jpg",
+        "routineId": 9262,
+        "durationCalculated": 10,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 10
+        },
+        "description": "Sudoku spielen ist eine anregende geistige Übung, die das kognitive Denken und die Konzentration fördert.",
+        "displayName": "Mache 1 einfaches Sudoku",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      }
+    ]
+  }
+}

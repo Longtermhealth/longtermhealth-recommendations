@@ -1,53 +1,1040 @@
 {
-    "1": ["responses['Biologisches Geschlecht:'] != ''"],
-    "2": ["responses['Geburtsjahr'] != ''"],
-    "3": ["responses['Was ist deine Körpergröße (in cm)? '] != ''"],
-    "4": ["responses['Wie viel wiegst du (in kg)? '] != ''"],
-    "5": ["responses['Leidest Du unter chronischen Schmerzen?'] != ''"],
-    "6": ["responses['Hattest du schon einmal psychische Probleme?'] != ''"],
-    "7": ["responses['Wie schätzt du deine Beweglichkeit ein?'] != ''"],
-    "8": ["responses['Wie körperlich aktiv bist du?'] != ''"],
-    "9": ["responses['Wie oft in der Woche treibst du Sport?'] != ''"],
-    "10":["responses['Welchen Schwerpunkt haben die Sportarten, die du betreibst?'] != ''"],
-    "11":["responses['Welcher Ernährungsstil trifft bei dir am ehesten zu?'] != ''"],
-    "12":["responses['Wie viel Fleisch nimmst du zu dir?'] != ''"],
-    "13":["responses['Wie viel zuckerhaltige Produkte nimmst du zu dir?'] != ''"],
-    "14":["responses['Wie viel Gemüse nimmst du pro Tag zu dir?'] != ''"],
-    "15":["responses['Wie viel Obst nimmst du pro Tag zu dir?'] != ''"],
-    "16":["responses['Wie häufig nimmst du Fertiggerichte zu dir?'] != ''"],
-    "17":["responses['Wie viel Vollkorn nimmst du zu dir?'] != ''"],
-    "18":["responses['Praktizierst du Intervallfasten und auf welche Art??'] != ''"],
-    "19":["responses['Frühstück'] != ''"],
-    "20":["responses['Mittag'] != ''"],
-    "21":["responses['Abendessen'] != ''"],
-    "22":["responses['Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?'] != ''"],
-    "23":["responses['Wie viel Alkohol trinkst du in der Woche?'] != ''"],
-    "24":["responses['Wie ist deine Schlafqualität?'] != ''"],
-    "25":["responses['Welche Art Schlafprobleme hast du?'] != ''"],
-    "26":["responses['Wie viele Stunden schläfst du im Durchschnitt pro Nacht?'] != ''"],
-    "27":["responses['Fühlst du dich tagsüber müde?'] != ''"],
-    "28":["responses['Wie viel Zeit verbringst du morgens draußen?'] != ''"],
-    "29":["responses['Wie viel Zeit verbringst du abends draußen?'] != ''"],
-    "30":["responses['Wie oft unternimmst du etwas mit anderen Menschen?'] != ''"],
-    "31":["responses['Hast du gute Freunde?'] != ''"],
-    "32":["responses['Bist du sozial engagiert?'] != ''"],
-    "33":["responses['Fühlst du dich einsam?'] != ''"],
-    "34":["responses['Leidest du aktuell unter Stress?'] != ''"],
-    "35":["responses['Welche der folgenden Stresssituationen trifft momentan auf dich zu?'] != ''"],
-    "36":["responses['Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?'] != ''"],
-    "37":["responses['Ich versuche, die positive Seite von Stress und Druck zu sehen.'] != ''"],
-    "38":["responses['Ich tue alles, damit Stress erst gar nicht entsteht.'] != ''"],
-    "39":["responses['Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.'] != ''"],
-    "40":["responses['Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.'] != ''"],
-    "41":["responses['Ich habe so viel im Leben, wofür ich dankbar sein kann.'] != ''"],
-    "42":["responses['Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.'] != ''"],
-    "43":["responses['Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.'] != ''"],
-    "44":["responses['Ich bin vielen verschiedenen Menschen dankbar.'] != ''"],
-    "45":["responses['Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.'] != ''"],
-    "46":["responses['Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.'] != ''"],
-    "47":["responses['Wie würdest du deine Vergesslichkeit einstufen?'] != ''"],
-    "48":["responses['Welche Zahl gehört unter die letzte Abbildung?'] != ''"],
-    "49":["responses['Ergänze die Zahlenreihenfolge 3,6,18,21,?'] != ''"],
-    "50":["responses['Welche Form kommt an die Stelle vom ?'] != ''"],
-    "51":["responses['Quark : Milch / Brot : ?'] != ''"]
+  "exclusion_rules": [
+    {
+      "name": "Exclude One Condition, Multiple Actions",
+      "pillar": "basics",
+      "condition": {
+        "field": "test",
+        "operator": "==",
+        "value": "test"
+      },
+      "action": [
+        {
+          "field": "test",
+          "value": "test"
+        },
+        {
+          "field": "category",
+          "value": "test"
+        },
+        {
+          "field": "fitnessLevelRequired",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "name": "Exclude One Condition, One Action",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Geburtsjahr",
+        "operator": "==",
+        "value": 2000
+      },
+      "action": {
+        "field": "test",
+        "value": "test"
+      }
+    },
+    {
+      "name": "Exclude Tag Draußen",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Geburtsjahr",
+        "operator": "<",
+        "value": 1995
+      },
+      "action": {
+        "field": "locations.location_de",
+        "value": "Draußen"
+      }
+    },
+    {
+      "name": "Exclude intensive Exercises for Seniors",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Geburtsjahr",
+        "operator": "<",
+        "value": 1995
+      },
+      "action": [
+        {
+          "field": "fitnessLevelRequired",
+          "value": "MODERATE_FIT"
+        },
+        {
+          "field": "fitnessLevelRequired",
+          "value": "SPORTY"
+        },
+        {
+          "field": "fitnessLevelRequired",
+          "value": "ATHLETIC"
+        }
+      ]
+    },
+    {
+      "name": "Exclude if really low in all exercise questions -> really unfit",
+      "conditions": {
+        "logic": "and",
+        "rules": [
+          {
+            "field": "Wie oft in der Woche treibst du Sport?",
+            "operator": "==",
+            "value": "0"
+          },
+          {
+            "field": "Wie aktiv bist du im Alltag?",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "field": "fitnessLevelRequired",
+          "value": "MODERATE_FIT"
+        },
+        {
+          "field": "fitnessLevelRequired",
+          "value": "SPORTY"
+        },
+        {
+          "field": "fitnessLevelRequired",
+          "value": "ATHLETIC"
+        }
+      ]
+    },
+    {
+      "name": "Exclude Sports if already more than 2x per week",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Wie oft in der Woche treibst du Sport?",
+        "operator": ">=",
+        "value": 2
+      },
+      "actions": [
+        {
+          "field": "category",
+          "value": "SPORTS_EG_SOCCER_BASKETBALL_TENNIS"
+        },
+        {
+          "field": "subCategorySecondary",
+          "value": "SPORT"
+        }
+      ]
+    }
+  ],
+  "inclusion_rules": {
+    "SCORES": [
+      {
+        "name": "Exercise score -> STRENGTH_BUILDING",
+        "condition": {
+          "field": "MOVEMENT",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "goal",
+          "value": "STRENGTH_BUILDING",
+          "weight": 10
+        }
+      },
+      {
+        "name": "Nutrition score -> BETTER_NUTRITION",
+        "condition": {
+          "field": "NUTRITION",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "goal",
+          "value": "BETTER_NUTRITION",
+          "weight": 10
+        }
+      },
+      {
+        "name": "Sleep score -> BETTER_SLEEP_THROUGH",
+        "condition": {
+          "field": "SLEEP",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "benefit",
+          "value": "BETTER_SLEEP_THROUGH",
+          "weight": 10
+        }
+      },
+      {
+        "name": "Social score -> SOCIAL_CONNECTIONS",
+        "condition": {
+          "field": "SOCIAL_ENGAGEMENT",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "goal",
+          "value": "SOCIAL_CONNECTIONS",
+          "weight": 10
+        }
+      },
+      {
+        "name": "Stress score -> STRESS_REDUCTION",
+        "condition": {
+          "field": "STRESS",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "goal",
+          "value": "STRESS_REDUCTION",
+          "weight": 10
+        }
+      },
+      {
+        "name": "Gratitude score -> BETTER_MENTAL_HEALTH",
+        "condition": {
+          "field": "GRATITUDE",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "goal",
+          "value": "BETTER_MENTAL_HEALTH",
+          "weight": 10
+        }
+      },
+      {
+        "name": "Cognition score -> IMPROVE_COGNITION",
+        "condition": {
+          "field": "COGNITIVE_ENHANCEMENT",
+          "operator": "<=",
+          "value": 50
+        },
+        "action": {
+          "field": "goal",
+          "value": "IMPROVE_COGNITION",
+          "weight": 10
+        }
+      }
+    ],
+    "MOVEMENT": [
+      {
+        "name": "Include One condition, multiple actions",
+        "condition": {
+          "field": "test",
+          "operator": "<",
+          "value": "test"
+        },
+        "actions": [
+          {
+            "field": "test",
+            "value": "test",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "IMPROVES_LUNG_FUNCTION",
+            "weight": 2
+          },
+          {
+            "field": "fitnessLevelRequired",
+            "value": 4,
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Include Multiple conditions, one action",
+        "conditions": {
+          "logic": "and",
+          "rules": [
+            {
+              "field": "Wie oft in der Woche treibst du Sport?",
+              "operator": "==",
+              "value": "6"
+            },
+            {
+              "field": "Wie oft in der Woche treibst du Sport?",
+              "operator": "==",
+              "value": "6"
+            }
+          ]
+        },
+        "action": {
+          "field": "test",
+          "value": "test",
+          "weight": 2
+        }
+      },
+      {
+        "name": "One Condition, one Action",
+        "condition": {
+          "field": "Geburtsjahr",
+          "operator": "==",
+          "value": 2000
+        },
+        "action": {
+          "field": "tag",
+          "value": "junior",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Include Multiple conditions, multiple actions",
+        "conditions": {
+          "logic": "and",
+          "rules": [
+            {
+              "field": "Wie oft in der Woche treibst du Sport?",
+              "operator": "==",
+              "value": "6"
+            },
+            {
+              "field": "Wie oft in der Woche treibst du Sport?",
+              "operator": "==",
+              "value": "6"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "test",
+            "value": "test",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "IMPROVES_LUNG_FUNCTION",
+            "weight": 2
+          },
+          {
+            "field": "fitnessLevelRequired",
+            "value": 4,
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Include warm-up routines",
+        "conditions": {
+          "rules": [
+            {
+            "field": "Geburtsjahr",
+            "operator": "<",
+            "value": 1995
+            }
+          ],
+          "logic": "and"
+        },
+        "actions": [
+          {
+            "field": "tags.tag",
+            "value": "warm-up",
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "name": "Strength Focus for Age Over 40",
+        "conditions": {
+          "logic": "and",
+          "rules": [
+            {
+              "field": "Geburtsjahr",
+              "operator": "<",
+              "value": 1984
+            },
+            {
+              "field": "Geburtsjahr",
+              "operator": ">",
+              "value": 1944
+            }
+          ]
+        },
+        "action": {
+          "field": "tag",
+          "value": "strength",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Older than 80 Type Senior",
+        "condition": {
+          "field": "Geburtsjahr",
+          "operator": "<=",
+          "value": 1944
+        },
+        "action": {
+          "field": "tag",
+          "value": "senior",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Medium Mobility",
+        "condition": {
+          "field": "Wie schätzt du deine Beweglichkeit ein?",
+          "operator": "==",
+          "value": 3
+        },
+        "action": {
+          "field": "tag",
+          "value": "mobility",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Low Mobility",
+        "condition": {
+          "field": "Wie schätzt du deine Beweglichkeit ein?",
+          "operator": "==",
+          "value": 2
+        },
+        "action": {
+          "field": "tag",
+          "value": "mobility",
+          "weight": 3
+        }
+      },
+      {
+        "name": "Very low Mobility",
+        "condition": {
+          "field": "Wie schätzt du deine Beweglichkeit ein?",
+          "operator": "==",
+          "value": 1
+        },
+        "action": {
+          "field": "tag",
+          "value": "mobility",
+          "weight": 4
+        }
+      }
+    ],
+    "NUTRITION": [
+      {
+        "name": "High Sugar Intake",
+        "condition": {
+          "field": "Wie viel zuckerhaltige Produkte nimmst du zu dir?",
+          "operator": ">",
+          "value": 3
+        },
+        "action": {
+          "field": "tag",
+          "value": "cut-out sugary drinks",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Frequent Processed Foods",
+        "condition": {
+          "field": "Wie häufig nimmst du Fertiggerichte zu dir?",
+          "operator": ">",
+          "value": 3
+        },
+        "action": {
+          "field": "tag",
+          "value": "Food Prep",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Drink more Water",
+        "condition": {
+          "field": "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?",
+          "operator": "!=",
+          "value": "10-12"
+        },
+        "action": {
+          "field": "tag",
+          "value": "Food Prep",
+          "weight": 2
+        }
+      }
+    ],
+    "SLEEP": [
+      {
+        "name": "Low time outside morning",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+              "field": "Wie viel Zeit verbringst du morgens draußen?",
+              "operator": "==",
+              "value": "< 5 min"
+            },
+            {
+              "field": "Wie viel Zeit verbringst du morgens draußen?",
+              "operator": "==",
+              "value": "5-10 min"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "subCategory",
+            "value": "WALKING",
+            "weight": 2,
+            "condition_field": "location",
+            "condition_value": "OUTDOOR"
+          },
+          {
+            "field": "subCategory",
+            "value": "WALKING",
+            "weight": 2,
+            "condition_field": "timeOfDay",
+            "condition_value": "MORNING"
+          },
+          {
+            "field": "category",
+            "value": "CYCLING",
+            "weight": 2,
+            "condition_field": "location",
+            "condition_value": "OUTDOOR"
+          }
+        ]
+      },
+      {
+        "name": "Low time outside EVENING",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+              "field": "Wie viel Zeit verbringst du abends draußen?",
+              "operator": "==",
+              "value": "< 5 min"
+            },
+            {
+              "field": "Wie viel Zeit verbringst du abends draußen?",
+              "operator": "==",
+              "value": "5-10 min"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "subCategory",
+            "value": "WALKING",
+            "weight": 2,
+            "conditions": [
+              {
+                "condition_field": "location",
+                "condition_value": "OUTDOOR"
+              },
+              {
+                "condition_field": "timeOfDay",
+                "condition_value": "EVENING"
+              }
+            ]
+          },
+          {
+            "field": "category",
+            "value": "CYCLING",
+            "weight": 2,
+            "conditions": [
+              {
+                "condition_field": "location",
+                "condition_value": "OUTDOOR"
+              },
+              {
+                "condition_field": "timeOfDay",
+                "condition_value": "EVENING"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tired -> PROMOTE_PROMOTE_CIRCULATION",
+        "condition": {
+          "field": "Fühlst du dich tagsüber müde?",
+          "operator": ">",
+          "value": 3
+        },
+        "action": {
+          "field": "benefit",
+          "value": "PROMOTE_PROMOTE_CIRCULATION",
+          "weight": 2
+        }
+      }
+    ],
+    "SOCIAL_ENGAGEMENT": [
+      {
+        "name": "Not many good friends -> Group Activity YES or can be",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+              "field": "Hast du gute Freunde?",
+              "operator": "==",
+              "value": "Wenige gute Freunde"
+            },
+            {
+              "field": "Hast du gute Freunde?",
+              "operator": "==",
+              "value": "Keine gute Freunde"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "isGroupActivity",
+            "value": "YES",
+            "weight": 2
+          },
+          {
+            "field": "isGroupActivity",
+            "value": "CAN_BE",
+            "weight": 2
+          }
+        ]
+      }
+    ],
+    "STRESS": [
+      {
+        "name": "Stress high -> RECOVERY, BOOSTS_MOOD",
+        "condition": {
+          "field": "Leidest du aktuell unter Stress?",
+          "operator": ">",
+          "value": 3
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "RECOVERY",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "BOOSTS_MOOD",
+            "weight": 2
+          },
+          {
+            "field": "subCategory",
+            "value": "WALKING",
+            "weight": 2
+          },
+          {
+            "field": "subCategory",
+            "value": "SWIMMING",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Stresslevel 5 & Stresssituationen = Job -> breathing, aromatherapy, self care",
+        "conditions": {
+          "logic": "and",
+          "rules": [
+            {
+              "field": "Leidest du aktuell unter Stress?",
+              "operator": "==",
+              "value": 5
+            },
+            {
+              "field": "Welche der folgenden Stresssituationen trifft momentan auf dich zu?",
+              "operator": "==",
+              "value": "Job"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "BOOSTS_MOOD",
+            "weight": 2
+          },
+          {
+            "field": "tag",
+            "value": "breathing",
+            "weight": 2
+          },
+          {
+            "field": "category",
+            "value": "BREATHING_TECHNIQUES",
+            "weight": 2
+          },
+          {
+            "field": "tag",
+            "value": "aromatherapy",
+            "weight": 2
+          },
+          {
+            "field": "tag",
+            "value": "self care",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Stress induced unhealthy behaviors",
+        "condition": {
+          "field": "Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.",
+          "operator": ">",
+          "value": 3
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "BOOSTS_MOOD",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Stresslevel 2/3 -> TIME_MANAGEMENT",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+              "field": "Leidest du aktuell unter Stress?",
+              "operator": "==",
+              "value": 2
+            },
+            {
+              "field": "Leidest du aktuell unter Stress?",
+              "operator": "==",
+              "value": 3
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "tag",
+            "value": "Time management",
+            "weight": 2
+          },
+          {
+            "field": "category",
+            "value": "TIME_MANAGEMENT",
+            "weight": 2
+          }
+        ]
+      }
+    ],
+    "GRATITUDE": [
+      {
+        "name": "High Gratitude Level",
+        "condition": {
+          "field": "Ich habe so viel im Leben, wofür ich dankbar sein kann.",
+          "operator": "==",
+          "value": 5
+        },
+        "action": {
+          "field": "category",
+          "value": "GRATITUDE_PRACTICE"
+        }
+      }
+    ],
+    "COGNITIVE_ENHANCEMENT": [
+      {
+        "name": "Work screen time -> BACK_HEALTH, neck health, longer sports",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+              "field": "Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?",
+              "operator": "==",
+              "value": "6-8 Stunden"
+            },
+            {
+              "field": "Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?",
+              "operator": "==",
+              "value": "> 8 Stunden"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "goal",
+            "value": "BACK_HEALTH",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "NECK_STRETCH",
+            "weight": 2
+          },
+          {
+            "field": "tag",
+            "value": "neck mobility",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "High Forgetfulness -> Dementia Prevention Focus",
+        "condition": {
+          "field": "Wie würdest du deine Vergesslichkeit einstufen?",
+          "operator": ">",
+          "value": 3
+        },
+        "actions": [
+          {
+            "field": "goal",
+            "value": "DEMENTIA_PREVENTION",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "IMPROVE_MEMORY",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Concentration -> focus on a task longer",
+        "condition": {
+          "field": "Wie gut ist dein Konzentrationsvermögen?",
+          "operator": "<",
+          "value": 3
+        },
+        "actions": [
+          {
+            "field": "subCategory",
+            "value": "LOGIC_PUZZLES",
+            "weight": 2
+          },
+          {
+            "field": "subCategory",
+            "value": "CHESS",
+            "weight": 2
+          },
+          {
+            "field": "subCategory",
+            "value": "HANDICRAFT",
+            "weight": 2
+          },
+          {
+            "field": "subCategorySecondary",
+            "value": "HANDICRAFT",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Symbol puzzle -> logic puzzle",
+        "condition": {
+          "field": "Welche Zahl gehört unter die letzte Abbildung?",
+          "operator": "!=",
+          "value": 2002
+        },
+        "actions": [
+          {
+            "field": "subCategory",
+            "value": "LOGIC_PUZZLES",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Number row -> sudoku",
+        "condition": {
+          "field": "Ergänze die Zahlenreihenfolge 3,6,18,21,?",
+          "operator": "!=",
+          "value": 63
+        },
+        "actions": [
+          {
+            "field": "tag",
+            "value": "sudoku",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Deduction -> crossword puzzle, word games",
+        "condition": {
+          "field": "Quark : Milch / Brot : ?",
+          "operator": "!=",
+          "value": "Mehl"
+        },
+        "actions": [
+          {
+            "field": "tag",
+            "value": "crossword puzzle",
+            "weight": 2
+          }
+        ]
+      }
+    ],
+    "BASICS": [
+      {
+        "name": "BMI",
+        "condition": {
+          "field": "bmi",
+          "operator": ">=",
+          "value": 25
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "WEIGHT_LOSS",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "LOWER_BACK_MUSCLES",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "KNEE_STRENGTH",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Smoking",
+        "condition": {
+          "field": "Rauchst du?",
+          "operator": "==",
+          "value": "Ja"
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "IMPROVES_LUNG_FUNCTION",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Symptoms Back",
+        "condition": {
+          "field": "Leidest Du unter einem oder mehreren der folgenden Symptome?",
+          "operator": "==",
+          "value": "Chronische Rückenschmerzen"
+        },
+        "actions": [
+          {
+            "field": "tag",
+            "value": "back",
+            "weight": 2
+          },
+          {
+            "field": "order",
+            "value": 1,
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Symptoms Head",
+        "condition": {
+          "field": "Leidest Du unter einem oder mehreren der folgenden Symptome?",
+          "operator": "==",
+          "value": "Chronische Kopfschmerzen"
+        },
+        "action": {
+          "field": "tag",
+          "value": "headache",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Symptoms Endurance",
+        "condition": {
+          "field": "Leidest Du unter einem oder mehreren der folgenden Symptome?",
+          "operator": "==",
+          "value": "Wenig Ausdauer"
+        },
+        "actions": [
+          {
+            "field": "tag",
+            "value": "cardio",
+            "weight": 2
+          },
+          {
+            "field": "order",
+            "value": 1,
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Symptoms Immune System",
+        "condition": {
+          "field": "Leidest Du unter einem oder mehreren der folgenden Symptome?",
+          "operator": "==",
+          "value": "Schwaches Immunsystem"
+        },
+        "action": {
+          "field": "tag",
+          "value": "Immunesystem",
+          "weight": 2
+        }
+      },
+      {
+        "name": "Symptoms Exhaustion",
+        "condition": {
+          "field": "Leidest Du unter einem oder mehreren der folgenden Symptome?",
+          "operator": "==",
+          "value": "Häufig erschöpft"
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "PROMOTE_PROMOTE_CIRCULATION",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Burnout -> Focus on Walking, SWIMMING, Hiking",
+        "condition": {
+          "field": "Hast oder hattest du schon einmal psychische Probleme?",
+          "operator": "==",
+          "value": "Burnout"
+        },
+        "actions": [
+          {
+            "field": "subCategory",
+            "value": "WALKING",
+            "weight": 2
+          },
+          {
+            "field": "subCategory",
+            "value": "SWIMMING",
+            "weight": 2
+          },
+          {
+            "field": "benefit",
+            "value": "PROMOTE_CIRCULATION",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "name": "Anxiety, Depression, Burnout -> Boost Mood",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+              "field": "Hast oder hattest du schon einmal psychische Probleme?",
+              "operator": "==",
+              "value": "Angstzustände"
+            },
+            {
+              "field": "Hast oder hattest du schon einmal psychische Probleme?",
+              "operator": "==",
+              "value": "Depressionen"
+            },
+            {
+              "field": "Hast oder hattest du schon einmal psychische Probleme?",
+              "operator": "==",
+              "value": "Burnout"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "field": "benefit",
+            "value": "BOOSTS_MOOD",
+            "weight": 2
+          }
+        ]
+      }
+    ]
+  }
 }

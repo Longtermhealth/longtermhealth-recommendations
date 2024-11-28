@@ -12,6 +12,7 @@ class Config:
     PLOT_FIELD_ID = os.getenv("PLOT_FIELD_ID")
     ANSWERS_FIELD_ID = os.getenv("ANSWERS_FIELD_ID")
     ROUTINES_FIELD_ID = os.getenv("ROUTINES_FIELD_ID")
+    ACTIONPLAN_FIELD_ID = os.getenv("ACTIONPLAN_FIELD_ID")
     TYPEFORM_API_KEY = os.getenv("TYPEFORM_API_KEY")
     FORM_ID = os.getenv("FORM_ID")
     LINK_SUMMARY_TITLE_FIELD_ID = os.getenv("LINK_SUMMARY_TITLE_FIELD_ID")

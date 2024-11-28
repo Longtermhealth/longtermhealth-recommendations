@@ -45,18 +45,21 @@ def create_clickup_task(lastname, scores, answers, total_score, routines, task_n
     task = response.json()
     return task['id']
 
+
 def upload_file_to_clickup(task_id, file_path):
     url = f"https://api.clickup.com/api/v2/task/{task_id}/attachment"
     headers = {
         "Authorization": Config.CLICKUP_API_KEY
     }
-    files = {
-        'attachment': open(file_path, 'rb')
-    }
-    response = requests.post(url, headers=headers, files=files)
+    with open(file_path, 'rb') as f:
+        files = {
+            'attachment': f
+        }
+        response = requests.post(url, headers=headers, files=files)
+
     if response.status_code != 200:
         print(f"Failed to upload file to ClickUp: {response.content}")
-        raise Exception("Failed to upload file to ClickUp")
+        raise Exception(f"Failed to upload file to ClickUp: {response.json().get('err', 'Unknown error')}")
     print("Successfully uploaded file to ClickUp")
 
 

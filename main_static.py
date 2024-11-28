@@ -1,15 +1,13 @@
 # rule_based_system/main_static.py
-
+import os
 from config import Config
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
 from utils.clickup_api import create_clickup_task, upload_file_to_clickup
-from utils.data_loader import load_routines, load_rules
 from utils.data_processing import integrate_answers
 from assessments.health_assessment import HealthAssessment
-from scheduling.scheduler import generate_schedule, display_monthly_plan
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+from scheduling.scheduler import main as process_action_plan
 
 
 CLICKUP_API_KEY = Config.CLICKUP_API_KEY
@@ -18,6 +16,7 @@ SCORES_FIELD_ID = Config.SCORES_FIELD_ID
 PLOT_FIELD_ID = Config.PLOT_FIELD_ID
 ANSWERS_FIELD_ID = Config.ANSWERS_FIELD_ID
 ROUTINES_FIELD_ID = Config.ROUTINES_FIELD_ID
+ACTIONPLAN_FIELD_ID = Config.ACTIONPLAN_FIELD_ID
 TYPEFORM_API_KEY = Config.TYPEFORM_API_KEY
 FORM_ID = Config.FORM_ID
 
@@ -27,6 +26,7 @@ FORM_ID = Config.FORM_ID
 
 
 def main():
+    final_action_plan = process_action_plan()
     field_mapping = get_field_mapping()
     responses = get_responses()
 
@@ -99,22 +99,14 @@ def main():
             image_path = f"{lastname}_health_scores.png"
             plt.savefig(image_path)
             plt.show()
-            plt.close()
-
-            #task_id = create_clickup_task(lastname, scores, answers, total_score)
-            #upload_file_to_clickup(task_id, image_path)
-
-
-
-            routines = load_routines()
-            rules = load_rules()
-
-            schedule = generate_schedule(answers, scores, routines, rules)
-            routines = display_monthly_plan(schedule)
-            task_id = create_clickup_task(lastname, scores, answers, total_score, routines,
-                                           "")
+            task_id = create_clickup_task(lastname, scores, answers, total_score, final_action_plan, "test")
             upload_file_to_clickup(task_id, image_path)
+            action_plan_path = "./data/action_plan.json"
+            upload_file_to_clickup(task_id, action_plan_path)
+            plt.close()
             os.remove(image_path)
+
+
 
 
 if __name__ == "__main__":
