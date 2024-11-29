@@ -523,7 +523,7 @@ def main():
         "warm-up": 1,
         "strength": 1,
         "cardio": 1,
-        "basic mobility": 3
+        "basic mobility": 1
     }
 
     pillars = ['SLEEP', 'NUTRITION']
