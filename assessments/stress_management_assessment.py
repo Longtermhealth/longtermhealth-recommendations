@@ -51,11 +51,11 @@ class StressManagementAssessment(BaseAssessment):
             elif length > 4:
                 return 0
 
-        if stress_situations_response != 'gar keine':
+        if stress_situations_response != 'Gar keine':
             stress_situations_value = calculate_points(stress_situations)
         else:
             stress_situations_value = 5
-        if stress_symptoms_response != 'gar keine':
+        if stress_symptoms_response != 'Gar keine':
             stress_symptoms_value = calculate_points(stress_symptoms)
         else:
             stress_symptoms_value = 5
@@ -64,8 +64,7 @@ class StressManagementAssessment(BaseAssessment):
             'Ich versuche, die positive Seite von Stress und Druck zu sehen.': [5, 4, 3, 2, 1],
             'Ich tue alles, damit Stress erst gar nicht entsteht.': [5, 4, 3, 2, 1],
             'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.': [5, 4, 3, 2, 1],
-            'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': [5, 4, 3, 2, 1]
-        }
+            'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': [1, 2, 3, 4, 5]        }
 
         stress_coping_values = []
 
