@@ -12,7 +12,7 @@ from scheduling.scheduler import main as process_action_plan
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-
+import logging
 
 CLICKUP_API_KEY = Config.CLICKUP_API_KEY
 CLICKUP_LIST_ID = Config.CLICKUP_LIST_ID
@@ -28,7 +28,7 @@ LINK_SUMMARY_SUMMARY_FIELD_ID = Config.LINK_SUMMARY_SUMMARY_FIELD_ID
 LINK_SUMMARY_OPENAI_API_KEY = Config.LINK_SUMMARY_OPENAI_API_KEY
 
 app = Flask(__name__)
-
+logging.basicConfig(level=logging.DEBUG)
 
 
 def main():
