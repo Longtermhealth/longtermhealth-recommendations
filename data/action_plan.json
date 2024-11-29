@@ -1,7 +1,7 @@
 {
   "data": {
-    "accountId": "107",
-    "totalDailyTimeInMins": 45,
+    "accountId": "102",
+    "totalDailyTimeInMins": 33,
     "routines": [
       {
         "pillar": {
@@ -18,11 +18,11 @@
             "amountUnit_de": "Minuten",
             "amountUnit_en": ""
           },
-          "value": 4
+          "value": 3
         },
         "description": "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.",
         "displayName": "Fullbody Workout",
-        "durationCalculated": 4,
+        "durationCalculated": 3,
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -39,44 +39,6 @@
           3,
           4
         ]
-      },
-      {
-        "pillar": {
-          "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://longtermhealth.de",
-        "routineId": 9126,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "REPETITIONS",
-            "amountUnit_de": "Wdh.",
-            "amountUnit_en": ""
-          },
-          "value": 20
-        },
-        "description": "Ausfallschritte mit Sprüngen sind ein intensives Cardiotaining, das vor allem die Beine, das Gesäß und die Ausdauer stärkt.",
-        "displayName": "Ausfallschritte mit Sprüngen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6314
       },
       {
         "pillar": {
@@ -199,19 +161,19 @@
           "pillar_en": ""
         },
         "imageUrl": "https://longtermhealth.de",
-        "routineId": 9170,
-        "durationCalculated": 1,
+        "routineId": 9126,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "SECONDS",
-            "amountUnit_de": "Sek.",
+            "amountUnit": "REPETITIONS",
+            "amountUnit_de": "Wdh.",
             "amountUnit_en": ""
           },
           "value": 20
         },
-        "description": "Die Vorwärts-Nacken-Dehnung ist eine sanfte Mobilitätsübung, die die Flexibilität und Haltung des Nackens verbessert.",
-        "displayName": "Vorwärts-Nacken-Dehnung",
+        "description": "Ausfallschritte mit Sprüngen sind ein intensives Cardiotaining, das vor allem die Beine, das Gesäß und die Ausdauer stärkt.",
+        "displayName": "Ausfallschritte mit Sprüngen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -273,6 +235,44 @@
           "pillar_de": "Schlaf",
           "pillar_en": ""
         },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/139.jpg",
+        "routineId": 9203,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Lichter dimmen ist eine Abendroutine, die hilft, die Schlafqualität zu verbessern und Stress abzubauen.",
+        "displayName": "Lichter dimmen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
         "imageUrl": "https://longtermhealth.de",
         "routineId": 9208,
         "durationCalculated": 0,
@@ -287,6 +287,44 @@
         },
         "description": "Der Verzicht auf Alkohol vor dem Schlafengehen fördert einen besseren Schlaf und verbessert das allgemeine Wohlbefinden.",
         "displayName": "Kein Alkohol vor dem Schlafengehen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 9211,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Kaffee oder Koffein nach 14 Uhr zu vermeiden ist eine Maßnahme zur Verbesserung des Schlafs und der emotionalen Regulierung.",
+        "displayName": "Kein Kaffee nach 14 Uhr",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -424,6 +462,120 @@
           "pillar_de": "Ernährung",
           "pillar_en": ""
         },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/122.jpg",
+        "routineId": 9186,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Intervallfasten 16:8 ist eine Ernährungsroutine, die die Gesundheit des Herzens fördert und die Insulinempfindlichkeit verbessert.",
+        "displayName": "Intervallfasten 16:8",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/124.jpg",
+        "routineId": 9188,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Der tägliche Verzehr von drei Handvoll Gemüse fördert eine bessere Ernährung und unterstützt die Verdauung und das Immunsystem.",
+        "displayName": "3 Handvoll Gemüse täglich",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/125.jpg",
+        "routineId": 9189,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Zwei Handvoll Obst täglich verbessern die Ernährung und stärken das Immunsystem durch wertvolle Vitamine und Ballaststoffe.",
+        "displayName": "2 Handvoll Obst täglich",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/128.jpg",
         "routineId": 9192,
         "durationCalculated": 0,
@@ -496,44 +648,6 @@
       },
       {
         "pillar": {
-          "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/124.jpg",
-        "routineId": 9188,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Der tägliche Verzehr von drei Handvoll Gemüse fördert eine bessere Ernährung und unterstützt die Verdauung und das Immunsystem.",
-        "displayName": "3 Handvoll Gemüse täglich",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6316
-      },
-      {
-        "pillar": {
           "pillar": "GRATITUDE",
           "pillar_de": "Dankbarkeit",
           "pillar_en": ""
@@ -572,13 +686,13 @@
       },
       {
         "pillar": {
-          "pillar": "STRESS",
-          "pillar_de": "Resilienz",
+          "pillar": "GRATITUDE",
+          "pillar_de": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/186.jpg",
-        "routineId": 9250,
-        "durationCalculated": 3,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/155.jpg",
+        "routineId": 9219,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -586,10 +700,10 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 3
+          "value": 2
         },
-        "description": "Die 3-minütige Atemübung ist eine einfache Routine zur Stressreduktion, die die emotionale Regulation und Entspannung fördert.",
-        "displayName": "3-minütige Atemübung",
+        "description": "Das Führen eines Dankbarkeitstagebuchs fördert die mentale Gesundheit und verbessert das Selbstbewusstsein sowie die Resilienz.",
+        "displayName": "Dankbarkeitstagebuch",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -610,12 +724,12 @@
       },
       {
         "pillar": {
-          "pillar": "STRESS",
-          "pillar_de": "Resilienz",
+          "pillar": "GRATITUDE",
+          "pillar_de": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/190.jpg",
-        "routineId": 9254,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/156.jpg",
+        "routineId": 9220,
         "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
@@ -626,8 +740,84 @@
           },
           "value": 5
         },
-        "description": "Die To-Do-Liste ist eine einfache Methode zur Stressreduzierung und Verbesserung der Produktivität durch effektives Zeitmanagement.",
-        "displayName": "To-Do-Listen",
+        "description": "Das Führen eines Tagebuchs ist eine einfache Methode zur emotionalen Ausdrucksform, die die mentale Gesundheit und das Selbstbewusstsein fördert.",
+        "displayName": "Schreibe über deinen Tag",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "GRATITUDE",
+          "pillar_de": "Dankbarkeit",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/157.jpg",
+        "routineId": 9221,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 3
+        },
+        "description": "Zielsetzung ist eine einfache mentale Routine, die das Selbstbewusstsein stärkt und die allgemeine psychische Gesundheit verbessert.",
+        "displayName": "Ziel für heute setzen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "GRATITUDE",
+          "pillar_de": "Dankbarkeit",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/158.jpg",
+        "routineId": 9222,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 2
+        },
+        "description": "Positive Visualisierung fördert das positive Denken und verbessert die mentale Gesundheit sowie das allgemeine Wohlbefinden.",
+        "displayName": "Positive Visualisierung für den Tag",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -766,6 +956,82 @@
           "pillar_de": "Sozial",
           "pillar_en": ""
         },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/164.jpg",
+        "routineId": 9228,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Ein Treffen mit einem Freund stärkt die sozialen Beziehung und fördert die emotionale Gesundheit sowie Stressabbau.",
+        "displayName": "Ein Treffen mit einem Freund vereinbaren",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "pillar_de": "Sozial",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/165.jpg",
+        "routineId": 9229,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Ein Anruf bei einem Freund oder Familienmitglied fördert soziale Verbindungen und reduziert Stress.",
+        "displayName": "Rufe eine vertraute Person an",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "pillar_de": "Sozial",
+          "pillar_en": ""
+        },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/166.jpg",
         "routineId": 9230,
         "durationCalculated": 0,
@@ -804,9 +1070,9 @@
           "pillar_de": "Kognition",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/198.jpg",
-        "routineId": 9262,
-        "durationCalculated": 10,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/197.jpg",
+        "routineId": 9261,
+        "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -814,10 +1080,48 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 10
+          "value": 5
         },
-        "description": "Sudoku spielen ist eine anregende geistige Übung, die das kognitive Denken und die Konzentration fördert.",
-        "displayName": "Mache 1 einfaches Sudoku",
+        "description": "Lesen fördert die kognitive Verbesserung und stärkt die geistige Klarheit, während es gleichzeitig Stress reduziert.",
+        "displayName": "Lesen für Bildung/ persönliches Wachstum",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "COGNITIVE_ENHANCEMENT",
+          "pillar_de": "Kognition",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/200.jpg",
+        "routineId": 9264,
+        "durationCalculated": 15,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 15
+        },
+        "description": "Schach spielen ist eine kognitive Routine, die hauptsächlich die Denkfähigkeit und das Gedächtnis fördert.",
+        "displayName": "Schach spielen",
         "alternatives": [],
         "scheduleDays": [
           1,

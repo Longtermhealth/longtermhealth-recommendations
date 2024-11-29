@@ -2001,11 +2001,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Olivenöl oder kaltgepresstes Öl' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9111,
@@ -11131,9 +11131,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Joggen 30 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9075,
@@ -11721,9 +11721,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Schwimmen 30 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9115,
@@ -13042,11 +13042,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine '3 Handvoll Gemüse täglich' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9189,
@@ -13243,11 +13243,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine '2 Handvoll Obst täglich' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9190,
@@ -13448,11 +13448,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Nüsse essen' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9192,
@@ -13661,11 +13661,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Täglich Hülsenfrüchte' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9195,
@@ -13852,11 +13852,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Rotes Fleisch reduzieren' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9196,
@@ -14043,11 +14043,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Rotes Fleisch nur 4x pro Woche' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9197,
@@ -14234,11 +14234,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Rotes Fleisch nur 3x pro Woche' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9117,
@@ -17438,9 +17438,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Schwimmen 45 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9084,
@@ -17735,9 +17735,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Tag Draußen'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Nordic Walking 30 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9085,
@@ -18032,9 +18032,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Nordic Walking 45 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9088,
@@ -18311,9 +18311,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tai Chi 45 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9089,
@@ -18590,9 +18590,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tai Chi 60+ Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9090,
@@ -20474,11 +20474,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Joggen 20 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9074,
@@ -21056,11 +21056,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tai Chi 20 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9087,
@@ -21335,11 +21335,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tai Chi 30 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9093,
@@ -23038,11 +23038,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Power Walking 20 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9073,
@@ -26201,9 +26201,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Power Walking 30 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9079,
@@ -26795,9 +26795,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Tag Draußen'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Nordic Walking 20 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9137,
@@ -29547,11 +29547,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Trinke 2 Liter Wasser' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9191,
@@ -29738,11 +29738,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Mehr Vollkornprodukte essen' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9076,
@@ -32396,11 +32396,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Spinning 20 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9099,
@@ -34077,9 +34077,9 @@
                 }
             ]
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude intensive Exercises for Seniors'"
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Spinning 30 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9080,
@@ -34362,11 +34362,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Schwimmen 20 Minuten' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9096,
@@ -35642,11 +35642,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Intervallfasten 16:8' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9094,
@@ -36389,11 +36389,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Fisch und Meeresfrüchte essen' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9199,
@@ -36580,11 +36580,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Rotes Fleisch nur x pro Woche' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9207,
@@ -36924,11 +36924,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Rotes Fleisch nur x pro Woche' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Nutrition score -> BETTER_NUTRITION' with score 10 due to goal: BETTER_NUTRITION"
     },
     {
         "id": 9201,
@@ -38952,11 +38952,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Maui-Gewohnheit' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Gratitude score -> BETTER_MENTAL_HEALTH' with score 10 due to goal: BETTER_MENTAL_HEALTH"
     },
     {
         "id": 9230,
@@ -39613,7 +39613,7 @@
         },
         "rule_status": "included",
         "score_rules": 2,
-        "score_rules_explanation": "Routine 'Schach spielen' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: CHESS"
+        "score_rules_explanation": "Routine 'Schach spielen' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9266,
@@ -39778,7 +39778,7 @@
         },
         "rule_status": "included",
         "score_rules": 2,
-        "score_rules_explanation": "Routine 'Ein Logikrätselspiel spielen' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: LOGIC_PUZZLES"
+        "score_rules_explanation": "Routine 'Ein Logikrätselspiel spielen' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9213,
@@ -41700,8 +41700,8 @@
             ]
         },
         "rule_status": "included",
-        "score_rules": 10,
-        "score_rules_explanation": "Routine 'Mache 1 einfaches Sudoku' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Cognition score -> IMPROVE_COGNITION' with score 10 due to goal: IMPROVE_COGNITION"
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Mache 1 einfaches Sudoku' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9263,
@@ -41869,8 +41869,8 @@
             ]
         },
         "rule_status": "included",
-        "score_rules": 10,
-        "score_rules_explanation": "Routine 'Ein Kreuzworträtsel lösen' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Cognition score -> IMPROVE_COGNITION' with score 10 due to goal: IMPROVE_COGNITION"
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ein Kreuzworträtsel lösen' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9265,
@@ -42035,7 +42035,7 @@
         },
         "rule_status": "included",
         "score_rules": 2,
-        "score_rules_explanation": "Routine 'Ein Wortspiel/Worträtsel spielen' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: LOGIC_PUZZLES"
+        "score_rules_explanation": "Routine 'Ein Wortspiel/Worträtsel spielen' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9219,
@@ -42210,11 +42210,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Dankbarkeitstagebuch' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Gratitude score -> BETTER_MENTAL_HEALTH' with score 10 due to goal: BETTER_MENTAL_HEALTH"
     },
     {
         "id": 9242,
@@ -43107,11 +43107,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Tagebuch über deinen Tag (kurz) 5 Minuten' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Gratitude score -> BETTER_MENTAL_HEALTH' with score 10 due to goal: BETTER_MENTAL_HEALTH"
     },
     {
         "id": 9223,
@@ -43276,11 +43276,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Sage öfter Danke' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: YES"
     },
     {
         "id": 9224,
@@ -44862,11 +44862,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ]
-        },
-        "rule_status": "included",
-        "score_rules": 2,
-        "score_rules_explanation": "Routine 'To-Do-Listen' recommended under pillar 'STRESS' with cumulative score 2 because it matched the rule 'Stresslevel 2/3 -> TIME_MANAGEMENT' with score 2 due to category: TIME_MANAGEMENT"
+            ],
+            "rule_status": "no_rule_applied",
+            "score_rules": 1,
+            "score_rules_explanation": "No inclusion rule applied"
+        }
     },
     {
         "id": 9255,
@@ -45200,11 +45200,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Ziel für heute setzen' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Gratitude score -> BETTER_MENTAL_HEALTH' with score 10 due to goal: BETTER_MENTAL_HEALTH"
     },
     {
         "id": 9222,
@@ -45369,11 +45369,11 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 10,
+        "score_rules_explanation": "Routine 'Positive Visualisierung für den Tag' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Gratitude score -> BETTER_MENTAL_HEALTH' with score 10 due to goal: BETTER_MENTAL_HEALTH"
     },
     {
         "id": 9231,
@@ -47497,8 +47497,8 @@
             ]
         },
         "rule_status": "included",
-        "score_rules": 10,
-        "score_rules_explanation": "Routine 'Lerne, wie man Gedichte/Sonette/Haikus/Freie Verse schreibt 15 Minuten.' recommended under pillar 'SCORES' with cumulative score 10 because it matched the rule 'Cognition score -> IMPROVE_COGNITION' with score 10 due to goal: IMPROVE_COGNITION"
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Lerne, wie man Gedichte/Sonette/Haikus/Freie Verse schreibt 15 Minuten.' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     },
     {
         "id": 9261,
@@ -48128,10 +48128,10 @@
                     "videoText": null,
                     "resourceType": null
                 }
-            ],
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            ]
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Fullbody Workout' recommended under pillar 'SOCIAL_ENGAGEMENT' with cumulative score 2 because it matched the rule 'Not many good friends -> Group Activity YES or can be' with score 2 due to isGroupActivity: CAN_BE"
     }
 ]
