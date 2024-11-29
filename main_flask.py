@@ -124,44 +124,6 @@ def webhook():
 
     return jsonify({'status': 'success'}), 200
 
-@app.route('/webhook-summary', methods=['POST'])
-def webhook_summary():
-    try:
-        data = request.json
-        if not data or 'payload' not in data:
-            return jsonify({"status": "error", "message": "Invalid data received"}), 400
-
-        task_id = data['payload'].get('id')
-        task_name = data['payload'].get('name')
-
-        if not task_id or not task_name:
-            return jsonify({"status": "error", "message": "Task ID or Task Name (URL) is missing"}), 400
-
-        print(f"Processing task: {task_name}")
-
-        page_title, page_content = fetch_url_content(task_name)
-
-        if page_content.startswith("Error") or page_content.startswith("Authorization Failed"):
-            summary = f"Site could not be scraped due to an exception: {page_content}"
-        else:
-            summary = generate_summary(page_content)
-
-        update_clickup_custom_field(task_id, LINK_SUMMARY_TITLE_FIELD_ID, page_title)
-        update_clickup_custom_field(task_id, LINK_SUMMARY_SUMMARY_FIELD_ID, summary)
-
-        return jsonify({
-            "status": "success",
-            "task_id": task_id,
-            "title": page_title,
-            "summary": summary
-        })
-
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-        traceback.print_exc()
-        return jsonify({"status": "error", "message": str(e)}), 500
-
-
 
 
 
