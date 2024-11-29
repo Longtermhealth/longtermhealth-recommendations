@@ -35,7 +35,6 @@ class StressManagementAssessment(BaseAssessment):
         stress_level_value = stress_level_mapping.get(stress_level, 0)
         stress_situations_response = answers.get('Welche der folgenden Stresssituationen trifft momentan auf dich zu?', '')
         stress_symptoms_response = answers.get('Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?', '')
-        print('stress_situations_response',stress_situations_response)
         stress_situations = 5 if not stress_situations_response else len(stress_situations_response.split(', '))
         stress_symptoms = 5 if stress_symptoms_response == 'Gar keine' else len(stress_symptoms_response.split(', '))
 
@@ -100,7 +99,6 @@ class StressManagementAssessment(BaseAssessment):
         :return: The calculated stress management score as a float
         """
         stress_level, stress_situations, stress_symptoms, stress_coping = self.stress_management
-        print('stress_level, stress_situations, stress_symptoms, stress_coping',stress_level, stress_situations, stress_symptoms, stress_coping)
         weight_stress_level = 0.30
         weight_stress_situations = 0.20
         weight_stress_symptoms = 0.20

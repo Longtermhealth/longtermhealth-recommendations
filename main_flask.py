@@ -113,7 +113,7 @@ def webhook():
             image_path = f"{lastname}_health_scores.png"
             plt.savefig(image_path)
             plt.show()
-            task_id = create_clickup_task(lastname, scores, answers, total_score, final_action_plan, "test")
+            task_id = create_clickup_task(lastname, scores, answers, total_score, final_action_plan, "")
             upload_file_to_clickup(task_id, image_path)
             action_plan_path = "./data/action_plan.json"
             upload_file_to_clickup(task_id, action_plan_path)

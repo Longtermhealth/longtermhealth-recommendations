@@ -1,7 +1,7 @@
 {
   "data": {
-    "accountId": "102",
-    "totalDailyTimeInMins": 33,
+    "accountId": "106",
+    "totalDailyTimeInMins": 30,
     "routines": [
       {
         "pillar": {
@@ -235,44 +235,6 @@
           "pillar_de": "Schlaf",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/139.jpg",
-        "routineId": 9203,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Lichter dimmen ist eine Abendroutine, die hilft, die Schlafqualität zu verbessern und Stress abzubauen.",
-        "displayName": "Lichter dimmen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6315
-      },
-      {
-        "pillar": {
-          "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
-          "pillar_en": ""
-        },
         "imageUrl": "https://longtermhealth.de",
         "routineId": 9208,
         "durationCalculated": 0,
@@ -287,44 +249,6 @@
         },
         "description": "Der Verzicht auf Alkohol vor dem Schlafengehen fördert einen besseren Schlaf und verbessert das allgemeine Wohlbefinden.",
         "displayName": "Kein Alkohol vor dem Schlafengehen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6315
-      },
-      {
-        "pillar": {
-          "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://longtermhealth.de",
-        "routineId": 9211,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Kaffee oder Koffein nach 14 Uhr zu vermeiden ist eine Maßnahme zur Verbesserung des Schlafs und der emotionalen Regulierung.",
-        "displayName": "Kein Kaffee nach 14 Uhr",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -462,120 +386,6 @@
           "pillar_de": "Ernährung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/122.jpg",
-        "routineId": 9186,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Intervallfasten 16:8 ist eine Ernährungsroutine, die die Gesundheit des Herzens fördert und die Insulinempfindlichkeit verbessert.",
-        "displayName": "Intervallfasten 16:8",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6316
-      },
-      {
-        "pillar": {
-          "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/124.jpg",
-        "routineId": 9188,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Der tägliche Verzehr von drei Handvoll Gemüse fördert eine bessere Ernährung und unterstützt die Verdauung und das Immunsystem.",
-        "displayName": "3 Handvoll Gemüse täglich",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6316
-      },
-      {
-        "pillar": {
-          "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/125.jpg",
-        "routineId": 9189,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Zwei Handvoll Obst täglich verbessern die Ernährung und stärken das Immunsystem durch wertvolle Vitamine und Ballaststoffe.",
-        "displayName": "2 Handvoll Obst täglich",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6316
-      },
-      {
-        "pillar": {
-          "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
-          "pillar_en": ""
-        },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/128.jpg",
         "routineId": 9192,
         "durationCalculated": 0,
@@ -648,12 +458,50 @@
       },
       {
         "pillar": {
-          "pillar": "GRATITUDE",
-          "pillar_de": "Dankbarkeit",
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/154.jpg",
-        "routineId": 9218,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/124.jpg",
+        "routineId": 9188,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Der tägliche Verzehr von drei Handvoll Gemüse fördert eine bessere Ernährung und unterstützt die Verdauung und das Immunsystem.",
+        "displayName": "3 Handvoll Gemüse täglich",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "pillar_de": "Sozial",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/164.jpg",
+        "routineId": 9228,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -664,8 +512,8 @@
           },
           "value": 1
         },
-        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
-        "displayName": "Maui-Gewohnheit",
+        "description": "Ein Treffen mit einem Freund stärkt die sozialen Beziehung und fördert die emotionale Gesundheit sowie Stressabbau.",
+        "displayName": "Ein Treffen mit einem Freund vereinbaren",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -686,13 +534,13 @@
       },
       {
         "pillar": {
-          "pillar": "GRATITUDE",
-          "pillar_de": "Dankbarkeit",
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/155.jpg",
-        "routineId": 9219,
-        "durationCalculated": 0,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/187.jpg",
+        "routineId": 9251,
+        "durationCalculated": 2,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -702,8 +550,8 @@
           },
           "value": 2
         },
-        "description": "Das Führen eines Dankbarkeitstagebuchs fördert die mentale Gesundheit und verbessert das Selbstbewusstsein sowie die Resilienz.",
-        "displayName": "Dankbarkeitstagebuch",
+        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
+        "displayName": "Zwerchfellatmung",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -724,13 +572,13 @@
       },
       {
         "pillar": {
-          "pillar": "GRATITUDE",
-          "pillar_de": "Dankbarkeit",
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/156.jpg",
-        "routineId": 9220,
-        "durationCalculated": 5,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/188.jpg",
+        "routineId": 9252,
+        "durationCalculated": 2,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -738,10 +586,10 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 5
+          "value": 2
         },
-        "description": "Das Führen eines Tagebuchs ist eine einfache Methode zur emotionalen Ausdrucksform, die die mentale Gesundheit und das Selbstbewusstsein fördert.",
-        "displayName": "Schreibe über deinen Tag",
+        "description": "Nasenatmung ist eine entspannende Atemtechnik, die Stress abbaut und die geistige Klarheit sowie die emotionale Regulierung fördert.",
+        "displayName": "Nasenatmung beginnen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -762,12 +610,12 @@
       },
       {
         "pillar": {
-          "pillar": "GRATITUDE",
-          "pillar_de": "Dankbarkeit",
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/157.jpg",
-        "routineId": 9221,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/192.jpg",
+        "routineId": 9256,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -776,10 +624,10 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 3
+          "value": 0
         },
-        "description": "Zielsetzung ist eine einfache mentale Routine, die das Selbstbewusstsein stärkt und die allgemeine psychische Gesundheit verbessert.",
-        "displayName": "Ziel für heute setzen",
+        "description": "Diese Routine fördert Achtsamkeit und Stressreduktion, indem sie einen klaren, technologie-freien Start in den Tag ermöglicht.",
+        "displayName": "Kein Handy am morgen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -838,126 +686,12 @@
       },
       {
         "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
+          "pillar": "GRATITUDE",
+          "pillar_de": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/193.jpg",
-        "routineId": 9257,
-        "durationCalculated": 15,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 15
-        },
-        "description": "Das Schreiben von Gedichten fördert die Kreativität und verbessert die kognitiven Fähigkeiten sowie die Stressbewältigung.",
-        "displayName": "Lerne Poesie zu schreiben",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/194.jpg",
-        "routineId": 9258,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 5
-        },
-        "description": "Gedichte lesen ist eine geistige Aktivität, die vor allem das kognitive Denken und die Sprachfähigkeiten fördert.",
-        "displayName": "Gedichte lesen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "STRESS",
-          "pillar_de": "Resilienz",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/195.jpg",
-        "routineId": 9259,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 5
-        },
-        "description": "Lesen fördert die Entspannung und verbessert die kognitive Klarheit sowie die Sprachfähigkeiten.",
-        "displayName": "Aus Spaß lesen ",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "pillar_de": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/164.jpg",
-        "routineId": 9228,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/155.jpg",
+        "routineId": 9219,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -966,162 +700,10 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 1
+          "value": 2
         },
-        "description": "Ein Treffen mit einem Freund stärkt die sozialen Beziehung und fördert die emotionale Gesundheit sowie Stressabbau.",
-        "displayName": "Ein Treffen mit einem Freund vereinbaren",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "pillar_de": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/165.jpg",
-        "routineId": 9229,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Ein Anruf bei einem Freund oder Familienmitglied fördert soziale Verbindungen und reduziert Stress.",
-        "displayName": "Rufe eine vertraute Person an",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "pillar_de": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/166.jpg",
-        "routineId": 9230,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Diese Routine fördert soziale Verbindungen und stärkt die zwischenmenschlichen Beziehungen, was das emotionale Wohlbefinden verbessert.",
-        "displayName": "Schreibe eine positive Nachricht",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/197.jpg",
-        "routineId": 9261,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 5
-        },
-        "description": "Lesen fördert die kognitive Verbesserung und stärkt die geistige Klarheit, während es gleichzeitig Stress reduziert.",
-        "displayName": "Lesen für Bildung/ persönliches Wachstum",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/200.jpg",
-        "routineId": 9264,
-        "durationCalculated": 15,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 15
-        },
-        "description": "Schach spielen ist eine kognitive Routine, die hauptsächlich die Denkfähigkeit und das Gedächtnis fördert.",
-        "displayName": "Schach spielen",
+        "description": "Das Führen eines Dankbarkeitstagebuchs fördert die mentale Gesundheit und verbessert das Selbstbewusstsein sowie die Resilienz.",
+        "displayName": "Dankbarkeitstagebuch",
         "alternatives": [],
         "scheduleDays": [
           1,
