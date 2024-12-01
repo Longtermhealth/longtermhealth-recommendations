@@ -6,6 +6,7 @@ from typing import Dict, Any, List
 from assessments.health_assessment import HealthAssessment
 from rules.rule_service import evaluate_rule
 from utils.data_processing import integrate_answers
+from utils.strapi_api import strapi_api_azure_get_all_routines
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
 
 logging.basicConfig(level=logging.INFO)
@@ -34,6 +35,7 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 
 def new_load_routines() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
+    strapi_api_azure_get_all_routines()
     return load_json_data('./data/strapi_all_routines.json')
 
 
