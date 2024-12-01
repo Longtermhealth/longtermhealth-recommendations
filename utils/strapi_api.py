@@ -60,7 +60,7 @@ def strapi_api_azure_get_all_routines():
             break
 
     result_json = json.dumps(all_recommendations, ensure_ascii=False, indent=4)
-    file_path = './strapi_all_routines.json'
+    file_path = './data/strapi_all_routines.json'
 
     try:
         with open(file_path, 'w', encoding='utf-8') as json_file:
