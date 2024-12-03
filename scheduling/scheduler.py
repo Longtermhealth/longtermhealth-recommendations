@@ -306,7 +306,7 @@ def build_individual_routine_entry(routine, routine_id):
         "parentRoutineId": None
     }
 
-def save_action_plan_json(final_action_plan, file_path='../data/action_plan.json'):
+def save_action_plan_json(final_action_plan, file_path='./data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False,
                   indent=2)
