@@ -36,6 +36,35 @@ def transform_routines(data):
     return routines
 
 
+def calculate_weighted_score_knapsack(routine, weights):
+    base_score = routine.get("score_rules", 0)
+
+    impact_values = {
+        "Movement": routine.get('attributes', {}).get("impactMovement", 1),
+        "Nutrition": routine.get('attributes', {}).get("impactNutrition", 1),
+        "Sleep": routine.get('attributes', {}).get("impactSleep", 1),
+        "Stress": routine.get('attributes', {}).get("impactStress", 1),
+        "Social": routine.get('attributes', {}).get("impactSocial", 1),
+        "Gratitude": routine.get('attributes', {}).get("impactGratitude", 1),
+        "Cognitive": routine.get('attributes', {}).get("impactCognitive", 1)
+    }
+
+    weighted_score = 0
+
+    for key, impact in impact_values.items():
+        weight = weights.get(key.upper(), 1)
+        weighted_score += impact * weight
+
+    benefit_score = 0
+    benefits = routine.get('attributes', {}).get('benefits', [])
+    for benefit in benefits:
+        benefit_impact = benefit.get('impact', 0)
+        benefit_score += benefit_impact
+    total_score = base_score + weighted_score + benefit_score
+
+    return total_score
+
+
 def calculate_weighted_score(routine, weights):
     base_score = routine.get("score_rules", 0)
     impact_values = {
@@ -277,7 +306,7 @@ def build_individual_routine_entry(routine, routine_id):
         "parentRoutineId": None
     }
 
-def save_action_plan_json(final_action_plan, file_path='./data/action_plan.json'):
+def save_action_plan_json(final_action_plan, file_path='../data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False,
                   indent=2)
@@ -434,19 +463,89 @@ def sort_routines_by_score_rules(routines):
     sorted_routines = sorted(routines, key=lambda routine: routine.get("score_rules", 0), reverse=True)
     return sorted_routines
 
+def get_number_of_routines(score):
+    if 80 <= score <= 100:
+        return 1
+    elif 60 <= score <= 79:
+        return 2
+    elif 40 <= score <= 59:
+        return 3
+    elif 20 <= score <= 39:
+        return 4
+    elif 0 <= score <= 19:
+        return 5
+    return 0
+
+
+def select_routines_for_pillar(pillar, health_scores, routines, allocated_time, weights):
+    max_routines = get_number_of_routines(health_scores.get(pillar, 0))
+
+    max_routines = int(max_routines)
+
+    routines_for_knapsack = []
+    for routine in routines:
+        if routine['attributes']['pillar']['pillar'] == pillar:
+
+            weighted_score = calculate_weighted_score_knapsack(routine, weights)
+
+            routine_with_score = routine.copy()
+            routine_with_score['weighted_score'] = weighted_score
+
+            print(
+                f"Routine {routine['id']} with weighted_score = {weighted_score} and durationCalculated = {routine_with_score['attributes']['durationCalculated']}")
+
+            routines_for_knapsack.append(routine_with_score)
+
+    routines_for_knapsack.sort(key=lambda x: x['weighted_score'], reverse=True)
+
+    allocated_time = int(allocated_time)
+
+    selected_routines, max_score = knapsack_with_routine_count(routines_for_knapsack, allocated_time, max_routines)
+
+    return selected_routines, max_score
+
+
+def knapsack_with_routine_count(routines, max_time, max_routines):
+    num_routines = len(routines)
+
+    print(f"\nStarting knapsack with {num_routines} routines, max_time = {max_time}, max_routines = {max_routines}")
+
+    dp = [[[0 for _ in range(max_routines + 1)] for _ in range(max_time + 1)] for _ in range(num_routines + 1)]
+
+    for i in range(1, num_routines + 1):
+        routine = routines[i - 1]
+
+        print(f"Considering routine {i}: {{'name': '{routine['attributes']['name']}', 'durationCalculated': {routine['attributes']['durationCalculated']}, 'weighted_score': {routine['weighted_score']}}}")
+
+        duration = int(round(routine['attributes']['durationCalculated']))
+        score = routine['weighted_score']
+
+        for w in range(max_time + 1):
+            for r in range(max_routines + 1):
+                dp[i][w][r] = dp[i - 1][w][r]
+                if w >= duration and r > 0:
+                    dp[i][w][r] = max(dp[i][w][r], dp[i - 1][w - duration][r - 1] + score)
+
+    max_score = 0
+    for r in range(max_routines + 1):
+        max_score = max(max_score, dp[num_routines][max_time][r])
+
+    selected_routines = []
+    w = max_time
+    r = max_routines
+
+    for i in range(num_routines, 0, -1):
+        if dp[i][w][r] != dp[i - 1][w][r]:
+            routine = routines[i - 1]
+            selected_routines.append(routine)
+            w -= int(routine['attributes']['durationCalculated'])
+            r -= 1
+
+    selected_routines.reverse()
+    return selected_routines, max_score
+
 def select_routines(health_scores, filtered_routines):
-    def get_number_of_routines(score):
-        if 80 <= score <= 100:
-            return 1
-        elif 60 <= score <= 79:
-            return 2
-        elif 40 <= score <= 59:
-            return 3
-        elif 20 <= score <= 39:
-            return 4
-        elif 0 <= score <= 19:
-            return 5
-        return 0
+
 
     selected_routines = []
     selected_variations = set()
@@ -484,8 +583,9 @@ def calculate_monthly_allocations(daily_allocations):
 
 def main():
     account_id, daily_time, routines, health_scores = get_routines_with_defaults()
+    print('daily_time', daily_time)
 
-    file_path = "./data/routines_with_scores.json"
+    file_path = "../data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
 
@@ -498,6 +598,8 @@ def main():
 
     filtered_routines = filter_excluded_routines(routines_list)
     sorted_routines = sort_routines_by_score_rules(filtered_routines)
+
+
 
     individual_routines = select_routines(health_scores, sorted_routines)
     individual_routines = transform_routines(individual_routines)
@@ -635,9 +737,41 @@ def main():
     }
 
 
-    individual_routine_ids = set(individual_routines.keys())
+    pillars = ['SOCIAL_ENGAGEMENT', 'STRESS', 'GRATITUDE', 'COGNITIVE_ENHANCEMENT']
 
-    for routine_id in individual_routine_ids:
+    final_routines = []
+
+    for pillar in pillars:
+        allocated_time = daily_allocations[pillar]
+
+        selected_routines, max_score = select_routines_for_pillar(
+            pillar, health_scores, filtered_routines, allocated_time, weights
+        )
+
+        total_time_selected = sum(routine['attributes']['durationCalculated'] for routine in selected_routines)
+        print(f"\nPillar: {pillar} (Before Selection)")
+        print(f"Allocated Time: {allocated_time} min")
+
+        print("\nSelected Routines (After Selection):")
+        print("-" * 30)
+        for routine in selected_routines:
+            print(
+                f"Routine ID: {routine['id']}, Routine Name: {routine['attributes']['name']}, Duration: {routine['attributes']['durationCalculated']} min, Weighted Score: {routine['weighted_score']}")
+
+        print(f"\nTotal time allocated for {pillar} (After Selection): {total_time_selected} min")
+        print("-" * 30)
+
+        final_routines.extend(selected_routines)
+
+    print("\nFinal selected routines (across all pillars):")
+    for routine in final_routines:
+        print(
+            f"Routine ID: {routine['id']}, Duration: {routine['attributes']['durationCalculated']} min, Weighted Score: {routine['weighted_score']}")
+
+
+    final_routines = transform_routines(final_routines)
+
+    for routine_id in final_routines:
         routine = routines[routine_id]
         individual_entry = build_individual_routine_entry(routine, routine_id)
         final_action_plan["data"]["routines"].append(individual_entry)
@@ -652,7 +786,9 @@ def main():
                 routine["routineId"] = 6316
 
     save_action_plan_json(final_action_plan)
-    strapi_post_action_plan(final_action_plan, account_id)
+    #strapi_post_action_plan(final_action_plan, account_id)
+
+
 
     return final_action_plan
 
