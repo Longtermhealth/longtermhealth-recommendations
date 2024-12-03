@@ -786,7 +786,7 @@ def main():
                 routine["routineId"] = 6316
 
     save_action_plan_json(final_action_plan)
-    #strapi_post_action_plan(final_action_plan, account_id)
+    strapi_post_action_plan(final_action_plan, account_id)
 
 
 
