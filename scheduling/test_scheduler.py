@@ -585,7 +585,7 @@ def main():
     account_id, daily_time, routines, health_scores = get_routines_with_defaults()
     print('daily_time', daily_time)
 
-    file_path = "../data/routines_with_scores.json"
+    file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
 
