@@ -135,36 +135,18 @@ def filter_inclusions(pillar_data, pillar_name, pillar_rules, routines, user_dat
                         if routine.get('attributes', {}).get('rule_status') == 'excluded':
                             continue
 
+                        routine_field_value = check_dynamic_field(routine['attributes'], action_field)
 
-                        routine_pillar = routine['attributes']['pillar']['pillar']
-                        if routine_pillar == pillar_name:
-                            routine_field_value = check_dynamic_field(routine['attributes'], action_field)
-
-                            if isinstance(routine_field_value, list):
-                                if action_value in routine_field_value:
-                                    routine_scores[routine_id] += weight
-                                    explanation = (
-                                        f"matched the rule '{rule.get('name', 'Unnamed Rule')}' with score {weight} "
-                                        f"due to {action_field}: {action_value}"
-                                    )
-                                    routine_explanations[routine_id].append(explanation)
-                                    included_rules.add(
-                                        (rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
-                                    routine['rule_status'] = 'included'
-                                    routine['score_rules'] = routine_scores[routine_id]
-                                    routine["score_rules_explanation"] = (
-                                        f"Routine '{routine['attributes'].get('name', 'Unnamed Routine')}' recommended under pillar '{pillar_name}' with "
-                                        f"cumulative score {routine_scores[routine_id]} because it {explanation}"
-                                    )
-                                    processed_routines.add(routine_id)
-                            elif routine_field_value == action_value:
+                        if isinstance(routine_field_value, list):
+                            if action_value in routine_field_value:
                                 routine_scores[routine_id] += weight
                                 explanation = (
                                     f"matched the rule '{rule.get('name', 'Unnamed Rule')}' with score {weight} "
                                     f"due to {action_field}: {action_value}"
                                 )
                                 routine_explanations[routine_id].append(explanation)
-                                included_rules.add((rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
+                                included_rules.add(
+                                    (rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
                                 routine['rule_status'] = 'included'
                                 routine['score_rules'] = routine_scores[routine_id]
                                 routine["score_rules_explanation"] = (
@@ -172,6 +154,21 @@ def filter_inclusions(pillar_data, pillar_name, pillar_rules, routines, user_dat
                                     f"cumulative score {routine_scores[routine_id]} because it {explanation}"
                                 )
                                 processed_routines.add(routine_id)
+                        elif routine_field_value == action_value:
+                            routine_scores[routine_id] += weight
+                            explanation = (
+                                f"matched the rule '{rule.get('name', 'Unnamed Rule')}' with score {weight} "
+                                f"due to {action_field}: {action_value}"
+                            )
+                            routine_explanations[routine_id].append(explanation)
+                            included_rules.add((rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
+                            routine['rule_status'] = 'included'
+                            routine['score_rules'] = routine_scores[routine_id]
+                            routine["score_rules_explanation"] = (
+                                f"Routine '{routine['attributes'].get('name', 'Unnamed Routine')}' recommended under pillar '{pillar_name}' with "
+                                f"cumulative score {routine_scores[routine_id]} because it {explanation}"
+                            )
+                            processed_routines.add(routine_id)
 
     return routines
 
