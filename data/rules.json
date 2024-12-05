@@ -55,7 +55,7 @@
       "condition": {
         "field": "Geburtsjahr",
         "operator": "<",
-        "value": 1995
+        "value": 1944
       },
       "action": [
         {
