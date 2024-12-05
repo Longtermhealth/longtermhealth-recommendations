@@ -183,9 +183,9 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     pillar = pillar_mapping.get(super_routine_id, None)
 
     image_url_mapping = {
-        "movement_superroutine": "https://lthstore.blob.core.windows.net/images/203.jpg",
-        "sleep_superroutine": "https://lthstore.blob.core.windows.net/images/204.jpg",
-        "nutrition_super_routine": "https://lthstore.blob.core.windows.net/images/205.jpg",
+        "movement_superroutine": "https://lthstore.blob.core.windows.net/images/997.jpg",
+        "sleep_superroutine": "https://lthstore.blob.core.windows.net/images/998.jpg",
+        "nutrition_super_routine": "https://lthstore.blob.core.windows.net/images/999.jpg",
     }
 
     imageUrl = image_url_mapping.get(super_routine_id, None)
