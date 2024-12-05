@@ -35,8 +35,7 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 
 def new_load_routines() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
-    result_json = strapi_api_azure_get_all_routines()
-    print('result_json', result_json)
+    strapi_api_azure_get_all_routines()
     return load_json_data('./data/strapi_all_routines.json')
 
 

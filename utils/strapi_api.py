@@ -69,4 +69,3 @@ def strapi_api_azure_get_all_routines():
     except IOError as e:
         print(f"Error writing to file: {e}")
 
-    return result_json
