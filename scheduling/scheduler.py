@@ -322,7 +322,7 @@ def build_individual_routine_entry(routine):
             "pillar_de": routine['attributes']['pillar']['pillar_de'],
             "pillar_en": ""
         },
-        "imageUrl": routine.get("resources", [{}])[0].get("imageUrl") or "https://longtermhealth.de",
+        "imageUrl": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl") or "https://longtermhealth.de",
         "routineId": routine["id"],
         "durationCalculated": int(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
