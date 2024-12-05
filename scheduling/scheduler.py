@@ -316,13 +316,16 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     return final_action_plan, total_duration_movement
 
 def build_individual_routine_entry(routine):
+    imageUrl = routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl") or "https://longtermhealth.de",
+    print('imageUrl', imageUrl)
+
     individual_routine_entry = {
         "pillar": {
             "pillar": routine['attributes']['pillar']['pillar'],
             "pillar_de": routine['attributes']['pillar']['pillar_de'],
             "pillar_en": ""
         },
-        "imageUrl": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl") or "https://longtermhealth.de",
+        "imageUrl": routine.get("resources", [{}])[0].get("imageUrl") or "https://longtermhealth.de",
         "routineId": routine["id"],
         "durationCalculated": int(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
