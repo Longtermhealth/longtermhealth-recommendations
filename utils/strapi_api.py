@@ -62,13 +62,10 @@ def strapi_api_azure_get_all_routines():
     result_json = json.dumps(all_recommendations, ensure_ascii=False, indent=4)
     file_path = './data/strapi_all_routines.json'
 
-
     try:
         with open(file_path, 'w', encoding='utf-8') as json_file:
             json_file.write(result_json)
         print(f"Data saved to {file_path}")
     except IOError as e:
         print(f"Error writing to file: {e}")
-
-    return result_json
 
