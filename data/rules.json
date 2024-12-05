@@ -37,16 +37,16 @@
       }
     },
     {
-      "name": "Exclude Tag Draußen",
+      "name": "Exclude tag passive",
       "pillar": "MOVEMENT",
       "condition": {
         "field": "Geburtsjahr",
         "operator": "<",
-        "value": 1995
+        "value": 2024
       },
       "action": {
-        "field": "locations.location_de",
-        "value": "Draußen"
+        "field": "tags.tag",
+        "value": "passive"
       }
     },
     {
@@ -55,7 +55,7 @@
       "condition": {
         "field": "Geburtsjahr",
         "operator": "<",
-        "value": 1995
+        "value": 1944
       },
       "action": [
         {
