@@ -36,7 +36,12 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 def new_load_routines() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
     strapi_all_routines = strapi_api_azure_get_all_routines()
-    return strapi_all_routines
+    try:
+        routines = json.loads(strapi_all_routines)  # Convert the JSON string to a Python object
+        return routines
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON: {e}")
+        return []  # Return an empty list if there's an error
 
 
 def new_load_rules() -> Dict[str, Any]:
