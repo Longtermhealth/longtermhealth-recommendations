@@ -981,7 +981,7 @@ def main():
         "cardio": 1,
         "basic mobility": 1
     }
-
+    """
     pillars = ['SLEEP', 'NUTRITION']
     for pillar in pillars:
         score = health_scores.get(pillar, 0)
@@ -1035,6 +1035,38 @@ def main():
                 "mediterranean": 2,
                 "behavioral change": 1
             }
+    """
+    pillars = ['SLEEP', 'NUTRITION']
+    for pillar in pillars:
+        score = health_scores.get(pillar, 0)
+        if 80 <= score <= 100:
+            sleep_tag_counts = {
+                "environmental change": 1,
+            }
+            nutrition_tag_counts = {
+                "LTH basic": 1,
+            }
+
+        elif 50 <= score <= 79:
+            sleep_tag_counts = {
+                "environmental change": 1,
+                "behavioral change": 1
+            }
+            nutrition_tag_counts = {
+                "LTH basic": 1,
+                "mediterranean": 1
+            }
+
+        elif 0 <= score <= 49:
+            sleep_tag_counts = {
+                "environmental change": 2,
+                "behavioral change": 2
+            }
+            nutrition_tag_counts = {
+                "LTH basic": 1,
+            }
+
+
 
     movement_super_routine, added_to_super_routine_movement, remaining_time_movement = create_custom_super_routine_for_tags(
         routines,
