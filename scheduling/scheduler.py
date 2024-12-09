@@ -493,6 +493,16 @@ def sort_routines_by_score_rules(routines):
 
 def get_number_of_routines(score):
     if 80 <= score <= 100:
+        return 2
+    elif 50 <= score <= 79:
+        return 2
+    elif 0 <= score <= 49:
+        return 1
+    return 0
+
+
+def get_number_of_routines_old(score):
+    if 80 <= score <= 100:
         return 1
     elif 60 <= score <= 79:
         return 2
