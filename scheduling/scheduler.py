@@ -967,7 +967,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 def main():
     account_id, daily_time, routines, health_scores = get_routines_with_defaults()
     print('daily_time',daily_time)
-    daily_time = 15
+
     file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
