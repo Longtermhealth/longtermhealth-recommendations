@@ -859,27 +859,52 @@ def create_health_scores_with_tag(health_scores):
     return health_scores_with_tag
 
 def allocate_more_time_to_focus_areas(daily_allocations, health_scores_with_tag):
+    # Calculate the total time we can reallocate from NUTRITION and SLEEP
     time_to_reallocate = int(daily_allocations["NUTRITION"]) + int(daily_allocations["SLEEP"])
 
-    focus_pillars = [pillar for pillar, data in health_scores_with_tag.items() if
-                     data["tag"] == "focus" and pillar not in ["NUTRITION", "SLEEP"]]
+    # Identify focus pillars other than NUTRITION and SLEEP
+    focus_pillars = [
+        pillar for pillar, data in health_scores_with_tag.items()
+        if data["tag"] == "focus" and pillar not in ["NUTRITION", "SLEEP"]
+    ]
 
+    # If there are no additional focus pillars, revert to allocating equally among all other pillars
+    if not focus_pillars:
+        # Consider all pillars except NUTRITION and SLEEP for fallback reallocation
+        # This includes pillars that may not have a "focus" tag.
+        other_pillars = [p for p in daily_allocations.keys() if p not in ["NUTRITION", "SLEEP"]]
+
+        # If there are still no other pillars, there's nothing to reallocate to
+        if not other_pillars:
+            # Just return with minimal changes
+            daily_allocations["NUTRITION"] = 0.1
+            daily_allocations["SLEEP"] = 0.1
+            return {}, daily_allocations
+
+        # Use the other pillars for reallocation
+        focus_pillars = other_pillars
+
+    # Perform the integer division allocation
     allocation_per_pillar = time_to_reallocate // len(focus_pillars)
-
     remainder = time_to_reallocate % len(focus_pillars)
 
+    # Build the reallocation dictionary
     reallocations = {pillar: allocation_per_pillar for pillar in focus_pillars}
 
+    # Distribute the remainder
     for i in range(remainder):
         reallocations[focus_pillars[i]] += 1
 
+    # Reduce NUTRITION and SLEEP to minimal
     daily_allocations["NUTRITION"] = 0.1
     daily_allocations["SLEEP"] = 0.1
 
+    # Apply the new allocations to the target pillars
     for pillar in focus_pillars:
-        daily_allocations[pillar] += reallocations[pillar]
+        daily_allocations[pillar] = daily_allocations.get(pillar, 0) + reallocations[pillar]
 
     return reallocations, daily_allocations
+
 
 def calculate_total_durations(routines_per_day, pillar_durations_per_day, allocated_time):
     total_allocated_durations = {}
@@ -942,7 +967,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 def main():
     account_id, daily_time, routines, health_scores = get_routines_with_defaults()
     print('daily_time',daily_time)
-
+    daily_time = 15
     file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
@@ -1083,7 +1108,7 @@ def main():
         movement_tag_counts,
         weights,
         "MOVEMENT",
-        daily_allocations["MOVEMENT"]
+        5,
     )
 
     sleep_super_routine, added_to_super_routine_sleep, remaining_time_sleep = create_custom_super_routine_for_tags(
