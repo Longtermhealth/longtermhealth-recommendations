@@ -1,6 +1,60 @@
 {
   "exclusion_rules": [
     {
+      "name": "Exclude Trinke Wasser",
+      "pillar": "NUTRITION",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+          "field": "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?",
+          "operator": "==",
+          "value": "7-9"
+            },
+            {
+          "field": "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?",
+          "operator": "==",
+          "value": "10-12"
+            },
+            {
+          "field": "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?",
+          "operator": "==",
+          "value": "> 12"
+            }
+          ]
+        },
+        "action": {
+          "field": "category",
+          "value": "WATER"
+        }
+      },
+        {
+      "name": "Exclude Vollkorn",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie viel Vollkorn nimmst du zu dir?",
+        "operator": ">=",
+        "value": 4
+      },
+      "action": {
+        "field": "category",
+        "value": "WHOLE_GRAINS"
+      }
+    },
+    {
+      "name": "Exclude tag passive",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Geburtsjahr",
+        "operator": "<",
+        "value": 1929
+      },
+      "action": {
+        "field": "tags.tag",
+        "value": "passive"
+      }
+    },
+    {
       "name": "Exclude One Condition, Multiple Actions",
       "pillar": "basics",
       "condition": {
@@ -20,6 +74,10 @@
         {
           "field": "fitnessLevelRequired",
           "value": 4
+        },
+        {
+          "field": "benefit",
+          "value": "STRESS_REDUCTION"
         }
       ]
     },
@@ -37,16 +95,16 @@
       }
     },
     {
-      "name": "Exclude Tag Draußen",
+      "name": "Exclude Passive",
       "pillar": "MOVEMENT",
       "condition": {
         "field": "Geburtsjahr",
         "operator": "<",
-        "value": 1995
+        "value": 2024
       },
       "action": {
-        "field": "locations.location_de",
-        "value": "Draußen"
+        "field": "tags.tag",
+        "value": "passive"
       }
     },
     {
@@ -55,7 +113,7 @@
       "condition": {
         "field": "Geburtsjahr",
         "operator": "<",
-        "value": 1995
+        "value": 1944
       },
       "action": [
         {
@@ -133,11 +191,23 @@
           "operator": "<=",
           "value": 50
         },
-        "action": {
-          "field": "goal",
-          "value": "STRENGTH_BUILDING",
-          "weight": 10
-        }
+        "actions": [
+          {
+            "field": "order",
+            "value": 0,
+            "weight": 10
+          },
+          {
+            "field": "order",
+            "value": 1,
+            "weight": 99
+          },
+          {
+            "field": "tags.tag",
+            "value": "weightloss",
+            "weight": 1
+          }
+        ]
       },
       {
         "name": "Nutrition score -> BETTER_NUTRITION",
@@ -146,11 +216,23 @@
           "operator": "<=",
           "value": 50
         },
-        "action": {
+        "actions": [
+          {
+            "field": "order",
+            "value": 0,
+            "weight": 10
+          },
+          {
           "field": "goal",
           "value": "BETTER_NUTRITION",
-          "weight": 10
-        }
+          "weight": 2
+          },
+          {
+            "field": "order",
+            "value": 1,
+            "weight": 10
+          }
+        ]
       },
       {
         "name": "Sleep score -> BETTER_SLEEP_THROUGH",
@@ -162,7 +244,7 @@
         "action": {
           "field": "benefit",
           "value": "BETTER_SLEEP_THROUGH",
-          "weight": 10
+          "weight": 2
         }
       },
       {
@@ -170,13 +252,25 @@
         "condition": {
           "field": "SOCIAL_ENGAGEMENT",
           "operator": "<=",
-          "value": 50
+          "value": 100
         },
-        "action": {
-          "field": "goal",
+        "actions": [
+          {
+            "field": "order",
+            "value": 0,
+            "weight": 100
+          },
+          {
+           "field": "goal",
           "value": "SOCIAL_CONNECTIONS",
-          "weight": 10
-        }
+          "weight": 2
+          },
+          {
+            "field": "order",
+            "value": 1,
+            "weight": 100
+          }
+        ]
       },
       {
         "name": "Stress score -> STRESS_REDUCTION",
@@ -188,7 +282,7 @@
         "action": {
           "field": "goal",
           "value": "STRESS_REDUCTION",
-          "weight": 10
+          "weight": 2
         }
       },
       {
@@ -201,7 +295,7 @@
         "action": {
           "field": "goal",
           "value": "BETTER_MENTAL_HEALTH",
-          "weight": 10
+          "weight": 2
         }
       },
       {
@@ -214,11 +308,31 @@
         "action": {
           "field": "goal",
           "value": "IMPROVE_COGNITION",
-          "weight": 10
+          "weight": 2
         }
       }
     ],
     "MOVEMENT": [
+      {
+        "name": "Include warm-up routines",
+        "conditions": {
+          "rules": [
+            {
+            "field": "Geburtsjahr",
+            "operator": "<",
+            "value": 1995
+            }
+          ],
+          "logic": "and"
+        },
+        "actions": [
+          {
+            "field": "tags.tag",
+            "value": "warm-up",
+            "weight": 2
+          }
+        ]
+      },
       {
         "name": "Include One condition, multiple actions",
         "condition": {
@@ -316,26 +430,6 @@
         ]
       },
       {
-        "name": "Include warm-up routines",
-        "conditions": {
-          "rules": [
-            {
-            "field": "Geburtsjahr",
-            "operator": "<",
-            "value": 1995
-            }
-          ],
-          "logic": "and"
-        },
-        "actions": [
-          {
-            "field": "tags.tag",
-            "value": "warm-up",
-            "weight": 10
-          }
-        ]
-      },
-      {
         "name": "Strength Focus for Age Over 40",
         "conditions": {
           "logic": "and",
@@ -412,6 +506,43 @@
       }
     ],
     "NUTRITION": [
+      {
+        "name": "Trinke 2L Wasser",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+          "field": "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?",
+          "operator": "==",
+          "value": "0-3"
+            },
+            {
+          "field": "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?",
+          "operator": "==",
+          "value": "4-6"
+            }
+          ]
+        },
+        "action": {
+          "field": "category",
+          "value": "WATER",
+          "weight": 30
+        }
+      },
+      {
+        "name": "Include Vollkorn",
+        "pillar": "NUTRITION",
+        "condition": {
+          "field": "Wie viel Vollkorn nimmst du zu dir?",
+          "operator": "<",
+          "value": 3
+        },
+        "action": {
+          "field": "category",
+          "value": "WHOLE_GRAINS",
+          "weight": 30
+        }
+      },
       {
         "name": "High Sugar Intake",
         "condition": {

@@ -196,6 +196,7 @@ def ensure_default_fields(routines):
 def evaluate_conditions(conditions, logic, pillar_data, user_data):
     if not conditions:
         return False
+
     results = []
 
     for condition in conditions:
@@ -206,17 +207,19 @@ def evaluate_conditions(conditions, logic, pillar_data, user_data):
             operator = condition.get('operator')
             value = condition.get('value')
 
-            user_value = check_dynamic_field(pillar_data, field)
+            user_value = pillar_data.get(field, None)
 
             if user_value is None:
                 for other_pillar, data in user_data.items():
+                    # Ensure data is a dict before trying .get()
                     if isinstance(data, dict):
-                        user_value = check_dynamic_field(data, field)
+                        user_value = data.get(field, None)
                         if user_value is not None:
                             break
 
             if user_value is not None:
                 result = evaluate_condition(user_value, operator, value)
+                #print("Exclusion rule condition result:", user_value, operator, value, result)
                 results.append(result)
             else:
                 results.append(False)
@@ -229,7 +232,6 @@ def evaluate_conditions(conditions, logic, pillar_data, user_data):
         overall_result = False
 
     return overall_result
-
 
 def evaluate_condition(user_value, operator, condition_value):
     if user_value is None:
