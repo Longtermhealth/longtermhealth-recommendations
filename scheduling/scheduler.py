@@ -349,7 +349,7 @@ def build_individual_routine_entry(routine):
     return individual_routine_entry
 
 
-def save_action_plan_json(final_action_plan, file_path='./data/action_plan.json'):
+def save_action_plan_json(final_action_plan, file_path='../data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False,
                   indent=2)
@@ -967,8 +967,8 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 def main():
     account_id, daily_time, routines, health_scores = get_routines_with_defaults()
     print('daily_time',daily_time)
-
-    file_path = "./data/routines_with_scores.json"
+    
+    file_path = "../data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
 

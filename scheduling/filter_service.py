@@ -1,12 +1,10 @@
-#scheduling/filter_service.py
-
 import json
 import logging
 from typing import Dict, Any, List
+
 from assessments.health_assessment import HealthAssessment
 from rules.rule_service import evaluate_rule
 from utils.data_processing import integrate_answers
-from utils.strapi_api import strapi_api_azure_get_all_routines
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
 
 logging.basicConfig(level=logging.INFO)
@@ -35,14 +33,12 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 
 def new_load_routines() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
-    strapi_api_azure_get_all_routines()
-    return load_json_data('./data/strapi_all_routines.json')
+    return load_json_data('../data/strapi_all_routines.json')
 
 
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
-    return load_json_data('./data/rules.json')
-
+    return load_json_data('../data/rules.json')
 
 def calculate_bmi(weight: float, height: float) -> float:
     if height <= 0:
@@ -51,8 +47,56 @@ def calculate_bmi(weight: float, height: float) -> float:
     return round(bmi, 2)
 
 
+def add_benefits_to_user_profile(user_profile, goals_benefits_map):
+    for goal in user_profile.get("goals", []):
+        benefits = goals_benefits_map.get(goal, [])
+        for benefit in benefits:
+            if benefit not in user_profile["benefits"]:
+                user_profile["benefits"].append(benefit)
+
+
+def save_routines_to_json(routines, file_path):
+    try:
+        with open(file_path, 'w') as f:
+            json.dump(routines, f, indent=4)
+        print(f"Routines successfully saved to {file_path}")
+    except Exception as e:
+        logger.error(f"An error occurred while saving routines: {e}")
+
+
+def generate_recommendations(user_data, routines, rules):
+    recommended_routines = {}
+    user_profile = {"goals": [], "benefits": [], "category": []}
+    seen_routines = set()
+
+    for pillar, pillar_data in user_data.items():
+        if pillar not in valid_pillars:
+            continue
+        filtered_routines = filter_inclusions(
+            pillar_data, pillar,
+            rules.get('rules', {}).get(pillar, []),
+            routines, seen_routines, user_data
+        )
+        recommended_routines[pillar] = filtered_routines
+
+        for rule in rules.get('rules', {}).get(pillar, []):
+            if evaluate_rule(rule, pillar_data, user_data):
+                actions = rule.get('actions') or [rule.get('action')]
+                for action in actions:
+                    action_field = action.get('field')
+                    action_value = action.get('value')
+                    if action_field == "Goal" and action_value not in user_profile["goals"]:
+                        user_profile["goals"].append(action_value)
+                    elif action_field.startswith("Benefit") and action_value not in user_profile["benefits"]:
+                        user_profile["benefits"].append(action_value)
+
+    add_benefits_to_user_profile(user_profile, load_goals_benefits())
+    return recommended_routines, user_profile
+
+
 def apply_global_exclusions(user_data, exclusion_rules, routines):
     global excluded_rules
+    print("\nApplying global exclusions...")
 
     for rule in exclusion_rules:
         pillar_name = rule.get('pillar')
@@ -79,7 +123,9 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
                     for routine in routines:
                         attributes = routine.get('attributes', {})
 
+
                         dynamic_field_value = check_dynamic_field(attributes, field_to_check)
+
 
                         if isinstance(dynamic_field_value, list):
                             if exclude_value in dynamic_field_value:
@@ -94,6 +140,7 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
                             routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                             excluded_rules.add((rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
 
+    print("Exclusion processing complete.\n")
     return routines
 
 
@@ -135,18 +182,37 @@ def filter_inclusions(pillar_data, pillar_name, pillar_rules, routines, user_dat
                         if routine.get('attributes', {}).get('rule_status') == 'excluded':
                             continue
 
-                        routine_field_value = check_dynamic_field(routine['attributes'], action_field)
+                        routine_pillar = routine['attributes']['pillar']['pillar']
 
-                        if isinstance(routine_field_value, list):
-                            if action_value in routine_field_value:
+                        if routine_pillar == pillar_name:
+
+                            routine_field_value = check_dynamic_field(routine['attributes'], action_field)
+
+                            if isinstance(routine_field_value, list):
+                                if action_value in routine_field_value:
+                                    routine_scores[routine_id] += weight
+                                    explanation = (
+                                        f"matched the rule '{rule.get('name', 'Unnamed Rule')}' with score {weight} "
+                                        f"due to {action_field}: {action_value}"
+                                    )
+                                    routine_explanations[routine_id].append(explanation)
+                                    included_rules.add(
+                                        (rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
+                                    routine['rule_status'] = 'included'
+                                    routine['score_rules'] = routine_scores[routine_id]
+                                    routine["score_rules_explanation"] = (
+                                        f"Routine '{routine['attributes'].get('name', 'Unnamed Routine')}' recommended under pillar '{pillar_name}' with "
+                                        f"cumulative score {routine_scores[routine_id]} because it {explanation}"
+                                    )
+                                    processed_routines.add(routine_id)
+                            elif routine_field_value == action_value:
                                 routine_scores[routine_id] += weight
                                 explanation = (
                                     f"matched the rule '{rule.get('name', 'Unnamed Rule')}' with score {weight} "
                                     f"due to {action_field}: {action_value}"
                                 )
                                 routine_explanations[routine_id].append(explanation)
-                                included_rules.add(
-                                    (rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
+                                included_rules.add((rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
                                 routine['rule_status'] = 'included'
                                 routine['score_rules'] = routine_scores[routine_id]
                                 routine["score_rules_explanation"] = (
@@ -154,21 +220,6 @@ def filter_inclusions(pillar_data, pillar_name, pillar_rules, routines, user_dat
                                     f"cumulative score {routine_scores[routine_id]} because it {explanation}"
                                 )
                                 processed_routines.add(routine_id)
-                        elif routine_field_value == action_value:
-                            routine_scores[routine_id] += weight
-                            explanation = (
-                                f"matched the rule '{rule.get('name', 'Unnamed Rule')}' with score {weight} "
-                                f"due to {action_field}: {action_value}"
-                            )
-                            routine_explanations[routine_id].append(explanation)
-                            included_rules.add((rule.get('name', 'Unnamed Rule'), f"{action_field}: {action_value}"))
-                            routine['rule_status'] = 'included'
-                            routine['score_rules'] = routine_scores[routine_id]
-                            routine["score_rules_explanation"] = (
-                                f"Routine '{routine['attributes'].get('name', 'Unnamed Routine')}' recommended under pillar '{pillar_name}' with "
-                                f"cumulative score {routine_scores[routine_id]} because it {explanation}"
-                            )
-                            processed_routines.add(routine_id)
 
     return routines
 
@@ -211,7 +262,7 @@ def evaluate_conditions(conditions, logic, pillar_data, user_data):
 
             if user_value is None:
                 for other_pillar, data in user_data.items():
-                    # Ensure data is a dict before trying .get()
+
                     if isinstance(data, dict):
                         user_value = data.get(field, None)
                         if user_value is not None:
@@ -219,7 +270,6 @@ def evaluate_conditions(conditions, logic, pillar_data, user_data):
 
             if user_value is not None:
                 result = evaluate_condition(user_value, operator, value)
-                #print("Exclusion rule condition result:", user_value, operator, value, result)
                 results.append(result)
             else:
                 results.append(False)
@@ -232,6 +282,7 @@ def evaluate_conditions(conditions, logic, pillar_data, user_data):
         overall_result = False
 
     return overall_result
+
 
 def evaluate_condition(user_value, operator, condition_value):
     if user_value is None:
@@ -360,9 +411,9 @@ input_static_template = {
         "Welche Form kommt an die Stelle vom ?": None,
         "Quark : Milch / Brot : ?": None
     },
-    "Frühstück": None,
-    "Mittagessen": None,
-    "Abendessen": None,
+    "fasting_breakfast": None,
+    "fasting_lunch": None,
+    "fasting_dinner": None,
     "SCORES": {
         "MOVEMENT": None,
         "NUTRITION": None,
@@ -375,8 +426,6 @@ input_static_template = {
     }
 }
 
-
-
 def set_value(template, key, answers, default=None, log_missing=True):
     """
     Helper function to safely set values in the template from the answers.
@@ -385,7 +434,7 @@ def set_value(template, key, answers, default=None, log_missing=True):
     key = key.strip()
     value = answers.get(key, default)
     if value is None and log_missing:
-        logger.info(f"Missing '{key}' in answers.")
+        print(f"Missing '{key}' in answers.")
     template[key] = value
 
 def map_answers(answers, scores):
@@ -486,9 +535,9 @@ def map_answers(answers, scores):
     for key, default in cognitive_enhancement_keys:
         set_value(input_static_template['COGNITIVE_ENHANCEMENT'], key, answers, default)
 
-    set_value(input_static_template, 'Frühstück', answers)
-    set_value(input_static_template, 'Mittagessen', answers)
-    set_value(input_static_template, 'Abendessen', answers)
+    set_value(input_static_template, 'fasting_breakfast', answers)
+    set_value(input_static_template, 'fasting_lunch', answers)
+    set_value(input_static_template, 'fasting_dinner', answers)
 
     scores_keys = [
         'MOVEMENT', 'NUTRITION', 'SLEEP', 'SOCIAL_ENGAGEMENT', 'STRESS', 'GRATITUDE', 'COGNITIVE_ENHANCEMENT', 'Total Score'
@@ -497,7 +546,7 @@ def map_answers(answers, scores):
         set_value(input_static_template['SCORES'], key, scores)
 
     output_json = json.dumps(input_static_template, ensure_ascii=False, indent=2)
-
+    print(output_json)
     return output_json
 
 
@@ -540,17 +589,15 @@ def main():
     scores["Total Score"] = total_score
 
     output_json = map_answers(answers, scores)
-
     user_data = json.loads(output_json)
-    accountid = answers.get('accountid', None)
+
+    account_id = answers.get('accountid', None)
     daily_time = answers.get(
         '*Vielen Dank!*\nWir erstellen nun deine erste individuelle Routine. Dazu müssen wir nur noch wissen, wie viel Zeit du täglich für deine langfristige Gesundheit investieren kannst.',
         0
     )
 
-    print(f"accountid {accountid} daily_time {daily_time}")
-
-
+    print('account_id',account_id)
     basics = user_data.get('basics', {})
     weight = basics.get('Wie viel wiegst du (in kg)?')
     height_cm = basics.get('Was ist deine Körpergröße (in cm)?')
@@ -583,7 +630,7 @@ def main():
 
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
 
-    output_file_path = './data/routines_with_scores.json'
+    output_file_path = '../data/routines_with_scores.json'
     try:
         with open(output_file_path, 'w') as f:
             json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
@@ -600,7 +647,7 @@ def main():
         print(f"Rule: {rule_name}, Action: {action}")
 
     print('Health Scores: ', scores)
-    return accountid, daily_time, routines_with_defaults, scores
+    return account_id, daily_time, routines_with_defaults, scores
 
 
 if __name__ == '__main__':
