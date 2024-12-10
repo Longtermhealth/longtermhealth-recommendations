@@ -113,7 +113,7 @@
       "condition": {
         "field": "Geburtsjahr",
         "operator": "<",
-        "value": 1944
+        "value": 1943
       },
       "action": [
         {
@@ -132,22 +132,23 @@
     },
     {
       "name": "Exclude if really low in all exercise questions -> really unfit",
+      "pillar": "MOVEMENT",
       "conditions": {
-        "logic": "and",
+        "logic": "or",
         "rules": [
           {
             "field": "Wie oft in der Woche treibst du Sport?",
             "operator": "==",
-            "value": "0"
+            "value": 0
           },
           {
             "field": "Wie aktiv bist du im Alltag?",
             "operator": "==",
-            "value": "1"
+            "value": 1
           }
         ]
       },
-      "actions": [
+      "action": [
         {
           "field": "fitnessLevelRequired",
           "value": "MODERATE_FIT"
@@ -389,7 +390,7 @@
           "value": 2000
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "junior",
           "weight": 2
         }
@@ -447,7 +448,7 @@
           ]
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "strength",
           "weight": 2
         }
@@ -460,7 +461,7 @@
           "value": 1944
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "senior",
           "weight": 2
         }
@@ -473,7 +474,7 @@
           "value": 3
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "mobility",
           "weight": 2
         }
@@ -486,7 +487,7 @@
           "value": 2
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "mobility",
           "weight": 3
         }
@@ -499,7 +500,7 @@
           "value": 1
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "mobility",
           "weight": 4
         }
@@ -551,7 +552,7 @@
           "value": 3
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "cut-out sugary drinks",
           "weight": 2
         }
@@ -564,7 +565,7 @@
           "value": 3
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "Food Prep",
           "weight": 2
         }
@@ -577,7 +578,7 @@
           "value": "10-12"
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "Food Prep",
           "weight": 2
         }
@@ -776,7 +777,7 @@
             "weight": 2
           },
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "breathing",
             "weight": 2
           },
@@ -786,12 +787,12 @@
             "weight": 2
           },
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "aromatherapy",
             "weight": 2
           },
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "self care",
             "weight": 2
           }
@@ -831,7 +832,7 @@
         },
         "actions": [
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "Time management",
             "weight": 2
           },
@@ -887,7 +888,7 @@
             "weight": 2
           },
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "neck mobility",
             "weight": 2
           }
@@ -967,7 +968,7 @@
         },
         "actions": [
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "sudoku",
             "weight": 2
           }
@@ -982,7 +983,7 @@
         },
         "actions": [
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "crossword puzzle",
             "weight": 2
           }
@@ -1039,7 +1040,7 @@
         },
         "actions": [
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "back",
             "weight": 2
           },
@@ -1058,7 +1059,7 @@
           "value": "Chronische Kopfschmerzen"
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "headache",
           "weight": 2
         }
@@ -1072,7 +1073,7 @@
         },
         "actions": [
           {
-            "field": "tag",
+            "field": "tags.tag",
             "value": "cardio",
             "weight": 2
           },
@@ -1091,7 +1092,7 @@
           "value": "Schwaches Immunsystem"
         },
         "action": {
-          "field": "tag",
+          "field": "tags.tag",
           "value": "Immunesystem",
           "weight": 2
         }
