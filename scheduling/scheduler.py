@@ -668,7 +668,7 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
         if pillar == 'MOVEMENT':
             print("MOVEMENT routine detected, scheduling only on weekends (Saturday and Sunday).")
             for day in [6, 7]:
-                if remaining_weekly_time >= duration and day not in [r['scheduleDays'][0] for r in
+                if day not in [r['scheduleDays'][0] for r in
                                                                      all_scheduled_routines if
                                                                      r['pillar'] == pillar]:
                     scheduled_days.add(day)
@@ -972,7 +972,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 def main():
     account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
     print('daily_time',daily_time)
-
+    
     file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
