@@ -158,6 +158,11 @@ def get_routines_by_ids(routines, routine_ids):
 
 def build_final_action_plan(routines, routine_schedule, account_id, daily_time, routines_for_super_routine,
                             super_routine_id, max_subroutines_per_superroutine=5):
+
+    if super_routine_id == "sleep_superroutine" and len(routines_for_super_routine) == 0:
+        return {"data": {"accountId": account_id, "totalDailyTimeInMins": daily_time, "routines": []}}, 0
+
+
     final_action_plan = {
         "data": {
             "accountId": account_id,
@@ -965,7 +970,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 
 
 def main():
-    account_id, daily_time, routines, health_scores = get_routines_with_defaults()
+    account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
     print('daily_time',daily_time)
     
     file_path = "./data/routines_with_scores.json"
@@ -1079,7 +1084,7 @@ def main():
                 "environmental change": 1,
             }
             nutrition_tag_counts = {
-                "LTH basic": 1,
+                "behavioral change": 1,
             }
 
         elif 50 <= score <= 79:
@@ -1098,7 +1103,7 @@ def main():
                 "behavioral change": 2
             }
             nutrition_tag_counts = {
-                "LTH basic": 1,
+                "behavioral change": 1,
             }
 
 
@@ -1111,13 +1116,23 @@ def main():
         5,
     )
 
-    sleep_super_routine, added_to_super_routine_sleep, remaining_time_sleep = create_custom_super_routine_for_tags(
-        routines,
-        sleep_tag_counts,
-        weights,
-        "SLEEP",
-        daily_allocations["SLEEP"]
-    )
+
+    sleep_answer = user_data.get('SLEEP', {}).get('Wie ist deine Schlafqualität?')
+
+
+    if sleep_answer == "Sehr gut":
+        sleep_super_routine = []
+        added_to_super_routine_sleep = []
+        remaining_time_sleep = 0
+        print('sleep_answer is sehr gut, skipping sleep super routine',sleep_answer)
+    else:
+        sleep_super_routine, added_to_super_routine_sleep, remaining_time_sleep = create_custom_super_routine_for_tags(
+            routines,
+            sleep_tag_counts,
+            weights,
+            "SLEEP",
+            daily_allocations["SLEEP"]
+        )
 
     nutrition_super_routine, added_to_super_routine_nutrition, remaining_time_nutrition = create_custom_super_routine_for_tags(
         routines,

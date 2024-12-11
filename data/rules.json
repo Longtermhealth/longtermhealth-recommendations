@@ -41,6 +41,45 @@
         "value": "WHOLE_GRAINS"
       }
     },
+        {
+      "name": "Exclude Vegetables",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie viel Gemüse nimmst du pro Tag zu dir?",
+        "operator": ">=",
+        "value": 4
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "eat min 3 handful of vegetables daily"
+      }
+    },
+        {
+      "name": "Exclude Fruits",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie viel Obst nimmst du pro Tag zu dir?",
+        "operator": ">=",
+        "value": 4
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "eat min 2 handful of fruit daily"
+      }
+    },
+            {
+      "name": "Exclude Fasting",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Praktizierst du Intervallfasten und auf welche Art?",
+        "operator": "==",
+        "value": "16:8 (tägllich 14-16 Stunden fasten)"
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "try intermittent fasting"
+      }
+    },
     {
       "name": "Exclude tag passive",
       "pillar": "MOVEMENT",
@@ -145,6 +184,11 @@
             "field": "Wie aktiv bist du im Alltag?",
             "operator": "==",
             "value": 1
+          },
+          {
+            "field": "Wie aktiv bist du im Alltag?",
+            "operator": "==",
+            "value": 2
           }
         ]
       },
@@ -545,6 +589,34 @@
         }
       },
       {
+        "name": "Include Vegetables",
+        "pillar": "NUTRITION",
+        "condition": {
+          "field": "Wie viel Gemüse nimmst du pro Tag zu dir?",
+          "operator": "<",
+          "value": 3
+        },
+        "action": {
+        "field": "variations.variation",
+        "value": "eat min 3 handful of vegetables daily",
+          "weight": 30
+        }
+      },
+      {
+        "name": "Include Fruits",
+        "pillar": "NUTRITION",
+        "condition": {
+          "field": "Wie viel Obst nimmst du pro Tag zu dir?",
+          "operator": "<",
+          "value": 3
+        },
+        "action": {
+        "field": "variations.variation",
+        "value": "eat min 2 handful of fruit daily",
+          "weight": 30
+        }
+      },
+      {
         "name": "High Sugar Intake",
         "condition": {
           "field": "Wie viel zuckerhaltige Produkte nimmst du zu dir?",
@@ -552,9 +624,9 @@
           "value": 3
         },
         "action": {
-          "field": "tags.tag",
-          "value": "cut-out sugary drinks",
-          "weight": 2
+          "field": "variations.variation",
+          "value": "cut-out sugar",
+          "weight": 40
         }
       },
       {
@@ -723,21 +795,48 @@
       }
     ],
     "STRESS": [
-      {
-        "name": "Stress high -> RECOVERY, BOOSTS_MOOD",
+            {
+        "name": "Stress High 2 -> Meditate",
         "condition": {
           "field": "Leidest du aktuell unter Stress?",
-          "operator": ">",
-          "value": 3
+          "operator": ">=",
+          "value": 1
+        },
+        "action": {
+          "field": "tags.tag",
+          "value": "usertest",
+          "weight": 40
+        }
+      },
+      {
+        "name": "Stress High -> Meditate",
+        "condition": {
+          "field": "Leidest du aktuell unter Stress?",
+          "operator": ">=",
+          "value": 1
+        },
+        "action": {
+          "field": "variations.variation",
+          "value": "meditation",
+          "weight": 40
+        }
+      },
+
+      {
+        "name": "Stress High -> RECOVERY, BOOSTS_MOOD",
+        "condition": {
+          "field": "Leidest du aktuell unter Stress?",
+          "operator": "==",
+          "value": 1
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "RECOVERY",
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "BOOSTS_MOOD",
             "weight": 2
           },

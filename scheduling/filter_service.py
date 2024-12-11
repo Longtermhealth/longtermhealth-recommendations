@@ -647,7 +647,7 @@ def main():
         print(f"Rule: {rule_name}, Action: {action}")
 
     print('Health Scores: ', scores)
-    return account_id, daily_time, routines_with_defaults, scores
+    return account_id, daily_time, routines_with_defaults, scores, user_data
 
 
 if __name__ == '__main__':
