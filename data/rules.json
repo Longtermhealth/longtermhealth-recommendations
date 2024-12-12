@@ -115,7 +115,7 @@
           "value": 4
         },
         {
-          "field": "benefit",
+          "field": "benefits.benefit",
           "value": "STRESS_REDUCTION"
         }
       ]
@@ -287,7 +287,7 @@
           "value": 50
         },
         "action": {
-          "field": "benefit",
+          "field": "benefits.benefit",
           "value": "BETTER_SLEEP_THROUGH",
           "weight": 2
         }
@@ -392,7 +392,7 @@
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "IMPROVES_LUNG_FUNCTION",
             "weight": 2
           },
@@ -463,7 +463,7 @@
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "IMPROVES_LUNG_FUNCTION",
             "weight": 2
           },
@@ -756,7 +756,7 @@
           "value": 3
         },
         "action": {
-          "field": "benefit",
+          "field": "benefits.benefit",
           "value": "PROMOTE_PROMOTE_CIRCULATION",
           "weight": 2
         }
@@ -795,25 +795,12 @@
       }
     ],
     "STRESS": [
-            {
-        "name": "Stress High 2 -> Meditate",
-        "condition": {
-          "field": "Leidest du aktuell unter Stress?",
-          "operator": ">=",
-          "value": 1
-        },
-        "action": {
-          "field": "tags.tag",
-          "value": "usertest",
-          "weight": 40
-        }
-      },
       {
         "name": "Stress High -> Meditate",
         "condition": {
           "field": "Leidest du aktuell unter Stress?",
           "operator": ">=",
-          "value": 1
+          "value": 4
         },
         "action": {
           "field": "variations.variation",
@@ -821,33 +808,22 @@
           "weight": 40
         }
       },
-
       {
         "name": "Stress High -> RECOVERY, BOOSTS_MOOD",
         "condition": {
           "field": "Leidest du aktuell unter Stress?",
           "operator": "==",
-          "value": 1
+          "value": 3
         },
         "actions": [
           {
             "field": "benefits.benefit",
-            "value": "RECOVERY",
+            "value": "STRESS_REDUCTION",
             "weight": 2
           },
           {
             "field": "benefits.benefit",
-            "value": "BOOSTS_MOOD",
-            "weight": 2
-          },
-          {
-            "field": "subCategory",
-            "value": "WALKING",
-            "weight": 2
-          },
-          {
-            "field": "subCategory",
-            "value": "SWIMMING",
+            "value": "MORE_ENERGY",
             "weight": 2
           }
         ]
@@ -871,7 +847,7 @@
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "BOOSTS_MOOD",
             "weight": 2
           },
@@ -906,7 +882,7 @@
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "BOOSTS_MOOD",
             "weight": 2
           }
@@ -982,7 +958,7 @@
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "NECK_STRETCH",
             "weight": 2
           },
@@ -1007,7 +983,7 @@
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "IMPROVE_MEMORY",
             "weight": 2
           }
@@ -1099,17 +1075,17 @@
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "WEIGHT_LOSS",
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "LOWER_BACK_MUSCLES",
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "KNEE_STRENGTH",
             "weight": 2
           }
@@ -1124,7 +1100,7 @@
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "IMPROVES_LUNG_FUNCTION",
             "weight": 2
           }
@@ -1205,7 +1181,7 @@
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "PROMOTE_PROMOTE_CIRCULATION",
             "weight": 2
           }
@@ -1230,7 +1206,7 @@
             "weight": 2
           },
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "PROMOTE_CIRCULATION",
             "weight": 2
           }
@@ -1260,7 +1236,7 @@
         },
         "actions": [
           {
-            "field": "benefit",
+            "field": "benefits.benefit",
             "value": "BOOSTS_MOOD",
             "weight": 2
           }
