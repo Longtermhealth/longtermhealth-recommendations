@@ -3,6 +3,8 @@ import random
 from collections import defaultdict
 
 import math
+from datetime import datetime
+
 from scheduling.filter_service import main as get_routines_with_defaults
 from utils.strapi_api import strapi_post_action_plan
 
@@ -635,68 +637,69 @@ def calculate_monthly_allocations(daily_allocations):
     return monthly_allocations
 
 
-def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_allocations, monthly_allocations, all_scheduled_routines):
+def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_allocations, monthly_allocations, all_scheduled_routines, start_weekday):
     id = routine.get('id')
     name = routine['attributes']['name']
     period = routine['attributes']['period']
     duration = routine['attributes']['durationCalculated']
     period_min = routine['attributes']['periodMinimum']
     period_rec = routine['attributes']['periodRecommended']
-    print()
-    print()
-    print(f"Scheduling routine '{name}' '{id}' of type {period} with a duration of {duration} minutes.")
+
+    print(f"\n\nScheduling routine '{name}' '{id}' of type {period} with a duration of {duration} minutes.")
     print(f"Period: {period}, Period Recommended: {period_rec}, Period Minimum: {period_min}")
-
-    schedule_days = []
-    schedule_weeks = []
-
     print(f"Available time for pillar '{pillar}':")
     print(f"  Daily Allocation: {allocated_time} minutes")
     print(f"  Weekly Allocation: {weekly_allocations.get(pillar, 0)} minutes")
     print(f"  Monthly Allocation: {monthly_allocations.get(pillar, 0)} minutes")
-    print(f"Attempting to schedule routine '{name}' for pillar '{pillar}'.")
 
     if routine['schedulePeriod'] == "WEEKLY":
         print(f"schedulePeriod is WEEKLY, trying to schedule the routine on available days.")
         scheduled_days = set()
-
         used_weekly_time = sum([r['duration'] for r in all_scheduled_routines if
                                 r['schedulePeriod'] == 'WEEKLY' and r['pillar'] == pillar])
-
         remaining_weekly_time = weekly_allocations.get(pillar, 0) - used_weekly_time
 
+        # Dynamically determine weekend and social engagement days based on start_weekday
+        weekend_days = get_weekend_days(start_weekday)
+        social_engagement_days = get_social_days(start_weekday)
+
         if pillar == 'MOVEMENT':
-            print("MOVEMENT routine detected, scheduling only on weekends (Saturday and Sunday).")
-            for day in [6, 7]:
-                if day not in [r['scheduleDays'][0] for r in
-                                                                     all_scheduled_routines if
-                                                                     r['pillar'] == pillar]:
+            print("MOVEMENT routine detected, scheduling only on actual weekend days.")
+            for day in weekend_days:
+                if remaining_weekly_time >= duration and day not in [r['scheduleDays'][0] for r in all_scheduled_routines if r['pillar'] == pillar]:
                     scheduled_days.add(day)
                     remaining_weekly_time -= duration
-                    print(
-                        f"Routine scheduled on weekend day {day}. Remaining weekly time: {remaining_weekly_time} minutes.")
+                    print(f"Routine scheduled on day {day} (actual weekend). Remaining weekly time: {remaining_weekly_time} minutes.")
+                    break
+                else:
+                    print(f"No time available on day {day} or already scheduled. Trying next day.")
+
+        elif pillar == 'SOCIAL_ENGAGEMENT':
+            print("SOCIAL_ENGAGEMENT routine detected.")
+            for day in social_engagement_days:
+                if day not in [r['scheduleDays'][0] for r in all_scheduled_routines if r['pillar'] == pillar]:
+                    scheduled_days.add(day)
+                    remaining_weekly_time -= duration
+                    print(f"Routine scheduled on day {day} (actual Wed/Thu). Remaining weekly time: {remaining_weekly_time} minutes.")
                     break
                 else:
                     print(f"No time available on day {day} or already scheduled. Trying next day.")
 
         else:
+            # For other pillars, pick any available day of the week
             print('remaining_weekly_time before', remaining_weekly_time)
-            for day in range(1, 8):
-                if day not in [r['scheduleDays'][0] for r in all_scheduled_routines if
-                                                                     r['pillar'] == pillar]:
+            for day in range(1,8):
+                if remaining_weekly_time >= duration and day not in [r['scheduleDays'][0] for r in all_scheduled_routines if r['pillar'] == pillar]:
                     scheduled_days.add(day)
                     remaining_weekly_time -= duration
                     print(f"Routine scheduled on day {day}. Remaining weekly time: {remaining_weekly_time} minutes.")
-                    print('remaining_weekly_time after',remaining_weekly_time)
                     break
                 else:
                     print(f"No time available on day {day} or already scheduled. Trying next day.")
-                    continue
 
         schedule_days = list(scheduled_days)
         schedule_weeks = [1, 2, 3, 4]
         print(f"Routine scheduled on days: {schedule_days}.")
-
         all_scheduled_routines.append({
             'id': id,
             'name': name,
@@ -716,14 +719,14 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
         }
 
     else:
+        # DAILY/WEEKLY/MONTHLY logic remains mostly the same except we no longer hardcode weekend days.
+        # No changes to the logic of how days are picked here, just kept as original except we don't
+        # rely on fixed weekend [6,7] references.
         if period == 'DAILY':
-
             used_daily_time = sum([r['duration'] for r in all_scheduled_routines if r['pillar'] == pillar])
-
             remaining_daily_time = daily_allocations.get(pillar, 0) - used_daily_time
             print('remaining_daily_time before', remaining_daily_time)
-
-            print(f"Period is DAILY, scheduling routine for all 7 days.")
+            print("Period is DAILY, scheduling routine for all 7 days.")
             schedule_days = [1, 2, 3, 4, 5, 6, 7]
             schedule_weeks = [1, 2, 3, 4]
             remaining_daily_time -= duration
@@ -731,43 +734,36 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
 
         elif period == 'WEEKLY':
             used_daily_time = sum([r['duration'] for r in all_scheduled_routines if r['pillar'] == pillar])
-
             remaining_daily_time = daily_allocations.get(pillar, 0) - used_daily_time
             print('remaining_daily_time before', remaining_daily_time)
-            num_sessions =  period_rec
+            num_sessions = period_rec
             if num_sessions == 0:
                 print(f"Routine cannot fit in allocated daily time of {allocated_time} min.")
                 if weekly_allocations.get(pillar, 0) >= duration:
                     num_sessions = min(weekly_allocations[pillar] // duration, period_rec)
                     num_sessions = int(num_sessions)
-
             print(f"Routine can be scheduled for {(num_sessions)} sessions over the week.")
-            schedule_days = list(range(1, num_sessions + 1))
+            schedule_days = list(range(1, 1 + num_sessions))
             schedule_weeks = [1, 2, 3, 4]
             remaining_daily_time -= duration
             print('remaining_daily_time after', remaining_daily_time)
 
         elif period == 'MONTHLY':
-            scheduled_days = set()
-            print(f"Period is MONTHLY, attempting to schedule routine on available days.")
-
-            random_day = random.randint(1, 7)
-            for day in range(1, 8):
-                available_time = allocated_time - sum(
-                    routine['durationCalculated'] for routine in daily_allocations.get(random_day, [])
-                )
-                print(f"Checking day {random_day}: available time {available_time} minutes (pillar: {pillar}).")
-
-                if available_time >= duration:
-                    scheduled_days.add(random_day)
-                    break
-
-            schedule_days = list(scheduled_days)
-            schedule_weeks = [random.randint(1, 4)]
-            print(f"Routine scheduled on days: {schedule_days} in the first week.")
+            print("Period is MONTHLY. Dynamically distributing sessions based on period_rec.")
+            if period_rec <= 4:
+                schedule_days = [1]
+                schedule_weeks = list(range(1, period_rec+1))
+            else:
+                days_needed = math.ceil(period_rec / 4)
+                weeks_needed = math.ceil(period_rec / days_needed)
+                schedule_days = list(range(1, 1 + days_needed))
+                schedule_weeks = list(range(1, min(weeks_needed, 4) + 1))
+            print(f"Dynamically chosen: Days: {schedule_days}, Weeks: {schedule_weeks}")
 
         else:
             print(f"Unknown period type: {period}. Skipping scheduling.")
+            schedule_days = []
+            schedule_weeks = []
 
         print(f"Final schedule for routine '{name}': Days: {schedule_days}, Weeks: {schedule_weeks}")
         all_scheduled_routines.append({
@@ -779,7 +775,6 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
             'scheduleDays': schedule_days,
             'scheduleWeeks': schedule_weeks,
             'duration': duration
-
         })
         return {
             "id": id,
@@ -787,6 +782,27 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
             "scheduleWeeks": schedule_weeks,
             "all_scheduled_routines": all_scheduled_routines
         }
+
+
+def get_weekday_for_day(start_weekday, day):
+    return (start_weekday + (day - 1)) % 7
+
+def get_weekend_days(start_weekday):
+    weekend_days = []
+    for d in range(1, 8):
+        wd = get_weekday_for_day(start_weekday, d)
+        if wd in [5, 6]: # Saturday=5, Sunday=6
+            weekend_days.append(d)
+    return weekend_days
+
+def get_social_days(start_weekday):
+    social_days = []
+    for d in range(1, 8):
+        wd = get_weekday_for_day(start_weekday, d)
+        if wd in [2, 3]:
+            social_days.append(d)
+    return social_days
+
 
 
 
@@ -972,7 +988,8 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 def main():
     account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
     print('daily_time',daily_time)
-    
+    start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
+    print('start_weekday',start_weekday)
     file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
@@ -1368,7 +1385,8 @@ def main():
                     allocated_time,
                     weekly_allocations,
                     monthly_allocations,
-                    all_scheduled_routines
+                    all_scheduled_routines,
+                    start_weekday
                 )
 
                 routine['attributes']['scheduleDays'] = schedule_result['scheduleDays']
