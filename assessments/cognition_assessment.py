@@ -1,8 +1,14 @@
 # rule_based_system/assessments/cognition_assessment.py
 
-from .base_assessment import BaseAssessment
+from assessments.base_assessment import BaseAssessment
 
 class CognitionAssessment(BaseAssessment):
+    REQUIRED_KEYS = [
+        'Wie würdest du deine Vergesslichkeit einstufen?',
+        'Wie gut ist dein Konzentrationsvermögen?',
+        'Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?'
+    ]
+
     def __init__(self, answers):
         """
         Initialize the CognitionAssessment with the provided answers.
@@ -10,58 +16,40 @@ class CognitionAssessment(BaseAssessment):
         :param answers: A dictionary containing the answers to the cognition assessment questions
         """
         super().__init__()
+        self.validate_answers(answers)
         self.answers = answers
         self.cognition = self.convert_cognition(answers)
+
+    def validate_answers(self, answers):
+        """
+        Validate that all required answers are present and can be converted to integers.
+
+        :param answers: A dictionary containing the answers for the cognition assessment
+        :raises ValueError: If any required key is missing or answer is not an integer
+        """
+        for key in self.REQUIRED_KEYS:
+            if key not in answers:
+                raise ValueError(f"Missing required key: '{key}' in answers.")
+            try:
+                int(answers[key])
+            except (ValueError, TypeError):
+                raise ValueError(f"Value for '{key}' must be an integer, got: {answers[key]}")
 
     def convert_cognition(self, answers):
         """
         Convert the answers to cognition assessment questions into corresponding scores.
 
         :param answers: A dictionary containing the answers to the cognition assessment questions
-        :return: A tuple of scores for each cognition question
+        :return: A tuple (forgetfulness, concentration, learning)
         """
-        forgetfulness = int(answers.get('Wie würdest du deine Vergesslichkeit einstufen?', 0))
-        forgetfulness = 6 - forgetfulness
+        forgetfulness_raw = int(answers.get('Wie würdest du deine Vergesslichkeit einstufen?', 0))
+        # Inversion: if user says "5" for forgetfulness, we map it to 1. Formula: forgetfulness = 6 - forgetfulness_raw
+        forgetfulness = 6 - forgetfulness_raw
 
+        concentration = int(answers.get('Wie gut ist dein Konzentrationsvermögen?', 0))
+        learning = int(answers.get('Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?', 0))
 
-        concentration = answers.get('Wie gut ist dein Konzentrationsvermögen?')
-        if concentration is None:
-            concentration = 0
-        else:
-            concentration = int(concentration)
-        #screentime_work_mapping = {'0-2 Stunden': 1, '2-4 Stunden': 2, '4-6 Stunden': 3, '6-8 Stunden': 5, '> 8 Stunden': 5}
-        #screentime_work = screentime_work_mapping.get(answers.get('Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?', ''), 0)
-
-
-        #screentime_private_mapping = {'0-1 Stunde': 5, '1-2 Stunden': 4, '2-3 Stunden': 3, '3-4 Stunden': 2, '> 4 Stunden': 1}
-        #screentime_private = screentime_private_mapping.get(answers.get('Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?', ''), 0)
-
-
-        color_puzzle = int(answers.get('Welche Zahl gehört unter die letzte Abbildung?', 0))
-        if color_puzzle == 2002:
-            color_puzzle = 5
-        else:
-            color_puzzle = 0
-
-        numerical_series = answers.get('Ergänze die Zahlenreihenfolge 3,6,18,21,?')
-        if numerical_series == '63':
-            numerical_series = 5
-        else:
-            numerical_series = 0
-
-        form_quiz = answers.get('Welche Form kommt an die Stelle vom ?')
-        if form_quiz == 'choice 3':
-            form_quiz = 5
-        else:
-            form_quiz = 0
-
-        word_allocation = answers.get('Quark : Milch / Brot : ?')
-        if word_allocation == 'Mehl':
-            word_allocation = 5
-        else:
-            word_allocation = 0
-
-        return forgetfulness, concentration, color_puzzle, numerical_series, form_quiz, word_allocation
+        return forgetfulness, concentration, learning
 
     def calculate_cognition_score(self):
         """
@@ -69,9 +57,10 @@ class CognitionAssessment(BaseAssessment):
 
         :return: The calculated cognition score as a float
         """
-        forgetfulness, concentration, color_puzzle, numerical_series, form_quiz, word_allocation = self.cognition
-        total_points = forgetfulness + concentration + color_puzzle + numerical_series + form_quiz + word_allocation
-        score = total_points / 30 * 100
+        forgetfulness, concentration, learning = self.cognition
+        total_points = forgetfulness + concentration + learning
+        # Max total points = (forgetfulness max = 5 if raw=1, concentration max=5, learning max=5) = 15
+        score = total_points / 15 * 100
         return score
 
     def report(self):
@@ -83,13 +72,4 @@ class CognitionAssessment(BaseAssessment):
         score = self.calculate_cognition_score()
         return f"{score:.2f}"
 
-if __name__ == "__main__":
-    answers = {
-        'Wie würdest du deine Vergesslichkeit einstufen?': '1',
-        'Welche Zahl gehört unter die letzte Abbildung? ': '2002',
-        'Ergänze die Zahlenreihenfolge 3,6,18,21,?': '63',
-        'Welche Form kommt an die Stelle vom ?': 'choice 3',
-        'Quark : Milch / Brot : ?': 'Mehl'
-    }
-    cognition = CognitionAssessment(answers)
-    print(cognition.report())
+

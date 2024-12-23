@@ -1,9 +1,17 @@
 # rule_based_system/assessments/nutrition_assessment.py
+from assessments.base_assessment import BaseAssessment
 
-
-from .base_assessment import BaseAssessment
 
 class NutritionAssessment(BaseAssessment):
+    REQUIRED_KEYS = [
+        'Praktizierst du Intervallfasten und auf welche Art?',
+        'Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?',
+        'Wie viel Alkohol trinkst du in der Woche?',
+        'Wie viel zuckerhaltige Produkte nimmst du zu dir?',
+        'Wie häufig nimmst du Fertiggerichte zu dir?',
+        'Wie viel Vollkorn nimmst du zu dir?'
+    ]
+
     def __init__(self, answers):
         """
         Initialize the NutritionAssessment with the provided answers.
@@ -11,7 +19,32 @@ class NutritionAssessment(BaseAssessment):
         :param answers: A dictionary containing the answers to the nutrition assessment questions
         """
         super().__init__()
+        self.validate_answers(answers)
         self.nutrition = self.convert_nutrition(answers)
+
+    def validate_answers(self, answers):
+        """
+        Validate that all required answers are present and that numeric fields are integers.
+
+        :param answers: A dictionary containing the answers for the nutrition assessment
+        :raises ValueError: If any required key is missing or answer is not an integer where expected
+        """
+        for key in self.REQUIRED_KEYS:
+            if key not in answers:
+                raise ValueError(f"Missing required key: '{key}' in answers.")
+
+        # Validate integer fields
+        integer_fields = [
+            'Wie viel zuckerhaltige Produkte nimmst du zu dir?',
+            'Wie häufig nimmst du Fertiggerichte zu dir?',
+            'Wie viel Vollkorn nimmst du zu dir?'
+        ]
+
+        for field in integer_fields:
+            try:
+                int(answers[field])
+            except (ValueError, TypeError):
+                raise ValueError(f"Value for '{field}' must be an integer, got: {answers[field]}")
 
     def convert_nutrition(self, answers):
         """
@@ -21,7 +54,7 @@ class NutritionAssessment(BaseAssessment):
         :return: A tuple of scores for each nutrition-related question
         """
         fasting = 0
-        fasting_type = answers.get('Praktizierst du Intervallfasten und auf welche Art??', '')
+        fasting_type = answers.get('Praktizierst du Intervallfasten und auf welche Art?', '')
         if (fasting_type == '16:8 (täglich 14-16 Stunden fasten)'
                 or fasting_type == 'Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorieneinnahme)'):
             fasting = 5
@@ -36,6 +69,7 @@ class NutritionAssessment(BaseAssessment):
 
         fluids_mapping = {'0-3': 1, '4-6': 2, '7-9': 3, '10-12': 5, '> 12': 5}
         fluids = fluids_mapping.get(answers.get('Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?', ''), 0)
+
         alcohol_mapping = {'Gar keinen': 5, '1-3': 4, '4-6': 3, '7-9': 2, '10-12': 1, '> 12': 0}
         alcohol = alcohol_mapping.get(answers.get('Wie viel Alkohol trinkst du in der Woche?', ''), 0)
 
@@ -43,19 +77,13 @@ class NutritionAssessment(BaseAssessment):
         if sugar != 0:
             sugar = 6 - sugar
 
-        fruits = int(answers.get('Wie viel Obst nimmst du pro Tag zu dir?', 0))
-        if fruits >= 3:
-            fruits = 5
-
-        vegetables = int(answers.get('Wie viel Gemüse nimmst du pro Tag zu dir?', 0))
-
         processed = int(answers.get('Wie häufig nimmst du Fertiggerichte zu dir?', 0))
         if processed != 0:
             processed = 6 - processed
 
         whole_grain = int(answers.get('Wie viel Vollkorn nimmst du zu dir?', 0))
 
-        return fasting, fasting_type, fluids, alcohol, sugar, fruits, vegetables, processed, whole_grain
+        return fasting, fasting_type, fluids, alcohol, sugar, processed, whole_grain
 
     def calculate_nutrition_score(self):
         """
@@ -63,17 +91,13 @@ class NutritionAssessment(BaseAssessment):
 
         :return: The calculated nutrition score as a float
         """
-        fasting, fasting_type, fluids, alcohol, sugar, fruits, vegetables, processed, whole_grain = self.nutrition
+        fasting, fasting_type, fluids, alcohol, sugar, processed, whole_grain = self.nutrition
 
-        weight_sugar = 0.20
-        weight_fruits = 0.10
-        weight_vegetables = 0.25
-        weight_processed = 0.25
-        weight_whole_grain = 0.20
+        weight_sugar = 0.30
+        weight_processed = 0.30
+        weight_whole_grain = 0.40
 
         nutri_score = (weight_sugar * sugar +
-                       weight_fruits * fruits +
-                       weight_vegetables * vegetables +
                        weight_processed * processed +
                        weight_whole_grain * whole_grain)
 
@@ -82,6 +106,7 @@ class NutritionAssessment(BaseAssessment):
         weight_fluids = 0
         weight_alcohol = 0
 
+        # Fluid weighting
         if fluids == 2:
             weight_nutrition += 0.7
             weight_fasting += 0.1
@@ -94,6 +119,7 @@ class NutritionAssessment(BaseAssessment):
             weight_nutrition += 0.8
             weight_fasting += 0.1
 
+        # Alcohol weighting
         if alcohol == 3:
             weight_nutrition += 0.7
             weight_fasting += 0.1
@@ -140,17 +166,3 @@ class NutritionAssessment(BaseAssessment):
         return f"{score:.2f}"
 
 
-if __name__ == "__main__":
-    answers = {
-        'Welcher Ernährungsstil trifft bei dir am ehesten zu?': 'vegan',
-        'Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?': 'mehr als 12',
-        'Wie viel Alkohol trinkst du in der Woche?': 'gar keinen',
-        'Wie viel zuckerhaltige Produkte nimmst du zu dir?': '1',
-        'Wie viel Obst nimmst du pro Tag zu dir?': '5',
-        'Wie viel Gemüse nimmst du pro Tag zu dir?': '5',
-        'Wie häufig nimmst du Fertiggerichte zu dir?': '1',
-        'Wie viel Vollkorn nimmst du zu dir?': '5',
-        'Praktizierst du Intervallfasten und auf welche Art??': '16:8 (täglich 14-16 Stunden fasten)'
-    }
-    nutrition = NutritionAssessment(answers)
-    print(nutrition.report())

@@ -1,28 +1,49 @@
 # rule_based_system/assessments/stress_management_assessment.py
 
+from assessments.base_assessment import BaseAssessment
 
-from .base_assessment import BaseAssessment
 
 class StressManagementAssessment(BaseAssessment):
-    def __init__(self, answers, stress_situations_response_str, stress_symptoms_response_str):
+    REQUIRED_KEYS = [
+        'Leidest du aktuell unter Stress?',
+        'Ich versuche, die positive Seite von Stress und Druck zu sehen.',
+        'Ich tue alles, damit Stress erst gar nicht entsteht.',
+        'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.',
+        'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.'
+    ]
+
+    def __init__(self, answers):
         """
         Initialize the StressManagementAssessment with the provided answers.
 
         :param answers: A dictionary containing the answers to the stress management assessment questions
-        :param stress_situations_response_str: A string response for stress situations
-        :param stress_symptoms_response_str: A string response for stress symptoms
         """
         super().__init__()
-        self.stress_management = self.convert_stress_management(answers, stress_situations_response_str, stress_symptoms_response_str)
+        self.validate_answers(answers)
+        self.stress_management = self.convert_stress_management(answers)
 
-    def convert_stress_management(self, answers, stress_situations_response_str, stress_symptoms_response_str):
+    def validate_answers(self, answers):
+        """
+        Validate that all required answers are present and can be converted to integers.
+
+        :param answers: A dictionary containing answers to assessment questions
+        :raises ValueError: If any required key is missing or value is not a valid integer
+        """
+        for key in self.REQUIRED_KEYS:
+            if key not in answers:
+                raise ValueError(f"Missing required key: '{key}' in answers.")
+            # Validate that values are integers (as strings)
+            try:
+                int(answers[key])
+            except (ValueError, TypeError):
+                raise ValueError(f"Value for '{key}' must be an integer, got: {answers[key]}")
+
+    def convert_stress_management(self, answers):
         """
         Convert the answers to stress management assessment questions into corresponding scores.
 
         :param answers: A dictionary containing the answers to the stress management assessment questions
-        :param stress_situations_response_str: A string response for stress situations
-        :param stress_symptoms_response_str: A string response for stress symptoms
-        :return: A list of scores for each stress management-related question
+        :return: A list [stress_level_value, stress_coping_average]
         """
         stress_level_mapping = {
             1: 5,
@@ -31,48 +52,27 @@ class StressManagementAssessment(BaseAssessment):
             4: 2,
             5: 0
         }
-        stress_level = int(answers.get('Leidest du aktuell unter Stress?', 0))
-        stress_level_value = stress_level_mapping.get(stress_level, 0)
-        stress_situations_response = answers.get('Welche der folgenden Stresssituationen trifft momentan auf dich zu?', '')
-        stress_symptoms_response = answers.get('Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?', '')
-        stress_situations = 5 if not stress_situations_response else len(stress_situations_response.split(', '))
-        stress_symptoms = 5 if stress_symptoms_response == 'Gar keine' else len(stress_symptoms_response.split(', '))
 
-        def calculate_points(length):
-            if length == 1:
-                return 4
-            elif length == 2:
-                return 3
-            elif length == 3:
-                return 2
-            elif length == 4:
-                return 1
-            elif length > 4:
-                return 0
-
-        if not stress_situations_response or stress_situations_response != 'Gar keine':
-            stress_situations_value = 5
-        else:
-            stress_situations_value = calculate_points(stress_situations)
-
-        if stress_symptoms_response != 'Gar keine':
-            stress_symptoms_value = calculate_points(stress_symptoms)
-        else:
-            stress_symptoms_value = 5
+        # Convert and map stress level
+        stress_level_raw = int(answers.get('Leidest du aktuell unter Stress?', 0))
+        stress_level_value = stress_level_mapping.get(stress_level_raw, 0)
 
         stress_coping_mapping = {
             'Ich versuche, die positive Seite von Stress und Druck zu sehen.': [5, 4, 3, 2, 1],
             'Ich tue alles, damit Stress erst gar nicht entsteht.': [5, 4, 3, 2, 1],
             'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.': [5, 4, 3, 2, 1],
-            'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': [1, 2, 3, 4, 5]        }
+            'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': [
+                5, 4, 3, 2, 1]
+        }
 
+        # Convert coping strategies
         stress_coping_values = []
-
         for key in stress_coping_mapping.keys():
             key_trimmed = key.strip()
             value_str = answers.get(key_trimmed, 0)
             value = int(value_str)
 
+            # Reverse scoring for the unhealthy coping pattern question
             if key_trimmed == 'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.':
                 if value != 0:
                     reversed_value = 6 - value
@@ -82,15 +82,17 @@ class StressManagementAssessment(BaseAssessment):
             else:
                 stress_coping_values.append(value)
 
+        # Calculate average
         if stress_coping_values:
             stress_coping_average = sum(stress_coping_values) / len(stress_coping_values)
         else:
             stress_coping_average = 0
 
+        # Special case: all 5
         if all(value == 5 for value in stress_coping_values):
             stress_coping_average = 5
 
-        return [stress_level_value, stress_situations_value, stress_symptoms_value, stress_coping_average]
+        return [stress_level_value, stress_coping_average]
 
     def calculate_stress_management_score(self):
         """
@@ -98,17 +100,14 @@ class StressManagementAssessment(BaseAssessment):
 
         :return: The calculated stress management score as a float
         """
-        stress_level, stress_situations, stress_symptoms, stress_coping = self.stress_management
-        weight_stress_level = 0.30
-        weight_stress_situations = 0.20
-        weight_stress_symptoms = 0.20
-        weight_stress_coping = 0.30
+        stress_level, stress_coping = self.stress_management
+
+        weight_stress_level = 0.60
+        weight_stress_coping = 0.40
 
         score = (
-            weight_stress_level * stress_level +
-            weight_stress_situations * stress_situations +
-            weight_stress_symptoms * stress_symptoms +
-            weight_stress_coping * stress_coping
+                weight_stress_level * stress_level +
+                weight_stress_coping * stress_coping
         )
         normalized_score = score / 5 * 100
         return normalized_score
@@ -122,18 +121,3 @@ class StressManagementAssessment(BaseAssessment):
         score = self.calculate_stress_management_score()
         return f"{score:.2f}"
 
-if __name__ == "__main__":
-    stress_management = StressManagementAssessment(
-        answers={
-            'Leidest aktuell du unter Stress?': '1',
-            'Ich versuche, die positive Seite von Stress und Druck zu sehen.': '5',
-            'Ich tue alles, damit Stress erst gar nicht entsteht.': '5',
-            'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.': '5',
-            'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': '1',
-            'Welche der folgenden Stresssituationen trifft momentan auf dich zu?': 'gar keine',
-            'Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?': 'gar keine'
-        },
-        stress_situations_response_str='gar keine',
-        stress_symptoms_response_str='gar keine'
-    )
-    print(stress_management.report())

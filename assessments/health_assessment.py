@@ -1,13 +1,13 @@
 # rule_based_system/assessments/health_assessment.py
 
 
-from .nutrition_assessment import NutritionAssessment
-from .exercise_assessment import ExerciseAssessment
-from .sleep_assessment import SleepAssessment
-from .social_connections_assessment import SocialConnectionsAssessment
-from .stress_management_assessment import StressManagementAssessment
-from .gratitude_assessment import GratitudeAssessment
-from .cognition_assessment import CognitionAssessment
+from assessments.nutrition_assessment import NutritionAssessment
+from assessments.exercise_assessment import ExerciseAssessment
+from assessments.sleep_assessment import SleepAssessment
+from assessments.social_connections_assessment import SocialConnectionsAssessment
+from assessments.stress_management_assessment import StressManagementAssessment
+from assessments.gratitude_assessment import GratitudeAssessment
+from assessments.cognition_assessment import CognitionAssessment
 
 class HealthAssessment:
     def __init__(self, exercise, nutrition, sleep, social_connections, stress_management, gratitude, cognition):
@@ -29,9 +29,7 @@ class HealthAssessment:
         self.gratitude_assessment = GratitudeAssessment(gratitude)
         self.cognition_assessment = CognitionAssessment(cognition)
 
-        stress_situations_response_str = stress_management.get('Welche der folgenden Stresssituationen trifft momentan auf dich zu? ', '')
-        stress_symptoms_response_str = stress_management.get('Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?', '')
-        self.stress_management_assessment = StressManagementAssessment(stress_management, stress_situations_response_str, stress_symptoms_response_str)
+        self.stress_management_assessment = StressManagementAssessment(stress_management)
 
     def calculate_total_score(self):
         """
@@ -55,7 +53,7 @@ if __name__ == "__main__":
     exercise = {
         'Wie schätzt du deine Beweglichkeit ein? ': '5',
         'Wie körperlich aktiv bist du? ': '5',
-        'Wie oft in der Woche treibst du Sport? ': '5',
+        'Wie oft in der Woche treibst du eine Cardio-Sportart ': '5',
         'Welchen Schwerpunkt haben die Sportarten, die du betreibst?': 'Ausdauer, Kraft, Flexibilität, HIIT',
         'Welche Sportarten im Bereich Ausdauer machst du?': 'Laufen, Schwimmen',
         'Welche Sportarten im Bereich Flexibilität machst du?': 'Yoga',
@@ -89,7 +87,7 @@ if __name__ == "__main__":
     }
     stress_management = {
         'Leidest du unter Stress?': '1',
-        'Welche der folgenden Stresssituationen trifft momentan auf dich zu? ': 'gar keine',
+        'Welche der folgenden Stresssituationen trifft momentan auf dich zu? ': 'Gar keine',
         'Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?': 'gar keine',
         'Ich versuche, die positive Seite von Stress und Druck zu sehen.': '5',
         'Ich tue alles, damit Stress erst gar nicht entsteht.': '5',
@@ -114,11 +112,3 @@ if __name__ == "__main__":
     }
 
     assessment = HealthAssessment(exercise, nutrition, sleep, social_connections, stress_management, gratitude, cognition)
-    print(assessment.exercise_assessment.report())
-    print(assessment.sleep_assessment.report())
-    print(assessment.nutrition_assessment.report())
-    print(assessment.stress_management_assessment.report())
-    print(assessment.social_connections_assessment.report())
-    print(assessment.gratitude_assessment.report())
-    print(assessment.cognition_assessment.report())
-    print(assessment.calculate_total_score())

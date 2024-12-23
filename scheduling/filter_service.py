@@ -337,14 +337,12 @@ input_static_template = {
     "MOVEMENT": {
         "Wie schätzt du deine Beweglichkeit ein?": None,
         "Wie aktiv bist du im Alltag?": None,
-        "Wie oft in der Woche treibst du Sport?": None,
-        "Welchen Schwerpunkt haben die Sportarten, die du betreibst?": None
+        "Wie oft in der Woche treibst du eine Cardio-Sportart?": None,
+        "Wie schätzt du deine Kraft ein?": None
     },
     "NUTRITION": {
         "Welcher Ernährungsstil trifft bei dir am ehesten zu?": None,
         "Wie viel zuckerhaltige Produkte nimmst du zu dir?": None,
-        "Wie viel Gemüse nimmst du pro Tag zu dir?": None,
-        "Wie viel Obst nimmst du pro Tag zu dir?": None,
         "Wie häufig nimmst du Fertiggerichte zu dir?": None,
         "Wie viel Vollkorn nimmst du zu dir?": None,
         "Praktizierst du Intervallfasten und auf welche Art?": None,
@@ -361,14 +359,11 @@ input_static_template = {
     },
     "SOCIAL_ENGAGEMENT": {
         "Wie oft unternimmst du etwas mit anderen Menschen?": None,
-        "Hast du gute Freunde?": None,
         "Bist du sozial engagiert?": None,
         "Fühlst du dich einsam?": None
     },
     "STRESS": {
         "Leidest du aktuell unter Stress?": None,
-        "Welche der folgenden Stresssituationen trifft momentan auf dich zu?": None,
-        "Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?": None,
         "Ich versuche, die positive Seite von Stress und Druck zu sehen.": None,
         "Ich tue alles, damit Stress erst gar nicht entsteht.": None,
         "Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.": None,
@@ -387,14 +382,8 @@ input_static_template = {
         "Wie gut ist dein Konzentrationsvermögen?": None,
         "Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?": None,
         "Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?": None,
-        "Welche Zahl gehört unter die letzte Abbildung?": None,
-        "Ergänze die Zahlenreihenfolge 3,6,18,21,?": None,
-        "Welche Form kommt an die Stelle vom ?": None,
-        "Quark : Milch / Brot : ?": None
+        "Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?": None,
     },
-    "fasting_breakfast": None,
-    "fasting_lunch": None,
-    "fasting_dinner": None,
     "SCORES": {
         "MOVEMENT": None,
         "NUTRITION": None,
@@ -424,15 +413,13 @@ def map_answers(answers, scores):
     """
     set_value(input_static_template, 'accountid', answers)
     set_value(input_static_template, 'daily_time', answers,
-              '*Vielen Dank!*\nWir erstellen nun deine erste individuelle Routine. Dazu müssen wir nur noch wissen, wie viel Zeit du täglich für deine langfristige Gesundheit investieren kannst.', 0)
+              'Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?', '')
 
     basics_keys = [
         ('Was ist deine Körpergröße (in cm)?', None),
         ('Wie viel wiegst du (in kg)?', None),
-        ('Leidest Du unter einem oder mehreren der folgenden Symptome?', None),
         ('Geburtsjahr', None),
-        ('Rauchst du?', None),
-        ('Hast oder hattest du schon einmal psychische Probleme?', None)
+        ('Rauchst du?', None)
     ]
     for key, default in basics_keys:
         set_value(input_static_template['basics'], key, answers, default)
@@ -440,8 +427,8 @@ def map_answers(answers, scores):
     movement_keys = [
         ('Wie schätzt du deine Beweglichkeit ein?', None),
         ('Wie aktiv bist du im Alltag?', None),
-        ('Wie oft in der Woche treibst du Sport?', None),
-        ('Welchen Schwerpunkt haben die Sportarten, die du betreibst?', None)
+        ('Wie oft in der Woche treibst du eine Cardio-Sportart?', None),
+        ('Wie schätzt du deine Kraft ein?', None)
     ]
     for key, default in movement_keys:
         set_value(input_static_template['MOVEMENT'], key, answers, default)
@@ -449,8 +436,6 @@ def map_answers(answers, scores):
     nutrition_keys = [
         ('Welcher Ernährungsstil trifft bei dir am ehesten zu?', None),
         ('Wie viel zuckerhaltige Produkte nimmst du zu dir?', None),
-        ('Wie viel Gemüse nimmst du pro Tag zu dir?', None),
-        ('Wie viel Obst nimmst du pro Tag zu dir?', None),
         ('Wie häufig nimmst du Fertiggerichte zu dir?', None),
         ('Wie viel Vollkorn nimmst du zu dir?', None),
         ('Praktizierst du Intervallfasten und auf welche Art?', None),
@@ -473,7 +458,6 @@ def map_answers(answers, scores):
 
     social_engagement_keys = [
         ('Wie oft unternimmst du etwas mit anderen Menschen?', None),
-        ('Hast du gute Freunde?', None),
         ('Bist du sozial engagiert?', None),
         ('Fühlst du dich einsam?', None)
     ]
@@ -482,8 +466,6 @@ def map_answers(answers, scores):
 
     stress_keys = [
         ('Leidest du aktuell unter Stress?', None),
-        ('Welche der folgenden Stresssituationen trifft momentan auf dich zu?', None),
-        ('Welche der folgenden Stresssymptome hast du in den letzten 6 Monaten beobachtet?', None),
         ('Ich versuche, die positive Seite von Stress und Druck zu sehen.', None),
         ('Ich tue alles, damit Stress erst gar nicht entsteht.', None),
         ('Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.', None),
@@ -508,17 +490,11 @@ def map_answers(answers, scores):
         ('Wie gut ist dein Konzentrationsvermögen?', None),
         ('Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?', None),
         ('Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?', None),
-        ('Welche Zahl gehört unter die letzte Abbildung?', None),
-        ('Ergänze die Zahlenreihenfolge 3,6,18,21,?', None),
-        ('Welche Form kommt an die Stelle vom ?', None),
-        ('Quark : Milch / Brot : ?', None)
+        ('Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?', None)
     ]
     for key, default in cognitive_enhancement_keys:
         set_value(input_static_template['COGNITIVE_ENHANCEMENT'], key, answers, default)
 
-    set_value(input_static_template, 'fasting_breakfast', answers)
-    set_value(input_static_template, 'fasting_lunch', answers)
-    set_value(input_static_template, 'fasting_dinner', answers)
 
     scores_keys = [
         'MOVEMENT', 'NUTRITION', 'SLEEP', 'SOCIAL_ENGAGEMENT', 'STRESS', 'GRATITUDE', 'COGNITIVE_ENHANCEMENT', 'Total Score'
@@ -574,11 +550,19 @@ def main():
 
     account_id = answers.get('accountid', None)
     daily_time = answers.get(
-        '*Vielen Dank!*\nWir erstellen nun deine erste individuelle Routine. Dazu müssen wir nur noch wissen, wie viel Zeit du täglich für deine langfristige Gesundheit investieren kannst.',
-        0
+        'Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?',0
     )
+    if daily_time == '15-30 Minuten':
+        daily_time = 30
+    elif daily_time == '30-45 Minuten':
+        daily_time = 45
+    elif daily_time == '45-60 Minuten':
+        daily_time = 60
+    elif daily_time == '> 60 Minuten':
+        daily_time = 90
 
-    print('account_id',account_id)
+
+    print('daily_time',daily_time)
     basics = user_data.get('basics', {})
     weight = basics.get('Wie viel wiegst du (in kg)?')
     height_cm = basics.get('Was ist deine Körpergröße (in cm)?')
