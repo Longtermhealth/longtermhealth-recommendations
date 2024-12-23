@@ -1,6 +1,10 @@
 # rule_based_system/main_static.py
 import os
+
+from chart.chart_generation import generate_polar_chart
+from chart.converter import create_final_image
 from config import Config
+from utils.blob_upload import upload_to_blob
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
 from utils.clickup_api import create_clickup_task, upload_file_to_clickup
 from utils.data_processing import integrate_answers
@@ -38,6 +42,8 @@ def main():
         lastname = get_last_name(responses)
         if answers:
             integrated_data = integrate_answers(answers)
+            accountid = answers.get('accountid', 'Unknown Account ID')
+
             assessment = HealthAssessment(
                 integrated_data['exercise'],
                 integrated_data['nutrition'],
@@ -66,47 +72,24 @@ def main():
             print(f"Cognitive Enhancement Score: {cognition_score}")
             print(f"Total Score: {assessment.calculate_total_score()}")
 
-            categories = ['Exercise', 'Nutrition', 'Sleep', 'Social Connections', 'Stress Management', 'Gratitude',
-                          'Cognition']
-
             scores = {
-                "Movement&Exercise": exercise_score,
-                "HealthfulNutrition": nutrition_score,
-                "RestorativeSleep": sleep_score,
-                "SocialEngagement": social_connections_score,
-                "StressManagement": stress_management_score,
-                "Gratitude&Reflection": gratitude_score,
-                "Cognition": cognition_score
+                "NUTRITION": nutrition_score,
+                "MOVEMENT": exercise_score,
+                "GRATITUDE": gratitude_score,
+                "SLEEP": sleep_score,
+                "SOCIAL_ENGAGEMENT": social_connections_score,
+                "STRESS": stress_management_score,
+                "COGNITIVE_ENHANCEMENT": cognition_score
             }
 
 
-            scores_values = [exercise_score, nutrition_score, sleep_score, social_connections_score, stress_management_score, gratitude_score, cognition_score]
-
-            num_vars = len(categories)
-            angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
-            scores_values += scores_values[:1]
-            angles += angles[:1]
-
-            fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
-            ax.fill(angles, scores_values, color='blue', alpha=0.25)
-            ax.plot(angles, scores_values, color='blue', linewidth=2)
-
-            ax.set_yticks(np.arange(0, 101, 10))
-            ax.set_yticklabels(['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'])
-            ax.set_xticks(angles[:-1])
-            ax.set_xticklabels(categories)
-
-            plt.title(f'Health Scores for {lastname}')
-            image_path = f"{lastname}_health_scores.png"
-            plt.savefig(image_path)
-            plt.show()
-            task_id = create_clickup_task(lastname, scores, answers, total_score, final_action_plan, "")
-            upload_file_to_clickup(task_id, image_path)
-            action_plan_path = "./data/action_plan.json"
-            upload_file_to_clickup(task_id, action_plan_path)
-            plt.close()
-            os.remove(image_path)
-
+            task_id = create_clickup_task(lastname, scores, answers, total_score, accountid)
+            accountid_str = str(accountid) + "_1.png"
+            generate_polar_chart(scores, accountid_str)
+            total_score_str = str(round(total_score))
+            create_final_image(total_score_str, accountid_str)
+            upload_file_to_clickup(task_id, accountid_str)
+            upload_to_blob(accountid_str)
 
 
 
