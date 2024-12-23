@@ -6,7 +6,8 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    chromium-browser \
+    wget \
+    gnupg \
     libnss3 \
     libx11-6 \
     libx11-xcb1 \
@@ -31,12 +32,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgbm1 \
     libgtk-3-0 \
     libnspr4 \
-    libnss3 \
     libxkbcommon0 \
     --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*
+    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
+    apt-get update && apt-get install -y --no-install-recommends \
+        google-chrome-stable \
+    && rm -rf /var/lib/apt/lists/*
 
-ENV BROWSER_PATH=/usr/bin/chromium-browser
+ENV BROWSER_PATH=/usr/bin/google-chrome
 
 COPY requirements.txt .
 RUN pip install --upgrade pip
