@@ -1,10 +1,48 @@
-# Dockerfile
 FROM python:3.9-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    chromium \
+    libnss3 \
+    libx11-6 \
+    libx11-xcb1 \
+    libxcb1 \
+    libxcomposite1 \
+    libxcursor1 \
+    libxdamage1 \
+    libxext6 \
+    libxfixes3 \
+    libxi6 \
+    libxrandr2 \
+    libxrender1 \
+    libxss1 \
+    libxtst6 \
+    fonts-liberation \
+    libappindicator3-1 \
+    libasound2 \
+    libatk-bridge2.0-0 \
+    libatk1.0-0 \
+    libcups2 \
+    libdbus-1-3 \
+    libgbm1 \
+    libgtk-3-0 \
+    libnspr4 \
+    libnss3 \
+    libxkbcommon0 \
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV BROWSER_PATH=/usr/bin/chromium
+
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENV PYTHONPATH=/app
+COPY . .
 
 ARG CLICKUP_API_KEY
 ARG CLICKUP_LIST_ID
@@ -35,8 +73,6 @@ ENV LINK_SUMMARY_TITLE_FIELD_ID=$LINK_SUMMARY_TITLE_FIELD_ID
 ENV LINK_SUMMARY_SUMMARY_FIELD_ID=$LINK_SUMMARY_SUMMARY_FIELD_ID
 ENV LINK_SUMMARY_OPENAI_API_KEY=$LINK_SUMMARY_OPENAI_API_KEY
 ENV AZURE_BLOB_CONNECTION_STRING=$AZURE_BLOB_CONNECTION_STRING
-
-COPY . .
 
 EXPOSE 80
 
