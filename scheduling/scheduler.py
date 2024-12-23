@@ -326,7 +326,6 @@ def build_individual_routine_entry(routine):
     print()
     resource_image_url = routine.get('attributes', {}).get("resources", [{}])[0].get(
         "imageUrl") or "https://longtermhealth.de"
-    print('resource_image_url',resource_image_url)
 
     individual_routine_entry = {
         "pillar": {

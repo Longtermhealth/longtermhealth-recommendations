@@ -10,7 +10,7 @@ def create_final_image(text, accountid_str):
 
     final_image.save(accountid_str)
 
-    white_circle_image = Image.open("./chart/white_circle4.png")
+    white_circle_image = Image.open("./chart/white_circle.png")
 
     white_circle_image_resized = white_circle_image.resize(final_image.size)
 
