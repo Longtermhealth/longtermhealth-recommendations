@@ -55,14 +55,19 @@ class NutritionAssessment(BaseAssessment):
         """
         fasting = 0
         fasting_type = answers.get('Praktizierst du Intervallfasten und auf welche Art?', '')
-        if (fasting_type == '16:8 (täglich 14-16 Stunden fasten)'
-                or fasting_type == 'Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorieneinnahme)'):
+        if fasting_type == '16:8 (täglich 16 Stunden fasten)':
             fasting = 5
-        elif (fasting_type == 'Eat Stop Eat (1-2 x pro Woche für 24 Stunden fasten)'
-                or fasting_type == '5:2 (an 2 Tagen der Woche nur Einnahme von 500 bzw. 600 Kalorien)'):
+        elif fasting_type == 'Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorieneinnahme)':
+            fasting = 5
+        elif fasting_type == '14:10 (täglich 14 Stunden fasten)':
             fasting = 4
-        elif (fasting_type == 'Warrior Diät (Einnahme kleiner Mengen rohen Obst und Gemüses tagsüber und eine große Abendmahlzeit)'
-                or fasting_type == 'Spontanes Auslassen einer Mahlzeit (regelmäßiges Auslassen einzelner Mahlzeiten)'):
+        elif fasting_type == 'Eat Stop Eat (1-2 x pro Woche für 24 Stunden fasten)':
+            fasting = 4
+        elif fasting_type == '5:2 (an 2 Tagen der Woche nur Einnahme von 500 bzw. 600 Kalorien)':
+            fasting = 4
+        elif fasting_type == '12:12 (täglich 12 Stunden fasten)':
+            fasting = 3
+        elif fasting_type == 'Spontanes Auslassen einer Mahlzeit (regelmäßiges Auslassen einzelner Mahlzeiten)':
             fasting = 3
         else:
             fasting = 1
