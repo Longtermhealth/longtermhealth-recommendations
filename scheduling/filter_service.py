@@ -5,6 +5,7 @@ from typing import Dict, Any, List
 from assessments.health_assessment import HealthAssessment
 from rules.rule_service import evaluate_rule
 from utils.data_processing import integrate_answers
+from utils.strapi_api import strapi_get_all_routines
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
 
 logging.basicConfig(level=logging.INFO)
@@ -53,15 +54,6 @@ def add_benefits_to_user_profile(user_profile, goals_benefits_map):
         for benefit in benefits:
             if benefit not in user_profile["benefits"]:
                 user_profile["benefits"].append(benefit)
-
-
-def save_routines_to_json(routines, file_path):
-    try:
-        with open(file_path, 'w') as f:
-            json.dump(routines, f, indent=4)
-        print(f"Routines successfully saved to {file_path}")
-    except Exception as e:
-        logger.error(f"An error occurred while saving routines: {e}")
 
 
 def generate_recommendations(user_data, routines, rules):
@@ -579,7 +571,7 @@ def main():
     user_data['basics'] = basics
 
     rules = new_load_rules()
-    routines = new_load_routines()
+    routines = strapi_get_all_routines()
 
     processed_routines = set()
 
@@ -594,14 +586,6 @@ def main():
         )
 
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
-
-    output_file_path = './data/routines_with_scores.json'
-    try:
-        with open(output_file_path, 'w') as f:
-            json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
-        print(f"Routines successfully saved to {output_file_path}")
-    except Exception as e:
-        logger.error(f"An error occurred while saving routines: {e}")
 
     print("\nExcluded Rules and Actions:")
     for rule_name, action in excluded_rules:

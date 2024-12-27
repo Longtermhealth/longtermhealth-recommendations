@@ -28,7 +28,7 @@ def strapi_post_action_plan(action_plan, account_id):
 
 
 
-def strapi_api_azure_get_all_routines():
+def strapi_get_all_routines():
 
     base_url = "http://4.182.8.101:8004/api/routines"
     page = 1
@@ -59,13 +59,4 @@ def strapi_api_azure_get_all_routines():
             print(f"Error fetching page {page}: {response.text}")
             break
 
-    result_json = json.dumps(all_recommendations, ensure_ascii=False, indent=4)
-    file_path = './data/strapi_all_routines.json'
-
-    try:
-        with open(file_path, 'w', encoding='utf-8') as json_file:
-            json_file.write(result_json)
-        print(f"Data saved to {file_path}")
-    except IOError as e:
-        print(f"Error writing to file: {e}")
-
+    return all_recommendations

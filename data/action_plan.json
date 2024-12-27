@@ -1,6 +1,6 @@
 {
   "data": {
-    "accountId": "102",
+    "accountId": "124",
     "totalDailyTimeInMins": 60,
     "routines": [
       {
@@ -44,44 +44,8 @@
           "pillar_de": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "\n",
-        "routineId": 11742,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "REPETITIONS",
-            "amountUnit_de": "Wdhl.",
-            "amountUnit_en": ""
-          },
-          "value": 10
-        },
-        "description": "Fersenheben im Stehen ist eine einfache Kraftübung, die hauptsächlich die Wadenmuskulatur und die Knöchelstabilität stärkt.",
-        "displayName": "Fersenheben im Stehen,",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6314
-      },
-      {
-        "pillar": {
-          "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
-          "pillar_en": ""
-        },
         "imageUrl": "https://lthstore.blob.core.windows.net/videos/45_degree_lunge.jpg",
-        "routineId": 11732,
+        "routineId": 318,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
@@ -116,8 +80,8 @@
           "pillar_de": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://longtermhealth.de",
-        "routineId": 11701,
+        "imageUrl": "https://lthstore.blob.core.windows.net/videos/mountain_climbers.jpg",
+        "routineId": 289,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
@@ -127,6 +91,42 @@
             "amountUnit_en": ""
           },
           "value": 1
+        },
+        "description": "Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.",
+        "displayName": "Bergsteiger",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "MOVEMENT",
+          "pillar_de": "Bewegung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://longtermhealth.de",
+        "routineId": 286,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "SECONDS",
+            "amountUnit_de": "Sek.",
+            "amountUnit_en": ""
+          },
+          "value": 30
         },
         "description": "Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.",
         "displayName": "Hampelmänner",
@@ -152,8 +152,8 @@
           "pillar_de": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/videos/mountain_climbers.jpg",
-        "routineId": 11702,
+        "imageUrl": "https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold.jpg",
+        "routineId": 255,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -162,10 +162,10 @@
             "amountUnit_de": "Sek.",
             "amountUnit_en": ""
           },
-          "value": 30
+          "value": 10
         },
-        "description": "Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.",
-        "displayName": "Bergsteiger",
+        "description": "Die hohe Plank ist ein effektives Krafttraining, das vor allem die Rumpfmuskulatur und die Stabilität des Körpers stärkt.",
+        "displayName": "Hohe Plank",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -181,6 +181,119 @@
           4
         ],
         "parentRoutineId": 6314
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/998.jpg",
+        "routineId": 6315,
+        "timeOfDay": "EVENING",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Minuten",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern.",
+        "displayName": "Abendritual",
+        "durationCalculated": 0,
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/140.jpg",
+        "routineId": 363,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "amountUnit_de": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Schau vor dem Schlafen nicht auf einen Bildschirm, um deine Schlafqualität zu verbessern und deinen natürlichen Schlafrhythmus zu unterstützen.",
+        "displayName": "Nicht auf einen Bildschirm schauen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/150.jpg",
+        "routineId": 373,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "amountUnit_de": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Diese Routine ist eine Entspannungstechnik zur Förderung des Schlafs und zur Verbesserung des Einschlafens in einer neuen Umgebung.",
+        "displayName": "Zimmer wechseln bei Schlaflosigkeit",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6315
       },
       {
         "pillar": {
@@ -225,8 +338,8 @@
           "pillar_de": "Ernährung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/218.jpg",
-        "routineId": 11857,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/122.jpg",
+        "routineId": 345,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -237,8 +350,46 @@
           },
           "value": 1
         },
-        "description": "Die Maßnahme reduziert den Konsum von zuckerhaltigen Getränken, fördert die Herzgesundheit und verbessert die allgemeine Ernährung.",
-        "displayName": "Zucker reduzieren",
+        "description": "Intervallfasten 16:8 ist eine Ernährungsroutine, die die Gesundheit des Herzens fördert und die Insulinempfindlichkeit verbessert.",
+        "displayName": "Intervallfasten 16:8",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 6316
+      },
+      {
+        "pillar": {
+          "pillar": "NUTRITION",
+          "pillar_de": "Ernährung",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/128.jpg",
+        "routineId": 351,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "amountUnit_de": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Probiere neue Hülsenfrüchte aus, um von ihren pflanzlichen Eiweißen, Ballaststoffen und Mineralstoffen zu profitieren und deine Ernährung abwechslungsreicher zu gestalten.",
+        "displayName": "Hülsenfrüchte entdecken ",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -263,9 +414,9 @@
           "pillar_de": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/9.jpg",
-        "routineId": 11648,
-        "durationCalculated": 45,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/2.jpg",
+        "routineId": 227,
+        "durationCalculated": 65,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -273,13 +424,13 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 45
+          "value": 65
         },
-        "description": "Radfahren ist ein effektives Cardiotraining, das hauptsächlich die Ausdauer und die Muskulatur der Beine stärkt.",
-        "displayName": "Radfahren",
+        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
+        "displayName": "Spazierengehen",
         "alternatives": [],
         "scheduleDays": [
-          6
+          2
         ],
         "scheduleWeeks": [
           1,
@@ -295,8 +446,8 @@
           "pillar_de": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/20.jpg",
-        "routineId": 11658,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/2.jpg",
+        "routineId": 226,
         "durationCalculated": 45,
         "timeOfDay": "ANY",
         "goal": {
@@ -307,40 +458,8 @@
           },
           "value": 45
         },
-        "description": "Nordic Walking ist eine effektive und angenehme Sportart, die Körper und Geist in Einklang bringt. Diese Aktivität verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und fördert die Stimmung. Genieße die Natur und profitiere von den zahlreichen gesundheitlichen Vorteilen dieser Kombination aus Bewegung und Frischluft.",
-        "displayName": "Nordic Walking",
-        "alternatives": [],
-        "scheduleDays": [
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "pillar_de": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/165.jpg",
-        "routineId": 11852,
-        "durationCalculated": 15,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 15
-        },
-        "description": "Rufe einen Freund oder ein Familienmitglied an, um soziale Verbindungen zu fördern und Stress abzubauen.",
-        "displayName": "Rufe eine vertraute Person an",
+        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
+        "displayName": "Spazierengehen",
         "alternatives": [],
         "scheduleDays": [
           3
@@ -359,9 +478,9 @@
           "pillar_de": "Sozial",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/164.jpg",
-        "routineId": 11801,
-        "durationCalculated": 3,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/165.jpg",
+        "routineId": 388,
+        "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -369,13 +488,50 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 3
+          "value": 5
         },
-        "description": "Ein Treffen mit einem Freund stärkt die sozialen Beziehung und fördert die emotionale Gesundheit sowie Stressabbau.",
-        "displayName": "Ein Treffen mit einem Freund vereinbaren",
+        "description": "Ein Anruf bei einem Freund oder Familienmitglied fördert soziale Verbindungen und reduziert Stress.",
+        "displayName": "Rufe eine vertraute Person an",
         "alternatives": [],
         "scheduleDays": [
+          1,
+          2,
+          3,
           4
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "pillar_de": "Sozial",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/163.jpg",
+        "routineId": 386,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Echte zwischenmenschliche Interaktionen fördern soziale Verbindungen und verbessern die emotionale Gesundheit und das Wohlbefinden.",
+        "displayName": "Soziale Kontakte statt Social Media",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3
         ],
         "scheduleWeeks": [
           1,
@@ -392,7 +548,7 @@
           "pillar_en": ""
         },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/187.jpg",
-        "routineId": 11824,
+        "routineId": 410,
         "durationCalculated": 2,
         "timeOfDay": "ANY",
         "goal": {
@@ -424,8 +580,8 @@
           "pillar_en": ""
         },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/208.jpg",
-        "routineId": 11845,
-        "durationCalculated": 20,
+        "routineId": 430,
+        "durationCalculated": 15,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -433,7 +589,7 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 20
+          "value": 15
         },
         "description": "Die progressive Muskelentspannung ist eine Entspannungstechnik, die stressreduzierend wirkt und das allgemeine Wohlbefinden fördert.",
         "displayName": "Progressive Muskelentspannung",
@@ -455,9 +611,9 @@
           "pillar_de": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/209.jpg",
-        "routineId": 11846,
-        "durationCalculated": 2,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/210.jpg",
+        "routineId": 433,
+        "durationCalculated": 3,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -465,13 +621,19 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 2
+          "value": 3
         },
-        "description": "Affirmationen denken ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken, die das Wohlbefinden steigert.",
-        "displayName": "Affirmation denken",
+        "description": "Das Aufschreiben von Affirmationen ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken.",
+        "displayName": "Affirmation aufschreiben",
         "alternatives": [],
         "scheduleDays": [
-          1
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "scheduleWeeks": [
           1,
@@ -488,7 +650,7 @@
           "pillar_en": ""
         },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/156.jpg",
-        "routineId": 11793,
+        "routineId": 379,
         "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
@@ -503,7 +665,13 @@
         "displayName": "Schreibe über deinen Tag",
         "alternatives": [],
         "scheduleDays": [
-          2
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "scheduleWeeks": [
           1,
@@ -520,7 +688,7 @@
           "pillar_en": ""
         },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/197.jpg",
-        "routineId": 11834,
+        "routineId": 420,
         "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
@@ -535,39 +703,12 @@
         "displayName": "Lesen für Bildung/ persönliches Wachstum",
         "alternatives": [],
         "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
           1,
           2,
           3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/198.jpg",
-        "routineId": 11835,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 10
-        },
-        "description": "Sudoku spielen ist eine anregende geistige Übung, die das kognitive Denken und die Konzentration fördert.",
-        "displayName": "Mache 1 einfaches Sudoku",
-        "alternatives": [],
-        "scheduleDays": [
-          2
+          4,
+          5,
+          6
         ],
         "scheduleWeeks": [
           1,
