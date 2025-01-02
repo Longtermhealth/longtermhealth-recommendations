@@ -176,7 +176,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     super_routine_mapping = {
         "nutrition_super_routine": 6316,
         "movement_superroutine": 6314,
-        "sleep_superroutine": 6315,
+        "sleep_superroutine": 222,
     }
 
     parentRoutineId_value = super_routine_mapping.get(super_routine_id, None)
@@ -1427,11 +1427,11 @@ def main():
     for routine in final_action_plan["data"]["routines"]:
         if isinstance(routine, dict):
             if routine.get("routineId") == "sleep_superroutine":
-                routine["routineId"] = 6315
+                routine["routineId"] = 222
             if routine.get("routineId") == "movement_superroutine":
-                routine["routineId"] = 6314
+                routine["routineId"] = 221
             if routine.get("routineId") == "nutrition_super_routine":
-                routine["routineId"] = 6316
+                routine["routineId"] = 223
 
     save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)

@@ -241,3 +241,19 @@ Response headers:
 2024-12-27 11:06:27,903 - INFO - Uploaded 124_1.png to container 'images' in Azure Blob Storage.
 2024-12-27 11:06:27,903 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/124_1.png
 2024-12-27 11:06:27,903 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/124_1.png
+2025-01-02 15:27:03,189 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-02 15:27:03,189 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-02 15:27:03,272 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-02 15:27:03,274 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-02 15:27:03,752 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.0.54:80
+2025-01-02 15:27:03,753 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-02 15:27:03,754 - INFO -  * Restarting with stat
+2025-01-02 15:27:04,246 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-02 15:27:04,247 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-02 15:27:04,308 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-02 15:27:04,309 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-02 15:27:04,427 - WARNING -  * Debugger is active!
+2025-01-02 15:27:04,439 - INFO -  * Debugger PIN: 105-171-969
