@@ -5,8 +5,12 @@ from collections import defaultdict
 import math
 from datetime import datetime
 
+from chart.chart_generation import generate_polar_chart
+from chart.converter import create_final_image
 from scheduling.filter_service import main as get_routines_with_defaults
-from utils.strapi_api import strapi_post_action_plan
+from utils.blob_upload import upload_to_blob
+from utils.clickup_api import upload_file_to_clickup
+from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
 
 WEIGHTINGS = {
     "MOVEMENT": 0.25,
@@ -878,6 +882,90 @@ def create_health_scores_with_tag(health_scores):
 
     return health_scores_with_tag
 
+
+def create_health_scores_with_structure(account_id, health_scores):
+    score_interpretation_dict = {
+        "MOVEMENT": {
+            "FOCUS": "Es ist Zeit, mehr Bewegung in deinen Alltag zu integrieren. Kleine Schritte können einen großen Unterschied für deine Gesundheit machen!",
+            "GOOD": "Deine körperliche Aktivität ist gut! Mit ein wenig mehr Bewegung kannst du deine Fitness auf das nächste Level heben.",
+            "OPTIMAL": "Fantastische Leistung! Deine regelmäßige Bewegung stärkt deine Gesundheit optimal. Weiter so!"
+        },
+        "NUTRITION": {
+            "FOCUS": "Achte mehr auf eine ausgewogene Ernährung. Gesunde Essgewohnheiten geben dir Energie und Wohlbefinden.",
+            "GOOD": "Deine Ernährung ist auf einem guten Weg! Mit kleinen Anpassungen kannst du deine Nährstoffzufuhr weiter optimieren.",
+            "OPTIMAL": "Exzellente Ernährungsgewohnheiten! Du versorgst deinen Körper optimal mit wichtigen Nährstoffen. Weiter so!"
+        },
+        "SLEEP": {
+            "FOCUS": "Verbessere deine Schlafgewohnheiten für mehr Energie und bessere Gesundheit. Guter Schlaf ist essenziell!",
+            "GOOD": "Dein Schlaf ist gut! Ein paar Änderungen können dir helfen, noch erholsamer zu schlafen.",
+            "OPTIMAL": "Ausgezeichneter Schlaf! Du sorgst für optimale Erholung und Vitalität. Weiter so!"
+        },
+        "SOCIAL_ENGAGEMENT": {
+            "FOCUS": "Pflege deine sozialen Beziehungen. Verbindungen zu anderen sind wichtig für dein emotionales Wohlbefinden.",
+            "GOOD": "Deine sozialen Beziehungen sind gut! Mit ein wenig mehr Engagement kannst du deine Verbindungen weiter vertiefen.",
+            "OPTIMAL": "Starke und erfüllende soziale Beziehungen! Du pflegst wertvolle Verbindungen, die dein Leben bereichern. Weiter so!"
+        },
+        "STRESS": {
+            "FOCUS": "Es ist wichtig, Wege zu finden, um deinen Stress besser zu bewältigen. Kleine Pausen und Entspannungstechniken können helfen.",
+            "GOOD": "Dein Umgang mit Stress ist gut! Mit weiteren Strategien kannst du deine Stressresistenz weiter stärken.",
+            "OPTIMAL": "Du meisterst Stress hervorragend! Deine effektiven Bewältigungsstrategien tragen zu deinem Wohlbefinden bei. Weiter so!"
+        },
+        "GRATITUDE": {
+            "FOCUS": "Nimm dir Zeit, die positiven Dinge im Leben zu schätzen. Dankbarkeit kann dein Wohlbefinden erheblich steigern.",
+            "GOOD": "Du zeigst bereits Dankbarkeit! Mit kleinen Ergänzungen kannst du deine positive Einstellung noch weiter ausbauen.",
+            "OPTIMAL": "Eine wunderbare Haltung der Dankbarkeit! Deine positive Sicht bereichert dein Leben und das deiner Mitmenschen. Weiter so!"
+        },
+        "COGNITIVE_ENHANCEMENT": {
+            "FOCUS": "Fordere deinen Geist regelmäßig heraus. Neue Lernmöglichkeiten können deine geistige Fitness verbessern.",
+            "GOOD": "Deine kognitive Förderung ist gut! Mit zusätzlichen Aktivitäten kannst du deine geistige Leistungsfähigkeit weiter steigern.",
+            "OPTIMAL": "Hervorragende geistige Fitness! Du hältst deinen Verstand aktiv und stark. Weiter so!"
+        }
+    }
+
+    # Function to get rating and interpretation
+    def get_score_details(pillar, score):
+        if score < 50:
+            rating = "FOCUS"
+        elif 50 <= score < 80:
+            rating = "GOOD"
+        else:
+            rating = "OPTIMAL"
+        return {
+            "ratingEnum": rating,
+            "displayName": rating.capitalize(),
+            "scoreInterpretation": score_interpretation_dict.get(pillar, {}).get(rating, "No interpretation available.")
+        }
+
+    # Calculate total score as the average of all scores
+    total_score = sum(health_scores.values()) / len(health_scores)
+
+    # Build the pillars structure
+    pillars = []
+    for pillar_enum, score in health_scores.items():
+        details = get_score_details(pillar_enum, score)
+        pillars.append({
+            "pillar": {
+                "pillarEnum": pillar_enum,
+                "displayName": pillar_enum.replace("_", " ").capitalize()
+            },
+            "score": f"{score:.2f}",
+            "scoreInterpretation": details["scoreInterpretation"],
+            "rating": {
+                "ratingEnum": details["ratingEnum"],
+                "displayName": details["displayName"]
+            }
+        })
+
+    return {
+        "data": {
+            "totalScore": int(total_score),
+            "accountId": account_id,
+            "scoreChartImageUrl": f"https://lthstore.blob.core.windows.net/images/{account_id}_1.png",
+            "pillarScores": pillars
+            }
+        }
+
+
 def allocate_more_time_to_focus_areas(daily_allocations, health_scores_with_tag):
     # Calculate the total time we can reallocate from NUTRITION and SLEEP
     time_to_reallocate = int(daily_allocations["NUTRITION"]) + int(daily_allocations["SLEEP"])
@@ -987,6 +1075,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 def main():
     account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
     print('daily_time',daily_time)
+    total_score = health_scores['Total Score']
     start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
     print('start_weekday',start_weekday)
     file_path = "./data/routines_with_scores.json"
@@ -1013,6 +1102,8 @@ def main():
 
     health_scores_with_tag = create_health_scores_with_tag(health_scores)
     print('health_scores_with_tag',health_scores_with_tag)
+    health_scores_with_tag_payload_strapi = create_health_scores_with_structure(account_id, health_scores)
+    print('health_scores_with_tag_payload_strapi',json.dumps(health_scores_with_tag_payload_strapi, indent=4, ensure_ascii=False))
 
     reallocations, updated_allocations = allocate_more_time_to_focus_areas(daily_allocations, health_scores_with_tag)
 
@@ -1435,6 +1526,13 @@ def main():
 
     save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
+    strapi_post_health_scores(health_scores_with_tag)
+    accountid_str = str(account_id) + "_1.png"
+    generate_polar_chart(health_scores, accountid_str)
+    total_score_str = str(round(total_score))
+    create_final_image(total_score_str, accountid_str)
+    upload_to_blob(accountid_str)
+    health_scores_with_tag_payload_strapi
     return final_action_plan
 
 

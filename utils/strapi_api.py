@@ -60,3 +60,21 @@ def strapi_get_all_routines():
             break
 
     return all_recommendations
+
+def strapi_post_health_scores(healthscores_with_tags):
+    headers = {
+        "Authorization": f"Bearer {STRAPI_API_KEY}",
+        "Content-Type": "application/json"
+    }
+
+    url = "http://4.182.8.101:8004/api/health-scores"
+    data = healthscores_with_tags
+    response = requests.post(url, headers=headers, json=data)
+
+    print(f"Response: {response.status_code}")
+    print(response)
+    try:
+        response_data = response.json()
+        print(response_data)
+    except requests.exceptions.JSONDecodeError:
+        print(f"Response is not JSON, raw content:", response.text)
