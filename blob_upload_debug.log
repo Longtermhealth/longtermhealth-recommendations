@@ -257,3 +257,19 @@ Response headers:
 2025-01-02 15:27:04,309 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
 2025-01-02 15:27:04,427 - WARNING -  * Debugger is active!
 2025-01-02 15:27:04,439 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:33:10,614 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:33:10,615 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:33:10,691 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:33:10,693 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:33:10,929 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.2.230.67:80
+2025-01-06 17:33:10,929 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:33:10,930 - INFO -  * Restarting with stat
+2025-01-06 17:33:11,474 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:33:11,474 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:33:11,536 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:33:11,538 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:33:11,668 - WARNING -  * Debugger is active!
+2025-01-06 17:33:11,679 - INFO -  * Debugger PIN: 105-171-969

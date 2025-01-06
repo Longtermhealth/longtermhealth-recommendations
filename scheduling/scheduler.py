@@ -1532,7 +1532,8 @@ def main():
     total_score_str = str(round(total_score))
     create_final_image(total_score_str, accountid_str)
     upload_to_blob(accountid_str)
-    health_scores_with_tag_payload_strapi
+    health_scores_with_tag_payload_strapi = create_health_scores_with_structure(health_scores_with_tag_payload_strapi)
+    strapi_post_health_scores(health_scores_with_tag_payload_strapi)
     return final_action_plan
 
 
