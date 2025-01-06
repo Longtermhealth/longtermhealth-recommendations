@@ -178,8 +178,8 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     }
 
     super_routine_mapping = {
-        "nutrition_super_routine": 6316,
-        "movement_superroutine": 6314,
+        "nutrition_super_routine": 223,
+        "movement_superroutine": 221,
         "sleep_superroutine": 222,
     }
 
@@ -1074,6 +1074,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 
 def main():
     account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
+    daily_time = 15
     print('daily_time',daily_time)
     total_score = health_scores['Total Score']
     start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
@@ -1525,15 +1526,16 @@ def main():
                 routine["routineId"] = 223
 
     save_action_plan_json(final_action_plan)
-    strapi_post_action_plan(final_action_plan, account_id)
-    strapi_post_health_scores(health_scores_with_tag)
+
     accountid_str = str(account_id) + "_1.png"
     generate_polar_chart(health_scores, accountid_str)
     total_score_str = str(round(total_score))
     create_final_image(total_score_str, accountid_str)
     upload_to_blob(accountid_str)
-    health_scores_with_tag_payload_strapi = create_health_scores_with_structure(health_scores_with_tag_payload_strapi)
     strapi_post_health_scores(health_scores_with_tag_payload_strapi)
+    strapi_post_action_plan(final_action_plan, account_id)
+
+
     return final_action_plan
 
 

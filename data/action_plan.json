@@ -1,7 +1,7 @@
 {
   "data": {
-    "accountId": "124",
-    "totalDailyTimeInMins": 60,
+    "accountId": "102",
+    "totalDailyTimeInMins": 15,
     "routines": [
       {
         "pillar": {
@@ -10,7 +10,7 @@
           "pillar_en": ""
         },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/997.jpg",
-        "routineId": 6314,
+        "routineId": 221,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -184,125 +184,12 @@
       },
       {
         "pillar": {
-          "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/998.jpg",
-        "routineId": 6315,
-        "timeOfDay": "EVENING",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Minuten",
-            "amountUnit_en": ""
-          },
-          "value": 0
-        },
-        "description": "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern.",
-        "displayName": "Abendritual",
-        "durationCalculated": 0,
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ]
-      },
-      {
-        "pillar": {
-          "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/140.jpg",
-        "routineId": 363,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "ROUTINE",
-            "amountUnit_de": "Routine",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Schau vor dem Schlafen nicht auf einen Bildschirm, um deine Schlafqualität zu verbessern und deinen natürlichen Schlafrhythmus zu unterstützen.",
-        "displayName": "Nicht auf einen Bildschirm schauen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6315
-      },
-      {
-        "pillar": {
-          "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/150.jpg",
-        "routineId": 373,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "ROUTINE",
-            "amountUnit_de": "Routine",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Diese Routine ist eine Entspannungstechnik zur Förderung des Schlafs und zur Verbesserung des Einschlafens in einer neuen Umgebung.",
-        "displayName": "Zimmer wechseln bei Schlaflosigkeit",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6315
-      },
-      {
-        "pillar": {
           "pillar": "NUTRITION",
           "pillar_de": "Ernährung",
           "pillar_en": ""
         },
         "imageUrl": "https://lthstore.blob.core.windows.net/images/999.jpg",
-        "routineId": 6316,
+        "routineId": 223,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -331,44 +218,6 @@
           3,
           4
         ]
-      },
-      {
-        "pillar": {
-          "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/122.jpg",
-        "routineId": 345,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "ROUTINE",
-            "amountUnit_de": "Routine",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Intervallfasten 16:8 ist eine Ernährungsroutine, die die Gesundheit des Herzens fördert und die Insulinempfindlichkeit verbessert.",
-        "displayName": "Intervallfasten 16:8",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 6316
       },
       {
         "pillar": {
@@ -414,9 +263,9 @@
           "pillar_de": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/2.jpg",
-        "routineId": 227,
-        "durationCalculated": 65,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/5.jpg",
+        "routineId": 228,
+        "durationCalculated": 20,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -424,45 +273,13 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 65
+          "value": 20
         },
-        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
-        "displayName": "Spazierengehen",
+        "description": "Joggen ist ein effektives Cardiotraining, das hauptsächlich die Ausdauer verbessert und das Herz-Kreislauf-System stärkt.",
+        "displayName": "Joggen",
         "alternatives": [],
         "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/2.jpg",
-        "routineId": 226,
-        "durationCalculated": 45,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 45
-        },
-        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
-        "displayName": "Spazierengehen",
-        "alternatives": [],
-        "scheduleDays": [
-          3
+          6
         ],
         "scheduleWeeks": [
           1,
@@ -494,10 +311,7 @@
         "displayName": "Rufe eine vertraute Person an",
         "alternatives": [],
         "scheduleDays": [
-          1,
-          2,
-          3,
-          4
+          3
         ],
         "scheduleWeeks": [
           1,
@@ -529,9 +343,7 @@
         "displayName": "Soziale Kontakte statt Social Media",
         "alternatives": [],
         "scheduleDays": [
-          1,
-          2,
-          3
+          4
         ],
         "scheduleWeeks": [
           1,
@@ -575,45 +387,13 @@
       },
       {
         "pillar": {
-          "pillar": "STRESS",
-          "pillar_de": "Resilienz",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/208.jpg",
-        "routineId": 430,
-        "durationCalculated": 15,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 15
-        },
-        "description": "Die progressive Muskelentspannung ist eine Entspannungstechnik, die stressreduzierend wirkt und das allgemeine Wohlbefinden fördert.",
-        "displayName": "Progressive Muskelentspannung",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
           "pillar": "GRATITUDE",
           "pillar_de": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/210.jpg",
-        "routineId": 433,
-        "durationCalculated": 3,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/209.jpg",
+        "routineId": 432,
+        "durationCalculated": 2,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -621,48 +401,10 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 3
+          "value": 2
         },
-        "description": "Das Aufschreiben von Affirmationen ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken.",
-        "displayName": "Affirmation aufschreiben",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "GRATITUDE",
-          "pillar_de": "Dankbarkeit",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/156.jpg",
-        "routineId": 379,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 5
-        },
-        "description": "Das Führen eines Tagebuchs ist eine einfache Methode zur emotionalen Ausdrucksform, die die mentale Gesundheit und das Selbstbewusstsein fördert.",
-        "displayName": "Schreibe über deinen Tag",
+        "description": "Affirmationen denken ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken, die das Wohlbefinden steigert.",
+        "displayName": "Affirmation denken",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -703,12 +445,39 @@
         "displayName": "Lesen für Bildung/ persönliches Wachstum",
         "alternatives": [],
         "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
           1,
           2,
           3,
-          4,
-          5,
-          6
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "COGNITIVE_ENHANCEMENT",
+          "pillar_de": "Kognition",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/194.jpg",
+        "routineId": 417,
+        "durationCalculated": 5,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 5
+        },
+        "description": "Gedichte lesen ist eine geistige Aktivität, die vor allem das kognitive Denken und die Sprachfähigkeiten fördert.",
+        "displayName": "Gedichte lesen",
+        "alternatives": [],
+        "scheduleDays": [
+          2
         ],
         "scheduleWeeks": [
           1,

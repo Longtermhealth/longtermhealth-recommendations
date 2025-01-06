@@ -273,3 +273,1452 @@ Response headers:
 2025-01-06 17:33:11,538 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
 2025-01-06 17:33:11,668 - WARNING -  * Debugger is active!
 2025-01-06 17:33:11,679 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:39:36,709 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:39:36,709 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:39:36,774 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:39:36,776 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:39:37,094 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.2.230.67:80
+2025-01-06 17:39:37,094 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:39:37,095 - INFO -  * Restarting with stat
+2025-01-06 17:39:37,567 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:39:37,568 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:39:37,625 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:39:37,626 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:39:37,745 - WARNING -  * Debugger is active!
+2025-01-06 17:39:37,753 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:41:04,359 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:41:04,359 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:41:04,425 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:41:04,427 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:41:04,570 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.2.230.67:3001
+2025-01-06 17:41:04,570 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:41:04,571 - INFO -  * Restarting with stat
+2025-01-06 17:41:05,051 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:41:05,052 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:41:05,109 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:41:05,111 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:41:05,228 - WARNING -  * Debugger is active!
+2025-01-06 17:41:05,239 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:43:25,293 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:43:25,294 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:43:25,357 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:43:25,359 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:43:25,508 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3001
+ * Running on http://10.2.230.67:3001
+2025-01-06 17:43:25,508 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:43:25,509 - INFO -  * Restarting with stat
+2025-01-06 17:43:25,995 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:43:25,995 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:43:26,051 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:43:26,053 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:43:26,168 - WARNING -  * Debugger is active!
+2025-01-06 17:43:26,175 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:43:30,282 - INFO -  * Detected change in '/Users/janoschgrellner/PycharmProjects/lth-rec/main_flask.py', reloading
+2025-01-06 17:43:30,417 - INFO -  * Restarting with stat
+2025-01-06 17:43:30,893 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:43:30,894 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:43:30,953 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:43:30,955 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:43:31,075 - WARNING -  * Debugger is active!
+2025-01-06 17:43:31,082 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:43:36,352 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:43:36,352 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:43:36,413 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:43:36,414 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:43:36,548 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 17:43:36,548 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:43:36,548 - INFO -  * Restarting with stat
+2025-01-06 17:43:37,018 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:43:37,019 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:43:37,078 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:43:37,080 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:43:37,201 - WARNING -  * Debugger is active!
+2025-01-06 17:43:37,209 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:45:18,607 - INFO - 127.0.0.1 - - [06/Jan/2025 17:45:18] "GET / HTTP/1.1" 200 -
+2025-01-06 17:45:28,460 - INFO - Webhook received
+2025-01-06 17:45:28,469 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:45:30,038 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 17:45:30,044 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:45:31,588 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 17:45:32,158 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:45:33,063 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 17:45:34,379 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:45:35,318 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 17:45:36,328 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:45:36,858 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 17:45:37,551 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:45:38,034 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 9895
+2025-01-06 17:45:38,037 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:45:38,592 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 400 131
+2025-01-06 17:45:38,653 - DEBUG - Using selector: KqueueSelector
+2025-01-06 17:45:39,891 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:45:39,892 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 17:45:39,892 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:45:39,892 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 17:45:39,892 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 17:45:40,420 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 17:45:40,420 - DEBUG - Compression method 0
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 17:45:40,420 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 17:45:40,420 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 17:45:40,420 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 17:45:41,084 - DEBUG - Starting upload_to_blob function.
+2025-01-06 17:45:41,084 - DEBUG - File path received: 102_1.png
+2025-01-06 17:45:41,084 - DEBUG - Creating BlobServiceClient.
+2025-01-06 17:45:41,103 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 17:45:41,103 - DEBUG - Accessing container: images
+2025-01-06 17:45:41,103 - DEBUG - Checking if container exists.
+2025-01-06 17:45:41,104 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '5f8d22a4-cc1b-11ef-a60a-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 17:45:41,106 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 17:45:42,007 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 17:45:42,011 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'af3a5b01-001e-0033-6028-601bbd000000'
+    'x-ms-client-request-id': '5f8d22a4-cc1b-11ef-a60a-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:45:41 GMT'
+2025-01-06 17:45:42,011 - DEBUG - Container 'images' exists.
+2025-01-06 17:45:42,011 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 17:45:42,012 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 17:45:42,012 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 17:45:42,012 - DEBUG - Opening the file in binary read mode.
+2025-01-06 17:45:42,012 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 17:45:42,014 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6017ed9e-cc1b-11ef-a60a-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 17:45:43,273 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 17:45:43,277 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 10:45:43 GMT'
+    'ETag': '"0x8DD2E3F4534E3F9"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'af3a5b88-001e-0033-5f28-601bbd000000'
+    'x-ms-client-request-id': '6017ed9e-cc1b-11ef-a60a-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:45:43 GMT'
+2025-01-06 17:45:43,277 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 17:45:43,277 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:45:43,277 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:45:43,282 - INFO - 127.0.0.1 - - [06/Jan/2025 17:45:43] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+2025-01-06 17:46:02,219 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:46:02,219 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:46:02,306 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:46:02,308 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:46:02,473 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 17:46:02,473 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:46:02,474 - INFO -  * Restarting with stat
+2025-01-06 17:46:02,950 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:46:02,950 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:46:03,006 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:46:03,008 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:46:03,126 - WARNING -  * Debugger is active!
+2025-01-06 17:46:03,133 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:46:06,199 - INFO - Webhook received
+2025-01-06 17:46:06,207 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:46:07,507 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 17:46:07,510 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:46:08,964 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 17:46:09,577 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:10,401 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 17:46:11,593 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:12,487 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 17:46:13,726 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:14,227 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 17:46:14,849 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:15,256 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 9895
+2025-01-06 17:46:15,259 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:15,649 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 400 131
+2025-01-06 17:46:15,700 - DEBUG - Using selector: KqueueSelector
+2025-01-06 17:46:16,809 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:46:16,809 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 17:46:16,810 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:46:16,810 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 17:46:16,810 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 17:46:17,332 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:46:17,332 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 17:46:17,332 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 17:46:17,333 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 17:46:17,333 - DEBUG - Compression method 0
+2025-01-06 17:46:17,333 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 17:46:17,333 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 17:46:17,333 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 17:46:17,333 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 17:46:17,333 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 17:46:17,333 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 17:46:17,333 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 17:46:17,333 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 17:46:17,993 - DEBUG - Starting upload_to_blob function.
+2025-01-06 17:46:17,993 - DEBUG - File path received: 102_1.png
+2025-01-06 17:46:17,993 - DEBUG - Creating BlobServiceClient.
+2025-01-06 17:46:18,008 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 17:46:18,008 - DEBUG - Accessing container: images
+2025-01-06 17:46:18,008 - DEBUG - Checking if container exists.
+2025-01-06 17:46:18,009 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '758c5408-cc1b-11ef-a44c-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 17:46:18,010 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 17:46:18,805 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 17:46:18,808 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'e35ae964-b01e-0036-4128-60c966000000'
+    'x-ms-client-request-id': '758c5408-cc1b-11ef-a44c-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:46:18 GMT'
+2025-01-06 17:46:18,809 - DEBUG - Container 'images' exists.
+2025-01-06 17:46:18,809 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 17:46:18,809 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 17:46:18,809 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 17:46:18,809 - DEBUG - Opening the file in binary read mode.
+2025-01-06 17:46:18,809 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 17:46:18,810 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '7606a924-cc1b-11ef-a44c-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 17:46:20,082 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 17:46:20,083 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 10:46:20 GMT'
+    'ETag': '"0x8DD2E3F5B2EA8DD"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'e35ae98a-b01e-0036-6428-60c966000000'
+    'x-ms-client-request-id': '7606a924-cc1b-11ef-a44c-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:46:20 GMT'
+2025-01-06 17:46:20,085 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 17:46:20,086 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:46:20,086 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:46:20,096 - INFO - 127.0.0.1 - - [06/Jan/2025 17:46:20] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+2025-01-06 17:46:44,690 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:46:44,691 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:46:44,760 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:46:44,762 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:46:44,914 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 17:46:44,914 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:46:44,915 - INFO -  * Restarting with stat
+2025-01-06 17:46:45,402 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:46:45,403 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:46:45,463 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:46:45,465 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:46:45,590 - WARNING -  * Debugger is active!
+2025-01-06 17:46:45,599 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:46:48,472 - INFO - Webhook received
+2025-01-06 17:46:48,478 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:46:50,004 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 17:46:50,011 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:46:51,336 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 17:46:52,027 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:53,036 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 17:46:54,151 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:55,186 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 17:46:56,215 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:56,710 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 17:46:57,347 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:57,755 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 9895
+2025-01-06 17:46:57,759 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:46:58,151 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 400 131
+2025-01-06 17:46:58,221 - DEBUG - Using selector: KqueueSelector
+2025-01-06 17:46:59,237 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:46:59,237 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 17:46:59,237 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:46:59,237 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 17:46:59,237 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 17:46:59,760 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 17:46:59,760 - DEBUG - Compression method 0
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 17:46:59,760 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 17:46:59,760 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 17:46:59,760 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 17:47:00,416 - DEBUG - Starting upload_to_blob function.
+2025-01-06 17:47:00,417 - DEBUG - File path received: 102_1.png
+2025-01-06 17:47:00,417 - DEBUG - Creating BlobServiceClient.
+2025-01-06 17:47:00,429 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 17:47:00,429 - DEBUG - Accessing container: images
+2025-01-06 17:47:00,429 - DEBUG - Checking if container exists.
+2025-01-06 17:47:00,430 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '8ed54f32-cc1b-11ef-8efe-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 17:47:00,431 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 17:47:01,268 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 17:47:01,270 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9dde8459-101e-004d-1328-608bfa000000'
+    'x-ms-client-request-id': '8ed54f32-cc1b-11ef-8efe-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:47:01 GMT'
+2025-01-06 17:47:01,270 - DEBUG - Container 'images' exists.
+2025-01-06 17:47:01,270 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 17:47:01,270 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 17:47:01,270 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 17:47:01,270 - DEBUG - Opening the file in binary read mode.
+2025-01-06 17:47:01,270 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 17:47:01,271 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '8f55a0ba-cc1b-11ef-8efe-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 17:47:02,530 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 17:47:02,532 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 10:47:02 GMT'
+    'ETag': '"0x8DD2E3F747B8996"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9dde8510-101e-004d-3928-608bfa000000'
+    'x-ms-client-request-id': '8f55a0ba-cc1b-11ef-8efe-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:47:02 GMT'
+2025-01-06 17:47:02,533 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 17:47:02,533 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:47:02,533 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:47:02,547 - INFO - 127.0.0.1 - - [06/Jan/2025 17:47:02] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+2025-01-06 17:49:24,683 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:49:24,684 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:49:24,761 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:49:24,763 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:49:24,914 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 17:49:24,914 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:49:24,915 - INFO -  * Restarting with stat
+2025-01-06 17:49:25,386 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:49:25,387 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:49:25,443 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:49:25,445 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:49:25,968 - WARNING -  * Debugger is active!
+2025-01-06 17:49:25,975 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:49:30,330 - INFO - Webhook received
+2025-01-06 17:49:30,336 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:49:31,789 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 17:49:31,794 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:49:33,174 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 17:49:33,698 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:49:34,512 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 17:49:35,487 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:49:36,365 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 17:49:37,411 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:49:37,913 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 17:49:38,596 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:49:39,074 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 9895
+2025-01-06 17:49:39,077 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:49:39,470 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 400 131
+2025-01-06 17:49:39,518 - DEBUG - Using selector: KqueueSelector
+2025-01-06 17:49:40,785 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:49:40,785 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 17:49:40,785 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:49:40,785 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 17:49:40,785 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 17:49:41,310 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 17:49:41,311 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 17:49:41,311 - DEBUG - Compression method 0
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 17:49:41,311 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 17:49:41,311 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 17:49:41,311 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 17:49:41,968 - DEBUG - Starting upload_to_blob function.
+2025-01-06 17:49:41,968 - DEBUG - File path received: 102_1.png
+2025-01-06 17:49:41,968 - DEBUG - Creating BlobServiceClient.
+2025-01-06 17:49:41,982 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 17:49:41,983 - DEBUG - Accessing container: images
+2025-01-06 17:49:41,983 - DEBUG - Checking if container exists.
+2025-01-06 17:49:41,984 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'ef206b06-cc1b-11ef-ad70-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 17:49:41,985 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 17:49:42,810 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 17:49:42,812 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '05322c13-101e-0000-6428-604416000000'
+    'x-ms-client-request-id': 'ef206b06-cc1b-11ef-ad70-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:49:42 GMT'
+2025-01-06 17:49:42,812 - DEBUG - Container 'images' exists.
+2025-01-06 17:49:42,812 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 17:49:42,813 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 17:49:42,813 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 17:49:42,813 - DEBUG - Opening the file in binary read mode.
+2025-01-06 17:49:42,813 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 17:49:42,813 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'ef9f124e-cc1b-11ef-ad70-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 17:49:46,670 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 17:49:46,671 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 10:49:46 GMT'
+    'ETag': '"0x8DD2E3FD6161BB3"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '05322c84-101e-0000-4628-604416000000'
+    'x-ms-client-request-id': 'ef9f124e-cc1b-11ef-ad70-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:49:46 GMT'
+2025-01-06 17:49:46,671 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 17:49:46,671 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:49:46,671 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:49:46,678 - INFO - 127.0.0.1 - - [06/Jan/2025 17:49:46] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+2025-01-06 17:51:55,232 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:51:55,232 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:51:55,309 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:51:55,311 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:51:55,467 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 17:51:55,467 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:51:55,468 - INFO -  * Restarting with stat
+2025-01-06 17:51:55,960 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:51:55,960 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:51:56,017 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:51:56,018 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:51:56,133 - WARNING -  * Debugger is active!
+2025-01-06 17:51:56,141 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 17:51:57,654 - INFO - Webhook received
+2025-01-06 17:51:57,660 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:51:59,130 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 17:51:59,138 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:52:00,639 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 17:52:01,196 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:52:02,002 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 17:52:02,990 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:52:04,106 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 17:52:06,601 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:52:07,234 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 17:52:08,033 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:52:08,497 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 9895
+2025-01-06 17:52:08,501 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:52:09,021 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 400 131
+2025-01-06 17:52:09,088 - DEBUG - Using selector: KqueueSelector
+2025-01-06 17:52:10,250 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:52:10,250 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 17:52:10,250 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:52:10,250 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 17:52:10,250 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 17:52:10,773 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 17:52:10,773 - DEBUG - Compression method 0
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 17:52:10,773 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 17:52:10,773 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 17:52:10,774 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 17:52:10,774 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 17:52:11,437 - DEBUG - Starting upload_to_blob function.
+2025-01-06 17:52:11,437 - DEBUG - File path received: 102_1.png
+2025-01-06 17:52:11,437 - DEBUG - Creating BlobServiceClient.
+2025-01-06 17:52:11,450 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 17:52:11,450 - DEBUG - Accessing container: images
+2025-01-06 17:52:11,450 - DEBUG - Checking if container exists.
+2025-01-06 17:52:11,451 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '4837547a-cc1c-11ef-898a-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 17:52:11,452 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 17:52:12,377 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 17:52:12,384 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'bfb5b76b-601e-0068-5729-602286000000'
+    'x-ms-client-request-id': '4837547a-cc1c-11ef-898a-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:52:12 GMT'
+2025-01-06 17:52:12,385 - DEBUG - Container 'images' exists.
+2025-01-06 17:52:12,385 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 17:52:12,386 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 17:52:12,386 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 17:52:12,386 - DEBUG - Opening the file in binary read mode.
+2025-01-06 17:52:12,386 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 17:52:12,388 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '48c65d28-cc1c-11ef-898a-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 17:52:13,649 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 17:52:13,650 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 10:52:13 GMT'
+    'ETag': '"0x8DD2E402DB0A6E2"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'bfb5b7c8-601e-0068-3129-602286000000'
+    'x-ms-client-request-id': '48c65d28-cc1c-11ef-898a-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 10:52:13 GMT'
+2025-01-06 17:52:13,651 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 17:52:13,651 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:52:13,651 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 17:52:13,655 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 17:52:14,150 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2212
+2025-01-06 17:52:14,158 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:52:15,410 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 17:52:15,417 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 17:52:16,492 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 17:52:17,328 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 17:52:18,342 - DEBUG - https://api.clickup.com:443 "POST /api/v2/list/901506146080/task HTTP/11" 200 None
+2025-01-06 17:52:18,366 - DEBUG - Using selector: KqueueSelector
+2025-01-06 17:52:19,096 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:52:19,096 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 17:52:19,096 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:52:19,097 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 17:52:19,097 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 17:52:19,620 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 17:52:19,620 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 17:52:19,620 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 17:52:19,620 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 17:52:19,620 - DEBUG - Compression method 0
+2025-01-06 17:52:19,620 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 17:52:19,621 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 17:52:19,621 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 17:52:19,621 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 17:52:19,621 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 17:52:19,621 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 17:52:19,621 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 17:52:19,621 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 17:52:20,281 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 17:52:23,769 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1gzwx5/attachment HTTP/11" 401 49
+2025-01-06 17:52:23,786 - INFO - 127.0.0.1 - - [06/Jan/2025 17:52:23] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+2025-01-06 17:54:02,488 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:54:02,488 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:54:02,551 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:54:02,553 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:54:02,690 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 17:54:02,691 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 17:54:02,691 - INFO -  * Restarting with stat
+2025-01-06 17:54:03,147 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 17:54:03,147 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 17:54:03,206 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 17:54:03,207 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 17:54:03,323 - WARNING -  * Debugger is active!
+2025-01-06 17:54:03,331 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 18:53:47,370 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:53:47,371 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:53:47,427 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:53:47,428 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:53:47,558 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 18:53:47,559 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 18:53:47,559 - INFO -  * Restarting with stat
+2025-01-06 18:53:47,935 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:53:47,936 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:53:47,975 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:53:47,976 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:53:48,064 - WARNING -  * Debugger is active!
+2025-01-06 18:53:48,070 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 18:53:49,786 - INFO - Webhook received
+2025-01-06 18:53:49,790 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:53:51,042 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:53:51,047 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:53:52,738 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:53:53,246 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:53:54,210 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 18:53:55,219 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:53:56,166 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 18:53:57,129 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:53:57,635 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 18:53:58,345 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:53:58,759 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 9895
+2025-01-06 18:53:58,762 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:53:59,158 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 400 131
+2025-01-06 18:53:59,231 - DEBUG - Using selector: KqueueSelector
+2025-01-06 18:54:00,329 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:54:00,329 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 18:54:00,329 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:54:00,329 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 18:54:00,329 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 18:54:00,702 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 18:54:00,703 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 18:54:00,703 - DEBUG - Compression method 0
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 18:54:00,703 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 18:54:00,703 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 18:54:00,703 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 18:54:01,171 - DEBUG - Starting upload_to_blob function.
+2025-01-06 18:54:01,172 - DEBUG - File path received: 102_1.png
+2025-01-06 18:54:01,172 - DEBUG - Creating BlobServiceClient.
+2025-01-06 18:54:01,183 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 18:54:01,183 - DEBUG - Accessing container: images
+2025-01-06 18:54:01,184 - DEBUG - Checking if container exists.
+2025-01-06 18:54:01,184 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'eb63b122-cc24-11ef-9559-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 18:54:01,185 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 18:54:02,074 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 18:54:02,080 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f2ff6ca5-501e-0087-7e31-60d773000000'
+    'x-ms-client-request-id': 'eb63b122-cc24-11ef-9559-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:54:01 GMT'
+2025-01-06 18:54:02,081 - DEBUG - Container 'images' exists.
+2025-01-06 18:54:02,081 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 18:54:02,082 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 18:54:02,082 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 18:54:02,082 - DEBUG - Opening the file in binary read mode.
+2025-01-06 18:54:02,082 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 18:54:02,084 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'ebecf1e4-cc24-11ef-9559-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 18:54:03,353 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 18:54:03,355 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 11:54:03 GMT'
+    'ETag': '"0x8DD2E48D0DAB030"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f2ff6cfe-501e-0087-5131-60d773000000'
+    'x-ms-client-request-id': 'ebecf1e4-cc24-11ef-9559-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:54:03 GMT'
+2025-01-06 18:54:03,356 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 18:54:03,356 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:54:03,356 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:54:03,360 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:54:03,767 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2212
+2025-01-06 18:54:03,782 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:54:04,810 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:54:05,064 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:54:06,648 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:54:07,151 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:54:08,112 - DEBUG - https://api.clickup.com:443 "POST /api/v2/list/901506146080/task HTTP/11" 200 None
+2025-01-06 18:54:08,139 - DEBUG - Using selector: KqueueSelector
+2025-01-06 18:54:08,754 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:54:08,755 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 18:54:08,755 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:54:08,755 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 18:54:08,755 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 18:54:09,145 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 18:54:09,146 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 18:54:09,146 - DEBUG - Compression method 0
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 18:54:09,146 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 18:54:09,146 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 18:54:09,146 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 18:54:09,631 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:54:13,208 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1h1dm6/attachment HTTP/11" 200 893
+2025-01-06 18:54:13,210 - DEBUG - Starting upload_to_blob function.
+2025-01-06 18:54:13,210 - DEBUG - File path received: 102_1.png
+2025-01-06 18:54:13,210 - DEBUG - Creating BlobServiceClient.
+2025-01-06 18:54:13,211 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 18:54:13,212 - DEBUG - Accessing container: images
+2025-01-06 18:54:13,212 - DEBUG - Checking if container exists.
+2025-01-06 18:54:13,213 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f28f2ad0-cc24-11ef-9559-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 18:54:13,215 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 18:54:14,046 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 18:54:14,048 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '7b22bfe7-601e-00a3-0631-6021d3000000'
+    'x-ms-client-request-id': 'f28f2ad0-cc24-11ef-9559-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:54:13 GMT'
+2025-01-06 18:54:14,049 - DEBUG - Container 'images' exists.
+2025-01-06 18:54:14,049 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 18:54:14,050 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 18:54:14,050 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 18:54:14,050 - DEBUG - Opening the file in binary read mode.
+2025-01-06 18:54:14,050 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 18:54:14,052 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777575'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f30f2532-cc24-11ef-9559-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 18:54:15,318 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 18:54:15,319 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 11:54:15 GMT'
+    'ETag': '"0x8DD2E48D80742A5"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '7b22c06c-601e-00a3-6b31-6021d3000000'
+    'x-ms-client-request-id': 'f30f2532-cc24-11ef-9559-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:54:14 GMT'
+2025-01-06 18:54:15,320 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 18:54:15,320 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:54:15,320 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:54:15,324 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:54:16,851 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1h1dm6/attachment HTTP/11" 200 623
+2025-01-06 18:54:16,853 - DEBUG - action_plan {'data': {'accountId': '102', 'totalDailyTimeInMins': 90, 'routines': [{'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/997.jpg', 'routineId': 221, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Minuten', 'amountUnit_en': ''}, 'value': 3}, 'description': 'Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.', 'displayName': 'Fullbody Workout', 'durationCalculated': 3, 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4]}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/45_degree_lunge.jpg', 'routineId': 318, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'REPETITIONS', 'amountUnit_de': 'Wdhl.', 'amountUnit_en': ''}, 'value': 10}, 'description': 'Ausfallschritte sind eine effektive Mobilitätsübung, die vor allem die Beinmuskulatur sowie die Rumpfstabilität stärkt.', 'displayName': 'Ausfallschritte', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/mountain_climbers.jpg', 'routineId': 289, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTE', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.', 'displayName': 'Bergsteiger', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://longtermhealth.de', 'routineId': 286, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'SECONDS', 'amountUnit_de': 'Sek.', 'amountUnit_en': ''}, 'value': 30}, 'description': 'Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.', 'displayName': 'Hampelmänner', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold.jpg', 'routineId': 255, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'SECONDS', 'amountUnit_de': 'Sek.', 'amountUnit_en': ''}, 'value': 10}, 'description': 'Die hohe Plank ist ein effektives Krafttraining, das vor allem die Rumpfmuskulatur und die Stabilität des Körpers stärkt.', 'displayName': 'Hohe Plank', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'NUTRITION', 'pillar_de': 'Ernährung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/999.jpg', 'routineId': 223, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Minuten', 'amountUnit_en': ''}, 'value': 0}, 'description': 'Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.', 'displayName': 'Gesunde Ernährung', 'durationCalculated': 0, 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4]}, {'pillar': {'pillar': 'NUTRITION', 'pillar_de': 'Ernährung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/128.jpg', 'routineId': 351, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'ROUTINE', 'amountUnit_de': 'Routine', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Probiere neue Hülsenfrüchte aus, um von ihren pflanzlichen Eiweißen, Ballaststoffen und Mineralstoffen zu profitieren und deine Ernährung abwechslungsreicher zu gestalten.', 'displayName': 'Hülsenfrüchte entdecken ', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6316}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/2.jpg', 'routineId': 227, 'durationCalculated': 65, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 65}, 'description': 'Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.', 'displayName': 'Spazierengehen', 'alternatives': [], 'scheduleDays': [6], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/20.jpg', 'routineId': 243, 'durationCalculated': 30, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 30}, 'description': 'Nordic Walking ist eine effektive und angenehme Sportart, die Körper und Geist in Einklang bringt. Diese Aktivität verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und fördert die Stimmung. Genieße die Natur und profitiere von den zahlreichen gesundheitlichen Vorteilen dieser Kombination aus Bewegung und Frischluft.', 'displayName': 'Nordic Walking', 'alternatives': [], 'scheduleDays': [7], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'SOCIAL_ENGAGEMENT', 'pillar_de': 'Sozial', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/182.jpg', 'routineId': 405, 'durationCalculated': 60, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'HOURS', 'amountUnit_de': 'Std.', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Geocaching ist eine unterhaltsame Aktivität, die vor allem die sozialen Verbindungen und die mentale Entspannung fördert.', 'displayName': 'Geocachen gehen', 'alternatives': [], 'scheduleDays': [3], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'SOCIAL_ENGAGEMENT', 'pillar_de': 'Sozial', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/181.jpg', 'routineId': 404, 'durationCalculated': 60, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'HOURS', 'amountUnit_de': 'Std.', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Ein Quizabend ist eine unterhaltsame soziale Aktivität, die die zwischenmenschlichen Beziehungen stärkt und den Geist anregt.', 'displayName': 'Mache einen Quizabend', 'alternatives': [], 'scheduleDays': [4], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'STRESS', 'pillar_de': 'Resilienz', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/187.jpg', 'routineId': 410, 'durationCalculated': 2, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 2}, 'description': 'Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.', 'displayName': 'Zwerchfellatmung', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'GRATITUDE', 'pillar_de': 'Dankbarkeit', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/210.jpg', 'routineId': 433, 'durationCalculated': 3, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 3}, 'description': 'Das Aufschreiben von Affirmationen ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken.', 'displayName': 'Affirmation aufschreiben', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'GRATITUDE', 'pillar_de': 'Dankbarkeit', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/156.jpg', 'routineId': 379, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Das Führen eines Tagebuchs ist eine einfache Methode zur emotionalen Ausdrucksform, die die mentale Gesundheit und das Selbstbewusstsein fördert.', 'displayName': 'Schreibe über deinen Tag', 'alternatives': [], 'scheduleDays': [2], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'COGNITIVE_ENHANCEMENT', 'pillar_de': 'Kognition', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/197.jpg', 'routineId': 420, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Lesen fördert die kognitive Verbesserung und stärkt die geistige Klarheit, während es gleichzeitig Stress reduziert.', 'displayName': 'Lesen für Bildung/ persönliches Wachstum', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'COGNITIVE_ENHANCEMENT', 'pillar_de': 'Kognition', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/200.jpg', 'routineId': 423, 'durationCalculated': 15, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 15}, 'description': 'Schach spielen ist eine kognitive Routine, die hauptsächlich die Denkfähigkeit und das Gedächtnis fördert.', 'displayName': 'Schach spielen', 'alternatives': [], 'scheduleDays': [2], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}]}}
+2025-01-06 18:54:16,856 - INFO - 127.0.0.1 - - [06/Jan/2025 18:54:16] "POST /webhook HTTP/1.1" 200 -
+2025-01-06 18:56:34,725 - INFO -  * Detected change in '/Users/janoschgrellner/PycharmProjects/lth-rec/scheduling/scheduler.py', reloading
+2025-01-06 18:56:34,871 - INFO -  * Restarting with stat
+2025-01-06 18:56:35,414 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:56:35,415 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:56:35,469 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:56:35,471 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:56:35,578 - WARNING -  * Debugger is active!
+2025-01-06 18:56:35,584 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 18:56:40,310 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:56:40,310 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:56:40,354 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:56:40,355 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:56:40,453 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 18:56:40,453 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 18:56:40,453 - INFO -  * Restarting with stat
+2025-01-06 18:56:40,823 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:56:40,824 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:56:40,869 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:56:40,870 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:56:40,959 - WARNING -  * Debugger is active!
+2025-01-06 18:56:40,964 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 18:56:44,709 - INFO - Webhook received
+2025-01-06 18:56:44,715 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:56:45,992 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:56:45,996 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:56:47,366 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:56:48,399 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:56:49,244 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 18:56:50,427 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:56:51,392 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 18:56:52,767 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:56:53,313 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 18:56:54,062 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:56:54,546 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 8572
+2025-01-06 18:56:54,624 - DEBUG - Using selector: KqueueSelector
+2025-01-06 18:56:55,579 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:56:55,580 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 18:56:55,580 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:56:55,580 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 18:56:55,580 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 18:56:55,972 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:56:55,972 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 18:56:55,972 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 18:56:55,972 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 18:56:55,972 - DEBUG - Compression method 0
+2025-01-06 18:56:55,973 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 18:56:55,973 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 18:56:55,973 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 18:56:55,973 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 18:56:55,973 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 18:56:55,973 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 18:56:55,973 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 18:56:55,973 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 18:56:56,469 - DEBUG - Starting upload_to_blob function.
+2025-01-06 18:56:56,469 - DEBUG - File path received: 102_1.png
+2025-01-06 18:56:56,469 - DEBUG - Creating BlobServiceClient.
+2025-01-06 18:56:56,482 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 18:56:56,482 - DEBUG - Accessing container: images
+2025-01-06 18:56:56,482 - DEBUG - Checking if container exists.
+2025-01-06 18:56:56,483 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '53e02d2a-cc25-11ef-82b9-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 18:56:56,484 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 18:56:57,476 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 18:56:57,482 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '4750dddd-001e-000c-1932-60d31e000000'
+    'x-ms-client-request-id': '53e02d2a-cc25-11ef-82b9-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:56:56 GMT'
+2025-01-06 18:56:57,483 - DEBUG - Container 'images' exists.
+2025-01-06 18:56:57,483 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 18:56:57,484 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 18:56:57,484 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 18:56:57,484 - DEBUG - Opening the file in binary read mode.
+2025-01-06 18:56:57,484 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 18:56:57,486 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '54793394-cc25-11ef-82b9-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 18:56:59,049 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 18:56:59,051 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 11:56:58 GMT'
+    'ETag': '"0x8DD2E49398E730E"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '4750dea6-001e-000c-5032-60d31e000000'
+    'x-ms-client-request-id': '54793394-cc25-11ef-82b9-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:56:58 GMT'
+2025-01-06 18:56:59,051 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 18:56:59,051 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:56:59,052 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:56:59,055 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:56:59,574 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2212
+2025-01-06 18:56:59,582 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:57:00,953 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:57:00,956 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:57:02,446 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:57:03,037 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:57:04,382 - DEBUG - https://api.clickup.com:443 "POST /api/v2/list/901506146080/task HTTP/11" 200 None
+2025-01-06 18:57:04,408 - DEBUG - Using selector: KqueueSelector
+2025-01-06 18:57:05,023 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:05,023 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 18:57:05,023 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:05,023 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 18:57:05,023 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 18:57:05,417 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 18:57:05,417 - DEBUG - Compression method 0
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 18:57:05,417 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 18:57:05,417 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 18:57:05,417 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 18:57:05,921 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:57:09,010 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1h1fvp/attachment HTTP/11" 200 893
+2025-01-06 18:57:09,012 - DEBUG - Starting upload_to_blob function.
+2025-01-06 18:57:09,012 - DEBUG - File path received: 102_1.png
+2025-01-06 18:57:09,012 - DEBUG - Creating BlobServiceClient.
+2025-01-06 18:57:09,014 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 18:57:09,014 - DEBUG - Accessing container: images
+2025-01-06 18:57:09,014 - DEBUG - Checking if container exists.
+2025-01-06 18:57:09,015 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '5b58675c-cc25-11ef-82b9-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 18:57:09,017 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 18:57:10,059 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 18:57:10,060 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f300d59e-501e-0087-0b32-60d773000000'
+    'x-ms-client-request-id': '5b58675c-cc25-11ef-82b9-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:57:09 GMT'
+2025-01-06 18:57:10,060 - DEBUG - Container 'images' exists.
+2025-01-06 18:57:10,061 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 18:57:10,061 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 18:57:10,061 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 18:57:10,061 - DEBUG - Opening the file in binary read mode.
+2025-01-06 18:57:10,062 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 18:57:10,063 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777575'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '5bf85532-cc25-11ef-82b9-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 18:57:12,156 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 18:57:12,157 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 11:57:12 GMT'
+    'ETag': '"0x8DD2E49415F43DD"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f300d641-501e-0087-2332-60d773000000'
+    'x-ms-client-request-id': '5bf85532-cc25-11ef-82b9-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:57:11 GMT'
+2025-01-06 18:57:12,158 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 18:57:12,158 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:57:12,158 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:57:12,161 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:57:13,272 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1h1fvp/attachment HTTP/11" 200 623
+2025-01-06 18:57:13,274 - DEBUG - action_plan {'data': {'accountId': '102', 'totalDailyTimeInMins': 15, 'routines': [{'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/997.jpg', 'routineId': 221, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Minuten', 'amountUnit_en': ''}, 'value': 3}, 'description': 'Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.', 'displayName': 'Fullbody Workout', 'durationCalculated': 3, 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4]}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/45_degree_lunge.jpg', 'routineId': 318, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'REPETITIONS', 'amountUnit_de': 'Wdhl.', 'amountUnit_en': ''}, 'value': 10}, 'description': 'Ausfallschritte sind eine effektive Mobilitätsübung, die vor allem die Beinmuskulatur sowie die Rumpfstabilität stärkt.', 'displayName': 'Ausfallschritte', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/mountain_climbers.jpg', 'routineId': 289, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTE', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.', 'displayName': 'Bergsteiger', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://longtermhealth.de', 'routineId': 286, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'SECONDS', 'amountUnit_de': 'Sek.', 'amountUnit_en': ''}, 'value': 30}, 'description': 'Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.', 'displayName': 'Hampelmänner', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold.jpg', 'routineId': 255, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'SECONDS', 'amountUnit_de': 'Sek.', 'amountUnit_en': ''}, 'value': 10}, 'description': 'Die hohe Plank ist ein effektives Krafttraining, das vor allem die Rumpfmuskulatur und die Stabilität des Körpers stärkt.', 'displayName': 'Hohe Plank', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'NUTRITION', 'pillar_de': 'Ernährung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/999.jpg', 'routineId': 223, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Minuten', 'amountUnit_en': ''}, 'value': 0}, 'description': 'Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.', 'displayName': 'Gesunde Ernährung', 'durationCalculated': 0, 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4]}, {'pillar': {'pillar': 'NUTRITION', 'pillar_de': 'Ernährung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/128.jpg', 'routineId': 351, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'ROUTINE', 'amountUnit_de': 'Routine', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Probiere neue Hülsenfrüchte aus, um von ihren pflanzlichen Eiweißen, Ballaststoffen und Mineralstoffen zu profitieren und deine Ernährung abwechslungsreicher zu gestalten.', 'displayName': 'Hülsenfrüchte entdecken ', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6316}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/5.jpg', 'routineId': 228, 'durationCalculated': 20, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 20}, 'description': 'Joggen ist ein effektives Cardiotraining, das hauptsächlich die Ausdauer verbessert und das Herz-Kreislauf-System stärkt.', 'displayName': 'Joggen', 'alternatives': [], 'scheduleDays': [6], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'SOCIAL_ENGAGEMENT', 'pillar_de': 'Sozial', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/165.jpg', 'routineId': 388, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Ein Anruf bei einem Freund oder Familienmitglied fördert soziale Verbindungen und reduziert Stress.', 'displayName': 'Rufe eine vertraute Person an', 'alternatives': [], 'scheduleDays': [3], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'SOCIAL_ENGAGEMENT', 'pillar_de': 'Sozial', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/163.jpg', 'routineId': 386, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 0}, 'description': 'Echte zwischenmenschliche Interaktionen fördern soziale Verbindungen und verbessern die emotionale Gesundheit und das Wohlbefinden.', 'displayName': 'Soziale Kontakte statt Social Media', 'alternatives': [], 'scheduleDays': [4], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'STRESS', 'pillar_de': 'Resilienz', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/187.jpg', 'routineId': 410, 'durationCalculated': 2, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 2}, 'description': 'Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.', 'displayName': 'Zwerchfellatmung', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'GRATITUDE', 'pillar_de': 'Dankbarkeit', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/209.jpg', 'routineId': 432, 'durationCalculated': 2, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 2}, 'description': 'Affirmationen denken ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken, die das Wohlbefinden steigert.', 'displayName': 'Affirmation denken', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'COGNITIVE_ENHANCEMENT', 'pillar_de': 'Kognition', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/197.jpg', 'routineId': 420, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Lesen fördert die kognitive Verbesserung und stärkt die geistige Klarheit, während es gleichzeitig Stress reduziert.', 'displayName': 'Lesen für Bildung/ persönliches Wachstum', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'COGNITIVE_ENHANCEMENT', 'pillar_de': 'Kognition', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/194.jpg', 'routineId': 417, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Gedichte lesen ist eine geistige Aktivität, die vor allem das kognitive Denken und die Sprachfähigkeiten fördert.', 'displayName': 'Gedichte lesen', 'alternatives': [], 'scheduleDays': [2], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}]}}
+2025-01-06 18:57:13,276 - INFO - 127.0.0.1 - - [06/Jan/2025 18:57:13] "POST /webhook HTTP/1.1" 200 -
+2025-01-06 18:57:28,075 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:57:28,075 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:57:28,162 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:57:28,163 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:57:28,296 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 18:57:28,297 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 18:57:28,297 - INFO -  * Restarting with stat
+2025-01-06 18:57:28,680 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:57:28,681 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:57:28,731 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:57:28,732 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:57:28,830 - WARNING -  * Debugger is active!
+2025-01-06 18:57:28,836 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 18:57:31,649 - INFO - Webhook received
+2025-01-06 18:57:31,652 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:57:33,127 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:57:33,131 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:57:34,741 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:57:35,248 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:57:36,066 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 18:57:37,336 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:57:38,375 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
+2025-01-06 18:57:39,618 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:57:40,255 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 99232
+2025-01-06 18:57:41,059 - DEBUG - Using selector: KqueueSelector
+2025-01-06 18:57:42,030 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:42,030 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 18:57:42,030 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:42,030 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 18:57:42,030 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 18:57:42,421 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 18:57:42,421 - DEBUG - Compression method 0
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 18:57:42,421 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 18:57:42,421 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 18:57:42,421 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 18:57:42,913 - DEBUG - Starting upload_to_blob function.
+2025-01-06 18:57:42,913 - DEBUG - File path received: 102_1.png
+2025-01-06 18:57:42,913 - DEBUG - Creating BlobServiceClient.
+2025-01-06 18:57:42,924 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 18:57:42,924 - DEBUG - Accessing container: images
+2025-01-06 18:57:42,924 - DEBUG - Checking if container exists.
+2025-01-06 18:57:42,925 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6f8ea560-cc25-11ef-9532-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 18:57:42,926 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 18:57:43,818 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 18:57:43,822 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9e059c3b-101e-004d-7732-608bfa000000'
+    'x-ms-client-request-id': '6f8ea560-cc25-11ef-9532-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:57:43 GMT'
+2025-01-06 18:57:43,823 - DEBUG - Container 'images' exists.
+2025-01-06 18:57:43,823 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 18:57:43,824 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 18:57:43,824 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 18:57:43,824 - DEBUG - Opening the file in binary read mode.
+2025-01-06 18:57:43,824 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 18:57:43,825 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777819'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '70180288-cc25-11ef-9532-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 18:57:45,425 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 18:57:45,426 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 11:57:45 GMT'
+    'ETag': '"0x8DD2E495540D76A"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9e059caf-101e-004d-6032-608bfa000000'
+    'x-ms-client-request-id': '70180288-cc25-11ef-9532-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:57:44 GMT'
+2025-01-06 18:57:45,427 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 18:57:45,427 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:57:45,427 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:57:45,429 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:57:45,943 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2212
+2025-01-06 18:57:45,947 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:57:46,456 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 8572
+2025-01-06 18:57:46,461 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:57:47,823 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:57:47,827 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:57:49,730 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:57:50,246 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:57:51,162 - DEBUG - https://api.clickup.com:443 "POST /api/v2/list/901506146080/task HTTP/11" 200 None
+2025-01-06 18:57:51,185 - DEBUG - Using selector: KqueueSelector
+2025-01-06 18:57:51,798 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:51,798 - DEBUG - STREAM b'IDAT' 41 4571120
+2025-01-06 18:57:51,798 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:51,798 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-06 18:57:51,798 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-06 18:57:52,187 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-06 18:57:52,187 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-06 18:57:52,187 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-06 18:57:52,187 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-06 18:57:52,187 - DEBUG - Compression method 0
+2025-01-06 18:57:52,188 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-06 18:57:52,188 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-06 18:57:52,188 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-06 18:57:52,188 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-06 18:57:52,188 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-06 18:57:52,188 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-06 18:57:52,188 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-06 18:57:52,188 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-06 18:57:52,683 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:57:56,483 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1h1ge1/attachment HTTP/11" 200 893
+2025-01-06 18:57:56,484 - DEBUG - Starting upload_to_blob function.
+2025-01-06 18:57:56,484 - DEBUG - File path received: 102_1.png
+2025-01-06 18:57:56,484 - DEBUG - Creating BlobServiceClient.
+2025-01-06 18:57:56,484 - DEBUG - BlobServiceClient created successfully.
+2025-01-06 18:57:56,484 - DEBUG - Accessing container: images
+2025-01-06 18:57:56,485 - DEBUG - Checking if container exists.
+2025-01-06 18:57:56,485 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '77a3c9e2-cc25-11ef-9532-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-06 18:57:56,487 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-06 18:57:57,451 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-06 18:57:57,453 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f66ed2e4-601e-0035-7f32-602802000000'
+    'x-ms-client-request-id': '77a3c9e2-cc25-11ef-9532-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:57:57 GMT'
+2025-01-06 18:57:57,454 - DEBUG - Container 'images' exists.
+2025-01-06 18:57:57,454 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-06 18:57:57,454 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-06 18:57:57,455 - INFO - Uploading 102_1.png to blob storage...
+2025-01-06 18:57:57,455 - DEBUG - Opening the file in binary read mode.
+2025-01-06 18:57:57,455 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-06 18:57:57,458 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '777575'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '78382baa-cc25-11ef-9532-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-06 18:57:59,040 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-06 18:57:59,041 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 06 Jan 2025 11:57:59 GMT'
+    'ETag': '"0x8DD2E495D60CE5D"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f66ed3af-601e-0035-4332-602802000000'
+    'x-ms-client-request-id': '78382baa-cc25-11ef-9532-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 06 Jan 2025 11:57:58 GMT'
+2025-01-06 18:57:59,042 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-06 18:57:59,043 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:57:59,043 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-06 18:57:59,047 - DEBUG - Starting new HTTPS connection (1): api.clickup.com:443
+2025-01-06 18:58:00,004 - DEBUG - https://api.clickup.com:443 "POST /api/v2/task/86c1h1ge1/attachment HTTP/11" 200 623
+2025-01-06 18:58:00,006 - DEBUG - action_plan {'data': {'accountId': '102', 'totalDailyTimeInMins': 15, 'routines': [{'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/997.jpg', 'routineId': 221, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Minuten', 'amountUnit_en': ''}, 'value': 3}, 'description': 'Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.', 'displayName': 'Fullbody Workout', 'durationCalculated': 3, 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4]}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/45_degree_lunge.jpg', 'routineId': 318, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'REPETITIONS', 'amountUnit_de': 'Wdhl.', 'amountUnit_en': ''}, 'value': 10}, 'description': 'Ausfallschritte sind eine effektive Mobilitätsübung, die vor allem die Beinmuskulatur sowie die Rumpfstabilität stärkt.', 'displayName': 'Ausfallschritte', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/mountain_climbers.jpg', 'routineId': 289, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTE', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.', 'displayName': 'Bergsteiger', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://longtermhealth.de', 'routineId': 286, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'SECONDS', 'amountUnit_de': 'Sek.', 'amountUnit_en': ''}, 'value': 30}, 'description': 'Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.', 'displayName': 'Hampelmänner', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold.jpg', 'routineId': 255, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'SECONDS', 'amountUnit_de': 'Sek.', 'amountUnit_en': ''}, 'value': 10}, 'description': 'Die hohe Plank ist ein effektives Krafttraining, das vor allem die Rumpfmuskulatur und die Stabilität des Körpers stärkt.', 'displayName': 'Hohe Plank', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6314}, {'pillar': {'pillar': 'NUTRITION', 'pillar_de': 'Ernährung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/999.jpg', 'routineId': 223, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Minuten', 'amountUnit_en': ''}, 'value': 0}, 'description': 'Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.', 'displayName': 'Gesunde Ernährung', 'durationCalculated': 0, 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4]}, {'pillar': {'pillar': 'NUTRITION', 'pillar_de': 'Ernährung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/128.jpg', 'routineId': 351, 'durationCalculated': 0, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'ROUTINE', 'amountUnit_de': 'Routine', 'amountUnit_en': ''}, 'value': 1}, 'description': 'Probiere neue Hülsenfrüchte aus, um von ihren pflanzlichen Eiweißen, Ballaststoffen und Mineralstoffen zu profitieren und deine Ernährung abwechslungsreicher zu gestalten.', 'displayName': 'Hülsenfrüchte entdecken ', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': 6316}, {'pillar': {'pillar': 'MOVEMENT', 'pillar_de': 'Bewegung', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/5.jpg', 'routineId': 228, 'durationCalculated': 20, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 20}, 'description': 'Joggen ist ein effektives Cardiotraining, das hauptsächlich die Ausdauer verbessert und das Herz-Kreislauf-System stärkt.', 'displayName': 'Joggen', 'alternatives': [], 'scheduleDays': [6], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'SOCIAL_ENGAGEMENT', 'pillar_de': 'Sozial', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/165.jpg', 'routineId': 388, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Ein Anruf bei einem Freund oder Familienmitglied fördert soziale Verbindungen und reduziert Stress.', 'displayName': 'Rufe eine vertraute Person an', 'alternatives': [], 'scheduleDays': [3], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'SOCIAL_ENGAGEMENT', 'pillar_de': 'Sozial', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/163.jpg', 'routineId': 386, 'durationCalculated': 1, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 0}, 'description': 'Echte zwischenmenschliche Interaktionen fördern soziale Verbindungen und verbessern die emotionale Gesundheit und das Wohlbefinden.', 'displayName': 'Soziale Kontakte statt Social Media', 'alternatives': [], 'scheduleDays': [4], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'STRESS', 'pillar_de': 'Resilienz', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/187.jpg', 'routineId': 410, 'durationCalculated': 2, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 2}, 'description': 'Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.', 'displayName': 'Zwerchfellatmung', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'GRATITUDE', 'pillar_de': 'Dankbarkeit', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/209.jpg', 'routineId': 432, 'durationCalculated': 2, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 2}, 'description': 'Affirmationen denken ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken, die das Wohlbefinden steigert.', 'displayName': 'Affirmation denken', 'alternatives': [], 'scheduleDays': [1, 2, 3, 4, 5, 6, 7], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'COGNITIVE_ENHANCEMENT', 'pillar_de': 'Kognition', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/197.jpg', 'routineId': 420, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Lesen fördert die kognitive Verbesserung und stärkt die geistige Klarheit, während es gleichzeitig Stress reduziert.', 'displayName': 'Lesen für Bildung/ persönliches Wachstum', 'alternatives': [], 'scheduleDays': [1], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}, {'pillar': {'pillar': 'COGNITIVE_ENHANCEMENT', 'pillar_de': 'Kognition', 'pillar_en': ''}, 'imageUrl': 'https://lthstore.blob.core.windows.net/images/194.jpg', 'routineId': 417, 'durationCalculated': 5, 'timeOfDay': 'ANY', 'goal': {'unit': {'amountUnit': 'MINUTES', 'amountUnit_de': 'Min.', 'amountUnit_en': ''}, 'value': 5}, 'description': 'Gedichte lesen ist eine geistige Aktivität, die vor allem das kognitive Denken und die Sprachfähigkeiten fördert.', 'displayName': 'Gedichte lesen', 'alternatives': [], 'scheduleDays': [2], 'scheduleWeeks': [1, 2, 3, 4], 'parentRoutineId': None}]}}
+2025-01-06 18:58:00,008 - INFO - 127.0.0.1 - - [06/Jan/2025 18:58:00] "POST /webhook HTTP/1.1" 200 -
+2025-01-06 18:59:10,306 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:59:10,307 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:59:10,375 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:59:10,377 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:59:10,508 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.2.230.67:5003
+2025-01-06 18:59:10,508 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-06 18:59:10,509 - INFO -  * Restarting with stat
+2025-01-06 18:59:10,900 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-06 18:59:10,901 - DEBUG - load_verify_locations cafile='/Users/janoschgrellner/PycharmProjects/lth-rec/.venv/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-01-06 18:59:10,948 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-06 18:59:10,950 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-06 18:59:11,048 - WARNING -  * Debugger is active!
+2025-01-06 18:59:11,054 - INFO -  * Debugger PIN: 105-171-969
+2025-01-06 18:59:12,822 - INFO - Webhook received
+2025-01-06 18:59:12,828 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:59:14,411 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-06 18:59:14,419 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-06 18:59:15,946 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-06 18:59:16,509 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:59:17,482 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 570092
+2025-01-06 18:59:18,714 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-06 18:59:19,691 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 461197
