@@ -72,7 +72,7 @@
           3,
           4
         ],
-        "parentRoutineId": 6314
+        "parentRoutineId": 221
       },
       {
         "pillar": {
@@ -108,7 +108,7 @@
           3,
           4
         ],
-        "parentRoutineId": 6314
+        "parentRoutineId": 221
       },
       {
         "pillar": {
@@ -144,7 +144,7 @@
           3,
           4
         ],
-        "parentRoutineId": 6314
+        "parentRoutineId": 221
       },
       {
         "pillar": {
@@ -180,7 +180,120 @@
           3,
           4
         ],
-        "parentRoutineId": 6314
+        "parentRoutineId": 221
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/998.jpg",
+        "routineId": 222,
+        "timeOfDay": "EVENING",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Minuten",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern.",
+        "displayName": "Abendritual",
+        "durationCalculated": 0,
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/140.jpg",
+        "routineId": 363,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "amountUnit_de": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Schau vor dem Schlafen nicht auf einen Bildschirm, um deine Schlafqualität zu verbessern und deinen natürlichen Schlafrhythmus zu unterstützen.",
+        "displayName": "Nicht auf einen Bildschirm schauen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 222
+      },
+      {
+        "pillar": {
+          "pillar": "SLEEP",
+          "pillar_de": "Schlaf",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/150.jpg",
+        "routineId": 373,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "amountUnit_de": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Diese Routine ist eine Entspannungstechnik zur Förderung des Schlafs und zur Verbesserung des Einschlafens in einer neuen Umgebung.",
+        "displayName": "Zimmer wechseln bei Schlaflosigkeit",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 222
       },
       {
         "pillar": {
@@ -255,7 +368,7 @@
           3,
           4
         ],
-        "parentRoutineId": 6316
+        "parentRoutineId": 223
       },
       {
         "pillar": {
@@ -279,7 +392,7 @@
         "displayName": "Joggen",
         "alternatives": [],
         "scheduleDays": [
-          6
+          5
         ],
         "scheduleWeeks": [
           1,
@@ -311,7 +424,7 @@
         "displayName": "Rufe eine vertraute Person an",
         "alternatives": [],
         "scheduleDays": [
-          3
+          2
         ],
         "scheduleWeeks": [
           1,
@@ -343,7 +456,7 @@
         "displayName": "Soziale Kontakte statt Social Media",
         "alternatives": [],
         "scheduleDays": [
-          4
+          3
         ],
         "scheduleWeeks": [
           1,
@@ -375,7 +488,51 @@
         "displayName": "Zwerchfellatmung",
         "alternatives": [],
         "scheduleDays": [
-          1
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "STRESS",
+          "pillar_de": "Resilienz",
+          "pillar_en": ""
+        },
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/192.jpg",
+        "routineId": 415,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "MINUTES",
+            "amountUnit_de": "Min.",
+            "amountUnit_en": ""
+          },
+          "value": 0
+        },
+        "description": "Diese Routine fördert Achtsamkeit und Stressreduktion, indem sie einen klaren, technologie-freien Start in den Tag ermöglicht.",
+        "displayName": "Kein Handy am morgen",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "scheduleWeeks": [
           1,
@@ -391,9 +548,9 @@
           "pillar_de": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/209.jpg",
-        "routineId": 432,
-        "durationCalculated": 2,
+        "imageUrl": "https://lthstore.blob.core.windows.net/images/210.jpg",
+        "routineId": 433,
+        "durationCalculated": 3,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -401,19 +558,13 @@
             "amountUnit_de": "Min.",
             "amountUnit_en": ""
           },
-          "value": 2
+          "value": 3
         },
-        "description": "Affirmationen denken ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken, die das Wohlbefinden steigert.",
-        "displayName": "Affirmation denken",
+        "description": "Das Aufschreiben von Affirmationen ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken.",
+        "displayName": "Affirmation aufschreiben",
         "alternatives": [],
         "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
+          1
         ],
         "scheduleWeeks": [
           1,
