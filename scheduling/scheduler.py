@@ -40,7 +40,7 @@ def filter_routines_by_pillar_and_time(pillar, total_duration_daily, filtered_ro
             pillar_value = routine.get('attributes', {}).get('pillar', None)
 
             if isinstance(pillar_value, list):
-                print(f"Found list in pillar: {pillar_value}")
+                #print(f"Found list in pillar: {pillar_value}")
                 pillar_value = pillar_value[0] if pillar_value else None
 
             if pillar_value:
@@ -51,7 +51,7 @@ def filter_routines_by_pillar_and_time(pillar, total_duration_daily, filtered_ro
                     routine_name = routine.get('attributes', {}).get('name', 0)
                     tags = [t['tag'] for t in routine.get('attributes', {}).get('tags', {})]
                     if 'cardio' in tags:
-                        print("Routine with tag 'cardio'.", routine_name)
+                        #print("Routine with tag 'cardio'.", routine_name)
                         if routine_duration <= total_duration_daily and routine_duration > 1:
                             routines_for_pillar.append(routine)
 
@@ -252,7 +252,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     total_duration = 0
 
     subroutine_ids = list(routines_for_super_routine)[:max_subroutines_per_superroutine]
-    print('subroutine_ids',subroutine_ids)
+    #print('subroutine_ids',subroutine_ids)
 
     routines_for_super_routine = get_routines_by_ids(routines, subroutine_ids)
 
@@ -335,7 +335,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     return final_action_plan, total_duration_movement
 
 def build_individual_routine_entry(routine):
-    print()
+    #print()
     resource_image_url = routine.get('attributes', {}).get("resources", [{}])[0].get(
         "imageUrl") or "https://longtermhealth.de"
 
@@ -543,7 +543,7 @@ def select_routines_for_pillar(pillar, health_scores, routines, allocated_time, 
     routines_for_knapsack = []
     for routine in routines:
         if routine['attributes']['pillar']['pillar'] == pillar:
-            print(routine['attributes']['name'])
+            #print(routine['attributes']['name'])
             weighted_score = calculate_weighted_score_knapsack(routine, weights)
 
             routine_with_score = routine.copy()
@@ -573,7 +573,7 @@ def select_routines_for_pillar(pillar, health_scores, routines, allocated_time, 
 def knapsack_with_routine_count(routines, max_time, max_routines):
     num_routines = len(routines)
 
-    print(f"Starting knapsack with {num_routines} routines, max_time = {max_time}, max_routines = {max_routines}")
+    ##print(f"Starting knapsack with {num_routines} routines, max_time = {max_time}, max_routines = {max_routines}")
 
     dp = [[[0 for _ in range(max_routines + 1)] for _ in range(max_time + 1)] for _ in range(num_routines + 1)]
 
@@ -609,7 +609,7 @@ def knapsack_with_routine_count(routines, max_time, max_routines):
             r -= 1
 
     selected_routines.reverse()
-    print('selected_routines after kanpsack', len(selected_routines))
+    ##print('selected_routines after kanpsack', len(selected_routines))
     return selected_routines, max_score
 
 
@@ -657,15 +657,15 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
     period_min = routine['attributes']['periodMinimum']
     period_rec = routine['attributes']['periodRecommended']
 
-    print(f"\n\nScheduling routine '{name}' '{id}' of type {period} with a duration of {duration} minutes.")
-    print(f"Period: {period}, Period Recommended: {period_rec}, Period Minimum: {period_min}")
-    print(f"Available time for pillar '{pillar}':")
-    print(f"  Daily Allocation: {allocated_time} minutes")
-    print(f"  Weekly Allocation: {weekly_allocations.get(pillar, 0)} minutes")
-    print(f"  Monthly Allocation: {monthly_allocations.get(pillar, 0)} minutes")
+    ##print(f"\n\nScheduling routine '{name}' '{id}' of type {period} with a duration of {duration} minutes.")
+    ##print(f"Period: {period}, Period Recommended: {period_rec}, Period Minimum: {period_min}")
+    ##print(f"Available time for pillar '{pillar}':")
+    ##print(f"  Daily Allocation: {allocated_time} minutes")
+    ##print(f"  Weekly Allocation: {weekly_allocations.get(pillar, 0)} minutes")
+    ##print(f"  Monthly Allocation: {monthly_allocations.get(pillar, 0)} minutes")
 
     if routine['schedulePeriod'] == "WEEKLY":
-        print(f"schedulePeriod is WEEKLY, trying to schedule the routine on available days.")
+        ##print(f"schedulePeriod is WEEKLY, trying to schedule the routine on available days.")
         scheduled_days = set()
         used_weekly_time = sum([r['duration'] for r in all_scheduled_routines if
                                 r['schedulePeriod'] == 'WEEKLY' and r['pillar'] == pillar])
@@ -676,42 +676,42 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
         social_engagement_days = get_social_days(start_weekday)
 
         if pillar == 'MOVEMENT':
-            print("MOVEMENT routine detected, scheduling only on actual weekend days.")
+            #print("MOVEMENT routine detected, scheduling only on actual weekend days.")
             for day in weekend_days:
                 if remaining_weekly_time >= duration and day not in [r['scheduleDays'][0] for r in all_scheduled_routines if r['pillar'] == pillar]:
                     scheduled_days.add(day)
                     remaining_weekly_time -= duration
-                    print(f"Routine scheduled on day {day} (actual weekend). Remaining weekly time: {remaining_weekly_time} minutes.")
+                    #print(f"Routine scheduled on day {day} (actual weekend). Remaining weekly time: {remaining_weekly_time} minutes.")
                     break
                 else:
                     print(f"No time available on day {day} or already scheduled. Trying next day.")
 
         elif pillar == 'SOCIAL_ENGAGEMENT':
-            print("SOCIAL_ENGAGEMENT routine detected.")
+            #print("SOCIAL_ENGAGEMENT routine detected.")
             for day in social_engagement_days:
                 if day not in [r['scheduleDays'][0] for r in all_scheduled_routines if r['pillar'] == pillar]:
                     scheduled_days.add(day)
                     remaining_weekly_time -= duration
-                    print(f"Routine scheduled on day {day} (actual Wed/Thu). Remaining weekly time: {remaining_weekly_time} minutes.")
+                    #print(f"Routine scheduled on day {day} (actual Wed/Thu). Remaining weekly time: {remaining_weekly_time} minutes.")
                     break
                 else:
                     print(f"No time available on day {day} or already scheduled. Trying next day.")
 
         else:
             # For other pillars, pick any available day of the week
-            print('remaining_weekly_time before', remaining_weekly_time)
+            #print('remaining_weekly_time before', remaining_weekly_time)
             for day in range(1,8):
                 if remaining_weekly_time >= duration and day not in [r['scheduleDays'][0] for r in all_scheduled_routines if r['pillar'] == pillar]:
                     scheduled_days.add(day)
                     remaining_weekly_time -= duration
-                    print(f"Routine scheduled on day {day}. Remaining weekly time: {remaining_weekly_time} minutes.")
+                    #print(f"Routine scheduled on day {day}. Remaining weekly time: {remaining_weekly_time} minutes.")
                     break
                 else:
                     print(f"No time available on day {day} or already scheduled. Trying next day.")
 
         schedule_days = list(scheduled_days)
         schedule_weeks = [1, 2, 3, 4]
-        print(f"Routine scheduled on days: {schedule_days}.")
+        #print(f"Routine scheduled on days: {schedule_days}.")
         all_scheduled_routines.append({
             'id': id,
             'name': name,
@@ -722,7 +722,7 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
             'scheduleWeeks': schedule_weeks,
             'duration': duration
         })
-        print(f"Final schedule for routine '{name}': Days: {schedule_days}, Weeks: {schedule_weeks}")
+        #print(f"Final schedule for routine '{name}': Days: {schedule_days}, Weeks: {schedule_weeks}")
         return {
             "id": id,
             "scheduleDays": schedule_days,
@@ -737,31 +737,31 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
         if period == 'DAILY':
             used_daily_time = sum([r['duration'] for r in all_scheduled_routines if r['pillar'] == pillar])
             remaining_daily_time = daily_allocations.get(pillar, 0) - used_daily_time
-            print('remaining_daily_time before', remaining_daily_time)
-            print("Period is DAILY, scheduling routine for all 7 days.")
+            #print('remaining_daily_time before', remaining_daily_time)
+            #print("Period is DAILY, scheduling routine for all 7 days.")
             schedule_days = [1, 2, 3, 4, 5, 6, 7]
             schedule_weeks = [1, 2, 3, 4]
             remaining_daily_time -= duration
-            print('remaining_daily_time after', remaining_daily_time)
+            #print('remaining_daily_time after', remaining_daily_time)
 
         elif period == 'WEEKLY':
             used_daily_time = sum([r['duration'] for r in all_scheduled_routines if r['pillar'] == pillar])
             remaining_daily_time = daily_allocations.get(pillar, 0) - used_daily_time
-            print('remaining_daily_time before', remaining_daily_time)
+            #print('remaining_daily_time before', remaining_daily_time)
             num_sessions = period_rec
             if num_sessions == 0:
-                print(f"Routine cannot fit in allocated daily time of {allocated_time} min.")
+                #print(f"Routine cannot fit in allocated daily time of {allocated_time} min.")
                 if weekly_allocations.get(pillar, 0) >= duration:
                     num_sessions = min(weekly_allocations[pillar] // duration, period_rec)
                     num_sessions = int(num_sessions)
-            print(f"Routine can be scheduled for {(num_sessions)} sessions over the week.")
+            #print(f"Routine can be scheduled for {(num_sessions)} sessions over the week.")
             schedule_days = list(range(1, 1 + num_sessions))
             schedule_weeks = [1, 2, 3, 4]
             remaining_daily_time -= duration
-            print('remaining_daily_time after', remaining_daily_time)
+            #print('remaining_daily_time after', remaining_daily_time)
 
         elif period == 'MONTHLY':
-            print("Period is MONTHLY. Dynamically distributing sessions based on period_rec.")
+            #print("Period is MONTHLY. Dynamically distributing sessions based on period_rec.")
             if period_rec <= 4:
                 schedule_days = [1]
                 schedule_weeks = list(range(1, period_rec+1))
@@ -770,14 +770,14 @@ def schedule_routine(routine, daily_allocations, pillar, allocated_time, weekly_
                 weeks_needed = math.ceil(period_rec / days_needed)
                 schedule_days = list(range(1, 1 + days_needed))
                 schedule_weeks = list(range(1, min(weeks_needed, 4) + 1))
-            print(f"Dynamically chosen: Days: {schedule_days}, Weeks: {schedule_weeks}")
+            #print(f"Dynamically chosen: Days: {schedule_days}, Weeks: {schedule_weeks}")
 
         else:
-            print(f"Unknown period type: {period}. Skipping scheduling.")
+            #print(f"Unknown period type: {period}. Skipping scheduling.")
             schedule_days = []
             schedule_weeks = []
 
-        print(f"Final schedule for routine '{name}': Days: {schedule_days}, Weeks: {schedule_weeks}")
+        #print(f"Final schedule for routine '{name}': Days: {schedule_days}, Weeks: {schedule_weeks}")
         all_scheduled_routines.append({
             'id': id,
             'name': name,
@@ -1031,7 +1031,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
     total_allocated_all = 0
 
     for day in range(1, 29):
-        print(f"Day {day}:")
+        #print(f"Day {day}:")
         if day in routines_per_day:
             for routine in routines_per_day[day]:
                 pillar = routine[1]
@@ -1057,36 +1057,36 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
                 else:
                     total_allocated_all += allocated_time
 
-                print(f"  - {routine[0]} (Pillar: {pillar}, Duration: {duration} minutes)")
+                #print(f"  - {routine[0]} (Pillar: {pillar}, Duration: {duration} minutes)")
 
-            print("Total duration per pillar for the day:")
+            #print("Total duration per pillar for the day:")
             for pillar, total_duration in pillar_durations_per_day[day].items():
                 print(f"Pillar {pillar}")
-                print(f"used      {total_duration} minutes")
-                print(f"allocated {allocated_time} minutes")
+                #print(f"used      {total_duration} minutes")
+                #print(f"allocated {allocated_time} minutes")
         else:
             print("  No routines scheduled.")
-        print()
+        #print()
 
-    print("Total duration per pillar across all 28 days:")
+    #print("Total duration per pillar across all 28 days:")
     for pillar in total_used_durations:
         used_duration = total_used_durations[pillar]
         allocated_duration = total_allocated_durations.get(pillar, 0)
-        print(f"Pillar {pillar}:")
-        print(f"  Total used:      {used_duration} minutes")
-        print(f"  Total allocated: {allocated_duration} minutes")
+        #print(f"Pillar {pillar}:")
+        #print(f"  Total used:      {used_duration} minutes")
+        #print(f"  Total allocated: {allocated_duration} minutes")
 
-    print("\nOverall total across all pillars:")
-    print(f"Total used:      {total_used_all} minutes")
-    print(f"Total allocated: {total_allocated_all} minutes")
+    #print("\nOverall total across all pillars:")
+    #print(f"Total used:      {total_used_all} minutes")
+    #print(f"Total allocated: {total_allocated_all} minutes")
 
 
 def main():
     account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
-    print('daily_time',daily_time)
+    #print('daily_time',daily_time)
     total_score = health_scores['Total Score']
     start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
-    print('start_weekday',start_weekday)
+    #print('start_weekday',start_weekday)
     file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
@@ -1107,17 +1107,17 @@ def main():
     allocations_by_scores = calculate_daily_allocations_by_scores(daily_time, health_scores, THRESHOLDS)
     allocations_by_weightings = calculate_daily_allocations_by_weightings(daily_time, WEIGHTINGS)
     daily_allocations = combine_allocations(allocations_by_scores, allocations_by_weightings, score_weight=0.7)
-    print("daily_allocations before reallocation:", daily_allocations)
+    #print("daily_allocations before reallocation:", daily_allocations)
 
     health_scores_with_tag = create_health_scores_with_tag(health_scores)
-    print('health_scores_with_tag',health_scores_with_tag)
+    #print('health_scores_with_tag',health_scores_with_tag)
     health_scores_with_tag_payload_strapi = create_health_scores_with_structure(account_id, health_scores)
-    print('health_scores_with_tag_payload_strapi',json.dumps(health_scores_with_tag_payload_strapi, indent=4, ensure_ascii=False))
+    #print('health_scores_with_tag_payload_strapi',json.dumps(health_scores_with_tag_payload_strapi, indent=4, ensure_ascii=False))
 
     reallocations, updated_allocations = allocate_more_time_to_focus_areas(daily_allocations, health_scores_with_tag)
 
-    print("Reallocations to Focus Areas:", reallocations)
-    print("Updated Allocations allocate_more_time_to_focus_areas:", updated_allocations)
+    #print("Reallocations to Focus Areas:", reallocations)
+    #print("Updated Allocations allocate_more_time_to_focus_areas:", updated_allocations)
 
     daily_allocations = updated_allocations
 
@@ -1240,7 +1240,7 @@ def main():
         sleep_super_routine = []
         added_to_super_routine_sleep = []
         remaining_time_sleep = 0
-        print('sleep_answer is sehr gut, skipping sleep super routine',sleep_answer)
+        #print('sleep_answer is sehr gut, skipping sleep super routine',sleep_answer)
     else:
         sleep_super_routine, added_to_super_routine_sleep, remaining_time_sleep = create_custom_super_routine_for_tags(
             routines,
@@ -1263,9 +1263,9 @@ def main():
     routines_for_super_routine_sleep = get_routines_by_ids(routines, added_to_super_routine_sleep)
     routines_for_super_routine_nutrition = get_routines_by_ids(routines, added_to_super_routine_nutrition)
 
-    print('added_to_super_routine_movement',added_to_super_routine_movement)
-    print('added_to_super_routine_sleep',added_to_super_routine_sleep)
-    print('added_to_super_routine_nutrition',added_to_super_routine_nutrition)
+    #print('added_to_super_routine_movement',added_to_super_routine_movement)
+    #print('added_to_super_routine_sleep',added_to_super_routine_sleep)
+    #print('added_to_super_routine_nutrition',added_to_super_routine_nutrition)
 
     final_action_plan_sleep, total_duration_movement = build_final_action_plan(routines, {},
                                                         account_id, daily_time,
@@ -1283,7 +1283,7 @@ def main():
                                                       "movement_superroutine")
 
 
-    print("total_duration_movement",total_duration_movement)
+    #print("total_duration_movement",total_duration_movement)
 
     final_action_plan = {
         "data": {
@@ -1299,22 +1299,22 @@ def main():
 
     pillars = ['SOCIAL_ENGAGEMENT', 'STRESS', 'GRATITUDE', 'COGNITIVE_ENHANCEMENT']
     final_routines = []
-    print('QWERT')
+    #print('QWERT')
     weekly_routines = {}
 
     pillar_movement = ['MOVEMENT']
     for pillar in pillar_movement:
         allocated_time = daily_allocations[pillar]
         allocated_time_weekly = allocated_time * 7
-        print(f"TEST Allocating {allocated_time_weekly} minutes for pillar: {pillar}")
+        #print(f"TEST Allocating {allocated_time_weekly} minutes for pillar: {pillar}")
         filtered_routines_movement = filter_routines_by_pillar_and_time(pillar, allocated_time_weekly, filtered_routines)
-        print('filtered_routines_movement', len(filtered_routines_movement))
+        #print('filtered_routines_movement', len(filtered_routines_movement))
         selected_routines, max_score, pillar_duration_sums, time_delta = select_routines_for_pillar(
             pillar, health_scores, filtered_routines_movement, allocated_time_weekly, weights, 2
         )
         total_time_selected = sum(routine['attributes']['durationCalculated'] for routine in selected_routines)
-        print(f"\nPillar: {pillar} (Before Selection)")
-        print(f"allocated_time_weekly Time: {allocated_time_weekly} min")
+        #print(f"\nPillar: {pillar} (Before Selection)")
+        #print(f"allocated_time_weekly Time: {allocated_time_weekly} min")
 
         if len(selected_routines) == 0:
             print(
@@ -1340,64 +1340,64 @@ def main():
 
         allocated_time = daily_allocations[pillar]
 
-        print(f"Allocating {allocated_time} minutes for pillar: {pillar}")
+        #print(f"Allocating {allocated_time} minutes for pillar: {pillar}")
 
         selected_routines, max_score, pillar_duration_sums, time_delta = select_routines_for_pillar(
             pillar, health_scores, filtered_routines, allocated_time, weights
         )
-        print('Stage 1: allocated_time_daily', allocated_time)
+        #print('Stage 1: allocated_time_daily', allocated_time)
         allocated_time_weekly = allocated_time * 7
-        print('Stage 1: allocated_time_weekly', allocated_time_weekly)
-        print('Stage 1: pillar_duration_sums_daily', pillar_duration_sums)
+        #print('Stage 1: allocated_time_weekly', allocated_time_weekly)
+        #print('Stage 1: pillar_duration_sums_daily', pillar_duration_sums)
         remaining_time_daily = allocated_time - pillar_duration_sums[pillar]
-        print('Stage 1: remaining_time_daily', remaining_time_daily)
+        #print('Stage 1: remaining_time_daily', remaining_time_daily)
         remaining_time_weekly = remaining_time_daily * 7
-        print('Stage 1: remaining_time_weekly', remaining_time_weekly)
-        print('Stage 1: Before retry: pillar_duration_sums',pillar_duration_sums)
-        print('Stage 1: Before retry: time_delta',time_delta)
+        #print('Stage 1: remaining_time_weekly', remaining_time_weekly)
+        #print('Stage 1: Before retry: pillar_duration_sums',pillar_duration_sums)
+        #print('Stage 1: Before retry: time_delta',time_delta)
 
-        print(f"Initial selection for {pillar}: {selected_routines}, Score: {max_score}")
+        #print(f"Initial selection for {pillar}: {selected_routines}, Score: {max_score}")
 
         if max_score == 0:
-            print(f"No routines selected for {pillar}. Retrying with weekly allocation (7 days).")
+            #print(f"No routines selected for {pillar}. Retrying with weekly allocation (7 days).")
 
             allocated_time *= 7
 
-            print(f"New weekly allocated time for {pillar}: {allocated_time}")
+            #print(f"New weekly allocated time for {pillar}: {allocated_time}")
 
             selected_routines, max_score, pillar_duration_sums, time_delta = select_routines_for_pillar(
                 pillar, health_scores, filtered_routines, allocated_time, weights
             )
-            print('Stage 2: allocated_time_weekly', allocated_time_weekly)
-            print('Stage 2: pillar_duration_sums_weekly', pillar_duration_sums)
+            #print('Stage 2: allocated_time_weekly', allocated_time_weekly)
+            #print('Stage 2: pillar_duration_sums_weekly', pillar_duration_sums)
             remaining_time_daily = allocated_time - pillar_duration_sums[pillar]
-            print('Stage 2: remaining_time_daily', remaining_time_daily)
+            #print('Stage 2: remaining_time_daily', remaining_time_daily)
             remaining_time_weekly = remaining_time_daily * 7
-            print('Stage 2: remaining_time_weekly', remaining_time_weekly)
+            #print('Stage 2: remaining_time_weekly', remaining_time_weekly)
 
-            print('Stage 2: pillar_duration_sums_weekly',pillar_duration_sums)
+            #print('Stage 2: pillar_duration_sums_weekly',pillar_duration_sums)
 
-            print(f"Retry selection for {pillar}: {selected_routines}, Score: {max_score}")
+            #print(f"Retry selection for {pillar}: {selected_routines}, Score: {max_score}")
 
             for routine in selected_routines:
                 routine['schedulePeriod'] = 'WEEKLY'
-                print(f"Routine {routine['attributes']['name']} scheduled weekly with time allocation: {routine['attributes']['durationCalculated']}")
+                #print(f"Routine {routine['attributes']['name']} scheduled weekly with time allocation: {routine['attributes']['durationCalculated']}")
 
         elif time_delta >= 0.2:
-            print(f'time_delta was more than 0.2. Retrying with weekly allocation (7 days) with remaining time {remaining_time_weekly}')
+            #print(f'time_delta was more than 0.2. Retrying with weekly allocation (7 days) with remaining time {remaining_time_weekly}')
 
             selected_routines, max_score, pillar_duration_sums_weekly, time_delta_weekly = select_routines_for_pillar(
                 pillar, health_scores, filtered_routines, remaining_time_weekly, weights
             )
-            print('Stage 2: allocated_time_weekly', allocated_time_weekly)
-            print('Stage 2: pillar_duration_sums_weekly', pillar_duration_sums_weekly)
+            #print('Stage 2: allocated_time_weekly', allocated_time_weekly)
+            #print('Stage 2: pillar_duration_sums_weekly', pillar_duration_sums_weekly)
             remaining_time_weekly = allocated_time_weekly - pillar_duration_sums_weekly[pillar]
-            print('Stage 2: remaining_time_weekly', remaining_time_weekly)
+            #print('Stage 2: remaining_time_weekly', remaining_time_weekly)
             remaining_time_monthly = remaining_time_weekly * 4
-            print('Stage 2: remaining_time_monthly', remaining_time_monthly)
-            print('Stage 2: time_delta_weekly',time_delta_weekly)
+            #print('Stage 2: remaining_time_monthly', remaining_time_monthly)
+            #print('Stage 2: time_delta_weekly',time_delta_weekly)
 
-            print(f"Retry selection for {pillar}: {selected_routines}, Score: {max_score}")
+            #print(f"Retry selection for {pillar}: {selected_routines}, Score: {max_score}")
 
             for routine in selected_routines:
                 routine['schedulePeriod'] = 'WEEKLY'
@@ -1411,13 +1411,13 @@ def main():
                 selected_routines, max_score, pillar_duration_sums_monthly, time_delta_weekly = select_routines_for_pillar(
                     pillar, health_scores, filtered_routines, remaining_time_monthly, weights
                 )
-                print('Stage 3: allocated_time_monthly', allocated_time_weekly*4)
-                print('Stage 3: pillar_duration_sums_monthly', pillar_duration_sums_monthly)
+                #print('Stage 3: allocated_time_monthly', allocated_time_weekly*4)
+                #print('Stage 3: pillar_duration_sums_monthly', pillar_duration_sums_monthly)
                 remaining_time_weekly = allocated_time_weekly - pillar_duration_sums_monthly[pillar]
-                print('Stage 3: remaining_time_weekly', remaining_time_weekly)
-                print('Stage 3: time_delta_weekly', time_delta_weekly)
+                #print('Stage 3: remaining_time_weekly', remaining_time_weekly)
+                #print('Stage 3: time_delta_weekly', time_delta_weekly)
 
-                print(f"Retry selection for {pillar}: {selected_routines}, Score: {max_score}")
+                #print(f"Retry selection for {pillar}: {selected_routines}, Score: {max_score}")
 
                 for routine in selected_routines:
                     routine['schedulePeriod'] = 'WEEKLY'
@@ -1427,11 +1427,11 @@ def main():
         else:
             for routine in selected_routines:
                 routine['schedulePeriod'] = 'DAILY'
-                print(f"Routine {routine['attributes']['name']} scheduled daily with time allocation: {routine['attributes']['durationCalculated']}")
+                #print(f"Routine {routine['attributes']['name']} scheduled daily with time allocation: {routine['attributes']['durationCalculated']}")
 
         total_time_selected = sum(routine['attributes']['durationCalculated'] for routine in selected_routines)
-        print(f"\nPillar: {pillar} (Before Selection)")
-        print(f"Allocated Time: {allocated_time} min")
+        #print(f"\nPillar: {pillar} (Before Selection)")
+        #print(f"Allocated Time: {allocated_time} min")
 
         if len(selected_routines) == 0:
             print(
@@ -1443,18 +1443,18 @@ def main():
                  print(
                      f"Routine ID: {routine['id']}, Routine Name: {routine['attributes']['name']}, Duration: {routine['attributes']['durationCalculated']} min, Weighted Score: {routine['weighted_score']}")
 
-             print(f"\nTotal time allocated for {pillar} (After Selection): {total_time_selected} min")
-             print("-" * 30)
+             #print(f"\nTotal time allocated for {pillar} (After Selection): {total_time_selected} min")
+             #print("-" * 30)
 
         final_routines.extend(selected_routines)
 
 
 
-    print('len(final_routines)',len(final_routines))
-    print('QWERTZ')
+    #print('len(final_routines)',len(final_routines))
+    #print('QWERTZ')
     all_scheduled_routines = []
 
-    print("\nFinal selected routines (across all pillars):")
+    #print("\nFinal selected routines (across all pillars):")
     for routine in final_routines:
         print(
             f"Pillar: {routine['attributes']['pillar']['pillar']} Routine ID: {routine['id']}, Duration: {routine['attributes']['durationCalculated']} min, Weighted Score: {routine['weighted_score']}")
@@ -1462,18 +1462,18 @@ def main():
     weekly_allocations = calculate_weekly_allocations(daily_allocations)
     monthly_allocations = calculate_monthly_allocations(daily_allocations)
 
-    print("\nTotal daily time:", daily_time)
-    print("\nDaily, Weekly, and Monthly Allocations per Pillar:")
+    #print("\nTotal daily time:", daily_time)
+    #print("\nDaily, Weekly, and Monthly Allocations per Pillar:")
     for pillar in daily_allocations.keys():
         print(f"\nPillar: {pillar}")
-        print(f"  Daily Allocation: {daily_allocations[pillar]} min")
-        print(f"  Weekly Allocation: {weekly_allocations[pillar]} min")
-        print(f"  Monthly Allocation: {monthly_allocations[pillar]} min")
+        #print(f"  Daily Allocation: {daily_allocations[pillar]} min")
+        #print(f"  Weekly Allocation: {weekly_allocations[pillar]} min")
+        #print(f"  Monthly Allocation: {monthly_allocations[pillar]} min")
 
     for pillar in ['MOVEMENT', 'NUTRITION', 'SLEEP', 'SOCIAL_ENGAGEMENT', 'STRESS', 'GRATITUDE',
                    'COGNITIVE_ENHANCEMENT']:
         allocated_time = daily_allocations.get(pillar, 0)
-        print(f"Scheduling routines for pillar '{pillar}' with allocated daily time: {allocated_time} minutes.")
+        #print(f"Scheduling routines for pillar '{pillar}' with allocated daily time: {allocated_time} minutes.")
 
         for routine in final_routines:
             if routine['attributes']['pillar']['pillar'] == pillar:
@@ -1493,7 +1493,7 @@ def main():
 
                 all_scheduled_routines = schedule_result['all_scheduled_routines']
 
-    print('all_scheduled_routines',all_scheduled_routines)
+    #print('all_scheduled_routines',all_scheduled_routines)
 
     routines_per_day = defaultdict(list)
     pillar_durations_per_day = defaultdict(lambda: defaultdict(float))
