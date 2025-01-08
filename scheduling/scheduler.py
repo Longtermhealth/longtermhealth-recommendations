@@ -193,13 +193,18 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
 
     pillar = pillar_mapping.get(super_routine_id, None)
 
-    image_url_mapping = {
-        "movement_superroutine": "https://lthstore.blob.core.windows.net/images/997.jpg",
-        "sleep_superroutine": "https://lthstore.blob.core.windows.net/images/998.jpg",
-        "nutrition_super_routine": "https://lthstore.blob.core.windows.net/images/999.jpg",
+    image_url_mapping_1x1 = {
+        "movement_superroutine": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
+        "sleep_superroutine": "https://lthstore.blob.core.windows.net/images/998_1x1.jpg",
+        "nutrition_super_routine": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
     }
-
-    imageUrl = image_url_mapping.get(super_routine_id, None)
+    image_url_mapping_16x9 = {
+        "movement_superroutine": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
+        "sleep_superroutine": "https://lthstore.blob.core.windows.net/images/998_16x9.jpg",
+        "nutrition_super_routine": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
+    }
+    imageUrl_1x1 = image_url_mapping_1x1.get(super_routine_id, None)
+    imageUrl_16x9 = image_url_mapping_16x9.get(super_routine_id, None)
 
     description_mapping = {
         "sleep_superroutine": "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern.",
@@ -255,14 +260,16 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
         subroutine_duration = (subroutine['attributes']['durationCalculated'])
         total_duration += subroutine_duration
 
-        resource_image_url = subroutine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl") or "https://longtermhealth.de"
+        resource_image_url_1x1 = subroutine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de"
+        resource_image_url_16x9 = subroutine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de"
         subroutine_entry = {
             "pillar": {
                 "pillar": subroutine['attributes']['pillar']['pillar'],
                 "pillar_de": subroutine['attributes']['pillar']['pillar_de'],
                 "pillar_en": ""
             },
-            "imageUrl": resource_image_url,
+            "imageUrl_1x1": resource_image_url_1x1,
+            "imageUrl_16x9": resource_image_url_16x9,
             "routineId": int(subroutine_id),
             "durationCalculated": round(subroutine_duration),
             "timeOfDay": "ANY",
@@ -295,7 +302,8 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
             "pillar_de": pillar_de,
             "pillar_en": ""
         },
-        "imageUrl": imageUrl,
+        "imageUrl_1x1": imageUrl_1x1,
+        "imageUrl_16x9": imageUrl_16x9,
         "routineId": super_routine_id,
         "timeOfDay": timeOfDay,
         "goal": {
@@ -337,7 +345,8 @@ def build_individual_routine_entry(routine):
             "pillar_de": routine['attributes']['pillar']['pillar_de'],
             "pillar_en": ""
         },
-        "imageUrl": resource_image_url,
+        "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
+        "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de",
         "routineId": routine["id"],
         "durationCalculated": int(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
