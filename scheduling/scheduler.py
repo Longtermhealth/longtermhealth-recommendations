@@ -1087,8 +1087,8 @@ def main():
     total_score = health_scores['Total Score']
     start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
     #print('start_weekday',start_weekday)
-    file_path = "./data/routines_with_scores.json"
-    routines = load_routines_for_rules(file_path)
+    #file_path = "./data/routines_with_scores.json"
+    #routines = load_routines_for_rules(file_path)
 
 
     if isinstance(routines, dict):
