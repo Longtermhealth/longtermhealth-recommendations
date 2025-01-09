@@ -95,17 +95,8 @@ def webhook():
                 "COGNITIVE_ENHANCEMENT": cognition_score
             }
 
-            task_id = create_clickup_task(lastname, scores, answers, total_score, accountid)
-            accountid_str = str(accountid) + "_1.png"
-            generate_polar_chart(scores, accountid_str)
-            total_score_str = str(round(total_score))
-            create_final_image(total_score_str, accountid_str)
-            upload_file_to_clickup(task_id, accountid_str)
-            upload_to_blob(accountid_str)
+            create_clickup_task(lastname, scores, answers, total_score, accountid)
 
-            action_plan_path = "./data/action_plan.json"
-            upload_file_to_clickup(task_id, action_plan_path)
-            app.logger.debug(f'action_plan {final_action_plan}')
 
 
     return jsonify({'status': 'success'}), 200
