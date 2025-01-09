@@ -1083,7 +1083,7 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 
 def main():
     account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
-    #print('daily_time',daily_time)
+    print('daily_time',daily_time)
     total_score = health_scores['Total Score']
     start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
     #print('start_weekday',start_weekday)
