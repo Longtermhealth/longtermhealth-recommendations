@@ -82,7 +82,7 @@ def main():
                 "COGNITIVE_ENHANCEMENT": cognition_score
             }
 
-
+            """
             task_id = create_clickup_task(lastname, scores, answers, total_score, accountid)
             accountid_str = str(accountid) + "_1.png"
             generate_polar_chart(scores, accountid_str)
@@ -90,7 +90,7 @@ def main():
             create_final_image(total_score_str, accountid_str)
             upload_file_to_clickup(task_id, accountid_str)
             upload_to_blob(accountid_str)
-
+            """
 
 
 if __name__ == "__main__":

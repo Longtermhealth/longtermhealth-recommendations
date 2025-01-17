@@ -222,13 +222,13 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
 
     displayName = display_name_mapping.get(super_routine_id, None)
 
-    pillar_de_mapping = {
+    displayName_mapping = {
         "sleep_superroutine": "Schlaf",
         "movement_superroutine": "Bewegung",
         "nutrition_super_routine": "Ernährung",
     }
 
-    pillar_de = pillar_de_mapping.get(super_routine_id, None)
+    displayName = displayName_mapping.get(super_routine_id, None)
 
     timeOfDay_mapping = {
         "sleep_superroutine": "EVENING",
@@ -265,7 +265,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
         subroutine_entry = {
             "pillar": {
                 "pillar": subroutine['attributes']['pillar']['pillar'],
-                "pillar_de": subroutine['attributes']['pillar']['pillar_de'],
+                "displayName": subroutine['attributes']['pillar']['displayName'],
                 "pillar_en": ""
             },
             "imageUrl_1x1": resource_image_url_1x1,
@@ -276,7 +276,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
             "goal": {
                 "unit": {
                     "amountUnit": subroutine['attributes']['amountUnit']['amountUnit'],
-                    "amountUnit_de": subroutine['attributes']['amountUnit']['amountUnit_de'],
+                    "displayName": subroutine['attributes']['amountUnit']['displayName'],
                     "amountUnit_en": ""
                 },
                 "value": int(subroutine['attributes']['amount']),
@@ -299,7 +299,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     super_routine_entry = {
         "pillar": {
             "pillar": pillar,
-            "pillar_de": pillar_de,
+            "displayName": displayName,
             "pillar_en": ""
         },
         "imageUrl_1x1": imageUrl_1x1,
@@ -309,7 +309,7 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
         "goal": {
             "unit": {
                 "amountUnit": "MINUTES",
-                "amountUnit_de": "Minuten",
+                "displayName": "Minuten",
                 "amountUnit_en": ""
             },
             "value": round(total_duration),
@@ -342,7 +342,7 @@ def build_individual_routine_entry(routine):
     individual_routine_entry = {
         "pillar": {
             "pillar": routine['attributes']['pillar']['pillar'],
-            "pillar_de": routine['attributes']['pillar']['pillar_de'],
+            "displayName": routine['attributes']['pillar']['displayName'],
             "pillar_en": ""
         },
         "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
@@ -353,7 +353,7 @@ def build_individual_routine_entry(routine):
         "goal": {
             "unit": {
                 "amountUnit": routine['attributes']['amountUnit']['amountUnit'],
-                "amountUnit_de": routine['attributes']['amountUnit']['amountUnit_de'],
+                "displayName": routine['attributes']['amountUnit']['displayName'],
                 "amountUnit_en": ""
             },
             "value": int(routine['attributes']["amount"]),

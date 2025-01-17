@@ -1,27 +1,28 @@
 {
   "data": {
     "accountId": "102",
-    "totalDailyTimeInMins": 15,
+    "totalDailyTimeInMins": 30,
     "routines": [
       {
         "pillar": {
           "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/997.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
         "routineId": 221,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "MINUTES",
-            "amountUnit_de": "Minuten",
+            "displayName": "Minuten",
             "amountUnit_en": ""
           },
           "value": 3
         },
         "description": "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.",
-        "displayName": "Fullbody Workout",
+        "displayName": "Bewegung",
         "durationCalculated": 3,
         "alternatives": [],
         "scheduleDays": [
@@ -41,23 +42,24 @@
       {
         "pillar": {
           "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/videos/45_degree_lunge.jpg",
-        "routineId": 318,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/123_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/123_1x1.jpg",
+        "routineId": 1989,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "REPETITIONS",
-            "amountUnit_de": "Wdhl.",
+            "amountUnit": "SECONDS",
+            "displayName": "Sek.",
             "amountUnit_en": ""
           },
-          "value": 10
+          "value": 20
         },
-        "description": "Ausfallschritte sind eine effektive Mobilitätsübung, die vor allem die Beinmuskulatur sowie die Rumpfstabilität stärkt.",
-        "displayName": "Ausfallschritte",
+        "description": "Die Vorwärts-Nacken-Dehnung ist eine sanfte Mobilitätsübung, die die Flexibilität und Haltung des Nackens verbessert.",
+        "displayName": "Vorwärts-Nacken-Dehnung",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -77,20 +79,21 @@
       {
         "pillar": {
           "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/videos/mountain_climbers.jpg",
-        "routineId": 289,
-        "durationCalculated": 1,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
+        "routineId": 1946,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTE",
-            "amountUnit_de": "Min.",
+            "amountUnit": "SECONDS",
+            "displayName": "Sek.",
             "amountUnit_en": ""
           },
-          "value": 1
+          "value": 30
         },
         "description": "Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.",
         "displayName": "Bergsteiger",
@@ -113,20 +116,21 @@
       {
         "pillar": {
           "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://longtermhealth.de",
-        "routineId": 286,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 1949,
+        "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "SECONDS",
-            "amountUnit_de": "Sek.",
+            "amountUnit": "MINUTE",
+            "displayName": "Min.",
             "amountUnit_en": ""
           },
-          "value": 30
+          "value": 1
         },
         "description": "Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.",
         "displayName": "Hampelmänner",
@@ -149,23 +153,24 @@
       {
         "pillar": {
           "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold.jpg",
-        "routineId": 255,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/eccentric_press_up_on_high_barbell_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/eccentric_press_up_on_high_barbell_1x1.jpg",
+        "routineId": 1941,
+        "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "SECONDS",
-            "amountUnit_de": "Sek.",
+            "amountUnit": "REPETITIONS",
+            "displayName": "Wdhl.",
             "amountUnit_en": ""
           },
-          "value": 10
+          "value": 15
         },
-        "description": "Die hohe Plank ist ein effektives Krafttraining, das vor allem die Rumpfmuskulatur und die Stabilität des Körpers stärkt.",
-        "displayName": "Hohe Plank",
+        "description": "Liegestütze gegen die Wand sind eine einfache Kraftübung, die hauptsächlich die Oberarme, Schultern und Brustmuskulatur stärkt.",
+        "displayName": "Liegestütze gegen die Wand",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -185,22 +190,23 @@
       {
         "pillar": {
           "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
+          "displayName": "Schlaf",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/998.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/998_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/998_16x9.jpg",
         "routineId": 222,
         "timeOfDay": "EVENING",
         "goal": {
           "unit": {
             "amountUnit": "MINUTES",
-            "amountUnit_de": "Minuten",
+            "displayName": "Minuten",
             "amountUnit_en": ""
           },
           "value": 0
         },
         "description": "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern.",
-        "displayName": "Abendritual",
+        "displayName": "Schlaf",
         "durationCalculated": 0,
         "alternatives": [],
         "scheduleDays": [
@@ -222,23 +228,24 @@
       {
         "pillar": {
           "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
+          "displayName": "Schlaf",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/140.jpg",
-        "routineId": 363,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/159_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/159_1x1.jpg",
+        "routineId": 2025,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "ROUTINE",
-            "amountUnit_de": "Routine",
+            "displayName": "Routine",
             "amountUnit_en": ""
           },
           "value": 1
         },
-        "description": "Schau vor dem Schlafen nicht auf einen Bildschirm, um deine Schlafqualität zu verbessern und deinen natürlichen Schlafrhythmus zu unterstützen.",
-        "displayName": "Nicht auf einen Bildschirm schauen",
+        "description": "Die Heizung im Schlafzimmer nachts abzusenken oder komplett auszuschalten fördert einen besseren Schlaf und ein angenehmeres Schlafumfeld.",
+        "displayName": "Heizung herunterdrehen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -260,23 +267,24 @@
       {
         "pillar": {
           "pillar": "SLEEP",
-          "pillar_de": "Schlaf",
+          "displayName": "Schlaf",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/150.jpg",
-        "routineId": 373,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/160_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/160_1x1.jpg",
+        "routineId": 2026,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "ROUTINE",
-            "amountUnit_de": "Routine",
+            "displayName": "Routine",
             "amountUnit_en": ""
           },
           "value": 1
         },
-        "description": "Diese Routine ist eine Entspannungstechnik zur Förderung des Schlafs und zur Verbesserung des Einschlafens in einer neuen Umgebung.",
-        "displayName": "Zimmer wechseln bei Schlaflosigkeit",
+        "description": "Leichte und fettarme Nahrungsmittel am Abend fördern einen besseren Schlaf und helfen beim Gewichtsverlust.",
+        "displayName": "Kein schweres/fettiges Essen am Abend",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -298,22 +306,23 @@
       {
         "pillar": {
           "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
+          "displayName": "Ernährung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/999.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
         "routineId": 223,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "MINUTES",
-            "amountUnit_de": "Minuten",
+            "displayName": "Minuten",
             "amountUnit_en": ""
           },
           "value": 0
         },
         "description": "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.",
-        "displayName": "Gesunde Ernährung",
+        "displayName": "Ernährung",
         "durationCalculated": 0,
         "alternatives": [],
         "scheduleDays": [
@@ -335,23 +344,24 @@
       {
         "pillar": {
           "pillar": "NUTRITION",
-          "pillar_de": "Ernährung",
+          "displayName": "Ernährung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/128.jpg",
-        "routineId": 351,
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 2103,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "ROUTINE",
-            "amountUnit_de": "Routine",
+            "displayName": "Routine",
             "amountUnit_en": ""
           },
           "value": 1
         },
-        "description": "Probiere neue Hülsenfrüchte aus, um von ihren pflanzlichen Eiweißen, Ballaststoffen und Mineralstoffen zu profitieren und deine Ernährung abwechslungsreicher zu gestalten.",
-        "displayName": "Hülsenfrüchte entdecken ",
+        "description": "Die Maßnahme reduziert den Konsum von zuckerhaltigen Getränken, fördert die Herzgesundheit und verbessert die allgemeine Ernährung.",
+        "displayName": "Zucker reduzieren",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -373,55 +383,24 @@
       {
         "pillar": {
           "pillar": "MOVEMENT",
-          "pillar_de": "Bewegung",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/5.jpg",
-        "routineId": 228,
-        "durationCalculated": 20,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/2_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/2_1x1.jpg",
+        "routineId": 1886,
+        "durationCalculated": 45,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
+            "displayName": "Min.",
             "amountUnit_en": ""
           },
-          "value": 20
+          "value": 45
         },
-        "description": "Joggen ist ein effektives Cardiotraining, das hauptsächlich die Ausdauer verbessert und das Herz-Kreislauf-System stärkt.",
-        "displayName": "Joggen",
-        "alternatives": [],
-        "scheduleDays": [
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "pillar_de": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/165.jpg",
-        "routineId": 388,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 5
-        },
-        "description": "Ein Anruf bei einem Freund oder Familienmitglied fördert soziale Verbindungen und reduziert Stress.",
-        "displayName": "Rufe eine vertraute Person an",
+        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
+        "displayName": "Spazierengehen",
         "alternatives": [],
         "scheduleDays": [
           2
@@ -436,24 +415,25 @@
       },
       {
         "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "pillar_de": "Sozial",
+          "pillar": "MOVEMENT",
+          "displayName": "Bewegung",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/163.jpg",
-        "routineId": 386,
-        "durationCalculated": 1,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/20_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/20_1x1.jpg",
+        "routineId": 1903,
+        "durationCalculated": 30,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
+            "displayName": "Min.",
             "amountUnit_en": ""
           },
-          "value": 0
+          "value": 30
         },
-        "description": "Echte zwischenmenschliche Interaktionen fördern soziale Verbindungen und verbessern die emotionale Gesundheit und das Wohlbefinden.",
-        "displayName": "Soziale Kontakte statt Social Media",
+        "description": "Nordic Walking ist eine effektive und angenehme Sportart, die Körper und Geist in Einklang bringt. Diese Aktivität verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und fördert die Stimmung. Genieße die Natur und profitiere von den zahlreichen gesundheitlichen Vorteilen dieser Kombination aus Bewegung und Frischluft.",
+        "displayName": "Nordic Walking",
         "alternatives": [],
         "scheduleDays": [
           3
@@ -468,32 +448,60 @@
       },
       {
         "pillar": {
-          "pillar": "STRESS",
-          "pillar_de": "Resilienz",
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/187.jpg",
-        "routineId": 410,
-        "durationCalculated": 2,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2165,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
+            "amountUnit": "ROUTINE",
+            "displayName": "Routine",
             "amountUnit_en": ""
           },
-          "value": 2
+          "value": 1
         },
-        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
-        "displayName": "Zwerchfellatmung",
+        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
+        "displayName": "Ein Kompliment machen",
         "alternatives": [],
         "scheduleDays": [
+          6
+        ],
+        "scheduleWeeks": [
           1,
           2,
           3,
-          4,
-          5,
-          6,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial",
+          "pillar_en": ""
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2166,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "displayName": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Mache heute einer fremden Person ein Kompliment.",
+        "displayName": "Einem Fremden ein Kompliment machen",
+        "alternatives": [],
+        "scheduleDays": [
           7
         ],
         "scheduleWeeks": [
@@ -507,23 +515,24 @@
       {
         "pillar": {
           "pillar": "STRESS",
-          "pillar_de": "Resilienz",
+          "displayName": "Resilienz",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/192.jpg",
-        "routineId": 415,
-        "durationCalculated": 1,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
+        "routineId": 2044,
+        "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
+            "displayName": "Min.",
             "amountUnit_en": ""
           },
-          "value": 0
+          "value": 10
         },
-        "description": "Diese Routine fördert Achtsamkeit und Stressreduktion, indem sie einen klaren, technologie-freien Start in den Tag ermöglicht.",
-        "displayName": "Kein Handy am morgen",
+        "description": "Meditation ist eine entspannende Praxis, die vor allem zur Stressreduktion und emotionalen Regulierung beiträgt.",
+        "displayName": "Meditieren",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -545,23 +554,90 @@
       {
         "pillar": {
           "pillar": "GRATITUDE",
-          "pillar_de": "Dankbarkeit",
+          "displayName": "Dankbarkeit",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/210.jpg",
-        "routineId": 433,
-        "durationCalculated": 3,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2170,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
+            "amountUnit": "ROUTINE",
+            "displayName": "Routine",
             "amountUnit_en": ""
           },
-          "value": 3
+          "value": 1
         },
-        "description": "Das Aufschreiben von Affirmationen ist eine mentale Maßnahme zur Förderung von Dankbarkeit und positivem Denken.",
-        "displayName": "Affirmation aufschreiben",
+        "description": "Gehe diesen Monat mindestens einmal in die Sauna.",
+        "displayName": "In die Sauna gehen",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "GRATITUDE",
+          "displayName": "Dankbarkeit",
+          "pillar_en": ""
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2152,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "displayName": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Achte diese Woche darauf, bewusst „Danke“ zu sagen, um Wertschätzung zu zeigen, positive Beziehungen zu stärken und dein eigenes Wohlbefinden zu fördern.",
+        "displayName": "Danke sagen",
+        "alternatives": [],
+        "scheduleDays": [
+          2
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": null
+      },
+      {
+        "pillar": {
+          "pillar": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition",
+          "pillar_en": ""
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2158,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnit": "ROUTINE",
+            "displayName": "Routine",
+            "amountUnit_en": ""
+          },
+          "value": 1
+        },
+        "description": "Spiele diese Woche Schach – egal ob in echt oder online – um strategisches Denken zu fördern und deine Konzentrationsfähigkeit zu stärken.",
+        "displayName": "Spiele Schach",
         "alternatives": [],
         "scheduleDays": [
           1
@@ -577,55 +653,24 @@
       {
         "pillar": {
           "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
+          "displayName": "Kognition",
           "pillar_en": ""
         },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/197.jpg",
-        "routineId": 420,
-        "durationCalculated": 5,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2153,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
+            "amountUnit": "ROUTINE",
+            "displayName": "Routine",
             "amountUnit_en": ""
           },
-          "value": 5
+          "value": 1
         },
-        "description": "Lesen fördert die kognitive Verbesserung und stärkt die geistige Klarheit, während es gleichzeitig Stress reduziert.",
-        "displayName": "Lesen für Bildung/ persönliches Wachstum",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "pillar_de": "Kognition",
-          "pillar_en": ""
-        },
-        "imageUrl": "https://lthstore.blob.core.windows.net/images/194.jpg",
-        "routineId": 417,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTES",
-            "amountUnit_de": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 5
-        },
-        "description": "Gedichte lesen ist eine geistige Aktivität, die vor allem das kognitive Denken und die Sprachfähigkeiten fördert.",
-        "displayName": "Gedichte lesen",
+        "description": "Erkunde diese Woche einen neuen Ort wie ein Museum, Stadtteil, Park, Café o.ä. ",
+        "displayName": "Einen neuen Ort erkunden",
         "alternatives": [],
         "scheduleDays": [
           2

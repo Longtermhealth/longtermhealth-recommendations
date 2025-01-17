@@ -43,7 +43,7 @@ def process_latest_response(responses, field_mapping):
         print("No responses found.")
         return None
 
-    latest_response = responses['items'][0]
+    latest_response = responses['items'][1]
     print("Latest response", latest_response)
 
     special_field_labels = {
