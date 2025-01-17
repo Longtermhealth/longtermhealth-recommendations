@@ -42,6 +42,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV BROWSER_PATH=/usr/bin/google-chrome
 
+# Add Chrome flags to disable sandbox and handle shared memory
+ENV CHROME_FLAGS="--no-sandbox --disable-dev-shm-usage"
+
+# Optional: Enable browser debugging for more detailed logs
+# ENV DEBUG_BROWSER=True
+
 COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
