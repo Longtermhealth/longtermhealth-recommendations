@@ -439,26 +439,26 @@
       },
       {
         "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
+          "pillarEnum": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial"
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2545,
-        "durationCalculated": 2,
+        "routineId": 2503,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
-          "value": 2
+          "value": 1
         },
-        "description": "",
-        "displayName": "Meditationsstart",
+        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
+        "displayName": "Ein Kompliment machen",
         "alternatives": [],
         "scheduleDays": [
-          1
+          3
         ],
         "scheduleWeeks": [
           1,
@@ -466,7 +466,7 @@
           3,
           4
         ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "scheduleCategory": "DAILY_CHALLENGE",
         "packageName": "packageName",
         "packageTag": "packageTag",
         "parentRoutineId": null,
@@ -477,20 +477,20 @@
           "pillarEnum": "STRESS",
           "displayName": "Resilienz"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/204_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/204_1x1.jpg",
-        "routineId": 2408,
-        "durationCalculated": 2,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
+        "routineId": 2382,
+        "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "MINUTES",
             "displayName": "Min."
           },
-          "value": 2
+          "value": 10
         },
-        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
-        "displayName": "Zwerchfellatmung",
+        "description": "Meditation ist eine entspannende Praxis, die vor allem zur Stressreduktion und emotionalen Regulierung beiträgt.",
+        "displayName": "Meditieren",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -543,6 +543,41 @@
           4
         ],
         "scheduleCategory": "MONTHLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2490,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Achte diese Woche darauf, bewusst „Danke“ zu sagen, um Wertschätzung zu zeigen, positive Beziehungen zu stärken und dein eigenes Wohlbefinden zu fördern.",
+        "displayName": "Danke sagen",
+        "alternatives": [],
+        "scheduleDays": [
+          2
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
         "packageName": "packageName",
         "packageTag": "packageTag",
         "parentRoutineId": null,

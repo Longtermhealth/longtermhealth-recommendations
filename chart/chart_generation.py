@@ -1,5 +1,9 @@
 import plotly.graph_objects as go
+import plotly.io as pio
 import numpy as np
+
+# Ensure Kaleido uses the correct Chrome executable
+pio.kaleido.scope.chromium_executable = "/usr/bin/google-chrome"
 
 def generate_polar_chart(scores, accountid):
     categories = list(scores.keys())
@@ -73,4 +77,5 @@ def generate_polar_chart(scores, accountid):
         margin=dict(l=250, r=250, t=250, b=250)
     )
 
+    # Save the chart as an image
     fig.write_image(accountid, width=1000, height=1000)
