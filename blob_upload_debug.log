@@ -2396,3 +2396,1420 @@ Response headers:
 2025-01-17 19:11:01,803 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
 2025-01-17 19:11:01,807 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
 2025-01-17 19:11:03,417 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 08:58:38,452 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 08:58:38,454 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 08:58:38,589 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 08:58:40,032 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 08:58:40,038 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 08:58:41,556 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 08:58:58,447 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 08:58:58,449 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 08:58:58,558 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 08:58:59,778 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 08:59:00,055 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 08:59:01,299 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 08:59:02,179 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:03,121 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 08:59:04,244 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:05,139 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 08:59:06,136 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:06,940 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 08:59:07,737 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:08,435 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 08:59:33,794 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 08:59:33,795 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 08:59:33,908 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 08:59:35,615 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 08:59:35,620 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 08:59:37,349 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 08:59:38,021 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:38,865 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 08:59:39,869 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:40,733 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 08:59:42,117 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:42,851 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 08:59:43,648 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 08:59:44,338 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:00:05,723 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:00:05,725 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:00:05,842 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:00:07,330 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:00:07,342 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:00:08,886 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:00:09,881 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:00:10,687 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:00:13,034 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:00:14,043 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:00:15,008 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:00:16,200 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:00:17,023 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:00:17,594 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:00:56,620 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:00:56,622 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:00:56,745 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:00:58,168 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:00:58,175 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:00:59,751 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:01:00,348 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:01,230 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:01:02,518 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:03,382 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:01:04,389 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:05,251 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:01:06,397 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:07,046 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:01:07,827 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:01:09,328 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:09,328 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:01:09,365 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:09,365 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:01:09,365 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:01:09,379 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:09,379 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:01:09,394 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:09,394 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:01:09,394 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:01:09,394 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:01:09,395 - DEBUG - Compression method 0
+2025-01-21 09:01:09,395 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:01:09,395 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:01:09,395 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:01:09,395 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:01:09,395 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:01:09,395 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:01:09,395 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:01:09,395 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:01:09,912 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:01:09,912 - DEBUG - File path received: 82_1.png
+2025-01-21 09:01:09,912 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:01:09,928 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:01:09,928 - DEBUG - Accessing container: images
+2025-01-21 09:01:09,929 - DEBUG - Checking if container exists.
+2025-01-21 09:01:09,929 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '95773086-d79b-11ef-bfdb-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:01:09,930 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:01:10,906 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:01:10,913 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd5d22d4d-e01e-0092-58a8-6bc0c0000000'
+    'x-ms-client-request-id': '95773086-d79b-11ef-bfdb-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:01:10 GMT'
+2025-01-21 09:01:10,914 - DEBUG - Container 'images' exists.
+2025-01-21 09:01:10,914 - DEBUG - Blob name derived from file path: 82_1.png
+2025-01-21 09:01:10,915 - DEBUG - BlobClient created for blob: 82_1.png
+2025-01-21 09:01:10,915 - INFO - Uploading 82_1.png to blob storage...
+2025-01-21 09:01:10,915 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:01:10,915 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:01:10,917 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/82_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1094528'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '960decf6-d79b-11ef-bfdb-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:01:12,388 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/82_1.png HTTP/11" 201 0
+2025-01-21 09:01:12,390 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:01:12 GMT'
+    'ETag': '"0x8DD39BF7B156B6D"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd5d22d93-e01e-0092-11a8-6bc0c0000000'
+    'x-ms-client-request-id': '960decf6-d79b-11ef-bfdb-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:01:11 GMT'
+2025-01-21 09:01:12,391 - INFO - Uploaded 82_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:01:12,391 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/82_1.png
+2025-01-21 09:01:12,391 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/82_1.png
+2025-01-21 09:01:12,394 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:12,823 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2203
+2025-01-21 09:01:12,828 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:13,276 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 10944
+2025-01-21 09:01:13,285 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:01:14,394 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:01:14,677 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:01:16,181 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:01:45,553 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:01:45,555 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:01:45,679 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:01:47,159 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:01:47,163 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:01:48,809 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:01:49,484 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:50,330 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:01:51,362 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:52,195 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:01:53,220 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:53,998 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:01:54,925 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:01:55,664 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:01:56,540 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:01:57,811 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:57,811 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:01:57,847 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:57,848 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:01:57,848 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:01:57,862 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:57,862 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:01:57,878 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:01:57,878 - DEBUG - Compression method 0
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:01:57,878 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:01:57,878 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:01:57,878 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:01:58,399 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:01:58,399 - DEBUG - File path received: 102_1.png
+2025-01-21 09:01:58,399 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:01:58,412 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:01:58,412 - DEBUG - Accessing container: images
+2025-01-21 09:01:58,413 - DEBUG - Checking if container exists.
+2025-01-21 09:01:58,413 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b25d43ca-d79b-11ef-a2a0-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:01:58,414 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:01:59,426 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:01:59,429 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9a93beca-f01e-0008-0aa8-6b5e19000000'
+    'x-ms-client-request-id': 'b25d43ca-d79b-11ef-a2a0-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:01:58 GMT'
+2025-01-21 09:01:59,430 - DEBUG - Container 'images' exists.
+2025-01-21 09:01:59,430 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:01:59,430 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:01:59,431 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:01:59,431 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:01:59,431 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:01:59,432 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1097310'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b2f8b31e-d79b-11ef-a2a0-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:02:01,025 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:02:01,026 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:02:00 GMT'
+    'ETag': '"0x8DD39BF981356CE"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '9a93bf51-f01e-0008-7fa8-6b5e19000000'
+    'x-ms-client-request-id': 'b2f8b31e-d79b-11ef-a2a0-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:02:00 GMT'
+2025-01-21 09:02:01,027 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:02:01,027 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:02:01,027 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:02:01,029 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:01,434 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:02:01,438 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:01,897 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 10993
+2025-01-21 09:02:01,902 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:02:03,522 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:02:03,525 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:02:05,230 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:02:16,434 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:02:16,436 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:02:16,556 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:02:18,180 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:02:18,185 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:02:19,742 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:02:20,311 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:21,117 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:02:22,581 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:23,473 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:02:24,518 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:25,330 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:02:26,374 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:26,984 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:02:27,727 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:02:28,815 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:02:28,815 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:02:28,851 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:02:28,851 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:02:28,851 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:02:28,865 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:02:28,865 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:02:28,880 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:02:28,881 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:02:28,881 - DEBUG - Compression method 0
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:02:28,881 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:02:28,881 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:02:28,881 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:02:29,401 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:02:29,401 - DEBUG - File path received: 102_1.png
+2025-01-21 09:02:29,401 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:02:29,413 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:02:29,413 - DEBUG - Accessing container: images
+2025-01-21 09:02:29,413 - DEBUG - Checking if container exists.
+2025-01-21 09:02:29,414 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c4d79140-d79b-11ef-9fcb-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:02:29,415 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:02:30,262 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:02:30,268 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '8fe425dd-f01e-008e-6aa8-6b92a0000000'
+    'x-ms-client-request-id': 'c4d79140-d79b-11ef-9fcb-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:02:30 GMT'
+2025-01-21 09:02:30,268 - DEBUG - Container 'images' exists.
+2025-01-21 09:02:30,269 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:02:30,269 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:02:30,269 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:02:30,269 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:02:30,269 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:02:30,271 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1097310'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c55a4c02-d79b-11ef-9fcb-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:02:31,843 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:02:31,845 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:02:31 GMT'
+    'ETag': '"0x8DD39BFAA71DC33"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '8fe426ce-f01e-008e-1da8-6b92a0000000'
+    'x-ms-client-request-id': 'c55a4c02-d79b-11ef-9fcb-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:02:31 GMT'
+2025-01-21 09:02:31,846 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:02:31,846 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:02:31,846 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:02:31,850 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:32,257 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:02:32,260 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:02:32,687 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 10993
+2025-01-21 09:02:32,695 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:02:33,849 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:02:34,128 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:02:35,679 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:03:11,513 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:03:11,515 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:03:11,641 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:03:14,254 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:03:14,260 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:03:15,449 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:03:16,251 - ERROR - Error: The file ../data/rules.json was not found.
+2025-01-21 09:03:16,253 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:17,099 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:03:18,149 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:19,090 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:03:20,082 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:20,812 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:03:21,777 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:22,487 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:03:41,612 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:03:41,614 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:03:41,740 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:03:42,903 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:03:43,184 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:03:44,881 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:03:45,707 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:46,640 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:03:47,742 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:48,684 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:03:49,705 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:50,460 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:03:51,320 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:52,166 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:03:52,825 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:03:53,997 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:03:53,997 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:03:54,033 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:03:54,033 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:03:54,033 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:03:54,047 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:03:54,047 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:03:54,063 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:03:54,063 - DEBUG - Compression method 0
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:03:54,063 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:03:54,063 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:03:54,063 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:03:54,583 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:03:54,583 - DEBUG - File path received: 102_1.png
+2025-01-21 09:03:54,583 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:03:54,597 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:03:54,597 - DEBUG - Accessing container: images
+2025-01-21 09:03:54,597 - DEBUG - Checking if container exists.
+2025-01-21 09:03:54,598 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f79da984-d79b-11ef-b1f0-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:03:54,599 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:03:55,652 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:03:55,656 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd879d92d-d01e-001f-72a8-6bf712000000'
+    'x-ms-client-request-id': 'f79da984-d79b-11ef-b1f0-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:03:55 GMT'
+2025-01-21 09:03:55,656 - DEBUG - Container 'images' exists.
+2025-01-21 09:03:55,656 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:03:55,656 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:03:55,657 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:03:55,657 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:03:55,657 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:03:55,658 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1097310'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f83f5f72-d79b-11ef-b1f0-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:03:57,193 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:03:57,194 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:03:57 GMT'
+    'ETag': '"0x8DD39BFDD4DF020"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd879da25-d01e-001f-0aa8-6bf712000000'
+    'x-ms-client-request-id': 'f83f5f72-d79b-11ef-b1f0-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:03:56 GMT'
+2025-01-21 09:03:57,195 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:03:57,195 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:03:57,195 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:03:57,197 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:58,748 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:03:58,751 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:03:59,154 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 10993
+2025-01-21 09:03:59,160 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:04:00,581 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:04:00,584 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:04:02,193 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:04:47,075 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:04:47,077 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:04:47,205 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:04:49,090 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:04:49,134 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:04:52,978 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:04:54,292 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:04:55,167 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:04:56,412 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:04:57,164 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:04:58,224 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:04:59,045 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:04:59,888 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:05:00,484 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:05:01,147 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:05:02,210 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:05:02,210 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:05:02,245 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:05:02,245 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:05:02,245 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:05:02,259 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:05:02,259 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:05:02,274 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:05:02,274 - DEBUG - Compression method 0
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:05:02,274 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:05:02,274 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:05:02,274 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:05:02,790 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:05:02,790 - DEBUG - File path received: 102_1.png
+2025-01-21 09:05:02,791 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:05:02,802 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:05:02,802 - DEBUG - Accessing container: images
+2025-01-21 09:05:02,802 - DEBUG - Checking if container exists.
+2025-01-21 09:05:02,803 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2044e49c-d79c-11ef-81d1-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:05:02,804 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:05:03,663 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:05:03,665 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f1f0f199-401e-009b-42a8-6b8513000000'
+    'x-ms-client-request-id': '2044e49c-d79c-11ef-81d1-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:05:02 GMT'
+2025-01-21 09:05:03,666 - DEBUG - Container 'images' exists.
+2025-01-21 09:05:03,666 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:05:03,666 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:05:03,666 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:05:03,666 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:05:03,666 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:05:03,667 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1098190'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '20c8bac4-d79c-11ef-81d1-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:05:05,145 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:05:05,147 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:05:05 GMT'
+    'ETag': '"0x8DD39C005D02852"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f1f0f224-401e-009b-44a8-6b8513000000'
+    'x-ms-client-request-id': '20c8bac4-d79c-11ef-81d1-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:05:04 GMT'
+2025-01-21 09:05:05,147 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:05:05,147 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:05:05,147 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:05:05,149 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:05:05,555 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2213
+2025-01-21 09:05:05,560 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:05:05,982 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 10089
+2025-01-21 09:05:05,990 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:05:07,470 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:05:07,475 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:05:08,960 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:14:34,401 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:14:34,403 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:14:34,544 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:14:35,794 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:14:36,080 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:14:37,633 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:14:38,252 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:14:39,128 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:14:40,245 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:14:41,022 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:14:43,558 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:14:44,497 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:14:45,307 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:14:45,902 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:15:37,437 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:15:37,439 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:15:37,565 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:15:38,910 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:15:38,917 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:15:40,359 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:15:41,009 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:15:42,133 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:15:43,155 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:15:43,897 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:15:45,002 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:15:45,761 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:15:46,548 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:15:47,153 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:15:47,826 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:15:48,977 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:15:48,977 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:15:49,015 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:15:49,015 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:15:49,015 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:15:49,029 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:15:49,029 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:15:49,044 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:15:49,044 - DEBUG - Compression method 0
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:15:49,044 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:15:49,044 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:15:49,044 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:15:49,565 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:15:49,565 - DEBUG - File path received: 102_1.png
+2025-01-21 09:15:49,565 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:15:49,579 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:15:49,579 - DEBUG - Accessing container: images
+2025-01-21 09:15:49,580 - DEBUG - Checking if container exists.
+2025-01-21 09:15:49,580 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'a1c74bd0-d79d-11ef-a756-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:15:49,581 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:15:50,530 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:15:50,534 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '157829de-201e-001b-1daa-6b7a15000000'
+    'x-ms-client-request-id': 'a1c74bd0-d79d-11ef-a756-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:15:50 GMT'
+2025-01-21 09:15:50,535 - DEBUG - Container 'images' exists.
+2025-01-21 09:15:50,535 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:15:50,535 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:15:50,535 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:15:50,535 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:15:50,536 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:15:50,537 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1097310'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'a2593c2a-d79d-11ef-a756-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:15:51,985 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:15:51,986 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:15:51 GMT'
+    'ETag': '"0x8DD39C1875C9771"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '15782a01-201e-001b-3caa-6b7a15000000'
+    'x-ms-client-request-id': 'a2593c2a-d79d-11ef-a756-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:15:51 GMT'
+2025-01-21 09:15:51,987 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:15:51,987 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:15:51,987 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:15:51,989 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:15:52,389 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:15:52,394 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:15:53,004 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 13272
+2025-01-21 09:15:53,013 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:15:54,511 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:15:54,516 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:15:55,994 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:18:23,223 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:18:23,225 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:18:23,356 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:18:24,843 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:18:24,846 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:18:26,374 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:18:26,982 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:18:27,850 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:18:28,843 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:18:29,620 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:18:30,618 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:18:31,418 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:18:32,212 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:18:32,841 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:20:22,250 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:20:22,252 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:20:22,381 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:20:23,906 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:20:23,912 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:20:25,421 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:20:25,953 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:20:26,833 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:20:28,078 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:20:29,006 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:20:30,624 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:20:31,357 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:20:32,153 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:20:32,758 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:20:53,507 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:20:53,509 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:20:53,623 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:20:55,226 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:20:55,228 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:20:56,884 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:20:57,449 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:20:58,440 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:20:59,545 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:00,491 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:21:01,467 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:02,215 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:21:03,109 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:03,969 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:21:16,167 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:21:16,169 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:21:16,297 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:21:17,589 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:21:17,871 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:21:19,307 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:21:19,992 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:20,745 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:21:21,806 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:22,551 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:21:23,518 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:24,292 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:21:25,141 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:25,756 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:21:32,480 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:21:32,482 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:21:32,621 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:21:33,985 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:21:33,987 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:21:35,162 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:21:35,958 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:36,744 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:21:39,327 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:40,274 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:21:41,716 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:42,470 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:21:43,355 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:43,936 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:21:44,590 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:21:45,757 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:21:45,758 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:21:45,794 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:21:45,794 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:21:45,794 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:21:45,808 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:21:45,808 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:21:45,823 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:21:45,823 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:21:45,823 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:21:45,823 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:21:45,824 - DEBUG - Compression method 0
+2025-01-21 09:21:45,824 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:21:45,824 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:21:45,824 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:21:45,824 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:21:45,824 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:21:45,824 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:21:45,824 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:21:45,824 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:21:46,346 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:21:46,346 - DEBUG - File path received: 102_1.png
+2025-01-21 09:21:46,346 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:21:46,362 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:21:46,362 - DEBUG - Accessing container: images
+2025-01-21 09:21:46,362 - DEBUG - Checking if container exists.
+2025-01-21 09:21:46,363 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '76700962-d79e-11ef-93f3-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:21:46,364 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:21:47,220 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:21:47,222 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd8843af8-d01e-001f-09ab-6bf712000000'
+    'x-ms-client-request-id': '76700962-d79e-11ef-93f3-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:21:46 GMT'
+2025-01-21 09:21:47,222 - DEBUG - Container 'images' exists.
+2025-01-21 09:21:47,222 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:21:47,222 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:21:47,223 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:21:47,223 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:21:47,223 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:21:47,223 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1097310'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '76f34b4c-d79e-11ef-93f3-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:21:48,661 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:21:48,661 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:21:48 GMT'
+    'ETag': '"0x8DD39C25BF4D80E"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd8843b8c-d01e-001f-7aab-6bf712000000'
+    'x-ms-client-request-id': '76f34b4c-d79e-11ef-93f3-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:21:48 GMT'
+2025-01-21 09:21:48,662 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:21:48,662 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:21:48,662 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:21:48,664 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:49,061 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:21:49,065 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:21:49,475 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 12830
+2025-01-21 09:21:49,477 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:21:51,147 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:21:51,151 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:21:52,339 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:24:24,301 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:24:24,303 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:24:24,440 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:24:25,611 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:24:25,874 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:24:27,393 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:24:27,964 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:24:28,807 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:24:30,336 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:24:31,088 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:24:32,493 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:24:33,239 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:24:34,307 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:24:34,900 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:24:35,570 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:24:36,689 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:24:36,689 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:24:36,726 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:24:36,726 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:24:36,726 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:24:36,740 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:24:36,740 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:24:36,755 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:24:36,755 - DEBUG - Compression method 0
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:24:36,755 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:24:36,755 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:24:36,755 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:24:37,278 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:24:37,278 - DEBUG - File path received: 102_1.png
+2025-01-21 09:24:37,278 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:24:37,293 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:24:37,293 - DEBUG - Accessing container: images
+2025-01-21 09:24:37,293 - DEBUG - Checking if container exists.
+2025-01-21 09:24:37,294 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dc520514-d79e-11ef-b67f-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:24:37,295 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:24:38,281 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:24:38,286 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b9692ed6-e01e-0076-06ab-6bce5e000000'
+    'x-ms-client-request-id': 'dc520514-d79e-11ef-b67f-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:24:37 GMT'
+2025-01-21 09:24:38,287 - DEBUG - Container 'images' exists.
+2025-01-21 09:24:38,287 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:24:38,288 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:24:38,288 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:24:38,288 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:24:38,288 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:24:38,289 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1097310'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dce9dae2-d79e-11ef-b67f-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:24:46,068 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:24:46,069 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:24:45 GMT'
+    'ETag': '"0x8DD39C2C5B19E42"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b9692f24-e01e-0076-2fab-6bce5e000000'
+    'x-ms-client-request-id': 'dce9dae2-d79e-11ef-b67f-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:24:45 GMT'
+2025-01-21 09:24:46,069 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:24:46,069 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:24:46,070 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:24:46,072 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:24:46,504 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:24:46,508 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:24:46,918 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 12818
+2025-01-21 09:24:46,924 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:24:48,638 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:24:48,642 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:24:50,174 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:27:04,248 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:27:04,250 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:27:04,381 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:27:05,802 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:27:05,819 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:27:07,480 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:27:08,140 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:27:10,010 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:27:11,040 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:27:11,789 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:27:12,861 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:27:13,646 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:27:14,520 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:27:15,155 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:27:15,836 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:27:17,045 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:27:17,045 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:27:17,082 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:27:17,082 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:27:17,082 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:27:17,096 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:27:17,097 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:27:17,112 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:27:17,112 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:27:17,112 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:27:17,112 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:27:17,112 - DEBUG - Compression method 0
+2025-01-21 09:27:17,113 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:27:17,113 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:27:17,113 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:27:17,113 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:27:17,113 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:27:17,113 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:27:17,113 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:27:17,113 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:27:17,636 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:27:17,637 - DEBUG - File path received: 102_1.png
+2025-01-21 09:27:17,637 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:27:17,655 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:27:17,655 - DEBUG - Accessing container: images
+2025-01-21 09:27:17,655 - DEBUG - Checking if container exists.
+2025-01-21 09:27:17,656 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3be74b92-d79f-11ef-a53a-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:27:17,657 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:27:18,502 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:27:18,506 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'a5e52bd6-201e-009d-6bab-6bb6ac000000'
+    'x-ms-client-request-id': '3be74b92-d79f-11ef-a53a-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:27:17 GMT'
+2025-01-21 09:27:18,507 - DEBUG - Container 'images' exists.
+2025-01-21 09:27:18,507 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:27:18,508 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:27:18,508 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:27:18,508 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:27:18,508 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:27:18,510 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1101148'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3c699106-d79f-11ef-a53a-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:27:20,019 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:27:20,021 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:27:19 GMT'
+    'ETag': '"0x8DD39C32175B3DF"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'a5e52c18-201e-009d-23ab-6bb6ac000000'
+    'x-ms-client-request-id': '3c699106-d79f-11ef-a53a-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:27:19 GMT'
+2025-01-21 09:27:20,021 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:27:20,022 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:27:20,022 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:27:20,025 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:27:20,433 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:27:20,438 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:27:21,040 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 12830
+2025-01-21 09:27:21,050 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:27:22,230 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:27:22,509 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:27:23,955 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:28:15,436 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:28:15,437 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:28:15,567 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:28:17,081 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:28:17,085 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:28:18,972 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:28:19,586 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:28:20,405 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:28:21,686 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:28:22,527 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:28:23,761 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:28:24,613 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:28:25,450 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:28:26,036 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:28:26,726 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:28:27,547 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:28:27,547 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:28:27,583 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:28:27,583 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:28:27,583 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:28:27,597 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:28:27,597 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:28:27,612 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:28:27,612 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:28:27,612 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:28:27,612 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:28:27,613 - DEBUG - Compression method 0
+2025-01-21 09:28:27,613 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:28:27,613 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:28:27,613 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:28:27,613 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:28:27,613 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:28:27,613 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:28:27,613 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:28:27,613 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:28:28,100 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:28:28,100 - DEBUG - File path received: 102_1.png
+2025-01-21 09:28:28,100 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:28:28,112 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:28:28,112 - DEBUG - Accessing container: images
+2025-01-21 09:28:28,112 - DEBUG - Checking if container exists.
+2025-01-21 09:28:28,113 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '65e63340-d79f-11ef-a07e-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:28:28,114 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:28:28,958 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:28:28,965 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'a45e5421-b01e-007b-05ac-6b068a000000'
+    'x-ms-client-request-id': '65e63340-d79f-11ef-a07e-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:28:28 GMT'
+2025-01-21 09:28:28,966 - DEBUG - Container 'images' exists.
+2025-01-21 09:28:28,966 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:28:28,967 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:28:28,967 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:28:28,967 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:28:28,967 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:28:28,969 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1078323'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6668d02a-d79f-11ef-a07e-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:28:30,464 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:28:30,465 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:28:30 GMT'
+    'ETag': '"0x8DD39C34B70C293"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'a45e54a1-b01e-007b-79ac-6b068a000000'
+    'x-ms-client-request-id': '6668d02a-d79f-11ef-a07e-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:28:29 GMT'
+2025-01-21 09:28:30,467 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:28:30,467 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:28:30,467 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:28:30,472 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:28:30,902 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:28:30,905 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:28:31,339 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 12830
+2025-01-21 09:28:31,347 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:28:32,545 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:28:32,821 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:28:34,128 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:29:33,675 - DEBUG - CACHEDIR=/Users/janoschgrellner/.matplotlib
+2025-01-21 09:29:33,677 - DEBUG - Using fontManager instance from /Users/janoschgrellner/.matplotlib/fontlist-v390.json
+2025-01-21 09:29:33,802 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:29:35,233 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE HTTP/11" 200 None
+2025-01-21 09:29:35,236 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443
+2025-01-21 09:29:36,761 - DEBUG - https://api.typeform.com:443 "GET /forms/bPpaslsE/responses HTTP/11" 200 None
+2025-01-21 09:29:37,300 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:29:38,282 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=1&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 564120
+2025-01-21 09:29:39,284 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:29:40,037 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=2&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 467820
+2025-01-21 09:29:41,016 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:29:41,778 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=3&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 360170
+2025-01-21 09:29:42,555 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:29:44,228 - DEBUG - http://4.182.8.101:8004 "GET /api/routines?pagination%5Bpage%5D=4&pagination%5BpageSize%5D=100&populate%5Bvariations%5D%5Bpopulate%5D=*&populate%5Bpillar%5D%5Bpopulate%5D=*&populate%5BamountUnit%5D%5Bpopulate%5D=*&populate%5Blocations%5D%5Bpopulate%5D=*&populate%5BeducationArticle%5D%5Bpopulate%5D=*&populate%5Btags%5D%5Bpopulate%5D=*&populate%5BroutineType%5D%5Bpopulate%5D=*&populate%5Bbenefits%5D%5Bpopulate%5D=*&populate%5Badaptibility%5D%5Bpopulate%5D=*&populate%5BequipmentNeeded%5D%5Bpopulate%5D=*&populate%5Bcontraindications%5D%5Bpopulate%5D=*&populate%5BsubRoutines%5D%5Bpopulate%5D=*&populate%5Bresources%5D%5Bpopulate%5D=* HTTP/11" 200 193989
+2025-01-21 09:29:44,879 - DEBUG - Using selector: KqueueSelector
+2025-01-21 09:29:46,030 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:29:46,031 - DEBUG - STREAM b'IDAT' 41 1138590
+2025-01-21 09:29:46,066 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:29:46,066 - DEBUG - STREAM b'sRGB' 41 1
+2025-01-21 09:29:46,066 - DEBUG - STREAM b'IDAT' 54 8192
+2025-01-21 09:29:46,080 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:29:46,080 - DEBUG - STREAM b'IDAT' 41 27243
+2025-01-21 09:29:46,095 - DEBUG - STREAM b'IHDR' 16 13
+2025-01-21 09:29:46,095 - DEBUG - STREAM b'zTXt' 41 193
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'iCCP' 246 389
+2025-01-21 09:29:46,096 - DEBUG - iCCP profile name b'ICC profile'
+2025-01-21 09:29:46,096 - DEBUG - Compression method 0
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'iTXt' 647 3450
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'gAMA' 4109 4
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'bKGD' 4125 6
+2025-01-21 09:29:46,096 - DEBUG - b'bKGD' 4125 6 (unknown)
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'pHYs' 4143 9
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'tIME' 4164 7
+2025-01-21 09:29:46,096 - DEBUG - b'tIME' 4164 7 (unknown)
+2025-01-21 09:29:46,096 - DEBUG - STREAM b'IDAT' 4183 8192
+2025-01-21 09:29:46,632 - DEBUG - Starting upload_to_blob function.
+2025-01-21 09:29:46,632 - DEBUG - File path received: 102_1.png
+2025-01-21 09:29:46,633 - DEBUG - Creating BlobServiceClient.
+2025-01-21 09:29:46,646 - DEBUG - BlobServiceClient created successfully.
+2025-01-21 09:29:46,646 - DEBUG - Accessing container: images
+2025-01-21 09:29:46,646 - DEBUG - Checking if container exists.
+2025-01-21 09:29:46,647 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images?restype=REDACTED'
+Request method: 'GET'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '94b58e0a-d79f-11ef-a6b7-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-01-21 09:29:46,648 - DEBUG - Starting new HTTPS connection (1): lthstore.blob.core.windows.net:443
+2025-01-21 09:29:47,478 - DEBUG - https://lthstore.blob.core.windows.net:443 "GET /images?restype=container HTTP/11" 200 0
+2025-01-21 09:29:47,484 - INFO - Response status: 200
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Wed, 20 Nov 2024 16:45:24 GMT'
+    'ETag': '"0x8DD0982BAEA7329"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'fc5e79fe-201e-0079-5eac-6bb832000000'
+    'x-ms-client-request-id': '94b58e0a-d79f-11ef-a6b7-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-lease-duration': 'REDACTED'
+    'x-ms-has-immutability-policy': 'REDACTED'
+    'x-ms-has-legal-hold': 'REDACTED'
+    'x-ms-immutable-storage-with-versioning-enabled': 'REDACTED'
+    'x-ms-blob-public-access': 'REDACTED'
+    'x-ms-default-encryption-scope': 'REDACTED'
+    'x-ms-deny-encryption-scope-override': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:29:46 GMT'
+2025-01-21 09:29:47,484 - DEBUG - Container 'images' exists.
+2025-01-21 09:29:47,484 - DEBUG - Blob name derived from file path: 102_1.png
+2025-01-21 09:29:47,484 - DEBUG - BlobClient created for blob: 102_1.png
+2025-01-21 09:29:47,485 - INFO - Uploading 102_1.png to blob storage...
+2025-01-21 09:29:47,485 - DEBUG - Opening the file in binary read mode.
+2025-01-21 09:29:47,485 - DEBUG - File opened successfully. Starting upload_blob.
+2025-01-21 09:29:47,486 - INFO - Request URL: 'https://lthstore.blob.core.windows.net/images/102_1.png'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1101148'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-blob-content-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.24.0 Python/3.12.0 (macOS-15.2-arm64-arm-64bit)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '9535912c-d79f-11ef-a6b7-f2d3dadf16d3'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-01-21 09:29:48,945 - DEBUG - https://lthstore.blob.core.windows.net:443 "PUT /images/102_1.png HTTP/11" 201 0
+2025-01-21 09:29:48,948 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 21 Jan 2025 02:29:48 GMT'
+    'ETag': '"0x8DD39C37A39E59E"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'fc5e7a3c-201e-0079-10ac-6bb832000000'
+    'x-ms-client-request-id': '9535912c-d79f-11ef-a6b7-f2d3dadf16d3'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 21 Jan 2025 02:29:48 GMT'
+2025-01-21 09:29:48,950 - INFO - Uploaded 102_1.png to container 'images' in Azure Blob Storage.
+2025-01-21 09:29:48,950 - DEBUG - Blob URL obtained: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:29:48,950 - INFO - Blob URL: https://lthstore.blob.core.windows.net/images/102_1.png
+2025-01-21 09:29:48,952 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:29:49,381 - DEBUG - http://4.182.8.101:8004 "POST /api/health-scores HTTP/11" 200 2261
+2025-01-21 09:29:49,385 - DEBUG - Starting new HTTP connection (1): 4.182.8.101:8004
+2025-01-21 09:29:49,802 - DEBUG - http://4.182.8.101:8004 "POST /api/action-plans HTTP/11" 200 12830
+2025-01-21 09:29:49,809 - DEBUG - Starting new HTTPS connection (1): api.typeform.com:443

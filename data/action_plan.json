@@ -1,23 +1,24 @@
 {
   "data": {
     "accountId": "102",
+    "periodInDays": 28,
+    "gender": "MALE",
     "totalDailyTimeInMins": 30,
     "routines": [
       {
         "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
         "routineId": 221,
+        "scheduleCategory": "WEEKLY_ROUTINE",
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "displayName": "Minuten",
-            "amountUnit_en": ""
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Minuten"
           },
           "value": 3
         },
@@ -37,29 +38,31 @@
           2,
           3,
           4
-        ]
+        ],
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/123_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/123_1x1.jpg",
-        "routineId": 1989,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/superman_hold_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/superman_hold_1x1.jpg",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2322,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "SECONDS",
-            "displayName": "Sek.",
-            "amountUnit_en": ""
+            "amountUnitEnum": "MINUTE",
+            "displayName": "Min."
           },
-          "value": 20
+          "value": 1
         },
-        "description": "Die Vorwärts-Nacken-Dehnung ist eine sanfte Mobilitätsübung, die die Flexibilität und Haltung des Nackens verbessert.",
-        "displayName": "Vorwärts-Nacken-Dehnung",
+        "description": "Die Katze-Kuh-Dehnung ist eine sanfte Mobilitätsübung, die vor allem die Flexibilität und Beweglichkeit der Wirbelsäule verbessert.",
+        "displayName": "Katze-Kuh-Dehnung",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -74,24 +77,104 @@
           3,
           4
         ],
-        "parentRoutineId": 221
+        "parentRoutineId": 221,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
-        "routineId": 1946,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/barbell_good_morning_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/barbell_good_morning_1x1.jpg",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2316,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "REPETITIONS",
+            "displayName": "Wdhl."
+          },
+          "value": 10
+        },
+        "description": "Ausfallschritte sind eine effektive Mobilitätsübung, die vor allem die Beinmuskulatur sowie die Rumpfstabilität stärkt.",
+        "displayName": "Ausfallschritte",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 221,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2286,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "SECONDS",
-            "displayName": "Sek.",
-            "amountUnit_en": ""
+            "amountUnitEnum": "SECONDS",
+            "displayName": "Sek."
+          },
+          "value": 30
+        },
+        "description": "Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.",
+        "displayName": "Hampelmänner",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "parentRoutineId": 221,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2284,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "SECONDS",
+            "displayName": "Sek."
           },
           "value": 30
         },
@@ -111,97 +194,25 @@
           3,
           4
         ],
-        "parentRoutineId": 221
+        "parentRoutineId": 221,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
-        },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 1949,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "MINUTE",
-            "displayName": "Min.",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Hampelmänner sind eine einfache Cardioübung, die hauptsächlich die Ausdauer, Koordination und Herzgesundheit fördert.",
-        "displayName": "Hampelmänner",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 221
-      },
-      {
-        "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/eccentric_press_up_on_high_barbell_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/eccentric_press_up_on_high_barbell_1x1.jpg",
-        "routineId": 1941,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "REPETITIONS",
-            "displayName": "Wdhl.",
-            "amountUnit_en": ""
-          },
-          "value": 15
-        },
-        "description": "Liegestütze gegen die Wand sind eine einfache Kraftübung, die hauptsächlich die Oberarme, Schultern und Brustmuskulatur stärkt.",
-        "displayName": "Liegestütze gegen die Wand",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": 221
-      },
-      {
-        "pillar": {
-          "pillar": "SLEEP",
-          "displayName": "Schlaf",
-          "pillar_en": ""
+          "pillarEnum": "SLEEP",
+          "displayName": "Schlaf"
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/998_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/998_16x9.jpg",
         "routineId": 222,
+        "scheduleCategory": "DAILY_ROUTINE",
         "timeOfDay": "EVENING",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "displayName": "Minuten",
-            "amountUnit_en": ""
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Minuten"
           },
           "value": 0
         },
@@ -223,29 +234,31 @@
           2,
           3,
           4
-        ]
+        ],
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "SLEEP",
-          "displayName": "Schlaf",
-          "pillar_en": ""
+          "pillarEnum": "SLEEP",
+          "displayName": "Schlaf"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/159_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/159_1x1.jpg",
-        "routineId": 2025,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/157_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/157_1x1.jpg",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2361,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
-        "description": "Die Heizung im Schlafzimmer nachts abzusenken oder komplett auszuschalten fördert einen besseren Schlaf und ein angenehmeres Schlafumfeld.",
-        "displayName": "Heizung herunterdrehen",
+        "description": "Schau vor dem Schlafen nicht auf einen Bildschirm, um deine Schlafqualität zu verbessern und deinen natürlichen Schlafrhythmus zu unterstützen.",
+        "displayName": "Nicht auf einen Bildschirm schauen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -262,24 +275,26 @@
           3,
           4
         ],
-        "parentRoutineId": 222
+        "parentRoutineId": 222,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "SLEEP",
-          "displayName": "Schlaf",
-          "pillar_en": ""
+          "pillarEnum": "SLEEP",
+          "displayName": "Schlaf"
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/160_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/160_1x1.jpg",
-        "routineId": 2026,
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2364,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
@@ -301,23 +316,25 @@
           3,
           4
         ],
-        "parentRoutineId": 222
+        "parentRoutineId": 222,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "NUTRITION",
-          "displayName": "Ernährung",
-          "pillar_en": ""
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
         "routineId": 223,
+        "scheduleCategory": "DAILY_ROUTINE",
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "displayName": "Minuten",
-            "amountUnit_en": ""
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Minuten"
           },
           "value": 0
         },
@@ -339,24 +356,26 @@
           2,
           3,
           4
-        ]
+        ],
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "NUTRITION",
-          "displayName": "Ernährung",
-          "pillar_en": ""
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
         "imageUrl_1x1": "\n",
         "imageUrl_16x9": "\n",
-        "routineId": 2103,
+        "scheduleCategory": "DAILY_ROUTINE",
+        "routineId": 2441,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
@@ -378,29 +397,30 @@
           3,
           4
         ],
-        "parentRoutineId": 223
+        "parentRoutineId": 223,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
+          "pillarEnum": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/2_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/2_1x1.jpg",
-        "routineId": 1886,
-        "durationCalculated": 45,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2504,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "displayName": "Min.",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
-          "value": 45
+          "value": 1
         },
-        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
-        "displayName": "Spazierengehen",
+        "description": "Mache heute einer fremden Person ein Kompliment.",
+        "displayName": "Einem Fremden ein Kompliment machen",
         "alternatives": [],
         "scheduleDays": [
           2
@@ -411,29 +431,31 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "DAILY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "MOVEMENT",
-          "displayName": "Bewegung",
-          "pillar_en": ""
+          "pillarEnum": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/20_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/20_1x1.jpg",
-        "routineId": 1903,
-        "durationCalculated": 30,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 2503,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "displayName": "Min.",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
-          "value": 30
+          "value": 1
         },
-        "description": "Nordic Walking ist eine effektive und angenehme Sportart, die Körper und Geist in Einklang bringt. Diese Aktivität verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und fördert die Stimmung. Genieße die Natur und profitiere von den zahlreichen gesundheitlichen Vorteilen dieser Kombination aus Bewegung und Frischluft.",
-        "displayName": "Nordic Walking",
+        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
+        "displayName": "Ein Kompliment machen",
         "alternatives": [],
         "scheduleDays": [
           3
@@ -444,90 +466,26 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "DAILY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2165,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
-        "displayName": "Ein Kompliment machen",
-        "alternatives": [],
-        "scheduleDays": [
-          6
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial",
-          "pillar_en": ""
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2166,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
-          },
-          "value": 1
-        },
-        "description": "Mache heute einer fremden Person ein Kompliment.",
-        "displayName": "Einem Fremden ein Kompliment machen",
-        "alternatives": [],
-        "scheduleDays": [
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "parentRoutineId": null
-      },
-      {
-        "pillar": {
-          "pillar": "STRESS",
-          "displayName": "Resilienz",
-          "pillar_en": ""
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
-        "routineId": 2044,
+        "routineId": 2382,
         "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "MINUTES",
-            "displayName": "Min.",
-            "amountUnit_en": ""
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
           },
           "value": 10
         },
@@ -549,24 +507,26 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "GRATITUDE",
-          "displayName": "Dankbarkeit",
-          "pillar_en": ""
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2170,
+        "routineId": 2508,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
@@ -582,24 +542,26 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "GRATITUDE",
-          "displayName": "Dankbarkeit",
-          "pillar_en": ""
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2152,
+        "routineId": 2490,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
@@ -615,24 +577,26 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition",
-          "pillar_en": ""
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2158,
+        "routineId": 2496,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
@@ -648,24 +612,26 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillar": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition",
-          "pillar_en": ""
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2153,
+        "routineId": 2491,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnit": "ROUTINE",
-            "displayName": "Routine",
-            "amountUnit_en": ""
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
           "value": 1
         },
@@ -681,7 +647,11 @@
           3,
           4
         ],
-        "parentRoutineId": null
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": null,
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       }
     ]
   }

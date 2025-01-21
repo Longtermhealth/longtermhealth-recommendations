@@ -1,31 +1,63 @@
 from PIL import Image, ImageDraw, ImageFont
 
 def create_final_image(text, accountid_str):
-    gradient_image = Image.open("./chart/Gradient-holistic-health_2k.png")
-    polar_chart_image = Image.open(accountid_str)
 
-    gradient_image_resized = gradient_image.resize(polar_chart_image.size)
+    gradient_image_path = "./chart/background_graph.png"
+    white_circle_path = "./chart/white_circle.png"
+    outlines_path = "./chart/foreground_lines.png"
 
-    final_image = Image.alpha_composite(gradient_image_resized.convert("RGBA"), polar_chart_image.convert("RGBA"))
+    try:
+        gradient_image = Image.open(gradient_image_path).convert("RGBA")
+    except IOError:
+        print(f"Gradient image not found at {gradient_image_path}.")
+        return
 
-    final_image.save(accountid_str)
+    try:
+        polar_chart_image = Image.open(accountid_str).convert("RGBA")
+    except IOError:
+        print(f"Polar chart image not found at {accountid_str}.")
+        return
 
-    white_circle_image = Image.open("./chart/white_circle.png")
+    gradient_resized = gradient_image.resize(polar_chart_image.size)
+    print(f"Gradient image resized to {gradient_resized.size}.")
 
-    white_circle_image_resized = white_circle_image.resize(final_image.size)
+    combined_image = Image.alpha_composite(gradient_resized, polar_chart_image)
+    print("Combined Gradient and Polar Chart.")
 
-    final_image_with_white_center = Image.alpha_composite(final_image.convert("RGBA"), white_circle_image_resized.convert("RGBA"))
+    try:
+        outlines_image = Image.open(outlines_path).convert("RGBA")
+    except IOError:
+        print(f"Outlines image not found at {outlines_path}. Skipping overlay.")
+    else:
+        outlines_resized = outlines_image.resize(combined_image.size)
+        print(f"Outlines image resized to {outlines_resized.size}.")
 
-    final_image_with_white_center.save(accountid_str)
+        combined_image = Image.alpha_composite(combined_image, outlines_resized)
+        print("Overlayed Outlines on Combined Image.")
 
-    image = final_image_with_white_center
+    try:
+        white_circle_image = Image.open(white_circle_path).convert("RGBA")
+    except IOError:
+        print(f"White circle image not found at {white_circle_path}. Skipping overlay.")
+    else:
+        white_circle_resized = white_circle_image.resize(combined_image.size)
+        print(f"White circle image resized to {white_circle_resized.size}.")
+
+        combined_image = Image.alpha_composite(combined_image, white_circle_resized)
+        print("Overlayed White Circle on Combined Image.")
 
     font_path = './chart/TT-Norms-Pro-Medium.ttf'
-    font = ImageFont.truetype(font_path, 110)
+    font_size = 110
 
-    draw = ImageDraw.Draw(image)
+    try:
+        font = ImageFont.truetype(font_path, font_size)
+        print(f"Loaded custom font from {font_path} with size {font_size}.")
+    except IOError:
+        print(f"Font file not found at {font_path}. Using default font.")
+        font = ImageFont.load_default()
 
-    image_width, image_height = image.size
+    draw = ImageDraw.Draw(combined_image)
+    image_width, image_height = combined_image.size
 
     bbox = draw.textbbox((0, 0), text, font=font)
     text_width, text_height = bbox[2] - bbox[0], bbox[3] - bbox[1]
@@ -34,7 +66,10 @@ def create_final_image(text, accountid_str):
     y_position = (image_height - text_height) // 2 - 30
 
     draw.text((x_position, y_position), text, font=font, fill=(0, 0, 0))
+    print(f"Added text '{text}' at position ({x_position}, {y_position}).")
 
-    output_path = accountid_str
-    image.save(output_path)
-    #image.show()
+    try:
+        combined_image.save(accountid_str)
+        print(f"Final image saved at {accountid_str}.")
+    except IOError as e:
+        print(f"Failed to save final image at {accountid_str}: {e}")

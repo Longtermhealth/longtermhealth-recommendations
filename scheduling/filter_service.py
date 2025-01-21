@@ -171,7 +171,7 @@ def filter_inclusions(pillar_data, pillar_name, pillar_rules, routines, user_dat
                             continue
 
                         routine_id = routine['id']
-                        routine_pillar = routine['attributes']['pillar']['pillar']
+                        routine_pillar = routine['attributes']['pillar']['pillarEnum']
 
                         if routine_pillar == pillar_name:
                             routine_field_value = check_dynamic_field(routine['attributes'], action_field)
@@ -509,6 +509,7 @@ def main():
         return "No responses or field mapping available.", 400
 
     answers = process_latest_response(responses, field_mapping)
+    gender = answers.get('Biologisches Geschlecht:', None)
     if not answers:
         logger.error("No answers found in the latest response.")
         return "No answers found in the latest response.", 400
@@ -596,7 +597,7 @@ def main():
         print(f"Rule: {rule_name}, Action: {action}")
 
     print('Health Scores: ', scores)
-    return account_id, daily_time, routines_with_defaults, scores, user_data
+    return account_id, daily_time, routines_with_defaults, scores, user_data, answers, gender
 
 
 if __name__ == '__main__':

@@ -1,7 +1,6 @@
 import plotly.graph_objects as go
 import numpy as np
 
-
 def generate_polar_chart(scores, accountid):
     categories = list(scores.keys())
     values = list(scores.values())
@@ -9,13 +8,13 @@ def generate_polar_chart(scores, accountid):
     angles = np.linspace(0, 360, num_vars, endpoint=False)
 
     final_colors = [
-        "#FCFF73", #3
-        "#67d2fe", #2
-        "#67C2FF", #1
-        "#D6ADFF", #7
-        "#FFE8B4", #6
-        "#33DFC7", #5
-        "#8EC8FF"  #4
+        "#F9FE70", #3
+        "#98CAFF", #2
+        "#20E6EC", #1
+        "#CCABFE", #7
+        "#FED7BA", #6
+        "#8CF4A9", #5
+        "#BBCFFD"  #4
     ]
 
     min_val = min(values)
@@ -29,7 +28,6 @@ def generate_polar_chart(scores, accountid):
         return desired_min_thickness + (v - min_val)/(max_val - min_val) * (desired_max_thickness - desired_min_thickness)
 
     slice_width = 360 / num_vars
-
     base_radius = 1000
 
     fig = go.Figure()
@@ -46,7 +44,7 @@ def generate_polar_chart(scores, accountid):
             marker_color=final_colors[i],
             marker_line_width=0,
             hoverinfo='none',
-            opacity=1
+            opacity=0.66
         ))
 
     fig.update_layout(
@@ -76,4 +74,3 @@ def generate_polar_chart(scores, accountid):
     )
 
     fig.write_image(accountid, width=1000, height=1000)
-

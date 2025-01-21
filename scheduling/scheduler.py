@@ -3,13 +3,11 @@ import random
 from collections import defaultdict
 
 import math
-from datetime import datetime
-
+from datetime import datetime, timedelta, timezone
 from chart.chart_generation import generate_polar_chart
 from chart.converter import create_final_image
 from scheduling.filter_service import main as get_routines_with_defaults
 from utils.blob_upload import upload_to_blob
-from utils.clickup_api import upload_file_to_clickup
 from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
 
 WEIGHTINGS = {
@@ -56,6 +54,30 @@ def filter_routines_by_pillar_and_time(pillar, total_duration_daily, filtered_ro
                             routines_for_pillar.append(routine)
 
     return routines_for_pillar
+
+def calculate_expiration_date(start_date=None):
+    """
+    Calculates the expiration date as 28 days from the start_date until midnight UTC.
+    If no start_date is provided, it uses the current UTC datetime.
+
+    Returns:
+        str: ISO formatted expiration date with 'Z' to indicate UTC timezone.
+    """
+    if start_date is None:
+        start_date = datetime.now(timezone.utc)
+    else:
+        # Ensure the start_date is timezone-aware in UTC
+        start_date = start_date.astimezone(timezone.utc)
+
+    expiration_datetime = start_date + timedelta(days=27)
+    print('start_date',start_date)
+    print('expiration_datetime', expiration_datetime)
+    # Set time to midnight UTC
+    expiration_datetime = expiration_datetime.replace(hour=0, minute=0, second=0, microsecond=0)
+    # Format with milliseconds and 'Z' to indicate UTC
+    expiration_date_str = expiration_datetime.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
+    return expiration_date_str
+
 
 def load_routines_for_rules(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -247,6 +269,16 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
 
     scheduleDays = scheduleDays_mapping.get(super_routine_id, None)
 
+    scheduleCategory_mapping = {
+        "sleep_superroutine": "DAILY_ROUTINE",
+        "movement_superroutine": "WEEKLY_ROUTINE",
+        "nutrition_super_routine": "DAILY_ROUTINE",
+    }
+
+    scheduleCategory = scheduleCategory_mapping.get(super_routine_id, None)
+
+    expiration_date = calculate_expiration_date()
+
     added_subroutines = set()
     subroutines_entries = []
     total_duration = 0
@@ -264,20 +296,19 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
         resource_image_url_16x9 = subroutine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de"
         subroutine_entry = {
             "pillar": {
-                "pillar": subroutine['attributes']['pillar']['pillar'],
-                "displayName": subroutine['attributes']['pillar']['displayName'],
-                "pillar_en": ""
+                "pillarEnum": subroutine['attributes']['pillar']['pillarEnum'],
+                "displayName": subroutine['attributes']['pillar']['displayName']
             },
             "imageUrl_1x1": resource_image_url_1x1,
             "imageUrl_16x9": resource_image_url_16x9,
+            "scheduleCategory": subroutine.get('attributes', {}).get("scheduleCategory", 'DAILY_ROUTINE'),
             "routineId": int(subroutine_id),
             "durationCalculated": round(subroutine_duration),
             "timeOfDay": "ANY",
             "goal": {
                 "unit": {
-                    "amountUnit": subroutine['attributes']['amountUnit']['amountUnit'],
-                    "displayName": subroutine['attributes']['amountUnit']['displayName'],
-                    "amountUnit_en": ""
+                    "amountUnitEnum": subroutine['attributes']['amountUnit']['amountUnitEnum'],
+                    "displayName": subroutine['attributes']['amountUnit']['displayName']
                 },
                 "value": int(subroutine['attributes']['amount']),
             },
@@ -291,26 +322,28 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
                 3,
                 4
             ],
-            "parentRoutineId": parentRoutineId_value
+            "parentRoutineId": parentRoutineId_value,
+            "packageName": "packageName",
+            "packageTag": "packageTag",
+            **({"expirationDate": expiration_date} if subroutine.get('attributes', {}).get("scheduleCategory") == "MONTHLY_CHALLENGE" or "WEEKLY_CHALLENGE" else {})
         }
         subroutines_entries.append(subroutine_entry)
 
 
     super_routine_entry = {
         "pillar": {
-            "pillar": pillar,
-            "displayName": displayName,
-            "pillar_en": ""
+            "pillarEnum": pillar,
+            "displayName": displayName
         },
         "imageUrl_1x1": imageUrl_1x1,
         "imageUrl_16x9": imageUrl_16x9,
         "routineId": super_routine_id,
+        "scheduleCategory": scheduleCategory,
         "timeOfDay": timeOfDay,
         "goal": {
             "unit": {
-                "amountUnit": "MINUTES",
-                "displayName": "Minuten",
-                "amountUnit_en": ""
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
             },
             "value": round(total_duration),
         },
@@ -319,7 +352,10 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
         "durationCalculated": round(total_duration),
         "alternatives": [],
         "scheduleDays": scheduleDays,
-        "scheduleWeeks": [1, 2, 3, 4]
+        "scheduleWeeks": [1, 2, 3, 4],
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        **({"expirationDate": expiration_date} if scheduleCategory == "MONTHLY_CHALLENGE" or "WEEKLY_CHALLENGE" else {})
     }
     total_duration_movement = ""
     if super_routine_id == "movement_superroutine":
@@ -335,15 +371,15 @@ def build_final_action_plan(routines, routine_schedule, account_id, daily_time, 
     return final_action_plan, total_duration_movement
 
 def build_individual_routine_entry(routine):
-    #print()
+
+    expiration_date = calculate_expiration_date()
     resource_image_url = routine.get('attributes', {}).get("resources", [{}])[0].get(
         "imageUrl") or "https://longtermhealth.de"
 
     individual_routine_entry = {
         "pillar": {
-            "pillar": routine['attributes']['pillar']['pillar'],
-            "displayName": routine['attributes']['pillar']['displayName'],
-            "pillar_en": ""
+            "pillarEnum": routine['attributes']['pillar']['pillarEnum'],
+            "displayName": routine['attributes']['pillar']['displayName']
         },
         "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
         "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de",
@@ -352,9 +388,8 @@ def build_individual_routine_entry(routine):
         "timeOfDay": "ANY",
         "goal": {
             "unit": {
-                "amountUnit": routine['attributes']['amountUnit']['amountUnit'],
-                "displayName": routine['attributes']['amountUnit']['displayName'],
-                "amountUnit_en": ""
+                "amountUnitEnum": routine['attributes']['amountUnit']['amountUnitEnum'],
+                "displayName": routine['attributes']['amountUnit']['displayName']
             },
             "value": int(routine['attributes']["amount"]),
         },
@@ -363,7 +398,11 @@ def build_individual_routine_entry(routine):
         "alternatives": [],
         "scheduleDays": routine['attributes']["scheduleDays"],
         "scheduleWeeks": routine['attributes']["scheduleWeeks"],
-        "parentRoutineId": None
+        "scheduleCategory": routine['attributes']["scheduleCategory"],
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": None,
+        **({"expirationDate": expiration_date} if routine['attributes']["scheduleCategory"] == "MONTHLY_CHALLENGE" or "WEEKLY_CHALLENGE" else {})
     }
     return individual_routine_entry
 
@@ -409,7 +448,7 @@ def filter_and_select_routines_by_tag(routines, tag, weights, pillar, added_to_s
             tags = [t['tag'] for t in routine['attributes']['tags']]
 
             if tag.lower() in (t.lower() for t in tags):
-                pillar_value = routine['attributes']['pillar']['pillar']
+                pillar_value = routine['attributes']['pillar']['pillarEnum']
                 if pillar_value.upper() == pillar.upper():
                     weighted_score = calculate_weighted_score(routine, weights)
 
@@ -542,7 +581,7 @@ def select_routines_for_pillar(pillar, health_scores, routines, allocated_time, 
 
     routines_for_knapsack = []
     for routine in routines:
-        if routine['attributes']['pillar']['pillar'] == pillar:
+        if routine['attributes']['pillar']['pillarEnum'] == pillar:
             #print(routine['attributes']['name'])
             weighted_score = calculate_weighted_score_knapsack(routine, weights)
 
@@ -1082,13 +1121,19 @@ def calculate_total_durations(routines_per_day, pillar_durations_per_day, alloca
 
 
 def main():
-    account_id, daily_time, routines, health_scores, user_data = get_routines_with_defaults()
+    account_id, daily_time, routines, health_scores, user_data, answers, gender = get_routines_with_defaults()
     print('daily_time',daily_time)
     total_score = health_scores['Total Score']
     start_weekday = datetime.today().weekday()  # Monday=0,...Sunday=6
     #print('start_weekday',start_weekday)
     #file_path = "./data/routines_with_scores.json"
     #routines = load_routines_for_rules(file_path)
+
+    if gender == "Weiblich":
+        gender = "FEMALE"
+    else:
+        gender = "MALE"
+
 
 
     if isinstance(routines, dict):
@@ -1288,6 +1333,8 @@ def main():
     final_action_plan = {
         "data": {
             "accountId": account_id,
+            "periodInDays": 28,
+            "gender": gender.upper(),
             "totalDailyTimeInMins": daily_time,
             "routines": final_action_plan_movement["data"]["routines"] +
                         final_action_plan_sleep["data"]["routines"] +
@@ -1457,7 +1504,7 @@ def main():
     #print("\nFinal selected routines (across all pillars):")
     for routine in final_routines:
         print(
-            f"Pillar: {routine['attributes']['pillar']['pillar']} Routine ID: {routine['id']}, Duration: {routine['attributes']['durationCalculated']} min, Weighted Score: {routine['weighted_score']}")
+            f"Pillar: {routine['attributes']['pillar']['pillarEnum']} Routine ID: {routine['id']}, Duration: {routine['attributes']['durationCalculated']} min, Weighted Score: {routine['weighted_score']}")
 
     weekly_allocations = calculate_weekly_allocations(daily_allocations)
     monthly_allocations = calculate_monthly_allocations(daily_allocations)
@@ -1476,7 +1523,7 @@ def main():
         #print(f"Scheduling routines for pillar '{pillar}' with allocated daily time: {allocated_time} minutes.")
 
         for routine in final_routines:
-            if routine['attributes']['pillar']['pillar'] == pillar:
+            if routine['attributes']['pillar']['pillarEnum'] == pillar:
                 schedule_result = schedule_routine(
                     routine,
                     daily_allocations,
