@@ -527,12 +527,12 @@ def main():
     )
 
     scores = {
-        "MOVEMENT": float(assessment.exercise_assessment.report()),
-        "NUTRITION": float(assessment.nutrition_assessment.report()),
-        "SLEEP": float(assessment.sleep_assessment.report()),
-        "SOCIAL_ENGAGEMENT": float(assessment.social_connections_assessment.report()),
-        "STRESS": float(assessment.stress_management_assessment.report()),
-        "GRATITUDE": float(assessment.gratitude_assessment.report()),
+        "NUTRITION": float(assessment.exercise_assessment.report()),
+        "MOVEMENT": float(assessment.nutrition_assessment.report()),
+        "GRATITUDE": float(assessment.sleep_assessment.report()),
+        "SLEEP": float(assessment.social_connections_assessment.report()),
+        "SOCIAL_ENGAGEMENT": float(assessment.stress_management_assessment.report()),
+        "STRESS": float(assessment.gratitude_assessment.report()),
         "COGNITIVE_ENHANCEMENT": float(assessment.cognition_assessment.report()),
     }
     total_score = float(assessment.calculate_total_score())
