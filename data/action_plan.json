@@ -1,9 +1,9 @@
 {
   "data": {
-    "accountId": "102",
+    "accountId": "83",
     "periodInDays": 28,
-    "gender": "MALE",
-    "totalDailyTimeInMins": 30,
+    "gender": "FEMALE",
+    "totalDailyTimeInMins": 45,
     "routines": [
       {
         "pillar": {
@@ -41,17 +41,17 @@
         ],
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
           "pillarEnum": "MOVEMENT",
           "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/superman_hold_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/superman_hold_1x1.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2322,
+        "routineId": 2981,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
@@ -61,8 +61,8 @@
           },
           "value": 1
         },
-        "description": "Die Katze-Kuh-Dehnung ist eine sanfte Mobilitätsübung, die vor allem die Flexibilität und Beweglichkeit der Wirbelsäule verbessert.",
-        "displayName": "Katze-Kuh-Dehnung",
+        "description": "Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.",
+        "displayName": "Bergsteiger",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -80,17 +80,17 @@
         "parentRoutineId": 221,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
           "pillarEnum": "MOVEMENT",
           "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/barbell_good_morning_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/barbell_good_morning_1x1.jpg",
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2316,
+        "routineId": 3149,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
@@ -100,8 +100,8 @@
           },
           "value": 10
         },
-        "description": "Ausfallschritte sind eine effektive Mobilitätsübung, die vor allem die Beinmuskulatur sowie die Rumpfstabilität stärkt.",
-        "displayName": "Ausfallschritte",
+        "description": "Liegestütze sind ein effektives Krafttraining, das hauptsächlich die Muskeln der Brust, Schultern und Arme stärkt.",
+        "displayName": "Liegestütze auf allen Vieren",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -119,7 +119,7 @@
         "parentRoutineId": 221,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -129,7 +129,7 @@
         "imageUrl_1x1": "\n",
         "imageUrl_16x9": "\n",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2286,
+        "routineId": 2982,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -158,28 +158,28 @@
         "parentRoutineId": 221,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
           "pillarEnum": "MOVEMENT",
           "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2284,
-        "durationCalculated": 0,
+        "routineId": 3024,
+        "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "SECONDS",
-            "displayName": "Sek."
+            "amountUnitEnum": "REPETITIONS",
+            "displayName": "Wdhl."
           },
-          "value": 30
+          "value": 5
         },
-        "description": "Der Bergsteiger ist eine effektive Cardioübung, die hauptsächlich die Ausdauer und die Core-Muskulatur stärkt.",
-        "displayName": "Bergsteiger",
+        "description": "Schulterkreisen ist eine sanfte Mobilitätsübung, die hauptsächlich die Flexibilität und Beweglichkeit der Schultern verbessert.",
+        "displayName": "Schulterkreisen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -197,7 +197,7 @@
         "parentRoutineId": 221,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -237,17 +237,17 @@
         ],
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
           "pillarEnum": "SLEEP",
           "displayName": "Schlaf"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/157_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/157_1x1.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/159_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/159_1x1.jpg",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2361,
+        "routineId": 3059,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -257,8 +257,8 @@
           },
           "value": 1
         },
-        "description": "Schau vor dem Schlafen nicht auf einen Bildschirm, um deine Schlafqualität zu verbessern und deinen natürlichen Schlafrhythmus zu unterstützen.",
-        "displayName": "Nicht auf einen Bildschirm schauen",
+        "description": "Die Heizung im Schlafzimmer nachts abzusenken oder komplett auszuschalten fördert einen besseren Schlaf und ein angenehmeres Schlafumfeld.",
+        "displayName": "Heizung herunterdrehen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -278,7 +278,7 @@
         "parentRoutineId": 222,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -288,7 +288,7 @@
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/160_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/160_1x1.jpg",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2364,
+        "routineId": 3060,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -319,7 +319,7 @@
         "parentRoutineId": 222,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -359,17 +359,17 @@
         ],
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
           "pillarEnum": "NUTRITION",
           "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/2_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/2_1x1.jpg",
         "scheduleCategory": "DAILY_ROUTINE",
-        "routineId": 2441,
+        "routineId": 3137,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -400,16 +400,17 @@
         "parentRoutineId": 223,
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
-          "pillarEnum": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial"
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2504,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/148_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/148_1x1.jpg",
+        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "routineId": 3242,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -419,78 +420,8 @@
           },
           "value": 1
         },
-        "description": "Mache heute einer fremden Person ein Kompliment.",
-        "displayName": "Einem Fremden ein Kompliment machen",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_CHALLENGE",
-        "packageName": "packageName",
-        "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2503,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
-        "displayName": "Ein Kompliment machen",
-        "alternatives": [],
-        "scheduleDays": [
-          3
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_CHALLENGE",
-        "packageName": "packageName",
-        "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/178_1x1.jpg",
-        "routineId": 2382,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 10
-        },
-        "description": "Meditation ist eine entspannende Praxis, die vor allem zur Stressreduktion und emotionalen Regulierung beiträgt.",
-        "displayName": "Meditieren",
+        "description": "Reduziere diesen Monat den Konsum von rotem Fleisch, um deine Gesundheit zu fördern und das Risiko für Herz-Kreislauf-Erkrankungen zu senken.",
+        "displayName": "Rotes Fleisch reduzieren",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -507,20 +438,208 @@
           3,
           4
         ],
+        "parentRoutineId": 223,
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "expirationDate": "2025-02-18T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/208_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/208_1x1.jpg",
+        "routineId": 3106,
+        "durationCalculated": 10,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 10
+        },
+        "description": "Kurze bewusste Pausen fördern Achtsamkeit und Entspannung, was Stress reduziert und die mentale Schärfe verbessert.",
+        "displayName": "Bewusst Pausen machen",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "1",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 2219
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3246,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "",
+        "displayName": "Tiefe Atemübung",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "2",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 2219
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/204_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/204_1x1.jpg",
+        "routineId": 3104,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
+        "displayName": "Zwerchfellatmung",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "3",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 2219
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/205_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/205_1x1.jpg",
+        "routineId": 3105,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Nasenatmung ist eine entspannende Atemtechnik, die Stress abbaut und die geistige Klarheit sowie die emotionale Regulierung fördert.",
+        "displayName": "Nasenatmung beginnen",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "4",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 2219
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3248,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "",
+        "displayName": "Meditationsstart",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "4",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 2219
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/171_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/171_1x1.jpg",
+        "routineId": 3071,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
+        "displayName": "Maui-Gewohnheit",
+        "alternatives": [],
+        "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+        "scheduleWeeks": "1, 2, 3, 4",
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "parentRoutineId": 2218
       },
       {
         "pillar": {
           "pillarEnum": "GRATITUDE",
           "displayName": "Dankbarkeit"
         },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/172_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/172_1x1.jpg",
+        "routineId": 3072,
+        "durationCalculated": 3,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 3
+        },
+        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
+        "displayName": "Dankbarkeitstagebuch",
+        "alternatives": [],
+        "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+        "scheduleWeeks": "1, 2, 3, 4",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 2218
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2508,
+        "routineId": 3158,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -530,128 +649,264 @@
           },
           "value": 1
         },
-        "description": "Gehe diesen Monat mindestens einmal in die Sauna.",
-        "displayName": "In die Sauna gehen",
+        "description": "Trinke diese Woche keine zuckerhaltigen Getränke",
+        "displayName": "Keine zuckerhaltigen Getränke",
         "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
+        "scheduleDays": "1",
+        "scheduleWeeks": "1",
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 3266,
+        "expirationDate": "2025-01-28T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3155,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte diese Woche auf Süßigkeiten und salzige Snacks, um Blutzuckerschwankungen zu vermeiden, die Konzentration zu fördern und langfristig ein gesundes Gewicht zu halten. ",
+        "displayName": "Nicht naschen",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "2",
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 3266,
+        "expirationDate": "2025-02-04T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3228,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Stelle dich der Herausforderung, diese Woche komplett auf Alkohol zu verzichten. Das gibt deinem Körper die Möglichkeit, sich zu regenerieren, verbessert deine Schlafqualität und unterstützt deine allgemeine Gesundheit.",
+        "displayName": "Alkoholfreie Woche",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "3",
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 3266,
+        "expirationDate": "2025-02-11T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3159,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Probiere, an einem Tag der Woche weniger als 500 (Frauen) bzw. 600 (Männer) Kilokalorien zu dir zu nehmen",
+        "displayName": "Kalorienarmer Tag",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "4",
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 3266,
+        "expirationDate": "2025-02-18T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/140_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/140_1x1.jpg",
+        "routineId": 3040,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Ausreichend Wasser zu trinken – idealerweise 2 Liter pro Tag – unterstützt die Konzentration, fördert den Stoffwechsel und hilft dem Körper, Giftstoffe auszuscheiden.",
+        "displayName": "2 Liter Wasser am Tag",
+        "alternatives": [],
+        "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+        "scheduleWeeks": "1, 2, 3, 4",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 999
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/141_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/141_1x1.jpg",
+        "routineId": 3041,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
+        "displayName": "Mehr Gemüse",
+        "alternatives": [],
+        "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+        "scheduleWeeks": "1, 2, 3, 4",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 999
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/142_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/142_1x1.jpg",
+        "routineId": 3042,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Iss mindestens 2 Handvoll Obst täglich, um deinen Körper mit natürlichen Vitaminen und Energie zu versorgen.",
+        "displayName": "Mehr Obst",
+        "alternatives": [],
+        "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+        "scheduleWeeks": "1, 2, 3, 4",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 999
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3153,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte auf zuckerhaltige Getränke, um deinen Zuckerkonsum zu reduzieren und deine Gesundheit zu fördern.",
+        "displayName": "Ungesüßte Getränke",
+        "alternatives": [],
+        "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+        "scheduleWeeks": "1, 2, 3, 4",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 999
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3162,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Koche diese Woche mindestens drei Gerichte mit Bohnen oder anderen Hülsenfrüchten.",
+        "displayName": "Hülsenfrüchte integrieren",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "2",
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "packageName",
+        "packageTag": "packageTag",
+        "parentRoutineId": 999,
+        "expirationDate": "2025-02-04T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 3233,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte diesen Monat lang komplett auf Fertiggerichte. Stattdessen bereitest du deine Mahlzeiten von Grund auf zu und vermeidest versteckte Transfette, Zucker und Zusatzstoffe.",
+        "displayName": "Keine Fertiggerichte",
+        "alternatives": [],
+        "scheduleDays": "1",
+        "scheduleWeeks": "1",
         "scheduleCategory": "MONTHLY_CHALLENGE",
         "packageName": "packageName",
         "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2490,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Achte diese Woche darauf, bewusst „Danke“ zu sagen, um Wertschätzung zu zeigen, positive Beziehungen zu stärken und dein eigenes Wohlbefinden zu fördern.",
-        "displayName": "Danke sagen",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "packageName",
-        "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2496,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Spiele diese Woche Schach – egal ob in echt oder online – um strategisches Denken zu fördern und deine Konzentrationsfähigkeit zu stärken.",
-        "displayName": "Spiele Schach",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "packageName",
-        "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 2491,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Erkunde diese Woche einen neuen Ort wie ein Museum, Stadtteil, Park, Café o.ä. ",
-        "displayName": "Einen neuen Ort erkunden",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "packageName",
-        "packageTag": "packageTag",
-        "parentRoutineId": null,
-        "expirationDate": "2025-02-17T00:00:00.000Z"
+        "parentRoutineId": 999,
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       }
     ]
   }

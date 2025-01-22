@@ -1,0 +1,1618 @@
+{
+  "packages": {
+    "pillars": {
+      "MOVEMENT": {
+        "MOVEMENT BASICS SHORT": {
+          "Sport, 1, kurz": {
+            "packageOrder": "1",
+            "packageModification": "kurz",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 1,
+            "routines": [
+              {
+                "name": "Kurzer Spaziergang",
+                "packageRoutineId": 223,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Langer Spaziergang",
+                "packageRoutineId": 224,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Full Body Workout",
+                "packageRoutineId": 997,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2, 4, 5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 2, kurz": {
+            "packageOrder": "2",
+            "packageModification": "kurz",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 1,
+            "routines": [
+              {
+                "name": "Intervall-Spaziergang",
+                "packageRoutineId": 227,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Langer Spaziergang",
+                "packageRoutineId": 231,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Full Body Workout",
+                "packageRoutineId": 997,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2, 4, 5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 3, kurz": {
+            "packageOrder": "3",
+            "packageModification": "kurz",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 1,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 4, kurz": {
+            "packageOrder": "4",
+            "packageModification": "kurz",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 1,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intensives Cardio",
+                "packageRoutineId": 991,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 5, kurz": {
+            "packageOrder": "5",
+            "packageModification": "kurz",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 1,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intensives Cardio",
+                "packageRoutineId": 991,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          }
+        },
+        "MOVEMENT BASICS MEDIUM": {
+          "Sport, 1, mittel": {
+            "packageOrder": "1",
+            "packageModification": "mittel",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 2,
+            "routines": [
+              {
+                "name": "Kurzer Spaziergang",
+                "packageRoutineId": 223,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Langer Spaziergang",
+                "packageRoutineId": 225,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Full Body Workout",
+                "packageRoutineId": 997,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2, 4, 5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 2, mittel": {
+            "packageOrder": "2",
+            "packageModification": "mittel",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 2,
+            "routines": [
+              {
+                "name": "Intervall-Spaziergang",
+                "packageRoutineId": 227,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Langer Spaziergang",
+                "packageRoutineId": 226,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Full Body Workout",
+                "packageRoutineId": 997,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2, 4, 5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 3, mittel": {
+            "packageOrder": "3",
+            "packageModification": "mittel",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 2,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 4, mittel": {
+            "packageOrder": "4",
+            "packageModification": "mittel",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 2,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intensives Cardio",
+                "packageRoutineId": 991,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 5, mittel": {
+            "packageOrder": "5",
+            "packageModification": "mittel",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 2,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intensives Cardio",
+                "packageRoutineId": 991,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          }
+        },
+        "MOVEMENT BASICS LONG": {
+          "Sport, 1, lang": {
+            "packageOrder": "1",
+            "packageModification": "lang",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 3,
+            "routines": [
+              {
+                "name": "Kurzer Spaziergang",
+                "packageRoutineId": 223,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Langer Spaziergang",
+                "packageRoutineId": 226,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Full Body Workout",
+                "packageRoutineId": 997,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2, 4, 5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 2, lang": {
+            "packageOrder": "2",
+            "packageModification": "lang",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 3,
+            "routines": [
+              {
+                "name": "Intervall-Spaziergang",
+                "packageRoutineId": 230,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Langer Spaziergang",
+                "packageRoutineId": 228,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Full Body Workout",
+                "packageRoutineId": 997,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2, 4, 5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 3, lang": {
+            "packageOrder": "3",
+            "packageModification": "lang",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 3,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 4, lang": {
+            "packageOrder": "4",
+            "packageModification": "lang",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 3,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intensives Cardio",
+                "packageRoutineId": 991,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Sport, 5, lang": {
+            "packageOrder": "5",
+            "packageModification": "lang",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 3,
+            "routines": [
+              {
+                "name": "Cardio Sport",
+                "packageRoutineId": 993,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Unterkörper-Krafttraining",
+                "packageRoutineId": 996,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Oberkörper-Krafttraining",
+                "packageRoutineId": 995,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intervall-Cardio",
+                "packageRoutineId": 992,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Intensives Cardio",
+                "packageRoutineId": 991,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Core-Krafttraining",
+                "packageRoutineId": 994,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          }
+        },
+        "FATBURN 5 MINUTES": {
+          "Fatburn 1, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Katze-Kuh-Dehnung",
+                "packageRoutineId": 229,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen",
+                "packageRoutineId": 57,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Tiefe Plank",
+                "packageRoutineId": 51,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Fatburn 1, 2": {
+            "packageOrder": "2",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Liegestütze auf allen Vieren",
+                "packageRoutineId": 232,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Armkreisen vorwärts",
+                "packageRoutineId": 234,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter)",
+                "packageRoutineId": 68,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Fatburn 1, 3": {
+            "packageOrder": "3",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Kniebeugen",
+                "packageRoutineId": 59,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter)",
+                "packageRoutineId": 68,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen",
+                "packageRoutineId": 57,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Fatburn 1, 4": {
+            "packageOrder": "4",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Katze-Kuh-Dehnung",
+                "packageRoutineId": 229,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Wandsitzen 30 Sekunden",
+                "packageRoutineId": 235,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze auf allen Vieren",
+                "packageRoutineId": 232,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Fatburn 1, 5": {
+            "packageOrder": "5",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Fersenheben im Stehen",
+                "packageRoutineId": 105,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Tiefe Plank",
+                "packageRoutineId": 51,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen",
+                "packageRoutineId": 57,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Fatburn 1, 6": {
+            "packageOrder": "6",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Armkreisen vorwärts",
+                "packageRoutineId": 234,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter)",
+                "packageRoutineId": 68,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Kniebeugen",
+                "packageRoutineId": 59,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "6",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Fatburn 1, 7": {
+            "packageOrder": "7",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 9,
+            "routines": [
+              {
+                "name": "Fersenheben im Stehen",
+                "packageRoutineId": 105,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Beinheben in Rückenlage (ein Bein)",
+                "packageRoutineId": 79,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze auf allen Vieren",
+                "packageRoutineId": 232,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          }
+        }
+      },
+      "NUTRITION": {
+        "NUTRITION BASICS": {
+          "Bewusste Ernährung, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 4,
+            "routines": [
+              {
+                "name": "2 Liter Wasser am Tag",
+                "packageRoutineId": 123,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Gemüse",
+                "packageRoutineId": 124,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Obst",
+                "packageRoutineId": 125,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Rotes Fleisch reduzieren",
+                "packageRoutineId": 348,
+                "scheduleCategory": "MONTHLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Vollkorn probieren",
+                "packageRoutineId": 237,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Keine Fertiggerichte",
+                "packageRoutineId": 326,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Grünen Tee probieren",
+                "packageRoutineId": 332,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Bewusste Ernährung, 2": {
+            "packageOrder": "2",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 4,
+            "routines": [
+              {
+                "name": "2 Liter Wasser am Tag",
+                "packageRoutineId": 123,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Gemüse",
+                "packageRoutineId": 124,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Obst",
+                "packageRoutineId": 125,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Olivenöl",
+                "packageRoutineId": 129,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Ungesüßte Getränke",
+                "packageRoutineId": 238,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Auf Weißmehlprodukte verzichten",
+                "packageRoutineId": 323,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "An apple a day...",
+                "packageRoutineId": 307,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Olivenöl",
+                "packageRoutineId": 129,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "Bewusste Ernährung, 3": {
+            "packageOrder": "3",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 4,
+            "routines": [
+              {
+                "name": "2 Liter Wasser am Tag",
+                "packageRoutineId": 123,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Gemüse",
+                "packageRoutineId": 124,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Obst",
+                "packageRoutineId": 125,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Ungesüßte Getränke",
+                "packageRoutineId": 238,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Hülsenfrüchte integrieren",
+                "packageRoutineId": 249,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Keine Fertiggerichte",
+                "packageRoutineId": 325,
+                "scheduleCategory": "MONTHLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Bewusste Ernährung, 4": {
+            "packageOrder": "4",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 4,
+            "routines": [
+              {
+                "name": "2 Liter Wasser am Tag",
+                "packageRoutineId": 123,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Gemüse",
+                "packageRoutineId": 124,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Obst",
+                "packageRoutineId": 125,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Olivenöl",
+                "packageRoutineId": 129,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Ungesüßte Getränke",
+                "packageRoutineId": 238,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Vollkorn essen",
+                "packageRoutineId": 127,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Kohlenhydrate aufwärmen",
+                "packageRoutineId": 304,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Fermentierte Lebensmittel probieren",
+                "packageRoutineId": 240,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Bewusste Ernährung, 5": {
+            "packageOrder": "5",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 4,
+            "routines": [
+              {
+                "name": "2 Liter Wasser am Tag",
+                "packageRoutineId": 123,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Gemüse",
+                "packageRoutineId": 124,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Obst",
+                "packageRoutineId": 125,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Olivenöl",
+                "packageRoutineId": 129,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Ungesüßte Getränke",
+                "packageRoutineId": 238,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Mehr Vollkorn essen",
+                "packageRoutineId": 127,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Grünen Tee trinken",
+                "packageRoutineId": 242,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Natriumarme Ernährung",
+                "packageRoutineId": 243,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Von Grund auf selber kochen",
+                "packageRoutineId": 333,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          }
+        },
+        "FASTING BASICS": {
+          "Fasten, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
+              {
+                "name": "Keine zuckerhaltigen Getränke",
+                "packageRoutineId": 245,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Nicht naschen",
+                "packageRoutineId": 241,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Alkoholfreie Woche",
+                "packageRoutineId": 320,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Kalorienarmer Tag",
+                "packageRoutineId": 246,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Fasten, 2": {
+            "packageOrder": "2",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
+              {
+                "name": "2 Tage kalorienarm",
+                "packageRoutineId": 248,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Zuckerfreie Woche",
+                "packageRoutineId": 321,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Eine Mahlzeit auslassen",
+                "packageRoutineId": 250,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Selber kochen",
+                "packageRoutineId": 251,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Fasten, 3": {
+            "packageOrder": "3",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
+              {
+                "name": "Zwei Mahlzeiten auslassen",
+                "packageRoutineId": 252,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Drei Mahlzeiten auslassen",
+                "packageRoutineId": 253,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Vier Mahlzeiten auslassen",
+                "packageRoutineId": 254,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Fünf Mahlzeiten auslassen",
+                "packageRoutineId": 255,
+                "scheduleCategory": "WEEKLY_CHALLENGE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Fasten, 4": {
+            "packageOrder": "4",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
+              {
+                "name": "Fasten",
+                "packageRoutineId": 334,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Praktiziere 12:12 Intervallfasten",
+                "packageRoutineId": 256,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Fasten, 5": {
+            "packageOrder": "5",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
+              {
+                "name": "Praktiziere 14:10 Intervallfasten",
+                "packageRoutineId": 335,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Fasten, 6": {
+            "packageOrder": "6",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
+              {
+                "name": "Praktiziere 16:8 Intervallfasten",
+                "packageRoutineId": 336,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          }
+        }
+      },
+      "SLEEP": {
+        "SLEEP BASICS": {
+          "Schlafhygiene, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 6,
+            "routines": [
+              {
+                "name": "Zirkadianer Rhythmus",
+                "packageRoutineId": 257,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Vor dem Schlafen nicht auf einen Bildschirm schauen.",
+                "packageRoutineId": 140,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          }
+        }
+      },
+      "STRESS": {
+        "STRESS BASICS": {
+          "Atemübungen, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 7,
+            "routines": [
+              {
+                "name": "Bewusst Pausen machen",
+                "packageRoutineId": 189,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Deep breathing excersice 4-2-4",
+                "packageRoutineId": 356,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Bewusst nichts tun",
+                "packageRoutineId": 357,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Atemübungen, 2": {
+            "packageOrder": "2",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 7,
+            "routines": [
+              {
+                "name": "Bewusst Pausen machen",
+                "packageRoutineId": 189,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Deep breathing excersice 4-2-4",
+                "packageRoutineId": 356,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Zwerchfellatmung",
+                "packageRoutineId": 187,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Meditationsstart",
+                "packageRoutineId": 358,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          },
+          "Atemübungen, 3": {
+            "packageOrder": "3",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 7,
+            "routines": [
+              {
+                "name": "Bewusst Pausen machen",
+                "packageRoutineId": 189,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "1",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Deep breathing excersice 4-2-4",
+                "packageRoutineId": 356,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "2",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Zwerchfellatmung",
+                "packageRoutineId": 187,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Nasenatmung",
+                "packageRoutineId": 188,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              },
+              {
+                "name": "Meditationsstart",
+                "packageRoutineId": 358,
+                "scheduleCategory": "WEEKLY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "4",
+                "routineAffiliation": "INDIVIDUAL"
+              }
+            ]
+          }
+        }
+      },
+      "GRATITUDE": {
+        "GRATITUDE BASICS": {
+          "Dankbarkeit, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 8,
+            "routines": [
+              {
+                "name": "Maui-Gewohnheit",
+                "packageRoutineId": 154,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Dankbarkeitstagebuch",
+                "packageRoutineId": 155,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                "scheduleWeeks": "1, 2, 3, 4",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
