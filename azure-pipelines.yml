@@ -71,7 +71,7 @@ stages:
           AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
 
     - task: Docker@2
-      displayName: Build and push webhook_pubmed image
+      displayName: Build and push pubmed_scraper image
       inputs:
         command: buildAndPush
         containerRegistry: $(dockerRegistryServiceConnection)

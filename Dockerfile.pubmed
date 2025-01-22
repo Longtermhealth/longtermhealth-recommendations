@@ -82,4 +82,4 @@ ENV AZURE_BLOB_CONNECTION_STRING=$AZURE_BLOB_CONNECTION_STRING
 
 EXPOSE 5003
 
-CMD ["python", "webhook_pubmed.py"]
+CMD ["python", "pubmed_scraper.py"]
