@@ -345,7 +345,7 @@ def build_individual_routine_entry(routine):
     return individual_routine_entry
 
 
-def save_action_plan_json(final_action_plan, file_path='../data/action_plan.json'):
+def save_action_plan_json(final_action_plan, file_path='./data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False,
                   indent=2)
@@ -995,7 +995,7 @@ def main():
         daily_allocations["NUTRITION"]
     )
 
-    packages_file_path = "../data/packages_with_id.json"
+    packages_file_path = "./data/packages_with_id.json"
     with open(packages_file_path, "r") as file:
         data = json.load(file)
     print('selected_packages', selected_packages)
