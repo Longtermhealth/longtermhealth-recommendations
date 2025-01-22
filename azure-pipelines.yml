@@ -6,32 +6,55 @@ resources:
 
 variables:
   dockerRegistryServiceConnection: 'a4f04d2d-a3e1-40ae-80aa-321005f23c28'
-  imageRepository: 'lthrecommendations'
   containerRegistry: 'lthrecommendations.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
 
+  imageRepositoryMain: 'lthrecommendations_main'
+  imageRepositoryPubmed: 'lthrecommendations_pubmed'
+
+  dockerfileMain: '$(Build.SourcesDirectory)/Dockerfile.main'
+  dockerfilePubmed: '$(Build.SourcesDirectory)/Dockerfile.pubmed'
+
+  tag: '$(Build.BuildId)'
   vmImageName: 'ubuntu-latest'
+
+  CLICKUP_API_KEY: $(CLICKUP_API_KEY)
+  CLICKUP_LIST_ID: $(CLICKUP_LIST_ID)
+  SCORES_FIELD_ID: $(SCORES_FIELD_ID)
+  PLOT_FIELD_ID: $(PLOT_FIELD_ID)
+  ANSWERS_FIELD_ID: $(ANSWERS_FIELD_ID)
+  ROUTINES_FIELD_ID: $(ROUTINES_FIELD_ID)
+  ACTIONPLAN_FIELD_ID: $(ACTIONPLAN_FIELD_ID)
+  TYPEFORM_API_KEY: $(TYPEFORM_API_KEY)
+  STRAPI_API_KEY: $(STRAPI_API_KEY)
+  FORM_ID: $(FORM_ID)
+  LINK_SUMMARY_TITLE_FIELD_ID: $(LINK_SUMMARY_TITLE_FIELD_ID)
+  LINK_SUMMARY_SUMMARY_FIELD_ID: $(LINK_SUMMARY_SUMMARY_FIELD_ID)
+  LINK_SUMMARY_OPENAI_API_KEY: $(LINK_SUMMARY_OPENAI_API_KEY)
+  AZURE_BLOB_CONNECTION_STRING: $(AZURE_BLOB_CONNECTION_STRING)
 
 stages:
 - stage: Build
-  displayName: Build and push stage
+  displayName: Build and Push Stage
   jobs:
   - job: Build
-    displayName: Build
+    displayName: Build Docker Images
     pool:
       vmImage: $(vmImageName)
+
     steps:
+    - checkout: self
+
     - task: Docker@2
-      displayName: Build and push an image to container registry
+      displayName: Build and push main_flask image
       inputs:
         command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
+        repository: $(imageRepositoryMain)
+        dockerfile: $(dockerfileMain)
         tags: |
           $(tag)
-        buildArgs: |
+        buildContext: '$(Build.SourcesDirectory)'
+        buildArguments: |
           CLICKUP_API_KEY=$(CLICKUP_API_KEY)
           CLICKUP_LIST_ID=$(CLICKUP_LIST_ID)
           SCORES_FIELD_ID=$(SCORES_FIELD_ID)
@@ -42,16 +65,33 @@ stages:
           TYPEFORM_API_KEY=$(TYPEFORM_API_KEY)
           STRAPI_API_KEY=$(STRAPI_API_KEY)
           FORM_ID=$(FORM_ID)
+          LINK_SUMMARY_TITLE_FIELD_ID=$(LINK_SUMMARY_TITLE_FIELD_ID)
+          LINK_SUMMARY_SUMMARY_FIELD_ID=$(LINK_SUMMARY_SUMMARY_FIELD_ID)
+          LINK_SUMMARY_OPENAI_API_KEY=$(LINK_SUMMARY_OPENAI_API_KEY)
           AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
-      env:
-        CLICKUP_API_KEY: $(CLICKUP_API_KEY)
-        CLICKUP_LIST_ID: $(CLICKUP_LIST_ID)
-        SCORES_FIELD_ID: $(SCORES_FIELD_ID)
-        PLOT_FIELD_ID: $(PLOT_FIELD_ID)
-        ANSWERS_FIELD_ID: $(ANSWERS_FIELD_ID)
-        ROUTINES_FIELD_ID: $(ROUTINES_FIELD_ID)
-        ACTIONPLAN_FIELD_ID: $(ACTIONPLAN_FIELD_ID)
-        TYPEFORM_API_KEY: $(TYPEFORM_API_KEY)
-        STRAPI_API_KEY: $(STRAPI_API_KEY)
-        FORM_ID: $(FORM_ID)
-        AZURE_BLOB_CONNECTION_STRING: $(AZURE_BLOB_CONNECTION_STRING)
+
+    - task: Docker@2
+      displayName: Build and push webhook_pubmed image
+      inputs:
+        command: buildAndPush
+        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: $(imageRepositoryPubmed)
+        dockerfile: $(dockerfilePubmed)
+        tags: |
+          $(tag)
+        buildContext: '$(Build.SourcesDirectory)'
+        buildArguments: |
+          CLICKUP_API_KEY=$(CLICKUP_API_KEY)
+          CLICKUP_LIST_ID=$(CLICKUP_LIST_ID)
+          SCORES_FIELD_ID=$(SCORES_FIELD_ID)
+          PLOT_FIELD_ID=$(PLOT_FIELD_ID)
+          ANSWERS_FIELD_ID=$(ANSWERS_FIELD_ID)
+          ROUTINES_FIELD_ID=$(ROUTINES_FIELD_ID)
+          ACTIONPLAN_FIELD_ID=$(ACTIONPLAN_FIELD_ID)
+          TYPEFORM_API_KEY=$(TYPEFORM_API_KEY)
+          STRAPI_API_KEY=$(STRAPI_API_KEY)
+          FORM_ID=$(FORM_ID)
+          LINK_SUMMARY_TITLE_FIELD_ID=$(LINK_SUMMARY_TITLE_FIELD_ID)
+          LINK_SUMMARY_SUMMARY_FIELD_ID=$(LINK_SUMMARY_SUMMARY_FIELD_ID)
+          LINK_SUMMARY_OPENAI_API_KEY=$(LINK_SUMMARY_OPENAI_API_KEY)
+          AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
