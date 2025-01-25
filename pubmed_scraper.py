@@ -1923,4 +1923,4 @@ def extract_oxford_academic_info(driver):
 
 if __name__ == "__main__":
     print("Starting Flask app on port 5003.")
-    app.run(port=5003)
+    app.run(port=80)

@@ -17,6 +17,9 @@ variables:
   tag: '$(Build.BuildId)'
   vmImageName: 'ubuntu-latest'
 
+  lthrecommendationAppName: 'lthrecommendation'
+  lthpubmedAppName: 'lthpubmed'
+
   CLICKUP_API_KEY: $(CLICKUP_API_KEY)
   CLICKUP_LIST_ID: $(CLICKUP_LIST_ID)
   SCORES_FIELD_ID: $(SCORES_FIELD_ID)
@@ -95,3 +98,35 @@ stages:
           LINK_SUMMARY_SUMMARY_FIELD_ID=$(LINK_SUMMARY_SUMMARY_FIELD_ID)
           LINK_SUMMARY_OPENAI_API_KEY=$(LINK_SUMMARY_OPENAI_API_KEY)
           AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
+
+- stage: Deploy
+  displayName: Deploy Stage
+  dependsOn: Build
+  jobs:
+  - job: DeployMain
+    displayName: Deploy main_flask to lthrecommendation
+    pool:
+      vmImage: $(vmImageName)
+
+    steps:
+    - task: AzureWebAppContainer@1
+      displayName: Deploy main_flask image
+      inputs:
+        azureSubscription: '$(dockerRegistryServiceConnection)'
+        appName: '$(lthrecommendationAppName)'
+        containers: |
+          $(containerRegistry)/$(imageRepositoryMain):$(tag)
+
+  - job: DeployPubmed
+    displayName: Deploy pubmed_scraper to lthpubmed
+    pool:
+      vmImage: $(vmImageName)
+
+    steps:
+    - task: AzureWebAppContainer@1
+      displayName: Deploy pubmed_scraper image
+      inputs:
+        azureSubscription: '$(dockerRegistryServiceConnection)'
+        appName: '$(lthpubmedAppName)'
+        containers: |
+          $(containerRegistry)/$(imageRepositoryPubmed):$(tag)
