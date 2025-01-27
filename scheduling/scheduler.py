@@ -1,12 +1,8 @@
-# scheduling/scheduler.py
-
 import json
 from datetime import datetime, timedelta, timezone
-from random import random
 from typing import List, Dict, Any, Optional, Set
-from rule_based_system.scheduling.filter_service_offline import main as get_routines_with_defaults
-from rule_based_system.data.strapi_post_action_plan import strapi_post_action_plan
-from rule_based_system.data.strapi_post_health_scores import strapi_post_health_scores
+from scheduling.filter_service import main as get_routines_with_defaults
+from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
 
 SUPER_ROUTINE_CONFIG = {
     "sleep_superroutine": {
@@ -18,6 +14,12 @@ SUPER_ROUTINE_CONFIG = {
             "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die "
             "anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "ROUTINE",
+                "displayName": "Routine"
+            }
+        },
         "displayName": "Abendritual",
         "pillar_de": "Schlaf",
         "timeOfDay": "EVENING",
@@ -35,6 +37,12 @@ SUPER_ROUTINE_CONFIG = {
             "Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend "
             "sorgen Dehnübungen für eine bessere Regeneration und Entspannung."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
         "displayName": "Fullbody Workout",
         "pillar_de": "Bewegung",
         "timeOfDay": "ANY",
@@ -52,6 +60,12 @@ SUPER_ROUTINE_CONFIG = {
             "Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend "
             "sorgen Dehnübungen für eine bessere Regeneration und Entspannung."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
         "displayName": "Unterkörper-Krafttraining",
         "pillar_de": "Bewegung",
         "timeOfDay": "ANY",
@@ -69,6 +83,12 @@ SUPER_ROUTINE_CONFIG = {
             "Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend "
             "sorgen Dehnübungen für eine bessere Regeneration und Entspannung."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
         "displayName": "Core-Krafttraining",
         "pillar_de": "Bewegung",
         "timeOfDay": "ANY",
@@ -86,6 +106,12 @@ SUPER_ROUTINE_CONFIG = {
             "Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend "
             "sorgen Dehnübungen für eine bessere Regeneration und Entspannung."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
         "displayName": "Oberkörper-Krafttraining",
         "pillar_de": "Bewegung",
         "timeOfDay": "ANY",
@@ -105,6 +131,12 @@ SUPER_ROUTINE_CONFIG = {
             "Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten "
             "Lebensmitteln gehören ebenfalls dazu."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "ROUTINE",
+                "displayName": "Routine"
+            }
+        },
         "displayName": "Bewusste Ernährung",
         "pillar_de": "Ernährung",
         "timeOfDay": "ANY",
@@ -117,8 +149,14 @@ SUPER_ROUTINE_CONFIG = {
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
         "description": (
-            "Dankbarkeitsritual"
+            "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag."
         ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "ROUTINE",
+                "displayName": "Routine"
+            }
+        },
         "displayName": "Dankbarkeitsritual",
         "pillar_de": "Dankbarkeit",
         "timeOfDay": "ANY",
