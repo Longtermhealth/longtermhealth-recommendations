@@ -243,7 +243,6 @@ def create_health_scores_with_structure(account_id, health_scores):
         "data": {
             "totalScore": int(total_score),
             "accountId": account_id,
-            "scoreChartImageUrl": f"https://lthstore.blob.core.windows.net/images/{account_id}_1.png",
             "pillarScores": pillars
         }
     }
@@ -659,9 +658,6 @@ def check_parent_routine_ids(selected_packages, tag_counts_dicts):
 
 def main():
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults()
-
-    daily_time = 300
-    account_id = 102
 
     if gender == "Weiblich":
         gender = "FEMALE"
