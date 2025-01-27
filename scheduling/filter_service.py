@@ -645,6 +645,13 @@ def main():
         daily_time = 90
 
 
+    MOVEMENT_PACKAGE_MAPPING = {
+        20: "MOVEMENT BASICS SHORT",
+        40: "MOVEMENT BASICS MEDIUM",
+        50: "MOVEMENT BASICS MEDIUM",
+        90: "MOVEMENT BASICS LONG"
+    }
+
     print('daily_time',daily_time)
     basics = user_data.get('basics', {})
     weight = basics.get('Wie viel wiegst du (in kg)?')
@@ -747,7 +754,7 @@ def main():
             subcategory = None
 
             if pillar == "MOVEMENT":
-                subcategory = "MOVEMENT BASICS SHORT"
+                subcategory = MOVEMENT_PACKAGE_MAPPING.get(daily_time, "MOVEMENT BASICS SHORT")
                 package_name, package = find_package_with_fallback(
                     packages_data,
                     pillar="MOVEMENT",
