@@ -330,7 +330,7 @@ def load_routines_for_rules(file_path):
 
 
 def save_action_plan_json(final_action_plan,
-                          file_path='./dateaction_plan.json'):
+                          file_path='./data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False, indent=2)
 
@@ -698,7 +698,7 @@ def add_individual_routine_entry_without_parent(
 
 def create_individual_routines(selected_pkgs, routines_data, target_package='GRATITUDE BASICS'):
     routine_ids_with_parent = []
-    # Collect all packages matching the target_package tag
+
     matching_packages = [pkg for pkg in selected_pkgs if pkg['packageTag'].upper() == target_package.upper()]
 
     if not matching_packages:
@@ -845,6 +845,25 @@ def check_parent_routine_ids(selected_packages, tag_counts_dicts):
             matching_parent_ids.append(parent_id)
 
     return matching_parent_ids
+
+
+def get_all_present_tags(selected_packages: List[Dict[str, Any]]) -> Set[str]:
+    """
+    Extracts all unique package tags from the selected_packages.
+
+    Args:
+        selected_packages (List[Dict[str, Any]]): The list of selected package dictionaries.
+
+    Returns:
+        Set[str]: A set of unique package tags.
+    """
+    present_tags = set()
+    for package in selected_packages:
+        tag = package.get('packageTag', '').strip().upper()
+        if tag:
+            present_tags.add(tag)
+    print(f"All present tags: {present_tags}")
+    return present_tags
 
 
 def main():
@@ -1038,21 +1057,57 @@ def main():
                 parent_id
             )
 
+    TAG_TO_FUNCTION_MAP = {
+        'STRESS BASICS': create_individual_routines,
+        'SLEEP BASICS': create_individual_routines,
+        'GRATITUDE BASICS': create_individual_routines,
+        'FASTING BASICS': create_individual_routines,
+        'NUTRITION BASICS': create_individual_routines,
+        'MOVEMENT BASICS SHORT': create_individual_routines,
+        'MOVEMENT BASICS MEDIUM': create_individual_routines,
+        'MOVEMENT BASICS LONG': create_individual_routines,
+        '5 MINUTE CARDIO': create_individual_routines,
+    }
+    present_tags = get_all_present_tags(selected_packages)
+    for tag in present_tags:
+        func = TAG_TO_FUNCTION_MAP.get(tag)
+        if func:
+            print(f"\nProcessing tag: {tag}")
+            individual_routines = func(selected_packages, routines, target_package=tag)
+            print(f"Created individual routines for tag: {tag}")
+
+            for entry in individual_routines:
+                if entry.get('routineAffiliation') == 'INDIVIDUAL':
+                    parent_id = None
+                else:
+                    parent_id = entry.get('parentRoutineId', 0)
+
+                add_individual_routine_entry(
+                    final_action_plan,
+                    routines_list,
+                    entry["routineUniqueId"],
+                    entry["scheduleCategory"],
+                    entry["scheduleDays"],
+                    entry["scheduleWeeks"],
+                    entry["packageTag"],
+                    routine_unique_id_map,
+                    parent_id
+                )
+        else:
+            print(f"No function mapped for tag: {tag}. Skipping.")
+
+    """
     individual_routines_stress = create_individual_routines(selected_packages, routines, target_package='STRESS BASICS')
     individual_routines_sleep = create_individual_routines(selected_packages, routines, target_package='SLEEP BASICS')
-    individual_routines_gratitude = create_individual_routines(selected_packages, routines,
-                                                               target_package='GRATITUDE BASICS')
-    individual_routines_fasting = create_individual_routines(selected_packages, routines,
-                                                             target_package='FASTING BASICS')
-    individual_routines_nutrition = create_individual_routines(selected_packages, routines,
-                                                               target_package='NUTRITION BASICS')
-    individual_routines_movement = create_individual_routines(selected_packages, routines,
-                                                              target_package='MOVEMENT BASICS SHORT')
-    individual_routines_fatburn = create_individual_routines(selected_packages, routines,
-                                                             target_package='5 MINUTE CARDIO')
+    individual_routines_gratitude = create_individual_routines(selected_packages, routines, target_package='GRATITUDE BASICS')
+    individual_routines_fasting = create_individual_routines(selected_packages, routines, target_package='FASTING BASICS')
+    individual_routines_nutrition = create_individual_routines(selected_packages, routines, target_package='NUTRITION BASICS')
+    individual_routines_movement = create_individual_routines(selected_packages, routines, target_package='MOVEMENT BASICS SHORT')
+    individual_routines_fatburn = create_individual_routines(selected_packages, routines, target_package='5 MINUTE CARDIO')
+
 
     for entry in individual_routines_sleep:
-        print('entryentry', entry)
+        print('entryentry',entry)
         if entry.get('routineAffiliation') == 'INDIVIDUAL':
             parent_id = None
         else:
@@ -1122,6 +1177,7 @@ def main():
             parent_id
         )
 
+
     for entry in individual_routines_nutrition:
         if entry.get('routineAffiliation') == 'INDIVIDUAL':
             parent_id = None
@@ -1174,7 +1230,7 @@ def main():
             routine_unique_id_map,
             parent_id
         )
-
+    """
     save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)
