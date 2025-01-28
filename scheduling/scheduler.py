@@ -4,7 +4,6 @@ from typing import List, Dict, Any, Optional, Set
 from scheduling.filter_service import main as get_routines_with_defaults
 from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
 
-
 SUPER_ROUTINE_CONFIG = {
     "sleep_superroutine": {
         "routineId": 998,
@@ -331,7 +330,7 @@ def load_routines_for_rules(file_path):
 
 
 def save_action_plan_json(final_action_plan,
-                          file_path='./data/action_plan.json'):
+                          file_path='./dateaction_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False, indent=2)
 
@@ -725,12 +724,11 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
             )
 
             if not matching_routine:
-                print(f"No matching routine found for packageRoutineId: {package_routine_id}")
                 continue
 
             individual_routines_local.append({
                 'routineUniqueId': matching_routine['id'],
-                'name': routine_pkg.get('name', 'Unnamed routine'),
+                'name': routine_pkg['name'],
                 'scheduleCategory': schedule_category,
                 'scheduleDays': schedule_days,
                 'scheduleWeeks': schedule_weeks,
@@ -739,11 +737,8 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
                 'packageTag': package_tag
             })
 
-            if routine_affiliation == "PARENT" and parent_routine_id:
-                routine_ids_with_parent.append(parent_routine_id)
-            else:
-                if routine_affiliation == "PARENT":
-                    print(f"parentRoutineId is missing for routine {routine_pkg.get('name')}")
+            if routine_affiliation == "PARENT":
+                routine_ids_with_parent.append(routine_pkg['parentRoutineId'])
 
             print('routine_ids_with_parent', routine_ids_with_parent)
 
@@ -1045,17 +1040,19 @@ def main():
 
     individual_routines_stress = create_individual_routines(selected_packages, routines, target_package='STRESS BASICS')
     individual_routines_sleep = create_individual_routines(selected_packages, routines, target_package='SLEEP BASICS')
-    individual_routines_gratitude = create_individual_routines(selected_packages, routines, target_package='GRATITUDE BASICS')
-    individual_routines_fasting = create_individual_routines(selected_packages, routines, target_package='FASTING BASICS')
-    individual_routines_nutrition = create_individual_routines(selected_packages, routines, target_package='NUTRITION BASICS')
-    individual_routines_movement_short = create_individual_routines(selected_packages, routines, target_package='MOVEMENT BASICS SHORT')
-    individual_routines_movement_medium = create_individual_routines(selected_packages, routines, target_package='MOVEMENT BASICS MEDIUM')
-    individual_routines_movement_long = create_individual_routines(selected_packages, routines, target_package='MOVEMENT BASICS LONG')
-    individual_routines_fatburn = create_individual_routines(selected_packages, routines, target_package='5 MINUTE CARDIO')
-
+    individual_routines_gratitude = create_individual_routines(selected_packages, routines,
+                                                               target_package='GRATITUDE BASICS')
+    individual_routines_fasting = create_individual_routines(selected_packages, routines,
+                                                             target_package='FASTING BASICS')
+    individual_routines_nutrition = create_individual_routines(selected_packages, routines,
+                                                               target_package='NUTRITION BASICS')
+    individual_routines_movement = create_individual_routines(selected_packages, routines,
+                                                              target_package='MOVEMENT BASICS SHORT')
+    individual_routines_fatburn = create_individual_routines(selected_packages, routines,
+                                                             target_package='5 MINUTE CARDIO')
 
     for entry in individual_routines_sleep:
-        print('entryentry',entry)
+        print('entryentry', entry)
         if entry.get('routineAffiliation') == 'INDIVIDUAL':
             parent_id = None
         else:
@@ -1125,7 +1122,6 @@ def main():
             parent_id
         )
 
-
     for entry in individual_routines_nutrition:
         if entry.get('routineAffiliation') == 'INDIVIDUAL':
             parent_id = None
@@ -1144,41 +1140,7 @@ def main():
             parent_id
         )
 
-    for entry in individual_routines_movement_short:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    for entry in individual_routines_movement_medium:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    for entry in individual_routines_movement_long:
+    for entry in individual_routines_movement:
         if entry.get('routineAffiliation') == 'INDIVIDUAL':
             parent_id = None
         else:
