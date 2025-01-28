@@ -4,6 +4,7 @@ from typing import List, Dict, Any, Optional, Set
 from scheduling.filter_service import main as get_routines_with_defaults
 from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
 
+
 SUPER_ROUTINE_CONFIG = {
     "sleep_superroutine": {
         "routineId": 998,
@@ -116,6 +117,146 @@ SUPER_ROUTINE_CONFIG = {
         "pillar_de": "Bewegung",
         "timeOfDay": "ANY",
         "scheduleDays": [1, 2, 3, 4, 5],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_1_superroutine": {
+        "routineId": 988,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 1",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [1],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_2_superroutine": {
+        "routineId": 985,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 2",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [2],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_3_superroutine": {
+        "routineId": 984,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 3",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [3],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_4_superroutine": {
+        "routineId": 983,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 4",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [4],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_5_superroutine": {
+        "routineId": 982,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 5",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [5],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_6_superroutine": {
+        "routineId": 981,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 6",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [6],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "5_minute_cardio_7_superroutine": {
+        "routineId": 980,
+        "pillar": "MOVEMENT",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "description": (
+            "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "MINUTES",
+                "displayName": "Minuten"
+            }
+        },
+        "displayName": "5 Minuten Cardio Workout, 7",
+        "pillar_de": "Bewegung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [7],
         "scheduleCategory": "WEEKLY_ROUTINE",
     },
     "nutrition_super_routine": {
@@ -250,9 +391,9 @@ def create_health_scores_with_structure(account_id, health_scores):
 
     def get_score_details(pillar, score):
         if score < 50:
-            rating = "FOCUS"
+            rating = "FOKUS"
         elif 50 <= score < 80:
-            rating = "GOOD"
+            rating = "GUT"
         else:
             rating = "OPTIMAL"
         return {
@@ -297,6 +438,7 @@ def add_individual_routine_entry(
         scheduleCategory: str,
         scheduleDays: str,
         scheduleWeeks: str,
+        packageTag: str,
         routine_unique_id_map: Dict[int, int],
         parentRoutineId: Optional[int] = None,
 ) -> None:
@@ -345,7 +487,6 @@ def add_individual_routine_entry(
         expiration_date = calculate_expiration_date(days=7)
 
     routine_class = routine.get('attributes', {}).get('routineClass')
-
     if routine_class and isinstance(routine_class, dict):
         package_name = routine_class.get('routineClassEnum', 'DefaultEnum')
         routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
@@ -388,7 +529,7 @@ def add_individual_routine_entry(
         "scheduleWeeks": scheduleWeeks,
         "scheduleCategory": scheduleCategory,
         "packageName": routine_class_display_name,
-        "packageTag": "packageTag",
+        "packageTag": packageTag,
         "parentRoutineId": mapped_id,
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
@@ -437,7 +578,7 @@ def add_individual_routine_entry(
                 "scheduleWeeks": super_routine_config.get("scheduleWeeks", "1,2,3,4"),
                 "scheduleCategory": super_routine_config.get("scheduleCategory", "DAILY_ROUTINE"),
                 "packageName": routine_class_display_name,
-                "packageTag": "packageTag",
+                "packageTag": packageTag,
                 "parentRoutineId": None,
                 **({"expirationDate": calculate_expiration_date(days=28)} if super_routine_config.get(
                     "scheduleCategory") in ["MONTHLY_CHALLENGE", "WEEKLY_ROUTINE"] else {})
@@ -456,6 +597,7 @@ def add_individual_routine_entry_without_parent(
         scheduleCategory: str,
         scheduleDays: str,
         scheduleWeeks: str,
+        packageTag: str,
         routine_unique_id_map: Dict[int, int],
         parentRoutineId: Optional[int] = None,
 ) -> None:
@@ -547,7 +689,7 @@ def add_individual_routine_entry_without_parent(
         "scheduleWeeks": scheduleWeeks,
         "scheduleCategory": scheduleCategory,
         "packageName": routine_class_display_name,
-        "packageTag": "packageTag",
+        "packageTag": packageTag,
         "parentRoutineId": mapped_id,
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
@@ -557,38 +699,49 @@ def add_individual_routine_entry_without_parent(
 
 def create_individual_routines(selected_pkgs, routines_data, target_package='GRATITUDE BASICS'):
     routine_ids_with_parent = []
-    target_package = next(
-        (pkg for pkg in selected_pkgs if pkg['packageTag'].upper() == target_package.upper()), None
-    )
-    if not target_package:
-        print(f"No package found for pillar '{target_package}'.")
+    matching_packages = [pkg for pkg in selected_pkgs if pkg['packageTag'].upper() == target_package.upper()]
+
+    if not matching_packages:
+        print(f"No packages found for tag '{target_package}'.")
         return []
-    package_routines = target_package.get('selected_package', {}).get('routines', [])
+
     individual_routines_local = []
-    for routine_pkg in package_routines:
-        package_routine_id = routine_pkg.get('packageRoutineId')
-        schedule_category = routine_pkg.get('scheduleCategory')
-        schedule_days = routine_pkg.get('scheduleDays')
-        schedule_weeks = routine_pkg.get('scheduleWeeks')
-        routine_affiliation = routine_pkg.get('routineAffiliation')
-        parent_routine_id = routine_pkg.get('parentRoutineId')
-        matching_routine = next(
-            (r for r in routines_data if r['attributes'].get('routineUniqueId') == package_routine_id), None
-        )
-        if not matching_routine:
-            continue
-        individual_routines_local.append({
-            'routineUniqueId': matching_routine['id'],
-            'name': routine_pkg['name'],
-            'scheduleCategory': schedule_category,
-            'scheduleDays': schedule_days,
-            'scheduleWeeks': schedule_weeks,
-            'routineAffiliation': routine_affiliation,
-            'parentRoutineId': parent_routine_id
-        })
-        if routine_affiliation == "PARENT":
-            routine_ids_with_parent.append(routine_pkg['parentRoutineId'])
-        print('routine_ids_with_parent', routine_ids_with_parent)
+
+    for target_package in matching_packages:
+        package_tag = target_package.get('packageTag')
+        package_routines = target_package.get('selected_package', {}).get('routines', [])
+
+        for routine_pkg in package_routines:
+            package_routine_id = routine_pkg.get('packageRoutineId')
+            schedule_category = routine_pkg.get('scheduleCategory')
+            schedule_days = routine_pkg.get('scheduleDays')
+            schedule_weeks = routine_pkg.get('scheduleWeeks')
+            routine_affiliation = routine_pkg.get('routineAffiliation')
+            parent_routine_id = routine_pkg.get('parentRoutineId')
+
+            matching_routine = next(
+                (r for r in routines_data if r['attributes'].get('routineUniqueId') == package_routine_id), None
+            )
+
+            if not matching_routine:
+                continue
+
+            individual_routines_local.append({
+                'routineUniqueId': matching_routine['id'],
+                'name': routine_pkg['name'],
+                'scheduleCategory': schedule_category,
+                'scheduleDays': schedule_days,
+                'scheduleWeeks': schedule_weeks,
+                'routineAffiliation': routine_affiliation,
+                'parentRoutineId': parent_routine_id,
+                'packageTag': package_tag
+            })
+
+            if routine_affiliation == "PARENT":
+                routine_ids_with_parent.append(routine_pkg['parentRoutineId'])
+
+            print('routine_ids_with_parent', routine_ids_with_parent)
+
     return individual_routines_local
 
 
@@ -767,7 +920,7 @@ def main():
         "parentRoutineId": 996,
         "tags": {
             "warm-up, lower_body_strength_training": 2,
-            "lower_body_strength_training": 3,
+            "lower_body_strength_training": 6,
             "mobility_sport": 2
         }
     }
@@ -776,7 +929,7 @@ def main():
         "parentRoutineId": 995,
         "tags": {
             "warm-up": 2,
-            "upper_body_strength_training": 10,
+            "upper_body_strength_training": 6,
             "mobility_sport": 2
         }
     }
@@ -816,6 +969,7 @@ def main():
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
                 "1",
+                "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
             )
@@ -836,6 +990,7 @@ def main():
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
                 "1",
+                "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
             )
@@ -856,6 +1011,7 @@ def main():
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
                 "1",
+                "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
             )
@@ -877,6 +1033,7 @@ def main():
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
                 "1",
+                "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
             )
@@ -891,6 +1048,8 @@ def main():
                                                                target_package='NUTRITION BASICS')
     individual_routines_movement = create_individual_routines(selected_packages, routines,
                                                               target_package='MOVEMENT BASICS SHORT')
+    individual_routines_fatburn = create_individual_routines(selected_packages, routines,
+                                                             target_package='5 MINUTE CARDIO')
 
     for entry in individual_routines_sleep:
         print('entryentry', entry)
@@ -907,6 +1066,7 @@ def main():
             entry["scheduleCategory"],
             entry["scheduleDays"],
             entry["scheduleWeeks"],
+            entry["packageTag"],
             routine_unique_id_map,
             parent_id
         )
@@ -923,6 +1083,7 @@ def main():
             entry["scheduleCategory"],
             entry["scheduleDays"],
             entry["scheduleWeeks"],
+            entry["packageTag"],
             routine_unique_id_map,
             parent_id
         )
@@ -939,6 +1100,7 @@ def main():
             entry["scheduleCategory"],
             entry["scheduleDays"],
             entry["scheduleWeeks"],
+            entry["packageTag"],
             routine_unique_id_map,
             parent_id
         )
@@ -955,6 +1117,7 @@ def main():
             entry["scheduleCategory"],
             entry["scheduleDays"],
             entry["scheduleWeeks"],
+            entry["packageTag"],
             routine_unique_id_map,
             parent_id
         )
@@ -972,6 +1135,7 @@ def main():
             entry["scheduleCategory"],
             entry["scheduleDays"],
             entry["scheduleWeeks"],
+            entry["packageTag"],
             routine_unique_id_map,
             parent_id
         )
@@ -989,6 +1153,24 @@ def main():
             entry["scheduleCategory"],
             entry["scheduleDays"],
             entry["scheduleWeeks"],
+            entry["packageTag"],
+            routine_unique_id_map,
+            parent_id
+        )
+    for entry in individual_routines_fatburn:
+        if entry.get('routineAffiliation') == 'INDIVIDUAL':
+            parent_id = None
+        else:
+            parent_id = entry.get('parentRoutineId', 0)
+
+        add_individual_routine_entry(
+            final_action_plan,
+            routines_list,
+            entry["routineUniqueId"],
+            entry["scheduleCategory"],
+            entry["scheduleDays"],
+            entry["scheduleWeeks"],
+            entry["packageTag"],
             routine_unique_id_map,
             parent_id
         )

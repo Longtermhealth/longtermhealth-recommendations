@@ -1,9 +1,7 @@
 import json
 import logging
 from typing import Dict, Any, List
-
 from assessments.health_assessment import HealthAssessment
-from rules.rule_service import evaluate_rule
 from utils.data_processing import integrate_answers
 from utils.strapi_api import strapi_get_all_routines
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
@@ -19,8 +17,6 @@ valid_pillars = [
 ]
 
 
-
-
 def load_json_data(file_path: str) -> List[Dict[str, Any]]:
     """Load data from a JSON file and return it as a list of dictionaries."""
     try:
@@ -34,14 +30,10 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
         return []
 
 
-def new_load_routines() -> List[Dict[str, Any]]:
-    """Load routines from the new JSON structure."""
-    return load_json_data('./data/strapi_all_routines.json')
-
 
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
-    return load_json_data('./data/rules.json')
+    return load_json_data('./data/new_rule.json')
 
 def calculate_bmi(weight: float, height: float) -> float:
     if height <= 0:
@@ -56,6 +48,17 @@ def add_benefits_to_user_profile(user_profile, goals_benefits_map):
         for benefit in benefits:
             if benefit not in user_profile["benefits"]:
                 user_profile["benefits"].append(benefit)
+
+
+def save_routines_to_json(routines, file_path):
+    try:
+        with open(file_path, 'w') as f:
+            json.dump(routines, f, indent=4)
+        print(f"Routines successfully saved to {file_path}")
+    except Exception as e:
+        logger.error(f"An error occurred while saving routines: {e}")
+
+
 
 
 def apply_global_exclusions(user_data, exclusion_rules, routines):
@@ -87,19 +90,17 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
                     for routine in routines:
                         attributes = routine.get('attributes', {})
 
-
                         dynamic_field_value = check_dynamic_field(attributes, field_to_check)
-
 
                         if isinstance(dynamic_field_value, list):
                             if exclude_value in dynamic_field_value:
-                                routine['rule_status'] = 'excluded'
+                                routine['rule_status'] = 'excluded' 
                                 routine['score_rules'] = 0
                                 routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                                 excluded_rules.add(
                                     (rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
                         elif dynamic_field_value == exclude_value:
-                            routine['rule_status'] = 'excluded'
+                            routine['rule_status'] = 'excluded'  
                             routine['score_rules'] = 0
                             routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                             excluded_rules.add((rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
@@ -160,6 +161,7 @@ def filter_inclusions(pillar_data, pillar_name, pillar_rules, routines, user_dat
 
                                 routine['rule_status'] = 'included'
                                 routine['score_rules'] = routine_scores[routine_id]
+
                                 combined_explanations = " | ".join(routine_explanations[routine_id])
                                 routine["score_rules_explanation"] = (
                                     f"Routine '{routine['attributes'].get('name', 'Unnamed Routine')}' recommended under pillar '{pillar_name}' "
@@ -259,9 +261,9 @@ def evaluate_condition(user_value, operator, condition_value):
 def check_dynamic_field(attributes, field):
     """Retrieve the value of a dynamic field (like tags.tag)."""
     if attributes is None:
-        return None
+        return None  
 
-    fields = field.split('.')
+    fields = field.split('.')  
 
     for f in fields:
         if isinstance(attributes, list):
@@ -331,7 +333,9 @@ input_static_template = {
         "Ich versuche, die positive Seite von Stress und Druck zu sehen.": None,
         "Ich tue alles, damit Stress erst gar nicht entsteht.": None,
         "Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.": None,
-        "Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.": None
+        "Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.": None,
+        "Machst du aktuell Übungen zum Stressabbau?": None
+
     },
     "GRATITUDE": {
         "Ich habe so viel im Leben, wofür ich dankbar sein kann.": None,
@@ -359,6 +363,9 @@ input_static_template = {
         "Total Score": None
     }
 }
+
+
+logger = logging.getLogger(__name__)
 
 def set_value(template, key, answers, default=None, log_missing=True):
     """
@@ -433,7 +440,8 @@ def map_answers(answers, scores):
         ('Ich versuche, die positive Seite von Stress und Druck zu sehen.', None),
         ('Ich tue alles, damit Stress erst gar nicht entsteht.', None),
         ('Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.', None),
-        ('Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.', None)
+        ('Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.', None),
+        ('Machst du aktuell Übungen zum Stressabbau?',None)
     ]
     for key, default in stress_keys:
         set_value(input_static_template['STRESS'], key, answers, default)
@@ -470,126 +478,75 @@ def map_answers(answers, scores):
     print(output_json)
     return output_json
 
-def get_order(score: float) -> int:
-    if score < 0:
-        raise ValueError("Score cannot be negative.")
-    elif score <= 20:
+
+
+def map_cardio_score_to_order(score: float) -> int:
+    """
+    Maps a cardio score to an order based on defined score ranges.
+
+    :param score: The user's 5 MINUTE CARDIO score.
+    :return: The corresponding order (1, 2, or 3).
+    """
+    if 0 <= score < 50:
         return 1
-    elif score <= 40:
+    elif 50 <= score < 80:
         return 2
-    elif score <= 60:
+    elif 80 <= score <= 100:
         return 3
-    elif score <= 80:
-        return 4
     else:
-        return 5
-
-def set_fasten_order(answer: str) -> int:
-    answer_to_order = {
-        "Nein": 1,
-        "16:8 (täglich 16 Stunden fasten)": 4,
-        "14:10 (täglich 14 Stunden fasten)": 3,
-        "12:12 (täglich 12 Stunden fasten)": 2,
-        "5:2 (an 2 Tagen der Woche nur Einnahme von 500 (Frauen) bzw. 600 (Männer) Kalorien.)": 4,
-        "Eat Stop Eat (1-2 x pro Woche für 24 Stunden fasten)": 3,
-        "Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorienaufnahme)": 5,
-        "Spontanes Auslassen einer Mahlzeit (regelmäßiges Auslassen einzelner Mahlzeiten)": 3,
-        "Sonstiges": None
-    }
-    return answer_to_order.get(answer, None)
-
-
-def parse_package_key(pkg_key):
-    """
-    Returns the full package key as packageName.
-
-    :param pkg_key: The package key string (e.g., "Sport, 1, kurz").
-    :return: The full packageKey as packageName.
-    """
-    package_name = pkg_key.strip() if pkg_key else pkg_key
-    return package_name
-
-def load_packages(file_path):
-    try:
-        with open(file_path, "r", encoding='utf-8') as file:
-            data = json.load(file)
-            logger.debug(f"Loaded packages data from '{file_path}'.")
-            return data
-    except Exception as e:
-        logger.error(f"Failed to load {file_path}: {e}")
-        return {}
-
-def find_package_with_fallback(packages_data, pillar, subcategory, order=None):
-    """
-    Find a package based on pillar, subcategory, and order.
-    If no exact match is found, fallback to the closest lower order.
-    :param packages_data: Loaded JSON data.
-    :param pillar: The pillar name (e.g., "MOVEMENT").
-    :param subcategory: The subcategory name (e.g., "MOVEMENT BASICS").
-    :param order: The package order (e.g., 1).
-    :return: packageName and the package dictionary, or (None, None).
-    """
-    try:
-        logger.debug(
-            f"Searching for Pillar: '{pillar}', Subcategory: '{subcategory}', Order: '{order}'")
-        subcategories = packages_data.get("packages", {}).get("pillars", {}).get(pillar, {})
-        if not subcategories:
-            available_subcats = list(packages_data.get("packages", {}).get("pillars", {}).get(pillar, {}).keys())
-            logger.debug(
-                f"No subcategories found for pillar '{pillar}'. Available subcategories: {available_subcats}")
-            return (None, None)
-        subcat = subcategories.get(subcategory, {})
-        if not subcat:
-            available_subcats = list(subcategories.keys())
-            logger.debug(
-                f"No subcategory '{subcategory}' found under pillar '{pillar}'. Available subcategories: {available_subcats}")
-            return (None, None)
-
-        packages = []
-        for pkg_key, pkg in subcat.items():
-            try:
-                pkg_order = int(pkg.get("packageOrder"))
-            except (TypeError, ValueError):
-                logger.warning(
-                    f"Invalid packageOrder '{pkg.get('packageOrder')}' for package '{pkg_key}'. Skipping.")
-                continue
-            packages.append((pkg_order, pkg_key, pkg))
-        if not packages:
-            logger.debug(f"No valid packages found under pillar '{pillar}' and subcategory '{subcategory}'.")
-            return (None, None)
-
-        packages.sort(key=lambda x: x[0])
-
-        for pkg_order, pkg_key, pkg in packages:
-            if order and pkg_order == order:
-                package_name = parse_package_key(pkg_key)
-                logger.debug(
-                    f"Exact match found: '{pkg_key}' with Order='{pkg_order}'")
-                return (package_name, pkg)
-
-        available_orders = sorted([pkg_order for pkg_order, _, _ in packages])
-        fallback_order = None
-        for o in reversed(available_orders):
-            if order and o <= order:
-                fallback_order = o
-                break
-
-        if fallback_order:
-            for pkg_order, pkg_key, pkg in packages:
-                if pkg_order == fallback_order:
-                    package_name = parse_package_key(pkg_key)
-                    logger.debug(
-                        f"Fallback match found: '{pkg_key}' with Order='{pkg_order}'")
-                    return (package_name, pkg)
-
-        logger.debug(
-            f"No package found with Order <= {order} for Pillar '{pillar}' and Subcategory '{subcategory}'.")
-    except Exception as e:
-        logger.error(f"Error finding package in {pillar} - {subcategory}: {e}")
-    return (None, None)
+        raise ValueError("Score must be between 0 and 100.")
 
 
 def main():
+    """
+    answers = {
+        'accountId': '83',
+        'Vorname': 'Test',
+        'Biologisches Geschlecht:': 'Weiblich',
+        'Geburtsjahr': 1988,
+        'Was ist deine Körpergröße (in cm)?': 173,
+        'Wie viel wiegst du (in kg)?': 74,
+        'Rauchst du?': False,
+        'Wie oft in der Woche treibst du eine Cardio-Sportart?': 3,
+        'Wie schätzt du deine Kraft ein?': 3,
+        'Wie schätzt du deine Beweglichkeit ein?': 3,
+        'Wie aktiv bist du im Alltag?': 4,
+        'Welcher Ernährungsstil trifft bei dir am ehesten zu?': 'Kein Fleisch, kein Fisch (vegetarisch)',
+        'Wie viel zuckerhaltige Produkte nimmst du zu dir?': 2,
+        'Wie häufig nimmst du Fertiggerichte zu dir?': 3,
+        'Wie viel Vollkorn nimmst du zu dir?': 4,
+        'Praktizierst du Intervallfasten und auf welche Art?': '14:10 (täglich 14 Stunden fasten)',
+        'Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?': '4-6',
+        'Wie viel Alkohol trinkst du in der Woche?': '4-6',
+        'Wie ist deine Schlafqualität?': 'Gut',
+        'Wie viele Stunden schläfst du im Durchschnitt pro Nacht?': '4-6',
+        'Fühlst du dich tagsüber müde?': 2,
+        'Wie viel Zeit verbringst du morgens draußen?': '5-10 min',
+        'Wie viel Zeit verbringst du abends draußen?': '5-10 min',
+        'Wie oft unternimmst du etwas mit anderen Menschen?': 'Ca. 3-4x pro Monat',
+        'Bist du sozial engagiert?': 'Freiwilligenarbeit',
+        'Fühlst du dich einsam?': 3,
+        'Leidest du aktuell unter Stress?': 4,
+        'Ich versuche, die positive Seite von Stress und Druck zu sehen.': 4,
+        'Ich tue alles, damit Stress erst gar nicht entsteht.': 4,
+        'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.': 4,
+        'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': 4,
+        'Machst du aktuell Übungen zum Stressabbau?': 'Würde ich gern, aber ich weiß nicht wie',
+        'Ich habe so viel im Leben, wofür ich dankbar sein kann.': 4,
+        'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': 4,
+        'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': 4,
+        'Ich bin vielen verschiedenen Menschen dankbar.': 4,
+        'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': 4,
+        'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': 4,
+        'Wie würdest du deine Vergesslichkeit einstufen?': 2,
+        'Wie gut ist dein Konzentrationsvermögen?': 4,
+        'Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?': 3,
+        'Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?': '4-6 Stunden',
+        'Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?': '3-4 Stunden',
+        'Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?': '30-45 Minuten'
+    }
+    """
+
 
     field_mapping = get_field_mapping()
     responses = get_responses()
@@ -597,6 +554,8 @@ def main():
     if not (responses and field_mapping):
         logger.error("No responses or field mapping available.")
         return "No responses or field mapping available.", 400
+
+
 
     answers = process_latest_response(responses, field_mapping)
     gender = answers.get('Biologisches Geschlecht:', None)
@@ -625,25 +584,31 @@ def main():
         "STRESS": float(assessment.stress_management_assessment.report()),
         "COGNITIVE_ENHANCEMENT": float(assessment.cognition_assessment.report()),
     }
+
+
     total_score = float(assessment.calculate_total_score())
     scores["Total Score"] = total_score
+
+
 
     output_json = map_answers(answers, scores)
     user_data = json.loads(output_json)
 
-    account_id = answers.get('accountid', None)
-    daily_time = answers.get(
-        'Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?',0
-    )
-    if daily_time == '15-30 Minuten':
-        daily_time = 30
-    elif daily_time == '30-45 Minuten':
-        daily_time = 45
-    elif daily_time == '45-60 Minuten':
-        daily_time = 60
-    elif daily_time == '> 60 Minuten':
+    account_id = answers.get('accountId', None)
+    print('account_id',account_id)
+    mapping_daily_time =  answers.get("Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?", 0)
+    if mapping_daily_time == '15-30 Minuten':
+        daily_time = 20
+        print('daily_time', daily_time)
+    elif mapping_daily_time == '30-45 Minuten':
+        daily_time = 40
+        print('daily_time', daily_time)
+    elif mapping_daily_time == '45-60 Minuten':
+        daily_time = 50
+        print('daily_time', daily_time)
+    elif mapping_daily_time == '> 60 Minuten':
         daily_time = 90
-
+        print('daily_time', daily_time)
 
     MOVEMENT_PACKAGE_MAPPING = {
         20: "MOVEMENT BASICS SHORT",
@@ -652,7 +617,9 @@ def main():
         90: "MOVEMENT BASICS LONG"
     }
 
-    print('daily_time',daily_time)
+
+
+
     basics = user_data.get('basics', {})
     weight = basics.get('Wie viel wiegst du (in kg)?')
     height_cm = basics.get('Was ist deine Körpergröße (in cm)?')
@@ -670,20 +637,32 @@ def main():
 
     rules = new_load_rules()
     routines = strapi_get_all_routines()
-
+    
     processed_routines = set()
 
     routines_with_exclusions = apply_global_exclusions(user_data, rules.get('exclusion_rules', []), routines)
+
 
     for pillar, pillar_data in user_data.items():
         if pillar not in valid_pillars:
             continue
         pillar_rules = rules.get('inclusion_rules', {}).get(pillar, [])
+
         routines_with_exclusions = filter_inclusions(
             pillar_data, pillar, pillar_rules, routines_with_exclusions, user_data, processed_routines
         )
 
+
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
+
+
+    output_file_path = './data/routines_with_scores.json'
+    try:
+        with open(output_file_path, 'w') as f:
+            json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
+        print(f"Routines successfully saved to {output_file_path}")
+    except Exception as e:
+        logger.error(f"An error occurred while saving routines: {e}")
 
     print("\nExcluded Rules and Actions:")
     for rule_name, action in excluded_rules:
@@ -696,33 +675,256 @@ def main():
     print('Health Scores: ', scores)
 
 
-    packages_file_path = "./data/packages.json"
-    packages_data = load_packages(packages_file_path)
 
-    fasten_answer = answers.get('Praktizierst du Intervallfasten und auf welche Art?', None)
+    def get_order(score: float) -> int:
+        if score < 0:
+            raise ValueError("Score cannot be negative.")
+        elif score <= 20:
+            return 1
+        elif score <= 40:
+            return 2
+        elif score <= 60:
+            return 3
+        elif score <= 80:
+            return 4
+        else:
+            return 5
+
+
+    def set_fasten_order(answer: str) -> int:
+        answer_to_order = {
+            "Nein": 1,
+            "16:8 (täglich 16 Stunden fasten)": 4,
+            "14:10 (täglich 14 Stunden fasten)": 3,
+            "12:12 (täglich 12 Stunden fasten)": 2,
+            "5:2 (an 2 Tagen der Woche nur Einnahme von 500 (Frauen) bzw. 600 (Männer) Kalorien.)": 4,
+            "Eat Stop Eat (1-2 x pro Woche für 24 Stunden fasten)": 3,
+            "Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorienaufnahme)": 5,
+            "Spontanes Auslassen einer Mahlzeit (regelmäßiges Auslassen einzelner Mahlzeiten)": 3,
+            "Sonstiges": None
+        }
+        return answer_to_order.get(answer, None)
+
+
+    def parse_package_key(pkg_key):
+        """
+        Returns the full package key as packageName.
+
+        :param pkg_key: The package key string (e.g., "Sport, 1, kurz").
+        :return: The full packageKey as packageName.
+        """
+        package_name = pkg_key.strip() if pkg_key else pkg_key
+        return package_name
+
+
+    def load_packages(file_path):
+        try:
+            with open(file_path, "r", encoding='utf-8') as file:
+                data = json.load(file)
+                print(f"Loaded packages data from '{file_path}'.")
+                return data
+        except Exception as e:
+            logger.error(f"Failed to load {file_path}: {e}")
+            return {}
+
+
+    def find_package_with_fallback(packages_data, pillar, subcategory, order=None):
+        """
+        Find a package based on pillar, subcategory, and order.
+        If no exact match is found, fallback to the closest lower order.
+
+        :param packages_data: Loaded JSON data.
+        :param pillar: The pillar name (e.g., "MOVEMENT").
+        :param subcategory: The subcategory name (e.g., "MOVEMENT BASICS").
+        :param order: The package order (e.g., 1).
+        :return: packageName and the package dictionary, or (None, None).
+        """
+        try:
+            print(
+                f"Searching for Pillar: '{pillar}', Subcategory: '{subcategory}', Order: '{order}'")
+            subcategories = packages_data.get("packages", {}).get("pillars", {}).get(pillar, {})
+            if not subcategories:
+                available_subcats = list(packages_data.get("packages", {}).get("pillars", {}).get(pillar, {}).keys())
+                print(
+                    f"No subcategories found for pillar '{pillar}'. Available subcategories: {available_subcats}")
+                return (None, None)
+
+            subcat = subcategories.get(subcategory, {})
+            if not subcat:
+                available_subcats = list(subcategories.keys())
+                print(
+                    f"No subcategory '{subcategory}' found under pillar '{pillar}'. Available subcategories: {available_subcats}")
+                return (None, None)
+
+
+            packages = []
+            for pkg_key, pkg in subcat.items():
+                try:
+                    pkg_order = int(pkg.get("packageOrder"))
+                except (TypeError, ValueError):
+                    logger.warning(
+                        f"Invalid packageOrder '{pkg.get('packageOrder')}' for package '{pkg_key}'. Skipping.")
+                    continue
+                packages.append((pkg_order, pkg_key, pkg))
+
+            if not packages:
+                print(f"No valid packages found under pillar '{pillar}' and subcategory '{subcategory}'.")
+                return (None, None)
+
+
+            packages.sort(key=lambda x: x[0])
+
+
+            for pkg_order, pkg_key, pkg in packages:
+                if order and pkg_order == order:
+                    package_name = parse_package_key(pkg_key)
+                    print(
+                        f"Exact match found: '{pkg_key}' with Order='{pkg_order}'")
+                    return (package_name, pkg)
+
+            available_orders = sorted([pkg_order for pkg_order, _, _ in packages])
+            fallback_order = None
+            for o in reversed(available_orders):
+                if order and o <= order:
+                    fallback_order = o
+                    break
+
+            if fallback_order:
+                for pkg_order, pkg_key, pkg in packages:
+                    if pkg_order == fallback_order:
+                        package_name = parse_package_key(pkg_key)
+                        print(
+                            f"Fallback match found: '{pkg_key}' with Order='{pkg_order}'")
+                        return (package_name, pkg)
+
+            print(
+                f"No package found with Order <= {order} for Pillar '{pillar}' and Subcategory '{subcategory}'.")
+        except Exception as e:
+            logger.error(f"Error finding package in {pillar} - {subcategory}: {e}")
+        return (None, None)
+
+    packages_file_path = "./data/packages.json"
+
+    packages_data = load_packages(packages_file_path)
+    selected_packages = []
+
+    def find_all_cardio_packages(packages_data: Dict[str, Any], pillar: str, subcategory: str,
+                                 package_unique_id: int) -> List[Dict[str, Any]]:
+        """
+        Find all 5 MINUTE CARDIO packages within a pillar and subcategory that match the given packageUniqueId.
+
+        :param packages_data: The loaded packages data.
+        :param pillar: The pillar name (e.g., "MOVEMENT").
+        :param subcategory: The subcategory name (e.g., "5 MINUTE CARDIO").
+        :param package_unique_id: The packageUniqueId to match.
+        :return: A list of matching package dictionaries with 'packageName' included.
+        """
+        matched_packages = []
+        try:
+            cardio_subcategory = packages_data.get("packages", {}).get("pillars", {}).get(pillar, {}).get(subcategory,
+                                                                                                          {})
+            if not cardio_subcategory:
+                logger.warning(f"No subcategory '{subcategory}' found under pillar '{pillar}'.")
+                return matched_packages
+
+            for pkg_key, pkg in cardio_subcategory.items():
+                if pkg.get("packageUniqueId") == package_unique_id:
+                    matched_packages.append({
+                        "pillar": pillar,
+                        "packageName": parse_package_key(pkg_key),
+                        "packageTag": subcategory,
+                        "selected_package": pkg
+                    })
+
+            if not matched_packages:
+                logger.warning(
+                    f"No 5 MINUTE CARDIO packages found with packageUniqueId {package_unique_id} under pillar '{pillar}'.")
+        except Exception as e:
+            logger.error(f"Error finding cardio packages: {e}")
+
+        return matched_packages
+
+
+
+    ORDER_TO_PACKAGE_UNIQUE_ID = {
+        1: 10,
+        2: 11,
+        3: 12
+    }
+    movement_score = scores.get("MOVEMENT", 0)
+    try:
+        cardio_order = map_cardio_score_to_order(movement_score)
+        logger.debug(f"CARDIO Score: {movement_score}, Order: {cardio_order}")
+    except ValueError as ve:
+        logger.error(f"Invalid CARDIO score: {ve}")
+        cardio_order = None
+
+    cardio_package_unique_id = ORDER_TO_PACKAGE_UNIQUE_ID.get(cardio_order, None)
+    if cardio_package_unique_id:
+        logger.debug(f"Mapped Order {cardio_order} to packageUniqueId {cardio_package_unique_id} for 5 MINUTE CARDIO.")
+    else:
+        logger.warning(f"No packageUniqueId mapping found for CARDIO Order {cardio_order}.")
+
+    if cardio_package_unique_id:
+        cardio_packages = find_all_cardio_packages(
+            packages_data,
+            pillar="MOVEMENT",
+            subcategory="5 MINUTE CARDIO",
+            package_unique_id=cardio_package_unique_id
+        )
+
+        selected_packages.extend(cardio_packages)
+        for cardio_pkg in cardio_packages:
+            package_name = cardio_pkg.get("packageName", "Unnamed 5 MINUTE CARDIO Package")
+            logger.info(
+                f"Selected 5 MINUTE CARDIO Package: {package_name} with packageUniqueId {cardio_package_unique_id}")
+    else:
+        logger.warning("No 5 MINUTE CARDIO packageUniqueId determined; skipping CARDIO package selection.")
+
+    meditation_answer = answers.get('Machst du aktuell Übungen zum Stressabbau?', None)
+    print('meditation_answer',meditation_answer)
+    MEDITATION_ORDER_MAP = {
+        "Nein": 1,
+        "Würde ich gern, aber ich weiß nicht wie": 2,
+        "Habe ich schon mal": 3,
+        "Mache ich schon": 4
+    }
+    stress_order = MEDITATION_ORDER_MAP.get(meditation_answer, 0) 
+    if stress_order == 0:
+        print(f"Unexpected meditation_answer: {meditation_answer}")
+
+
+
     fasten_answer = answers.get('Praktizierst du Intervallfasten und auf welche Art?', None)
     if fasten_answer and bmi >= 18:
         fasten_order = set_fasten_order(fasten_answer)
-        logger.debug(f"Fasting order determined: {fasten_order}")
+        print(f"Fasting order determined: {fasten_order}")
     else:
         fasten_order = 0
-        logger.debug("Fasting not applicable based on BMI or answer.")
+        print("Fasting not applicable based on BMI or answer.")
+
 
     score_order_list = []
     for pillar, score in scores.items():
-        try:
-            order = get_order(score)
-            logger.debug(f"Pillar '{pillar}': Score={score}, Order={order}")
-        except ValueError as e:
-            logger.error(f"Error determining order for {pillar}: {e}")
-            order = None
+        if pillar == "STRESS":
+            order = stress_order
+            logger.debug(f"Pillar '{pillar}': Score={score}, Order={order} (based on meditation_answer)")
+        else:
+            try:
+                order = get_order(score)
+                logger.debug(f"Pillar '{pillar}': Score={score}, Order={order}")
+            except ValueError as e:
+                logger.error(f"Error determining order for {pillar}: {e}")
+                order = None
         score_order_list.append({
             "pillar": pillar,
             "score": score,
             "order": order
         })
+    print("Debug: Pillar Scores with Orders:")
+    print(json.dumps(score_order_list, ensure_ascii=False, indent=2))
 
-    fasten_order = 1
+
 
     if fasten_order and fasten_order > 0:
         package_name, fasting_package = find_package_with_fallback(
@@ -744,14 +946,14 @@ def main():
     print("Pillar Scores with Orders:")
     print(json.dumps(score_order_list, ensure_ascii=False, indent=2))
 
-    selected_packages = []
+
     for entry in score_order_list:
         if entry["order"] is not None:
             pillar = entry["pillar"].upper()
             order = entry["order"]
             package = None
             package_name = None
-            subcategory = None
+            subcategory = None 
 
             if pillar == "MOVEMENT":
                 subcategory = MOVEMENT_PACKAGE_MAPPING.get(daily_time, "MOVEMENT BASICS SHORT")
@@ -799,6 +1001,9 @@ def main():
                     subcategory=subcategory,
                     order=order
                 )
+                if not package:
+                    print(f"No package found for Pillar: 'STRESS' with Order: {order}")
+
             elif pillar == "GRATITUDE":
                 subcategory = "GRATITUDE BASICS"
                 package_name, package = find_package_with_fallback(
@@ -836,20 +1041,17 @@ def main():
                 selected_packages.append({
                     "pillar": entry["pillar"],
                     "packageName": package_name,
-                    "packageTag": subcategory, 
+                    "packageTag": subcategory,
                     "selected_package": package
                 })
             else:
                 logger.warning(f"No package selected for Pillar: '{entry['pillar']}' with Order: {order}")
 
+
     print("\nSelected Packages:")
     print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
 
     return account_id, daily_time, routines_with_defaults, scores, user_data, answers, gender, selected_packages
-
-
-
-
 
 if __name__ == '__main__':
     main()
