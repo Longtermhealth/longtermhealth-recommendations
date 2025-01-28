@@ -33,7 +33,7 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
-    return load_json_data('../data/new_rule.json')
+    return load_json_data('./data/rules.json')
 
 def calculate_bmi(weight: float, height: float) -> float:
     if height <= 0:
@@ -94,13 +94,13 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
 
                         if isinstance(dynamic_field_value, list):
                             if exclude_value in dynamic_field_value:
-                                routine['rule_status'] = 'excluded' 
+                                routine['rule_status'] = 'excluded'
                                 routine['score_rules'] = 0
                                 routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                                 excluded_rules.add(
                                     (rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
                         elif dynamic_field_value == exclude_value:
-                            routine['rule_status'] = 'excluded'  
+                            routine['rule_status'] = 'excluded'
                             routine['score_rules'] = 0
                             routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                             excluded_rules.add((rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
@@ -261,9 +261,9 @@ def evaluate_condition(user_value, operator, condition_value):
 def check_dynamic_field(attributes, field):
     """Retrieve the value of a dynamic field (like tags.tag)."""
     if attributes is None:
-        return None  
+        return None
 
-    fields = field.split('.')  
+    fields = field.split('.')
 
     for f in fields:
         if isinstance(attributes, list):
@@ -637,7 +637,7 @@ def main():
 
     rules = new_load_rules()
     routines = strapi_get_all_routines()
-    
+
     processed_routines = set()
 
     routines_with_exclusions = apply_global_exclusions(user_data, rules.get('exclusion_rules', []), routines)
@@ -656,7 +656,7 @@ def main():
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
 
 
-    output_file_path = '../data/routines_with_scores.json'
+    output_file_path = './data/routines_with_scores.json'
     try:
         with open(output_file_path, 'w') as f:
             json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
@@ -803,7 +803,7 @@ def main():
             logger.error(f"Error finding package in {pillar} - {subcategory}: {e}")
         return (None, None)
 
-    packages_file_path = "../data/packages.json"
+    packages_file_path = "./data/packages.json"
 
     packages_data = load_packages(packages_file_path)
     selected_packages = []
