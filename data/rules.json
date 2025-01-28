@@ -29,7 +29,7 @@
         }
       },
         {
-      "name": "Exclude Vollkorn",
+      "name": "Exclude Wholegrain",
       "pillar": "NUTRITION",
       "condition": {
         "field": "Wie viel Vollkorn nimmst du zu dir?",
@@ -39,6 +39,71 @@
       "action": {
         "field": "category",
         "value": "WHOLE_GRAINS"
+      }
+    },
+           {
+      "name": "Exclude Sugar",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie viel zuckerhaltige Produkte nimmst du zu dir?",
+        "operator": "<=",
+        "value": 2
+      },
+      "action": {
+          "field": "variations.variation",
+          "value": "cut-out sugar"
+      }
+    },
+      {
+      "name": "Exclude Meat (vegetarian)",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Welcher Ernährungsstil trifft bei dir am ehesten zu?",
+        "operator": "==",
+        "value": "Kein Fleisch, kein Fisch (vegetarisch)"
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "meat"
+      }
+    },
+          {
+      "name": "Exclude Meat (vegan)",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Welcher Ernährungsstil trifft bei dir am ehesten zu?",
+        "operator": "==",
+        "value": "Keine tierischen Produkte (vegan)"
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "meat"
+      }
+    },
+    {
+      "name": "Exclude Meat (pescetarian)",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Welcher Ernährungsstil trifft bei dir am ehesten zu?",
+        "operator": "==",
+        "value": "Kein Fleisch, aber Fisch (pescetarisch)"
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "meat"
+      }
+    },
+        {
+      "name": "Exclude Covenience Food",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie häufig nimmst du Fertiggerichte zu dir?",
+        "operator": ">=",
+        "value": 3
+      },
+      "action": {
+        "field": "cleanedName",
+        "value": "Fertiggerichte vermeiden"
       }
     },
         {
@@ -173,10 +238,10 @@
       "name": "Exclude if really low in all exercise questions -> really unfit",
       "pillar": "MOVEMENT",
       "conditions": {
-        "logic": "or",
+        "logic": "and",
         "rules": [
           {
-            "field": "Wie oft in der Woche treibst du Sport?",
+            "field": "Wie oft in der Woche treibst du eine Cardio-Sportart?",
             "operator": "==",
             "value": 0
           },
@@ -186,9 +251,9 @@
             "value": 1
           },
           {
-            "field": "Wie aktiv bist du im Alltag?",
+            "field": "Wie schätzt du deine Kraft ein?",
             "operator": "==",
-            "value": 2
+            "value": 1
           }
         ]
       },
@@ -211,7 +276,7 @@
       "name": "Exclude Sports if already more than 2x per week",
       "pillar": "MOVEMENT",
       "condition": {
-        "field": "Wie oft in der Woche treibst du Sport?",
+        "field": "Wie oft in der Woche treibst du eine Cardio-Sportart?",
         "operator": ">=",
         "value": 2
       },
@@ -409,12 +474,12 @@
           "logic": "and",
           "rules": [
             {
-              "field": "Wie oft in der Woche treibst du Sport?",
+              "field": "Wie oft in der Woche treibst du eine Cardio-Sportart?",
               "operator": "==",
               "value": "6"
             },
             {
-              "field": "Wie oft in der Woche treibst du Sport?",
+              "field": "Wie oft in der Woche treibst du eine Cardio-Sportart?",
               "operator": "==",
               "value": "6"
             }
@@ -445,12 +510,12 @@
           "logic": "and",
           "rules": [
             {
-              "field": "Wie oft in der Woche treibst du Sport?",
+              "field": "Wie oft in der Woche treibst du eine Cardio-Sportart?",
               "operator": "==",
               "value": "6"
             },
             {
-              "field": "Wie oft in der Woche treibst du Sport?",
+              "field": "Wie oft in der Woche treibst du eine Cardio-Sportart?",
               "operator": "==",
               "value": "6"
             }
