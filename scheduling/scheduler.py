@@ -699,6 +699,7 @@ def add_individual_routine_entry_without_parent(
 
 def create_individual_routines(selected_pkgs, routines_data, target_package='GRATITUDE BASICS'):
     routine_ids_with_parent = []
+    # Collect all packages matching the target_package tag
     matching_packages = [pkg for pkg in selected_pkgs if pkg['packageTag'].upper() == target_package.upper()]
 
     if not matching_packages:
@@ -724,11 +725,12 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
             )
 
             if not matching_routine:
+                print(f"No matching routine found for packageRoutineId: {package_routine_id}")
                 continue
 
             individual_routines_local.append({
                 'routineUniqueId': matching_routine['id'],
-                'name': routine_pkg['name'],
+                'name': routine_pkg.get('name', 'Unnamed routine'),
                 'scheduleCategory': schedule_category,
                 'scheduleDays': schedule_days,
                 'scheduleWeeks': schedule_weeks,
@@ -737,8 +739,11 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
                 'packageTag': package_tag
             })
 
-            if routine_affiliation == "PARENT":
-                routine_ids_with_parent.append(routine_pkg['parentRoutineId'])
+            if routine_affiliation == "PARENT" and parent_routine_id:
+                routine_ids_with_parent.append(parent_routine_id)
+            else:
+                if routine_affiliation == "PARENT":
+                    print(f"parentRoutineId is missing for routine {routine_pkg.get('name')}")
 
             print('routine_ids_with_parent', routine_ids_with_parent)
 
