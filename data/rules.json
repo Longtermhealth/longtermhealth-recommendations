@@ -73,31 +73,43 @@
       }
     },
       {
-      "name": "Exclude Meat (vegetarian)",
+      "name": "Exclude Meat or Fish (vegetarian)",
       "pillar": "NUTRITION",
       "condition": {
         "field": "Welcher Ernährungsstil trifft bei dir am ehesten zu?",
         "operator": "==",
         "value": "Kein Fleisch, kein Fisch (vegetarisch)"
       },
-      "action": {
-        "field": "variations.variation",
-        "value": "meat"
-      }
-    },
+        "actions": [
           {
-      "name": "Exclude Meat (vegan)",
+            "field": "tags.tag",
+            "value": "meat"
+          },
+          {
+            "field": "tags.tag",
+            "value": "fish"
+          }
+        ]
+      },
+          {
+      "name": "Exclude Meat or Fish (vegan)",
       "pillar": "NUTRITION",
       "condition": {
         "field": "Welcher Ernährungsstil trifft bei dir am ehesten zu?",
         "operator": "==",
         "value": "Keine tierischen Produkte (vegan)"
       },
-      "action": {
-        "field": "variations.variation",
-        "value": "meat"
-      }
-    },
+        "actions": [
+          {
+            "field": "tags.tag",
+            "value": "meat"
+          },
+          {
+            "field": "tags.tag",
+            "value": "fish"
+          }
+        ]
+      },
     {
       "name": "Exclude Meat (pescetarian)",
       "pillar": "NUTRITION",
@@ -107,7 +119,7 @@
         "value": "Kein Fleisch, aber Fisch (pescetarisch)"
       },
       "action": {
-        "field": "variations.variation",
+        "field": "tags.tag",
         "value": "meat"
       }
     },
