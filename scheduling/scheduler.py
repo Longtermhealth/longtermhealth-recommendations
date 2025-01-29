@@ -283,6 +283,26 @@ SUPER_ROUTINE_CONFIG = {
         "scheduleDays": [1, 2, 3, 4, 5, 6, 7],
         "scheduleCategory": "DAILY_ROUTINE",
     },
+    "anti_inflammation_super_routine": {
+        "routineId": 986,
+        "pillar": "NUTRITION",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/986_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/986_16x9.jpg",
+        "description": (
+            "Das Anti-Entzündungs-Paket umfasst gezielte Ernährung und Nahrungsergänzungsmittel, die entzündungshemmend wirken. Es fördert die Gelenkgesundheit, reduziert Entzündungen im Körper und unterstützt das allgemeine Wohlbefinden."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "ROUTINE",
+                "displayName": "Routine"
+            }
+        },
+        "displayName": "Anti-Entzündungs-Paket",
+        "pillar_de": "Ernährung",
+        "timeOfDay": "ANY",
+        "scheduleDays": [1, 2, 3, 4, 5, 6, 7],
+        "scheduleCategory": "DAILY_ROUTINE",
+    },
     "gratitude_super_routine": {
         "routineId": 990,
         "pillar": "GRATITUDE",
@@ -486,9 +506,10 @@ def add_individual_routine_entry(
         expiration_date = calculate_expiration_date(days=7)
 
     routine_class = routine.get('attributes', {}).get('routineClass')
+    print('routine_class',routine)
     if routine_class and isinstance(routine_class, dict):
         package_name = routine_class.get('routineClassEnum', 'DefaultEnum')
-        routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
+        routine_class_display_name = routine_class.get('displayName', 'test')
     else:
         package_name = 'DefaultEnum'
         routine_class_display_name = 'DefaultDisplayName'
@@ -1067,6 +1088,7 @@ def main():
         'MOVEMENT BASICS MEDIUM': create_individual_routines,
         'MOVEMENT BASICS LONG': create_individual_routines,
         '5 MINUTE CARDIO': create_individual_routines,
+        'ANTI INFLAMMATION': create_individual_routines,
     }
     present_tags = get_all_present_tags(selected_packages)
     for tag in present_tags:
@@ -1096,141 +1118,6 @@ def main():
         else:
             print(f"No function mapped for tag: {tag}. Skipping.")
 
-    """
-    individual_routines_stress = create_individual_routines(selected_packages, routines, target_package='STRESS BASICS')
-    individual_routines_sleep = create_individual_routines(selected_packages, routines, target_package='SLEEP BASICS')
-    individual_routines_gratitude = create_individual_routines(selected_packages, routines, target_package='GRATITUDE BASICS')
-    individual_routines_fasting = create_individual_routines(selected_packages, routines, target_package='FASTING BASICS')
-    individual_routines_nutrition = create_individual_routines(selected_packages, routines, target_package='NUTRITION BASICS')
-    individual_routines_movement = create_individual_routines(selected_packages, routines, target_package='MOVEMENT BASICS SHORT')
-    individual_routines_fatburn = create_individual_routines(selected_packages, routines, target_package='5 MINUTE CARDIO')
-
-
-    for entry in individual_routines_sleep:
-        print('entryentry',entry)
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            print('test1')
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    for entry in individual_routines_stress:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    for entry in individual_routines_gratitude:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    for entry in individual_routines_fasting:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-
-
-    for entry in individual_routines_nutrition:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-
-    for entry in individual_routines_movement:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    for entry in individual_routines_fatburn:
-        if entry.get('routineAffiliation') == 'INDIVIDUAL':
-            parent_id = None
-        else:
-            parent_id = entry.get('parentRoutineId', 0)
-
-        add_individual_routine_entry(
-            final_action_plan,
-            routines_list,
-            entry["routineUniqueId"],
-            entry["scheduleCategory"],
-            entry["scheduleDays"],
-            entry["scheduleWeeks"],
-            entry["packageTag"],
-            routine_unique_id_map,
-            parent_id
-        )
-    """
     save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)

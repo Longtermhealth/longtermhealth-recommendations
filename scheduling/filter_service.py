@@ -30,6 +30,10 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
         return []
 
 
+def new_load_routines() -> List[Dict[str, Any]]:
+    """Load routines from the new JSON structure."""
+    return load_json_data('./data/strapi_all_routines.json')
+
 
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
@@ -498,55 +502,6 @@ def map_cardio_score_to_order(score: float) -> int:
 
 
 def main():
-    """
-    answers = {
-        'accountId': '83',
-        'Vorname': 'Test',
-        'Biologisches Geschlecht:': 'Weiblich',
-        'Geburtsjahr': 1988,
-        'Was ist deine Körpergröße (in cm)?': 173,
-        'Wie viel wiegst du (in kg)?': 74,
-        'Rauchst du?': False,
-        'Wie oft in der Woche treibst du eine Cardio-Sportart?': 3,
-        'Wie schätzt du deine Kraft ein?': 3,
-        'Wie schätzt du deine Beweglichkeit ein?': 3,
-        'Wie aktiv bist du im Alltag?': 4,
-        'Welcher Ernährungsstil trifft bei dir am ehesten zu?': 'Kein Fleisch, kein Fisch (vegetarisch)',
-        'Wie viel zuckerhaltige Produkte nimmst du zu dir?': 2,
-        'Wie häufig nimmst du Fertiggerichte zu dir?': 3,
-        'Wie viel Vollkorn nimmst du zu dir?': 4,
-        'Praktizierst du Intervallfasten und auf welche Art?': '14:10 (täglich 14 Stunden fasten)',
-        'Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?': '4-6',
-        'Wie viel Alkohol trinkst du in der Woche?': '4-6',
-        'Wie ist deine Schlafqualität?': 'Gut',
-        'Wie viele Stunden schläfst du im Durchschnitt pro Nacht?': '4-6',
-        'Fühlst du dich tagsüber müde?': 2,
-        'Wie viel Zeit verbringst du morgens draußen?': '5-10 min',
-        'Wie viel Zeit verbringst du abends draußen?': '5-10 min',
-        'Wie oft unternimmst du etwas mit anderen Menschen?': 'Ca. 3-4x pro Monat',
-        'Bist du sozial engagiert?': 'Freiwilligenarbeit',
-        'Fühlst du dich einsam?': 3,
-        'Leidest du aktuell unter Stress?': 4,
-        'Ich versuche, die positive Seite von Stress und Druck zu sehen.': 4,
-        'Ich tue alles, damit Stress erst gar nicht entsteht.': 4,
-        'Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.': 4,
-        'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.': 4,
-        'Machst du aktuell Übungen zum Stressabbau?': 'Würde ich gern, aber ich weiß nicht wie',
-        'Ich habe so viel im Leben, wofür ich dankbar sein kann.': 4,
-        'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': 4,
-        'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': 4,
-        'Ich bin vielen verschiedenen Menschen dankbar.': 4,
-        'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': 4,
-        'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': 4,
-        'Wie würdest du deine Vergesslichkeit einstufen?': 2,
-        'Wie gut ist dein Konzentrationsvermögen?': 4,
-        'Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?': 3,
-        'Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?': '4-6 Stunden',
-        'Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?': '3-4 Stunden',
-        'Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?': '30-45 Minuten'
-    }
-    """
-
 
     field_mapping = get_field_mapping()
     responses = get_responses()
@@ -656,7 +611,7 @@ def main():
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
 
 
-    output_file_path = './data/routines_with_scores.json'
+    output_file_path = '/rule_based_system/data/routines_with_scores.json'
     try:
         with open(output_file_path, 'w') as f:
             json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
@@ -881,6 +836,46 @@ def main():
     else:
         logger.warning("No 5 MINUTE CARDIO packageUniqueId determined; skipping CARDIO package selection.")
 
+    def select_anti_inflammation_package(packages_data: Dict[str, Any],
+                                         selected_packages: List[Dict[str, Any]]) -> None:
+        """
+        Selects the "ANTI INFLAMMATION" package with order 1 from the packages_data
+        and appends it to the selected_packages list.
+
+        :param packages_data: The loaded packages JSON data.
+        :param selected_packages: The list of currently selected packages.
+        """
+        try:
+            nutrition_pillar = packages_data["packages"]["pillars"]["NUTRITION"]
+            logger.debug("Accessed 'NUTRITION' pillar.")
+
+            anti_inflammation_subcat = nutrition_pillar["ANTI INFLAMMATION"]
+            logger.debug("Accessed 'ANTI INFLAMMATION' subcategory.")
+
+            inflammation_1 = anti_inflammation_subcat.get("Inflammation 1")
+
+            if inflammation_1:
+                inflammation_1["packageOrder"] = "1"
+                logger.info("Selected 'Inflammation 1' package for 'ANTI INFLAMMATION' with order 1.")
+
+                selected_packages.append({
+                    "pillar": "NUTRITION",
+                    "packageName": "Inflammation 1",
+                    "packageTag": "ANTI INFLAMMATION",
+                    "selected_package": inflammation_1
+                })
+                logger.debug("'Inflammation 1' package appended to selected_packages.")
+            else:
+                logger.warning("Inflammation 1 package not found under 'ANTI INFLAMMATION'.")
+
+        except KeyError as e:
+            logger.error(f"Key error while selecting 'ANTI INFLAMMATION' package: {e}")
+        except Exception as e:
+            logger.error(f"Unexpected error while selecting 'ANTI INFLAMMATION' package: {e}")
+
+
+    select_anti_inflammation_package(packages_data, selected_packages)
+
     meditation_answer = answers.get('Machst du aktuell Übungen zum Stressabbau?', None)
     print('meditation_answer',meditation_answer)
     MEDITATION_ORDER_MAP = {
@@ -889,7 +884,7 @@ def main():
         "Habe ich schon mal": 3,
         "Mache ich schon": 4
     }
-    stress_order = MEDITATION_ORDER_MAP.get(meditation_answer, 0) 
+    stress_order = MEDITATION_ORDER_MAP.get(meditation_answer, 0)
     if stress_order == 0:
         print(f"Unexpected meditation_answer: {meditation_answer}")
 
@@ -953,7 +948,7 @@ def main():
             order = entry["order"]
             package = None
             package_name = None
-            subcategory = None 
+            subcategory = None
 
             if pillar == "MOVEMENT":
                 subcategory = MOVEMENT_PACKAGE_MAPPING.get(daily_time, "MOVEMENT BASICS SHORT")
