@@ -350,7 +350,7 @@ def load_routines_for_rules(file_path):
 
 
 def save_action_plan_json(final_action_plan,
-                          file_path='../data/action_plan.json'):
+                          file_path='./data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False, indent=2)
 
@@ -506,10 +506,9 @@ def add_individual_routine_entry(
         expiration_date = calculate_expiration_date(days=7)
 
     routine_class = routine.get('attributes', {}).get('routineClass')
-    print('routine_class',routine_class)
     if routine_class and isinstance(routine_class, dict):
         package_name = routine_class.get('routineClassEnum', 'DefaultEnum')
-        routine_class_display_name = routine_class.get('displayName', 'test')
+        routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
     else:
         package_name = 'DefaultEnum'
         routine_class_display_name = 'DefaultDisplayName'
@@ -777,18 +776,20 @@ def build_routine_unique_id_map(routines_data):
 
 def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    Selects routines based on tag combinations and their required counts, ensuring no duplicates.
+    Selects routines based on tag combinations and their required counts, ensuring no duplicate variations.
 
     Args:
         tag_counts (Dict[str, int]): Dictionary where keys are tag combinations (comma-separated) and values are counts.
         routines (List[Dict[str, Any]]): List of all available routines.
 
     Returns:
-        List[Dict[str, Any]]: Selected routines based on tag combinations.
+        List[Dict[str, Any]]: Selected routines based on tag combinations without duplicate variations.
     """
     selected_routines = []
     selected_ids: Set[int] = set()
+    used_variations: Set[str] = set()  # Track variations that have already been selected
 
+    # Sort tag combinations by the number of tags (descending) to prioritize more specific combinations
     sorted_tag_combinations = sorted(tag_counts.keys(), key=lambda x: len(x.split(',')), reverse=True)
     print(f"Sorted tag combinations (prioritized): {sorted_tag_combinations}")
 
@@ -797,21 +798,39 @@ def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) 
         tags = [tag.strip() for tag in tag_combination.split(',')]
         print(f"\nProcessing tag combination: {tags} with required count: {required_count}")
 
+        # Find all routines matching the current tag combination
         matched = match_routines_by_tags(routines, tags)
+        print(f"Total matched routines for tags {tags}: {len(matched)}")
 
-        available = [routine for routine in matched if routine['id'] not in selected_ids]
-        print(f"Available routines after filtering duplicates: {len(available)}")
+        count_added = 0  # Counter for how many routines have been added for this tag combination
 
-        to_add = available[:required_count]
-        print(f"Selecting {len(to_add)} routines for tags {tags}")
+        for routine in matched:
+            if count_added >= required_count:
+                break  # Required number of routines for this tag combination has been met
 
-        selected_routines.extend(to_add)
-        selected_ids.update(routine['id'] for routine in to_add)
+            routine_id = routine.get('id')
+            if routine_id in selected_ids:
+                continue  # Skip if this routine has already been selected
 
-        if len(to_add) < required_count:
-            print(f"Warning: Only {len(to_add)} routines available for tags {tags}, but {required_count} required.")
+            # Extract all variation names for the current routine
+            routine_variations = routine.get('attributes', {}).get('variations', [])
+            variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
+
+            # Check if any of the routine's variations have already been used
+            if used_variations.isdisjoint(variation_names):
+                selected_routines.append(routine)
+                selected_ids.add(routine_id)
+                used_variations.update(variation_names)  # Mark these variations as used
+                count_added += 1
+                print(f"Selected routine ID {routine_id} with variations {variation_names}")
+            else:
+                overlapping_variations = variation_names.intersection(used_variations)
+                print(f"Skipping routine ID {routine_id} due to overlapping variations {overlapping_variations}")
+
+        if count_added < required_count:
+            print(f"Warning: Only {count_added} routines selected for tags {tags}, but {required_count} required.")
         else:
-            print(f"Successfully selected {len(to_add)} routines for tags {tags}.")
+            print(f"Successfully selected {count_added} routines for tags {tags}.")
 
     print(f"\nTotal selected routines: {len(selected_routines)}")
     return selected_routines
@@ -832,12 +851,8 @@ def match_routines_by_tags(routines: List[Dict[str, Any]], tags: List[str]) -> L
     print(f"Matching routines for tags: {tags}")
     for routine in routines:
         routine_tags = [tag['tag'] for tag in routine['attributes'].get('tags', [])]
-        print(f"Checking routine ID {routine['id']} with tags: {routine_tags}")
         if all(tag.strip() in routine_tags for tag in tags):
-            print(f"Routine ID {routine['id']} matches all tags.")
             matched.append(routine)
-        else:
-            print(f"Routine ID {routine['id']} does not match all tags.")
     print(f"Total matched routines for tags {tags}: {len(matched)}")
     return matched
 
@@ -895,7 +910,7 @@ def main():
     else:
         gender = "MALE"
 
-    file_path = "../data/routines_with_scores.json"
+    file_path = "./data/routines_with_scores.json"
     routines = load_routines_for_rules(file_path)
 
     if isinstance(routines, dict):
@@ -913,7 +928,7 @@ def main():
     health_scores_with_tag = create_health_scores_with_structure(account_id, health_scores)
     print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
 
-    packages_file_path = "../data/packages_with_id.json"
+    packages_file_path = "./data/packages_with_id.json"
     with open(packages_file_path, "r") as file:
         data = json.load(file)
     print('selected_packages', selected_packages)
@@ -959,7 +974,8 @@ def main():
     lower_body_strength_training_tag_counts = {
         "parentRoutineId": 996,
         "tags": {
-            "warm-up, lower_body_strength_training": 2,
+            # "warm-up, lower_body_strength_training": 2,
+            "warm-up": 2,
             "lower_body_strength_training": 6,
             "mobility_sport": 2
         }
@@ -996,7 +1012,7 @@ def main():
         tag_counts_input = full_body_training_tag_counts['tags']
 
         print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, routines_list)
+        selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -1004,7 +1020,7 @@ def main():
             print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
-                routines_list,
+                filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
@@ -1017,7 +1033,7 @@ def main():
         tag_counts_input = lower_body_strength_training_tag_counts['tags']
 
         print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, routines_list)
+        selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -1025,7 +1041,7 @@ def main():
             print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
-                routines_list,
+                filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
@@ -1038,7 +1054,7 @@ def main():
         tag_counts_input = upper_body_strength_training_tag_counts['tags']
 
         print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, routines_list)
+        selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -1046,7 +1062,7 @@ def main():
             print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
-                routines_list,
+                filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
@@ -1060,7 +1076,7 @@ def main():
         tag_counts_input = core_strength_training_tag_counts['tags']
 
         print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, routines_list)
+        selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -1068,7 +1084,7 @@ def main():
             print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
-                routines_list,
+                filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
                 "1,2,3,4,5",
@@ -1106,7 +1122,7 @@ def main():
 
                 add_individual_routine_entry(
                     final_action_plan,
-                    routines_list,
+                    filtered_routines,
                     entry["routineUniqueId"],
                     entry["scheduleCategory"],
                     entry["scheduleDays"],

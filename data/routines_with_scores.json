@@ -317,11 +317,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6061,
@@ -914,9 +914,9 @@
                 }
             }
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Passive'"
+        "rule_status": "included",
+        "score_rules": 4,
+        "score_rules_explanation": "Routine 'Tai Chi 30 Minuten' recommended under pillar 'MOVEMENT' with cumulative score 4 because it matched the rule 'Very low Mobility' with score 4 due to tags.tag: mobility"
     },
     {
         "id": 6082,
@@ -1218,11 +1218,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6085,
@@ -1516,11 +1516,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6088,
@@ -1820,11 +1820,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank vorwärts halten 45 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6090,
@@ -2134,11 +2134,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank Vorwärts/Marsch 30 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6110,
@@ -2426,11 +2426,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6124,
@@ -2689,11 +2689,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6126,
@@ -2948,11 +2948,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6141,
@@ -3163,11 +3163,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6056,
@@ -3473,7 +3473,7 @@
         },
         "rule_status": "excluded",
         "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Passive'"
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6062,
@@ -3771,11 +3771,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6066,
@@ -4066,9 +4066,9 @@
                 }
             }
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Passive'"
+        "rule_status": "included",
+        "score_rules": 4,
+        "score_rules_explanation": "Routine 'Tai Chi 65 Minuten' recommended under pillar 'MOVEMENT' with cumulative score 4 because it matched the rule 'Very low Mobility' with score 4 due to tags.tag: mobility"
     },
     {
         "id": 6086,
@@ -4368,11 +4368,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank vorwärts halten 20 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6096,
@@ -4678,11 +4678,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6099,
@@ -4975,11 +4975,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6100,
@@ -6573,9 +6573,9 @@
                 }
             }
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Passive'"
+        "rule_status": "included",
+        "score_rules": 4,
+        "score_rules_explanation": "Routine 'Tai Chi 20 Minuten' recommended under pillar 'MOVEMENT' with cumulative score 4 because it matched the rule 'Very low Mobility' with score 4 due to tags.tag: mobility"
     },
     {
         "id": 6072,
@@ -6847,11 +6847,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6075,
@@ -7143,11 +7143,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Hohe Plank 30 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6084,
@@ -7441,11 +7441,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6087,
@@ -7745,11 +7745,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank vorwärts halten 30 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6092,
@@ -8049,11 +8049,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tiefe Plank 10 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6112,
@@ -8345,11 +8345,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6119,
@@ -8655,11 +8655,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Table Twist 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6121,
@@ -8894,11 +8894,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6058,
@@ -9187,11 +9187,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6067,
@@ -9441,11 +9441,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6070,
@@ -9717,11 +9717,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6080,
@@ -10023,11 +10023,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6081,
@@ -10329,11 +10329,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6098,
@@ -10626,11 +10626,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze gegen die Wand oder hohe Stange 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6107,
@@ -11212,11 +11212,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6036,
@@ -11930,11 +11930,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6059,
@@ -12223,11 +12223,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6065,
@@ -12518,9 +12518,9 @@
                 }
             }
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Passive'"
+        "rule_status": "included",
+        "score_rules": 4,
+        "score_rules_explanation": "Routine 'Tai Chi 45 Minuten' recommended under pillar 'MOVEMENT' with cumulative score 4 because it matched the rule 'Very low Mobility' with score 4 due to tags.tag: mobility"
     },
     {
         "id": 6068,
@@ -12770,11 +12770,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 3642,
@@ -13156,11 +13156,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6114,
@@ -13461,11 +13461,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6152,
@@ -13715,11 +13715,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6297,
@@ -14577,11 +14577,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6316,
@@ -15410,11 +15410,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Hohe Plank 45 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6103,
@@ -15736,8 +15736,8 @@
             }
         },
         "rule_status": "included",
-        "score_rules": 2,
-        "score_rules_explanation": "Routine 'Ausfallschritte mit Sprüngen 20 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Include warm-up routines' with score 2 due to tags.tag: warm-up"
+        "score_rules": 4,
+        "score_rules_explanation": "Routine 'Ausfallschritte mit Sprüngen 20 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 4 because it matched the rule 'Include warm-up routines' with score 2 due to tags.tag: warm-up | matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6105,
@@ -16689,11 +16689,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6129,
@@ -16985,11 +16985,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6140,
@@ -17448,11 +17448,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6308,
@@ -17701,11 +17701,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6069,
@@ -17955,11 +17955,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6073,
@@ -18251,11 +18251,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Hohe Plank 10 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6089,
@@ -18565,11 +18565,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank Vorwärts/Marsch 20 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6097,
@@ -18875,11 +18875,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6109,
@@ -19167,11 +19167,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6111,
@@ -19463,11 +19463,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6117,
@@ -19782,11 +19782,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ausfallschritte vorwärts 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6131,
@@ -20078,11 +20078,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6144,
@@ -20616,11 +20616,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6083,
@@ -20914,11 +20914,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6091,
@@ -21228,11 +21228,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank Vorwärts/Marsch 45 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6093,
@@ -21532,11 +21532,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tiefe Plank 20 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6116,
@@ -21837,11 +21837,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6118,
@@ -22156,11 +22156,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ausfallschritte vorwärts 20 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6133,
@@ -22452,11 +22452,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6134,
@@ -22739,11 +22739,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6142,
@@ -23299,11 +23299,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6074,
@@ -23595,11 +23595,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Hohe Plank 20 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6078,
@@ -23897,11 +23897,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6095,
@@ -24207,11 +24207,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze 5 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6113,
@@ -24503,11 +24503,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6130,
@@ -24799,11 +24799,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6135,
@@ -25086,11 +25086,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6139,
@@ -25314,11 +25314,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6161,
@@ -25594,11 +25594,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6037,
@@ -25992,11 +25992,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6094,
@@ -26296,11 +26296,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Tiefe Plank 30 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6102,
@@ -26622,8 +26622,8 @@
             }
         },
         "rule_status": "included",
-        "score_rules": 2,
-        "score_rules_explanation": "Routine 'Ausfallschritte mit Sprüngen 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Include warm-up routines' with score 2 due to tags.tag: warm-up"
+        "score_rules": 4,
+        "score_rules_explanation": "Routine 'Ausfallschritte mit Sprüngen 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 4 because it matched the rule 'Include warm-up routines' with score 2 due to tags.tag: warm-up | matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6115,
@@ -26924,11 +26924,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6120,
@@ -27163,11 +27163,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6123,
@@ -27398,11 +27398,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6125,
@@ -27661,11 +27661,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6127,
@@ -27920,11 +27920,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6038,
@@ -28251,11 +28251,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6154,
@@ -28525,11 +28525,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Seitliche Ausfallschritte 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6158,
@@ -28800,11 +28800,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6312,
@@ -30334,11 +30334,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Mache ein Wordle' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: LOGIC_PUZZLES"
     },
     {
         "id": 6128,
@@ -30630,11 +30630,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6132,
@@ -30926,11 +30926,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6136,
@@ -31222,11 +31222,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ausfallschritte 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6314,
@@ -31799,11 +31799,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 1274,
@@ -32357,11 +32357,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Bird Dog 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6412,
@@ -32640,11 +32640,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Bird Dog 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6137,
@@ -32936,11 +32936,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ausfallschritte 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6138,
@@ -33720,11 +33720,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6318,
@@ -34823,11 +34823,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6147,
@@ -35580,11 +35580,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6322,
@@ -36754,11 +36754,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6356,
@@ -37504,11 +37504,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6155,
@@ -37778,11 +37778,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Seitliche Ausfallschritte 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6157,
@@ -38053,11 +38053,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6327,
@@ -38245,11 +38245,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Spiele Schach' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: CHESS"
     },
     {
         "id": 6330,
@@ -39646,11 +39646,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6156,
@@ -39920,11 +39920,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Seitliche Ausfallschritte 20 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6345,
@@ -41230,11 +41230,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Seitliche Plank 15 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6160,
@@ -41510,11 +41510,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6363,
@@ -42990,11 +42990,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6162,
@@ -43270,11 +43270,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6377,
@@ -44264,11 +44264,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Seitliche Plank 30 Sekunden' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6440,
@@ -44560,11 +44560,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6443,
@@ -44879,11 +44879,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6163,
@@ -45765,11 +45765,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ein Logikrätselspiel spielen' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: LOGIC_PUZZLES"
     },
     {
         "id": 6244,
@@ -46795,11 +46795,11 @@
                 "routineClassEnum": "RECOMMENDATION",
                 "displayName": "Empfehlung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude Meat (vegan)'"
     },
     {
         "id": 6427,
@@ -47030,11 +47030,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Überkopf Trizepsdrücken mit Kurzhantel 10 Widerholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 2219,
@@ -47291,9 +47291,9 @@
                 "practiceClass": null
             }
         },
-        "rule_status": "excluded",
-        "score_rules": 0,
-        "score_rules_explanation": "Excluded by rule 'Exclude Trinke Wasser'"
+        "rule_status": "included",
+        "score_rules": 30,
+        "score_rules_explanation": "Routine 'Trinke täglich 2 Liter Wasser' recommended under pillar 'NUTRITION' with cumulative score 30 because it matched the rule 'Trinke 2L Wasser' with score 30 due to category: WATER"
     },
     {
         "id": 6205,
@@ -51643,11 +51643,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Burpees 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6167,
@@ -55019,11 +55019,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Ein Wortspiel/Worträtsel spielen' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: LOGIC_PUZZLES"
     },
     {
         "id": 6246,
@@ -56813,11 +56813,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6388,
@@ -57340,11 +57340,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kreuzheben mit Kurzhanteln 14Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6418,
@@ -57610,11 +57610,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Side Plank with Reach Through 6 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6428,
@@ -57845,11 +57845,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Überkopf Trizepsdrücken mit Kurzhantel 15 Widerholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6441,
@@ -58164,11 +58164,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6176,
@@ -59031,11 +59031,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze auf allen Vieren 5 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6389,
@@ -59278,11 +59278,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6391,
@@ -59969,11 +59969,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Side Plank with Reach Through 12 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6429,
@@ -60239,11 +60239,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel Überzüge liegend 10 repetitions' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6177,
@@ -63914,11 +63914,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            }
-        },
-        "rule_status": "included",
-        "score_rules": 1,
-        "score_rules_explanation": "Routine 'Maui-Gewohnheit' recommended under pillar 'GRATITUDE' with cumulative score 1 because it matched the rule 'High Gratitude Level' with score 1 due to category: GRATITUDE_PRACTICE"
+            },
+            "rule_status": "no_rule_applied",
+            "score_rules": 1,
+            "score_rules_explanation": "No inclusion rule applied"
+        }
     },
     {
         "id": 6196,
@@ -64096,11 +64096,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            }
-        },
-        "rule_status": "included",
-        "score_rules": 1,
-        "score_rules_explanation": "Routine 'Dankbarkeitstagebuch' recommended under pillar 'GRATITUDE' with cumulative score 1 because it matched the rule 'High Gratitude Level' with score 1 due to category: GRATITUDE_PRACTICE"
+            },
+            "rule_status": "no_rule_applied",
+            "score_rules": 1,
+            "score_rules_explanation": "No inclusion rule applied"
+        }
     },
     {
         "id": 6197,
@@ -64716,11 +64716,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6051,
@@ -65023,11 +65023,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6198,
@@ -69481,11 +69481,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6239,
@@ -69996,11 +69996,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Schach spielen' recommended under pillar 'COGNITIVE_ENHANCEMENT' with cumulative score 2 because it matched the rule 'Concentration -> focus on a task longer' with score 2 due to subCategory: CHESS"
     },
     {
         "id": 6253,
@@ -72666,11 +72666,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kreuzheben mit Kurzhanteln 8 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6409,
@@ -72980,11 +72980,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Burpees 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6423,
@@ -73197,11 +73197,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel Bizepscurl 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6425,
@@ -73414,11 +73414,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel Bizepscurl 25 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6426,
@@ -73649,11 +73649,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Überkopf Trizepsdrücken mit Kurzhantel 5 Widerholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6047,
@@ -73968,11 +73968,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6255,
@@ -74997,11 +74997,11 @@
                 "routineClassEnum": "PRACTICE",
                 "displayName": "Übung",
                 "practiceClass": null
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6400,
@@ -75641,11 +75641,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel Überzüge liegend 15 repetitions' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6431,
@@ -75907,11 +75907,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel (Überkopf) Schulterdrücken 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6432,
@@ -76173,11 +76173,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel (Überkopf) Schulterdrücken 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6048,
@@ -76787,11 +76787,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6264,
@@ -77878,11 +77878,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Einbeiniges Kreuzheben 6 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6413,
@@ -78145,11 +78145,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Sphinx-Pose 4 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6414,
@@ -78412,11 +78412,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Sphinx-Pose 6 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6420,
@@ -78726,11 +78726,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Chin-ups 5 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6422,
@@ -78943,11 +78943,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel Bizepscurl 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6433,
@@ -79236,11 +79236,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Vorgebeutes Rudern mit Kurzhantel 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6274,
@@ -79538,11 +79538,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Liegestütze auf allen Vieren 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6399,
@@ -79987,11 +79987,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Vorgebeutes Rudern mit Kurzhantel 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6435,
@@ -80307,11 +80307,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Herabschauender Hund in Planke 5 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6436,
@@ -80627,11 +80627,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Herabschauender Hund in Planke 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6438,
@@ -80923,11 +80923,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6439,
@@ -81219,11 +81219,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6442,
@@ -81538,11 +81538,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6054,
@@ -82552,11 +82552,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6421,
@@ -82866,11 +82866,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Chin-ups 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6424,
@@ -83083,11 +83083,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Kurzhantel Bizepscurl 20 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6437,
@@ -83403,11 +83403,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Herabschauender Hund in Planke 15 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6444,
@@ -83620,11 +83620,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6446,
@@ -83837,11 +83837,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6277,
@@ -84148,11 +84148,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Plank Vorwärts mit Beinheben' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6278,
@@ -85111,11 +85111,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6352,
@@ -85573,11 +85573,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Einbeiniges Kreuzheben  mit Abstützen 6 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6415,
@@ -85840,11 +85840,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Sphinx-Pose 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6280,
@@ -86094,11 +86094,11 @@
                         "physicalExerciseClassEnum": "FLEXIBILITY"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Vorgebeugtes Rumpfdrehen 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6302,
@@ -87575,11 +87575,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Burpees 10 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6410,
@@ -87858,11 +87858,11 @@
                         "physicalExerciseClassEnum": "STRENGTH"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "included",
+        "score_rules": 2,
+        "score_rules_explanation": "Routine 'Bird Dog 5 Wiederholungen' recommended under pillar 'MOVEMENT' with cumulative score 2 because it matched the rule 'Strength Focus for Age Over 40' with score 2 due to tags.tag: strength"
     },
     {
         "id": 6281,
@@ -89563,11 +89563,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6348,
@@ -93220,11 +93220,11 @@
                         "physicalExerciseClassEnum": "CARDIO"
                     }
                 }
-            },
-            "rule_status": "no_rule_applied",
-            "score_rules": 1,
-            "score_rules_explanation": "No inclusion rule applied"
-        }
+            }
+        },
+        "rule_status": "excluded",
+        "score_rules": 0,
+        "score_rules_explanation": "Excluded by rule 'Exclude if really low in all exercise questions -> really unfit'"
     },
     {
         "id": 6359,
