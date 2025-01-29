@@ -36,8 +36,7 @@ def strapi_get_all_routines():
     all_recommendations = []
 
     while True:
-        url = f"{base_url}?pagination[page]={page}&pagination[pageSize]={page_size}&populate[variations][populate]=*&populate[pillar][populate]=*&populate[amountUnit][populate]=*&populate[locations][populate]=*&populate[educationArticle][populate]=*&populate[tags][populate]=*&populate[routineType][populate]=*&populate[benefits][populate]=*&populate[adaptibility][populate]=*&populate[equipmentNeeded][populate]=*&populate[contraindications][populate]=*&populate[subRoutines][populate]=*&populate[resources][populate]=*&populate[routineClass][populate]=*"
-
+        url = f"{base_url}?pagination[page]={page}&pagination[pageSize]={page_size}&populate[variations][populate]=*&populate[pillar][populate]=*&populate[amountUnit][populate]=*&populate[locations][populate]=*&populate[educationArticle][populate]=*&populate[tags][populate]=*&populate[routineType][populate]=*&populate[benefits][populate]=*&populate[adaptibility][populate]=*&populate[equipmentNeeded][populate]=*&populate[contraindications][populate]=*&populate[subRoutines][populate]=*&populate[resources][populate]=*&populate[routineClass][populate]"
         response = requests.get(url, headers=headers)
 
         print(f"Fetching page {page}: {response.status_code}")
