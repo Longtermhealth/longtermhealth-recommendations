@@ -28,6 +28,24 @@
           "value": "WATER"
         }
       },
+    {
+      "name": "Exclude Alcohol",
+      "pillar": "NUTRITION",
+        "conditions": {
+          "logic": "or",
+          "rules": [
+            {
+          "field": "Wie viel Alkohol trinkst du in der Woche?",
+          "operator": "==",
+          "value": "Gar keinen"
+            }
+          ]
+        },
+        "action": {
+          "field": "tags.tag",
+          "value": "alcohol"
+        }
+      },
         {
       "name": "Exclude Wholegrain",
       "pillar": "NUTRITION",

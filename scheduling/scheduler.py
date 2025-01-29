@@ -904,7 +904,7 @@ def get_all_present_tags(selected_packages: List[Dict[str, Any]]) -> Set[str]:
 
 def main():
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults()
-
+    account_id = 102
     if gender == "Weiblich":
         gender = "FEMALE"
     else:
