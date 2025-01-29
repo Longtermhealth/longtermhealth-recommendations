@@ -649,12 +649,12 @@ def main():
     def set_fasten_order(answer: str) -> int:
         answer_to_order = {
             "Nein": 1,
-            "16:8 (täglich 16 Stunden fasten)": 4,
-            "14:10 (täglich 14 Stunden fasten)": 3,
-            "12:12 (täglich 12 Stunden fasten)": 2,
+            "16:8 (täglich 16 Stunden fasten)": 7,
+            "14:10 (täglich 14 Stunden fasten)": 6,
+            "12:12 (täglich 12 Stunden fasten)": 5,
             "5:2 (an 2 Tagen der Woche nur Einnahme von 500 (Frauen) bzw. 600 (Männer) Kalorien.)": 4,
             "Eat Stop Eat (1-2 x pro Woche für 24 Stunden fasten)": 3,
-            "Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorienaufnahme)": 5,
+            "Alternierendes Fasten (jeden zweiten Tag fasten oder stark reduzierte Kalorienaufnahme)": 4,
             "Spontanes Auslassen einer Mahlzeit (regelmäßiges Auslassen einzelner Mahlzeiten)": 3,
             "Sonstiges": None
         }

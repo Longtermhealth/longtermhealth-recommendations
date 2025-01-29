@@ -1484,6 +1484,181 @@
                 "routineAffiliation": "PARENT"
               }
             ]
+          },
+          "5 MINUTE CARDIO 4, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 12,
+            "routines": [
+              {
+                "name": "Hohe Knie, 25 Wiederholungen",
+                "packageRoutineId": 415,
+                "parentRoutineId": 988,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze 15 Wiederholungen",
+                "packageRoutineId": 56,
+                "parentRoutineId": 988,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Sphinx-Pose 6 Wiederholungen",
+                "packageRoutineId": 378,
+                "parentRoutineId": 988,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "1",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MINUTE CARDIO 4, 2": {
+            "packageOrder": "2",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 12,
+            "routines": [
+              {
+                "name": "Sprungkniebeugen 20 Wiederholungen",
+                "packageRoutineId": 347,
+                "parentRoutineId": 985,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Butterfly 12 Wiederholungen",
+                "packageRoutineId": 409,
+                "parentRoutineId": 985,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Superman 10 Wiederholungen",
+                "packageRoutineId": 117,
+                "parentRoutineId": 985,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "2",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MINUTE CARDIO 4, 3": {
+            "packageOrder": "3",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 12,
+            "routines": [
+              {
+                "name": "Hampelmänner 30 Wiederholungen",
+                "packageRoutineId": 344,
+                "parentRoutineId": 984,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Bird Dog 10 Wiederholungen",
+                "packageRoutineId": 375,
+                "parentRoutineId": 984,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Kniebeugen 20 Wiederholungen",
+                "packageRoutineId": 60,
+                "parentRoutineId": 984,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "3",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MINUTE CARDIO 4, 4": {
+            "packageOrder": "4",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 12,
+            "routines": [
+              {
+                "name": "Bergsteiger 20 Wiederholungen",
+                "packageRoutineId": 313,
+                "parentRoutineId": 983,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "L-Crunches 10 Wiederholungen",
+                "packageRoutineId": 85,
+                "parentRoutineId": 983,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Sphinx-Pose 6 Wiederholungen",
+                "packageRoutineId": 378,
+                "parentRoutineId": 983,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "4",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MINUTE CARDIO 4, 5": {
+            "packageOrder": "5",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 12,
+            "routines": [
+              {
+                "name": "Hohe Knie, 25 Wiederholungen",
+                "packageRoutineId": 415,
+                "parentRoutineId": 982,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze 15 Wiederholungen",
+                "packageRoutineId": 56,
+                "parentRoutineId": 982,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Seitliche Plank 30 Sekunden",
+                "packageRoutineId": 381,
+                "parentRoutineId": 982,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": "5",
+                "scheduleWeeks": "3",
+                "routineAffiliation": "PARENT"
+              }
+            ]
           }
         }
       },
@@ -2019,7 +2194,15 @@
                 "scheduleDays": "1",
                 "scheduleWeeks": "1",
                 "routineAffiliation": "INDIVIDUAL"
-              },
+              }
+            ]
+          },
+          "Fasten, 5": {
+            "packageOrder": "5",
+            "packageModification": "",
+            "packageType": "MONTHLY",
+            "packageUniqueId": 5,
+            "routines": [
               {
                 "name": "Praktiziere 12:12 Intervallfasten",
                 "packageRoutineId": 256,
@@ -2031,8 +2214,8 @@
               }
             ]
           },
-          "Fasten, 5": {
-            "packageOrder": "5",
+          "Fasten, 6": {
+            "packageOrder": "6",
             "packageModification": "",
             "packageType": "MONTHLY",
             "packageUniqueId": 5,
@@ -2048,8 +2231,8 @@
               }
             ]
           },
-          "Fasten, 6": {
-            "packageOrder": "6",
+          "Fasten, 7": {
+            "packageOrder": "7",
             "packageModification": "",
             "packageType": "MONTHLY",
             "packageUniqueId": 5,
