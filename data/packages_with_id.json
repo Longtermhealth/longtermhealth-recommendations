@@ -18,7 +18,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 223,
-                                "id": 6673
+                                "id": 7089
                             },
                             {
                                 "name": "Langer Spaziergang",
@@ -29,7 +29,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 224,
-                                "id": 6674
+                                "id": 7090
                             },
                             {
                                 "name": "Full Body Workout",
@@ -59,7 +59,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 227,
-                                "id": 6677
+                                "id": 7093
                             },
                             {
                                 "name": "Langer Spaziergang",
@@ -70,7 +70,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 231,
-                                "id": 6681
+                                "id": 7097
                             },
                             {
                                 "name": "Full Body Workout",
@@ -313,7 +313,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 223,
-                                "id": 6673
+                                "id": 7089
                             },
                             {
                                 "name": "Langer Spaziergang",
@@ -324,7 +324,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 225,
-                                "id": 6675
+                                "id": 7091
                             },
                             {
                                 "name": "Full Body Workout",
@@ -354,7 +354,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 227,
-                                "id": 6677
+                                "id": 7093
                             },
                             {
                                 "name": "Langer Spaziergang",
@@ -365,7 +365,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 226,
-                                "id": 6676
+                                "id": 7092
                             },
                             {
                                 "name": "Full Body Workout",
@@ -608,7 +608,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 223,
-                                "id": 6673
+                                "id": 7089
                             },
                             {
                                 "name": "Langer Spaziergang",
@@ -619,7 +619,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 226,
-                                "id": 6676
+                                "id": 7092
                             },
                             {
                                 "name": "Full Body Workout",
@@ -649,7 +649,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 230,
-                                "id": 6680
+                                "id": 7096
                             },
                             {
                                 "name": "Langer Spaziergang",
@@ -660,7 +660,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 228,
-                                "id": 6678
+                                "id": 7094
                             },
                             {
                                 "name": "Full Body Workout",
@@ -903,7 +903,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 229,
-                                "id": 6679
+                                "id": 7095
                             },
                             {
                                 "name": "Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen",
@@ -914,7 +914,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 57,
-                                "id": 6507
+                                "id": 6923
                             },
                             {
                                 "name": "Tiefe Plank",
@@ -925,7 +925,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 51,
-                                "id": 6501
+                                "id": 6917
                             }
                         ]
                     },
@@ -936,15 +936,15 @@
                         "packageUniqueId": 10,
                         "routines": [
                             {
-                                "name": "Liegestütze auf allen Vieren",
-                                "packageRoutineId": 232,
+                                "name": "Fersenheben im Stehen",
+                                "packageRoutineId": 105,
                                 "parentRoutineId": 985,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "2",
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 232,
-                                "id": 6682
+                                "routineUniqueId": 105,
+                                "id": 6971
                             },
                             {
                                 "name": "Schulterkreisen",
@@ -955,7 +955,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 107,
-                                "id": 6557
+                                "id": 6973
                             },
                             {
                                 "name": "Brücke (hoch und runter)",
@@ -966,7 +966,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 68,
-                                "id": 6518
+                                "id": 6934
                             }
                         ]
                     },
@@ -985,7 +985,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 343,
-                                "id": 6793
+                                "id": 7209
                             },
                             {
                                 "name": "Brücke (hoch und runter)",
@@ -996,18 +996,18 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 68,
-                                "id": 6518
+                                "id": 6934
                             },
                             {
-                                "name": "Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen",
-                                "packageRoutineId": 57,
+                                "name": "Liegestütze auf allen Vieren 5 Wiederholungen",
+                                "packageRoutineId": 232,
                                 "parentRoutineId": 984,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "3",
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 57,
-                                "id": 6507
+                                "routineUniqueId": 232,
+                                "id": 7098
                             }
                         ]
                     },
@@ -1026,7 +1026,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 229,
-                                "id": 6679
+                                "id": 7095
                             },
                             {
                                 "name": "Wandsitzen 30 Sekunden",
@@ -1037,18 +1037,18 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 235,
-                                "id": 6685
+                                "id": 7101
                             },
                             {
-                                "name": "Liegestütze auf allen Vieren",
-                                "packageRoutineId": 232,
+                                "name": "Brücke (hoch und runter)",
+                                "packageRoutineId": 68,
                                 "parentRoutineId": 983,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "4",
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 232,
-                                "id": 6682
+                                "routineUniqueId": 68,
+                                "id": 6934
                             }
                         ]
                     },
@@ -1067,7 +1067,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 105,
-                                "id": 6555
+                                "id": 6971
                             },
                             {
                                 "name": "Tiefe Plank",
@@ -1078,7 +1078,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 51,
-                                "id": 6501
+                                "id": 6917
                             },
                             {
                                 "name": "Liegestütze gegen die Wand oder hohe Stange 15 Wiederholungen",
@@ -1089,7 +1089,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 57,
-                                "id": 6507
+                                "id": 6923
                             }
                         ]
                     },
@@ -1108,7 +1108,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 107,
-                                "id": 6557
+                                "id": 6973
                             },
                             {
                                 "name": "Brücke (hoch und runter)",
@@ -1119,7 +1119,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 68,
-                                "id": 6518
+                                "id": 6934
                             },
                             {
                                 "name": "Dead Bug Übung 12 Wiederholungen",
@@ -1130,7 +1130,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 343,
-                                "id": 6793
+                                "id": 7209
                             }
                         ]
                     },
@@ -1149,7 +1149,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 105,
-                                "id": 6555
+                                "id": 6971
                             },
                             {
                                 "name": "Beinheben in Rückenlage (ein Bein)",
@@ -1160,7 +1160,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 79,
-                                "id": 6529
+                                "id": 6945
                             },
                             {
                                 "name": "Liegestütze auf allen Vieren",
@@ -1171,7 +1171,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 232,
-                                "id": 6682
+                                "id": 7098
                             }
                         ]
                     },
@@ -1190,7 +1190,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 229,
-                                "id": 6679
+                                "id": 7095
                             },
                             {
                                 "name": "Brücke (hoch und runter)",
@@ -1201,7 +1201,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 68,
-                                "id": 6518
+                                "id": 6934
                             },
                             {
                                 "name": "Tiefe Plank",
@@ -1212,7 +1212,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 51,
-                                "id": 6501
+                                "id": 6917
                             }
                         ]
                     },
@@ -1231,7 +1231,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 232,
-                                "id": 6682
+                                "id": 7098
                             },
                             {
                                 "name": "Kniebeugen 10 Wiederholungen",
@@ -1242,7 +1242,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 59,
-                                "id": 6509
+                                "id": 6925
                             },
                             {
                                 "name": "Beinheben auf allen Vieren 10 Wiederholungen",
@@ -1253,7 +1253,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 222,
-                                "id": 6672
+                                "id": 7088
                             }
                         ]
                     },
@@ -1272,7 +1272,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 239,
-                                "id": 6689
+                                "id": 7105
                             },
                             {
                                 "name": "Ausfallschritte 10 Wiederholungen",
@@ -1283,7 +1283,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 95,
-                                "id": 6545
+                                "id": 6961
                             },
                             {
                                 "name": "Katze-Kuh-Dehnung",
@@ -1294,7 +1294,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 229,
-                                "id": 6679
+                                "id": 7095
                             }
                         ]
                     },
@@ -1313,7 +1313,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 59,
-                                "id": 6509
+                                "id": 6925
                             },
                             {
                                 "name": "Wandsitzen 30 Sekunden",
@@ -1324,7 +1324,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 235,
-                                "id": 6685
+                                "id": 7101
                             },
                             {
                                 "name": "Liegestütze auf allen Vieren",
@@ -1335,7 +1335,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 232,
-                                "id": 6682
+                                "id": 7098
                             }
                         ]
                     },
@@ -1354,7 +1354,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 239,
-                                "id": 6689
+                                "id": 7105
                             },
                             {
                                 "name": "Tiefe Plank",
@@ -1365,7 +1365,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 51,
-                                "id": 6501
+                                "id": 6917
                             },
                             {
                                 "name": "Beinheben auf allen Vieren 10 Wiederholungen",
@@ -1376,7 +1376,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 222,
-                                "id": 6672
+                                "id": 7088
                             }
                         ]
                     },
@@ -1395,7 +1395,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 59,
-                                "id": 6509
+                                "id": 6925
                             },
                             {
                                 "name": "Brücke (hoch und runter)",
@@ -1406,7 +1406,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 68,
-                                "id": 6518
+                                "id": 6934
                             },
                             {
                                 "name": "Liegestütze auf allen Vieren",
@@ -1417,7 +1417,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 232,
-                                "id": 6682
+                                "id": 7098
                             }
                         ]
                     },
@@ -1436,7 +1436,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 239,
-                                "id": 6689
+                                "id": 7105
                             },
                             {
                                 "name": "Beinheben auf allen Vieren 10 Wiederholungen",
@@ -1447,7 +1447,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 79,
-                                "id": 6529
+                                "id": 6945
                             },
                             {
                                 "name": "Katze-Kuh-Dehnung",
@@ -1458,7 +1458,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 229,
-                                "id": 6679
+                                "id": 7095
                             }
                         ]
                     },
@@ -1477,7 +1477,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 313,
-                                "id": 6763
+                                "id": 7179
                             },
                             {
                                 "name": "Crunches 10 Wiederholungen",
@@ -1488,7 +1488,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 83,
-                                "id": 6533
+                                "id": 6949
                             },
                             {
                                 "name": "Kniebeugen 10 Wiederholungen",
@@ -1499,7 +1499,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 59,
-                                "id": 6509
+                                "id": 6925
                             }
                         ]
                     },
@@ -1518,7 +1518,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 344,
-                                "id": 6794
+                                "id": 7210
                             },
                             {
                                 "name": "Tiefe Plank 20 Sekunden",
@@ -1529,7 +1529,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 52,
-                                "id": 6502
+                                "id": 6918
                             },
                             {
                                 "name": "Liegestütze 10 Wiederholungen",
@@ -1540,7 +1540,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 55,
-                                "id": 6505
+                                "id": 6921
                             }
                         ]
                     },
@@ -1559,7 +1559,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 313,
-                                "id": 6763
+                                "id": 7179
                             },
                             {
                                 "name": "Crunches 10 Wiederholungen",
@@ -1570,7 +1570,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 83,
-                                "id": 6533
+                                "id": 6949
                             },
                             {
                                 "name": "Scheibenwischer in Rückenlage 20 Wiederholungen",
@@ -1581,7 +1581,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 314,
-                                "id": 6764
+                                "id": 7180
                             }
                         ]
                     },
@@ -1600,7 +1600,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 344,
-                                "id": 6794
+                                "id": 7210
                             },
                             {
                                 "name": "Tiefe Plank 20 Sekunden",
@@ -1611,7 +1611,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 52,
-                                "id": 6502
+                                "id": 6918
                             },
                             {
                                 "name": "Kniebeugen 10 Wiederholungen",
@@ -1622,7 +1622,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 59,
-                                "id": 6509
+                                "id": 6925
                             }
                         ]
                     },
@@ -1641,7 +1641,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 313,
-                                "id": 6763
+                                "id": 7179
                             },
                             {
                                 "name": "Crunches 10 Wiederholungen",
@@ -1652,7 +1652,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 83,
-                                "id": 6533
+                                "id": 6949
                             },
                             {
                                 "name": "Superman 5 Wiederholungen",
@@ -1663,7 +1663,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 116,
-                                "id": 6566
+                                "id": 6982
                             }
                         ]
                     },
@@ -1682,7 +1682,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 344,
-                                "id": 6794
+                                "id": 7210
                             },
                             {
                                 "name": "Tiefe Plank 20 Sekunden",
@@ -1693,7 +1693,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 52,
-                                "id": 6502
+                                "id": 6918
                             },
                             {
                                 "name": "Kniebeugen 10 Wiederholungen",
@@ -1704,7 +1704,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 59,
-                                "id": 6509
+                                "id": 6925
                             }
                         ]
                     },
@@ -1723,7 +1723,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 239,
-                                "id": 6689
+                                "id": 7105
                             },
                             {
                                 "name": "Liegestütze 10 Wiederholungen",
@@ -1734,7 +1734,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 55,
-                                "id": 6505
+                                "id": 6921
                             },
                             {
                                 "name": "Scheibenwischer in Rückenlage 20 Wiederholungen",
@@ -1745,15 +1745,19 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 314,
-                                "id": 6764
+                                "id": 7180
                             }
                         ]
-                    },
+                    }
+                }
+            },
+            "UNKNOWN": {
+                "5 MINUTE CARDIO": {
                     "5 MINUTE CARDIO 4, 1": {
                         "packageOrder": "1",
                         "packageModification": "",
                         "packageType": "DAILY",
-                        "packageUniqueId": 12,
+                        "packageUniqueId": 13,
                         "routines": [
                             {
                                 "name": "Hohe Knie, 25 Wiederholungen",
@@ -1764,29 +1768,29 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 415,
-                                "id": 6865
+                                "id": 7281
                             },
                             {
-                                "name": "Liegestütze 15 Wiederholungen",
-                                "packageRoutineId": 56,
+                                "name": "Butterfly 12 Wiederholungen",
+                                "packageRoutineId": 409,
                                 "parentRoutineId": 988,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "1",
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 56,
-                                "id": 6506
+                                "routineUniqueId": 409,
+                                "id": 7275
                             },
                             {
-                                "name": "Sphinx-Pose 6 Wiederholungen",
-                                "packageRoutineId": 378,
+                                "name": "Bird Dog 10 Wiederholungen",
+                                "packageRoutineId": 375,
                                 "parentRoutineId": 988,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "1",
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 378,
-                                "id": 6828
+                                "routineUniqueId": 375,
+                                "id": 7241
                             }
                         ]
                     },
@@ -1794,7 +1798,7 @@
                         "packageOrder": "2",
                         "packageModification": "",
                         "packageType": "DAILY",
-                        "packageUniqueId": 12,
+                        "packageUniqueId": 13,
                         "routines": [
                             {
                                 "name": "Sprungkniebeugen 20 Wiederholungen",
@@ -1805,18 +1809,18 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 347,
-                                "id": 6797
+                                "id": 7213
                             },
                             {
-                                "name": "Butterfly 12 Wiederholungen",
-                                "packageRoutineId": 409,
+                                "name": "Liegestütze 15 Wiederholungen",
+                                "packageRoutineId": 56,
                                 "parentRoutineId": 985,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "2",
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 409,
-                                "id": 6859
+                                "routineUniqueId": 56,
+                                "id": 6922
                             },
                             {
                                 "name": "Superman 10 Wiederholungen",
@@ -1827,7 +1831,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 117,
-                                "id": 6567
+                                "id": 6983
                             }
                         ]
                     },
@@ -1835,7 +1839,7 @@
                         "packageOrder": "3",
                         "packageModification": "",
                         "packageType": "DAILY",
-                        "packageUniqueId": 12,
+                        "packageUniqueId": 13,
                         "routines": [
                             {
                                 "name": "Hampelmänner 30 Wiederholungen",
@@ -1846,18 +1850,18 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 344,
-                                "id": 6794
+                                "id": 7210
                             },
                             {
-                                "name": "Bird Dog 10 Wiederholungen",
-                                "packageRoutineId": 375,
+                                "name": "L-Crunches 10 Wiederholungen",
+                                "packageRoutineId": 85,
                                 "parentRoutineId": 984,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "3",
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 375,
-                                "id": 6825
+                                "routineUniqueId": 85,
+                                "id": 6951
                             },
                             {
                                 "name": "Kniebeugen 20 Wiederholungen",
@@ -1868,7 +1872,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 60,
-                                "id": 6510
+                                "id": 6926
                             }
                         ]
                     },
@@ -1876,7 +1880,7 @@
                         "packageOrder": "4",
                         "packageModification": "",
                         "packageType": "DAILY",
-                        "packageUniqueId": 12,
+                        "packageUniqueId": 13,
                         "routines": [
                             {
                                 "name": "Bergsteiger 20 Wiederholungen",
@@ -1887,18 +1891,18 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 313,
-                                "id": 6763
+                                "id": 7179
                             },
                             {
-                                "name": "L-Crunches 10 Wiederholungen",
-                                "packageRoutineId": 85,
+                                "name": "Liegestütze 15 Wiederholungen",
+                                "packageRoutineId": 56,
                                 "parentRoutineId": 983,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "4",
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 85,
-                                "id": 6535
+                                "routineUniqueId": 56,
+                                "id": 6922
                             },
                             {
                                 "name": "Sphinx-Pose 6 Wiederholungen",
@@ -1909,7 +1913,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 378,
-                                "id": 6828
+                                "id": 7244
                             }
                         ]
                     },
@@ -1917,7 +1921,7 @@
                         "packageOrder": "5",
                         "packageModification": "",
                         "packageType": "DAILY",
-                        "packageUniqueId": 12,
+                        "packageUniqueId": 13,
                         "routines": [
                             {
                                 "name": "Hohe Knie, 25 Wiederholungen",
@@ -1928,18 +1932,18 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 415,
-                                "id": 6865
+                                "id": 7281
                             },
                             {
-                                "name": "Liegestütze 15 Wiederholungen",
-                                "packageRoutineId": 56,
+                                "name": "Bird Dog 10 Wiederholungen",
+                                "packageRoutineId": 375,
                                 "parentRoutineId": 982,
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "5",
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
-                                "routineUniqueId": 56,
-                                "id": 6506
+                                "routineUniqueId": 375,
+                                "id": 7241
                             },
                             {
                                 "name": "Seitliche Plank 30 Sekunden",
@@ -1950,7 +1954,376 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 381,
-                                "id": 6831
+                                "id": 7247
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 4, 6": {
+                        "packageOrder": "6",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 13,
+                        "routines": [
+                            {
+                                "name": "Sprungkniebeugen 20 Wiederholungen",
+                                "packageRoutineId": 347,
+                                "parentRoutineId": 981,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "6",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 347,
+                                "id": 7213
+                            },
+                            {
+                                "name": "Liegestütze 15 Wiederholungen",
+                                "packageRoutineId": 56,
+                                "parentRoutineId": 981,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "6",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 56,
+                                "id": 6922
+                            },
+                            {
+                                "name": "Superman 10 Wiederholungen",
+                                "packageRoutineId": 117,
+                                "parentRoutineId": 981,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "6",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 117,
+                                "id": 6983
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 4, 7": {
+                        "packageOrder": "7",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 13,
+                        "routines": [
+                            {
+                                "name": "Hampelmänner 30 Wiederholungen",
+                                "packageRoutineId": 344,
+                                "parentRoutineId": 980,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "7",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 344,
+                                "id": 7210
+                            },
+                            {
+                                "name": "Kniebeugen 20 Wiederholungen",
+                                "packageRoutineId": 60,
+                                "parentRoutineId": 980,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "7",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 60,
+                                "id": 6926
+                            },
+                            {
+                                "name": "L-Crunches 10 Wiederholungen",
+                                "packageRoutineId": 85,
+                                "parentRoutineId": 980,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "7",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 85,
+                                "id": 6951
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 1": {
+                        "packageOrder": "1",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Burpees 20 Wiederholungen",
+                                "packageRoutineId": 372,
+                                "parentRoutineId": 988,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "1",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 372,
+                                "id": 7238
+                            },
+                            {
+                                "name": "Seitliche Plank mit Durchgriff 12 Wiederholungen",
+                                "packageRoutineId": 383,
+                                "parentRoutineId": 988,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "1",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 383,
+                                "id": 7249
+                            },
+                            {
+                                "name": "Sphinx-Pose 6 Wiederholungen",
+                                "packageRoutineId": 378,
+                                "parentRoutineId": 988,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "1",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 378,
+                                "id": 7244
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 2": {
+                        "packageOrder": "2",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Sprungkniebeugen 20 Wiederholungen",
+                                "packageRoutineId": 347,
+                                "parentRoutineId": 985,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "2",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 347,
+                                "id": 7213
+                            },
+                            {
+                                "name": "Herabschauender Hund in Planke 10 Wiederholungen",
+                                "packageRoutineId": 400,
+                                "parentRoutineId": 985,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "2",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 400,
+                                "id": 7266
+                            },
+                            {
+                                "name": "Butterfly 12 Wiederholungen",
+                                "packageRoutineId": 409,
+                                "parentRoutineId": 985,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "2",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 409,
+                                "id": 7275
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 3": {
+                        "packageOrder": "3",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Hampelmänner 30 Wiederholungen",
+                                "packageRoutineId": 344,
+                                "parentRoutineId": 984,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "3",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 344,
+                                "id": 7210
+                            },
+                            {
+                                "name": "Bergsteiger 20 Wiederholungen",
+                                "packageRoutineId": 313,
+                                "parentRoutineId": 984,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "3",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 313,
+                                "id": 7179
+                            },
+                            {
+                                "name": "Walk-outs 12 Wiederholungen",
+                                "packageRoutineId": 407,
+                                "parentRoutineId": 984,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "3",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 407,
+                                "id": 7273
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 4": {
+                        "packageOrder": "4",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Burpees 20 Wiederholungen",
+                                "packageRoutineId": 372,
+                                "parentRoutineId": 983,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "4",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 372,
+                                "id": 7238
+                            },
+                            {
+                                "name": "L-Crunches 10 Wiederholungen",
+                                "packageRoutineId": 85,
+                                "parentRoutineId": 983,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "4",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 85,
+                                "id": 6951
+                            },
+                            {
+                                "name": "Plank Vorwärts/Marsch 45 Sekunden",
+                                "packageRoutineId": 50,
+                                "parentRoutineId": 983,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "4",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 50,
+                                "id": 6916
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 5": {
+                        "packageOrder": "5",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Sprungkniebeugen 20 Wiederholungen",
+                                "packageRoutineId": 347,
+                                "parentRoutineId": 982,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "5",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 347,
+                                "id": 7213
+                            },
+                            {
+                                "name": "Seitliche Plank mit Durchgriff 12 Wiederholungen",
+                                "packageRoutineId": 383,
+                                "parentRoutineId": 982,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "5",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 383,
+                                "id": 7249
+                            },
+                            {
+                                "name": "Superman 10 Wiederholungen",
+                                "packageRoutineId": 117,
+                                "parentRoutineId": 982,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "5",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 117,
+                                "id": 6983
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 6": {
+                        "packageOrder": "6",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Burpees 20 Wiederholungen",
+                                "packageRoutineId": 372,
+                                "parentRoutineId": 981,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "6",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 372,
+                                "id": 7238
+                            },
+                            {
+                                "name": "Kniebeugen 20 Wiederholungen",
+                                "packageRoutineId": 60,
+                                "parentRoutineId": 981,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "6",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 60,
+                                "id": 6926
+                            },
+                            {
+                                "name": "Walk-outs 12 Wiederholungen",
+                                "packageRoutineId": 407,
+                                "parentRoutineId": 981,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "6",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 407,
+                                "id": 7273
+                            }
+                        ]
+                    },
+                    "5 MINUTE CARDIO 5, 7": {
+                        "packageOrder": "7",
+                        "packageModification": "",
+                        "packageType": "DAILY",
+                        "packageUniqueId": 14,
+                        "routines": [
+                            {
+                                "name": "Hohe Knie, 25 Wiederholungen",
+                                "packageRoutineId": 415,
+                                "parentRoutineId": 980,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "7",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 415,
+                                "id": 7281
+                            },
+                            {
+                                "name": "Herabschauender Hund in Planke 10 Wiederholungen",
+                                "packageRoutineId": 400,
+                                "parentRoutineId": 980,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "7",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 400,
+                                "id": 7266
+                            },
+                            {
+                                "name": "Bird Dog 10 Wiederholungen",
+                                "packageRoutineId": 375,
+                                "parentRoutineId": 980,
+                                "scheduleCategory": "DAILY_ROUTINE",
+                                "scheduleDays": "7",
+                                "scheduleWeeks": "3",
+                                "routineAffiliation": "PARENT",
+                                "routineUniqueId": 375,
+                                "id": 7241
                             }
                         ]
                     }
@@ -1973,7 +2346,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 123,
-                                "id": 6573
+                                "id": 6989
                             },
                             {
                                 "name": "Mehr Gemüse",
@@ -1984,7 +2357,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 124,
-                                "id": 6574
+                                "id": 6990
                             },
                             {
                                 "name": "Mehr Obst",
@@ -1995,7 +2368,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 125,
-                                "id": 6575
+                                "id": 6991
                             },
                             {
                                 "name": "Rotes Fleisch reduzieren",
@@ -2006,7 +2379,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 348,
-                                "id": 6798
+                                "id": 7214
                             },
                             {
                                 "name": "Vollkorn probieren",
@@ -2017,7 +2390,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 237,
-                                "id": 6687
+                                "id": 7103
                             },
                             {
                                 "name": "Keine Fertiggerichte",
@@ -2028,7 +2401,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 326,
-                                "id": 6775
+                                "id": 7191
                             },
                             {
                                 "name": "Grünen Tee probieren",
@@ -2039,7 +2412,7 @@
                                 "scheduleWeeks": "4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 332,
-                                "id": 6782
+                                "id": 7198
                             }
                         ]
                     },
@@ -2058,7 +2431,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 123,
-                                "id": 6573
+                                "id": 6989
                             },
                             {
                                 "name": "Mehr Gemüse",
@@ -2069,7 +2442,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 124,
-                                "id": 6574
+                                "id": 6990
                             },
                             {
                                 "name": "Mehr Obst",
@@ -2080,7 +2453,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 125,
-                                "id": 6575
+                                "id": 6991
                             },
                             {
                                 "name": "Olivenöl",
@@ -2091,7 +2464,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 129,
-                                "id": 6579
+                                "id": 6995
                             },
                             {
                                 "name": "Ungesüßte Getränke",
@@ -2102,7 +2475,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 238,
-                                "id": 6688
+                                "id": 7104
                             },
                             {
                                 "name": "Auf Weißmehlprodukte verzichten",
@@ -2113,7 +2486,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 323,
-                                "id": 6772
+                                "id": 7188
                             },
                             {
                                 "name": "An apple a day...",
@@ -2124,7 +2497,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 307,
-                                "id": 6757
+                                "id": 7173
                             }
                         ]
                     },
@@ -2143,7 +2516,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 123,
-                                "id": 6573
+                                "id": 6989
                             },
                             {
                                 "name": "Mehr Gemüse",
@@ -2154,7 +2527,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 124,
-                                "id": 6574
+                                "id": 6990
                             },
                             {
                                 "name": "Mehr Obst",
@@ -2165,7 +2538,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 125,
-                                "id": 6575
+                                "id": 6991
                             },
                             {
                                 "name": "Olivenöl",
@@ -2176,7 +2549,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 129,
-                                "id": 6579
+                                "id": 6995
                             },
                             {
                                 "name": "Ungesüßte Getränke",
@@ -2187,7 +2560,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 238,
-                                "id": 6688
+                                "id": 7104
                             },
                             {
                                 "name": "Hülsenfrüchte integrieren",
@@ -2198,7 +2571,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 249,
-                                "id": 6699
+                                "id": 7115
                             },
                             {
                                 "name": "Keine Fertiggerichte",
@@ -2209,7 +2582,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 325,
-                                "id": 6774
+                                "id": 7190
                             }
                         ]
                     },
@@ -2228,7 +2601,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 123,
-                                "id": 6573
+                                "id": 6989
                             },
                             {
                                 "name": "Mehr Gemüse",
@@ -2239,7 +2612,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 124,
-                                "id": 6574
+                                "id": 6990
                             },
                             {
                                 "name": "Mehr Obst",
@@ -2250,7 +2623,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 125,
-                                "id": 6575
+                                "id": 6991
                             },
                             {
                                 "name": "Olivenöl",
@@ -2261,7 +2634,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 129,
-                                "id": 6579
+                                "id": 6995
                             },
                             {
                                 "name": "Ungesüßte Getränke",
@@ -2272,7 +2645,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 238,
-                                "id": 6688
+                                "id": 7104
                             },
                             {
                                 "name": "Mehr Vollkorn essen",
@@ -2283,7 +2656,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 127,
-                                "id": 6577
+                                "id": 6993
                             },
                             {
                                 "name": "Kohlenhydrate aufwärmen",
@@ -2294,7 +2667,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 304,
-                                "id": 6754
+                                "id": 7170
                             },
                             {
                                 "name": "Fermentierte Lebensmittel probieren",
@@ -2305,7 +2678,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 240,
-                                "id": 6690
+                                "id": 7106
                             }
                         ]
                     },
@@ -2324,7 +2697,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 123,
-                                "id": 6573
+                                "id": 6989
                             },
                             {
                                 "name": "Mehr Gemüse",
@@ -2335,7 +2708,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 124,
-                                "id": 6574
+                                "id": 6990
                             },
                             {
                                 "name": "Mehr Obst",
@@ -2346,7 +2719,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 125,
-                                "id": 6575
+                                "id": 6991
                             },
                             {
                                 "name": "Olivenöl",
@@ -2357,7 +2730,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 129,
-                                "id": 6579
+                                "id": 6995
                             },
                             {
                                 "name": "Ungesüßte Getränke",
@@ -2368,7 +2741,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 238,
-                                "id": 6688
+                                "id": 7104
                             },
                             {
                                 "name": "Mehr Vollkorn essen",
@@ -2379,7 +2752,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 127,
-                                "id": 6577
+                                "id": 6993
                             },
                             {
                                 "name": "Grünen Tee trinken",
@@ -2390,7 +2763,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 242,
-                                "id": 6692
+                                "id": 7108
                             },
                             {
                                 "name": "Natriumarme Ernährung",
@@ -2401,7 +2774,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 243,
-                                "id": 6693
+                                "id": 7109
                             },
                             {
                                 "name": "Von Grund auf selber kochen",
@@ -2412,7 +2785,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 333,
-                                "id": 6783
+                                "id": 7199
                             }
                         ]
                     }
@@ -2433,7 +2806,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 245,
-                                "id": 6695
+                                "id": 7111
                             },
                             {
                                 "name": "Nicht naschen",
@@ -2444,7 +2817,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 241,
-                                "id": 6691
+                                "id": 7107
                             },
                             {
                                 "name": "Alkoholfreie Woche",
@@ -2455,7 +2828,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 320,
-                                "id": 6769
+                                "id": 7185
                             },
                             {
                                 "name": "Kalorienarmer Tag",
@@ -2466,7 +2839,7 @@
                                 "scheduleWeeks": "4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 246,
-                                "id": 6696
+                                "id": 7112
                             }
                         ]
                     },
@@ -2485,7 +2858,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 248,
-                                "id": 6698
+                                "id": 7114
                             },
                             {
                                 "name": "Zuckerfreie Woche",
@@ -2496,7 +2869,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 321,
-                                "id": 6770
+                                "id": 7186
                             },
                             {
                                 "name": "Eine Mahlzeit auslassen",
@@ -2507,7 +2880,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 250,
-                                "id": 6700
+                                "id": 7116
                             },
                             {
                                 "name": "Selber kochen",
@@ -2518,7 +2891,7 @@
                                 "scheduleWeeks": "4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 251,
-                                "id": 6701
+                                "id": 7117
                             }
                         ]
                     },
@@ -2537,7 +2910,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 252,
-                                "id": 6702
+                                "id": 7118
                             },
                             {
                                 "name": "Drei Mahlzeiten auslassen",
@@ -2548,7 +2921,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 253,
-                                "id": 6703
+                                "id": 7119
                             },
                             {
                                 "name": "Vier Mahlzeiten auslassen",
@@ -2559,7 +2932,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 254,
-                                "id": 6704
+                                "id": 7120
                             },
                             {
                                 "name": "Fünf Mahlzeiten auslassen",
@@ -2570,7 +2943,7 @@
                                 "scheduleWeeks": "4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 255,
-                                "id": 6705
+                                "id": 7121
                             }
                         ]
                     },
@@ -2585,11 +2958,11 @@
                                 "packageRoutineId": 334,
                                 "parentRoutineId": null,
                                 "scheduleCategory": "DAILY_ROUTINE",
-                                "scheduleDays": "1",
-                                "scheduleWeeks": "1",
+                                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                                "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 334,
-                                "id": 6784
+                                "id": 7200
                             }
                         ]
                     },
@@ -2604,11 +2977,11 @@
                                 "packageRoutineId": 256,
                                 "parentRoutineId": null,
                                 "scheduleCategory": "DAILY_ROUTINE",
-                                "scheduleDays": "1",
-                                "scheduleWeeks": "2",
+                                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                                "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 256,
-                                "id": 6706
+                                "id": 7122
                             }
                         ]
                     },
@@ -2623,11 +2996,11 @@
                                 "packageRoutineId": 335,
                                 "parentRoutineId": null,
                                 "scheduleCategory": "DAILY_ROUTINE",
-                                "scheduleDays": "1",
-                                "scheduleWeeks": "3",
+                                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                                "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 335,
-                                "id": 6785
+                                "id": 7201
                             }
                         ]
                     },
@@ -2642,11 +3015,11 @@
                                 "packageRoutineId": 336,
                                 "parentRoutineId": null,
                                 "scheduleCategory": "DAILY_ROUTINE",
-                                "scheduleDays": "1",
-                                "scheduleWeeks": "4",
+                                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
+                                "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 336,
-                                "id": 6786
+                                "id": 7202
                             }
                         ]
                     }
@@ -2667,7 +3040,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 337,
-                                "id": 6787
+                                "id": 7203
                             },
                             {
                                 "name": "Beeren essen",
@@ -2678,7 +3051,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 338,
-                                "id": 6788
+                                "id": 7204
                             },
                             {
                                 "name": "Fermentierte Lebensmittel",
@@ -2689,7 +3062,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 339,
-                                "id": 6789
+                                "id": 7205
                             },
                             {
                                 "name": "Vollkorn",
@@ -2700,7 +3073,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 127,
-                                "id": 6577
+                                "id": 6993
                             },
                             {
                                 "name": "Auf Weißmehlprodukte verzichten",
@@ -2711,7 +3084,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 323,
-                                "id": 6772
+                                "id": 7188
                             },
                             {
                                 "name": "Öligen Fisch essen",
@@ -2722,7 +3095,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 308,
-                                "id": 6758
+                                "id": 7174
                             },
                             {
                                 "name": "Entedecke Algen für dich",
@@ -2733,7 +3106,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 273,
-                                "id": 6723
+                                "id": 7139
                             },
                             {
                                 "name": "Finde dein Kurkuma Getränk",
@@ -2744,7 +3117,7 @@
                                 "scheduleWeeks": "4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 340,
-                                "id": 6790
+                                "id": 7206
                             },
                             {
                                 "name": "Alkoholfreier Monat",
@@ -2755,7 +3128,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 247,
-                                "id": 6697
+                                "id": 7113
                             }
                         ]
                     },
@@ -2774,7 +3147,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 328,
-                                "id": 6777
+                                "id": 7193
                             },
                             {
                                 "name": "Omega-3 reiche Kost",
@@ -2785,7 +3158,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 341,
-                                "id": 6791
+                                "id": 7207
                             },
                             {
                                 "name": "natriumarme Ernährung",
@@ -2796,7 +3169,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 243,
-                                "id": 6693
+                                "id": 7109
                             },
                             {
                                 "name": "Vitamin C, D, E einnehmen",
@@ -2807,7 +3180,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 342,
-                                "id": 6792
+                                "id": 7208
                             },
                             {
                                 "name": "Früher ins Bett",
@@ -2818,7 +3191,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 300,
-                                "id": 6750
+                                "id": 7166
                             },
                             {
                                 "name": "Bewusst Pausen machen",
@@ -2829,7 +3202,7 @@
                                 "scheduleWeeks": "2",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 331,
-                                "id": 6781
+                                "id": 7197
                             },
                             {
                                 "name": "fleischfreie Woche",
@@ -2840,7 +3213,7 @@
                                 "scheduleWeeks": "3",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 329,
-                                "id": 6778
+                                "id": 7194
                             },
                             {
                                 "name": "Zuckerfreier Monat",
@@ -2851,7 +3224,7 @@
                                 "scheduleWeeks": "1",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 330,
-                                "id": 6780
+                                "id": 7196
                             }
                         ]
                     }
@@ -2872,9 +3245,9 @@
                                 "scheduleCategory": "DAILY_ROUTINE",
                                 "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
                                 "scheduleWeeks": "1, 2, 3, 4",
-                                "routineAffiliation": "PARENT",
+                                "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 257,
-                                "id": 6707
+                                "id": 7123
                             },
                             {
                                 "name": "Vor dem Schlafen nicht auf einen Bildschirm schauen.",
@@ -2885,7 +3258,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 140,
-                                "id": 6590
+                                "id": 7006
                             }
                         ]
                     }
@@ -2908,7 +3281,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 189,
-                                "id": 6639
+                                "id": 7055
                             },
                             {
                                 "name": "Deep breathing excersice 4-2-4",
@@ -2919,7 +3292,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 356,
-                                "id": 6806
+                                "id": 7222
                             },
                             {
                                 "name": "Bewusst nichts tun",
@@ -2930,7 +3303,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 357,
-                                "id": 6807
+                                "id": 7223
                             }
                         ]
                     },
@@ -2949,7 +3322,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 189,
-                                "id": 6639
+                                "id": 7055
                             },
                             {
                                 "name": "Deep breathing excersice 4-2-4",
@@ -2960,7 +3333,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 356,
-                                "id": 6806
+                                "id": 7222
                             },
                             {
                                 "name": "Zwerchfellatmung",
@@ -2971,7 +3344,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 187,
-                                "id": 6637
+                                "id": 7053
                             },
                             {
                                 "name": "Meditationsstart",
@@ -2982,7 +3355,7 @@
                                 "scheduleWeeks": "4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 358,
-                                "id": 6808
+                                "id": 7224
                             }
                         ]
                     },
@@ -3001,7 +3374,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 189,
-                                "id": 6639
+                                "id": 7055
                             },
                             {
                                 "name": "Deep breathing excersice 4-2-4",
@@ -3012,7 +3385,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 356,
-                                "id": 6806
+                                "id": 7222
                             },
                             {
                                 "name": "Zwerchfellatmung",
@@ -3023,7 +3396,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 187,
-                                "id": 6637
+                                "id": 7053
                             },
                             {
                                 "name": "Nasenatmung",
@@ -3034,7 +3407,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 188,
-                                "id": 6638
+                                "id": 7054
                             },
                             {
                                 "name": "Meditationsstart",
@@ -3045,7 +3418,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 358,
-                                "id": 6808
+                                "id": 7224
                             }
                         ]
                     },
@@ -3064,7 +3437,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "INDIVIDUAL",
                                 "routineUniqueId": 414,
-                                "id": 6864
+                                "id": 7280
                             }
                         ]
                     }
@@ -3087,7 +3460,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 154,
-                                "id": 6604
+                                "id": 7020
                             },
                             {
                                 "name": "Dankbarkeitstagebuch",
@@ -3098,7 +3471,7 @@
                                 "scheduleWeeks": "1, 2, 3, 4",
                                 "routineAffiliation": "PARENT",
                                 "routineUniqueId": 155,
-                                "id": 6605
+                                "id": 7021
                             }
                         ]
                     }
