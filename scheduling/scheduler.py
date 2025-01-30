@@ -358,7 +358,7 @@ def save_action_plan_json(final_action_plan,
 def filter_excluded_routines(routines):
     return [
         routine for routine in routines
-        if isinstance(routine, dict) and routine.get("rule_status") != "excluded"
+        if isinstance(routine, dict) and routine.get("attributes", {}).get("rule_status") != "excluded"
     ]
 
 

@@ -82,6 +82,7 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
         if conditions:
             logic = conditions.get('logic', 'and')
             rules = conditions.get('rules', [])
+
             if evaluate_conditions(rules, logic, pillar_data, user_data):
                 actions = rule.get('action', [])
                 if isinstance(actions, dict):
@@ -98,16 +99,21 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
 
                         if isinstance(dynamic_field_value, list):
                             if exclude_value in dynamic_field_value:
-                                routine['rule_status'] = 'excluded'
-                                routine['score_rules'] = 0
-                                routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
+                                attributes['rule_status'] = 'excluded'
+                                attributes['score_rules'] = 0
+                                attributes['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                                 excluded_rules.add(
-                                    (rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
+                                    (rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}")
+                                )
+                                logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
                         elif dynamic_field_value == exclude_value:
-                            routine['rule_status'] = 'excluded'
-                            routine['score_rules'] = 0
-                            routine['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
+                            attributes['rule_status'] = 'excluded'
+                            attributes['score_rules'] = 0
+                            attributes['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                             excluded_rules.add((rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
+                            logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
+
+                        routine['attributes'] = attributes  # Save back the updated attributes
 
     print("Exclusion processing complete.\n")
     return routines
