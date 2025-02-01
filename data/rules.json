@@ -103,7 +103,7 @@
         ]
       },
           {
-      "name": "Exclude Meat  (vegan)",
+      "name": "Exclude Meat (vegan)",
       "pillar": "NUTRITION",
       "condition": {
         "field": "Welcher Ernährungsstil trifft bei dir am ehesten zu?",
@@ -261,6 +261,19 @@
       "action": {
         "field": "tags.tag",
         "value": "passive"
+      }
+    },
+    {
+      "name": "Exclude hang",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Geburtsjahr",
+        "operator": "<",
+        "value": 2024
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "hang"
       }
     },
     {

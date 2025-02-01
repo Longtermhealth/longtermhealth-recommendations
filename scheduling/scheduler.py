@@ -350,7 +350,7 @@ def load_routines_for_rules(file_path):
 
 
 def save_action_plan_json(final_action_plan,
-                          file_path='./data/action_plan.json'):
+                          file_path='/Users/janoschgrellner/PycharmProjects/lth-recommendations/rule_based_system/data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False, indent=2)
 
@@ -532,7 +532,7 @@ def add_individual_routine_entry(
         "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get(
             "imageUrl_16x9") or "https://longtermhealth.de",
         "routineId": routine["id"],
-        "durationCalculated": int(routine['attributes']['durationCalculated']),
+        "durationCalculated": float(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
         "goal": {
             "unit": {
@@ -581,7 +581,7 @@ def add_individual_routine_entry(
                 "imageUrl_1x1": super_routine_config.get("imageUrl_1x1") or "https://longtermhealth.de",
                 "imageUrl_16x9": super_routine_config.get("imageUrl_16x9") or "https://longtermhealth.de",
                 "routineId": super_routine_config["routineId"],
-                "durationCalculated": int(routine['attributes']['durationCalculated']),
+                "durationCalculated": float(routine['attributes']['durationCalculated']),
                 "timeOfDay": super_routine_config.get("timeOfDay", "ANY"),
                 "goal": {
                     "unit": {
@@ -692,7 +692,7 @@ def add_individual_routine_entry_without_parent(
         "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get(
             "imageUrl_16x9") or "https://longtermhealth.de",
         "routineId": routine["id"],
-        "durationCalculated": int(routine['attributes']['durationCalculated']),
+        "durationCalculated": float(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
         "goal": {
             "unit": {
@@ -902,9 +902,93 @@ def get_all_present_tags(selected_packages: List[Dict[str, Any]]) -> Set[str]:
     return present_tags
 
 
+def update_parent_durationCalculated_and_goal(
+        final_action_plan: dict,
+        SUPER_ROUTINE_CONFIG: dict,
+        routine_unique_id_map: dict
+) -> None:
+    """
+    Updates the durationCalculated and goal.value fields of parent routines in the final_action_plan.
+    The new value is the sum of durationCalculated from all child routines that belong
+    to that parent. The parent routine is identified by its unique ID from SUPER_ROUTINE_CONFIG.
+    If a child routine stores a parentRoutineId that is not directly one of the tracked unique IDs,
+    the reverse mapping is used to convert it.
+
+    Both the durationCalculated field and the goal.value of the parent routine are updated.
+
+    Args:
+        final_action_plan (dict): The action plan containing routines.
+        SUPER_ROUTINE_CONFIG (dict): Dictionary containing superroutine configurations.
+        routine_unique_id_map (dict): Mapping from routine unique IDs to routine IDs.
+
+    Returns:
+        None. The function updates the final_action_plan in place.
+    """
+    print("\n--- Updating durationCalculated and goal.value for parent routines ---")
+
+    tracked_parent_ids = set(config['routineId'] for config in SUPER_ROUTINE_CONFIG.values())
+    print("Tracked parent routine unique IDs from SUPER_ROUTINE_CONFIG:", tracked_parent_ids)
+
+    reverse_map = {mapped: unique for unique, mapped in routine_unique_id_map.items()}
+    print("Reverse mapping (mapped id -> unique id):", reverse_map)
+
+    parent_durations = {pid: 0 for pid in tracked_parent_ids}
+
+    routines = final_action_plan.get("data", {}).get("routines", [])
+    print(f"Found {len(routines)} routines in final_action_plan.")
+
+    for routine in routines:
+        stored_parent = routine.get("parentRoutineId")
+        child_duration = routine.get("durationCalculated", 0)
+        if stored_parent is not None:
+            effective_parent = None
+            if stored_parent in tracked_parent_ids:
+                effective_parent = stored_parent
+            else:
+                effective_parent = reverse_map.get(stored_parent)
+                if effective_parent not in tracked_parent_ids:
+                    effective_parent = None
+            if effective_parent is not None:
+                parent_durations[effective_parent] += child_duration
+                print(
+                    f"Added {child_duration} from child (parentRoutineId: {stored_parent}) to parent unique id {effective_parent}. Running total: {parent_durations[effective_parent]}")
+
+    print("Computed total durations for parent routines:", parent_durations)
+
+    updated_count = 0
+    for routine in routines:
+        routine_id = routine.get("routineId")
+        effective_parent = None
+        if routine_id in tracked_parent_ids:
+            effective_parent = routine_id
+        else:
+            candidate = reverse_map.get(routine_id)
+            if candidate in tracked_parent_ids:
+                effective_parent = candidate
+        if effective_parent is not None:
+            new_total = parent_durations.get(effective_parent, 0)
+            routine["durationCalculated"] = int(new_total)
+            if "goal" in routine and isinstance(routine["goal"], dict):
+                routine["goal"]["value"] = int(new_total)
+            updated_count += 1
+            print(
+                f"Updated parent routine (routineId {routine_id} → unique id {effective_parent}) with durationCalculated = {new_total} and goal.value = {new_total}")
+
+    print(f"Updated {updated_count} parent routines with new durationCalculated and goal.value values.")
+    print("--- Finished updating parent routines ---\n")
+
+
+def convert_durations_to_int(action_plan: dict) -> None:
+    for routine in action_plan.get("data", {}).get("routines", []):
+        if "durationCalculated" in routine:
+            routine["durationCalculated"] = int(round(routine["durationCalculated"]))
+        if "goal" in routine and isinstance(routine["goal"], dict) and "value" in routine["goal"]:
+            routine["goal"]["value"] = int(round(routine["goal"]["value"]))
+
+
 def main():
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults()
-    account_id = 102
+
     if gender == "Weiblich":
         gender = "FEMALE"
     else:
@@ -924,11 +1008,12 @@ def main():
     sorted_routines = sort_routines_by_score_rules(filtered_routines)
     routines = sorted_routines
     health_scores = {key: value for key, value in health_scores.items() if key != 'Total Score'}
+    # print('filtered_routines',filtered_routines)
 
     health_scores_with_tag = create_health_scores_with_structure(account_id, health_scores)
     print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
 
-    packages_file_path = "./data/packages_with_id.json"
+    packages_file_path = "/Users/janoschgrellner/PycharmProjects/lth-recommendations/rule_based_system/data/packages_with_id.json"
     with open(packages_file_path, "r") as file:
         data = json.load(file)
     print('selected_packages', selected_packages)
@@ -974,8 +1059,8 @@ def main():
     lower_body_strength_training_tag_counts = {
         "parentRoutineId": 996,
         "tags": {
-            # "warm-up, lower_body_strength_training": 2,
-            "warm-up": 2,
+            "warm-up, lower body": 2,
+            # "warm-up": 2,
             "lower_body_strength_training": 6,
             "mobility_sport": 2
         }
@@ -984,7 +1069,7 @@ def main():
     upper_body_strength_training_tag_counts = {
         "parentRoutineId": 995,
         "tags": {
-            "warm-up": 2,
+            "warm-up, upper body": 2,
             "upper_body_strength_training": 6,
             "mobility_sport": 2
         }
@@ -1134,6 +1219,8 @@ def main():
         else:
             print(f"No function mapped for tag: {tag}. Skipping.")
 
+    update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG, routine_unique_id_map)
+    convert_durations_to_int(final_action_plan)
     save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)
