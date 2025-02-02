@@ -350,7 +350,7 @@ def load_routines_for_rules(file_path):
 
 
 def save_action_plan_json(final_action_plan,
-                          file_path='/Users/janoschgrellner/PycharmProjects/lth-recommendations/rule_based_system/data/action_plan.json'):
+                          file_path='./data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False, indent=2)
 
@@ -1013,7 +1013,7 @@ def main():
     health_scores_with_tag = create_health_scores_with_structure(account_id, health_scores)
     print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
 
-    packages_file_path = "/Users/janoschgrellner/PycharmProjects/lth-recommendations/rule_based_system/data/packages_with_id.json"
+    packages_file_path = "./data/packages_with_id.json"
     with open(packages_file_path, "r") as file:
         data = json.load(file)
     print('selected_packages', selected_packages)
