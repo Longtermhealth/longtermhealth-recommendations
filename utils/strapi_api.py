@@ -14,18 +14,40 @@ headers = {
 }
 
 def strapi_post_action_plan(action_plan, account_id):
+    headers = {
+        "Authorization": f"Bearer {STRAPI_API_KEY}",
+        "Content-Type": "application/json"
+    }
 
     data = action_plan
-    response = requests.post(url, headers=headers, json=data)
 
+    # Debug: Log outgoing request details
+    print("=== Outgoing Request Details ===")
+    print(f"Account ID: {account_id}")
+    print("URL:", url)
+    #print("Headers:", headers)
+    #print("Payload:", data)
+    print("================================")
+
+    try:
+        response = requests.post(url, headers=headers, json=data)
+    except Exception as e:
+        print(f"Error while making the POST request for account {account_id}: {e}")
+        return
+
+    # Debug: Log response metadata and content
+    print("=== Response Received ===")
     print(f"Response for account {account_id}: {response.status_code}")
+    #print("Response Headers:", response.headers)
+    #print("Response Text:", response.text)
+
     try:
         response_data = response.json()
-        print(response_data)
-    except requests.exceptions.JSONDecodeError:
-        print(f"Response for account {account_id} is not JSON, raw content:", response.text)
-
-
+        print("JSON Response")
+    except ValueError as json_error:
+        print(f"JSON decoding failed for account {account_id}: {json_error}")
+        print("Raw response content:", response.text)
+    print("================================")
 
 
 def strapi_get_all_routines():
