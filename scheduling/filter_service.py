@@ -32,12 +32,12 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 
 def new_load_routines() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
-    return load_json_data('../data/strapi_all_routines.json')
+    return load_json_data('./data/strapi_all_routines.json')
 
 
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
-    return load_json_data('../data/rules.json')
+    return load_json_data('./data/rules.json')
 
 def calculate_bmi(weight: float, height: float) -> float:
     if height <= 0:
@@ -617,7 +617,7 @@ def main():
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
 
 
-    output_file_path = '../data/routines_with_scores.json'
+    output_file_path = './data/routines_with_scores.json'
     try:
         with open(output_file_path, 'w') as f:
             json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
@@ -764,7 +764,7 @@ def main():
             logger.error(f"Error finding package in {pillar} - {subcategory}: {e}")
         return (None, None)
 
-    packages_file_path = "../data/packages.json"
+    packages_file_path = "./data/packages.json"
 
     packages_data = load_packages(packages_file_path)
     selected_packages = []
