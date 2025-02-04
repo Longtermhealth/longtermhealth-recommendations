@@ -510,56 +510,7 @@ def map_cardio_score_to_order(score: float) -> int:
 
 def main():
 
-    answers = {
-    "accountId": "143",
-    "Vorname": "Test",
-    "Nachname": "test",
-    "Biologisches Geschlecht:": "Weiblich",
-    "Geburtsjahr": 1991,
-    "Was ist deine Körpergröße (in cm)?": 180,
-    "Wie viel wiegst du (in kg)?": 90,
-    "Rauchst du?": True,
-    "Wie oft in der Woche treibst du eine Cardio-Sportart?": 5,
-    "Wie schätzt du deine Kraft ein?": 5,
-    "Wie schätzt du deine Beweglichkeit ein?": 5,
-    "Wie aktiv bist du im Alltag?": 5,
-    "Welcher Ernährungsstil trifft bei dir am ehesten zu?": "Keine tierischen Produkte (vegan)",
-    #"Welcher Ernährungsstil trifft bei dir am ehesten zu?": "Mischkost mit Fleisch (omnivore)",
-    "Wie viel zuckerhaltige Produkte nimmst du zu dir?": 2,
-    "Wie häufig nimmst du Fertiggerichte zu dir?": 2,
-    "Wie viel Vollkorn nimmst du zu dir?": 2,
-    "Praktizierst du Intervallfasten und auf welche Art?": "12:12 (täglich 12 Stunden fasten)",
-    "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?": "7-9",
-    "Wie viel Alkohol trinkst du in der Woche?": "Gar keinen",
-    #"Wie viel Alkohol trinkst du in der Woche?": "1-3",
-    "Wie ist deine Schlafqualität?": "Ich habe leichte Schlafprobleme",
-    "Welche Art Schlafprobleme hast du?": "Durchschlafprobleme",
-    "Wie viele Stunden schläfst du im Durchschnitt pro Nacht?": "7-9",
-    "Fühlst du dich tagsüber müde?": 2,
-    "Wie viel Zeit verbringst du morgens draußen?": "> 20 min",
-    "Wie viel Zeit verbringst du abends draußen?": "11-20 min",
-    "Wie oft unternimmst du etwas mit anderen Menschen?": "Mehrmals pro Woche",
-    "Bist du sozial engagiert?": "Freiwilligenarbeit, Verein",
-    "Fühlst du dich einsam?": 2,
-    "Leidest du aktuell unter Stress?": 3,
-    "Ich versuche, die positive Seite von Stress und Druck zu sehen.": 3,
-    "Ich tue alles, damit Stress erst gar nicht entsteht.": 3,
-    "Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.": 3,
-    "Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.": 3,
-    "Machst du aktuell Übungen zum Stressabbau?": "Würde ich gern, aber ich weiß nicht wie",
-    "Ich habe so viel im Leben, wofür ich dankbar sein kann.": 3,
-    "Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.": 3,
-    "Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.": 3,
-    "Ich bin vielen verschiedenen Menschen dankbar.": 3,
-    "Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.": 3,
-    "Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.": 3,
-    "Wie würdest du deine Vergesslichkeit einstufen?": 3,
-    "Wie gut ist dein Konzentrationsvermögen?": 3,
-    "Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?": 3,
-    "Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?": "4-6 Stunden",
-    "Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?": "2-3 Stunden",
-    "Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?": "15-30 Minuten"
-}
+
 
 
     field_mapping = get_field_mapping()
@@ -571,7 +522,7 @@ def main():
 
 
 
-    #answers = process_latest_response(responses, field_mapping)
+    answers = process_latest_response(responses, field_mapping)
     gender = answers.get('Biologisches Geschlecht:', None)
     if not answers:
         logger.error("No answers found in the latest response.")
