@@ -927,15 +927,15 @@ def update_parent_durationCalculated_and_goal(
     print("\n--- Updating durationCalculated and goal.value for parent routines ---")
 
     tracked_parent_ids = set(config['routineId'] for config in SUPER_ROUTINE_CONFIG.values())
-    print("Tracked parent routine unique IDs from SUPER_ROUTINE_CONFIG:", tracked_parent_ids)
+    #print("Tracked parent routine unique IDs from SUPER_ROUTINE_CONFIG:", tracked_parent_ids)
 
     reverse_map = {mapped: unique for unique, mapped in routine_unique_id_map.items()}
-    print("Reverse mapping (mapped id -> unique id):", reverse_map)
+    #print("Reverse mapping (mapped id -> unique id):", reverse_map)
 
     parent_durations = {pid: 0 for pid in tracked_parent_ids}
 
     routines = final_action_plan.get("data", {}).get("routines", [])
-    print(f"Found {len(routines)} routines in final_action_plan.")
+    #print(f"Found {len(routines)} routines in final_action_plan.")
 
     for routine in routines:
         stored_parent = routine.get("parentRoutineId")
@@ -1011,13 +1011,13 @@ def main():
     # print('filtered_routines',filtered_routines)
 
     health_scores_with_tag = create_health_scores_with_structure(account_id, health_scores)
-    print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
+    #print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
 
     packages_file_path = "./data/packages_with_id.json"
     with open(packages_file_path, "r") as file:
         data = json.load(file)
-    print('selected_packages', selected_packages)
-    print('data', data)
+    #print('selected_packages', selected_packages)
+    #print('data', data)
 
     ids_by_package_name = {}
     for pillar_name, pillar_data in data["packages"]["pillars"].items():
@@ -1043,7 +1043,7 @@ def main():
     }
 
     routine_unique_id_map = build_routine_unique_id_map(routines)
-    print("Routine Unique ID -> ID Mapping:", routine_unique_id_map)
+    #print("Routine Unique ID -> ID Mapping:", routine_unique_id_map)
 
     full_body_training_tag_counts = {
         "parentRoutineId": 997,
@@ -1102,7 +1102,7 @@ def main():
 
         for routine in selected_routines:
             parent_id = full_body_training_tag_counts.get("parentRoutineId")
-            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
@@ -1123,7 +1123,7 @@ def main():
 
         for routine in selected_routines:
             parent_id = lower_body_strength_training_tag_counts.get("parentRoutineId")
-            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
@@ -1144,7 +1144,7 @@ def main():
 
         for routine in selected_routines:
             parent_id = upper_body_strength_training_tag_counts.get("parentRoutineId")
-            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
@@ -1166,7 +1166,7 @@ def main():
 
         for routine in selected_routines:
             parent_id = core_strength_training_tag_counts.get("parentRoutineId")
-            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
@@ -1225,7 +1225,7 @@ def main():
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)
 
-    print(health_scores_with_tag)
+    #print(health_scores_with_tag)
     return final_action_plan
 
 

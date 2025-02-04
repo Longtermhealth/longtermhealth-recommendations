@@ -23,7 +23,7 @@ def get_responses():
         return response.json()
     else:
         print(f"Failed to retrieve responses. Status code: {response.status_code}")
-        print(f"Response: {response.text}")
+        #print(f"Response: {response.text}")
         return None
 
 def get_field_mapping():
@@ -34,7 +34,7 @@ def get_field_mapping():
         return field_mapping
     else:
         print(f"Failed to retrieve form. Status code: {response.status_code}")
-        print(f"Response: {response.text}")
+        #print(f"Response: {response.text}")
         return None
 
 
@@ -44,7 +44,7 @@ def process_latest_response(responses, field_mapping):
         return None
 
     latest_response = responses['items'][0]
-    print("Latest response", latest_response)
+    #print("Latest response", latest_response)
 
     special_field_labels = {
         '7RNIAzXy1eCa': 'Vorname',
@@ -80,7 +80,7 @@ def process_latest_response(responses, field_mapping):
 
         answers[field_label] = value
 
-    print('answers', answers)
+    #print('answers', answers)
     return answers
 
 
