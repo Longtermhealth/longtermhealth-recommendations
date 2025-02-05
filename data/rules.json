@@ -264,6 +264,19 @@
       }
     },
     {
+      "name": "Exclude Passive",
+      "pillar": "MOVEMENT",
+      "condition": {
+        "field": "Geburtsjahr",
+        "operator": "<",
+        "value": 2024
+      },
+      "action": {
+        "field": "tags.tag",
+        "value": "office"
+      }
+    },
+    {
       "name": "Exclude hang",
       "pillar": "MOVEMENT",
       "condition": {

@@ -52,8 +52,8 @@ SUPER_ROUTINE_CONFIG = {
     "lower_body_strength_training_super_routine": {
         "routineId": 996,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/996_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/996_16x9.jpg",
         "description": (
             "Ein Unterkörper-Krafttraining kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um "
             "den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen "
@@ -98,8 +98,8 @@ SUPER_ROUTINE_CONFIG = {
     "upper_body_strength_training_super_routine": {
         "routineId": 995,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/995_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/995_16x9.jpg",
         "description": (
             "Ein Oberkörper-Krafttraining kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um "
             "den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen "
@@ -141,8 +141,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_2_superroutine": {
         "routineId": 985,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/985_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/985_16x9.jpg",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -161,8 +161,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_3_superroutine": {
         "routineId": 984,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/984_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/984_16x9.jpg",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -181,8 +181,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_4_superroutine": {
         "routineId": 983,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/983_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/983_16x9.jpg",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -198,11 +198,11 @@ SUPER_ROUTINE_CONFIG = {
         "scheduleDays": [4],
         "scheduleCategory": "WEEKLY_ROUTINE",
     },
-    "5_minute_cardio_5_superroutine": {
+"5_minute_cardio_5_superroutine": {
         "routineId": 982,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/982_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/982_16x9.jpg",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -221,8 +221,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_6_superroutine": {
         "routineId": 981,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/981_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/981_16x9.jpg",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -241,8 +241,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_7_superroutine": {
         "routineId": 980,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/980_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/980_16x9.jpg",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -306,8 +306,8 @@ SUPER_ROUTINE_CONFIG = {
     "gratitude_super_routine": {
         "routineId": 990,
         "pillar": "GRATITUDE",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
         "description": (
             "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag."
         ),
@@ -324,6 +324,7 @@ SUPER_ROUTINE_CONFIG = {
         "scheduleCategory": "DAILY_ROUTINE",
     },
 }
+
 
 
 def calculate_expiration_date(start_date=None, days=28):

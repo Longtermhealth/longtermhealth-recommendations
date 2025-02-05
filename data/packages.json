@@ -14,8 +14,15 @@
                 "packageRoutineId": 223,
                 "parentRoutineId": 223,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -23,8 +30,15 @@
                 "packageRoutineId": 224,
                 "parentRoutineId": 224,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -32,8 +46,17 @@
                 "packageRoutineId": 997,
                 "parentRoutineId": 997,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2, 4, 5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2,
+                  4,
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -49,8 +72,15 @@
                 "packageRoutineId": 227,
                 "parentRoutineId": 227,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -58,8 +88,15 @@
                 "packageRoutineId": 231,
                 "parentRoutineId": 231,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -67,8 +104,17 @@
                 "packageRoutineId": 997,
                 "parentRoutineId": 997,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2, 4, 5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2,
+                  4,
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -84,8 +130,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -93,8 +146,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -102,8 +162,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -111,8 +178,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -120,8 +194,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -137,8 +218,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -146,8 +234,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -155,8 +250,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -164,8 +266,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -173,8 +282,15 @@
                 "packageRoutineId": 991,
                 "parentRoutineId": 991,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -182,8 +298,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -199,8 +322,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -208,8 +338,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -217,8 +354,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -226,8 +370,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -235,8 +386,15 @@
                 "packageRoutineId": 991,
                 "parentRoutineId": 991,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -244,8 +402,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -263,8 +428,15 @@
                 "packageRoutineId": 223,
                 "parentRoutineId": 223,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -272,8 +444,15 @@
                 "packageRoutineId": 225,
                 "parentRoutineId": 225,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -281,8 +460,17 @@
                 "packageRoutineId": 997,
                 "parentRoutineId": 997,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2, 4, 5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2,
+                  4,
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -298,8 +486,15 @@
                 "packageRoutineId": 227,
                 "parentRoutineId": 227,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -307,8 +502,15 @@
                 "packageRoutineId": 226,
                 "parentRoutineId": 226,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -316,8 +518,17 @@
                 "packageRoutineId": 997,
                 "parentRoutineId": 997,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2, 4, 5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2,
+                  4,
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -333,8 +544,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -342,8 +560,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -351,8 +576,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -360,8 +592,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -369,8 +608,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -386,8 +632,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -395,8 +648,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -404,8 +664,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -413,8 +680,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -422,8 +696,15 @@
                 "packageRoutineId": 991,
                 "parentRoutineId": 991,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -431,8 +712,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -448,8 +736,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -457,8 +752,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -466,8 +768,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -475,8 +784,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -484,8 +800,15 @@
                 "packageRoutineId": 991,
                 "parentRoutineId": 991,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -493,8 +816,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -512,8 +842,15 @@
                 "packageRoutineId": 223,
                 "parentRoutineId": 223,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -521,8 +858,15 @@
                 "packageRoutineId": 226,
                 "parentRoutineId": 226,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -530,8 +874,17 @@
                 "packageRoutineId": 997,
                 "parentRoutineId": 997,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2, 4, 5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2,
+                  4,
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -547,8 +900,15 @@
                 "packageRoutineId": 230,
                 "parentRoutineId": 230,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -556,8 +916,15 @@
                 "packageRoutineId": 228,
                 "parentRoutineId": 228,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -565,8 +932,17 @@
                 "packageRoutineId": 997,
                 "parentRoutineId": 997,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2, 4, 5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2,
+                  4,
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -582,8 +958,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -591,8 +974,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -600,8 +990,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -609,8 +1006,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -618,8 +1022,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -635,8 +1046,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -644,8 +1062,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -653,8 +1078,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -662,8 +1094,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -671,8 +1110,15 @@
                 "packageRoutineId": 991,
                 "parentRoutineId": 991,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -680,8 +1126,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -697,8 +1150,15 @@
                 "packageRoutineId": 993,
                 "parentRoutineId": 993,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -706,8 +1166,15 @@
                 "packageRoutineId": 996,
                 "parentRoutineId": 996,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -715,8 +1182,15 @@
                 "packageRoutineId": 995,
                 "parentRoutineId": 995,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -724,8 +1198,15 @@
                 "packageRoutineId": 992,
                 "parentRoutineId": 992,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -733,8 +1214,15 @@
                 "packageRoutineId": 991,
                 "parentRoutineId": 991,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -742,8 +1230,15 @@
                 "packageRoutineId": 994,
                 "parentRoutineId": 994,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -761,8 +1256,12 @@
                 "packageRoutineId": 229,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -770,8 +1269,12 @@
                 "packageRoutineId": 57,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -779,8 +1282,12 @@
                 "packageRoutineId": 51,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -796,8 +1303,12 @@
                 "packageRoutineId": 105,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -805,8 +1316,12 @@
                 "packageRoutineId": 107,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -814,8 +1329,12 @@
                 "packageRoutineId": 68,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -831,8 +1350,12 @@
                 "packageRoutineId": 343,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -840,8 +1363,12 @@
                 "packageRoutineId": 68,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -849,8 +1376,12 @@
                 "packageRoutineId": 232,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -866,8 +1397,12 @@
                 "packageRoutineId": 229,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -875,8 +1410,12 @@
                 "packageRoutineId": 235,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -884,8 +1423,12 @@
                 "packageRoutineId": 68,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -901,8 +1444,12 @@
                 "packageRoutineId": 105,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -910,8 +1457,12 @@
                 "packageRoutineId": 51,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -919,8 +1470,12 @@
                 "packageRoutineId": 57,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -936,8 +1491,12 @@
                 "packageRoutineId": 107,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -945,8 +1504,12 @@
                 "packageRoutineId": 68,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -954,8 +1517,12 @@
                 "packageRoutineId": 343,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -971,8 +1538,12 @@
                 "packageRoutineId": 105,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -980,8 +1551,12 @@
                 "packageRoutineId": 79,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -989,8 +1564,12 @@
                 "packageRoutineId": 232,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1006,8 +1585,12 @@
                 "packageRoutineId": 229,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1015,8 +1598,12 @@
                 "packageRoutineId": 68,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1024,8 +1611,12 @@
                 "packageRoutineId": 51,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1041,8 +1632,12 @@
                 "packageRoutineId": 232,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1050,8 +1645,12 @@
                 "packageRoutineId": 59,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1059,8 +1658,12 @@
                 "packageRoutineId": 222,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1076,8 +1679,12 @@
                 "packageRoutineId": 239,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1085,8 +1692,12 @@
                 "packageRoutineId": 95,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1094,8 +1705,12 @@
                 "packageRoutineId": 229,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1111,8 +1726,12 @@
                 "packageRoutineId": 59,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1120,8 +1739,12 @@
                 "packageRoutineId": 235,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1129,8 +1752,12 @@
                 "packageRoutineId": 232,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1146,8 +1773,12 @@
                 "packageRoutineId": 239,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1155,8 +1786,12 @@
                 "packageRoutineId": 51,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1164,8 +1799,12 @@
                 "packageRoutineId": 222,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1181,8 +1820,12 @@
                 "packageRoutineId": 59,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1190,8 +1833,12 @@
                 "packageRoutineId": 68,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1199,8 +1846,12 @@
                 "packageRoutineId": 232,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1216,8 +1867,12 @@
                 "packageRoutineId": 239,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1225,8 +1880,12 @@
                 "packageRoutineId": 79,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1234,8 +1893,12 @@
                 "packageRoutineId": 229,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1251,8 +1914,12 @@
                 "packageRoutineId": 313,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1260,8 +1927,12 @@
                 "packageRoutineId": 83,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1269,8 +1940,12 @@
                 "packageRoutineId": 59,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1286,8 +1961,12 @@
                 "packageRoutineId": 344,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1295,8 +1974,12 @@
                 "packageRoutineId": 52,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1304,8 +1987,12 @@
                 "packageRoutineId": 55,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1321,8 +2008,12 @@
                 "packageRoutineId": 313,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1330,8 +2021,12 @@
                 "packageRoutineId": 83,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1339,8 +2034,12 @@
                 "packageRoutineId": 314,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1356,8 +2055,12 @@
                 "packageRoutineId": 344,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1365,8 +2068,12 @@
                 "packageRoutineId": 52,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1374,8 +2081,12 @@
                 "packageRoutineId": 59,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1391,8 +2102,12 @@
                 "packageRoutineId": 313,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1400,8 +2115,12 @@
                 "packageRoutineId": 83,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1409,8 +2128,12 @@
                 "packageRoutineId": 116,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1426,8 +2149,12 @@
                 "packageRoutineId": 344,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1435,8 +2162,12 @@
                 "packageRoutineId": 52,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1444,8 +2175,12 @@
                 "packageRoutineId": 59,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1461,8 +2196,12 @@
                 "packageRoutineId": 239,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1470,8 +2209,12 @@
                 "packageRoutineId": 55,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1479,16 +2222,16 @@
                 "packageRoutineId": 314,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
-          }
-        }
-      },
-      "UNKNOWN": {
-        "5 MINUTE CARDIO": {
+          },
           "5 MINUTE CARDIO 4, 1": {
             "packageOrder": "1",
             "packageModification": "",
@@ -1500,8 +2243,12 @@
                 "packageRoutineId": 415,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1509,8 +2256,12 @@
                 "packageRoutineId": 409,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1518,8 +2269,12 @@
                 "packageRoutineId": 375,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1535,8 +2290,12 @@
                 "packageRoutineId": 347,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1544,8 +2303,12 @@
                 "packageRoutineId": 56,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1553,8 +2316,12 @@
                 "packageRoutineId": 117,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1570,8 +2337,12 @@
                 "packageRoutineId": 344,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1579,8 +2350,12 @@
                 "packageRoutineId": 85,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1588,8 +2363,12 @@
                 "packageRoutineId": 60,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1605,8 +2384,12 @@
                 "packageRoutineId": 313,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1614,8 +2397,12 @@
                 "packageRoutineId": 56,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1623,8 +2410,12 @@
                 "packageRoutineId": 378,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1640,8 +2431,12 @@
                 "packageRoutineId": 415,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1649,8 +2444,12 @@
                 "packageRoutineId": 375,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1658,8 +2457,12 @@
                 "packageRoutineId": 381,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1675,8 +2478,12 @@
                 "packageRoutineId": 347,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1684,8 +2491,12 @@
                 "packageRoutineId": 56,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1693,8 +2504,12 @@
                 "packageRoutineId": 117,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1710,8 +2525,12 @@
                 "packageRoutineId": 344,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1719,8 +2538,12 @@
                 "packageRoutineId": 60,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1728,8 +2551,12 @@
                 "packageRoutineId": 85,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1745,8 +2572,12 @@
                 "packageRoutineId": 372,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1754,8 +2585,12 @@
                 "packageRoutineId": 383,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1763,8 +2598,12 @@
                 "packageRoutineId": 378,
                 "parentRoutineId": 988,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1780,8 +2619,12 @@
                 "packageRoutineId": 347,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1789,8 +2632,12 @@
                 "packageRoutineId": 400,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1798,8 +2645,12 @@
                 "packageRoutineId": 409,
                 "parentRoutineId": 985,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1815,8 +2666,12 @@
                 "packageRoutineId": 344,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1824,8 +2679,12 @@
                 "packageRoutineId": 313,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1833,8 +2692,12 @@
                 "packageRoutineId": 407,
                 "parentRoutineId": 984,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1850,8 +2713,12 @@
                 "packageRoutineId": 372,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1859,8 +2726,12 @@
                 "packageRoutineId": 85,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1868,8 +2739,12 @@
                 "packageRoutineId": 50,
                 "parentRoutineId": 983,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1885,8 +2760,12 @@
                 "packageRoutineId": 347,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1894,8 +2773,12 @@
                 "packageRoutineId": 383,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1903,8 +2786,12 @@
                 "packageRoutineId": 117,
                 "parentRoutineId": 982,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1920,8 +2807,12 @@
                 "packageRoutineId": 372,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1929,8 +2820,12 @@
                 "packageRoutineId": 60,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1938,8 +2833,12 @@
                 "packageRoutineId": 407,
                 "parentRoutineId": 981,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1955,8 +2854,12 @@
                 "packageRoutineId": 415,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1964,8 +2867,12 @@
                 "packageRoutineId": 400,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -1973,8 +2880,343 @@
                 "packageRoutineId": 375,
                 "parentRoutineId": 980,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          }
+        },
+        "5 MIN OFFICE WORKOUT": {
+          "5 MIN OFFICE WORKOUT 1, 1": {
+            "packageOrder": "1",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Katze-Kuh-Dehnung 10 Mal",
+                "packageRoutineId": 229,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze gegen die Wand oder hohe Stange 10 Wiederholungen",
+                "packageRoutineId": 57,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Tiefe Plank 10 Sekunden",
+                "packageRoutineId": 51,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MIN OFFICE WORKOUT 1, 2": {
+            "packageOrder": "2",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Fersenheben im Stehen, 10 Hebungen",
+                "packageRoutineId": 105,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Schulterkreisen 5 Wiederholungen",
+                "packageRoutineId": 107,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter) 10 Wiederholungen",
+                "packageRoutineId": 68,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MIN OFFICE WORKOUT 1, 3": {
+            "packageOrder": "3",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Dead Bug Übung 12 Wiederholungen",
+                "packageRoutineId": 343,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter) 10 Wiederholungen",
+                "packageRoutineId": 68,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze auf allen Vieren 5 Wiederholungen",
+                "packageRoutineId": 232,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MIN OFFICE WORKOUT 1, 4": {
+            "packageOrder": "4",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Katze-Kuh-Dehnung 10 Mal",
+                "packageRoutineId": 229,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Wandsitzen 30 Sekunden",
+                "packageRoutineId": 235,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter) 10 Wiederholungen",
+                "packageRoutineId": 68,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MIN OFFICE WORKOUT 1, 5": {
+            "packageOrder": "5",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Fersenheben im Stehen, 10 Hebungen",
+                "packageRoutineId": 105,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Tiefe Plank 10 Sekunden",
+                "packageRoutineId": 51,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze gegen die Wand oder hohe Stange 10 Wiederholungen",
+                "packageRoutineId": 57,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MIN OFFICE WORKOUT 1, 6": {
+            "packageOrder": "6",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Schulterkreisen 5 Wiederholungen",
+                "packageRoutineId": 107,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Brücke (hoch und runter) 10 Wiederholungen",
+                "packageRoutineId": 68,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Dead Bug Übung 12 Wiederholungen",
+                "packageRoutineId": 343,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              }
+            ]
+          },
+          "5 MIN OFFICE WORKOUT 1, 7": {
+            "packageOrder": "7",
+            "packageModification": "",
+            "packageType": "DAILY",
+            "packageUniqueId": 15,
+            "routines": [
+              {
+                "name": "Fersenheben im Stehen, 10 Hebungen",
+                "packageRoutineId": 105,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Beinheben in Rückenlage (ein Bein) 10 Wiederholungen",
+                "packageRoutineId": 79,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Liegestütze auf allen Vieren 5 Wiederholungen",
+                "packageRoutineId": 232,
+                "parentRoutineId": null,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -1994,8 +3236,21 @@
                 "packageRoutineId": 123,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2003,8 +3258,21 @@
                 "packageRoutineId": 124,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2012,8 +3280,21 @@
                 "packageRoutineId": 125,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2021,8 +3302,12 @@
                 "packageRoutineId": 348,
                 "parentRoutineId": null,
                 "scheduleCategory": "MONTHLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2030,8 +3315,12 @@
                 "packageRoutineId": 237,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2039,8 +3328,12 @@
                 "packageRoutineId": 326,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2048,8 +3341,12 @@
                 "packageRoutineId": 332,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2065,8 +3362,21 @@
                 "packageRoutineId": 123,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2074,8 +3384,21 @@
                 "packageRoutineId": 124,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2083,8 +3406,21 @@
                 "packageRoutineId": 125,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2092,8 +3428,21 @@
                 "packageRoutineId": 129,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2101,8 +3450,21 @@
                 "packageRoutineId": 238,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2110,8 +3472,12 @@
                 "packageRoutineId": 323,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2119,8 +3485,12 @@
                 "packageRoutineId": 307,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2136,8 +3506,21 @@
                 "packageRoutineId": 123,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2145,8 +3528,21 @@
                 "packageRoutineId": 124,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2154,8 +3550,21 @@
                 "packageRoutineId": 125,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2163,8 +3572,21 @@
                 "packageRoutineId": 129,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2172,8 +3594,21 @@
                 "packageRoutineId": 238,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2181,8 +3616,12 @@
                 "packageRoutineId": 249,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2190,8 +3629,12 @@
                 "packageRoutineId": 325,
                 "parentRoutineId": null,
                 "scheduleCategory": "MONTHLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2207,8 +3650,21 @@
                 "packageRoutineId": 123,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2216,8 +3672,21 @@
                 "packageRoutineId": 124,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2225,8 +3694,21 @@
                 "packageRoutineId": 125,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2234,8 +3716,21 @@
                 "packageRoutineId": 129,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2243,8 +3738,21 @@
                 "packageRoutineId": 238,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2252,8 +3760,21 @@
                 "packageRoutineId": 127,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2261,8 +3782,12 @@
                 "packageRoutineId": 304,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2270,8 +3795,12 @@
                 "packageRoutineId": 240,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2287,8 +3816,21 @@
                 "packageRoutineId": 123,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2296,8 +3838,21 @@
                 "packageRoutineId": 124,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2305,8 +3860,21 @@
                 "packageRoutineId": 125,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2314,8 +3882,21 @@
                 "packageRoutineId": 129,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2323,8 +3904,21 @@
                 "packageRoutineId": 238,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2332,8 +3926,21 @@
                 "packageRoutineId": 127,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2341,8 +3948,21 @@
                 "packageRoutineId": 242,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2350,8 +3970,21 @@
                 "packageRoutineId": 243,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2359,8 +3992,21 @@
                 "packageRoutineId": 333,
                 "parentRoutineId": 999,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -2378,8 +4024,12 @@
                 "packageRoutineId": 245,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2387,8 +4037,12 @@
                 "packageRoutineId": 241,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2396,8 +4050,12 @@
                 "packageRoutineId": 320,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2405,8 +4063,12 @@
                 "packageRoutineId": 246,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2422,8 +4084,12 @@
                 "packageRoutineId": 248,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2431,8 +4097,12 @@
                 "packageRoutineId": 321,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2440,8 +4110,12 @@
                 "packageRoutineId": 250,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2449,8 +4123,12 @@
                 "packageRoutineId": 251,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2466,8 +4144,12 @@
                 "packageRoutineId": 252,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2475,8 +4157,12 @@
                 "packageRoutineId": 253,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2484,8 +4170,12 @@
                 "packageRoutineId": 254,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2493,8 +4183,12 @@
                 "packageRoutineId": 255,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2510,8 +4204,21 @@
                 "packageRoutineId": 334,
                 "parentRoutineId": null,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2527,8 +4234,21 @@
                 "packageRoutineId": 256,
                 "parentRoutineId": null,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2544,8 +4264,21 @@
                 "packageRoutineId": 335,
                 "parentRoutineId": null,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2561,8 +4294,21 @@
                 "packageRoutineId": 336,
                 "parentRoutineId": null,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2580,8 +4326,21 @@
                 "packageRoutineId": 337,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2589,8 +4348,21 @@
                 "packageRoutineId": 338,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2598,8 +4370,21 @@
                 "packageRoutineId": 339,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2607,8 +4392,21 @@
                 "packageRoutineId": 127,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2616,8 +4414,12 @@
                 "packageRoutineId": 323,
                 "parentRoutineId": 323,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2625,17 +4427,25 @@
                 "packageRoutineId": 308,
                 "parentRoutineId": 308,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
                 "name": "Entedecke Algen für dich",
-                "packageRoutineId": 273,
-                "parentRoutineId": 273,
+                "packageRoutineId": 327,
+                "parentRoutineId": 327,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2643,8 +4453,12 @@
                 "packageRoutineId": 340,
                 "parentRoutineId": 340,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2652,8 +4466,12 @@
                 "packageRoutineId": 247,
                 "parentRoutineId": 247,
                 "scheduleCategory": "MONTHLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2669,8 +4487,21 @@
                 "packageRoutineId": 328,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2678,8 +4509,21 @@
                 "packageRoutineId": 341,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2687,8 +4531,21 @@
                 "packageRoutineId": 243,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2696,8 +4553,21 @@
                 "packageRoutineId": 342,
                 "parentRoutineId": 986,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2705,8 +4575,12 @@
                 "packageRoutineId": 300,
                 "parentRoutineId": 300,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2714,8 +4588,12 @@
                 "packageRoutineId": 331,
                 "parentRoutineId": 331,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "2",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  2
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2723,8 +4601,12 @@
                 "packageRoutineId": 329,
                 "parentRoutineId": 329,
                 "scheduleCategory": "WEEKLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "3",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  3
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2732,8 +4614,12 @@
                 "packageRoutineId": 330,
                 "parentRoutineId": 330,
                 "scheduleCategory": "MONTHLY_CHALLENGE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2753,8 +4639,21 @@
                 "packageRoutineId": 257,
                 "parentRoutineId": 998,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2762,8 +4661,87 @@
                 "packageRoutineId": 140,
                 "parentRoutineId": 998,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Regelmäßige Schlafenszeit 1,5 Stunden Fenster",
+                "packageRoutineId": 136,
+                "parentRoutineId": 998,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Heizung herunterdrehen",
+                "packageRoutineId": 142,
+                "parentRoutineId": 998,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "routineAffiliation": "PARENT"
+              },
+              {
+                "name": "Lichter dimmen vor dem Schlafengehen",
+                "packageRoutineId": 139,
+                "parentRoutineId": 998,
+                "scheduleCategory": "DAILY_ROUTINE",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
@@ -2783,8 +4761,15 @@
                 "packageRoutineId": 189,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2792,8 +4777,15 @@
                 "packageRoutineId": 356,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2801,8 +4793,15 @@
                 "packageRoutineId": 357,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2818,8 +4817,15 @@
                 "packageRoutineId": 189,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "2",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  2
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2827,8 +4833,15 @@
                 "packageRoutineId": 356,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "4",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  4
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2836,8 +4849,15 @@
                 "packageRoutineId": 187,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2845,8 +4865,12 @@
                 "packageRoutineId": 358,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "4",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2862,8 +4886,15 @@
                 "packageRoutineId": 189,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2871,8 +4902,15 @@
                 "packageRoutineId": 356,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "3",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  3
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2880,8 +4918,15 @@
                 "packageRoutineId": 187,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "5",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  5
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2889,8 +4934,15 @@
                 "packageRoutineId": 188,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "6",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  6
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               },
               {
@@ -2898,8 +4950,15 @@
                 "packageRoutineId": 358,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2915,8 +4974,18 @@
                 "packageRoutineId": 414,
                 "parentRoutineId": null,
                 "scheduleCategory": "WEEKLY_ROUTINE",
-                "scheduleDays": "1, 3, 5, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  3,
+                  5,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "INDIVIDUAL"
               }
             ]
@@ -2936,8 +5005,21 @@
                 "packageRoutineId": 154,
                 "parentRoutineId": 990,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               },
               {
@@ -2945,8 +5027,21 @@
                 "packageRoutineId": 155,
                 "parentRoutineId": 990,
                 "scheduleCategory": "DAILY_ROUTINE",
-                "scheduleDays": "1, 2, 3, 4, 5, 6, 7",
-                "scheduleWeeks": "1, 2, 3, 4",
+                "scheduleDays": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "scheduleWeeks": [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
                 "routineAffiliation": "PARENT"
               }
             ]
