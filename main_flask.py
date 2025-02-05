@@ -37,26 +37,76 @@ def hello():
 
 @app.route('/webhook-recalculate-action-plan', methods=['POST'])
 def recalc_action_plan():
-    app.logger.info("Received recalculation webhook")
+    data = request.get_json()
 
-    payload = request.get_json()
-    if not payload:
-        app.logger.error("No JSON payload provided")
-        return jsonify({'status': 'error', 'message': 'No JSON payload provided'}), 400
+    action_plan_stats = data.get('actionPlanCompletionStats', {})
 
-    completion_stats = payload.get("actionPlanCompletionStats")
-    app.logger.info("Received actionPlanCompletionStats: %s", completion_stats)
+    account_id = action_plan_stats.get('accountId')
+    actionplan_id = action_plan_stats.get('actionplanId')
+    start_date = action_plan_stats.get('startDate')
+    total_daily_time_in_mins = action_plan_stats.get('totalDailyTimeInMins')
+    period_in_days = action_plan_stats.get('periodInDays')
 
+    app.logger.info("Account ID: %s", account_id)
+    app.logger.info("Action Plan ID: %s", actionplan_id)
+    app.logger.info("Start Date: %s", start_date)
+    app.logger.info("Total Daily Time in Mins: %s", total_daily_time_in_mins)
+    app.logger.info("Period in Days: %s", period_in_days)
 
-    #final_action_plan = process_action_plan()
+    pillar_stats_list = action_plan_stats.get('pillarCompletionStats', [])
+    for pillar in pillar_stats_list:
+        pillar_enum = pillar.get('pillarEnum')
+        app.logger.info("Pillar Enum: %s", pillar_enum)
 
-    app.logger.info("Action plan recalculated and posted")
+        routine_stats_list = pillar.get('routineCompletionStats', [])
+        for routine in routine_stats_list:
+            routine_id = routine.get('routineId')
+            display_name = routine.get('displayName')
+            app.logger.info("Routine ID: %s, Display Name: %s", routine_id, display_name)
 
-    return jsonify({
-        'status': 'success',
-        'message': 'Action plan recalculated successfully',
-        'action_plan': final_action_plan
-    }), 200
+            completion_stats = routine.get('completionStatistics', [])
+            for stat in completion_stats:
+                completion_rate = stat.get('completionRate')
+                rate_period_unit = stat.get('completionRatePeriodUnit')
+                period_sequence_no = stat.get('periodSequenceNo')
+                completion_unit = stat.get('completionUnit')
+
+                completion_target = stat.get('completionTargetTotal', stat.get('completionTarget'))
+                completed_value = stat.get('completedValueTotal', stat.get('completedValue'))
+
+                app.logger.info(
+                    "Stat - Completion Rate: %s, Period Unit: %s, Sequence: %s, Unit: %s, Target: %s, Completed: %s",
+                    completion_rate, rate_period_unit, period_sequence_no, completion_unit, completion_target,
+                    completed_value
+                )
+
+                try:
+                    completion_rate_float = float(completion_rate)
+                    period_sequence_no_int = int(period_sequence_no)
+                except (ValueError, TypeError) as e:
+                    app.logger.error("Error converting values: %s", e)
+
+    total_target = 0
+    for pillar in pillar_stats_list:
+        for routine in pillar.get('routineCompletionStats', []):
+            for stat in routine.get('completionStatistics', []):
+                target_value = stat.get('completionTargetTotal', stat.get('completionTarget'))
+                if target_value is not None:
+                    try:
+                        total_target += float(target_value)
+                    except ValueError as e:
+                        app.logger.error("Error converting target value: %s", e)
+
+    app.logger.info("Total target value: %s", total_target)
+
+    final_action_plan = {
+        "accountId": account_id,
+        "actionplanId": actionplan_id,
+        "calculatedTotalTarget": total_target,
+    }
+
+    # Return the final action plan in the response
+    return jsonify({'action_plan': final_action_plan}), 200
 
 
 @app.route('/webhook', methods=['POST'])
