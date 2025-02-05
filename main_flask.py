@@ -37,28 +37,21 @@ def hello():
 
 @app.route('/webhook-recalculate-action-plan', methods=['POST'])
 def recalc_action_plan():
-    # Log that we received a recalculation request
     app.logger.info("Received recalculation webhook")
 
-    # Get the JSON payload that contains the action plan completion statistics
     payload = request.get_json()
     if not payload:
         app.logger.error("No JSON payload provided")
         return jsonify({'status': 'error', 'message': 'No JSON payload provided'}), 400
 
-    # Optionally log the received completion statistics
     completion_stats = payload.get("actionPlanCompletionStats")
     app.logger.info("Received actionPlanCompletionStats: %s", completion_stats)
 
-    # Trigger the recalculation of the action plan. If your existing function
-    # process_action_plan() does not accept parameters, you can modify it to use the
-    # completion statistics if needed.
-    final_action_plan = process_action_plan()
 
-    # Log that the recalculation is complete
+    #final_action_plan = process_action_plan()
+
     app.logger.info("Action plan recalculated and posted")
 
-    # Return a JSON response containing the status and (optionally) the recalculated plan
     return jsonify({
         'status': 'success',
         'message': 'Action plan recalculated successfully',
