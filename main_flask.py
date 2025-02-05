@@ -1,6 +1,6 @@
 # rule_based_system/main_flask.py
 import time
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from config import Config
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
 from utils.clickup_api import create_clickup_task
@@ -33,6 +33,38 @@ def main():
 @app.route('/')
 def hello():
     return "Hello, Flask is working!"
+
+
+@app.route('/webhook-recalculate-action-plan', methods=['POST'])
+def recalc_action_plan():
+    # Log that we received a recalculation request
+    app.logger.info("Received recalculation webhook")
+
+    # Get the JSON payload that contains the action plan completion statistics
+    payload = request.get_json()
+    if not payload:
+        app.logger.error("No JSON payload provided")
+        return jsonify({'status': 'error', 'message': 'No JSON payload provided'}), 400
+
+    # Optionally log the received completion statistics
+    completion_stats = payload.get("actionPlanCompletionStats")
+    app.logger.info("Received actionPlanCompletionStats: %s", completion_stats)
+
+    # Trigger the recalculation of the action plan. If your existing function
+    # process_action_plan() does not accept parameters, you can modify it to use the
+    # completion statistics if needed.
+    final_action_plan = process_action_plan()
+
+    # Log that the recalculation is complete
+    app.logger.info("Action plan recalculated and posted")
+
+    # Return a JSON response containing the status and (optionally) the recalculated plan
+    return jsonify({
+        'status': 'success',
+        'message': 'Action plan recalculated successfully',
+        'action_plan': final_action_plan
+    }), 200
+
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
