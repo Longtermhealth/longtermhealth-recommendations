@@ -1,21 +1,12 @@
 # rule_based_system/main_flask.py
-import traceback
-from flask import Flask, request, jsonify
-
-from chart.chart_generation import generate_polar_chart
-from chart.converter import create_final_image
+import time
+from flask import Flask, jsonify
 from config import Config
-from utils.blob_upload import upload_to_blob
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
-from utils.clickup_api import create_clickup_task, upload_file_to_clickup, update_clickup_custom_field
+from utils.clickup_api import create_clickup_task
 from utils.data_processing import integrate_answers
-from utils.link_summary import fetch_url_content, generate_summary
 from assessments.health_assessment import HealthAssessment
 from scheduling.scheduler import main as process_action_plan
-
-import matplotlib.pyplot as plt
-import numpy as np
-import os
 import logging
 
 CLICKUP_API_KEY = Config.CLICKUP_API_KEY
@@ -45,8 +36,14 @@ def hello():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    start_time = time.perf_counter()
     app.logger.info('Webhook received')
     final_action_plan = process_action_plan()
+    app.logger.info('Action plan processed and posted')
+    end_time = time.perf_counter()
+    elapsed = end_time - start_time
+    app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
+
     field_mapping = get_field_mapping()
     responses = get_responses()
 
