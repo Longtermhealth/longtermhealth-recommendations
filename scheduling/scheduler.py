@@ -350,8 +350,7 @@ def load_routines_for_rules(file_path):
     return routines
 
 
-def save_action_plan_json(final_action_plan,
-                          file_path='./data/action_plan.json'):
+def save_action_plan_json(final_action_plan, file_path='./data/action_plan.json'):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(final_action_plan, f, ensure_ascii=False, indent=2)
 
@@ -363,9 +362,9 @@ def filter_excluded_routines(routines):
     ]
 
 
+
 def sort_routines_by_score_rules(routines):
     return sorted(routines, key=lambda routine: routine.get("score_rules", 0), reverse=True)
-
 
 def create_health_scores_with_structure(account_id, health_scores):
     """
@@ -489,16 +488,27 @@ def add_individual_routine_entry(
         expiration_date = calculate_expiration_date(days=28)
     elif scheduleCategory == "WEEKLY_CHALLENGE":
         weeks_mapping = {
-            "1": 7,
-            "2": 14,
-            "3": 21,
-            "4": 28
+            1: 7,
+            2: 14,
+            3: 21,
+            4: 28
         }
-        expiration_days = weeks_mapping.get(scheduleWeeks, 7)
-        if scheduleWeeks in weeks_mapping:
+
+        if isinstance(scheduleWeeks, list):
+            if scheduleWeeks:
+                scheduleWeeks_value = scheduleWeeks[0]
+            else:
+                scheduleWeeks_value = 1
+        else:
+            try:
+                scheduleWeeks_value = int(scheduleWeeks)
+            except ValueError:
+                scheduleWeeks_value = 1
+
+        expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
+        if scheduleWeeks_value in weeks_mapping:
             expiration_date = calculate_expiration_date(days=expiration_days)
-            print(
-                f"Routine '{routine['attributes'].get('name')}' scheduled for {scheduleWeeks} week(s). Expiration set to {expiration_days} days.")
+            print(f"Routine '{routine['attributes'].get('name')}' scheduled for {scheduleWeeks_value} week(s). Expiration set to {expiration_days} days.")
         else:
             print("Unsupported number of weeks. Setting default expiration to 7 days.")
             expiration_date = calculate_expiration_date(days=7)
@@ -515,7 +525,6 @@ def add_individual_routine_entry(
         routine_class_display_name = 'DefaultDisplayName'
 
     mapped_id = None
-
     if parentRoutineId:
         unique_id_to_find = parentRoutineId
         print('unique_id_to_find', unique_id_to_find)
@@ -528,10 +537,8 @@ def add_individual_routine_entry(
             "pillarEnum": routine['attributes']['pillar']['pillarEnum'],
             "displayName": routine['attributes']['pillar']['displayName']
         },
-        "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get(
-            "imageUrl_1x1") or "https://longtermhealth.de",
-        "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get(
-            "imageUrl_16x9") or "https://longtermhealth.de",
+        "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
+        "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de",
         "routineId": routine["id"],
         "durationCalculated": float(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
@@ -551,6 +558,7 @@ def add_individual_routine_entry(
         "packageName": routine_class_display_name,
         "packageTag": packageTag,
         "parentRoutineId": mapped_id,
+        "sets": routine.get('attributes', {}).get('sets', 0),
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
     print(f"Added individual routine with ID {routine_id} to the action plan.")
@@ -594,12 +602,13 @@ def add_individual_routine_entry(
                 "description": super_routine_config.get("description", ""),
                 "displayName": super_routine_config.get("displayName", "Unnamed Super Routine"),
                 "alternatives": [],
-                "scheduleDays": super_routine_config.get("scheduleDays", "1,2,3,4,5,6,7"),
-                "scheduleWeeks": super_routine_config.get("scheduleWeeks", "1,2,3,4"),
+                "scheduleDays": super_routine_config.get("scheduleDays", [1,2,3,4,5,6,7]),
+                "scheduleWeeks": super_routine_config.get("scheduleWeeks", [1,2,3,4]),
                 "scheduleCategory": super_routine_config.get("scheduleCategory", "DAILY_ROUTINE"),
                 "packageName": routine_class_display_name,
                 "packageTag": packageTag,
                 "parentRoutineId": None,
+                "sets": routine.get('attributes', {}).get('sets', 0),
                 **({"expirationDate": calculate_expiration_date(days=28)} if super_routine_config.get(
                     "scheduleCategory") in ["MONTHLY_CHALLENGE", "WEEKLY_ROUTINE"] else {})
             }
@@ -615,8 +624,8 @@ def add_individual_routine_entry_without_parent(
         routines: List[Dict[str, Any]],
         routine_id: int,
         scheduleCategory: str,
-        scheduleDays: str,
-        scheduleWeeks: str,
+        scheduleDays,
+        scheduleWeeks,
         packageTag: str,
         routine_unique_id_map: Dict[int, int],
         parentRoutineId: Optional[int] = None,
@@ -625,20 +634,7 @@ def add_individual_routine_entry_without_parent(
     Adds an individual routine entry to the final_action_plan by specifying the routine_id,
     scheduleCategory, scheduleDays, scheduleWeeks, and conditionally parentRoutineId.
     Also adds the corresponding super routine if parentRoutineId is provided.
-
-    Args:
-        final_action_plan (dict): The action plan to which the routine will be added.
-        routines (List[Dict[str, Any]]): List of all available routines.
-        routine_id (int): The unique ID of the routine to add.
-        scheduleCategory (str): The schedule category of the routine.
-        scheduleDays (str): The days on which the routine is scheduled.
-        scheduleWeeks (str): The weeks during which the routine is scheduled.
-        parentRoutineId (int, optional): The parent routine ID if applicable.
-
-    Returns:
-        None
     """
-
     routine = next((r for r in routines if r['id'] == routine_id), None)
     if not routine:
         print(f"Routine with id {routine_id} not found.")
@@ -647,26 +643,35 @@ def add_individual_routine_entry_without_parent(
     if scheduleCategory == "MONTHLY_CHALLENGE":
         expiration_date = calculate_expiration_date(days=28)
     elif scheduleCategory == "WEEKLY_CHALLENGE":
+
         weeks_mapping = {
-            "1": 7,
-            "2": 14,
-            "3": 21,
-            "4": 28
+            1: 7,
+            2: 14,
+            3: 21,
+            4: 28
         }
-        expiration_days = weeks_mapping.get(scheduleWeeks, 7)
-        if scheduleWeeks in weeks_mapping:
-            expiration_date = calculate_expiration_date(days=expiration_days)
-            print(
-                f"Routine '{routine['attributes'].get('name')}' scheduled for {scheduleWeeks} week(s). Expiration set to {expiration_days} days.")
+        if isinstance(scheduleWeeks, list):
+            if scheduleWeeks:
+                try:
+                    scheduleWeeks_value = int(scheduleWeeks[0])
+                except (ValueError, TypeError):
+                    scheduleWeeks_value = 1
+            else:
+                scheduleWeeks_value = 1
         else:
-            print("Unsupported number of weeks. Setting default expiration to 7 days.")
-            expiration_date = calculate_expiration_date(days=7)
+            try:
+                scheduleWeeks_value = int(scheduleWeeks)
+            except ValueError:
+                scheduleWeeks_value = 1
+
+        expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
+        expiration_date = calculate_expiration_date(days=expiration_days)
+        print(f"Routine '{routine['attributes'].get('name')}' scheduled for {scheduleWeeks_value} week(s). Expiration set to {expiration_days} days.")
     else:
         print("Unknown schedule category or unsupported number of weeks. Setting default expiration to 7 days.")
         expiration_date = calculate_expiration_date(days=7)
 
     routine_class = routine.get('attributes', {}).get('routineClass')
-
     if routine_class and isinstance(routine_class, dict):
         package_name = routine_class.get('routineClassEnum', 'DefaultEnum')
         routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
@@ -675,7 +680,6 @@ def add_individual_routine_entry_without_parent(
         routine_class_display_name = 'DefaultDisplayName'
 
     mapped_id = None
-
     if parentRoutineId:
         unique_id_to_find = parentRoutineId
         print('unique_id_to_find', unique_id_to_find)
@@ -688,10 +692,8 @@ def add_individual_routine_entry_without_parent(
             "pillarEnum": routine['attributes']['pillar']['pillarEnum'],
             "displayName": routine['attributes']['pillar']['displayName']
         },
-        "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get(
-            "imageUrl_1x1") or "https://longtermhealth.de",
-        "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get(
-            "imageUrl_16x9") or "https://longtermhealth.de",
+        "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
+        "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de",
         "routineId": routine["id"],
         "durationCalculated": float(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
@@ -711,6 +713,7 @@ def add_individual_routine_entry_without_parent(
         "packageName": routine_class_display_name,
         "packageTag": packageTag,
         "parentRoutineId": mapped_id,
+        "sets": routine.get('attributes', {}).get('sets', 0),
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
     print(f"Added individual routine with ID {routine_id} to the action plan.")
@@ -788,9 +791,8 @@ def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) 
     """
     selected_routines = []
     selected_ids: Set[int] = set()
-    used_variations: Set[str] = set()  # Track variations that have already been selected
+    used_variations: Set[str] = set()
 
-    # Sort tag combinations by the number of tags (descending) to prioritize more specific combinations
     sorted_tag_combinations = sorted(tag_counts.keys(), key=lambda x: len(x.split(',')), reverse=True)
     print(f"Sorted tag combinations (prioritized): {sorted_tag_combinations}")
 
@@ -799,29 +801,27 @@ def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) 
         tags = [tag.strip() for tag in tag_combination.split(',')]
         print(f"\nProcessing tag combination: {tags} with required count: {required_count}")
 
-        # Find all routines matching the current tag combination
         matched = match_routines_by_tags(routines, tags)
         print(f"Total matched routines for tags {tags}: {len(matched)}")
 
-        count_added = 0  # Counter for how many routines have been added for this tag combination
+        count_added = 0
 
         for routine in matched:
             if count_added >= required_count:
-                break  # Required number of routines for this tag combination has been met
+                break
 
             routine_id = routine.get('id')
             if routine_id in selected_ids:
-                continue  # Skip if this routine has already been selected
+                continue
 
-            # Extract all variation names for the current routine
+
             routine_variations = routine.get('attributes', {}).get('variations', [])
             variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
 
-            # Check if any of the routine's variations have already been used
             if used_variations.isdisjoint(variation_names):
                 selected_routines.append(routine)
                 selected_ids.add(routine_id)
-                used_variations.update(variation_names)  # Mark these variations as used
+                used_variations.update(variation_names)
                 count_added += 1
                 print(f"Selected routine ID {routine_id} with variations {variation_names}")
             else:
@@ -835,7 +835,6 @@ def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) 
 
     print(f"\nTotal selected routines: {len(selected_routines)}")
     return selected_routines
-
 
 def match_routines_by_tags(routines: List[Dict[str, Any]], tags: List[str]) -> List[Dict[str, Any]]:
     """
@@ -883,7 +882,6 @@ def check_parent_routine_ids(selected_packages, tag_counts_dicts):
 
     return matching_parent_ids
 
-
 def get_all_present_tags(selected_packages: List[Dict[str, Any]]) -> Set[str]:
     """
     Extracts all unique package tags from the selected_packages.
@@ -910,12 +908,16 @@ def update_parent_durationCalculated_and_goal(
 ) -> None:
     """
     Updates the durationCalculated and goal.value fields of parent routines in the final_action_plan.
-    The new value is the sum of durationCalculated from all child routines that belong
-    to that parent. The parent routine is identified by its unique ID from SUPER_ROUTINE_CONFIG.
+    The new value is the sum of durationCalculated from all child routines that belong to that parent,
+    plus a break time after each routine. The break time is 20 seconds per set, which is converted to minutes.
+
+    The parent routine is identified by its unique ID from SUPER_ROUTINE_CONFIG.
     If a child routine stores a parentRoutineId that is not directly one of the tracked unique IDs,
     the reverse mapping is used to convert it.
 
     Both the durationCalculated field and the goal.value of the parent routine are updated.
+
+    Note: The routine durations are in minutes. Therefore, the 20-second break per set is converted to minutes.
 
     Args:
         final_action_plan (dict): The action plan containing routines.
@@ -928,19 +930,34 @@ def update_parent_durationCalculated_and_goal(
     print("\n--- Updating durationCalculated and goal.value for parent routines ---")
 
     tracked_parent_ids = set(config['routineId'] for config in SUPER_ROUTINE_CONFIG.values())
-    #print("Tracked parent routine unique IDs from SUPER_ROUTINE_CONFIG:", tracked_parent_ids)
+    print("Tracked parent routine unique IDs from SUPER_ROUTINE_CONFIG:", tracked_parent_ids)
 
     reverse_map = {mapped: unique for unique, mapped in routine_unique_id_map.items()}
-    #print("Reverse mapping (mapped id -> unique id):", reverse_map)
+    print("Reverse mapping (mapped id -> unique id):", reverse_map)
 
-    parent_durations = {pid: 0 for pid in tracked_parent_ids}
+    parent_durations = {pid: 0.0 for pid in tracked_parent_ids}
 
     routines = final_action_plan.get("data", {}).get("routines", [])
-    #print(f"Found {len(routines)} routines in final_action_plan.")
+    print(f"Found {len(routines)} routines in final_action_plan.")
 
     for routine in routines:
         stored_parent = routine.get("parentRoutineId")
         child_duration = routine.get("durationCalculated", 0)
+
+        try:
+            sets = int(routine.get("sets", 0))
+            print('sets: ',sets)
+        except (ValueError, TypeError):
+            sets = 1
+
+        if sets > 0:
+            break_time_minutes = (sets * 20) / 60.0
+        else:
+            break_time_minutes = 0.0
+
+
+        total_time = child_duration + break_time_minutes
+
         if stored_parent is not None:
             effective_parent = None
             if stored_parent in tracked_parent_ids:
@@ -950,11 +967,15 @@ def update_parent_durationCalculated_and_goal(
                 if effective_parent not in tracked_parent_ids:
                     effective_parent = None
             if effective_parent is not None:
-                parent_durations[effective_parent] += child_duration
+                parent_durations[effective_parent] += total_time
                 print(
-                    f"Added {child_duration} from child (parentRoutineId: {stored_parent}) to parent unique id {effective_parent}. Running total: {parent_durations[effective_parent]}")
+                    f"Added {child_duration} (duration in minutes) + {break_time_minutes:.2f} (break in minutes) = "
+                    f"{total_time:.2f} from child (parentRoutineId: {stored_parent}) to parent unique id {effective_parent}. "
+                    f"Running total: {parent_durations[effective_parent]:.2f}"
+                )
 
-    print("Computed total durations for parent routines:", parent_durations)
+    print("Computed total durations for parent routines (including breaks in minutes):", parent_durations)
+
 
     updated_count = 0
     for routine in routines:
@@ -967,13 +988,16 @@ def update_parent_durationCalculated_and_goal(
             if candidate in tracked_parent_ids:
                 effective_parent = candidate
         if effective_parent is not None:
-            new_total = parent_durations.get(effective_parent, 0)
-            routine["durationCalculated"] = int(new_total)
+            new_total = parent_durations.get(effective_parent, 0.0)
+
+            routine["durationCalculated"] = int(round(new_total))
             if "goal" in routine and isinstance(routine["goal"], dict):
-                routine["goal"]["value"] = int(new_total)
+                routine["goal"]["value"] = int(round(new_total))
             updated_count += 1
             print(
-                f"Updated parent routine (routineId {routine_id} → unique id {effective_parent}) with durationCalculated = {new_total} and goal.value = {new_total}")
+                f"Updated parent routine (routineId {routine_id} → unique id {effective_parent}) with "
+                f"durationCalculated = {new_total:.2f} minutes and goal.value = {new_total:.2f} minutes"
+            )
 
     print(f"Updated {updated_count} parent routines with new durationCalculated and goal.value values.")
     print("--- Finished updating parent routines ---\n")
@@ -985,6 +1009,332 @@ def convert_durations_to_int(action_plan: dict) -> None:
             routine["durationCalculated"] = int(round(routine["durationCalculated"]))
         if "goal" in routine and isinstance(routine["goal"], dict) and "value" in routine["goal"]:
             routine["goal"]["value"] = int(round(routine["goal"]["value"]))
+
+
+ALLOWED_CATEGORIES = {"DAILY_CHALLENGE", "WEEKLY_CHALLENGE", "MONTHLY_CHALLENGE"}
+TARGET_PILLAR = "COGNITIVE_ENHANCEMENT"
+
+
+def filter_routines(routines):
+    daily, weekly, monthly = [], [], []
+    for routine in routines:
+        attrs = routine.get("attributes", {})
+        pillar_data = attrs.get("pillar", {})
+        if pillar_data.get("pillarEnum") == TARGET_PILLAR:
+            sc = attrs.get("scheduleCategory")
+            if sc in ALLOWED_CATEGORIES:
+                name = attrs.get("displayName") or attrs.get("name")
+                pillar_name = pillar_data.get("displayName") or pillar_data.get("pillarEnum")
+                entry = {
+                    "id": routine.get("id"),
+                    "name": name,
+                    "pillar": pillar_name,
+                    "scheduleCategory": sc,
+                    "scheduleDays": attrs.get("scheduleDays", ""),
+                    "scheduleWeeks": attrs.get("scheduleWeeks", "")
+                }
+                if sc == "DAILY_CHALLENGE":
+                    daily.append(entry)
+                elif sc == "WEEKLY_CHALLENGE":
+                    weekly.append(entry)
+                elif sc == "MONTHLY_CHALLENGE":
+                    monthly.append(entry)
+    return daily, weekly, monthly
+
+
+def filter_final_action_plan(final_action_plan):
+    data = final_action_plan.get("data", {})
+    routines = data.get("routines", [])
+    daily, weekly, monthly = [], [], []
+    for routine in routines:
+        sc = routine.get("scheduleCategory")
+        if sc in ALLOWED_CATEGORIES:
+            name = routine.get("displayName") or routine.get("name")
+            pillar_data = routine.get("pillar", {})
+            pillar_name = pillar_data.get("displayName") or pillar_data.get("pillarEnum")
+            entry = {
+                "id": routine.get("routineId"),
+                "name": name,
+                "pillar": pillar_name,
+                "scheduleCategory": sc,
+                "scheduleDays": routine.get("scheduleDays", ""),
+                "scheduleWeeks": routine.get("scheduleWeeks", "")
+            }
+            if sc == "DAILY_CHALLENGE":
+                daily.append(entry)
+            elif sc == "WEEKLY_CHALLENGE":
+                weekly.append(entry)
+            elif sc == "MONTHLY_CHALLENGE":
+                monthly.append(entry)
+    return daily, weekly, monthly
+
+
+def get_monthly_challenge_id(final_action_plan, routines):
+    """
+    Returns the ID to use for a monthly challenge routine.
+
+    First, it checks the final action plan:
+      - If there is at least one monthly challenge in the final action plan, it returns the ID of the first one.
+    Otherwise, it falls back to the cognitive enhancement routines from the `routines` list:
+      - If at least one monthly challenge is found there, it returns its ID.
+    If neither source provides a monthly challenge, returns None.
+
+    Parameters:
+        final_action_plan (dict): Your final action plan data.
+        routines (list): Your list of routines (with cognitive enhancement routines under attributes).
+
+    Returns:
+        The routine ID (e.g. an integer) or None if not found.
+    """
+    _, _, monthly_final = filter_final_action_plan(final_action_plan)
+    if monthly_final:
+        already_scheduled = True
+        return monthly_final[0]["id"], already_scheduled
+
+    _, _, monthly_cognitive = filter_routines(routines)
+    if monthly_cognitive:
+        already_scheduled = False
+        return monthly_cognitive[0]["id"], already_scheduled
+
+
+    return None
+
+
+def remove_entry_from_action_plan(final_action_plan, id_to_remove):
+    """
+    Removes an entry (routine) from the final action plan that has the specified routine ID.
+
+    Parameters:
+        final_action_plan (dict): Your final action plan, expected to have routines under final_action_plan["data"]["routines"].
+        id_to_remove: The ID of the routine to remove (this is matched against routine["routineId"]).
+
+    Returns:
+        dict: The updated final action plan with the specified routine removed.
+    """
+    data = final_action_plan.get("data", {})
+    routines = data.get("routines", [])
+
+
+    updated_routines = [routine for routine in routines if routine.get("routineId") != id_to_remove]
+
+    data["routines"] = updated_routines
+    final_action_plan["data"] = data
+    return final_action_plan
+
+
+def check_weekly_challenges_in_final_action_plan(final_action_plan):
+    """
+    Checks weekly challenges in the final action plan and removes duplicate entries
+    scheduled on the same week so that only one challenge remains per week (or only those
+    with a packageTag containing "BASICS" if any exist).
+
+    For each week (determined by the "scheduleWeeks" field):
+      - If more than one weekly challenge is scheduled:
+          a. Partition the challenges into two groups:
+             - Those whose "packageTag" contains "BASICS".
+             - Those that do not.
+          b. If one or more challenges have "BASICS" in their packageTag:
+             - Keep all challenges with "BASICS" and remove the others.
+          c. If no challenge in that week has "BASICS" in the packageTag:
+             - Keep only the first challenge and remove the rest.
+
+    The function updates the final_action_plan in-place (under final_action_plan["data"]["routines"])
+    and returns the updated action plan.
+    """
+    data = final_action_plan.get("data", {})
+    routines = data.get("routines", [])
+
+    weekly_challenges = [r for r in routines if r.get("scheduleCategory") == "WEEKLY_CHALLENGE"]
+    print(f"Found {len(weekly_challenges)} weekly challenge(s) in the action plan.")
+
+    week_to_challenges = {}
+    for routine in weekly_challenges:
+        schedule_weeks = routine.get("scheduleWeeks", "")
+        if isinstance(schedule_weeks, list):
+            weeks = [str(w).strip() for w in schedule_weeks if str(w).strip()]
+        else:
+            weeks = [w.strip() for w in schedule_weeks.split(",") if w.strip()]
+        for week in weeks:
+            week_to_challenges.setdefault(week, []).append(routine)
+
+    print("Grouped weekly challenges by schedule week:")
+    for week, group in week_to_challenges.items():
+        print(f"  Week {week}: {len(group)} challenge(s)")
+
+    ids_to_remove = set()
+
+    for week, group in week_to_challenges.items():
+        if len(group) > 1:
+            print(f"\nProcessing week {week} with {len(group)} challenges:")
+            for r in group:
+                print(
+                    f"  - Routine ID {r.get('routineId')}, Name: {r.get('displayName') or r.get('name')}, PackageTag: {r.get('packageTag')}"
+                )
+
+            basics = [r for r in group if "BASICS" in r.get("packageTag", "")]
+            non_basics = [r for r in group if "BASICS" not in r.get("packageTag", "")]
+
+            if basics:
+                print("  Found BASICS challenge(s) in this week:")
+                for r in basics:
+                    print(f"    - Routine ID {r.get('routineId')}, Name: {r.get('displayName') or r.get('name')}")
+
+                for r in non_basics:
+                    r_id = r.get("routineId")
+                    if r_id is not None:
+                        ids_to_remove.add(r_id)
+                        print(
+                            f"  Removing non-BASICS challenge: ID {r_id}, Name: {r.get('displayName') or r.get('name')}"
+                        )
+            else:
+                print("  No BASICS challenge found in this week. Keeping the first challenge and removing the rest.")
+                for r in group[1:]:
+                    r_id = r.get("routineId")
+                    if r_id is not None:
+                        ids_to_remove.add(r_id)
+                        print(f"  Removing challenge: ID {r_id}, Name: {r.get('displayName') or r.get('name')}")
+        else:
+            print(f"\nWeek {week} has only one challenge; no action needed.")
+
+    updated_routines = [r for r in routines if r.get("routineId") not in ids_to_remove]
+    final_action_plan.setdefault("data", {})["routines"] = updated_routines
+
+    print(f"\nRemoved {len(ids_to_remove)} duplicate routine(s).")
+    return final_action_plan
+
+def add_missing_weekly_challenges(final_action_plan: dict, routines: List[Dict[str, Any]], routine_unique_id_map: dict) -> None:
+    """
+    Checks if weekly challenges for all 4 weeks (weeks 1 through 4) are present
+    in the final_action_plan. For any missing week, adds a unique cognition weekly challenge.
+    Each available cognition challenge is used at most once.
+    The scheduleDays and scheduleWeeks values are set as lists of integers.
+    """
+    _, weekly_final, _ = filter_final_action_plan(final_action_plan)
+    existing_weeks = set()
+    used_routine_ids = set()
+    for challenge in weekly_final:
+        schedule_weeks = challenge.get("scheduleWeeks", "")
+        if isinstance(schedule_weeks, list):
+            existing_weeks.update({str(w).strip() for w in schedule_weeks if str(w).strip()})
+        else:
+            existing_weeks.update({w.strip() for w in schedule_weeks.split(",") if w.strip()})
+        if challenge.get("routineId") is not None:
+            used_routine_ids.add(challenge["routineId"])
+    print(f"Existing weekly challenge weeks: {existing_weeks}")
+
+    expected_weeks = {"1", "2", "3", "4"}
+    missing_weeks = sorted(list(expected_weeks - existing_weeks))
+    if not missing_weeks:
+        print("All 4 weekly challenges are present. No need to add extra cognition challenges.")
+        return
+
+    print(f"Missing weekly challenge weeks: {missing_weeks}")
+
+    _, weekly_cognition, _ = filter_routines(routines)
+    if not weekly_cognition:
+        print("No cognition weekly challenges available to add.")
+        return
+
+    available_cognition = [r for r in weekly_cognition if r["id"] not in used_routine_ids]
+    if not available_cognition:
+        print("No unique cognition challenges remain to assign.")
+        return
+
+    print(f"Available unique cognition challenges: {[r['id'] for r in available_cognition]}")
+
+    for week, cognition_routine in zip(missing_weeks, available_cognition):
+        week_int = int(week)
+        print(f"Adding cognition weekly challenge (ID {cognition_routine['id']}) for week {week_int}.")
+
+        add_individual_routine_entry_without_parent(
+            final_action_plan,
+            routines,
+            cognition_routine["id"],
+            "WEEKLY_CHALLENGE",
+            [week_int],
+            [week_int],
+            "COGNITION BASICS",
+            routine_unique_id_map,
+            parentRoutineId=None
+        )
+
+
+import random
+
+
+def schedule_daily_cognitive_challenges(final_action_plan: dict, routines: List[Dict[str, Any]],
+                                        routine_unique_id_map: dict) -> None:
+    """
+    Schedules daily challenges from the cognition pillar.
+
+    Requirements:
+      - Only 2 challenges per week are scheduled for 4 weeks (total of 8 challenges).
+      - There must be at least 3 days between the two challenges within a week.
+      - The day assignments are randomized (from a set of valid pairs).
+      - Each challenge is used only once.
+
+    This function extracts cognition daily challenges (i.e. routines with pillar "COGNITIVE_ENHANCEMENT"
+    and scheduleCategory "DAILY_CHALLENGE") and then assigns two challenges per week using a random valid day pair.
+    """
+    daily_cognition, _, _ = filter_routines(routines)
+
+    if not daily_cognition:
+        print("No cognition daily challenges available.")
+        return
+
+    total_needed = 8
+    if len(daily_cognition) < total_needed:
+        print(f"Not enough unique cognition daily challenges available. Found only {len(daily_cognition)}.")
+        available = daily_cognition.copy()
+    else:
+        available = daily_cognition.copy()
+
+    valid_pairs = [(1, 5), (1, 6), (1, 7), (2, 6), (2, 7), (3, 7)]
+
+    for week in range(1, 5):
+        if not valid_pairs:
+            print("No valid day pairs available for scheduling.")
+            return
+
+        day_pair = random.choice(valid_pairs)
+        first_day, second_day = day_pair
+        print(f"Week {week}: Randomly chosen day pair: {first_day} and {second_day}.")
+
+        if available:
+            challenge_first = available.pop(0)
+            print(f"Scheduling cognition daily challenge ID {challenge_first['id']} on week {week}, day {first_day}.")
+            add_individual_routine_entry_without_parent(
+                final_action_plan,
+                routines,
+                challenge_first["id"],
+                "DAILY_CHALLENGE",
+                [first_day],
+                [week],
+                "COGNITIVE BASICS",
+                routine_unique_id_map,
+                parentRoutineId=None
+            )
+        else:
+            print("No more unique daily cognition challenges available to schedule for the first day.")
+            return
+
+        if available:
+            challenge_second = available.pop(0)
+            print(f"Scheduling cognition daily challenge ID {challenge_second['id']} on week {week}, day {second_day}.")
+            add_individual_routine_entry_without_parent(
+                final_action_plan,
+                routines,
+                challenge_second["id"],
+                "DAILY_CHALLENGE",
+                [second_day],
+                [week],
+                "COGNITIVE BASICS",
+                routine_unique_id_map,
+                parentRoutineId=None
+            )
+        else:
+            print("No more unique daily cognition challenges available to schedule for the second day.")
+            return
 
 
 def main():
@@ -1009,16 +1359,19 @@ def main():
     sorted_routines = sort_routines_by_score_rules(filtered_routines)
     routines = sorted_routines
     health_scores = {key: value for key, value in health_scores.items() if key != 'Total Score'}
-    # print('filtered_routines',filtered_routines)
+
+    for routine in filtered_routines:
+        print('filtered:routines',routine.get("attributes", {}).get("cleanedName"))
 
     health_scores_with_tag = create_health_scores_with_structure(account_id, health_scores)
-    #print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
+    print('health_scores_with_tag for posting:', json.dumps(health_scores_with_tag, indent=4, ensure_ascii=False))
+
 
     packages_file_path = "./data/packages_with_id.json"
     with open(packages_file_path, "r") as file:
         data = json.load(file)
-    #print('selected_packages', selected_packages)
-    #print('data', data)
+    print('selected_packages', selected_packages)
+    print('data', data)
 
     ids_by_package_name = {}
     for pillar_name, pillar_data in data["packages"]["pillars"].items():
@@ -1033,6 +1386,7 @@ def main():
         print(f"{package_name}: {ids}")
         pass
 
+
     final_action_plan = {
         "data": {
             "accountId": account_id,
@@ -1043,8 +1397,10 @@ def main():
         }
     }
 
+
+
     routine_unique_id_map = build_routine_unique_id_map(routines)
-    #print("Routine Unique ID -> ID Mapping:", routine_unique_id_map)
+    print("Routine Unique ID -> ID Mapping:", routine_unique_id_map)
 
     full_body_training_tag_counts = {
         "parentRoutineId": 997,
@@ -1061,7 +1417,6 @@ def main():
         "parentRoutineId": 996,
         "tags": {
             "warm-up, lower body": 2,
-            # "warm-up": 2,
             "lower_body_strength_training": 6,
             "mobility_sport": 2
         }
@@ -1092,10 +1447,13 @@ def main():
     ]
 
     matched_ids = check_parent_routine_ids(selected_packages, tag_counts_list)
-    print('matched_ids', matched_ids)
+    print('matched_ids',matched_ids)
+
+
 
     if 997 in matched_ids:
         tag_counts_input = full_body_training_tag_counts['tags']
+
 
         print("\nStarting routine selection based on tag counts.")
         selected_routines = select_routines(tag_counts_input, filtered_routines)
@@ -1103,14 +1461,14 @@ def main():
 
         for routine in selected_routines:
             parent_id = full_body_training_tag_counts.get("parentRoutineId")
-            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
-                "1,2,3,4,5",
-                "1",
+                [1,2,3,4,5],
+                [1],
                 "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
@@ -1118,20 +1476,21 @@ def main():
     if 996 in matched_ids:
         tag_counts_input = lower_body_strength_training_tag_counts['tags']
 
+
         print("\nStarting routine selection based on tag counts.")
         selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
             parent_id = lower_body_strength_training_tag_counts.get("parentRoutineId")
-            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
-                "1,2,3,4,5",
-                "1",
+                [1,2,3,4,5],
+                [1,2,3,4,5],
                 "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
@@ -1139,20 +1498,21 @@ def main():
     if 995 in matched_ids:
         tag_counts_input = upper_body_strength_training_tag_counts['tags']
 
+
         print("\nStarting routine selection based on tag counts.")
         selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
             parent_id = upper_body_strength_training_tag_counts.get("parentRoutineId")
-            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
-                "1,2,3,4,5",
-                "1",
+                [1,2,3,4,5],
+                [1],
                 "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
@@ -1161,24 +1521,26 @@ def main():
     if 994 in matched_ids:
         tag_counts_input = core_strength_training_tag_counts['tags']
 
+
         print("\nStarting routine selection based on tag counts.")
         selected_routines = select_routines(tag_counts_input, filtered_routines)
         print("Routine selection completed.")
 
         for routine in selected_routines:
             parent_id = core_strength_training_tag_counts.get("parentRoutineId")
-            #print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
+            print(f"\nAdding routine ID {routine['id']} to the action plan with parent ID {parent_id}.")
             add_individual_routine_entry_without_parent(
                 final_action_plan,
                 filtered_routines,
                 routine["id"],
                 "WEEKLY_ROUTINE",
-                "1,2,3,4,5",
-                "1",
+                [1,2,3,4,5],
+                [1],
                 "MOVEMENT BASICS",
                 routine_unique_id_map,
                 parent_id
             )
+
 
     TAG_TO_FUNCTION_MAP = {
         'STRESS BASICS': create_individual_routines,
@@ -1201,6 +1563,7 @@ def main():
             print(f"Created individual routines for tag: {tag}")
 
             for entry in individual_routines:
+                print('entry',entry)
                 if entry.get('routineAffiliation') == 'INDIVIDUAL':
                     parent_id = None
                 else:
@@ -1220,13 +1583,58 @@ def main():
         else:
             print(f"No function mapped for tag: {tag}. Skipping.")
 
+
+
+    daily_routines, weekly_routines, monthly_routines = filter_routines(routines)
+    daily_final, weekly_final, monthly_final = filter_final_action_plan(final_action_plan)
+
+    def print_entries(header, entries):
+        print(f"{header}:")
+        for entry in entries:
+            print(
+                f"ID: {entry['id']}, Name: {entry['name']}, Pillar: {entry['pillar']},   "
+                f"Schedule Category: {entry['scheduleCategory']}, "
+                f"Schedule Days: {entry['scheduleDays']}, "
+                f"Schedule Weeks: {entry['scheduleWeeks']}"
+            )
+        print()
+
+    print_entries("Daily Challenge Routines (routines)", daily_routines)
+    print_entries("Weekly Challenge Routines (routines)", weekly_routines)
+    print_entries("Monthly Challenge Routines (routines)", monthly_routines)
+
+    print_entries("Daily Challenge Routines (final action plan)", daily_final)
+    print_entries("Weekly Challenge Routines (final action plan)", weekly_final)
+    print_entries("Monthly Challenge Routines (final action plan)", monthly_final)
+
+    monthly_id, already_scheduled = get_monthly_challenge_id(final_action_plan, routines)
+    if already_scheduled:
+        print(f'Monthly Challenge with id {monthly_id} already scheduled')
+    else:
+        add_individual_routine_entry_without_parent(
+            final_action_plan,
+            filtered_routines,
+            monthly_id,
+            "MONTHLY_CHALLENGE",
+            [1],
+            [1],
+            "MOVEMENT BASICS",
+            routine_unique_id_map
+        )
+
+    print("Monthly Challenge ID to use:", monthly_id)
+
+    final_action_plan = check_weekly_challenges_in_final_action_plan(final_action_plan)
+    add_missing_weekly_challenges(final_action_plan, filtered_routines, routine_unique_id_map)
+    #final_action_plan = remove_entry_from_action_plan(final_action_plan, id_to_remove)
+    schedule_daily_cognitive_challenges(final_action_plan, filtered_routines, routine_unique_id_map)
+
     update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG, routine_unique_id_map)
     convert_durations_to_int(final_action_plan)
     save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)
 
-    #print(health_scores_with_tag)
     return final_action_plan
 
 

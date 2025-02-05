@@ -59,8 +59,21 @@
         "value": "WHOLE_GRAINS"
       }
     },
-           {
-      "name": "Exclude Sugar",
+        {
+      "name": "Exclude Sugar by tag",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie viel zuckerhaltige Produkte nimmst du zu dir?",
+        "operator": "<=",
+        "value": 2
+      },
+      "action": {
+          "field": "tags.tag",
+          "value": "sugar"
+      }
+    },
+    {
+      "name": "Exclude Sugar by variation",
       "pillar": "NUTRITION",
       "condition": {
         "field": "Wie viel zuckerhaltige Produkte nimmst du zu dir?",
@@ -70,6 +83,19 @@
       "action": {
           "field": "variations.variation",
           "value": "cut-out sugar"
+      }
+    },
+    {
+      "name": "Exclude Processed food",
+      "pillar": "NUTRITION",
+      "condition": {
+        "field": "Wie häufig nimmst du Fertiggerichte zu dir?",
+        "operator": "<=",
+        "value": 2
+      },
+      "action": {
+          "field": "tags.tag",
+          "value": "Food prep"
       }
     },
       {
