@@ -39,21 +39,20 @@ def hello():
 def recalc_action_plan():
     data = request.get_json()
 
-    action_plan_stats = data.get('actionPlanCompletionStats', {})
-
-    account_id = action_plan_stats.get('accountId')
-    actionplan_id = action_plan_stats.get('actionplanId')
-    start_date = action_plan_stats.get('startDate')
-    total_daily_time_in_mins = action_plan_stats.get('totalDailyTimeInMins')
-    period_in_days = action_plan_stats.get('periodInDays')
+    # Use the top-level JSON keys directly since there's no nested "actionPlanCompletionStats"
+    account_id = data.get('accountId')  # may be None if not provided in your payload
+    action_plan_id = data.get('actionPlanId')
+    start_date = data.get('startDate')
+    total_daily_time_in_mins = data.get('totalDailyTimeInMins')  # may be None
+    period_in_days = data.get('periodInDays')
 
     app.logger.info("Account ID: %s", account_id)
-    app.logger.info("Action Plan ID: %s", actionplan_id)
+    app.logger.info("Action Plan ID: %s", action_plan_id)
     app.logger.info("Start Date: %s", start_date)
     app.logger.info("Total Daily Time in Mins: %s", total_daily_time_in_mins)
     app.logger.info("Period in Days: %s", period_in_days)
 
-    pillar_stats_list = action_plan_stats.get('pillarCompletionStats', [])
+    pillar_stats_list = data.get('pillarCompletionStats', [])
     for pillar in pillar_stats_list:
         pillar_enum = pillar.get('pillarEnum')
         app.logger.info("Pillar Enum: %s", pillar_enum)
@@ -71,13 +70,14 @@ def recalc_action_plan():
                 period_sequence_no = stat.get('periodSequenceNo')
                 completion_unit = stat.get('completionUnit')
 
+                # Try either property name in case one is missing
                 completion_target = stat.get('completionTargetTotal', stat.get('completionTarget'))
                 completed_value = stat.get('completedValueTotal', stat.get('completedValue'))
 
                 app.logger.info(
                     "Stat - Completion Rate: %s, Period Unit: %s, Sequence: %s, Unit: %s, Target: %s, Completed: %s",
-                    completion_rate, rate_period_unit, period_sequence_no, completion_unit, completion_target,
-                    completed_value
+                    completion_rate, rate_period_unit, period_sequence_no, completion_unit,
+                    completion_target, completed_value
                 )
 
                 try:
@@ -86,6 +86,7 @@ def recalc_action_plan():
                 except (ValueError, TypeError) as e:
                     app.logger.error("Error converting values: %s", e)
 
+    # Sum all target values from the completion statistics
     total_target = 0
     for pillar in pillar_stats_list:
         for routine in pillar.get('routineCompletionStats', []):
@@ -101,13 +102,11 @@ def recalc_action_plan():
 
     final_action_plan = {
         "accountId": account_id,
-        "actionplanId": actionplan_id,
+        "actionPlanId": action_plan_id,
         "calculatedTotalTarget": total_target,
     }
 
-    # Return the final action plan in the response
     return jsonify({'action_plan': final_action_plan}), 200
-
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
