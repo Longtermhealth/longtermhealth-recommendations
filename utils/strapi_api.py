@@ -22,7 +22,7 @@ def strapi_post_action_plan(action_plan, account_id):
     data = action_plan
 
     # Debug: Log outgoing request details
-    print("=== Outgoing Request Details ===")
+    print("=== Outgoing Request Details Post Action Plan ===")
     print(f"Account ID: {account_id}")
     print("URL:", url)
     #print("Headers:", headers)
@@ -91,11 +91,11 @@ def strapi_post_health_scores(healthscores_with_tags):
     url = "http://4.182.8.101:8004/api/health-scores"
     data = healthscores_with_tags
     response = requests.post(url, headers=headers, json=data)
-
+    print(f"Response post health scores")
     print(f"Response: {response.status_code}")
-    print(response)
+    #print(response)
     try:
         response_data = response.json()
-        print(response_data)
+        #print(response_data)
     except requests.exceptions.JSONDecodeError:
         print(f"Response is not JSON, raw content:", response.text)

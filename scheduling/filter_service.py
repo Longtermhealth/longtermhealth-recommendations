@@ -59,7 +59,7 @@ def save_routines_to_json(routines, file_path):
     try:
         with open(file_path, 'w') as f:
             json.dump(routines, f, indent=4)
-        print(f"Routines successfully saved to {file_path}")
+        #print(f"Routines successfully saved to {file_path}")
     except Exception as e:
         logger.error(f"An error occurred while saving routines: {e}")
 
@@ -68,7 +68,7 @@ def save_routines_to_json(routines, file_path):
 
 def apply_global_exclusions(user_data, exclusion_rules, routines):
     global excluded_rules
-    print("\nApplying global exclusions...")
+    #print("\nApplying global exclusions...")
 
     for rule in exclusion_rules:
         pillar_name = rule.get('pillar')
@@ -106,17 +106,17 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
                                 excluded_rules.add(
                                     (rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}")
                                 )
-                                logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
+                                #logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
                         elif dynamic_field_value == exclude_value:
                             attributes['rule_status'] = 'excluded'
                             attributes['score_rules'] = 0
                             attributes['score_rules_explanation'] = f"Excluded by rule '{rule.get('name', 'Unnamed Rule')}'"
                             excluded_rules.add((rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}"))
-                            logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
+                            #logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
 
                         routine['attributes'] = attributes  # Save back the updated attributes
 
-    print("Exclusion processing complete.\n")
+    #print("Exclusion processing complete.\n")
     return routines
 
 
@@ -385,8 +385,8 @@ def set_value(template, key, answers, default=None, log_missing=True):
     """
     key = key.strip()
     value = answers.get(key, default)
-    if value is None and log_missing:
-        print(f"Missing '{key}' in answers.")
+    #if value is None and log_missing:
+        #print(f"Missing '{key}' in answers.")
     template[key] = value
 
 def map_answers(answers, scores):
@@ -486,7 +486,7 @@ def map_answers(answers, scores):
         set_value(input_static_template['SCORES'], key, scores)
 
     output_json = json.dumps(input_static_template, ensure_ascii=False, indent=2)
-    print(output_json)
+    #print(output_json)
     return output_json
 
 
@@ -560,20 +560,20 @@ def main():
     user_data = json.loads(output_json)
 
     account_id = answers.get('accountid', None)
-    print('account_id',account_id)
+    #print('account_id',account_id)
     mapping_daily_time =  answers.get("Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?", 0)
     if mapping_daily_time == '15-30 Minuten':
         daily_time = 20
-        print('daily_time', daily_time)
+        #print('daily_time', daily_time)
     elif mapping_daily_time == '30-45 Minuten':
         daily_time = 40
-        print('daily_time', daily_time)
+        #print('daily_time', daily_time)
     elif mapping_daily_time == '45-60 Minuten':
         daily_time = 50
-        print('daily_time', daily_time)
+        #print('daily_time', daily_time)
     elif mapping_daily_time == '> 60 Minuten':
         daily_time = 90
-        print('daily_time', daily_time)
+        #print('daily_time', daily_time)
 
     MOVEMENT_PACKAGE_MAPPING = {
         20: "MOVEMENT BASICS SHORT",
@@ -596,8 +596,8 @@ def main():
         except ValueError as e:
             logger.error(f"Error calculating BMI: {e}")
             return
-    else:
-        logger.warning("Insufficient data to calculate BMI.")
+    #else:
+        #logger.warning("Insufficient data to calculate BMI.")
     user_data['basics'] = basics
 
     rules = new_load_rules()
@@ -625,19 +625,19 @@ def main():
     try:
         with open(output_file_path, 'w') as f:
             json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
-        print(f"Routines successfully saved to {output_file_path}")
+        #print(f"Routines successfully saved to {output_file_path}")
     except Exception as e:
         logger.error(f"An error occurred while saving routines: {e}")
 
-    print("\nExcluded Rules and Actions:")
-    for rule_name, action in excluded_rules:
-        print(f"Rule: {rule_name}, Action: {action}")
+    #print("\nExcluded Rules and Actions:")
+    #for rule_name, action in excluded_rules:
+        #print(f"Rule: {rule_name}, Action: {action}")
 
-    print("\nIncluded Rules and Actions:")
-    for rule_name, action in included_rules:
-        print(f"Rule: {rule_name}, Action: {action}")
+    #print("\nIncluded Rules and Actions:")
+    #for rule_name, action in included_rules:
+        #print(f"Rule: {rule_name}, Action: {action}")
 
-    print('Health Scores: ', scores)
+    #print('Health Scores: ', scores)
 
 
 
@@ -686,7 +686,7 @@ def main():
         try:
             with open(file_path, "r", encoding='utf-8') as file:
                 data = json.load(file)
-                print(f"Loaded packages data from '{file_path}'.")
+                #print(f"Loaded packages data from '{file_path}'.")
                 return data
         except Exception as e:
             logger.error(f"Failed to load {file_path}: {e}")
@@ -705,20 +705,17 @@ def main():
         :return: packageName and the package dictionary, or (None, None).
         """
         try:
-            print(
-                f"Searching for Pillar: '{pillar}', Subcategory: '{subcategory}', Order: '{order}'")
+            #print(f"Searching for Pillar: '{pillar}', Subcategory: '{subcategory}', Order: '{order}'")
             subcategories = packages_data.get("packages", {}).get("pillars", {}).get(pillar, {})
             if not subcategories:
                 available_subcats = list(packages_data.get("packages", {}).get("pillars", {}).get(pillar, {}).keys())
-                print(
-                    f"No subcategories found for pillar '{pillar}'. Available subcategories: {available_subcats}")
+                #print(f"No subcategories found for pillar '{pillar}'. Available subcategories: {available_subcats}")
                 return (None, None)
 
             subcat = subcategories.get(subcategory, {})
             if not subcat:
                 available_subcats = list(subcategories.keys())
-                print(
-                    f"No subcategory '{subcategory}' found under pillar '{pillar}'. Available subcategories: {available_subcats}")
+                #print(f"No subcategory '{subcategory}' found under pillar '{pillar}'. Available subcategories: {available_subcats}")
                 return (None, None)
 
 
@@ -727,13 +724,12 @@ def main():
                 try:
                     pkg_order = int(pkg.get("packageOrder"))
                 except (TypeError, ValueError):
-                    logger.warning(
-                        f"Invalid packageOrder '{pkg.get('packageOrder')}' for package '{pkg_key}'. Skipping.")
+                    #logger.warning(f"Invalid packageOrder '{pkg.get('packageOrder')}' for package '{pkg_key}'. Skipping.")
                     continue
                 packages.append((pkg_order, pkg_key, pkg))
 
             if not packages:
-                print(f"No valid packages found under pillar '{pillar}' and subcategory '{subcategory}'.")
+                #print(f"No valid packages found under pillar '{pillar}' and subcategory '{subcategory}'.")
                 return (None, None)
 
 
@@ -743,8 +739,7 @@ def main():
             for pkg_order, pkg_key, pkg in packages:
                 if order and pkg_order == order:
                     package_name = parse_package_key(pkg_key)
-                    print(
-                        f"Exact match found: '{pkg_key}' with Order='{pkg_order}'")
+                    #print(f"Exact match found: '{pkg_key}' with Order='{pkg_order}'")
                     return (package_name, pkg)
 
             available_orders = sorted([pkg_order for pkg_order, _, _ in packages])
@@ -758,12 +753,10 @@ def main():
                 for pkg_order, pkg_key, pkg in packages:
                     if pkg_order == fallback_order:
                         package_name = parse_package_key(pkg_key)
-                        print(
-                            f"Fallback match found: '{pkg_key}' with Order='{pkg_order}'")
+                        #print(f"Fallback match found: '{pkg_key}' with Order='{pkg_order}'")
                         return (package_name, pkg)
 
-            print(
-                f"No package found with Order <= {order} for Pillar '{pillar}' and Subcategory '{subcategory}'.")
+            #print(f"No package found with Order <= {order} for Pillar '{pillar}' and Subcategory '{subcategory}'.")
         except Exception as e:
             logger.error(f"Error finding package in {pillar} - {subcategory}: {e}")
         return (None, None)
@@ -789,7 +782,7 @@ def main():
             cardio_subcategory = packages_data.get("packages", {}).get("pillars", {}).get(pillar, {}).get(subcategory,
                                                                                                           {})
             if not cardio_subcategory:
-                logger.warning(f"No subcategory '{subcategory}' found under pillar '{pillar}'.")
+                #logger.warning(f"No subcategory '{subcategory}' found under pillar '{pillar}'.")
                 return matched_packages
 
             for pkg_key, pkg in cardio_subcategory.items():
@@ -801,9 +794,8 @@ def main():
                         "selected_package": pkg
                     })
 
-            if not matched_packages:
-                logger.warning(
-                    f"No 5 MINUTE CARDIO packages found with packageUniqueId {package_unique_id} under pillar '{pillar}'.")
+            #if not matched_packages:
+                #logger.warning(f"No 5 MINUTE CARDIO packages found with packageUniqueId {package_unique_id} under pillar '{pillar}'.")
         except Exception as e:
             logger.error(f"Error finding cardio packages: {e}")
 
@@ -827,8 +819,8 @@ def main():
     cardio_package_unique_id = ORDER_TO_PACKAGE_UNIQUE_ID.get(cardio_order, None)
     if cardio_package_unique_id:
         logger.debug(f"Mapped Order {cardio_order} to packageUniqueId {cardio_package_unique_id} for 5 MINUTE CARDIO.")
-    else:
-        logger.warning(f"No packageUniqueId mapping found for CARDIO Order {cardio_order}.")
+    #else:
+        #logger.warning(f"No packageUniqueId mapping found for CARDIO Order {cardio_order}.")
 
     cardio_package_unique_id = False
     if cardio_package_unique_id:
@@ -842,10 +834,9 @@ def main():
         selected_packages.extend(cardio_packages)
         for cardio_pkg in cardio_packages:
             package_name = cardio_pkg.get("packageName", "Unnamed 5 MINUTE CARDIO Package")
-            logger.info(
-                f"Selected 5 MINUTE CARDIO Package: {package_name} with packageUniqueId {cardio_package_unique_id}")
-    else:
-        logger.warning("No 5 MINUTE CARDIO packageUniqueId determined; skipping CARDIO package selection.")
+            #logger.info(f"Selected 5 MINUTE CARDIO Package: {package_name} with packageUniqueId {cardio_package_unique_id}")
+    #else:
+        #logger.warning("No 5 MINUTE CARDIO packageUniqueId determined; skipping CARDIO package selection.")
 
     def select_anti_inflammation_package(packages_data: Dict[str, Any],
                                          selected_packages: List[Dict[str, Any]]) -> None:
@@ -867,7 +858,7 @@ def main():
 
             if inflammation_1:
                 inflammation_1["packageOrder"] = "1"
-                logger.info("Selected 'Inflammation 1' package for 'ANTI INFLAMMATION' with order 1.")
+                #logger.info("Selected 'Inflammation 1' package for 'ANTI INFLAMMATION' with order 1.")
 
                 selected_packages.append({
                     "pillar": "NUTRITION",
@@ -876,8 +867,8 @@ def main():
                     "selected_package": inflammation_1
                 })
                 logger.debug("'Inflammation 1' package appended to selected_packages.")
-            else:
-                logger.warning("Inflammation 1 package not found under 'ANTI INFLAMMATION'.")
+            #else:
+                #logger.warning("Inflammation 1 package not found under 'ANTI INFLAMMATION'.")
 
         except KeyError as e:
             logger.error(f"Key error while selecting 'ANTI INFLAMMATION' package: {e}")
@@ -888,26 +879,26 @@ def main():
     #select_anti_inflammation_package(packages_data, selected_packages)
 
     meditation_answer = answers.get('Machst du aktuell Übungen zum Stressabbau?', None)
-    print('meditation_answer',meditation_answer)
+    #print('meditation_answer',meditation_answer)
     MEDITATION_ORDER_MAP = {
         "Nein": 1,
         "Würde ich gern, aber ich weiß nicht wie": 2,
         "Habe ich schon mal": 3,
         "Mache ich schon": 4
     }
-    stress_order = MEDITATION_ORDER_MAP.get(meditation_answer, 0)
-    if stress_order == 0:
-        print(f"Unexpected meditation_answer: {meditation_answer}")
+    stress_order = MEDITATION_ORDER_MAP.get(meditation_answer, 1)
+    #if stress_order == 0:
+        #print(f"Unexpected meditation_answer: {meditation_answer}")
 
 
     bmi = 0
     fasten_answer = answers.get('Praktizierst du Intervallfasten und auf welche Art?', None)
     if fasten_answer and bmi >= 18:
         fasten_order = set_fasten_order(fasten_answer)
-        print(f"Fasting order determined: {fasten_order}")
+        #print(f"Fasting order determined: {fasten_order}")
     else:
         fasten_order = 0
-        print("Fasting not applicable based on BMI or answer.")
+        #print("Fasting not applicable based on BMI or answer.")
 
 
     score_order_list = []
@@ -927,8 +918,8 @@ def main():
             "score": score,
             "order": order
         })
-    print("Debug: Pillar Scores with Orders:")
-    print(json.dumps(score_order_list, ensure_ascii=False, indent=2))
+    #print("Debug: Pillar Scores with Orders:")
+    #print(json.dumps(score_order_list, ensure_ascii=False, indent=2))
 
 
 
@@ -946,11 +937,11 @@ def main():
                 "order": fasten_order,
                 "fasting_package": package_name
             })
-        else:
-            logger.warning(f"No fasting package found for order {fasten_order} in 'NUTRITION > FASTING BASICS'.")
+        #else:
+            #logger.warning(f"No fasting package found for order {fasten_order} in 'NUTRITION > FASTING BASICS'.")
 
-    print("Pillar Scores with Orders:")
-    print(json.dumps(score_order_list, ensure_ascii=False, indent=2))
+    #print("Pillar Scores with Orders:")
+    #print(json.dumps(score_order_list, ensure_ascii=False, indent=2))
 
 
     for entry in score_order_list:
@@ -1007,8 +998,8 @@ def main():
                     subcategory=subcategory,
                     order=order
                 )
-                if not package:
-                    print(f"No package found for Pillar: 'STRESS' with Order: {order}")
+                #if not package:
+                    #print(f"No package found for Pillar: 'STRESS' with Order: {order}")
 
             elif pillar == "GRATITUDE":
                 subcategory = "GRATITUDE BASICS"
@@ -1035,7 +1026,7 @@ def main():
                     order=order
                 )
             else:
-                logger.warning(f"Pillar '{pillar}' is not handled in the selection logic.")
+                #logger.warning(f"Pillar '{pillar}' is not handled in the selection logic.")
                 subcategory = "Unknown Subcategory"
                 package = {
                     "packageName": "No package available",
@@ -1050,8 +1041,8 @@ def main():
                     "packageTag": subcategory,
                     "selected_package": package
                 })
-            else:
-                logger.warning(f"No package selected for Pillar: '{entry['pillar']}' with Order: {order}")
+            #else:
+                #logger.warning(f"No package selected for Pillar: '{entry['pillar']}' with Order: {order}")
 
 
     #print("\nSelected Packages:")
