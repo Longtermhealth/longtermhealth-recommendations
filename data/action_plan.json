@@ -1,8 +1,8 @@
 {
   "data": {
-    "accountId": "268",
+    "accountId": "273",
     "periodInDays": 28,
-    "gender": "FEMALE",
+    "gender": "MALE",
     "totalDailyTimeInMins": 40,
     "routines": [
       {
@@ -1127,72 +1127,28 @@
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
-        "routineId": 12391,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
-        "displayName": "Mehr Gemüse",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
-        "routineId": 12241,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/414_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/414_16x9.jpg",
+        "routineId": 12681,
+        "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "MINUTES",
-            "displayName": "Minuten"
+            "displayName": "Min."
           },
-          "value": 0
+          "value": 10
         },
-        "description": "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.",
-        "displayName": "Bewusste Ernährung",
+        "description": "Non Sleep Deep Rest (NSDR) fördert tiefe Entspannung und Regeneration, steigert die geistige Klarheit, reduziert Stress und verbessert die Konzentration. Es hilft, den Körper zu erholen und die mentale Leistungsfähigkeit zu steigern.",
+        "displayName": "Non Sleep Deep Rest (NSDR)",
         "alternatives": [],
         "scheduleDays": [
           1,
-          2,
           3,
-          4,
           5,
-          6,
           7
         ],
         "scheduleWeeks": [
@@ -1201,241 +1157,11 @@
           3,
           4
         ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
         "parentRoutineId": null,
         "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/125_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/125_16x9.jpg",
-        "routineId": 12392,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Iss mindestens 2 Handvoll Obst täglich, um deinen Körper mit natürlichen Vitaminen und Energie zu versorgen.",
-        "displayName": "Mehr Obst",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/129_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/129_16x9.jpg",
-        "routineId": 12396,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Wähle Olivenöl oder ein anderes kaltgepresstes Öl, um gesunde Fette aufzunehmen und von den entzündungshemmenden Eigenschaften dieser Öle zu profitieren, die deine allgemeine Gesundheit unterstützen können.",
-        "displayName": "Olivenöl",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/238_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/238_16x9.jpg",
-        "routineId": 12505,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Verzichte auf zuckerhaltige Getränke, um deinen Zuckerkonsum zu reduzieren und deine Gesundheit zu fördern.",
-        "displayName": "Ungesüßte Getränke",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/127_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/127_16x9.jpg",
-        "routineId": 12394,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Erhöhe deinen Vollkornanteil, um mehr Ballaststoffe, Vitamine und Mineralstoffe in deine Ernährung zu integrieren und die Verdauung zu fördern.",
-        "displayName": "Vollkornanteil erhöhen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/304_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/304_16x9.jpg",
-        "routineId": 12570,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Iss diese Woche so oft wie möglich aufgewärmte Kohlenhydrate, da durch das Abkühlen und erneute Erhitzen resistente Stärke entsteht. Diese hilft, Entzündungen zu reduzieren, den Blutzuckerspiegel zu stabilisieren und den Cholesterinspiegel zu senken.",
-        "displayName": "Kohlenhydrate aufwärmen",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-02-13T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/240_1x1.jpg",
-        "imageUrl_16x9": "\n",
-        "routineId": 12507,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Probiere diese Woche mindestens ein neues fermentiertes Lebensmittel aus, um deine Darmgesundheit zu unterstützen und von den probiotischen Vorteilen zu profitieren.",
-        "displayName": "Fermentierte Lebensmittel probieren",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          2
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-02-20T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -1685,143 +1411,6 @@
       },
       {
         "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/189_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/189_16x9.jpg",
-        "routineId": 12456,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 10
-        },
-        "description": "Kurze bewusste Pausen fördern Achtsamkeit und Entspannung, was Stress reduziert und die mentale Schärfe verbessert.",
-        "displayName": "Bewusst Pausen machen",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/356_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/356_16x9.jpg",
-        "routineId": 12623,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "",
-        "displayName": "Tiefe Atemübung",
-        "alternatives": [],
-        "scheduleDays": [
-          4
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/187_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/187_16x9.jpg",
-        "routineId": 12454,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 2
-        },
-        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
-        "displayName": "Zwerchfellatmung",
-        "alternatives": [],
-        "scheduleDays": [
-          6
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/358_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/358_16x9.jpg",
-        "routineId": 12625,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 2
-        },
-        "description": "",
-        "displayName": "Meditationsstart",
-        "alternatives": [],
-        "scheduleDays": [
-          7
-        ],
-        "scheduleWeeks": [
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
           "pillarEnum": "GRATITUDE",
           "displayName": "Dankbarkeit"
         },
@@ -1942,6 +1531,277 @@
         "packageTag": "GRATITUDE BASICS",
         "parentRoutineId": 12250,
         "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
+        "routineId": 12391,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
+        "displayName": "Mehr Gemüse",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12241,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
+        "routineId": 12241,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Minuten"
+          },
+          "value": 0
+        },
+        "description": "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.",
+        "displayName": "Bewusste Ernährung",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/125_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/125_16x9.jpg",
+        "routineId": 12392,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Iss mindestens 2 Handvoll Obst täglich, um deinen Körper mit natürlichen Vitaminen und Energie zu versorgen.",
+        "displayName": "Mehr Obst",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12241,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/129_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/129_16x9.jpg",
+        "routineId": 12396,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Wähle Olivenöl oder ein anderes kaltgepresstes Öl, um gesunde Fette aufzunehmen und von den entzündungshemmenden Eigenschaften dieser Öle zu profitieren, die deine allgemeine Gesundheit unterstützen können.",
+        "displayName": "Olivenöl",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12241,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/238_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/238_16x9.jpg",
+        "routineId": 12505,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte auf zuckerhaltige Getränke, um deinen Zuckerkonsum zu reduzieren und deine Gesundheit zu fördern.",
+        "displayName": "Ungesüßte Getränke",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12241,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/249_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/249_18x9.jpg",
+        "routineId": 12516,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Koche diese Woche mindestens drei Gerichte mit Bohnen oder anderen Hülsenfrüchten.",
+        "displayName": "Hülsenfrüchte integrieren",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          2
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-02-20T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 12591,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte diesen Monat lang komplett auf Fertiggerichte. Stattdessen bereitest du deine Mahlzeiten von Grund auf zu und vermeidest versteckte Transfette, Zucker und Zusatzstoffe.",
+        "displayName": "Keine Fertiggerichte",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1
+        ],
+        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-03-06T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -2123,39 +1983,6 @@
           "pillarEnum": "COGNITIVE_ENHANCEMENT",
           "displayName": "Kognition"
         },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 12558,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Entdecke diesen Monat mit jemandem gemeinsam einen neuen Ort oder eine neue Stadt, um eure Verbindung zu stärken und deine mentale Flexibilität zu trainieren.",
-        "displayName": "Gemeinsame Entdeckungsreise",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "MONTHLY_CHALLENGE",
-        "packageName": "Übung",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-03-06T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
-        },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/289_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/289_16x9.jpg",
         "routineId": 12556,
@@ -2172,17 +1999,17 @@
         "displayName": "Ein neues Rezept kochen",
         "alternatives": [],
         "scheduleDays": [
-          3
+          1
         ],
         "scheduleWeeks": [
-          3
+          1
         ],
         "scheduleCategory": "WEEKLY_CHALLENGE",
         "packageName": "Empfehlung",
         "packageTag": "COGNITION BASICS",
         "parentRoutineId": null,
         "sets": 0,
-        "expirationDate": "2025-02-27T00:00:00.000Z"
+        "expirationDate": "2025-02-13T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -2203,6 +2030,39 @@
         },
         "description": "Probiere diese Woche einmal, ein Gedicht, Haiku, oder freie Verse zu schreiben.",
         "displayName": "Probiere dich in Poesie",
+        "alternatives": [],
+        "scheduleDays": [
+          3
+        ],
+        "scheduleWeeks": [
+          3
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "COGNITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-02-27T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 12548,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Erkunde diese Woche einen neuen Ort wie ein Museum, Stadtteil, Park, Café o.ä. ",
+        "displayName": "Einen neuen Ort erkunden",
         "alternatives": [],
         "scheduleDays": [
           4
@@ -2238,7 +2098,7 @@
         "displayName": "Gedicht lesen",
         "alternatives": [],
         "scheduleDays": [
-          1
+          2
         ],
         "scheduleWeeks": [
           1
@@ -2302,7 +2162,7 @@
         "displayName": "Rückwärts gehen",
         "alternatives": [],
         "scheduleDays": [
-          1
+          3
         ],
         "scheduleWeeks": [
           2
@@ -2398,7 +2258,7 @@
         "displayName": "Mache ein Kreuzworträtsel",
         "alternatives": [],
         "scheduleDays": [
-          7
+          6
         ],
         "scheduleWeeks": [
           3

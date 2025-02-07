@@ -44,7 +44,6 @@ def strapi_post_action_plan(action_plan, account_id):
     print("=== Outgoing Request Details (Post Action Plan) ===")
     print(f"Account ID: {account_id}")
     print("URL:", url)
-    print("Payload:", action_plan)
     print("================================")
     try:
         response = requests.post(url, headers=HEADERS, json=action_plan)

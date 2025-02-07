@@ -2,6 +2,7 @@
 import time
 from flask import Flask, jsonify, request
 from config import Config
+from utils.strapi_api import strapi_get_action_plan
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
 from utils.clickup_api import create_clickup_task
 from utils.data_processing import integrate_answers
@@ -34,16 +35,15 @@ def main():
 def hello():
     return "Hello, Flask is working!"
 
-
 @app.route('/webhook-recalculate-action-plan', methods=['POST'])
 def recalc_action_plan():
     data = request.get_json()
 
-    # Use the top-level JSON keys directly since there's no nested "actionPlanCompletionStats"
+    # Use the top-level JSON keys directly
     account_id = data.get('accountId')  # may be None if not provided in your payload
     action_plan_id = data.get('actionPlanId')
     start_date = data.get('startDate')
-    total_daily_time_in_mins = data.get('totalDailyTimeInMins')  # may be None
+    total_daily_time_in_mins = data.get('totalDailyTimeInMins')
     period_in_days = data.get('periodInDays')
 
     app.logger.info("Account ID: %s", account_id)
@@ -52,6 +52,14 @@ def recalc_action_plan():
     app.logger.info("Total Daily Time in Mins: %s", total_daily_time_in_mins)
     app.logger.info("Period in Days: %s", period_in_days)
 
+    # Fetch the old action plan using the actionPlanId
+    old_action_plan = strapi_get_action_plan(action_plan_id)
+    if old_action_plan:
+        app.logger.info("Old action plan retrieved: %s", old_action_plan)
+    else:
+        app.logger.error("No old action plan found for actionPlanId: %s", action_plan_id)
+
+    # Process the pillar statistics from the incoming data.
     pillar_stats_list = data.get('pillarCompletionStats', [])
     for pillar in pillar_stats_list:
         pillar_enum = pillar.get('pillarEnum')
@@ -107,6 +115,7 @@ def recalc_action_plan():
     }
 
     return jsonify({'action_plan': final_action_plan}), 200
+
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
