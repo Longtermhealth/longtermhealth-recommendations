@@ -39,23 +39,18 @@ def hello():
 def recalc_action_plan():
     data = request.get_json()
 
-    # Use the top-level JSON keys directly
-    account_id = data.get('accountId')  # may be None if not provided in your payload
     action_plan_id = data.get('actionPlanId')
     start_date = data.get('startDate')
-    total_daily_time_in_mins = data.get('totalDailyTimeInMins')
     period_in_days = data.get('periodInDays')
 
-    app.logger.info("Account ID: %s", account_id)
     app.logger.info("Action Plan ID: %s", action_plan_id)
     app.logger.info("Start Date: %s", start_date)
-    app.logger.info("Total Daily Time in Mins: %s", total_daily_time_in_mins)
     app.logger.info("Period in Days: %s", period_in_days)
 
     # Fetch the old action plan using the actionPlanId
     old_action_plan = strapi_get_action_plan(action_plan_id)
     if old_action_plan:
-        app.logger.info("Old action plan retrieved: %s", old_action_plan)
+        app.logger.info("Old action plan retrieved: %s")
     else:
         app.logger.error("No old action plan found for actionPlanId: %s", action_plan_id)
 
@@ -94,7 +89,6 @@ def recalc_action_plan():
                 except (ValueError, TypeError) as e:
                     app.logger.error("Error converting values: %s", e)
 
-    # Sum all target values from the completion statistics
     total_target = 0
     for pillar in pillar_stats_list:
         for routine in pillar.get('routineCompletionStats', []):
@@ -106,10 +100,30 @@ def recalc_action_plan():
                     except ValueError as e:
                         app.logger.error("Error converting target value: %s", e)
 
-    app.logger.info("Total target value: %s", total_target)
+    #app.logger.info("Total target value: %s", total_target)
+
+    # Assuming old_action_plan is the dictionary returned by strapi_get_action_plan(action_plan_id)
+    if old_action_plan and 'data' in old_action_plan:
+        account_id = None
+        total_daily_time = None
+        # Iterate over the list in case some entries have None values
+        for plan in old_action_plan['data']:
+            attributes = plan.get('attributes', {})
+            account_id_candidate = attributes.get('accountId')
+            total_daily_time_candidate = attributes.get('totalDailyTimeInMins')
+            # Choose the record if at least one of the values is present
+            if account_id_candidate is not None or total_daily_time_candidate is not None:
+                account_id = account_id_candidate
+                total_daily_time = total_daily_time_candidate
+                break
+
+        app.logger.info("Account ID from old action plan: %s", account_id)
+        app.logger.info("Total Daily Time (in mins) from old action plan: %s", total_daily_time)
+    else:
+        app.logger.error("Old action plan is not in the expected format.")
+
 
     final_action_plan = {
-        "accountId": account_id,
         "actionPlanId": action_plan_id,
         "calculatedTotalTarget": total_target,
     }

@@ -31,7 +31,7 @@ def strapi_get_action_plan(account_id):
         response = requests.get(url, headers=HEADERS)
         response.raise_for_status()  # Raise an exception for HTTP errors
         old_action_plan = response.json()
-        print("Received old action plan:", old_action_plan)
+        #print("Received old action plan:", old_action_plan)
         return old_action_plan
     except Exception as e:
         print(f"Error while fetching the action plan for account {account_id}: {e}")
