@@ -1,9 +1,9 @@
 {
   "data": {
-    "accountId": "7",
+    "accountId": "9",
     "periodInDays": 28,
     "gender": "MALE",
-    "totalDailyTimeInMins": 90,
+    "totalDailyTimeInMins": 50,
     "routines": [
       {
         "pillar": {
@@ -1127,342 +1127,6 @@
       },
       {
         "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/414_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/414_16x9.jpg",
-        "routineId": 12681,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 10
-        },
-        "description": "Non Sleep Deep Rest (NSDR) fördert tiefe Entspannung und Regeneration, steigert die geistige Klarheit, reduziert Stress und verbessert die Konzentration. Es hilft, den Körper zu erholen und die mentale Leistungsfähigkeit zu steigern.",
-        "displayName": "Non Sleep Deep Rest (NSDR)",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          3,
-          5,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/154_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/154_16x9.jpg",
-        "routineId": 12421,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 2
-        },
-        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
-        "displayName": "Maui-Gewohnheit",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": 12250,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
-        "routineId": 12250,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Minuten"
-          },
-          "value": 5
-        },
-        "description": "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag.",
-        "displayName": "Dankbarkeitsritual",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/155_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/155_16x9.jpg",
-        "routineId": 12422,
-        "durationCalculated": 3,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 3
-        },
-        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
-        "displayName": "Dankbarkeitstagebuch",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": 12250,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12247,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Regelmäßiges Cardio-Training verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und unterstützt einen gesunden Stoffwechsel. ",
-        "displayName": "Cardio Sport",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12244,
-        "durationCalculated": 20,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Min."
-          },
-          "value": 20
-        },
-        "description": "Das Unterkörper-Krafttraining verbessert die Bein- und Gesäßmuskulatur, steigert Kraft, Stabilität und Beweglichkeit, unterstützt die Körperhaltung und fördert die Leistungsfähigkeit im Alltag und Sport.",
-        "displayName": "Unterkörper-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12245,
-        "durationCalculated": 28,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 28
-        },
-        "description": "Das Oberkörper-Krafttraining stärkt Schultern, Brust, Rücken und Arme, verbessert die Haltung, erhöht die Kraft und Stabilität im Oberkörper und unterstützt alltägliche sowie sportliche Bewegungsabläufe.",
-        "displayName": "Oberkörper-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          3
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12248,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Intervall-Cardio kombiniert Phasen intensiver Anstrengung mit Erholungsphasen und steigert so die Ausdauer, kurbelt die Fettverbrennung an und verbessert die Herz-Kreislauf-Gesundheit. ",
-        "displayName": "Intervall-Cardio",
-        "alternatives": [],
-        "scheduleDays": [
-          4
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12246,
-        "durationCalculated": 18,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 18
-        },
-        "description": "Das Core-Krafttraining stärkt die Rumpfmuskulatur, verbessert Stabilität, Balance und Haltung, schützt vor Verletzungen und fördert eine effiziente Kraftübertragung bei Alltags- und Sportbewegungen.",
-        "displayName": "Core-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
           "pillarEnum": "SLEEP",
           "displayName": "Schlaf"
         },
@@ -1709,12 +1373,222 @@
       },
       {
         "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12247,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "Regelmäßiges Cardio-Training verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und unterstützt einen gesunden Stoffwechsel. ",
+        "displayName": "Cardio Sport",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12244,
+        "durationCalculated": 20,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Min."
+          },
+          "value": 20
+        },
+        "description": "Das Unterkörper-Krafttraining verbessert die Bein- und Gesäßmuskulatur, steigert Kraft, Stabilität und Beweglichkeit, unterstützt die Körperhaltung und fördert die Leistungsfähigkeit im Alltag und Sport.",
+        "displayName": "Unterkörper-Krafttraining",
+        "alternatives": [],
+        "scheduleDays": [
+          2
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12245,
+        "durationCalculated": 28,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 28
+        },
+        "description": "Das Oberkörper-Krafttraining stärkt Schultern, Brust, Rücken und Arme, verbessert die Haltung, erhöht die Kraft und Stabilität im Oberkörper und unterstützt alltägliche sowie sportliche Bewegungsabläufe.",
+        "displayName": "Oberkörper-Krafttraining",
+        "alternatives": [],
+        "scheduleDays": [
+          3
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12248,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "Intervall-Cardio kombiniert Phasen intensiver Anstrengung mit Erholungsphasen und steigert so die Ausdauer, kurbelt die Fettverbrennung an und verbessert die Herz-Kreislauf-Gesundheit. ",
+        "displayName": "Intervall-Cardio",
+        "alternatives": [],
+        "scheduleDays": [
+          4
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12249,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "Intensives Cardio-Training steigert die Herzfrequenz, verbessert die Ausdauer und fördert die Fettverbrennung. ",
+        "displayName": "Intensives Cardio",
+        "alternatives": [],
+        "scheduleDays": [
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12246,
+        "durationCalculated": 18,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 18
+        },
+        "description": "Das Core-Krafttraining stärkt die Rumpfmuskulatur, verbessert Stabilität, Balance und Haltung, schützt vor Verletzungen und fördert eine effiziente Kraftübertragung bei Alltags- und Sportbewegungen.",
+        "displayName": "Core-Krafttraining",
+        "alternatives": [],
+        "scheduleDays": [
+          6
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
           "pillarEnum": "NUTRITION",
           "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/123_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/123_16x9.jpg",
-        "routineId": 12390,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
+        "routineId": 12391,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1724,8 +1598,8 @@
           },
           "value": 1
         },
-        "description": "Ausreichend Wasser zu trinken – idealerweise 2 Liter pro Tag – unterstützt die Konzentration, fördert den Stoffwechsel und hilft dem Körper, Giftstoffe auszuscheiden.",
-        "displayName": "2 Liter Wasser am Tag",
+        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
+        "displayName": "Mehr Gemüse",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -1787,47 +1661,6 @@
         "packageName": "Empfehlung",
         "packageTag": "NUTRITION BASICS",
         "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
-        "routineId": 12391,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
-        "displayName": "Mehr Gemüse",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
         "sets": 0
       },
       {
@@ -1958,9 +1791,9 @@
           "pillarEnum": "NUTRITION",
           "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/127_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/127_16x9.jpg",
-        "routineId": 12394,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/249_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/249_18x9.jpg",
+        "routineId": 12516,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1970,8 +1803,74 @@
           },
           "value": 1
         },
-        "description": "Erhöhe deinen Vollkornanteil, um mehr Ballaststoffe, Vitamine und Mineralstoffe in deine Ernährung zu integrieren und die Verdauung zu fördern.",
-        "displayName": "Vollkornanteil erhöhen",
+        "description": "Koche diese Woche mindestens drei Gerichte mit Bohnen oder anderen Hülsenfrüchten.",
+        "displayName": "Hülsenfrüchte integrieren",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          2
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-02-22T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 12591,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte diesen Monat lang komplett auf Fertiggerichte. Stattdessen bereitest du deine Mahlzeiten von Grund auf zu und vermeidest versteckte Transfette, Zucker und Zusatzstoffe.",
+        "displayName": "Keine Fertiggerichte",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1
+        ],
+        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-03-08T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/154_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/154_16x9.jpg",
+        "routineId": 12421,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
+        "displayName": "Maui-Gewohnheit",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -1989,109 +1888,229 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12241,
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": 12250,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/304_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/304_16x9.jpg",
-        "routineId": 12570,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
+        "routineId": 12250,
+        "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Minuten"
           },
-          "value": 1
+          "value": 5
         },
-        "description": "Iss diese Woche so oft wie möglich aufgewärmte Kohlenhydrate, da durch das Abkühlen und erneute Erhitzen resistente Stärke entsteht. Diese hilft, Entzündungen zu reduzieren, den Blutzuckerspiegel zu stabilisieren und den Cholesterinspiegel zu senken.",
-        "displayName": "Kohlenhydrate aufwärmen",
+        "description": "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag.",
+        "displayName": "Dankbarkeitsritual",
         "alternatives": [],
         "scheduleDays": [
-          1
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "scheduleWeeks": [
-          1
+          1,
+          2,
+          3,
+          4
         ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
         "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-02-15T00:00:00.000Z"
+        "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/240_1x1.jpg",
-        "imageUrl_16x9": "\n",
-        "routineId": 12507,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/155_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/155_16x9.jpg",
+        "routineId": 12422,
+        "durationCalculated": 3,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
           },
-          "value": 1
+          "value": 3
         },
-        "description": "Probiere diese Woche mindestens ein neues fermentiertes Lebensmittel aus, um deine Darmgesundheit zu unterstützen und von den probiotischen Vorteilen zu profitieren.",
-        "displayName": "Fermentierte Lebensmittel probieren",
+        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
+        "displayName": "Dankbarkeitstagebuch",
         "alternatives": [],
         "scheduleDays": [
-          1
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
         "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": 12250,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/189_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/189_16x9.jpg",
+        "routineId": 12456,
+        "durationCalculated": 10,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 10
+        },
+        "description": "Kurze bewusste Pausen fördern Achtsamkeit und Entspannung, was Stress reduziert und die mentale Schärfe verbessert.",
+        "displayName": "Bewusst Pausen machen",
+        "alternatives": [],
+        "scheduleDays": [
           2
         ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
         "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-02-22T00:00:00.000Z"
+        "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
         },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 12558,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/356_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/356_16x9.jpg",
+        "routineId": 12623,
+        "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
           },
           "value": 1
         },
-        "description": "Entdecke diesen Monat mit jemandem gemeinsam einen neuen Ort oder eine neue Stadt, um eure Verbindung zu stärken und deine mentale Flexibilität zu trainieren.",
-        "displayName": "Gemeinsame Entdeckungsreise",
+        "description": "",
+        "displayName": "Tiefe Atemübung",
         "alternatives": [],
         "scheduleDays": [
-          1
+          4
         ],
         "scheduleWeeks": [
-          1
+          1,
+          2,
+          3,
+          4
         ],
-        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Übung",
-        "packageTag": "MOVEMENT BASICS",
+        "packageTag": "STRESS BASICS",
         "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-03-08T00:00:00.000Z"
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/187_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/187_16x9.jpg",
+        "routineId": 12454,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
+        "displayName": "Zwerchfellatmung",
+        "alternatives": [],
+        "scheduleDays": [
+          6
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/358_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/358_16x9.jpg",
+        "routineId": 12625,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "",
+        "displayName": "Meditationsstart",
+        "alternatives": [],
+        "scheduleDays": [
+          7
+        ],
+        "scheduleWeeks": [
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
+        "sets": 0
       },
       {
         "pillar": {
@@ -2114,17 +2133,17 @@
         "displayName": "Ein neues Rezept kochen",
         "alternatives": [],
         "scheduleDays": [
-          3
+          1
         ],
         "scheduleWeeks": [
-          3
+          1
         ],
         "scheduleCategory": "WEEKLY_CHALLENGE",
         "packageName": "Empfehlung",
         "packageTag": "COGNITION BASICS",
         "parentRoutineId": null,
         "sets": 0,
-        "expirationDate": "2025-03-01T00:00:00.000Z"
+        "expirationDate": "2025-02-15T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -2145,6 +2164,39 @@
         },
         "description": "Probiere diese Woche einmal, ein Gedicht, Haiku, oder freie Verse zu schreiben.",
         "displayName": "Probiere dich in Poesie",
+        "alternatives": [],
+        "scheduleDays": [
+          3
+        ],
+        "scheduleWeeks": [
+          3
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "COGNITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-03-01T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 12548,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Erkunde diese Woche einen neuen Ort wie ein Museum, Stadtteil, Park, Café o.ä. ",
+        "displayName": "Einen neuen Ort erkunden",
         "alternatives": [],
         "scheduleDays": [
           4
@@ -2180,7 +2232,7 @@
         "displayName": "Gedicht lesen",
         "alternatives": [],
         "scheduleDays": [
-          1
+          2
         ],
         "scheduleWeeks": [
           1
@@ -2212,7 +2264,7 @@
         "displayName": "Musik hören",
         "alternatives": [],
         "scheduleDays": [
-          7
+          6
         ],
         "scheduleWeeks": [
           1
@@ -2244,7 +2296,7 @@
         "displayName": "Rückwärts gehen",
         "alternatives": [],
         "scheduleDays": [
-          1
+          2
         ],
         "scheduleWeeks": [
           2
@@ -2276,7 +2328,7 @@
         "displayName": "Mache ein Sudoku",
         "alternatives": [],
         "scheduleDays": [
-          5
+          7
         ],
         "scheduleWeeks": [
           2

@@ -39,6 +39,7 @@ jobs:
           ACTIONPLAN_FIELD_ID=${{ secrets.ACTIONPLAN_FIELD_ID }}
           TYPEFORM_API_KEY=${{ secrets.TYPEFORM_API_KEY }}
           STRAPI_API_KEY=${{ secrets.STRAPI_API_KEY }}
+          STRAPI_API_KEY_DEV=${{ secrets.STRAPI_API_KEY_DEV }}
           FORM_ID=${{ secrets.FORM_ID }}
           LINK_SUMMARY_TITLE_FIELD_ID=${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}
           LINK_SUMMARY_SUMMARY_FIELD_ID=${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}
