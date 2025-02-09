@@ -1,4 +1,3 @@
-# utils/strapi_api.py
 import os
 import requests
 from dotenv import load_dotenv
@@ -6,71 +5,49 @@ import json
 
 load_dotenv()
 
-# Define the base URL and API key (optionally, set STRAPI_BASE_URL in your .env file)
-STRAPI_BASE_URL = os.getenv("STRAPI_BASE_URL", "http://4.182.8.101:8004/api")
-STRAPI_API_KEY = os.getenv("STRAPI_API_KEY")
+STAGING_BASE_URL = "http://4.182.8.101:8004/api"
+DEV_BASE_URL = "http://4.182.8.101:7004/api"
 
-# Common headers for all requests
-HEADERS = {
-    "Authorization": f"Bearer {STRAPI_API_KEY}",
+STAGING_API_KEY = os.getenv("STRAPI_API_KEY")
+DEV_API_KEY = os.getenv("STRAPI_API_KEY_DEV")
+
+STAGING_HEADERS = {
+    "Authorization": f"Bearer {STAGING_API_KEY}",
+    "Content-Type": "application/json"
+}
+DEV_HEADERS = {
+    "Authorization": f"Bearer {DEV_API_KEY}",
     "Content-Type": "application/json"
 }
 
-# Define endpoints for various resources
-ACTION_PLAN_ENDPOINT = f"{STRAPI_BASE_URL}/action-plans"
-ROUTINES_ENDPOINT = f"{STRAPI_BASE_URL}/routines"
-HEALTH_SCORES_ENDPOINT = f"{STRAPI_BASE_URL}/health-scores"
+STAGING_ACTION_PLAN_ENDPOINT = f"{STAGING_BASE_URL}/action-plans"
+STAGING_ROUTINES_ENDPOINT = f"{STAGING_BASE_URL}/routines"
+STAGING_HEALTH_SCORES_ENDPOINT = f"{STAGING_BASE_URL}/health-scores"
 
+DEV_ACTION_PLAN_ENDPOINT = f"{DEV_BASE_URL}/action-plans"
+DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
+DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
 def strapi_get_action_plan(account_id):
-    """Fetch the action plan for a given account."""
-    url = f"{ACTION_PLAN_ENDPOINT}?accountId={account_id}"
+    url = f"{STAGING_ACTION_PLAN_ENDPOINT}?accountId={account_id}"
     print(f"Account ID: {account_id}")
     print("URL:", url)
     try:
-        response = requests.get(url, headers=HEADERS)
-        response.raise_for_status()  # Raise an exception for HTTP errors
-        old_action_plan = response.json()
-        #print("Received old action plan:", old_action_plan)
-        return old_action_plan
+        response = requests.get(url, headers=STAGING_HEADERS)
+        response.raise_for_status()
+        action_plan = response.json()
+        return action_plan
     except Exception as e:
         print(f"Error while fetching the action plan for account {account_id}: {e}")
         return None
 
-
-def strapi_post_action_plan(action_plan, account_id):
-    """Post an updated action plan for a given account."""
-    url = ACTION_PLAN_ENDPOINT
-    print("=== Outgoing Request Details (Post Action Plan) ===")
-    print(f"Account ID: {account_id}")
-    print("URL:", url)
-    print("================================")
-    try:
-        response = requests.post(url, headers=HEADERS, json=action_plan)
-    except Exception as e:
-        print(f"Error while making the POST request for account {account_id}: {e}")
-        return
-
-    print("=== Response Received ===")
-    print(f"Response for account {account_id}: {response.status_code}")
-    try:
-        response_data = response.json()
-        print("JSON Response:", response_data)
-    except ValueError as json_error:
-        print(f"JSON decoding failed for account {account_id}: {json_error}")
-        print("Raw response content:", response.text)
-    print("================================")
-
-
 def strapi_get_all_routines():
-    """Fetch all routines from the Strapi API."""
     page = 1
     page_size = 100
     all_routines = []
-
     while True:
         url = (
-            f"{ROUTINES_ENDPOINT}"
+            f"{STAGING_ROUTINES_ENDPOINT}"
             f"?pagination[page]={page}"
             f"&pagination[pageSize]={page_size}"
             f"&populate[variations][populate]=*"
@@ -88,16 +65,13 @@ def strapi_get_all_routines():
             f"&populate[resources][populate]=*"
             f"&populate[routineClass][populate]=*"
         )
-        response = requests.get(url, headers=HEADERS)
+        response = requests.get(url, headers=STAGING_HEADERS)
         print(f"Fetching page {page}: {response.status_code}")
-
         if response.status_code == 200:
             try:
                 data = response.json()
                 routines = data.get('data', [])
                 all_routines.extend(routines)
-
-                # If fewer routines than the page size are returned, we've reached the last page.
                 if len(routines) < page_size:
                     break
                 page += 1
@@ -108,18 +82,51 @@ def strapi_get_all_routines():
         else:
             print(f"Error fetching page {page}: {response.text}")
             break
-
     return all_routines
 
+def strapi_post_action_plan(action_plan, account_id):
+    environments = [
+        ("staging", STAGING_ACTION_PLAN_ENDPOINT, STAGING_HEADERS),
+        ("dev", DEV_ACTION_PLAN_ENDPOINT, DEV_HEADERS),
+    ]
+    for env, endpoint, headers in environments:
+        print(f"=== Outgoing Request Details (Post Action Plan) for {env} ===")
+        print(f"Account ID: {account_id}")
+        print("URL:", endpoint)
+        print("================================")
+        try:
+            response = requests.post(endpoint, headers=headers, json=action_plan)
+        except Exception as e:
+            print(f"Error while making the POST request for account {account_id} to {env}: {e}")
+            continue
+        print(f"=== Response Received from {env} ===")
+        print(f"Response for account {account_id}: {response.status_code}")
+        try:
+            response_data = response.json()
+            #print("JSON Response:", response_data)
+        except ValueError as json_error:
+            print(f"JSON decoding failed for account {account_id} on {env}: {json_error}")
+            print("Raw response content:", response.text)
+        print("================================")
 
 def strapi_post_health_scores(healthscores_with_tags):
-    """Post health scores with tags to the Strapi API."""
-    url = HEALTH_SCORES_ENDPOINT
-    response = requests.post(url, headers=HEADERS, json=healthscores_with_tags)
-    print("=== Response Post Health Scores ===")
-    print("Response:", response.status_code)
-    try:
-        response_data = response.json()
-        print("JSON Response:", response_data)
-    except ValueError:
-        print("Response is not JSON, raw content:", response.text)
+    environments = [
+        ("staging", STAGING_HEALTH_SCORES_ENDPOINT, STAGING_HEADERS),
+        ("dev", DEV_HEALTH_SCORES_ENDPOINT, DEV_HEADERS),
+    ]
+    for env, endpoint, headers in environments:
+        print(f"=== Outgoing Request Details (Post Health Scores) for {env} ===")
+        print("URL:", endpoint)
+        try:
+            response = requests.post(endpoint, headers=headers, json=healthscores_with_tags)
+        except Exception as e:
+            print(f"Error while making the POST request to {env}: {e}")
+            continue
+        print(f"=== Response Received from {env} ===")
+        print("Response:", response.status_code)
+        try:
+            response_data = response.json()
+            #print("JSON Response:", response_data)
+        except ValueError:
+            print("Response is not JSON, raw content:", response.text)
+        print("================================")
