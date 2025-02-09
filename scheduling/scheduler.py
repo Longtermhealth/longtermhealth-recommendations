@@ -1,11 +1,9 @@
-# scheduling/scheduler.py
-
 import json
-import random
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any, Optional, Set
-from rule_based_system.scheduling.filter_service_offline import main as get_routines_with_defaults
-from rule_based_system.data.strapi_post_action_plan import strapi_post_action_plan, strapi_post_health_scores
+from scheduling.filter_service import main as get_routines_with_defaults
+from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
+
 
 
 SUPER_ROUTINE_CONFIG = {
