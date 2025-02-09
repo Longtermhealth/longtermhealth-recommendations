@@ -1646,10 +1646,6 @@ def schedule_weekly_cognitive_and_social_challenges(final_action_plan: dict,
 def main():
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults()
 
-    #account_id = 102
-    account_id = 8
-    #account_id = 6
-
     if gender == "Weiblich":
         gender = "FEMALE"
     else:
