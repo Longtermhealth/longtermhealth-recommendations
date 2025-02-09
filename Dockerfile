@@ -84,4 +84,4 @@ ENV AZURE_BLOB_CONNECTION_STRING=$AZURE_BLOB_CONNECTION_STRING
 
 EXPOSE 80
 
-CMD ["python", "main_flask.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:80", "--workers", "3", "main_flask:app"]
