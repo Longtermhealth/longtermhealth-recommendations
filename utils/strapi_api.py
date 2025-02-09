@@ -103,7 +103,7 @@ def strapi_post_action_plan(action_plan, account_id):
         print(f"Response for account {account_id}: {response.status_code}")
         try:
             response_data = response.json()
-            #print("JSON Response:", response_data)
+            print("JSON Response:", response_data)
         except ValueError as json_error:
             print(f"JSON decoding failed for account {account_id} on {env}: {json_error}")
             print("Raw response content:", response.text)
