@@ -41,7 +41,6 @@ def get_latest_response(responses):
     Sorts the responses by the submitted_at timestamp (descending)
     and returns the most recent one.
     """
-    print('all responses',responses)
     if not responses or 'items' not in responses or not responses['items']:
         print("No responses found.")
         return None
