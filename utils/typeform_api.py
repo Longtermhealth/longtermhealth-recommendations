@@ -1,5 +1,3 @@
-# rule_based_system/utils/typeform_api.py
-
 import os
 import requests
 from dotenv import load_dotenv
@@ -18,12 +16,14 @@ headers = {
 }
 
 def get_responses():
-    response = requests.get(responses_url, headers=headers)
+    params = {
+        'page_size': 100
+    }
+    response = requests.get(responses_url, headers=headers, params=params)
     if response.status_code == 200:
         return response.json()
     else:
         print(f"Failed to retrieve responses. Status code: {response.status_code}")
-        #print(f"Response: {response.text}")
         return None
 
 def get_field_mapping():
@@ -34,17 +34,30 @@ def get_field_mapping():
         return field_mapping
     else:
         print(f"Failed to retrieve form. Status code: {response.status_code}")
-        #print(f"Response: {response.text}")
         return None
 
-
-def process_latest_response(responses, field_mapping):
+def get_latest_response(responses):
+    """
+    Sorts the responses by the submitted_at timestamp (descending)
+    and returns the most recent one.
+    """
     if not responses or 'items' not in responses or not responses['items']:
         print("No responses found.")
         return None
 
-    latest_response = responses['items'][0]
-    #print("Latest response", latest_response)
+    sorted_items = sorted(
+        responses['items'],
+        key=lambda x: x.get('submitted_at', ''),
+        reverse=True
+    )
+    return sorted_items[0]
+
+def process_latest_response(responses, field_mapping):
+    latest_response = get_latest_response(responses)
+    if not latest_response:
+        return None
+
+    print("Latest response", latest_response)
 
     special_field_labels = {
         '7RNIAzXy1eCa': 'Vorname',
@@ -58,7 +71,7 @@ def process_latest_response(responses, field_mapping):
     account_id = latest_response.get('hidden', {}).get('accountid', 'Unknown')
     answers['accountid'] = account_id
 
-    for answer in latest_response['answers']:
+    for answer in latest_response.get('answers', []):
         field_id = answer['field']['id']
         field_label = special_field_labels.get(field_id, field_mapping.get(field_id, f"Unknown Field ({field_id})"))
 
@@ -80,23 +93,21 @@ def process_latest_response(responses, field_mapping):
 
         answers[field_label] = value
 
-    #print('answers', answers)
     return answers
 
-
 def get_last_name(responses):
-    if not responses or 'items' not in responses or not responses['items']:
+    latest_response = get_latest_response(responses)
+    if not latest_response:
         return "Unknown"
 
     first_name = None
     last_name = None
-    latest_response = responses['items'][0]
-    for answer in latest_response['answers']:
+    for answer in latest_response.get('answers', []):
         field_id = answer['field']['id']
         if field_id == 'ANmNYBscN0R5':
-            last_name = answer['text']
+            last_name = answer.get('text', None)
         elif field_id == '7RNIAzXy1eCa':
-            first_name = answer['text']
+            first_name = answer.get('text', None)
 
     full_name = f"{first_name} {last_name}" if first_name and last_name else None
     return full_name
