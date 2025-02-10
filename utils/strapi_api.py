@@ -28,9 +28,9 @@ DEV_ACTION_PLAN_ENDPOINT = f"{DEV_BASE_URL}/action-plans"
 DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
 DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
-def strapi_get_action_plan(account_id):
-    url = f"{STAGING_ACTION_PLAN_ENDPOINT}?accountId={account_id}"
-    print(f"Account ID: {account_id}")
+def strapi_get_action_plan(actionPlanId):
+    url = f"{STAGING_ACTION_PLAN_ENDPOINT}/{actionPlanId}"
+    print(f"actionPlanId: {actionPlanId}")
     print("URL:", url)
     try:
         response = requests.get(url, headers=STAGING_HEADERS)
