@@ -17,7 +17,7 @@ headers = {
 
 def get_responses():
     params = {
-        'page_size': 100
+        'page_size': 10
     }
     response = requests.get(responses_url, headers=headers, params=params)
     if response.status_code == 200:
@@ -41,6 +41,7 @@ def get_latest_response(responses):
     Sorts the responses by the submitted_at timestamp (descending)
     and returns the most recent one.
     """
+    print('all responses',responses)
     if not responses or 'items' not in responses or not responses['items']:
         print("No responses found.")
         return None
@@ -56,7 +57,7 @@ def process_latest_response(responses, field_mapping):
     latest_response = get_latest_response(responses)
     if not latest_response:
         return None
-
+    print("All responses", responses)
     print("Latest response", latest_response)
 
     special_field_labels = {

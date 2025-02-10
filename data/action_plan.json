@@ -1,6 +1,6 @@
 {
   "data": {
-    "accountId": "291",
+    "accountId": "297",
     "periodInDays": 28,
     "gender": "MALE",
     "totalDailyTimeInMins": 50,
@@ -1127,6 +1127,143 @@
       },
       {
         "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/189_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/189_16x9.jpg",
+        "routineId": 12899,
+        "durationCalculated": 10,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 10
+        },
+        "description": "Kurze bewusste Pausen fördern Achtsamkeit und Entspannung, was Stress reduziert und die mentale Schärfe verbessert.",
+        "displayName": "Bewusst Pausen machen",
+        "alternatives": [],
+        "scheduleDays": [
+          2
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/356_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/356_16x9.jpg",
+        "routineId": 13066,
+        "durationCalculated": 1,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "",
+        "displayName": "Tiefe Atemübung",
+        "alternatives": [],
+        "scheduleDays": [
+          4
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/187_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/187_16x9.jpg",
+        "routineId": 12897,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
+        "displayName": "Zwerchfellatmung",
+        "alternatives": [],
+        "scheduleDays": [
+          6
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/358_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/358_16x9.jpg",
+        "routineId": 13068,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "",
+        "displayName": "Meditationsstart",
+        "alternatives": [],
+        "scheduleDays": [
+          7
+        ],
+        "scheduleWeeks": [
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
           "pillarEnum": "SLEEP",
           "displayName": "Schlaf"
         },
@@ -1496,6 +1633,181 @@
       },
       {
         "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12690,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "Regelmäßiges Cardio-Training verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und unterstützt einen gesunden Stoffwechsel. ",
+        "displayName": "Cardio Sport",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12687,
+        "durationCalculated": 21,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Min."
+          },
+          "value": 21
+        },
+        "description": "Das Unterkörper-Krafttraining verbessert die Bein- und Gesäßmuskulatur, steigert Kraft, Stabilität und Beweglichkeit, unterstützt die Körperhaltung und fördert die Leistungsfähigkeit im Alltag und Sport.",
+        "displayName": "Unterkörper-Krafttraining",
+        "alternatives": [],
+        "scheduleDays": [
+          2
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12688,
+        "durationCalculated": 24,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 24
+        },
+        "description": "Das Oberkörper-Krafttraining stärkt Schultern, Brust, Rücken und Arme, verbessert die Haltung, erhöht die Kraft und Stabilität im Oberkörper und unterstützt alltägliche sowie sportliche Bewegungsabläufe.",
+        "displayName": "Oberkörper-Krafttraining",
+        "alternatives": [],
+        "scheduleDays": [
+          3
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12691,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 1
+        },
+        "description": "Intervall-Cardio kombiniert Phasen intensiver Anstrengung mit Erholungsphasen und steigert so die Ausdauer, kurbelt die Fettverbrennung an und verbessert die Herz-Kreislauf-Gesundheit. ",
+        "displayName": "Intervall-Cardio",
+        "alternatives": [],
+        "scheduleDays": [
+          4
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "https://longtermhealth.de",
+        "routineId": 12689,
+        "durationCalculated": 20,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 20
+        },
+        "description": "Das Core-Krafttraining stärkt die Rumpfmuskulatur, verbessert Stabilität, Balance und Haltung, schützt vor Verletzungen und fördert eine effiziente Kraftübertragung bei Alltags- und Sportbewegungen.",
+        "displayName": "Core-Krafttraining",
+        "alternatives": [],
+        "scheduleDays": [
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
           "pillarEnum": "NUTRITION",
           "displayName": "Ernährung"
         },
@@ -1764,353 +2076,6 @@
         "parentRoutineId": null,
         "sets": 0,
         "expirationDate": "2025-03-09T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/189_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/189_16x9.jpg",
-        "routineId": 12899,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 10
-        },
-        "description": "Kurze bewusste Pausen fördern Achtsamkeit und Entspannung, was Stress reduziert und die mentale Schärfe verbessert.",
-        "displayName": "Bewusst Pausen machen",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/356_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/356_16x9.jpg",
-        "routineId": 13066,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "",
-        "displayName": "Tiefe Atemübung",
-        "alternatives": [],
-        "scheduleDays": [
-          4
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/187_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/187_16x9.jpg",
-        "routineId": 12897,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 2
-        },
-        "description": "Zwerchfellatmung ist eine entspannende Atemtechnik, die hauptsächlich zur Stressreduktion und emotionalen Regulation beiträgt.",
-        "displayName": "Zwerchfellatmung",
-        "alternatives": [],
-        "scheduleDays": [
-          6
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/358_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/358_16x9.jpg",
-        "routineId": 13068,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 2
-        },
-        "description": "",
-        "displayName": "Meditationsstart",
-        "alternatives": [],
-        "scheduleDays": [
-          7
-        ],
-        "scheduleWeeks": [
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12690,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Regelmäßiges Cardio-Training verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und unterstützt einen gesunden Stoffwechsel. ",
-        "displayName": "Cardio Sport",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12687,
-        "durationCalculated": 21,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Min."
-          },
-          "value": 21
-        },
-        "description": "Das Unterkörper-Krafttraining verbessert die Bein- und Gesäßmuskulatur, steigert Kraft, Stabilität und Beweglichkeit, unterstützt die Körperhaltung und fördert die Leistungsfähigkeit im Alltag und Sport.",
-        "displayName": "Unterkörper-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12688,
-        "durationCalculated": 24,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 24
-        },
-        "description": "Das Oberkörper-Krafttraining stärkt Schultern, Brust, Rücken und Arme, verbessert die Haltung, erhöht die Kraft und Stabilität im Oberkörper und unterstützt alltägliche sowie sportliche Bewegungsabläufe.",
-        "displayName": "Oberkörper-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          3
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12691,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Intervall-Cardio kombiniert Phasen intensiver Anstrengung mit Erholungsphasen und steigert so die Ausdauer, kurbelt die Fettverbrennung an und verbessert die Herz-Kreislauf-Gesundheit. ",
-        "displayName": "Intervall-Cardio",
-        "alternatives": [],
-        "scheduleDays": [
-          4
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12692,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Intensives Cardio-Training steigert die Herzfrequenz, verbessert die Ausdauer und fördert die Fettverbrennung. ",
-        "displayName": "Intensives Cardio",
-        "alternatives": [],
-        "scheduleDays": [
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 12689,
-        "durationCalculated": 20,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 20
-        },
-        "description": "Das Core-Krafttraining stärkt die Rumpfmuskulatur, verbessert Stabilität, Balance und Haltung, schützt vor Verletzungen und fördert eine effiziente Kraftübertragung bei Alltags- und Sportbewegungen.",
-        "displayName": "Core-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          6
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
       },
       {
         "pillar": {
