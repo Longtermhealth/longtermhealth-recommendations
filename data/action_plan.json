@@ -1,6 +1,6 @@
 {
   "data": {
-    "accountId": "299",
+    "accountId": "302",
     "periodInDays": 28,
     "gender": "MALE",
     "totalDailyTimeInMins": 50,
@@ -367,168 +367,23 @@
       },
       {
         "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 12937,
-        "durationCalculated": 30,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
+        "routineId": 12834,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
-          "value": 30
+          "value": 1
         },
-        "description": "Intervall-Spazierengehen kombiniert zügiges Gehen mit entspannten Phasen und regt dabei den Stoffwechsel an, stärkt das Herz-Kreislauf-System und verbessert die Ausdauer. ",
-        "displayName": "Intervall-Spaziergang",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 12936,
-        "durationCalculated": 50,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 50
-        },
-        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
-        "displayName": "Langer Spaziergang",
-        "alternatives": [],
-        "scheduleDays": [
-          3
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
-        "routineId": 12686,
-        "durationCalculated": 19,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 19
-        },
-        "description": "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.",
-        "displayName": "Full Body Workout",
-        "alternatives": [],
-        "scheduleDays": [
-          2,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS MEDIUM",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "STRESS",
-          "displayName": "Resilienz"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/414_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/414_16x9.jpg",
-        "routineId": 13124,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 10
-        },
-        "description": "Non Sleep Deep Rest (NSDR) fördert tiefe Entspannung und Regeneration, steigert die geistige Klarheit, reduziert Stress und verbessert die Konzentration. Es hilft, den Körper zu erholen und die mentale Leistungsfähigkeit zu steigern.",
-        "displayName": "Non Sleep Deep Rest (NSDR)",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          3,
-          5,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "STRESS BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/154_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/154_16x9.jpg",
-        "routineId": 12864,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 2
-        },
-        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
-        "displayName": "Maui-Gewohnheit",
+        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
+        "displayName": "Mehr Gemüse",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -546,30 +401,30 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": 12693,
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12684,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
-        "routineId": 12693,
-        "durationCalculated": 5,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
+        "routineId": 12684,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "MINUTES",
             "displayName": "Minuten"
           },
-          "value": 5
+          "value": 0
         },
-        "description": "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag.",
-        "displayName": "Dankbarkeitsritual",
+        "description": "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.",
+        "displayName": "Bewusste Ernährung",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -587,30 +442,30 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
         "parentRoutineId": null,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/155_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/155_16x9.jpg",
-        "routineId": 12865,
-        "durationCalculated": 3,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/125_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/125_16x9.jpg",
+        "routineId": 12835,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
           },
-          "value": 3
+          "value": 1
         },
-        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
-        "displayName": "Dankbarkeitstagebuch",
+        "description": "Iss mindestens 2 Handvoll Obst täglich, um deinen Körper mit natürlichen Vitaminen und Energie zu versorgen.",
+        "displayName": "Mehr Obst",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -628,10 +483,158 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": 12693,
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12684,
         "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/129_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/129_16x9.jpg",
+        "routineId": 12839,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Wähle Olivenöl oder ein anderes kaltgepresstes Öl, um gesunde Fette aufzunehmen und von den entzündungshemmenden Eigenschaften dieser Öle zu profitieren, die deine allgemeine Gesundheit unterstützen können.",
+        "displayName": "Olivenöl",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12684,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/238_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/238_16x9.jpg",
+        "routineId": 12948,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte auf zuckerhaltige Getränke, um deinen Zuckerkonsum zu reduzieren und deine Gesundheit zu fördern.",
+        "displayName": "Ungesüßte Getränke",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": 12684,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/249_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/249_18x9.jpg",
+        "routineId": 12959,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Koche diese Woche mindestens drei Gerichte mit Bohnen oder anderen Hülsenfrüchten.",
+        "displayName": "Hülsenfrüchte integrieren",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          2
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-02-24T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 13034,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte diesen Monat lang komplett auf Fertiggerichte. Stattdessen bereitest du deine Mahlzeiten von Grund auf zu und vermeidest versteckte Transfette, Zucker und Zusatzstoffe.",
+        "displayName": "Keine Fertiggerichte",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1
+        ],
+        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-03-10T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -881,23 +884,130 @@
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
-        "routineId": 12834,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "\n",
+        "routineId": 12937,
+        "durationCalculated": 30,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
           },
-          "value": 1
+          "value": 30
         },
-        "description": "Iss mindestens 3 Handvoll Gemüse täglich, um deinem Körper wichtige Vitamine, Mineralstoffe und Ballaststoffe zu liefern.",
-        "displayName": "Mehr Gemüse",
+        "description": "Intervall-Spazierengehen kombiniert zügiges Gehen mit entspannten Phasen und regt dabei den Stoffwechsel an, stärkt das Herz-Kreislauf-System und verbessert die Ausdauer. ",
+        "displayName": "Intervall-Spaziergang",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "\n",
+        "routineId": 12936,
+        "durationCalculated": 50,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 50
+        },
+        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
+        "displayName": "Langer Spaziergang",
+        "alternatives": [],
+        "scheduleDays": [
+          3
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
+        "routineId": 12686,
+        "durationCalculated": 19,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 19
+        },
+        "description": "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.",
+        "displayName": "Full Body Workout",
+        "alternatives": [],
+        "scheduleDays": [
+          2,
+          4,
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/154_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/154_16x9.jpg",
+        "routineId": 12864,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
+        "displayName": "Maui-Gewohnheit",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -915,30 +1025,30 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12684,
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": 12693,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
-        "routineId": 12684,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
+        "routineId": 12693,
+        "durationCalculated": 5,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "MINUTES",
             "displayName": "Minuten"
           },
-          "value": 0
+          "value": 5
         },
-        "description": "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten und hochwertigen Proteinquellen. Sie liefert alle wichtigen Nährstoffe, fördert Energie, Wohlbefinden und unterstützt langfristig die Gesundheit. Ausreichendes Trinken von Wasser und das Reduzieren von Zucker, Salz und stark verarbeiteten Lebensmitteln gehören ebenfalls dazu.",
-        "displayName": "Bewusste Ernährung",
+        "description": "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag.",
+        "displayName": "Dankbarkeitsritual",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -956,30 +1066,30 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
         "parentRoutineId": null,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/125_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/125_16x9.jpg",
-        "routineId": 12835,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/155_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/155_16x9.jpg",
+        "routineId": 12865,
+        "durationCalculated": 3,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
           },
-          "value": 1
+          "value": 3
         },
-        "description": "Iss mindestens 2 Handvoll Obst täglich, um deinen Körper mit natürlichen Vitaminen und Energie zu versorgen.",
-        "displayName": "Mehr Obst",
+        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
+        "displayName": "Dankbarkeitstagebuch",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -997,38 +1107,35 @@
           4
         ],
         "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12684,
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": 12693,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
+          "pillarEnum": "STRESS",
+          "displayName": "Resilienz"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/129_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/129_16x9.jpg",
-        "routineId": 12839,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/414_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/414_16x9.jpg",
+        "routineId": 13124,
+        "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
           },
-          "value": 1
+          "value": 10
         },
-        "description": "Wähle Olivenöl oder ein anderes kaltgepresstes Öl, um gesunde Fette aufzunehmen und von den entzündungshemmenden Eigenschaften dieser Öle zu profitieren, die deine allgemeine Gesundheit unterstützen können.",
-        "displayName": "Olivenöl",
+        "description": "Non Sleep Deep Rest (NSDR) fördert tiefe Entspannung und Regeneration, steigert die geistige Klarheit, reduziert Stress und verbessert die Konzentration. Es hilft, den Körper zu erholen und die mentale Leistungsfähigkeit zu steigern.",
+        "displayName": "Non Sleep Deep Rest (NSDR)",
         "alternatives": [],
         "scheduleDays": [
           1,
-          2,
           3,
-          4,
           5,
-          6,
           7
         ],
         "scheduleWeeks": [
@@ -1037,77 +1144,11 @@
           3,
           4
         ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 12684,
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "STRESS BASICS",
+        "parentRoutineId": null,
         "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/249_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/249_18x9.jpg",
-        "routineId": 12959,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Koche diese Woche mindestens drei Gerichte mit Bohnen oder anderen Hülsenfrüchten.",
-        "displayName": "Hülsenfrüchte integrieren",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          2
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-02-23T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 13034,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Verzichte diesen Monat lang komplett auf Fertiggerichte. Stattdessen bereitest du deine Mahlzeiten von Grund auf zu und vermeidest versteckte Transfette, Zucker und Zusatzstoffe.",
-        "displayName": "Keine Fertiggerichte",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "MONTHLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-03-09T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -1207,38 +1248,6 @@
       },
       {
         "pillar": {
-          "pillarEnum": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial"
-        },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 12986,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Rufe heute jemanden an, den du länger nicht gesprochen hast.",
-        "displayName": "In Kontakt bleiben",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          2
-        ],
-        "scheduleCategory": "DAILY_CHALLENGE",
-        "packageName": "Übung",
-        "packageTag": "SOCIAL BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
           "pillarEnum": "COGNITIVE_ENHANCEMENT",
           "displayName": "Kognition"
         },
@@ -1258,7 +1267,7 @@
         "displayName": "Musik hören",
         "alternatives": [],
         "scheduleDays": [
-          4
+          1
         ],
         "scheduleWeeks": [
           2
@@ -1274,9 +1283,9 @@
           "pillarEnum": "SOCIAL_ENGAGEMENT",
           "displayName": "Sozial"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/293_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/293_16x9.jpg",
-        "routineId": 13003,
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 12986,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1286,11 +1295,11 @@
           },
           "value": 1
         },
-        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
-        "displayName": "Ein Kompliment machen",
+        "description": "Rufe heute jemanden an, den du länger nicht gesprochen hast.",
+        "displayName": "In Kontakt bleiben",
         "alternatives": [],
         "scheduleDays": [
-          7
+          4
         ],
         "scheduleWeeks": [
           2
@@ -1322,7 +1331,103 @@
         "displayName": "Gedicht lesen",
         "alternatives": [],
         "scheduleDays": [
+          7
+        ],
+        "scheduleWeeks": [
+          2
+        ],
+        "scheduleCategory": "DAILY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "COGNITIVE BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/284_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/284_18x9.jpg",
+        "routineId": 12994,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Nimm dir diese Woche Zeit, ein Wordle zu lösen. ",
+        "displayName": "Mache ein Wordle",
+        "alternatives": [],
+        "scheduleDays": [
           1
+        ],
+        "scheduleWeeks": [
+          3
+        ],
+        "scheduleCategory": "DAILY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "COGNITIVE BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/293_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/293_16x9.jpg",
+        "routineId": 13003,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
+        "displayName": "Ein Kompliment machen",
+        "alternatives": [],
+        "scheduleDays": [
+          4
+        ],
+        "scheduleWeeks": [
+          3
+        ],
+        "scheduleCategory": "DAILY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "SOCIAL BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 12992,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Gehe diese Woche bewusst rückwärts (mindestens 20 Meter), um deine Koordination zu verbessern, neue Muskelgruppen zu aktivieren und deine Achtsamkeit zu schulen.",
+        "displayName": "Rückwärts gehen",
+        "alternatives": [],
+        "scheduleDays": [
+          7
         ],
         "scheduleWeeks": [
           3
@@ -1357,75 +1462,11 @@
           4
         ],
         "scheduleWeeks": [
-          3
+          4
         ],
         "scheduleCategory": "DAILY_CHALLENGE",
         "packageName": "Übung",
         "packageTag": "SOCIAL BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/284_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/284_18x9.jpg",
-        "routineId": 12994,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Nimm dir diese Woche Zeit, ein Wordle zu lösen. ",
-        "displayName": "Mache ein Wordle",
-        "alternatives": [],
-        "scheduleDays": [
-          7
-        ],
-        "scheduleWeeks": [
-          3
-        ],
-        "scheduleCategory": "DAILY_CHALLENGE",
-        "packageName": "Übung",
-        "packageTag": "COGNITIVE BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
-        },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 12992,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Gehe diese Woche bewusst rückwärts (mindestens 20 Meter), um deine Koordination zu verbessern, neue Muskelgruppen zu aktivieren und deine Achtsamkeit zu schulen.",
-        "displayName": "Rückwärts gehen",
-        "alternatives": [],
-        "scheduleDays": [
-          4
-        ],
-        "scheduleWeeks": [
-          4
-        ],
-        "scheduleCategory": "DAILY_CHALLENGE",
-        "packageName": "Übung",
-        "packageTag": "COGNITIVE BASICS",
         "parentRoutineId": null,
         "sets": 0
       },
@@ -1460,7 +1501,7 @@
         "packageTag": "COGNITIVE BASICS",
         "parentRoutineId": null,
         "sets": 0,
-        "expirationDate": "2025-02-16T00:00:00.000Z"
+        "expirationDate": "2025-02-17T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -1493,7 +1534,7 @@
         "packageTag": "SOCIAL BASICS",
         "parentRoutineId": null,
         "sets": 0,
-        "expirationDate": "2025-03-02T00:00:00.000Z"
+        "expirationDate": "2025-03-03T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -1526,7 +1567,7 @@
         "packageTag": "COGNITIVE BASICS",
         "parentRoutineId": null,
         "sets": 0,
-        "expirationDate": "2025-03-09T00:00:00.000Z"
+        "expirationDate": "2025-03-10T00:00:00.000Z"
       }
     ]
   }

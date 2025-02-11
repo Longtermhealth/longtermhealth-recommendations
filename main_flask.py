@@ -1,5 +1,7 @@
 # rule_based_system/main_flask.py
 import time
+import json
+import os
 from flask import Flask, jsonify, request
 from config import Config
 from utils.strapi_api import strapi_get_action_plan
@@ -27,6 +29,159 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 
+def print_matching_routine_details(new_data, old_action_plan):
+    """
+    Extracts routines from the new data that are also found in the old action plan,
+    then prints and returns a list of dictionaries with each routine's id, name,
+    and completion statistics.
+
+    Parameters:
+        new_data (dict): The incoming payload that includes 'pillarCompletionStats'
+                         with routine details.
+        old_action_plan (dict)
+
+    Returns:
+        list: A list of dictionaries. Each dictionary contains:
+              - "id": The routineId.
+              - "name": The routine's displayName.
+              - "statistics": The list of completion statistics (if any).
+    """
+    old_routine_ids = set()
+    try:
+        old_routines = old_action_plan["data"]["attributes"]["routines"]
+        for routine in old_routines:
+            rid = routine.get('routineId')
+            if rid is not None:
+                old_routine_ids.add(rid)
+    except (KeyError, TypeError) as e:
+        print("Error extracting routine IDs from old action plan:", e)
+        return []
+
+    matching_routines = []
+
+    pillar_stats_list = new_data.get('pillarCompletionStats', [])
+    for pillar in pillar_stats_list:
+        routine_stats_list = pillar.get('routineCompletionStats', [])
+        for routine in routine_stats_list:
+            rid = routine.get('routineId')
+            if rid in old_routine_ids:
+                routine_details = {
+                    "id": rid,
+                    "name": routine.get('displayName'),
+                    "statistics": routine.get('completionStatistics', [])
+                }
+                matching_routines.append(routine_details)
+
+    print("Matching routines (found in both new data and old action plan):")
+    for routine in matching_routines:
+        print("ID: {id}, Name: {name}, Statistics: {statistics}".format(**routine))
+
+    return matching_routines
+def list_strapi_matches(matching_routines, strapi_routines_file="./data/strapi_all_routines.json"):
+    """
+    For each routine in `matching_routines`, search in the provided Strapi routines file
+    for an entry with a matching `cleanedName` attribute. For every match found, print
+    and collect its id, name, and order.
+
+    Parameters:
+        matching_routines (list): A list of dictionaries representing routines.
+                                  Each dictionary is expected to have a "cleanedName" key.
+        strapi_routines_file (str): Path to the JSON file containing all Strapi routines.
+
+    Returns:
+        list: A list of dictionaries. Each dictionary represents a matched routine with keys:
+              "id", "name", and "order".
+    """
+    if not os.path.exists(strapi_routines_file):
+        print("Strapi routines file not found:", strapi_routines_file)
+        return []
+
+    try:
+        with open(strapi_routines_file, "r", encoding="utf-8") as f:
+            strapi_routines = json.load(f)
+    except json.JSONDecodeError as e:
+        print("Error decoding JSON from", strapi_routines_file, ":", e)
+        return []
+
+    search_cleaned_names = set()
+    for routine in matching_routines:
+        cleaned = routine.get("cleanedName")
+        if cleaned:
+            search_cleaned_names.add(cleaned)
+        else:
+            display = routine.get("name") or routine.get("displayName")
+            if display:
+                search_cleaned_names.add(display)
+
+    matches = []
+    for entry in strapi_routines:
+        attributes = entry.get("attributes", {})
+        strapi_cleaned_name = attributes.get("cleanedName")
+        if strapi_cleaned_name in search_cleaned_names:
+            match = {
+                "id": entry.get("id"),
+                "name": attributes.get("name"),
+                "order": attributes.get("order")
+            }
+            matches.append(match)
+            print("Found match - ID: {id}, Name: {name}, Order: {order}".format(**match))
+
+    return matches
+
+def list_strapi_matches_with_original(matching_routines, strapi_routines_file="./data/strapi_all_routines.json"):
+    """
+    For each routine in `matching_routines`, search the Strapi routines file for an entry
+    with a matching `cleanedName` attribute. For every match found, print and collect its id,
+    name, order, and the original routine object.
+
+    Parameters:
+        matching_routines (list): A list of dictionaries representing routines.
+                                  Each dictionary is expected to have a "cleanedName" key.
+        strapi_routines_file (str): Path to the JSON file containing all Strapi routines.
+
+    Returns:
+        list: A list of dictionaries. Each dictionary represents a matched routine with keys:
+              "id", "name", "order", and "original" (the full JSON object from Strapi).
+    """
+    if not os.path.exists(strapi_routines_file):
+        print("Strapi routines file not found:", strapi_routines_file)
+        return []
+
+    try:
+        with open(strapi_routines_file, "r", encoding="utf-8") as f:
+            strapi_routines = json.load(f)
+    except json.JSONDecodeError as e:
+        print("Error decoding JSON from", strapi_routines_file, ":", e)
+        return []
+
+    search_cleaned_names = set()
+    for routine in matching_routines:
+        cleaned = routine.get("cleanedName")
+        if cleaned:
+            search_cleaned_names.add(cleaned)
+        else:
+            display = routine.get("name") or routine.get("displayName")
+            if display:
+                search_cleaned_names.add(display)
+
+    matches = []
+    for entry in strapi_routines:
+        attributes = entry.get("attributes", {})
+        strapi_cleaned_name = attributes.get("cleanedName")
+        if strapi_cleaned_name in search_cleaned_names:
+            match = {
+                "id": entry.get("id"),
+                "name": attributes.get("name"),
+                "order": attributes.get("order"),
+                "original": entry
+            }
+            matches.append(match)
+            print("Found match - ID: {id}, Name: {name}, Order: {order}".format(**match))
+
+    return matches
+
+
+
 def main():
     field_mapping = get_field_mapping()
     responses = get_responses()
@@ -47,14 +202,20 @@ def recalc_action_plan():
     app.logger.info("Start Date: %s", start_date)
     app.logger.info("Period in Days: %s", period_in_days)
 
-    # Fetch the old action plan using the actionPlanId
+    # Retrieve the old action plan from your backend.
     old_action_plan = strapi_get_action_plan(action_plan_id)
     if old_action_plan:
-        app.logger.info("Old action plan retrieved: %s")
+        app.logger.info("Old action plan retrieved.")
+        print(old_action_plan)
+
+        matching_routines = print_matching_routine_details(data, old_action_plan)
+        app.logger.info("Matching routine details: %s", matching_routines)
+        strapi_matches = list_strapi_matches_with_original(matching_routines)
+        matches = list_strapi_matches(matching_routines)
+        print(strapi_matches)
     else:
         app.logger.error("No old action plan found for actionPlanId: %s", action_plan_id)
 
-    # Process the pillar statistics from the incoming data.
     pillar_stats_list = data.get('pillarCompletionStats', [])
     for pillar in pillar_stats_list:
         pillar_enum = pillar.get('pillarEnum')
@@ -73,7 +234,6 @@ def recalc_action_plan():
                 period_sequence_no = stat.get('periodSequenceNo')
                 completion_unit = stat.get('completionUnit')
 
-                # Try either property name in case one is missing
                 completion_target = stat.get('completionTargetTotal', stat.get('completionTarget'))
                 completed_value = stat.get('completedValueTotal', stat.get('completedValue'))
 
@@ -89,43 +249,8 @@ def recalc_action_plan():
                 except (ValueError, TypeError) as e:
                     app.logger.error("Error converting values: %s", e)
 
-    total_target = 0
-    for pillar in pillar_stats_list:
-        for routine in pillar.get('routineCompletionStats', []):
-            for stat in routine.get('completionStatistics', []):
-                target_value = stat.get('completionTargetTotal', stat.get('completionTarget'))
-                if target_value is not None:
-                    try:
-                        total_target += float(target_value)
-                    except ValueError as e:
-                        app.logger.error("Error converting target value: %s", e)
-
-    #app.logger.info("Total target value: %s", total_target)
-
-    # Assuming old_action_plan is the dictionary returned by strapi_get_action_plan(action_plan_id)
-    if old_action_plan and 'data' in old_action_plan:
-        account_id = None
-        total_daily_time = None
-        # Iterate over the list in case some entries have None values
-        for plan in old_action_plan['data']:
-            attributes = plan.get('attributes', {})
-            account_id_candidate = attributes.get('accountId')
-            total_daily_time_candidate = attributes.get('totalDailyTimeInMins')
-            # Choose the record if at least one of the values is present
-            if account_id_candidate is not None or total_daily_time_candidate is not None:
-                account_id = account_id_candidate
-                total_daily_time = total_daily_time_candidate
-                break
-
-        app.logger.info("Account ID from old action plan: %s", account_id)
-        app.logger.info("Total Daily Time (in mins) from old action plan: %s", total_daily_time)
-    else:
-        app.logger.error("Old action plan is not in the expected format.")
-
-
     final_action_plan = {
-        "actionPlanId": action_plan_id,
-        "calculatedTotalTarget": total_target,
+        "actionPlanId": action_plan_id
     }
 
     return jsonify({'action_plan': final_action_plan}), 200

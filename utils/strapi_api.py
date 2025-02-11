@@ -38,7 +38,7 @@ def strapi_get_action_plan(actionPlanId):
         action_plan = response.json()
         return action_plan
     except Exception as e:
-        print(f"Error while fetching the action plan for account {account_id}: {e}")
+        print(f"Error while fetching the action plan for account {actionPlanId}: {e}")
         return None
 
 def strapi_get_all_routines():

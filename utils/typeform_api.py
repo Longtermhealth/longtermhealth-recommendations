@@ -56,7 +56,7 @@ def process_latest_response(responses, field_mapping):
     latest_response = get_latest_response(responses)
     if not latest_response:
         return None
-    #print("All responses", responses)
+    print("All responses", responses)
     print("Latest response", latest_response)
 
     special_field_labels = {
