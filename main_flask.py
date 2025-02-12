@@ -258,6 +258,7 @@ def recalc_action_plan():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    """
     field_mapping = get_field_mapping()
     responses = get_responses()
     if responses and field_mapping:
@@ -267,7 +268,7 @@ def webhook():
             accountid = answers.get('accountid', 'Unknown Account ID')
             print('accountid', accountid)
             print('lastname', lastname)
-
+    """
     start_time = time.perf_counter()
     app.logger.info('Webhook received')
     app.logger.info('Start processing action plan')

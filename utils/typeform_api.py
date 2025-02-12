@@ -17,7 +17,7 @@ headers = {
 
 def get_responses():
     params = {
-        'page_size': 25
+        'page_size': 100
     }
     response = requests.get(responses_url, headers=headers, params=params)
     if response.status_code == 200:
