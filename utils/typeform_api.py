@@ -18,8 +18,9 @@ def trigger_webhook(custom_headers=None):
     webhook_url = "https://lthrecommendation-hpdphma0ehf3bacn.germanywestcentral-01.azurewebsites.net/webhook"
     payload = {"message": "Triggered by the webhook process"}
     headers = custom_headers if custom_headers else {}
+    print('webhook triggered')
     response = requests.post(webhook_url, json=payload, headers=headers)
-    response.raise_for_status()  # optionally handle errors
+    response.raise_for_status()
     return response
 
 def get_responses():

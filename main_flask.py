@@ -259,6 +259,7 @@ def recalc_action_plan():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     if request.headers.get('X-Webhook-Triggered'):
+        print('already X-Webhook-Triggered')
         return jsonify({'status': 'success, loop prevented'}), 200
 
     """
