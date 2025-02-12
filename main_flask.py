@@ -258,6 +258,9 @@ def recalc_action_plan():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    if request.headers.get('X-Webhook-Triggered'):
+        return jsonify({'status': 'success, loop prevented'}), 200
+
     """
     field_mapping = get_field_mapping()
     responses = get_responses()
@@ -277,7 +280,7 @@ def webhook():
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
-    trigger_webhook()
+    trigger_webhook(custom_headers={'X-Webhook-Triggered': 'true'})
 
     return jsonify({'status': 'success'}), 200
 

@@ -14,23 +14,13 @@ headers = {
     'Authorization': f'Bearer {TYPEFORM_API_KEY}',
     'Content-Type': 'application/json'
 }
-def trigger_webhook():
+def trigger_webhook(custom_headers=None):
     webhook_url = "https://lthrecommendation-hpdphma0ehf3bacn.germanywestcentral-01.azurewebsites.net/webhook"
-
-    payload = {
-        "message": "Webhook triggered!"
-    }
-
-    try:
-        response = requests.post(webhook_url, json=payload)
-        response.raise_for_status()
-        print("Webhook triggered successfully!")
-        print("Response:", response.text)
-    except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
-    except Exception as err:
-        print(f"An error occurred: {err}")
-
+    payload = {"message": "Triggered by the webhook process"}
+    headers = custom_headers if custom_headers else {}
+    response = requests.post(webhook_url, json=payload, headers=headers)
+    response.raise_for_status()  # optionally handle errors
+    return response
 
 def get_responses():
     params = {
