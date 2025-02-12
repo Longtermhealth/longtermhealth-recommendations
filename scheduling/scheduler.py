@@ -409,9 +409,9 @@ def create_health_scores_with_structure(account_id, health_scores):
     }
 
     def get_score_details(pillar, score):
-        if score < 50:
+        if score < 40:
             rating = "AKTIONSBEFARF"
-        elif 50 <= score < 80:
+        elif 40 <= score < 64:
             rating = "AUSBAUFÄHIG"
         else:
             rating = "OPTIMAL"
