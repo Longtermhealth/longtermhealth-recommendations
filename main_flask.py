@@ -268,7 +268,7 @@ def webhook():
     app.logger.info('Original webhook received: %s')
     app.logger.info('Start processing action plan')
     final_action_plan = process_action_plan()
-    app.logger.info('Action plan processed and posted: %s', final_action_plan)
+    app.logger.info('Action plan processed and posted: %s')
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
