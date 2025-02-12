@@ -5,7 +5,7 @@ import os
 from flask import Flask, jsonify, request
 from config import Config
 from utils.strapi_api import strapi_get_action_plan
-from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
+from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_webhook
 from utils.clickup_api import create_clickup_task
 from utils.data_processing import integrate_answers
 from assessments.health_assessment import HealthAssessment
@@ -277,7 +277,7 @@ def webhook():
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
-
+    trigger_webhook()
 
     return jsonify({'status': 'success'}), 200
 
