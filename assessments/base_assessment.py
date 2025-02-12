@@ -10,14 +10,14 @@ class BaseAssessment:
     @staticmethod
     def normalize_score(score, min_score, max_score):
         """
-        Normalize the score to a 0-100 scale.
+        Normalize the score to a 0-80 scale.
 
         :param score: The raw score to be normalized
         :param min_score: The minimum possible raw score
         :param max_score: The maximum possible raw score
-        :return: The normalized score on a 0-100 scale
+        :return: The normalized score on a 0-80 scale
         """
-        return (((score / 5 * 100) - min_score) / (max_score - min_score)) * 100
+        return (((score / 5 * 80) - min_score) / (max_score - min_score)) * 80
 
     @staticmethod
     def validate_input(data, valid_values):
@@ -47,7 +47,7 @@ class ExampleAssessment(BaseAssessment):
 
     def calculate_score(self):
         raw_score = self.example_param
-        return self.normalize_score(raw_score, 0, 100)
+        return self.normalize_score(raw_score, 0, 80)
 
 
 if __name__ == "__main__":

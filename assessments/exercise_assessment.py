@@ -67,7 +67,7 @@ class ExerciseAssessment(BaseAssessment):
             weight_strength * strength
         )
 
-        normalized_score = score / 5 * 100
+        normalized_score = score / 5 * 80
         return normalized_score
 
     def report(self):

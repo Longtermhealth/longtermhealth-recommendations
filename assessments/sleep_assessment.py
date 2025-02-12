@@ -172,7 +172,7 @@ class SleepAssessment(BaseAssessment):
             weight_time_outside_evening * time_outside_evening
         )
 
-        return self.normalize_score(score, 0, 100)
+        return self.normalize_score(score, 0, 80)
 
     def report(self):
         """

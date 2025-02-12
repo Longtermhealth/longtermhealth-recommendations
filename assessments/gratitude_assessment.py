@@ -72,7 +72,7 @@ class GratitudeAssessment(BaseAssessment):
             total_gratitude_score = sum(gratitude)
             min_score = 5
             max_score = 30
-            normalized_score = ((total_gratitude_score - min_score) / (max_score - min_score)) * 100
+            normalized_score = ((total_gratitude_score - min_score) / (max_score - min_score)) * 80
         else:
             normalized_score = 0
 

@@ -109,7 +109,7 @@ class StressManagementAssessment(BaseAssessment):
                 weight_stress_level * stress_level +
                 weight_stress_coping * stress_coping
         )
-        normalized_score = score / 5 * 100
+        normalized_score = score / 5 * 80
         return normalized_score
 
     def report(self):

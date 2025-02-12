@@ -60,7 +60,7 @@ class CognitionAssessment(BaseAssessment):
         forgetfulness, concentration, learning = self.cognition
         total_points = forgetfulness + concentration + learning
         # Max total points = (forgetfulness max = 5 if raw=1, concentration max=5, learning max=5) = 15
-        score = total_points / 15 * 100
+        score = total_points / 15 * 80
         return score
 
     def report(self):

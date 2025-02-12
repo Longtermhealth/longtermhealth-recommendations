@@ -101,7 +101,7 @@ class SocialConnectionsAssessment(BaseAssessment):
             weight_loneliness * loneliness
         )
 
-        return self.normalize_score(score, 0, 100)
+        return self.normalize_score(score, 0, 80)
 
     def report(self):
         """
