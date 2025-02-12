@@ -5,7 +5,8 @@ import os
 from flask import Flask, jsonify, request
 from config import Config
 from utils.strapi_api import strapi_get_action_plan
-from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_webhook
+from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name, \
+    trigger_followup
 from utils.clickup_api import create_clickup_task
 from utils.data_processing import integrate_answers
 from assessments.health_assessment import HealthAssessment
@@ -258,30 +259,21 @@ def recalc_action_plan():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    if request.headers.get('X-Webhook-Triggered'):
-        print('already X-Webhook-Triggered')
-        return jsonify({'status': 'success, loop prevented'}), 200
+    if request.headers.get("X-Webhook-Followup") == "true":
+        app.logger.info("Follow-up webhook received: %s", request.json)
+        process_action_plan()
+        return jsonify({"status": "follow-up processed"}), 200
 
-    """
-    field_mapping = get_field_mapping()
-    responses = get_responses()
-    if responses and field_mapping:
-        answers = process_latest_response(responses, field_mapping)
-        lastname = get_last_name(responses)
-        if answers:
-            accountid = answers.get('accountid', 'Unknown Account ID')
-            print('accountid', accountid)
-            print('lastname', lastname)
-    """
     start_time = time.perf_counter()
-    app.logger.info('Webhook received')
+    app.logger.info('Original webhook received: %s', request.json)
     app.logger.info('Start processing action plan')
     final_action_plan = process_action_plan()
-    app.logger.info('Action plan processed and posted')
+    app.logger.info('Action plan processed and posted: %s', final_action_plan)
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
-    trigger_webhook(custom_headers={'X-Webhook-Triggered': 'true'})
+
+    trigger_followup()
 
     return jsonify({'status': 'success'}), 200
 

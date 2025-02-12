@@ -1,4 +1,6 @@
 import os
+import time
+
 import requests
 from dotenv import load_dotenv
 
@@ -14,14 +16,24 @@ headers = {
     'Authorization': f'Bearer {TYPEFORM_API_KEY}',
     'Content-Type': 'application/json'
 }
-def trigger_webhook(custom_headers=None):
-    webhook_url = "https://lthrecommendation-hpdphma0ehf3bacn.germanywestcentral-01.azurewebsites.net/webhook"
-    payload = {"message": "Triggered by the webhook process"}
-    headers = custom_headers if custom_headers else {}
-    print('webhook triggered')
-    response = requests.post(webhook_url, json=payload, headers=headers)
-    response.raise_for_status()
-    return response
+WEBHOOK_URL = "https://lthrecommendation-hpdphma0ehf3bacn.germanywestcentral-01.azurewebsites.net/webhook"
+
+def trigger_followup():
+    """
+    Trigger a follow-up call by sending a POST request to the same webhook URL,
+    with a custom header so that the endpoint knows this is a follow-up request.
+    """
+    headers = {"X-Webhook-Followup": "true"}
+    payload = {
+        "message": "Follow-up trigger for latest Typeform response"
+    }
+    try:
+        response = requests.post(WEBHOOK_URL, json=payload, headers=headers)
+        response.raise_for_status()
+        print("Follow-up webhook triggered successfully. Response: %s", response.text)
+    except Exception as e:
+        print("Error triggering follow-up webhook: %s", e)
+
 
 def get_responses():
     params = {

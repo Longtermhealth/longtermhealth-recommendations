@@ -1,9 +1,9 @@
 {
   "data": {
-    "accountId": "312",
+    "accountId": "337",
     "periodInDays": 28,
     "gender": "MALE",
-    "totalDailyTimeInMins": 90,
+    "totalDailyTimeInMins": 50,
     "routines": [
       {
         "pillar": {
@@ -12,7 +12,7 @@
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "\n",
-        "routineId": 13652,
+        "routineId": 14094,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -33,16 +33,12 @@
           5
         ],
         "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
+          1
         ],
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Cardio",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -52,7 +48,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/mountain_climbers_16x9.jpg",
-        "routineId": 13654,
+        "routineId": 14096,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
@@ -73,96 +69,12 @@
           5
         ],
         "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
+          1
         ],
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Cardio",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/leg_scissors_with_band_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/leg_scissors_with_band_16x9.jpg",
-        "routineId": 13633,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 5
-        },
-        "description": "Beinscheren mit Widerstandsband sind ein kraftorientiertes Training, das hauptsächlich die Oberschenkel- und Rumpfmuskulatur stärkt.",
-        "displayName": "Beinschere mit Widerstandsband",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/seated_flutters_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/seated_flutters_16x9.jpg",
-        "routineId": 13629,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 30
-        },
-        "description": "Flutter Kicks im Sitzen sind eine effektive Übung zur Stärkung der Bauchmuskulatur und Verbesserung der Stabilität.",
-        "displayName": "Flutter Kicks im Sitzen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -172,15 +84,15 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/v_sit_hold_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/v_sit_hold_16x9.jpg",
-        "routineId": 13632,
-        "durationCalculated": 2,
+        "routineId": 14072,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "SECONDS",
             "displayName": "Sek."
           },
-          "value": 30
+          "value": 10
         },
         "description": "Die V-Sitz Übung ist ein effektives Krafttraining für die Körpermitte, das die Rumpfstabilität und Muskelkraft verbessert.",
         "displayName": "V-Sitz Übung",
@@ -193,16 +105,12 @@
           5
         ],
         "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
+          1
         ],
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Kraft",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -210,209 +118,9 @@
           "pillarEnum": "MOVEMENT",
           "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/single_leg_straight_leg_deadlift_with_wall_support_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/single_leg_straight_leg_deadlift_with_wall_support_16x9.jpg",
-        "routineId": 13959,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 6
-        },
-        "description": "Das einbeinige Kreuzheben stärkt die Bein- und Rumpfmuskulatur, während die Balance gefordert wird. Diese Übung verbessert die Stabilität und Körperhaltung, wodurch das Risiko von Rückenschmerzen verringert wird. Außerdem fördert sie die Propriozeption und stärkt die Muskulatur des Unterkörpers.",
-        "displayName": "Einbeiniges Kreuzheben  mit Abstützen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/db_deadlift_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/db_deadlift_16x9.jpg",
-        "routineId": 13960,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 8
-        },
-        "description": "Eine vielseitige Übung, die den unteren Rücken, die Gesäßmuskulatur und die Oberschenkel stärkt, während sie Stabilität und Griffkraft fördert.",
-        "displayName": "Kreuzheben mit Kurzhanteln",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/hip_thrust_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/hip_thrust_16x9.jpg",
-        "routineId": 13658,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 5
-        },
-        "description": "Die Brücke (hoch und runter) ist eine effektive Kraftübung, die hauptsächlich die Gesäß- und Rückenmuskulatur stärkt.",
-        "displayName": "Brücke (hoch und runter)",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13691,
-        "durationCalculated": 3,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTE",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Die Schmetterlingsdehnung ist eine sanfte Mobilitätsübung, die vor allem die Flexibilität der Hüften und Oberschenkel fördert.",
-        "displayName": "Schmetterlingsdehnung",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Flexibilität",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13698,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 5
-        },
-        "description": "Schulterkreisen ist eine sanfte Mobilitätsübung, die hauptsächlich die Flexibilität und Beweglichkeit der Schultern verbessert.",
-        "displayName": "Schulterkreisen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Flexibilität",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13569,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/scissor_kicks_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/scissor_kicks_16x9.jpg",
-        "routineId": 14001,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/seated_flutters_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/seated_flutters_16x9.jpg",
+        "routineId": 14069,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -422,8 +130,8 @@
           },
           "value": 10
         },
-        "description": "Eine dynamische Übung zur Stärkung der unteren Bauchmuskulatur, die gleichzeitig Koordination und Stabilität verbessert. Ideal für eine aktive Rumpfkontrolle und Definition.",
-        "displayName": "Scherenkicks",
+        "description": "Flutter Kicks im Sitzen sind eine effektive Übung zur Stärkung der Bauchmuskulatur und Verbesserung der Stabilität.",
+        "displayName": "Flutter Kicks im Sitzen",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -438,43 +146,7 @@
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Kraft",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/cat_camel_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/cat_camel_16x9.jpg",
-        "routineId": 13692,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 10
-        },
-        "description": "Die Katze-Kuh-Dehnung ist eine sanfte Mobilitätsübung, die vor allem die Flexibilität und Beweglichkeit der Wirbelsäule verbessert.",
-        "displayName": "Katze-Kuh-Dehnung",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Flexibilität",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -484,15 +156,15 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/press_up_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/press_up_16x9.jpg",
-        "routineId": 13647,
-        "durationCalculated": 1,
+        "routineId": 14088,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "REPETITIONS",
             "displayName": "Wiederholungen"
           },
-          "value": 15
+          "value": 10
         },
         "description": "Liegestütze sind ein effektives Krafttraining, das hauptsächlich die Muskeln der Brust, Schultern und Arme stärkt.",
         "displayName": "Liegestütze",
@@ -510,7 +182,7 @@
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Kraft",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -518,118 +190,10 @@
           "pillarEnum": "MOVEMENT",
           "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13963,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 20
-        },
-        "description": "Burpees sind eine intensive Übung, die sowohl Kraft als auch Ausdauer fördert. Sie verbessern die allgemeine Fitness, das Körperbewusstsein sowie die Koordination. Darüber hinaus tragen sie zur Gewichtsreduktion und Stressabbau bei.",
-        "displayName": "Burpees",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/bicep_curls_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/bicep_curls_16x9.jpg",
-        "routineId": 13979,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/superman_hold_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/superman_hold_16x9.jpg",
+        "routineId": 14150,
         "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 25
-        },
-        "description": "Die Kurzhantel Bizepscurls stärken die Oberarmmuskulatur und fördern die Griffkraft. ",
-        "displayName": "Kurzhantel Bizepscurl",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/bird_dog_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/bird_dog_16x9.jpg",
-        "routineId": 13966,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 12
-        },
-        "description": "Die Bird Dog Übung fördert die Stabilität und Koordination durch die Aktivierung der Rumpfmuskulatur. Dabei wird eine gleichzeitige Bewegung von Arm und Bein durchgeführt, was die Balance verbessert. Diese Bewegung stärkt den Rücken und hilft, Rückenschmerzen vorzubeugen.",
-        "displayName": "Bird Dog",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/sphinx_press_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/sphinx_press_16x9.jpg",
-        "routineId": 13970,
-        "durationCalculated": 3,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -638,8 +202,8 @@
           },
           "value": 10
         },
-        "description": "Die Sphinx-Pose fördert die Flexibilität und Mobilität der Wirbelsäule und der Hüften. Sie dehnt die Brust- und Gesäßmuskulatur und trägt zur Verbesserung der Haltung bei. Zudem kann sie Rückenschmerzen vorbeugen und die Kernstabilität unterstützen.",
-        "displayName": "Sphinx-Pose",
+        "description": "Der Superman ist eine effektive Kraftübung, die hauptsächlich den Rücken, die Bauchmuskulatur und die Gesäßmuskeln trainiert.",
+        "displayName": "Superman",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -654,187 +218,7 @@
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Kraft",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/side_plank_with_reach_through_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/side_plank_with_reach_through_16x9.jpg",
-        "routineId": 13973,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 6
-        },
-        "description": "Diese dynamische Übung kombiniert Stabilität und Rotation, um die seitliche Rumpfmuskulatur, die Schultern und die Körpermitte zu stärken. Ideal zur Verbesserung von Balance und Beweglichkeit.",
-        "displayName": "Seitliche Plank mit Durchgriff",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13691,
-        "durationCalculated": 3,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTE",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Die Schmetterlingsdehnung ist eine sanfte Mobilitätsübung, die vor allem die Flexibilität der Hüften und Oberschenkel fördert.",
-        "displayName": "Schmetterlingsdehnung",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Flexibilität",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13698,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 5
-        },
-        "description": "Schulterkreisen ist eine sanfte Mobilitätsübung, die hauptsächlich die Flexibilität und Beweglichkeit der Schultern verbessert.",
-        "displayName": "Schulterkreisen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Flexibilität",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13570,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13652,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 10
-        },
-        "description": "Ausfallschritte mit Sprüngen sind ein intensives Cardiotaining, das vor allem die Beine, das Gesäß und die Ausdauer stärkt.",
-        "displayName": "Ausfallschritte mit Sprüngen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/scissor_kicks_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/scissor_kicks_16x9.jpg",
-        "routineId": 14001,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 10
-        },
-        "description": "Eine dynamische Übung zur Stärkung der unteren Bauchmuskulatur, die gleichzeitig Koordination und Stabilität verbessert. Ideal für eine aktive Rumpfkontrolle und Definition.",
-        "displayName": "Scherenkicks",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -844,15 +228,15 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/straight_leg_sit_ups_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/straight_leg_sit_ups_16x9.jpg",
-        "routineId": 13621,
-        "durationCalculated": 1,
+        "routineId": 14062,
+        "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "REPETITIONS",
             "displayName": "Wiederholungen"
           },
-          "value": 15
+          "value": 10
         },
         "description": "Sit-ups sind eine effektive Kraftübung, die hauptsächlich die Bauchmuskulatur und die Körpermitte stärkt.",
         "displayName": "Sit-ups",
@@ -870,7 +254,7 @@
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Kraft",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -878,164 +262,20 @@
           "pillarEnum": "MOVEMENT",
           "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/leg_scissors_with_band_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/leg_scissors_with_band_16x9.jpg",
-        "routineId": 13633,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 5
-        },
-        "description": "Beinscheren mit Widerstandsband sind ein kraftorientiertes Training, das hauptsächlich die Oberschenkel- und Rumpfmuskulatur stärkt.",
-        "displayName": "Beinschere mit Widerstandsband",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/forward_hold_march_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/forward_hold_march_16x9.jpg",
-        "routineId": 13641,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "SECONDS",
-            "displayName": "Sek."
-          },
-          "value": 45
-        },
-        "description": "Plank Vorwärts/Marsch ist ein effizientes Krafttraining, das insbesondere die Rumpfmuskulatur und die Körperstabilität verbessert.",
-        "displayName": "Plank Vorwärts/Marsch",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/press_up_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/press_up_16x9.jpg",
-        "routineId": 13647,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/top_of_press_up_hold_16x9.jpg",
+        "routineId": 14066,
         "durationCalculated": 1,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 15
-        },
-        "description": "Liegestütze sind ein effektives Krafttraining, das hauptsächlich die Muskeln der Brust, Schultern und Arme stärkt.",
-        "displayName": "Liegestütze",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/seated_flutters_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/seated_flutters_16x9.jpg",
-        "routineId": 13629,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 30
-        },
-        "description": "Flutter Kicks im Sitzen sind eine effektive Übung zur Stärkung der Bauchmuskulatur und Verbesserung der Stabilität.",
-        "displayName": "Flutter Kicks im Sitzen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/videos/v_sit_hold_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/videos/v_sit_hold_16x9.jpg",
-        "routineId": 13632,
-        "durationCalculated": 2,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
             "amountUnitEnum": "SECONDS",
             "displayName": "Sek."
           },
-          "value": 30
+          "value": 20
         },
-        "description": "Die V-Sitz Übung ist ein effektives Krafttraining für die Körpermitte, das die Rumpfstabilität und Muskelkraft verbessert.",
-        "displayName": "V-Sitz Übung",
+        "description": "Die hohe Plank ist ein effektives Krafttraining, das vor allem die Rumpfmuskulatur und die Stabilität des Körpers stärkt.",
+        "displayName": "Hohe Plank",
         "alternatives": [],
         "scheduleDays": [
           1,
@@ -1050,7 +290,7 @@
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Kraft",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
+        "parentRoutineId": 14009,
         "sets": 3
       },
       {
@@ -1060,15 +300,51 @@
         },
         "imageUrl_1x1": "https://longtermhealth.de",
         "imageUrl_16x9": "\n",
-        "routineId": 13691,
-        "durationCalculated": 3,
+        "routineId": 14130,
+        "durationCalculated": 2,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
-            "amountUnitEnum": "MINUTE",
-            "displayName": "Min."
+            "amountUnitEnum": "SECONDS",
+            "displayName": "Sek."
           },
-          "value": 1
+          "value": 30
+        },
+        "description": "Die Hüftbeugerdehnung ist eine einfache Dehnübung, die vor allem die Hüftbeweglichkeit und Flexibilität verbessert.",
+        "displayName": "Hüftbeugerdehnung",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "scheduleWeeks": [
+          1
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Flexibilität",
+        "packageTag": "MOVEMENT BASICS",
+        "parentRoutineId": 14009,
+        "sets": 3
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "\n",
+        "routineId": 14132,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "SECONDS",
+            "displayName": "Sek."
+          },
+          "value": 30
         },
         "description": "Die Schmetterlingsdehnung ist eine sanfte Mobilitätsübung, die vor allem die Flexibilität der Hüften und Oberschenkel fördert.",
         "displayName": "Schmetterlingsdehnung",
@@ -1086,254 +362,8 @@
         "scheduleCategory": "WEEKLY_ROUTINE",
         "packageName": "Flexibilität",
         "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
+        "parentRoutineId": 14009,
         "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "\n",
-        "routineId": 13698,
-        "durationCalculated": 1,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "REPETITIONS",
-            "displayName": "Wiederholungen"
-          },
-          "value": 5
-        },
-        "description": "Schulterkreisen ist eine sanfte Mobilitätsübung, die hauptsächlich die Flexibilität und Beweglichkeit der Schultern verbessert.",
-        "displayName": "Schulterkreisen",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Flexibilität",
-        "packageTag": "MOVEMENT BASICS",
-        "parentRoutineId": 13571,
-        "sets": 3
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 13572,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Regelmäßiges Cardio-Training verbessert die Ausdauer, stärkt das Herz-Kreislauf-System und unterstützt einen gesunden Stoffwechsel. ",
-        "displayName": "Cardio Sport",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 13569,
-        "durationCalculated": 22,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Min."
-          },
-          "value": 22
-        },
-        "description": "Das Unterkörper-Krafttraining verbessert die Bein- und Gesäßmuskulatur, steigert Kraft, Stabilität und Beweglichkeit, unterstützt die Körperhaltung und fördert die Leistungsfähigkeit im Alltag und Sport.",
-        "displayName": "Unterkörper-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          2
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 13570,
-        "durationCalculated": 32,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 32
-        },
-        "description": "Das Oberkörper-Krafttraining stärkt Schultern, Brust, Rücken und Arme, verbessert die Haltung, erhöht die Kraft und Stabilität im Oberkörper und unterstützt alltägliche sowie sportliche Bewegungsabläufe.",
-        "displayName": "Oberkörper-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          3
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 13573,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Intervall-Cardio kombiniert Phasen intensiver Anstrengung mit Erholungsphasen und steigert so die Ausdauer, kurbelt die Fettverbrennung an und verbessert die Herz-Kreislauf-Gesundheit. ",
-        "displayName": "Intervall-Cardio",
-        "alternatives": [],
-        "scheduleDays": [
-          4
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 13574,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 1
-        },
-        "description": "Intensives Cardio-Training steigert die Herzfrequenz, verbessert die Ausdauer und fördert die Fettverbrennung. ",
-        "displayName": "Intensives Cardio",
-        "alternatives": [],
-        "scheduleDays": [
-          5
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Cardio",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "MOVEMENT",
-          "displayName": "Bewegung"
-        },
-        "imageUrl_1x1": "https://longtermhealth.de",
-        "imageUrl_16x9": "https://longtermhealth.de",
-        "routineId": 13571,
-        "durationCalculated": 22,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Min."
-          },
-          "value": 22
-        },
-        "description": "Das Core-Krafttraining stärkt die Rumpfmuskulatur, verbessert Stabilität, Balance und Haltung, schützt vor Verletzungen und fördert eine effiziente Kraftübertragung bei Alltags- und Sportbewegungen.",
-        "displayName": "Core-Krafttraining",
-        "alternatives": [],
-        "scheduleDays": [
-          6
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "WEEKLY_ROUTINE",
-        "packageName": "Kraft",
-        "packageTag": "MOVEMENT BASICS LONG",
-        "parentRoutineId": null,
-        "sets": 0
       },
       {
         "pillar": {
@@ -1342,7 +372,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/414_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/414_16x9.jpg",
-        "routineId": 14004,
+        "routineId": 14447,
         "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
@@ -1380,7 +410,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/124_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/124_16x9.jpg",
-        "routineId": 13715,
+        "routineId": 14157,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1411,7 +441,7 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 13566,
+        "parentRoutineId": 14007,
         "sets": 0
       },
       {
@@ -1421,7 +451,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.jpg",
-        "routineId": 13566,
+        "routineId": 14007,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1462,7 +492,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/125_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/125_16x9.jpg",
-        "routineId": 13716,
+        "routineId": 14158,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1493,7 +523,7 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 13566,
+        "parentRoutineId": 14007,
         "sets": 0
       },
       {
@@ -1503,7 +533,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/129_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/129_16x9.jpg",
-        "routineId": 13720,
+        "routineId": 14162,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1534,7 +564,7 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": 13566,
+        "parentRoutineId": 14007,
         "sets": 0
       },
       {
@@ -1542,9 +572,9 @@
           "pillarEnum": "NUTRITION",
           "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/304_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/304_16x9.jpg",
-        "routineId": 13894,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/249_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/249_18x9.jpg",
+        "routineId": 14282,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1554,41 +584,8 @@
           },
           "value": 1
         },
-        "description": "Iss diese Woche so oft wie möglich aufgewärmte Kohlenhydrate, da durch das Abkühlen und erneute Erhitzen resistente Stärke entsteht. Diese hilft, Entzündungen zu reduzieren, den Blutzuckerspiegel zu stabilisieren und den Cholesterinspiegel zu senken.",
-        "displayName": "Kohlenhydrate aufwärmen",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "WEEKLY_CHALLENGE",
-        "packageName": "Empfehlung",
-        "packageTag": "NUTRITION BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-02-18T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "NUTRITION",
-          "displayName": "Ernährung"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/240_1x1.jpg",
-        "imageUrl_16x9": "\n",
-        "routineId": 13831,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Probiere diese Woche mindestens ein neues fermentiertes Lebensmittel aus, um deine Darmgesundheit zu unterstützen und von den probiotischen Vorteilen zu profitieren.",
-        "displayName": "Fermentierte Lebensmittel probieren",
+        "description": "Koche diese Woche mindestens drei Gerichte mit Bohnen oder anderen Hülsenfrüchten.",
+        "displayName": "Hülsenfrüchte integrieren",
         "alternatives": [],
         "scheduleDays": [
           1
@@ -1605,32 +602,59 @@
       },
       {
         "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
+          "pillarEnum": "NUTRITION",
+          "displayName": "Ernährung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/154_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/154_16x9.jpg",
-        "routineId": 13745,
-        "durationCalculated": 2,
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 14357,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Verzichte diesen Monat lang komplett auf Fertiggerichte. Stattdessen bereitest du deine Mahlzeiten von Grund auf zu und vermeidest versteckte Transfette, Zucker und Zusatzstoffe.",
+        "displayName": "Keine Fertiggerichte",
+        "alternatives": [],
+        "scheduleDays": [
+          1
+        ],
+        "scheduleWeeks": [
+          1
+        ],
+        "scheduleCategory": "MONTHLY_CHALLENGE",
+        "packageName": "Empfehlung",
+        "packageTag": "NUTRITION BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-03-11T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/227_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/227_16x9.jpg",
+        "routineId": 14260,
+        "durationCalculated": 30,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "MINUTES",
             "displayName": "Min."
           },
-          "value": 2
+          "value": 30
         },
-        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
-        "displayName": "Maui-Gewohnheit",
+        "description": "Intervall-Spazierengehen kombiniert zügiges Gehen mit entspannten Phasen und regt dabei den Stoffwechsel an, stärkt das Herz-Kreislauf-System und verbessert die Ausdauer. ",
+        "displayName": "Intervall-Spaziergang",
         "alternatives": [],
         "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
+          1
         ],
         "scheduleWeeks": [
           1,
@@ -1638,81 +662,34 @@
           3,
           4
         ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": 13575,
-        "sets": 0
-      },
-      {
-        "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
-        "routineId": 13575,
-        "durationCalculated": 5,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "MINUTES",
-            "displayName": "Minuten"
-          },
-          "value": 5
-        },
-        "description": "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag.",
-        "displayName": "Dankbarkeitsritual",
-        "alternatives": [],
-        "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "scheduleWeeks": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
         "parentRoutineId": null,
         "sets": 0
       },
       {
         "pillar": {
-          "pillarEnum": "GRATITUDE",
-          "displayName": "Dankbarkeit"
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/155_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/155_16x9.jpg",
-        "routineId": 13746,
-        "durationCalculated": 3,
+        "imageUrl_1x1": "https://longtermhealth.de",
+        "imageUrl_16x9": "\n",
+        "routineId": 14259,
+        "durationCalculated": 50,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
             "amountUnitEnum": "MINUTES",
             "displayName": "Min."
           },
-          "value": 3
+          "value": 50
         },
-        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
-        "displayName": "Dankbarkeitstagebuch",
+        "description": "Spazierengehen ist eine sanfte Cardioaktivität, die hauptsächlich die Herz-Kreislauf-Gesundheit unterstützt und die Ausdauer verbessert.",
+        "displayName": "Langer Spaziergang",
         "alternatives": [],
         "scheduleDays": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
+          3
         ],
         "scheduleWeeks": [
           1,
@@ -1720,10 +697,47 @@
           3,
           4
         ],
-        "scheduleCategory": "DAILY_ROUTINE",
-        "packageName": "Übung",
-        "packageTag": "GRATITUDE BASICS",
-        "parentRoutineId": 13575,
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Cardio",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "MOVEMENT",
+          "displayName": "Bewegung"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.jpg",
+        "routineId": 14009,
+        "durationCalculated": 19,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 19
+        },
+        "description": "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen Ausdauerübungen und gezielte Kraftübungen für alle Muskelgruppen. Abschließend sorgen Dehnübungen für eine bessere Regeneration und Entspannung.",
+        "displayName": "Full Body Workout",
+        "alternatives": [],
+        "scheduleDays": [
+          2,
+          4,
+          5
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+        "packageName": "Kraft",
+        "packageTag": "MOVEMENT BASICS MEDIUM",
+        "parentRoutineId": null,
         "sets": 0
       },
       {
@@ -1733,7 +747,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/257_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/257_16x9.jpg",
-        "routineId": 13848,
+        "routineId": 14290,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1774,7 +788,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/140_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/140_16x9.jpg",
-        "routineId": 13731,
+        "routineId": 14173,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1805,7 +819,7 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "SLEEP BASICS",
-        "parentRoutineId": 13567,
+        "parentRoutineId": 14008,
         "sets": 0
       },
       {
@@ -1815,7 +829,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/998_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/998_16x9.jpg",
-        "routineId": 13567,
+        "routineId": 14008,
         "durationCalculated": 0,
         "timeOfDay": "EVENING",
         "goal": {
@@ -1856,7 +870,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/136_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/136_16x9.jpg",
-        "routineId": 13727,
+        "routineId": 14169,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1887,7 +901,7 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "SLEEP BASICS",
-        "parentRoutineId": 13567,
+        "parentRoutineId": 14008,
         "sets": 0
       },
       {
@@ -1897,7 +911,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/142_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/142_16x9.jpg",
-        "routineId": 13733,
+        "routineId": 14175,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1928,7 +942,7 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "SLEEP BASICS",
-        "parentRoutineId": 13567,
+        "parentRoutineId": 14008,
         "sets": 0
       },
       {
@@ -1938,7 +952,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/139_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/139_16x9.jpg",
-        "routineId": 13730,
+        "routineId": 14172,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1969,7 +983,130 @@
         "scheduleCategory": "DAILY_ROUTINE",
         "packageName": "Empfehlung",
         "packageTag": "SLEEP BASICS",
-        "parentRoutineId": 13567,
+        "parentRoutineId": 14008,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/154_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/154_16x9.jpg",
+        "routineId": 14187,
+        "durationCalculated": 2,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 2
+        },
+        "description": "Die Maui-Gewohnheit ist eine einfache Routine, die das Wohlbefinden steigert und die psychische Gesundheit fördert.",
+        "displayName": "Maui-Gewohnheit",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": 14016,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.jpg",
+        "routineId": 14016,
+        "durationCalculated": 5,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Minuten"
+          },
+          "value": 5
+        },
+        "description": "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag.",
+        "displayName": "Dankbarkeitsritual",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "GRATITUDE",
+          "displayName": "Dankbarkeit"
+        },
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/155_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/155_16x9.jpg",
+        "routineId": 14188,
+        "durationCalculated": 3,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "MINUTES",
+            "displayName": "Min."
+          },
+          "value": 3
+        },
+        "description": "Das Festhalten positiver Gedanken fördert die mentale Gesundheit und verbessert die Resilienz.",
+        "displayName": "Dankbarkeitstagebuch",
+        "alternatives": [],
+        "scheduleDays": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "scheduleWeeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "scheduleCategory": "DAILY_ROUTINE",
+        "packageName": "Übung",
+        "packageTag": "GRATITUDE BASICS",
+        "parentRoutineId": 14016,
         "sets": 0
       },
       {
@@ -1979,7 +1116,7 @@
         },
         "imageUrl_1x1": "\n",
         "imageUrl_16x9": "\n",
-        "routineId": 13883,
+        "routineId": 14315,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -1989,41 +1126,8 @@
           },
           "value": 1
         },
-        "description": "Besuche diesen Monat ein kulturelles Angebot wie ein Museum, eine Gallerie, eine Ausstellung oder ein Konzert.",
-        "displayName": "Ein kulturelles Angebot wahrnehmen",
-        "alternatives": [],
-        "scheduleDays": [
-          1
-        ],
-        "scheduleWeeks": [
-          1
-        ],
-        "scheduleCategory": "MONTHLY_CHALLENGE",
-        "packageName": "Übung",
-        "packageTag": "COGNITIVE BASICS",
-        "parentRoutineId": null,
-        "sets": 0,
-        "expirationDate": "2025-03-11T00:00:00.000Z"
-      },
-      {
-        "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/283_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/283_18x9.jpg",
-        "routineId": 13874,
-        "durationCalculated": 10,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Nimm dir diese Woche Zeit, ein Sudoku zu lösen. ",
-        "displayName": "Mache ein Sudoku",
+        "description": "Gehe diese Woche bewusst rückwärts (mindestens 20 Meter), um deine Koordination zu verbessern, neue Muskelgruppen zu aktivieren und deine Achtsamkeit zu schulen.",
+        "displayName": "Rückwärts gehen",
         "alternatives": [],
         "scheduleDays": [
           1
@@ -2044,7 +1148,7 @@
         },
         "imageUrl_1x1": "\n",
         "imageUrl_16x9": "\n",
-        "routineId": 13867,
+        "routineId": 14309,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2074,10 +1178,10 @@
           "pillarEnum": "COGNITIVE_ENHANCEMENT",
           "displayName": "Kognition"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/287_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/287_16x9.jpg",
-        "routineId": 13878,
-        "durationCalculated": 0,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/283_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/283_18x9.jpg",
+        "routineId": 14316,
+        "durationCalculated": 10,
         "timeOfDay": "ANY",
         "goal": {
           "unit": {
@@ -2086,8 +1190,8 @@
           },
           "value": 1
         },
-        "description": "Nimm dir heute bewusst Zeit, ein paar Lieblingslieder zu hören, ohne etwas anderes dabei zu tun. ",
-        "displayName": "Musik hören",
+        "description": "Nimm dir diese Woche Zeit, ein Sudoku zu lösen. ",
+        "displayName": "Mache ein Sudoku",
         "alternatives": [],
         "scheduleDays": [
           7
@@ -2103,12 +1207,12 @@
       },
       {
         "pillar": {
-          "pillarEnum": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial"
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/293_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/293_16x9.jpg",
-        "routineId": 13884,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/284_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/284_18x9.jpg",
+        "routineId": 14317,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2118,11 +1222,43 @@
           },
           "value": 1
         },
-        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
-        "displayName": "Ein Kompliment machen",
+        "description": "Nimm dir diese Woche Zeit, ein Wordle zu lösen. ",
+        "displayName": "Mache ein Wordle",
         "alternatives": [],
         "scheduleDays": [
           1
+        ],
+        "scheduleWeeks": [
+          2
+        ],
+        "scheduleCategory": "DAILY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "COGNITIVE BASICS",
+        "parentRoutineId": null,
+        "sets": 0
+      },
+      {
+        "pillar": {
+          "pillarEnum": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 14310,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Schreibe heute eine kleine positive Nachricht oder Text an eine dir nahestehende Person.",
+        "displayName": "Positives Lebenszeichen",
+        "alternatives": [],
+        "scheduleDays": [
+          4
         ],
         "scheduleWeeks": [
           2
@@ -2140,7 +1276,7 @@
         },
         "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/285_1x1.jpg",
         "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/285_18x9.jpg",
-        "routineId": 13876,
+        "routineId": 14318,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2154,7 +1290,7 @@
         "displayName": "Mache ein Kreuzworträtsel",
         "alternatives": [],
         "scheduleDays": [
-          4
+          7
         ],
         "scheduleWeeks": [
           2
@@ -2167,44 +1303,12 @@
       },
       {
         "pillar": {
-          "pillarEnum": "SOCIAL_ENGAGEMENT",
-          "displayName": "Sozial"
-        },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/294_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/294_16x9.jpg",
-        "routineId": 13885,
-        "durationCalculated": 0,
-        "timeOfDay": "ANY",
-        "goal": {
-          "unit": {
-            "amountUnitEnum": "ROUTINE",
-            "displayName": "Routine"
-          },
-          "value": 1
-        },
-        "description": "Mache heute einer fremden Person ein Kompliment.",
-        "displayName": "Einem Fremden ein Kompliment machen",
-        "alternatives": [],
-        "scheduleDays": [
-          7
-        ],
-        "scheduleWeeks": [
-          2
-        ],
-        "scheduleCategory": "DAILY_CHALLENGE",
-        "packageName": "Übung",
-        "packageTag": "SOCIAL BASICS",
-        "parentRoutineId": null,
-        "sets": 0
-      },
-      {
-        "pillar": {
           "pillarEnum": "COGNITIVE_ENHANCEMENT",
           "displayName": "Kognition"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/288_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/288_16x9.jpg",
-        "routineId": 13879,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/287_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/287_16x9.jpg",
+        "routineId": 14320,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2214,8 +1318,8 @@
           },
           "value": 1
         },
-        "description": "Lese bewusst ein Gedicht und versuche die Bedeutung zu verstehen.",
-        "displayName": "Gedicht lesen",
+        "description": "Nimm dir heute bewusst Zeit, ein paar Lieblingslieder zu hören, ohne etwas anderes dabei zu tun. ",
+        "displayName": "Musik hören",
         "alternatives": [],
         "scheduleDays": [
           1
@@ -2234,9 +1338,9 @@
           "pillarEnum": "SOCIAL_ENGAGEMENT",
           "displayName": "Sozial"
         },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 13868,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/293_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/293_16x9.jpg",
+        "routineId": 14326,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2246,8 +1350,8 @@
           },
           "value": 1
         },
-        "description": "Schreibe heute eine kleine positive Nachricht oder Text an eine dir nahestehende Person.",
-        "displayName": "Positives Lebenszeichen",
+        "description": "Mache heute einem Freund oder einem Familienmitglied ein Kompliment.",
+        "displayName": "Ein Kompliment machen",
         "alternatives": [],
         "scheduleDays": [
           4
@@ -2266,9 +1370,9 @@
           "pillarEnum": "COGNITIVE_ENHANCEMENT",
           "displayName": "Kognition"
         },
-        "imageUrl_1x1": "\n",
-        "imageUrl_16x9": "\n",
-        "routineId": 13873,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/288_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/288_16x9.jpg",
+        "routineId": 14321,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2278,8 +1382,8 @@
           },
           "value": 1
         },
-        "description": "Gehe diese Woche bewusst rückwärts (mindestens 20 Meter), um deine Koordination zu verbessern, neue Muskelgruppen zu aktivieren und deine Achtsamkeit zu schulen.",
-        "displayName": "Rückwärts gehen",
+        "description": "Lese bewusst ein Gedicht und versuche die Bedeutung zu verstehen.",
+        "displayName": "Gedicht lesen",
         "alternatives": [],
         "scheduleDays": [
           7
@@ -2295,12 +1399,12 @@
       },
       {
         "pillar": {
-          "pillarEnum": "COGNITIVE_ENHANCEMENT",
-          "displayName": "Kognition"
+          "pillarEnum": "SOCIAL_ENGAGEMENT",
+          "displayName": "Sozial"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/284_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/284_18x9.jpg",
-        "routineId": 13875,
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/294_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/294_16x9.jpg",
+        "routineId": 14327,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2310,8 +1414,8 @@
           },
           "value": 1
         },
-        "description": "Nimm dir diese Woche Zeit, ein Wordle zu lösen. ",
-        "displayName": "Mache ein Wordle",
+        "description": "Mache heute einer fremden Person ein Kompliment.",
+        "displayName": "Einem Fremden ein Kompliment machen",
         "alternatives": [],
         "scheduleDays": [
           4
@@ -2321,7 +1425,7 @@
         ],
         "scheduleCategory": "DAILY_CHALLENGE",
         "packageName": "Übung",
-        "packageTag": "COGNITIVE BASICS",
+        "packageTag": "SOCIAL BASICS",
         "parentRoutineId": null,
         "sets": 0
       },
@@ -2330,9 +1434,9 @@
           "pillarEnum": "COGNITIVE_ENHANCEMENT",
           "displayName": "Kognition"
         },
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/286_1x1.jpg",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/286_18x9.jpg",
-        "routineId": 13877,
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 14314,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2342,21 +1446,21 @@
           },
           "value": 1
         },
-        "description": "Spiele diese Woche Schach – egal ob in echt oder online – um strategisches Denken zu fördern und deine Konzentrationsfähigkeit zu stärken.",
-        "displayName": "Spiele Schach",
+        "description": "Erkunde diese Woche einen neuen Ort wie ein Museum, Stadtteil, Park, Café o.ä. ",
+        "displayName": "Einen neuen Ort erkunden",
         "alternatives": [],
         "scheduleDays": [
-          3
+          1
         ],
         "scheduleWeeks": [
-          3
+          1
         ],
         "scheduleCategory": "WEEKLY_CHALLENGE",
         "packageName": "Übung",
         "packageTag": "COGNITIVE BASICS",
         "parentRoutineId": null,
         "sets": 0,
-        "expirationDate": "2025-03-04T00:00:00.000Z"
+        "expirationDate": "2025-02-18T00:00:00.000Z"
       },
       {
         "pillar": {
@@ -2365,7 +1469,7 @@
         },
         "imageUrl_1x1": "\n",
         "imageUrl_16x9": "\n",
-        "routineId": 13869,
+        "routineId": 14311,
         "durationCalculated": 0,
         "timeOfDay": "ANY",
         "goal": {
@@ -2379,6 +1483,39 @@
         "displayName": "Freunde treffen",
         "alternatives": [],
         "scheduleDays": [
+          3
+        ],
+        "scheduleWeeks": [
+          3
+        ],
+        "scheduleCategory": "WEEKLY_CHALLENGE",
+        "packageName": "Übung",
+        "packageTag": "SOCIAL BASICS",
+        "parentRoutineId": null,
+        "sets": 0,
+        "expirationDate": "2025-03-04T00:00:00.000Z"
+      },
+      {
+        "pillar": {
+          "pillarEnum": "COGNITIVE_ENHANCEMENT",
+          "displayName": "Kognition"
+        },
+        "imageUrl_1x1": "\n",
+        "imageUrl_16x9": "\n",
+        "routineId": 14314,
+        "durationCalculated": 0,
+        "timeOfDay": "ANY",
+        "goal": {
+          "unit": {
+            "amountUnitEnum": "ROUTINE",
+            "displayName": "Routine"
+          },
+          "value": 1
+        },
+        "description": "Erkunde diese Woche einen neuen Ort wie ein Museum, Stadtteil, Park, Café o.ä. ",
+        "displayName": "Einen neuen Ort erkunden",
+        "alternatives": [],
+        "scheduleDays": [
           4
         ],
         "scheduleWeeks": [
@@ -2386,7 +1523,7 @@
         ],
         "scheduleCategory": "WEEKLY_CHALLENGE",
         "packageName": "Übung",
-        "packageTag": "SOCIAL BASICS",
+        "packageTag": "COGNITIVE BASICS",
         "parentRoutineId": null,
         "sets": 0,
         "expirationDate": "2025-03-11T00:00:00.000Z"
