@@ -260,7 +260,7 @@ def recalc_action_plan():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     if request.headers.get("X-Webhook-Followup") == "true":
-        app.logger.info("Follow-up webhook received: %s", request.json)
+        app.logger.info("Follow-up webhook already received: %s")
         process_action_plan()
         return jsonify({"status": "follow-up processed"}), 200
 

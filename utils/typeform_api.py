@@ -30,7 +30,7 @@ def trigger_followup():
     try:
         response = requests.post(WEBHOOK_URL, json=payload, headers=headers)
         response.raise_for_status()
-        print("Follow-up webhook triggered successfully. Response: %s", response.text)
+        print("Follow-up webhook triggered successfully. Response: %s")
     except Exception as e:
         print("Error triggering follow-up webhook: %s", e)
 
@@ -76,8 +76,7 @@ def process_latest_response(responses, field_mapping):
     latest_response = get_latest_response(responses)
     if not latest_response:
         return None
-    print("All responses", responses)
-    print("Latest response", latest_response)
+    #print("Latest response", latest_response)
 
     special_field_labels = {
         '7RNIAzXy1eCa': 'Vorname',
