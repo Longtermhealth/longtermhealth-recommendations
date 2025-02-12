@@ -206,7 +206,7 @@ def recalc_action_plan():
     old_action_plan = strapi_get_action_plan(action_plan_id)
     if old_action_plan:
         app.logger.info("Old action plan retrieved.")
-        print(old_action_plan)
+        #print(old_action_plan)
 
         matching_routines = print_matching_routine_details(data, old_action_plan)
         app.logger.info("Matching routine details: %s", matching_routines)
