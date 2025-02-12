@@ -265,7 +265,7 @@ def webhook():
         return jsonify({"status": "follow-up processed"}), 200
 
     start_time = time.perf_counter()
-    app.logger.info('Original webhook received: %s', request.json)
+    app.logger.info('Original webhook received: %s')
     app.logger.info('Start processing action plan')
     final_action_plan = process_action_plan()
     app.logger.info('Action plan processed and posted: %s', final_action_plan)
