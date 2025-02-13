@@ -40,7 +40,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "Fullbody Workout",
@@ -63,7 +63,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "Unterkörper-Krafttraining",
@@ -86,7 +86,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "Core-Krafttraining",
@@ -109,7 +109,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "Oberkörper-Krafttraining",
@@ -129,7 +129,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 1",
@@ -149,7 +149,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 2",
@@ -169,7 +169,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 3",
@@ -189,7 +189,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 4",
@@ -209,7 +209,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 5",
@@ -229,7 +229,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 6",
@@ -249,7 +249,7 @@ SUPER_ROUTINE_CONFIG = {
         "goal": {
             "unit": {
                 "amountUnitEnum": "MINUTES",
-                "displayName": "Minuten"
+                "displayName": "Min."
             }
         },
         "displayName": "5 Minuten Cardio Workout, 7",
@@ -595,7 +595,7 @@ def add_individual_routine_entry(
                 "goal": {
                     "unit": {
                         "amountUnitEnum": "MINUTES",
-                        "displayName": "Minuten"
+                        "displayName": "Min."
                     },
                     "value": int(routine['attributes']["durationCalculated"])
                 },
@@ -1926,7 +1926,7 @@ def main():
     #print("Monthly Challenge ID to use:", monthly_id)
 
     final_action_plan = check_weekly_challenges_in_final_action_plan(final_action_plan)
-    #add_missing_weekly_challenges(final_action_plan, filtered_routines, routine_unique_id_map)
+    add_missing_weekly_challenges(final_action_plan, filtered_routines, routine_unique_id_map)
     #final_action_plan = remove_entry_from_action_plan(final_action_plan, id_to_remove)
     schedule_daily_cognitive_and_social_challenges(final_action_plan, filtered_routines, routine_unique_id_map,
                                                    health_scores)
