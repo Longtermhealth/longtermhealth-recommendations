@@ -263,16 +263,17 @@ def webhook():
         app.logger.info("Follow-up webhook already received: %s")
         process_action_plan()
         return jsonify({"status": "follow-up processed"}), 200
+    else:
+        app.logger.info('Original webhook received: %s')
 
     start_time = time.perf_counter()
-    app.logger.info('Original webhook received: %s')
     app.logger.info('Start processing action plan')
     final_action_plan = process_action_plan()
     app.logger.info('Action plan processed and posted: %s')
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
-    time.sleep(1)
+    time.sleep(3)
     trigger_followup()
 
     return jsonify({'status': 'success'}), 200
