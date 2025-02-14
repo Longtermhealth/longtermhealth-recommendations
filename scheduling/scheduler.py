@@ -778,32 +778,76 @@ def build_routine_unique_id_map(routines_data):
     return mapping
 
 
+def get_primary_muscle(routine):
+    """
+    Extracts the primary muscle group from a routine.
+    Assumes the 'title' field in the routine's resources is a string like:
+      "abs (primary), obliques (secondary), hip abductors (secondary), ..."
+    """
+    tags = routine.get('attributes', {}).get('resources', [{}])[0].get('title', "")
+    if isinstance(tags, str):
+        parts = tags.split(',')
+        if parts:
+            primary_part = parts[0].strip()  # e.g. "abs (primary)"
+            # Remove the parenthetical label
+            primary = primary_part.split('(')[0].strip()
+            return primary
+    return None
+
+
+def reorder_by_primary_muscle(routines):
+    """
+    Reorders a list of routines so that routines with the same primary muscle
+    are not scheduled directly one after the other if alternatives exist.
+
+    If no alternative is available, routines with the same primary muscle will be placed consecutively.
+    """
+    if not routines:
+        return routines
+
+    # We'll work with a copy of the list.
+    pool = routines.copy()
+    result = []
+
+    # Start with the first candidate.
+    result.append(pool.pop(0))
+
+    # Greedy algorithm: at each step, try to pick a routine from the pool whose primary muscle
+    # is different from the one last added.
+    while pool:
+        last_primary = get_primary_muscle(result[-1])
+        candidate_index = None
+        for i, candidate in enumerate(pool):
+            if get_primary_muscle(candidate) != last_primary:
+                candidate_index = i
+                break
+        if candidate_index is not None:
+            result.append(pool.pop(candidate_index))
+        else:
+            # No alternative found; take the first candidate even if it has the same primary muscle.
+            result.append(pool.pop(0))
+    return result
+
+
 def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    Selects routines based on tag combinations and their required counts, ensuring no duplicate variations.
+    Selects routines based on tag combinations and their required counts, ensuring that
+    after selection the ordering is adjusted to avoid consecutive routines that target
+    the same primary muscle group (if an alternative exists).
 
-    Args:
-        tag_counts (Dict[str, int]): Dictionary where keys are tag combinations (comma-separated) and values are counts.
-        routines (List[Dict[str, Any]]): List of all available routines.
-
-    Returns:
-        List[Dict[str, Any]]: Selected routines based on tag combinations without duplicate variations.
+    This function first gathers the routines (respecting tag and variation constraints)
+    and then reorders the final list.
     """
     selected_routines = []
     selected_ids: Set[int] = set()
     used_variations: Set[str] = set()
 
+    # Process tag combinations in order of highest priority (most tags) first.
     sorted_tag_combinations = sorted(tag_counts.keys(), key=lambda x: len(x.split(',')), reverse=True)
-    #print(f"Sorted tag combinations (prioritized): {sorted_tag_combinations}")
-
     for tag_combination in sorted_tag_combinations:
         required_count = tag_counts[tag_combination]
         tags = [tag.strip() for tag in tag_combination.split(',')]
-        #print(f"\nProcessing tag combination: {tags} with required count: {required_count}")
-
         matched = match_routines_by_tags(routines, tags)
-        #print(f"Total matched routines for tags {tags}: {len(matched)}")
-
         count_added = 0
 
         for routine in matched:
@@ -814,27 +858,19 @@ def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) 
             if routine_id in selected_ids:
                 continue
 
-
             routine_variations = routine.get('attributes', {}).get('variations', [])
             variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
+            if not used_variations.isdisjoint(variation_names):
+                continue
 
-            if used_variations.isdisjoint(variation_names):
-                selected_routines.append(routine)
-                selected_ids.add(routine_id)
-                used_variations.update(variation_names)
-                count_added += 1
-                #print(f"Selected routine ID {routine_id} with variations {variation_names}")
-            else:
-                overlapping_variations = variation_names.intersection(used_variations)
-                #print(f"Skipping routine ID {routine_id} due to overlapping variations {overlapping_variations}")
+            selected_routines.append(routine)
+            selected_ids.add(routine_id)
+            used_variations.update(variation_names)
+            count_added += 1
 
-        #if count_added < required_count:
-            #print(f"Warning: Only {count_added} routines selected for tags {tags}, but {required_count} required.")
-        #else:
-            #print(f"Successfully selected {count_added} routines for tags {tags}.")
+    # Now reorder the selected routines to avoid back-to-back routines with the same primary muscle.
+    return reorder_by_primary_muscle(selected_routines)
 
-    #print(f"\nTotal selected routines: {len(selected_routines)}")
-    return selected_routines
 
 def match_routines_by_tags(routines: List[Dict[str, Any]], tags: List[str]) -> List[Dict[str, Any]]:
     """
@@ -1747,42 +1783,112 @@ def main():
     routine_unique_id_map = build_routine_unique_id_map(routines)
     #print("Routine Unique ID -> ID Mapping:", routine_unique_id_map)
 
-    full_body_training_tag_counts = {
-        "parentRoutineId": 997,
-        "tags": {
-            "warm-up": 2,
-            "lower_body_strength_training": 2,
-            "upper_body_strength_training": 2,
-            "core_strength_training": 2,
-            "mobility_sport": 2
-        }
-    }
 
-    lower_body_strength_training_tag_counts = {
-        "parentRoutineId": 996,
-        "tags": {
-            "warm-up, lower body": 2,
-            "lower_body_strength_training": 6,
-            "mobility_sport": 2
-        }
-    }
+    if daily_time == 20:
 
-    upper_body_strength_training_tag_counts = {
-        "parentRoutineId": 995,
-        "tags": {
-            "warm-up, upper body": 2,
-            "upper_body_strength_training": 6,
-            "mobility_sport": 2
+        full_body_training_tag_counts = {
+            "parentRoutineId": 997,
+            "tags": {
+                "warm-up": 2,
+                "lower_body_strength_training": 2,
+                "upper_body_strength_training": 2,
+                "core_strength_training": 3,
+                "mobility_sport": 2
+            }
         }
-    }
-    core_strength_training_tag_counts = {
-        "parentRoutineId": 994,
-        "tags": {
-            "warm-up": 2,
-            "core_strength_training": 6,
-            "mobility_sport": 2
+
+        lower_body_strength_training_tag_counts = {
+            "parentRoutineId": 996,
+            "tags": {
+                "warm-up, lower body": 2,
+                "lower_body_strength_training": 6
+            }
         }
-    }
+
+        upper_body_strength_training_tag_counts = {
+            "parentRoutineId": 995,
+            "tags": {
+                "warm-up, upper body": 2,
+                "upper_body_strength_training": 5
+            }
+        }
+        core_strength_training_tag_counts = {
+            "parentRoutineId": 994,
+            "tags": {
+                "warm-up": 2,
+                "core_strength_training": 5
+            }
+        }
+    elif daily_time in (40, 50):
+
+        full_body_training_tag_counts = {
+            "parentRoutineId": 997,
+            "tags": {
+                "warm-up": 2,
+                "lower_body_strength_training": 4,
+                "upper_body_strength_training": 4,
+                "core_strength_training": 4,
+                "mobility_sport": 2
+            }
+        }
+
+        lower_body_strength_training_tag_counts = {
+            "parentRoutineId": 996,
+            "tags": {
+                "warm-up, lower body": 2,
+                "lower_body_strength_training": 14
+            }
+        }
+
+        upper_body_strength_training_tag_counts = {
+            "parentRoutineId": 995,
+            "tags": {
+                "warm-up, upper body": 2,
+                "upper_body_strength_training": 14
+            }
+        }
+        core_strength_training_tag_counts = {
+            "parentRoutineId": 994,
+            "tags": {
+                "warm-up": 2,
+                "core_strength_training": 13
+            }
+        }
+    elif daily_time == 90:
+
+        full_body_training_tag_counts = {
+            "parentRoutineId": 997,
+            "tags": {
+                "warm-up": 3,
+                "lower_body_strength_training": 5,
+                "upper_body_strength_training": 5,
+                "core_strength_training": 6,
+                "mobility_sport": 3
+            }
+        }
+
+        lower_body_strength_training_tag_counts = {
+            "parentRoutineId": 996,
+            "tags": {
+                "warm-up, lower body": 2,
+                "lower_body_strength_training": 18
+            }
+        }
+
+        upper_body_strength_training_tag_counts = {
+            "parentRoutineId": 995,
+            "tags": {
+                "warm-up, upper body": 2,
+                "upper_body_strength_training": 18
+            }
+        }
+        core_strength_training_tag_counts = {
+            "parentRoutineId": 994,
+            "tags": {
+                "warm-up": 2,
+                "core_strength_training": 18
+            }
+        }
 
     tag_counts_list = [
         full_body_training_tag_counts,

@@ -498,14 +498,79 @@ def map_cardio_score_to_order(score: float) -> int:
     :param score: The user's 5 MINUTE CARDIO score.
     :return: The corresponding order (1, 2, or 3).
     """
-    if 0 <= score < 50:
+    if 0 <= score < 40:
         return 1
-    elif 50 <= score < 80:
+    elif 40 <= score < 64:
         return 2
-    elif 80 <= score <= 100:
+    elif 64 <= score <= 80:
         return 3
     else:
-        raise ValueError("Score must be between 0 and 100.")
+        raise ValueError("Score must be between 0 and 80.")
+
+def exclude_movement_routines_by_equipment(routines: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Exclude movement routines that require equipment (i.e. whose equipmentNeeded list contains any item
+    with an equipmentEnum different from "NONE"). Before exclusion, prints counts of movement routines
+    with non-"NONE" equipment and those with no equipment or with equipmentEnum "NONE". After exclusion,
+    prints counts of routines marked as 'excluded' and those not excluded.
+
+    Args:
+        routines (List[Dict[str, Any]]): The list of routine dictionaries.
+
+    Returns:
+        List[Dict[str, Any]]: The updated list of routines with routines that need equipment (≠ "NONE")
+                              marked as excluded.
+    """
+    count_with_non_none = 0
+    count_without_non_none = 0
+
+    # First, count the movement routines based on their equipment requirements.
+    for routine in routines:
+        attributes = routine.get("attributes", {})
+        pillar = attributes.get("pillar", {})
+        if pillar.get("pillarEnum") == "MOVEMENT":
+            equipment_needed = attributes.get("equipmentNeeded", [])
+            if not isinstance(equipment_needed, list):
+                equipment_needed = list(equipment_needed) if equipment_needed is not None else []
+            # If the routine requires equipment and not all items are exactly "NONE", count it.
+            if equipment_needed and not all(item.get("equipmentEnum") == "NONE" for item in equipment_needed):
+                count_with_non_none += 1
+            else:
+                count_without_non_none += 1
+
+    print(
+        f"Before exclusion: {count_with_non_none} movement routines with equipment not 'NONE', "
+        f"{count_without_non_none} movement routines with equipment 'NONE' or no equipment."
+    )
+
+    # Now mark as excluded those movement routines that require equipment (equipmentEnum ≠ "NONE")
+    for routine in routines:
+        attributes = routine.get("attributes", {})
+        pillar = attributes.get("pillar", {})
+        if pillar.get("pillarEnum") == "MOVEMENT":
+            equipment_needed = attributes.get("equipmentNeeded", [])
+            if not isinstance(equipment_needed, list):
+                equipment_needed = list(equipment_needed) if equipment_needed is not None else []
+            if equipment_needed and not all(item.get("equipmentEnum") == "NONE" for item in equipment_needed):
+                attributes["rule_status"] = "excluded"
+                attributes["score_rules"] = 0
+                attributes["score_rules_explanation"] = (
+                    "Excluded because movement routine requires equipment with equipmentEnum different from 'NONE'"
+                )
+                routine["attributes"] = attributes
+
+    count_excluded = 0
+    count_not_excluded = 0
+    for routine in routines:
+        if routine.get("attributes", {}).get("rule_status") == "excluded":
+            count_excluded += 1
+        else:
+            count_not_excluded += 1
+
+    print(
+        f"After exclusion: {count_excluded} routines excluded, {count_not_excluded} routines not excluded."
+    )
+    return routines
 
 
 def main():
@@ -602,6 +667,7 @@ def main():
 
     rules = new_load_rules()
     routines = strapi_get_all_routines()
+    routines = exclude_movement_routines_by_equipment(routines)
 
     processed_routines = set()
 
@@ -642,15 +708,15 @@ def main():
 
 
     def get_order(score: float) -> int:
-        if score < 0:
-            raise ValueError("Score cannot be negative.")
-        elif score <= 20:
+        if score < 0 or score > 80:
+            raise ValueError("Score must be between 0 and 80.")
+        if score <= 16:
             return 1
-        elif score <= 40:
+        elif score <= 32:
             return 2
-        elif score <= 60:
+        elif score <= 48:
             return 3
-        elif score <= 80:
+        elif score <= 64:
             return 4
         else:
             return 5
