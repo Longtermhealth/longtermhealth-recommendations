@@ -1792,7 +1792,7 @@ def main():
                 "warm-up": 2,
                 "lower_body_strength_training": 2,
                 "upper_body_strength_training": 2,
-                "core_strength_training": 3,
+                "core_strength_training": 2,
                 "mobility_sport": 2
             }
         }
