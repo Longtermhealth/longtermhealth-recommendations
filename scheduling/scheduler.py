@@ -1985,7 +1985,8 @@ def main():
 
     update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG, routine_unique_id_map)
     convert_durations_to_int(final_action_plan)
-    update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)    save_action_plan_json(final_action_plan)
+    update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)
+    save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)
 
