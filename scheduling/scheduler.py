@@ -1631,6 +1631,56 @@ def schedule_weekly_cognitive_and_social_challenges(final_action_plan: dict,
             #else:
                 #print(f"Week {week}: No available social weekly challenge found.")
 
+def update_duration_for_specific_routines(final_action_plan: dict, routine_unique_id_map: dict,
+                                          daily_time: int) -> None:
+    """
+    Updates the durationCalculated and goal.value fields for routines corresponding to unique IDs 991, 992, and 993.
+
+    Args:
+        final_action_plan (dict): The action plan containing routines under final_action_plan["data"]["routines"].
+        routine_unique_id_map (dict): Mapping from unique routine IDs to routine IDs.
+        daily_time (int): The daily time parameter.
+    """
+    target_uids = [991, 992, 993]
+    uid_to_routineid = {
+        uid: routine_unique_id_map.get(uid)
+        for uid in target_uids
+        if routine_unique_id_map.get(uid) is not None
+    }
+
+    new_value_other = None
+    if daily_time == 20:
+        new_value_other = 20
+    elif daily_time in (40, 50):
+        new_value_other = 40
+    elif daily_time == 90:
+        new_value_other = 60
+
+    new_value_991 = None
+    if daily_time == 20:
+        new_value_991 = 10
+    elif daily_time in (40, 50):
+        new_value_991 = 20
+    elif daily_time == 90:
+        new_value_991 = 30
+
+    for routine in final_action_plan.get("data", {}).get("routines", []):
+        r_id = routine.get("routineId")
+        if not r_id:
+            continue
+
+        for uid, mapped_routine_id in uid_to_routineid.items():
+            if r_id == mapped_routine_id:
+                if uid == 991 and new_value_991 is not None:
+                    routine["durationCalculated"] = new_value_991
+                    if "goal" in routine and isinstance(routine["goal"], dict):
+                        routine["goal"]["value"] = new_value_991
+                elif uid in (992, 993) and new_value_other is not None:
+                    routine["durationCalculated"] = new_value_other
+                    if "goal" in routine and isinstance(routine["goal"], dict):
+                        routine["goal"]["value"] = new_value_other
+                break
+
 
 def main():
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults()
@@ -1935,7 +1985,7 @@ def main():
 
     update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG, routine_unique_id_map)
     convert_durations_to_int(final_action_plan)
-    save_action_plan_json(final_action_plan)
+    update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)    save_action_plan_json(final_action_plan)
     strapi_post_action_plan(final_action_plan, account_id)
     strapi_post_health_scores(health_scores_with_tag)
 
