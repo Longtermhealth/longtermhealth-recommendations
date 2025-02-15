@@ -2,23 +2,19 @@ trigger:
 - main
 
 resources:
-- repo: self
+  - repo: self
 
 variables:
   dockerRegistryServiceConnection: 'a4f04d2d-a3e1-40ae-80aa-321005f23c28'
   containerRegistry: 'lthrecommendations.azurecr.io'
 
   imageRepositoryMain: 'lthrecommendations_main'
-  imageRepositoryPubmed: 'lthrecommendations_pubmed'
-
   dockerfileMain: '$(Build.SourcesDirectory)/Dockerfile.main'
-  dockerfilePubmed: '$(Build.SourcesDirectory)/Dockerfile.pubmed'
-
   tag: '$(Build.BuildId)'
   vmImageName: 'ubuntu-latest'
 
-  lthrecommendationAppName: 'lthrecommendation'
-  lthpubmedAppName: 'lthpubmed'
+  lthproductionAppName: 'lthrecommendation'
+  lthdevSlotName: 'lthrecommendation-dev'
 
   CLICKUP_API_KEY: $(CLICKUP_API_KEY)
   CLICKUP_LIST_ID: $(CLICKUP_LIST_ID)
@@ -41,13 +37,11 @@ stages:
   displayName: Build and Push Stage
   jobs:
   - job: Build
-    displayName: Build Docker Images
+    displayName: Build Docker Image
     pool:
       vmImage: $(vmImageName)
-
     steps:
     - checkout: self
-
     - task: Docker@2
       displayName: Build and push main_flask image
       inputs:
@@ -75,61 +69,33 @@ stages:
           LINK_SUMMARY_OPENAI_API_KEY=$(LINK_SUMMARY_OPENAI_API_KEY)
           AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
 
-    - task: Docker@2
-      displayName: Build and push pubmed_scraper image
-      inputs:
-        command: buildAndPush
-        containerRegistry: $(dockerRegistryServiceConnection)
-        repository: $(imageRepositoryPubmed)
-        dockerfile: $(dockerfilePubmed)
-        tags: |
-          $(tag)
-        buildContext: '$(Build.SourcesDirectory)'
-        buildArguments: |
-          CLICKUP_API_KEY=$(CLICKUP_API_KEY)
-          CLICKUP_LIST_ID=$(CLICKUP_LIST_ID)
-          SCORES_FIELD_ID=$(SCORES_FIELD_ID)
-          PLOT_FIELD_ID=$(PLOT_FIELD_ID)
-          ANSWERS_FIELD_ID=$(ANSWERS_FIELD_ID)
-          ROUTINES_FIELD_ID=$(ROUTINES_FIELD_ID)
-          ACTIONPLAN_FIELD_ID=$(ACTIONPLAN_FIELD_ID)
-          TYPEFORM_API_KEY=$(TYPEFORM_API_KEY)
-          STRAPI_API_KEY=$(STRAPI_API_KEY)
-          STRAPI_API_KEY_DEV=$(STRAPI_API_KEY_DEV)
-          FORM_ID=$(FORM_ID)
-          LINK_SUMMARY_TITLE_FIELD_ID=$(LINK_SUMMARY_TITLE_FIELD_ID)
-          LINK_SUMMARY_SUMMARY_FIELD_ID=$(LINK_SUMMARY_SUMMARY_FIELD_ID)
-          LINK_SUMMARY_OPENAI_API_KEY=$(LINK_SUMMARY_OPENAI_API_KEY)
-          AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
-
 - stage: Deploy
   displayName: Deploy Stage
   dependsOn: Build
   jobs:
-  - job: DeployMain
-    displayName: Deploy main_flask to lthrecommendation
+  - job: DeployProduction
+    displayName: Deploy to Production Slot
     pool:
       vmImage: $(vmImageName)
-
     steps:
     - task: AzureWebAppContainer@1
-      displayName: Deploy main_flask image
+      displayName: Deploy main_flask image to Production
       inputs:
         azureSubscription: '$(dockerRegistryServiceConnection)'
-        appName: '$(lthrecommendationAppName)'
+        appName: '$(lthproductionAppName)'
         containers: |
           $(containerRegistry)/$(imageRepositoryMain):$(tag)
 
-  - job: DeployPubmed
-    displayName: Deploy pubmed_scraper to lthpubmed
+  - job: DeployDev
+    displayName: Deploy to Dev Slot
     pool:
       vmImage: $(vmImageName)
-
     steps:
     - task: AzureWebAppContainer@1
-      displayName: Deploy pubmed_scraper image
+      displayName: Deploy main_flask image to Dev Slot
       inputs:
         azureSubscription: '$(dockerRegistryServiceConnection)'
-        appName: '$(lthpubmedAppName)'
+        appName: '$(lthproductionAppName)'
+        slotName: '$(lthdevSlotName)'
         containers: |
-          $(containerRegistry)/$(imageRepositoryPubmed):$(tag)
+          $(containerRegistry)/$(imageRepositoryMain):$(tag)

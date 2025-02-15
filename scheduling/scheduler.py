@@ -1,4 +1,5 @@
 import json
+import uuid
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any, Optional, Set
 from scheduling.filter_service import main as get_routines_with_defaults
@@ -1770,6 +1771,8 @@ def main():
 
     final_action_plan = {
         "data": {
+            "actionPlanUniqueId": str(uuid.uuid4()),
+            "previousActionPlanUniqueId": None,
             "accountId": account_id,
             "periodInDays": 28,
             "gender": gender.upper(),
@@ -1777,7 +1780,6 @@ def main():
             "routines": []
         }
     }
-
 
 
     routine_unique_id_map = build_routine_unique_id_map(routines)
