@@ -10,6 +10,8 @@ def integrate_answers(answers):
             'Geburtsjahr': answers.get('Geburtsjahr', 0)
         },
         'nutrition': {
+            'Was ist deine Körpergröße (in cm)?': answers.get('Was ist deine Körpergröße (in cm)?'),
+            'Wie viel wiegst du (in kg)?': answers.get('Wie viel wiegst du (in kg)?'),
             'Welcher Ernährungsstil trifft bei dir am ehesten zu?': answers.get(
                 'Welcher Ernährungsstil trifft bei dir am ehesten zu?'),
             'Wie viel zuckerhaltige Produkte nimmst du zu dir?': answers.get('Wie viel zuckerhaltige Produkte nimmst du zu dir?'),
