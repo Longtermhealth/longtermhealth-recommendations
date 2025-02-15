@@ -345,7 +345,7 @@ input_static_template = {
         "Ich tue alles, damit Stress erst gar nicht entsteht.": None,
         "Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.": None,
         "Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.": None,
-        "Machst du aktuell Übungen zum Stressabbau?": None
+        "Machst du aktuell Übungen zur Stressprävention?": None
 
     },
     "GRATITUDE": {
@@ -452,7 +452,7 @@ def map_answers(answers, scores):
         ('Ich tue alles, damit Stress erst gar nicht entsteht.', None),
         ('Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.', None),
         ('Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.', None),
-        ('Machst du aktuell Übungen zum Stressabbau?',None)
+        ('Machst du aktuell Übungen zur Stressprävention?',None)
     ]
     for key, default in stress_keys:
         set_value(input_static_template['STRESS'], key, answers, default)
@@ -588,7 +588,7 @@ def main():
 
 
     answers = process_latest_response(responses, field_mapping)
-    gender = answers.get('Biologisches Geschlecht:', None)
+    gender = answers.get('Welches Geschlecht ist in Ihren Dokumenten angegeben?', None)
     if not answers:
         logger.error("No answers found in the latest response.")
         return "No answers found in the latest response.", 400
@@ -944,7 +944,7 @@ def main():
 
     #select_anti_inflammation_package(packages_data, selected_packages)
 
-    meditation_answer = answers.get('Machst du aktuell Übungen zum Stressabbau?', None)
+    meditation_answer = answers.get('Machst du aktuell Übungen zur Stressprävention?', None)
     #print('meditation_answer',meditation_answer)
     MEDITATION_ORDER_MAP = {
         "Nein": 1,
