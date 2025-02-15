@@ -785,12 +785,11 @@ def get_primary_muscle(routine):
     Assumes the 'title' field in the routine's resources is a string like:
       "abs (primary), obliques (secondary), hip abductors (secondary), ..."
     """
-    tags = routine.get('attributes', {}).get('resources', [{}])[0].get('title', "")
+    tags = routine.get('attributes', {}).get('muscleTags')
     if isinstance(tags, str):
         parts = tags.split(',')
         if parts:
-            primary_part = parts[0].strip()  # e.g. "abs (primary)"
-            # Remove the parenthetical label
+            primary_part = parts[0].strip()
             primary = primary_part.split('(')[0].strip()
             return primary
     return None
