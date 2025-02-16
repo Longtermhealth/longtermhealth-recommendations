@@ -57,7 +57,7 @@ jobs:
         with:
           app-name: 'lthrecommendation'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6f13630e4274cb4b5aa78f83327e572 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_Production }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
 
   deploy-development:
@@ -71,5 +71,5 @@ jobs:
         with:
           app-name: 'lthrecommendation'
           slot-name: 'lthrecommendation-dev'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6f13630e4274cb4b5aa78f83327e572 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_Dev }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
