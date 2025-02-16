@@ -8,7 +8,7 @@ from utils.strapi_api import strapi_get_all_routines, strapi_get_all_routines_de
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
 
 app_env = os.getenv("APP_ENV", "Production")
-
+print('app_env',app_env)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

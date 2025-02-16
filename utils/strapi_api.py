@@ -111,6 +111,7 @@ def strapi_get_all_routines_development():
         )
         response = requests.get(url, headers=DEV_HEADERS)
         print(f"Fetching page {page}: {response.status_code}")
+        print(f"Fetching DEV_ROUTINES_ENDPOINT {DEV_ROUTINES_ENDPOINT}: {response.status_code}")
         if response.status_code == 200:
             try:
                 data = response.json()
