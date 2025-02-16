@@ -84,6 +84,51 @@ def strapi_get_all_routines():
             break
     return all_routines
 
+
+def strapi_get_all_routines_development():
+    page = 1
+    page_size = 100
+    all_routines = []
+    while True:
+        url = (
+            f"{DEV_ROUTINES_ENDPOINT}"
+            f"?pagination[page]={page}"
+            f"&pagination[pageSize]={page_size}"
+            f"&populate[variations][populate]=*"
+            f"&populate[pillar][populate]=*"
+            f"&populate[amountUnit][populate]=*"
+            f"&populate[locations][populate]=*"
+            f"&populate[educationArticle][populate]=*"
+            f"&populate[tags][populate]=*"
+            f"&populate[routineType][populate]=*"
+            f"&populate[benefits][populate]=*"
+            f"&populate[adaptibility][populate]=*"
+            f"&populate[equipmentNeeded][populate]=*"
+            f"&populate[contraindications][populate]=*"
+            f"&populate[subRoutines][populate]=*"
+            f"&populate[resources][populate]=*"
+            f"&populate[routineClass][populate]=*"
+        )
+        response = requests.get(url, headers=DEV_HEADERS)
+        print(f"Fetching page {page}: {response.status_code}")
+        if response.status_code == 200:
+            try:
+                data = response.json()
+                routines = data.get('data', [])
+                all_routines.extend(routines)
+                if len(routines) < page_size:
+                    break
+                page += 1
+            except json.JSONDecodeError as e:
+                print("Response content is not valid JSON:", e)
+                print("Raw content:", response.text)
+                break
+        else:
+            print(f"Error fetching page {page}: {response.text}")
+            break
+    return all_routines
+
+
 def strapi_post_action_plan(action_plan, account_id):
     environments = [
         ("staging", STAGING_ACTION_PLAN_ENDPOINT, STAGING_HEADERS),
