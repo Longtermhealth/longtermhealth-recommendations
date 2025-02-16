@@ -1,4 +1,4 @@
-name: Build and deploy container app to Azure Web App - lthrecommendation
+name: Build and deploy container app to Azure Web App
 
 on:
   push:
@@ -51,12 +51,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to Azure Web App - Production
-        id: deploy-to-webapp
+      - name: Deploy to Production App
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'lthrecommendation'
-          slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_Production }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
 
@@ -65,11 +63,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to Azure Web App - Development
-        id: deploy-to-webapp
+      - name: Deploy to Dev App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'lthrecommendation'
-          slot-name: 'lthrecommendation-dev'
+          app-name: 'lthrecommendation-dev'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_Dev }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
