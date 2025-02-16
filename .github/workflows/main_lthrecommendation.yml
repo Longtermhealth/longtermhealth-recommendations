@@ -9,51 +9,61 @@ on:
 
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
-    - name: Log in to registry
-      uses: docker/login-action@v2
-      with:
-        registry: https://lthrecommendations.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_f3b8cef230df4aad84209450f8dad3d6 }}
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
-      with:
-        push: true
-        tags: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
-        file: ./Dockerfile
-        build-args: |
-          CLICKUP_API_KEY=${{ secrets.CLICKUP_API_KEY }}
-          CLICKUP_LIST_ID=${{ secrets.CLICKUP_LIST_ID }}
-          SCORES_FIELD_ID=${{ secrets.SCORES_FIELD_ID }}
-          PLOT_FIELD_ID=${{ secrets.PLOT_FIELD_ID }}
-          ANSWERS_FIELD_ID=${{ secrets.ANSWERS_FIELD_ID }}
-          ROUTINES_FIELD_ID=${{ secrets.ROUTINES_FIELD_ID }}
-          ACTIONPLAN_FIELD_ID=${{ secrets.ACTIONPLAN_FIELD_ID }}
-          TYPEFORM_API_KEY=${{ secrets.TYPEFORM_API_KEY }}
-          STRAPI_API_KEY=${{ secrets.STRAPI_API_KEY }}
-          STRAPI_API_KEY_DEV=${{ secrets.STRAPI_API_KEY_DEV }}
-          FORM_ID=${{ secrets.FORM_ID }}
-          LINK_SUMMARY_TITLE_FIELD_ID=${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}
-          LINK_SUMMARY_SUMMARY_FIELD_ID=${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}
-          LINK_SUMMARY_OPENAI_API_KEY=${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}
+      - uses: actions/checkout@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Log in to registry
+        uses: docker/login-action@v2
+        with:
+          registry: https://lthrecommendations.azurecr.io/
+          username: ${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}
+          password: ${{ secrets.AzureAppService_ContainerPassword_f3b8cef230df4aad84209450f8dad3d6 }}
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
+          file: ./Dockerfile
+          build-args: |
+            CLICKUP_API_KEY=${{ secrets.CLICKUP_API_KEY }}
+            CLICKUP_LIST_ID=${{ secrets.CLICKUP_LIST_ID }}
+            SCORES_FIELD_ID=${{ secrets.SCORES_FIELD_ID }}
+            PLOT_FIELD_ID=${{ secrets.PLOT_FIELD_ID }}
+            ANSWERS_FIELD_ID=${{ secrets.ANSWERS_FIELD_ID }}
+            ROUTINES_FIELD_ID=${{ secrets.ROUTINES_FIELD_ID }}
+            ACTIONPLAN_FIELD_ID=${{ secrets.ACTIONPLAN_FIELD_ID }}
+            TYPEFORM_API_KEY=${{ secrets.TYPEFORM_API_KEY }}
+            STRAPI_API_KEY=${{ secrets.STRAPI_API_KEY }}
+            STRAPI_API_KEY_DEV=${{ secrets.STRAPI_API_KEY_DEV }}
+            FORM_ID=${{ secrets.FORM_ID }}
+            LINK_SUMMARY_TITLE_FIELD_ID=${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}
+            LINK_SUMMARY_SUMMARY_FIELD_ID=${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}
+            LINK_SUMMARY_OPENAI_API_KEY=${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}
 
-  deploy:
+  deploy-production:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: build
-    environment:
-      name: ${{ if eq(github.ref, 'refs/heads/main') }} 'production' || 'development'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     steps:
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'lthrecommendation'
-        slot-name: ${{ if eq(github.ref, 'refs/heads/main') }} 'production' || 'lthrecommendation-dev'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6f13630e4274cb4b5aa78f83327e572 }}
-        images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
+      - name: Deploy to Azure Web App Production
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'lthrecommendation'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6f13630e4274cb4b5aa78f83327e572 }}
+          images: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
+
+  deploy-development:
+    if: github.ref == 'refs/heads/development'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to Azure Web App Development
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'lthrecommendation'
+          slot-name: 'lthrecommendation-dev'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6f13630e4274cb4b5aa78f83327e572 }}
+          images: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
