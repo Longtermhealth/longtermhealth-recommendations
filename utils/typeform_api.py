@@ -22,12 +22,12 @@ headers = {
 }
 
 
-def trigger_followup(app_env):
+def trigger_followup(host):
     """
     Trigger a follow-up call by sending a POST request to the same webhook URL,
     with a custom header so that the endpoint knows this is a follow-up request.
     """
-    if app_env == "development":
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         webhook_url = WEBHOOK_URL_DEV
     else:
         webhook_url = WEBHOOK_URL

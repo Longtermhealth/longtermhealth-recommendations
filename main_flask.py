@@ -277,7 +277,7 @@ def webhook():
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
     time.sleep(5)
-    trigger_followup()
+    trigger_followup(host)
 
     return jsonify({'status': 'success'}), 200
 
