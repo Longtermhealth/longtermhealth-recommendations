@@ -4,7 +4,7 @@ import os
 from typing import Dict, Any, List
 from assessments.health_assessment import HealthAssessment
 from utils.data_processing import integrate_answers
-from utils.strapi_api import strapi_get_all_routines
+from utils.strapi_api import strapi_get_all_routines, strapi_get_all_routines_development
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
 
 app_env = os.getenv("APP_ENV", "Production")
