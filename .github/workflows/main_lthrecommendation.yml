@@ -27,6 +27,7 @@ jobs:
           tags: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
           file: ./Dockerfile
           build-args: |
+            APP_ENV=${{ startsWith(github.ref, 'refs/heads/development') && 'Development' || 'Production' }}            
             CLICKUP_API_KEY=${{ secrets.CLICKUP_API_KEY }}
             CLICKUP_LIST_ID=${{ secrets.CLICKUP_LIST_ID }}
             SCORES_FIELD_ID=${{ secrets.SCORES_FIELD_ID }}
