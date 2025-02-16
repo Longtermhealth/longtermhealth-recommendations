@@ -51,6 +51,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Determine Deployment Slot
         id: get-slot
         run: |
@@ -61,10 +66,8 @@ jobs:
           fi
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'lthrecommendation'
           slot-name: ${{ steps.get-slot.outputs.slot }}
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
