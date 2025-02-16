@@ -44,7 +44,7 @@ jobs:
             LINK_SUMMARY_TITLE_FIELD_ID=${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}
             LINK_SUMMARY_SUMMARY_FIELD_ID=${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}
             LINK_SUMMARY_OPENAI_API_KEY=${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}
-            APP_ENV=${{ startsWith(github.ref, 'refs/heads/development') && 'Development' || 'Production' }}
+
   deploy-production:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'lthrecommendation'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PARENT }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_LTH }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
 
   deploy-dev:
@@ -67,6 +67,5 @@ jobs:
         with:
           app-name: 'lthrecommendation'
           slot-name: 'dev'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PARENT }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_LTH }}
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
-##
