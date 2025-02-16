@@ -1718,8 +1718,15 @@ def update_duration_for_specific_routines(final_action_plan: dict, routine_uniqu
                 break
 
 
-def main():
-    account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults()
+def main(host):
+
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
+        app_env = "development"
+    else:
+        app_env = "production"
+    print('app_env', app_env)
+
+    account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
     print('account_id',account_id)
     if gender == "Weiblich":
         gender = "FEMALE"
@@ -2094,8 +2101,13 @@ def main():
     convert_durations_to_int(final_action_plan)
     update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)
     save_action_plan_json(final_action_plan)
-    strapi_post_action_plan(final_action_plan, account_id)
-    strapi_post_health_scores(health_scores_with_tag)
+    if app_env == "development":
+        strapi_post_action_plan(final_action_plan, account_id, 'development')
+        strapi_post_health_scores(health_scores_with_tag, 'development')
+    else:
+        strapi_post_action_plan(final_action_plan, account_id, 'production')
+        strapi_post_health_scores(health_scores_with_tag, 'production')
+
 
     return final_action_plan
 

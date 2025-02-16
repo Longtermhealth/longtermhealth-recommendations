@@ -259,17 +259,19 @@ def recalc_action_plan():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    host = request.host
+    print(f"Received webhook on host: {host}")
     time.sleep(3)
     if request.headers.get("X-Webhook-Followup") == "true":
         app.logger.info("Follow-up webhook already received: %s")
-        process_action_plan()
+        process_action_plan(host)
         return jsonify({"status": "follow-up processed"}), 200
     else:
         app.logger.info('Original webhook received: %s')
 
     start_time = time.perf_counter()
     app.logger.info('Start processing action plan')
-    final_action_plan = process_action_plan()
+    final_action_plan = process_action_plan(host)
     app.logger.info('Action plan processed and posted: %s')
     end_time = time.perf_counter()
     elapsed = end_time - start_time

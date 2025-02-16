@@ -130,11 +130,15 @@ def strapi_get_all_routines_development():
     return all_routines
 
 
-def strapi_post_action_plan(action_plan, account_id):
-    environments = [
-        ("staging", STAGING_ACTION_PLAN_ENDPOINT, STAGING_HEADERS),
-        ("dev", DEV_ACTION_PLAN_ENDPOINT, DEV_HEADERS),
-    ]
+def strapi_post_action_plan(action_plan, account_id, environment):
+    if environment == 'development':
+        environments = [
+            ("dev", DEV_ACTION_PLAN_ENDPOINT, DEV_HEADERS)
+        ]
+    else:
+            environments = [
+            ("staging", STAGING_ACTION_PLAN_ENDPOINT, STAGING_HEADERS),
+        ]
     for env, endpoint, headers in environments:
         print(f"=== Outgoing Request Details (Post Action Plan) for {env} ===")
         print(f"Account ID: {account_id}")
@@ -155,11 +159,15 @@ def strapi_post_action_plan(action_plan, account_id):
             print("Raw response content:", response.text)
         print("================================")
 
-def strapi_post_health_scores(healthscores_with_tags):
-    environments = [
-        ("staging", STAGING_HEALTH_SCORES_ENDPOINT, STAGING_HEADERS),
-        ("dev", DEV_HEALTH_SCORES_ENDPOINT, DEV_HEADERS),
-    ]
+def strapi_post_health_scores(healthscores_with_tags, environment):
+    if environment == 'development':
+        environments = [
+            ("dev", DEV_HEALTH_SCORES_ENDPOINT, DEV_HEADERS)
+        ]
+    else:
+            environments = [
+            ("staging", STAGING_HEALTH_SCORES_ENDPOINT, STAGING_HEADERS),
+        ]
     for env, endpoint, headers in environments:
         print(f"=== Outgoing Request Details (Post Health Scores) for {env} ===")
         print("URL:", endpoint)

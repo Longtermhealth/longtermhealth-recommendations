@@ -7,8 +7,7 @@ from utils.data_processing import integrate_answers
 from utils.strapi_api import strapi_get_all_routines, strapi_get_all_routines_development
 from utils.typeform_api import process_latest_response, get_field_mapping, get_responses
 
-app_env = os.getenv("APP_ENV", "Production")
-print('app_env',app_env)
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -575,13 +574,11 @@ def exclude_movement_routines_by_equipment(routines: List[Dict[str, Any]]) -> Li
     return routines
 
 
-def main():
+def main(app_env):
 
 
-
-
-    field_mapping = get_field_mapping()
-    responses = get_responses()
+    field_mapping = get_field_mapping(app_env)
+    responses = get_responses(app_env)
 
     if not (responses and field_mapping):
         logger.error("No responses or field mapping available.")
@@ -669,7 +666,7 @@ def main():
 
     rules = new_load_rules()
 
-    if app_env.lower() == "development":
+    if app_env == "development":
         routines = strapi_get_all_routines_development()
     else:
         routines = strapi_get_all_routines()
