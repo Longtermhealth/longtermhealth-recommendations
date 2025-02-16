@@ -1,10 +1,7 @@
 # rule_based_system/main_static.py
 import os
 
-from chart.chart_generation import generate_polar_chart
-from chart.converter import create_final_image
 from config import Config
-from utils.blob_upload import upload_to_blob
 from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name
 from utils.clickup_api import create_clickup_task, upload_file_to_clickup
 from utils.data_processing import integrate_answers
