@@ -66,11 +66,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          # This is your App Service name (no slot name needed here).
           app-name: 'lthrecommendation'
-          # Dynamically set slot name based on the branch.
           slot-name: ${{ steps.get-slot.outputs.slot }}
-          # Publish profile secret must be from the parent App Service.
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6f13630e4274cb4b5aa78f83327e572 }}
-          # Reference the newly built image from ACR.
           images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
