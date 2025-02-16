@@ -1719,7 +1719,6 @@ def update_duration_for_specific_routines(final_action_plan: dict, routine_uniqu
 
 
 def main(host):
-
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
     else:

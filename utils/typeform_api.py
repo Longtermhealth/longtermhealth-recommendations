@@ -14,7 +14,7 @@ RESPONSES_URL_DEV = f'https://api.typeform.com/forms/{FORM_ID_DEV}/responses'
 FORM_URL = f'https://api.typeform.com/forms/{FORM_ID}'
 FORM_URL_DEV = f'https://api.typeform.com/forms/{FORM_ID_DEV}'
 WEBHOOK_URL = "https://lthrecommendation-hpdphma0ehf3bacn.germanywestcentral-01.azurewebsites.net/webhook"
-WEBHOOK_URL_DEV = "https://lthrecommendation-hpdphma0ehf3bacn.germanywestcentral-01.azurewebsites.net/webhook"
+WEBHOOK_URL_DEV = "https://lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net/webhook"
 
 headers = {
     'Authorization': f'Bearer {TYPEFORM_API_KEY}',
