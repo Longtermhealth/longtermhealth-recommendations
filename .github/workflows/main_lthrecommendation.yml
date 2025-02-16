@@ -12,14 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+
       - name: Log in to Azure Container Registry
         uses: docker/login-action@v2
         with:
-          registry: https://lthrecommendations.azurecr.io/
+          registry: 'https://lthrecommendations.azurecr.io'
           username: ${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}
           password: ${{ secrets.AzureAppService_ContainerPassword_f3b8cef230df4aad84209450f8dad3d6 }}
+
       - name: Build and push container image
         uses: docker/build-push-action@v3
         with:
@@ -28,7 +31,7 @@ jobs:
           file: ./Dockerfile
           build-args: |
             CLICKUP_API_KEY=${{ secrets.CLICKUP_API_KEY }}
-            LIST_ID=${{ secrets.CLICKUP_LIST_ID }}
+            CLICKUP_LIST_ID=${{ secrets.CLICKUP_LIST_ID }}
             SCORES_FIELD_ID=${{ secrets.SCORES_FIELD_ID }}
             PLOT_FIELD_ID=${{ secrets.PLOT_FIELD_ID }}
             ANSWERS_FIELD_ID=${{ secrets.ANSWERS_FIELD_ID }}
@@ -41,7 +44,6 @@ jobs:
             LINK_SUMMARY_TITLE_FIELD_ID=${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}
             LINK_SUMMARY_SUMMARY_FIELD_ID=${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}
             LINK_SUMMARY_OPENAI_API_KEY=${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}
-
   deploy-production:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -52,7 +54,7 @@ jobs:
         with:
           app-name: 'lthrecommendation'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PARENT }}
-          images: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
+          images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
 
   deploy-dev:
     if: github.ref == 'refs/heads/development'
@@ -65,4 +67,5 @@ jobs:
           app-name: 'lthrecommendation'
           slot-name: 'dev'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PARENT }}
-          images: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
+          images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
+##
