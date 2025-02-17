@@ -751,16 +751,17 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
             if not matching_routine:
                 continue
 
-            individual_routines_local.append({
-                'routineUniqueId': matching_routine['id'],
-                'name': routine_pkg['name'],
-                'scheduleCategory': schedule_category,
-                'scheduleDays': schedule_days,
-                'scheduleWeeks': schedule_weeks,
-                'routineAffiliation': routine_affiliation,
-                'parentRoutineId': parent_routine_id,
-                'packageTag': package_tag
-            })
+            if schedule_category != 'WEEKLY_CHALLENGE':
+                individual_routines_local.append({
+                    'routineUniqueId': matching_routine['id'],
+                    'name': routine_pkg['name'],
+                    'scheduleCategory': schedule_category,
+                    'scheduleDays': schedule_days,
+                    'scheduleWeeks': schedule_weeks,
+                    'routineAffiliation': routine_affiliation,
+                    'parentRoutineId': parent_routine_id,
+                    'packageTag': package_tag
+                })
 
             if routine_affiliation == "PARENT":
                 routine_ids_with_parent.append(routine_pkg['parentRoutineId'])
@@ -1717,6 +1718,99 @@ def update_duration_for_specific_routines(final_action_plan: dict, routine_uniqu
                         routine["goal"]["value"] = new_value_other
                 break
 
+def schedule_all_daily_challenges(final_action_plan, routines, routine_unique_id_map, health_scores):
+    """
+    Schedule up to 3 daily challenges per week (one per day) for all pillars.
+
+    Process:
+      1. Gather available routines with scheduleCategory "DAILY_CHALLENGE" and group them by pillar.
+      2. For each week (of 4 weeks), choose 3 days (e.g. days 1, 4, and 7) as daily slots.
+      3. For each day, pick one challenge from a pillar that hasn’t yet been scheduled in that week.
+         Pillars can be prioritized (for example, by a lower health score).
+    """
+    daily_routines_by_pillar = {}
+    for routine in routines:
+        attrs = routine.get("attributes", {})
+        if attrs.get("scheduleCategory") == "DAILY_CHALLENGE":
+            pillar = attrs.get("pillar", {}).get("pillarEnum")
+            if pillar:
+                daily_routines_by_pillar.setdefault(pillar, []).append(routine)
+
+    total_weeks = 4
+    day_slots = [1, 4, 7]
+
+    for week in range(1, total_weeks + 1):
+        sorted_pillars = sorted(daily_routines_by_pillar.keys(), key=lambda p: health_scores.get(p, 100))
+        used_pillars = set()
+        for day in day_slots:
+            for pillar in sorted_pillars:
+                if pillar not in used_pillars and daily_routines_by_pillar.get(pillar):
+                    challenge = daily_routines_by_pillar[pillar].pop(0)
+                    used_pillars.add(pillar)
+                    add_individual_routine_entry_without_parent(
+                        final_action_plan,
+                        routines,
+                        challenge["id"],
+                        "DAILY_CHALLENGE",
+                        [day],
+                        [week],
+                        pillar + " BASICS",
+                        routine_unique_id_map,
+                        parentRoutineId=None
+                    )
+                    break
+
+
+def schedule_all_weekly_challenges(final_action_plan, routines, routine_unique_id_map, health_scores):
+    """
+    Schedule exactly 1 weekly challenge per week (over 4 weeks) for all pillars.
+
+    Process:
+      1. Group available routines with scheduleCategory "WEEKLY_CHALLENGE" by pillar.
+      2. Sort the pillars (for example, by health score so that pillars in more need get scheduled first).
+      3. For each pillar (in order), assign its challenge to the next available week until 4 weeks are filled.
+    """
+    print("Scheduling weekly challenges...")
+
+    weekly_routines_by_pillar = {}
+    for routine in routines:
+        attrs = routine.get("attributes", {})
+        if attrs.get("scheduleCategory") == "WEEKLY_CHALLENGE":
+            pillar = attrs.get("pillar", {}).get("pillarEnum")
+            if pillar:
+                weekly_routines_by_pillar.setdefault(pillar, []).append(routine)
+
+    total_weeks = 4
+    sorted_pillars = sorted(weekly_routines_by_pillar.keys(), key=lambda p: health_scores.get(p, 100))
+
+    print("Sorted pillars:")
+    for pillar in sorted_pillars:
+        print(f"{pillar}")
+
+    week_index = 1
+    for pillar in sorted_pillars:
+        if week_index > total_weeks:
+            break
+        routines_for_pillar = weekly_routines_by_pillar.get(pillar)
+        if routines_for_pillar:
+            challenge = routines_for_pillar.pop(0)
+            add_individual_routine_entry_without_parent(
+                final_action_plan,
+                routines,
+                challenge["id"],
+                "WEEKLY_CHALLENGE",
+                [1],
+                [week_index],
+                pillar + " BASICS",
+                routine_unique_id_map,
+                parentRoutineId=None
+            )
+            print(f"Scheduled weekly challenge for {pillar} in week: {week_index}")
+            print('week_index',week_index)
+            week_index += 1
+    print("Weekly challenges scheduled.")
+
+
 
 def main(host):
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
@@ -1726,6 +1820,7 @@ def main(host):
     print('app_env', app_env)
 
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
+    account_id = 129
     print('account_id',account_id)
     if gender == "Weiblich":
         gender = "FEMALE"
@@ -2088,17 +2183,13 @@ def main(host):
 
     #print("Monthly Challenge ID to use:", monthly_id)
 
-    final_action_plan = check_weekly_challenges_in_final_action_plan(final_action_plan)
-    add_missing_weekly_challenges(final_action_plan, filtered_routines, routine_unique_id_map)
-    #final_action_plan = remove_entry_from_action_plan(final_action_plan, id_to_remove)
-    schedule_daily_cognitive_and_social_challenges(final_action_plan, filtered_routines, routine_unique_id_map,
-                                                   health_scores)
-    schedule_weekly_cognitive_and_social_challenges(final_action_plan, filtered_routines, routine_unique_id_map,
-                                                    health_scores)
+    schedule_all_daily_challenges(final_action_plan, filtered_routines, routine_unique_id_map, health_scores)
+    schedule_all_weekly_challenges(final_action_plan, filtered_routines, routine_unique_id_map, health_scores)
 
     update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG, routine_unique_id_map)
     convert_durations_to_int(final_action_plan)
     update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)
+
     save_action_plan_json(final_action_plan)
     if app_env == "development":
         strapi_post_action_plan(final_action_plan, account_id, 'development')
