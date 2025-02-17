@@ -1820,7 +1820,6 @@ def main(host):
     print('app_env', app_env)
 
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
-    account_id = 129
     print('account_id',account_id)
     if gender == "Weiblich":
         gender = "FEMALE"
