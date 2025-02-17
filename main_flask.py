@@ -264,7 +264,6 @@ def webhook():
     time.sleep(3)
     if request.headers.get("X-Webhook-Followup") == "true":
         app.logger.info("Follow-up webhook already received: %s")
-        process_action_plan(host)
         return jsonify({"status": "follow-up processed"}), 200
     else:
         app.logger.info('Original webhook received: %s')
