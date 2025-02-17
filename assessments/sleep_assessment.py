@@ -21,10 +21,10 @@ class SleepAssessment(BaseAssessment):
     }
 
     sleep_hours_mapping = {
-        '0-3': 1,
+        '0-4': 1,
         '4-6': 3,
-        '7-9': 5,
-        '10-12': 3,
+        '6-9': 5,
+        '9-12': 3,
         '> 12': 2
     }
 
