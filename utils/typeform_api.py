@@ -23,26 +23,18 @@ headers = {
 
 
 def trigger_followup(host):
-    """
-    Trigger a follow-up call by sending a POST request to the same webhook URL,
-    with a custom header so that the endpoint knows this is a follow-up request.
-    """
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         webhook_url = WEBHOOK_URL_DEV
     else:
         webhook_url = WEBHOOK_URL
-
     headers = {"X-Webhook-Followup": "true"}
-    payload = {
-        "message": "Follow-up trigger for latest Typeform response"
-    }
+    payload = {"message": "Follow-up trigger for latest Typeform response"}
     try:
         response = requests.post(webhook_url, json=payload, headers=headers)
         response.raise_for_status()
-        print("Follow-up webhook triggered successfully. Response: %s")
+        print("Follow-up webhook triggered successfully. Response: %s", response.text)
     except Exception as e:
         print("Error triggering follow-up webhook: %s", e)
-
 
 def get_responses(app_env):
     if app_env == "development":
