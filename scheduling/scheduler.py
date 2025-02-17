@@ -318,7 +318,7 @@ SUPER_ROUTINE_CONFIG = {
                 "displayName": "Routine"
             }
         },
-        "displayName": "Dankbarkeitsritual",
+        "displayName": "Gratitude Ritual",
         "pillar_de": "Dankbarkeit",
         "timeOfDay": "ANY",
         "scheduleDays": [1, 2, 3, 4, 5, 6, 7],
