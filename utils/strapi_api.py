@@ -40,7 +40,10 @@ def strapi_get_action_plan(actionPlanId, host):
     print(f"actionPlanId: {actionPlanId}")
     print("URL:", url)
     try:
-        response = requests.get(url, headers=STAGING_HEADERS)
+        if app_env == "development":
+            response = requests.get(url, headers=DEV_HEADERS)
+        else:
+            response = requests.get(url, headers=STAGING_HEADERS)
         response.raise_for_status()
         action_plan = response.json()
         return action_plan
