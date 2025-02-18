@@ -29,7 +29,7 @@ DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
 DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
 def strapi_get_action_plan(actionPlanId, host):
-    if host == "d9b9-49-237-201-84.ngrok-free.app":
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
         base_url = DEV_ACTION_PLAN_ENDPOINT
     else:
