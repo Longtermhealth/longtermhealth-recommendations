@@ -29,24 +29,38 @@ DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
 DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
 def strapi_get_action_plan(actionPlanId, host):
-    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
+    if host == "d9b9-49-237-201-84.ngrok-free.app":
         app_env = "development"
-        url = f"{DEV_ACTION_PLAN_ENDPOINT}/{actionPlanId}"
+        base_url = DEV_ACTION_PLAN_ENDPOINT
     else:
         app_env = "production"
-        url = f"{STAGING_ACTION_PLAN_ENDPOINT}/{actionPlanId}"
+        base_url = STAGING_ACTION_PLAN_ENDPOINT
+
+    params = {
+        "filters[actionPlanUniqueId][$eq]": actionPlanId
+    }
 
     print('app_env', app_env)
     print(f"actionPlanId: {actionPlanId}")
-    print("URL:", url)
+    print("URL:", base_url)
     try:
         if app_env == "development":
-            response = requests.get(url, headers=DEV_HEADERS)
+            response = requests.get(base_url, headers=DEV_HEADERS, params=params)
         else:
-            response = requests.get(url, headers=STAGING_HEADERS)
+            response = requests.get(base_url, headers=STAGING_HEADERS, params=params)
         response.raise_for_status()
-        action_plan = response.json()
-        return action_plan
+        result = response.json()
+
+        if "data" in result and isinstance(result["data"], list) and len(result["data"]) > 0:
+            action_plan_record = result["data"][0]
+
+            if "attributes" in action_plan_record:
+                return action_plan_record["attributes"]
+            else:
+                return action_plan_record
+        else:
+            print("No matching action plan found.")
+            return None
     except Exception as e:
         print(f"Error while fetching the action plan for account {actionPlanId}: {e}")
         return None

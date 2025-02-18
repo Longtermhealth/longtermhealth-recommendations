@@ -5,8 +5,9 @@ import os
 from flask import Flask, jsonify, request
 from config import Config
 from utils.strapi_api import strapi_get_action_plan
-from utils.typeform_api import get_responses, get_field_mapping, process_latest_response, get_last_name, \
-    trigger_followup
+from utils.typeform_api import (
+    get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_followup
+)
 from utils.clickup_api import create_clickup_task
 from utils.data_processing import integrate_answers
 from assessments.health_assessment import HealthAssessment
@@ -39,7 +40,7 @@ def print_matching_routine_details(new_data, old_action_plan):
     Parameters:
         new_data (dict): The incoming payload that includes 'pillarCompletionStats'
                          with routine details.
-        old_action_plan (dict)
+        old_action_plan (dict): The existing action plan retrieved from Strapi.
 
     Returns:
         list: A list of dictionaries. Each dictionary contains:
@@ -49,7 +50,7 @@ def print_matching_routine_details(new_data, old_action_plan):
     """
     old_routine_ids = set()
     try:
-        old_routines = old_action_plan["data"]["attributes"]["routines"]
+        old_routines = old_action_plan.get("routines", [])
         for routine in old_routines:
             rid = routine.get('routineId')
             if rid is not None:
@@ -78,6 +79,8 @@ def print_matching_routine_details(new_data, old_action_plan):
         print("ID: {id}, Name: {name}, Statistics: {statistics}".format(**routine))
 
     return matching_routines
+
+
 def list_strapi_matches(matching_routines, strapi_routines_file="./data/strapi_all_routines.json"):
     """
     For each routine in `matching_routines`, search in the provided Strapi routines file
@@ -128,6 +131,7 @@ def list_strapi_matches(matching_routines, strapi_routines_file="./data/strapi_a
             print("Found match - ID: {id}, Name: {name}, Order: {order}".format(**match))
 
     return matches
+
 
 def list_strapi_matches_with_original(matching_routines, strapi_routines_file="./data/strapi_all_routines.json"):
     """
@@ -182,19 +186,15 @@ def list_strapi_matches_with_original(matching_routines, strapi_routines_file=".
     return matches
 
 
-
-def main():
-    field_mapping = get_field_mapping()
-    responses = get_responses()
-
 @app.route('/')
 def hello():
     return "Hello, Flask is working!"
 
+
 @app.route('/webhook-recalculate-action-plan', methods=['POST'])
 def recalc_action_plan():
     host = request.host
-    print(f"Received webhook on host: {host}")
+    app.logger.info("Received webhook on host: %s", host)
     data = request.get_json()
 
     action_plan_id = data.get('actionPlanId')
@@ -205,17 +205,25 @@ def recalc_action_plan():
     app.logger.info("Start Date: %s", start_date)
     app.logger.info("Period in Days: %s", period_in_days)
 
-    # Retrieve the old action plan from your backend.
     old_action_plan = strapi_get_action_plan(action_plan_id, host)
     if old_action_plan:
         app.logger.info("Old action plan retrieved.")
-        #print(old_action_plan)
+        routines = old_action_plan.get('routines', [])
+        if not isinstance(routines, list):
+            app.logger.error("Expected 'routines' to be a list but got: %s", type(routines))
+            routines = []
+        app.logger.info("Found %d routines in old action plan.", len(routines))
+        for routine in routines:
+            routine_id = routine.get('routineId')
+            display_name = routine.get('displayName')
+            app.logger.info("Routine ID: %s, Display Name: %s", routine_id, display_name)
+
 
         matching_routines = print_matching_routine_details(data, old_action_plan)
         app.logger.info("Matching routine details: %s", matching_routines)
         strapi_matches = list_strapi_matches_with_original(matching_routines)
         matches = list_strapi_matches(matching_routines)
-        print(strapi_matches)
+        app.logger.info("Strapi matches: %s", strapi_matches)
     else:
         app.logger.error("No old action plan found for actionPlanId: %s", action_plan_id)
 
@@ -236,7 +244,6 @@ def recalc_action_plan():
                 rate_period_unit = stat.get('completionRatePeriodUnit')
                 period_sequence_no = stat.get('periodSequenceNo')
                 completion_unit = stat.get('completionUnit')
-
                 completion_target = stat.get('completionTargetTotal', stat.get('completionTarget'))
                 completed_value = stat.get('completedValueTotal', stat.get('completedValue'))
 
@@ -274,7 +281,7 @@ def webhook():
     start_time = time.perf_counter()
     app.logger.info('Start processing action plan')
     final_action_plan = process_action_plan(host)
-    app.logger.info('Action plan processed and posted: %s')
+    app.logger.info('Action plan processed and posted: %s', final_action_plan)
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     app.logger.info(f"Total time from webhook reception to posting action plan: {elapsed:.2f} seconds")
@@ -282,9 +289,6 @@ def webhook():
     trigger_followup(host)
 
     return jsonify({'status': 'success'}), 200
-
-
-
 
 
 if __name__ == "__main__":
