@@ -193,6 +193,8 @@ def hello():
 
 @app.route('/webhook-recalculate-action-plan', methods=['POST'])
 def recalc_action_plan():
+    host = request.host
+    print(f"Received webhook on host: {host}")
     data = request.get_json()
 
     action_plan_id = data.get('actionPlanId')
@@ -204,7 +206,7 @@ def recalc_action_plan():
     app.logger.info("Period in Days: %s", period_in_days)
 
     # Retrieve the old action plan from your backend.
-    old_action_plan = strapi_get_action_plan(action_plan_id)
+    old_action_plan = strapi_get_action_plan(action_plan_id, host)
     if old_action_plan:
         app.logger.info("Old action plan retrieved.")
         #print(old_action_plan)

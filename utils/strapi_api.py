@@ -28,8 +28,15 @@ DEV_ACTION_PLAN_ENDPOINT = f"{DEV_BASE_URL}/action-plans"
 DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
 DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
-def strapi_get_action_plan(actionPlanId):
-    url = f"{STAGING_ACTION_PLAN_ENDPOINT}/{actionPlanId}"
+def strapi_get_action_plan(actionPlanId, host):
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
+        app_env = "development"
+        url = f"{DEV_ACTION_PLAN_ENDPOINT}/{actionPlanId}"
+    else:
+        app_env = "production"
+        url = f"{STAGING_ACTION_PLAN_ENDPOINT}/{actionPlanId}"
+
+    print('app_env', app_env)
     print(f"actionPlanId: {actionPlanId}")
     print("URL:", url)
     try:
