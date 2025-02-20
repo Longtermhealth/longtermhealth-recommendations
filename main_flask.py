@@ -196,7 +196,7 @@ def recalc_action_plan():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
     data = request.get_json()
-
+    print('data', data)
     action_plan_id = data.get('actionPlanId')
     start_date = data.get('startDate')
     period_in_days = data.get('periodInDays')
@@ -264,6 +264,29 @@ def recalc_action_plan():
     }
 
     return jsonify({'action_plan': final_action_plan}), 200
+
+@app.route('/webhook-event', methods=['POST'])
+def event():
+    # Get the JSON payload
+    data = request.get_json()
+    print('data',data)
+    if not data:
+        return jsonify({"error": "No JSON payload provided"}), 400
+
+    event_type = data.get('eventEnum')
+    if not event_type:
+        return jsonify({"error": "Missing eventEnum in payload"}), 400
+
+    # Dispatch based on the event type
+    if event_type == 'RECALCULATE_ACTION_PLAN':
+        result = recalc_action_plan(data)
+        print()
+    elif event_type == 'RENEWAL_ACTION_PLAN':
+        result = webhook(data)
+    else:
+        result = {"error": f"Unhandled event type: {event_type}"}
+
+    return jsonify(result), 200
 
 
 @app.route('/webhook', methods=['POST'])
