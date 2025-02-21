@@ -265,7 +265,7 @@ def recalc_action_plan():
 
     return jsonify({'action_plan': final_action_plan}), 200
 
-@app.route('/webhook-event', methods=['POST'])
+@app.route('/event', methods=['POST'])
 def event():
     # Get the JSON payload
     data = request.get_json()
