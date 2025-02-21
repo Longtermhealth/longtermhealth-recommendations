@@ -280,9 +280,12 @@ def event():
     # Dispatch based on the event type
     if event_type == 'RECALCULATE_ACTION_PLAN':
         result = recalc_action_plan(data)
-        print()
+        print('RECALCULATE_ACTION_PLAN')
+        recalc_action_plan()
     elif event_type == 'RENEWAL_ACTION_PLAN':
         result = webhook(data)
+        print('RENEWAL_ACTION_PLAN')
+        recalc_action_plan()
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
 
