@@ -191,12 +191,7 @@ def hello():
     return "Hello, Flask is working!"
 
 
-#@app.route('/webhook-recalculate-action-plan', methods=['POST'])
-def recalc_action_plan(data):
-    #host = request.host
-    #app.logger.info("Received webhook on host: %s", host)
-    #data = request.get_json()
-    host = "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net"
+def recalc_action_plan(data, host):
     action_plan_id = data.get('actionPlanId')
     start_date = data.get('startDate')
     period_in_days = data.get('periodInDays')
@@ -267,9 +262,10 @@ def recalc_action_plan(data):
 
 @app.route('/event', methods=['POST'])
 def event():
-    # Get the JSON payload
+    host = request.host
+    app.logger.info("Received webhook on host: %s", host)
     data = request.get_json()
-    print('data',data)
+    print('data', data)
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
@@ -277,14 +273,13 @@ def event():
     if not event_type:
         return jsonify({"error": "Missing eventEnum in payload"}), 400
 
-    # Dispatch based on the event type
     if event_type == 'RECALCULATE_ACTION_PLAN':
-        result = recalc_action_plan(data)
+        result = recalc_action_plan(data, host)
         print('RECALCULATE_ACTION_PLAN')
     elif event_type == 'RENEWAL_ACTION_PLAN':
         result = webhook()
         print('RENEWAL_ACTION_PLAN')
-        recalc_action_plan(data)
+        recalc_action_plan(data, host)
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
 
