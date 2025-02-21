@@ -191,12 +191,12 @@ def hello():
     return "Hello, Flask is working!"
 
 
-@app.route('/webhook-recalculate-action-plan', methods=['POST'])
-def recalc_action_plan():
-    host = request.host
-    app.logger.info("Received webhook on host: %s", host)
-    data = request.get_json()
-    print('data', data)
+#@app.route('/webhook-recalculate-action-plan', methods=['POST'])
+def recalc_action_plan(data):
+    #host = request.host
+    #app.logger.info("Received webhook on host: %s", host)
+    #data = request.get_json()
+    host = "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net"
     action_plan_id = data.get('actionPlanId')
     start_date = data.get('startDate')
     period_in_days = data.get('periodInDays')
@@ -263,7 +263,7 @@ def recalc_action_plan():
         "actionPlanId": action_plan_id
     }
 
-    return jsonify({'action_plan': final_action_plan}), 200
+    return final_action_plan
 
 @app.route('/event', methods=['POST'])
 def event():
@@ -281,11 +281,10 @@ def event():
     if event_type == 'RECALCULATE_ACTION_PLAN':
         result = recalc_action_plan(data)
         print('RECALCULATE_ACTION_PLAN')
-        recalc_action_plan()
     elif event_type == 'RENEWAL_ACTION_PLAN':
-        result = webhook(data)
+        result = webhook()
         print('RENEWAL_ACTION_PLAN')
-        recalc_action_plan()
+        recalc_action_plan(data)
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
 
