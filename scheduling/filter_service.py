@@ -32,9 +32,13 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
         return []
 
 
-def new_load_routines() -> List[Dict[str, Any]]:
+def load_routines_staging() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
-    return load_json_data('./data/strapi_all_routines.json')
+    return load_json_data('./data/strapi_all_routines_staging.json')
+
+def load_routines_dev() -> List[Dict[str, Any]]:
+    """Load routines from the new JSON structure."""
+    return load_json_data('./data/strapi_all_routines_dev.json')
 
 
 def new_load_rules() -> Dict[str, Any]:
@@ -667,9 +671,10 @@ def main(app_env):
     rules = new_load_rules()
 
     if app_env == "development":
-        routines = strapi_get_all_routines_development()
+
+        routines = load_routines_dev()
     else:
-        routines = strapi_get_all_routines()
+        routines = load_routines_staging()
 
 
     routines = exclude_movement_routines_by_equipment(routines)

@@ -208,3 +208,4 @@ def strapi_post_health_scores(healthscores_with_tags, environment):
         except ValueError:
             print("Response is not JSON, raw content:", response.text)
         print("================================")
+
