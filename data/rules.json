@@ -46,6 +46,19 @@
           "value": "alcohol"
         }
       },
+    {
+      "name": "Exclude Smokers",
+      "pillar": "SLEEP",
+      "condition": {
+        "field": "Rauchst du?",
+        "operator": "==",
+        "value": true
+      },
+      "action": {
+        "field": "variations.variation",
+        "value": "no nicotine before going to bed"
+      }
+    },
         {
       "name": "Exclude Wholegrain",
       "pillar": "NUTRITION",
