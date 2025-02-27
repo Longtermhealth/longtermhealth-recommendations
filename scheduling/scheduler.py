@@ -873,25 +873,107 @@ def reorder_by_primary_muscle(routines):
     return result
 
 
-def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def map_movement_orders(answers: dict) -> dict:
     """
-    Selects routines based on tag combinations and their required counts, ensuring that
-    after selection the ordering is adjusted to avoid consecutive routines that target
-    the same primary muscle group (if an alternative exists).
+    Maps movement-related answers to individual order variables.
 
-    This function first gathers the routines (respecting tag and variation constraints)
-    and then reorders the final list.
+    Expected keys in the answers dictionary:
+      - "Wie schätzt du deine Beweglichkeit ein?" is mapped to "order_mobility"
+      - "Wie oft in der Woche treibst du eine Cardio-Sportart?" is mapped to "order_cardio"
+      - "Wie schätzt du deine Kraft ein?" is mapped to "order_strength"
+
+    Each answer is expected to be a number (1–5). If an answer is missing or cannot be
+    converted to an integer, the default value of 3 is used.
+
+    Returns:
+      A dictionary with keys:
+        - "order_mobility"
+        - "order_cardio"
+        - "order_strength"
+    """
+
+    def get_order(key: str) -> int:
+        try:
+            return int(answers.get(key, 3))
+        except (ValueError, TypeError):
+            return 3
+
+    return {
+        "order_mobility": get_order("Wie schätzt du deine Beweglichkeit ein?"),
+        "order_cardio": get_order("Wie oft in der Woche treibst du eine Cardio-Sportart?"),
+        "order_strength": get_order("Wie schätzt du deine Kraft ein?")
+    }
+
+def target_order_for_tags(tags: List[str], movement_orders: dict) -> int:
+    """
+    Computes a target order based on a list of tags by mapping each tag to an order key using movement_orders,
+    and then averaging the results.
+    """
+    # Mapping from individual tag (in lowercase) to a key in movement_orders.
+    tag_to_order_key = {
+        "warm-up": "order_mobility",
+        "mobility": "order_mobility",
+        "walk": "order_mobility",
+        "cardio": "order_cardio",
+        "lower body": "order_strength",
+        "upper body": "order_strength",
+        "lower_body_strength_training": "order_strength",
+        "upper_body_strength_training": "order_strength",
+        "core_strength_training": "order_strength",
+        "core": "order_strength",
+        "strength": "order_strength"
+    }
+    values = []
+    for tag in tags:
+        key = tag_to_order_key.get(tag.lower())
+        if key:
+            order_val = movement_orders.get(key, 3)
+            print("For tag '%s', using movement_orders key '%s' with value %s" % (tag, key, order_val))
+            values.append(order_val)
+    if values:
+        target = round(sum(values) / len(values))
+        print("Computed target order for tags %s is %d" % (tags, target))
+        return target
+    return 3
+
+
+def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]], movement_orders: dict) -> List[Dict[str, Any]]:
+    """
+    Selects routines based on tag combinations and their required counts. For each tag combination, it:
+      - Finds matching routines using match_routines_by_tags.
+      - Computes a target order from the individual tags (using movement_orders).
+      - Sorts the matched routines by the absolute difference between their internal "order" and the target.
+      - Then selects routines while respecting variation constraints.
+    Finally, routines are reordered by primary muscle.
     """
     selected_routines = []
     selected_ids: Set[int] = set()
     used_variations: Set[str] = set()
 
+    print("Starting select_routines with tag_counts:", tag_counts)
+
     # Process tag combinations in order of highest priority (most tags) first.
     sorted_tag_combinations = sorted(tag_counts.keys(), key=lambda x: len(x.split(',')), reverse=True)
+    print("Sorted tag combinations:", sorted_tag_combinations)
+
     for tag_combination in sorted_tag_combinations:
         required_count = tag_counts[tag_combination]
         tags = [tag.strip() for tag in tag_combination.split(',')]
+        print(
+            "Processing tag combination '%s' requiring %d routines; tags: %s" % (tag_combination, required_count, tags))
+
         matched = match_routines_by_tags(routines, tags)
+        print("Found %d routines matching tags %s" % (len(matched), tags))
+
+        # Compute target order based on the individual tags and movement_orders.
+        target_order = target_order_for_tags(tags, movement_orders)
+
+        # Sort matched routines by the absolute difference of their internal order to target_order.
+        matched = sorted(matched, key=lambda r: abs(int(r.get("attributes", {}).get("order", 999)) - target_order))
+        for r in matched:
+            order_val = r.get("attributes", {}).get("order", "N/A")
+            print("Routine ID %s has order %s (target %d)" % (r.get("id"), order_val, target_order))
+
         count_added = 0
 
         for routine in matched:
@@ -900,20 +982,26 @@ def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]]) 
 
             routine_id = routine.get('id')
             if routine_id in selected_ids:
+                print("Routine ID %s already selected; skipping." % routine_id)
                 continue
 
             routine_variations = routine.get('attributes', {}).get('variations', [])
             variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
             if not used_variations.isdisjoint(variation_names):
+                print("Routine ID %s has overlapping variations %s with already used %s; skipping." %
+                      (routine_id, variation_names, used_variations))
                 continue
 
             selected_routines.append(routine)
             selected_ids.add(routine_id)
             used_variations.update(variation_names)
             count_added += 1
+            print("Selected routine ID %s for tag combination '%s'. Total added: %d" % (
+            routine_id, tag_combination, count_added))
 
-    # Now reorder the selected routines to avoid back-to-back routines with the same primary muscle.
-    return reorder_by_primary_muscle(selected_routines)
+    reordered = reorder_by_primary_muscle(selected_routines)
+    print("After reordering, final selected routine IDs:", [r.get('id') for r in reordered])
+    return reordered
 
 
 def match_routines_by_tags(routines: List[Dict[str, Any]], tags: List[str]) -> List[Dict[str, Any]]:
