@@ -25,7 +25,50 @@ SUPER_ROUTINE_CONFIG = {
         "pillar_de": "Schlaf",
         "timeOfDay": "EVENING",
         "scheduleDays": [1, 2, 3, 4, 5, 6, 7],
-        "scheduleCategory": "DAILY_ROUTINE",
+        "scheduleWeeks": [2, 3, 4],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "sleep_superroutine_sleeping_room": {
+        "routineId": 964,
+        "pillar": "SLEEP",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/964_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/964_16x9.jpg",
+        "description": (
+            "Ein erholsamer Schlaf beginnt mit der richtigen Umgebung. Ein gut vorbereitetes Schlafzimmer hilft, schneller einzuschlafen und tiefer zu ruhen. Reduziere störende Faktoren und schaffe eine Atmosphäre, die deinen Schlaf fördert."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "ROUTINE",
+                "displayName": "Routine"
+            }
+        },
+        "displayName": "Schlafzimmer vorbereiten",
+        "pillar_de": "Schlaf",
+        "timeOfDay": "EVENING",
+        "scheduleDays": [1, 2, 3, 4, 5, 6, 7],
+        "scheduleWeeks": [1],
+        "scheduleCategory": "WEEKLY_ROUTINE",
+    },
+    "sleep_superroutine_sleep_problem": {
+        "routineId": 963,
+        "pillar": "SLEEP",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/963_1x1.jpg",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/963_16x9.jpg",
+        "description": (
+            "Eine gute Schlafqualität ist entscheidend für Erholung und Gesundheit. Diese Routine bietet verschiedene Ansätze, um deinen Schlaf zu verbessern und besser ausgeruht in den Tag zu starten."
+        ),
+        "goal": {
+            "unit": {
+                "amountUnitEnum": "ROUTINE",
+                "displayName": "Routine"
+            }
+        },
+        "displayName": "Schlafqualität steigern",
+        "pillar_de": "Schlaf",
+        "timeOfDay": "EVENING",
+        "scheduleDays": [1, 2, 3, 4, 5, 6, 7],
+        "scheduleWeeks": [2, 3, 4],
+        "scheduleCategory": "WEEKLY_ROUTINE",
     },
     "movement_superroutine": {
         "routineId": 997,
@@ -1811,8 +1854,9 @@ def schedule_all_weekly_challenges(final_action_plan, routines, routine_unique_i
     print("Weekly challenges scheduled.")
 
 
-
+host = "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net"
 def main(host):
+
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
     else:
@@ -1820,7 +1864,10 @@ def main(host):
     print('app_env', app_env)
 
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
+    account_id = 102
+    #account_id = 5
     print('account_id',account_id)
+    print('health_scores',health_scores)
     if gender == "Weiblich":
         gender = "FEMALE"
     else:
@@ -2097,7 +2144,11 @@ def main(host):
     TAG_TO_FUNCTION_MAP = {
         'STRESS BASICS': create_individual_routines,
         'SLEEP BASICS': create_individual_routines,
-        'GRATITUDE BASICS': create_individual_routines,
+        'SLEEPING ROOM': create_individual_routines,
+        'SLEEP PROBLEM': create_individual_routines,
+        'GRATITUDE BASICS 1': create_individual_routines,
+        'GRATITUDE BASICS 2': create_individual_routines,
+        'GRATITUDE BASICS 3': create_individual_routines,
         'FASTING BASICS': create_individual_routines,
         'NUTRITION BASICS': create_individual_routines,
         'MOVEMENT BASICS SHORT': create_individual_routines,
@@ -2202,4 +2253,4 @@ def main(host):
 
 
 if __name__ == "__main__":
-    main()
+    main(host)

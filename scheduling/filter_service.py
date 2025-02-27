@@ -41,6 +41,7 @@ def load_routines_dev() -> List[Dict[str, Any]]:
     return load_json_data('./data/strapi_all_routines_dev.json')
 
 
+
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
     return load_json_data('./data/rules.json')
@@ -73,7 +74,7 @@ def save_routines_to_json(routines, file_path):
 
 def apply_global_exclusions(user_data, exclusion_rules, routines):
     global excluded_rules
-    #print("\nApplying global exclusions...")
+    print("\nApplying global exclusions...")
 
     for rule in exclusion_rules:
         pillar_name = rule.get('pillar')
@@ -111,7 +112,7 @@ def apply_global_exclusions(user_data, exclusion_rules, routines):
                                 excluded_rules.add(
                                     (rule.get('name', 'Unnamed Rule'), f"{field_to_check}: {exclude_value}")
                                 )
-                                #logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
+                                logger.info(f"Routine '{routine.get('id')}' excluded by rule '{rule.get('name')}' due to {field_to_check}: {exclude_value}")
                         elif dynamic_field_value == exclude_value:
                             attributes['rule_status'] = 'excluded'
                             attributes['score_rules'] = 0
@@ -548,7 +549,6 @@ def exclude_movement_routines_by_equipment(routines: List[Dict[str, Any]]) -> Li
         f"{count_without_non_none} movement routines with equipment 'NONE' or no equipment."
     )
 
-    # Now mark as excluded those movement routines that require equipment (equipmentEnum ≠ "NONE")
     for routine in routines:
         attributes = routine.get("attributes", {})
         pillar = attributes.get("pillar", {})
@@ -577,7 +577,6 @@ def exclude_movement_routines_by_equipment(routines: List[Dict[str, Any]]) -> Li
     )
     return routines
 
-
 def main(app_env):
 
 
@@ -589,8 +588,63 @@ def main(app_env):
         return "No responses or field mapping available.", 400
 
 
+    answers = {
+    "accountId": "143",
+    "Vorname": "Test",
+    "Nachname": "test",
+    "Welches Geschlecht ist in Ihren Dokumenten angegeben?": "Weiblich",
+    "Geburtsjahr": 1991,
+    #"Was ist deine Körpergröße (in cm)?": 180,
+    #"Wie viel wiegst du (in kg)?": 90,
+    "Rauchst du?": True,
+    "Wie oft in der Woche treibst du eine Cardio-Sportart?": 5,
+    "Wie schätzt du deine Kraft ein?": 5,
+    "Wie schätzt du deine Beweglichkeit ein?": 5,
+    "Wie aktiv bist du im Alltag?": 5,
+    #"Welcher Ernährungsstil trifft bei dir am ehesten zu?": "Keine tierischen Produkte (vegan)",
+    "Welcher Ernährungsstil trifft bei dir am ehesten zu?": "Mischkost mit Fleisch (omnivore)",
 
+    "Wie viel zuckerhaltige Produkte nimmst du zu dir?": "3",
+    "Wie häufig nimmst du Fertiggerichte zu dir?": "3",
+    "Wie viel Vollkorn nimmst du zu dir?": "5",
+    "Wie viele Gläser Flüssigkeit (200ml) nimmst du ca. täglich zu dir?": "7-9",
+    "Wie viel Alkohol trinkst du in der Woche?": "Gar keinen",
+    "Wie viel wiegst du (in kg)?": 70,
+    "Was ist deine Körpergröße (in cm)?": 175,
+
+    #"Wie ist deine Schlafqualität?": "Ich habe leichte Schlafprobleme",
+    "Wie ist deine Schlafqualität?": "Gut",
+    "Welche Art Schlafprobleme hast du?": "Durchschlafprobleme",
+    "Wie viele Stunden schläfst du im Durchschnitt pro Nacht?": "6-9",
+    "Fühlst du dich tagsüber müde?": 2,
+    "Wie viel Zeit verbringst du morgens draußen?": "> 20 min",
+    "Wie viel Zeit verbringst du abends draußen?": "11-20 min",
+    "Wie oft unternimmst du etwas mit anderen Menschen?": "Mehrmals pro Woche",
+    "Bist du sozial engagiert?": "",
+    "Fühlst du dich einsam?": 5,
+    "Leidest du aktuell unter Stress?": 3,
+    "Ich versuche, die positive Seite von Stress und Druck zu sehen.": 3,
+    "Ich tue alles, damit Stress erst gar nicht entsteht.": 3,
+    "Wenn ich unter Druck gerate, habe ich Menschen, die mir helfen.": 3,
+    "Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.": 3,
+    "Machst du aktuell Übungen zur Stressprävention?": "Würde ich gern, aber ich weiß nicht wie",
+    "Ich habe so viel im Leben, wofür ich dankbar sein kann.": 5,
+    "Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.": 5,
+    "Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.": 3,
+    "Ich bin vielen verschiedenen Menschen dankbar.": 5,
+    "Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.": 5,
+    "Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.": 3,
+    "Wie würdest du deine Vergesslichkeit einstufen?": 3,
+    "Wie gut ist dein Konzentrationsvermögen?": 3,
+    "Nimmst du dir im Alltag Zeit, noch neue Dinge/Fähigkeiten zu erlernen?": 3,
+    "Wie viel Zeit am Tag verbringst du im Büro/Ausbildung vor dem Bildschirm?": "4-6 Stunden",
+    "Wie viel Zeit am Tag verbringst du in der Freizeit vor dem Bildschirm?": "2-3 Stunden",
+    "Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?": "> 60 Minuten"
+    }
+
+    """
     answers = process_latest_response(responses, field_mapping)
+    """
     gender = answers.get('Welches Geschlecht ist in Ihren Dokumenten angegeben?', None)
     if not answers:
         logger.error("No answers found in the latest response.")
@@ -671,11 +725,9 @@ def main(app_env):
     rules = new_load_rules()
 
     if app_env == "development":
-
         routines = load_routines_dev()
     else:
         routines = load_routines_staging()
-
 
     routines = exclude_movement_routines_by_equipment(routines)
 
@@ -1056,16 +1108,53 @@ def main(app_env):
                         packages_data,
                         pillar="NUTRITION",
                         subcategory=subcategory,
-                        order=order
+                        order=1
                     )
             elif pillar == "SLEEP":
-                subcategory = "SLEEP BASICS"
-                package_name, package = find_package_with_fallback(
-                    packages_data,
-                    pillar="SLEEP",
-                    subcategory=subcategory,
-                    order=order
+                """
+                sleep_basics = packages_data.get("packages", {}).get("pillars", {}).get("SLEEP", {}).get("SLEEP BASICS",
+                                                                                                          {})
+                sorted_sleep_basics = sorted(
+                    [(int(pkg.get("packageOrder", 0)), pkg_key, pkg) for pkg_key, pkg in sleep_basics.items()],
+                    key=lambda x: x[0]
                 )
+                for pkg_order, pkg_key, pkg in sorted_sleep_basics:
+                    selected_packages.append({
+                        "pillar": entry["pillar"],
+                        "packageName": pkg_key,
+                        "packageTag": "SLEEP BASICS",
+                        "selected_package": pkg
+                    })
+                    logger.info(f"Appended package for SLEEP BASICS: {pkg_key}")
+                """
+                sleep_room = packages_data.get("packages", {}).get("pillars", {}).get("SLEEP", {}).get("SLEEPING ROOM",
+                                                                                                       {})
+                for pkg_key, pkg in sleep_room.items():
+                    selected_packages.append({
+                        "pillar": entry["pillar"],
+                        "packageName": pkg_key,
+                        "packageTag": "SLEEPING ROOM",
+                        "selected_package": pkg
+                    })
+                    logger.info(f"Appended package for SLEEPING ROOM: {pkg_key}")
+
+                sleep_quality = user_data.get("SLEEP", {}).get("Wie ist deine Schlafqualität?")
+                if sleep_quality in ["Ich habe leichte Schlafprobleme", "Ich habe schwere Schlafprobleme"]:
+                    sleep_problem = packages_data.get("packages", {}).get("pillars", {}).get("SLEEP", {}).get(
+                        "SLEEP PROBLEM", {})
+                    for pkg_key, pkg in sleep_problem.items():
+                        selected_packages.append({
+                            "pillar": entry["pillar"],
+                            "packageName": pkg_key,
+                            "packageTag": "SLEEP PROBLEM",
+                            "selected_package": pkg
+                        })
+                        logger.info(f"Appended package for SLEEP PROBLEM: {pkg_key}")
+
+                # Skip further unconditional appends for SLEEP:
+                continue
+
+
             elif pillar == "STRESS":
                 subcategory = "STRESS BASICS"
                 package_name, package = find_package_with_fallback(
@@ -1078,7 +1167,7 @@ def main(app_env):
                     #print(f"No package found for Pillar: 'STRESS' with Order: {order}")
 
             elif pillar == "GRATITUDE":
-                subcategory = "GRATITUDE BASICS"
+                subcategory = "GRATITUDE BASICS 1"
                 package_name, package = find_package_with_fallback(
                     packages_data,
                     pillar="GRATITUDE",
@@ -1121,8 +1210,8 @@ def main(app_env):
                 #logger.warning(f"No package selected for Pillar: '{entry['pillar']}' with Order: {order}")
 
 
-    #print("\nSelected Packages:")
-    #print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
+    print("\nSelected Packages:")
+    print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
 
     return account_id, daily_time, routines_with_defaults, scores, user_data, answers, gender, selected_packages
 
