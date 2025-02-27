@@ -1854,7 +1854,7 @@ def schedule_all_weekly_challenges(final_action_plan, routines, routine_unique_i
     print("Weekly challenges scheduled.")
 
 
-host = "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net"
+
 def main(host):
 
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
@@ -1864,8 +1864,8 @@ def main(host):
     print('app_env', app_env)
 
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
-    account_id = 102
-    #account_id = 5
+
+
     print('account_id',account_id)
     print('health_scores',health_scores)
     if gender == "Weiblich":
