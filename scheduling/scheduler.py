@@ -2136,14 +2136,14 @@ def main(host):
     matched_ids = check_parent_routine_ids(selected_packages, tag_counts_list)
     #print('matched_ids',matched_ids)
 
-
+    movement_orders = map_movement_orders(answers)
 
     if 997 in matched_ids:
         tag_counts_input = full_body_training_tag_counts['tags']
 
 
         #print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, filtered_routines)
+        selected_routines = select_routines(tag_counts_input, filtered_routines, movement_orders)
         #print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -2165,7 +2165,7 @@ def main(host):
 
 
         #print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, filtered_routines)
+        selected_routines = select_routines(tag_counts_input, filtered_routines, movement_orders)
         #print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -2187,7 +2187,7 @@ def main(host):
 
 
         #print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, filtered_routines)
+        selected_routines = select_routines(tag_counts_input, filtered_routines, movement_orders)
         #print("Routine selection completed.")
 
         for routine in selected_routines:
@@ -2210,7 +2210,7 @@ def main(host):
 
 
         #print("\nStarting routine selection based on tag counts.")
-        selected_routines = select_routines(tag_counts_input, filtered_routines)
+        selected_routines = select_routines(tag_counts_input, filtered_routines, movement_orders)
         #print("Routine selection completed.")
 
         for routine in selected_routines:
