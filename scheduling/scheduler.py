@@ -765,22 +765,24 @@ def add_individual_routine_entry_without_parent(
 
 
 def create_individual_routines(selected_pkgs, routines_data, target_package='GRATITUDE BASICS'):
-    routine_ids_with_parent = []
+    routine_ids_set = set()  # Track unique routine ids that have been added
+    individual_routines_local = []
 
     matching_packages = [pkg for pkg in selected_pkgs if pkg['packageTag'].upper() == target_package.upper()]
-
     if not matching_packages:
-        #print(f"No packages found for tag '{target_package}'.")
         return []
-
-    individual_routines_local = []
 
     for target_package in matching_packages:
         package_tag = target_package.get('packageTag')
         package_routines = target_package.get('selected_package', {}).get('routines', [])
-
         for routine_pkg in package_routines:
-            package_routine_id = routine_pkg.get('packageRoutineId')
+            routine_unique_id = routine_pkg.get('packageRoutineId')
+            # Skip this routine if its unique id has already been processed
+            if routine_unique_id in routine_ids_set:
+                continue
+
+            routine_ids_set.add(routine_unique_id)
+
             schedule_category = routine_pkg.get('scheduleCategory')
             schedule_days = routine_pkg.get('scheduleDays')
             schedule_weeks = routine_pkg.get('scheduleWeeks')
@@ -788,9 +790,8 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
             parent_routine_id = routine_pkg.get('parentRoutineId')
 
             matching_routine = next(
-                (r for r in routines_data if r['attributes'].get('routineUniqueId') == package_routine_id), None
+                (r for r in routines_data if r['attributes'].get('routineUniqueId') == routine_unique_id), None
             )
-
             if not matching_routine:
                 continue
 
@@ -805,11 +806,6 @@ def create_individual_routines(selected_pkgs, routines_data, target_package='GRA
                     'parentRoutineId': parent_routine_id,
                     'packageTag': package_tag
                 })
-
-            if routine_affiliation == "PARENT":
-                routine_ids_with_parent.append(routine_pkg['parentRoutineId'])
-
-            #print('routine_ids_with_parent', routine_ids_with_parent)
 
     return individual_routines_local
 
