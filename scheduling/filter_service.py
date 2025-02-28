@@ -401,7 +401,7 @@ def map_answers(answers, scores):
     """
     set_value(input_static_template, 'accountid', answers)
     set_value(input_static_template, 'daily_time', answers,
-              'Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?', '')
+              'Wie viel Zeit möchtest du in deine langfristige Gesundheit investieren?', '')
 
     basics_keys = [
         ('Was ist deine Körpergröße (in cm)?', None),
@@ -627,7 +627,7 @@ def main(app_env):
 
     account_id = answers.get('accountid', None)
     #print('account_id',account_id)
-    mapping_daily_time =  answers.get("Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?", 0)
+    mapping_daily_time =  answers.get("Wie viel Zeit möchtest du in deine langfristige Gesundheit investieren?", 0)
     if mapping_daily_time == '15-30 Minuten':
         daily_time = 20
         #print('daily_time', daily_time)
