@@ -260,16 +260,12 @@ def recalc_action_plan(data, host):
 
     return final_action_plan
 
-from pprint import pprint
 @app.route('/event', methods=['POST'])
 def event():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
     data = request.get_json()
-    if 'eventPayload' in data:
-        data['eventPayload'] = json.loads(data['eventPayload'])
-
-    pprint(data, indent=2, width=160)
+    print("data", json.dumps(data, indent=4))
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
