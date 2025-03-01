@@ -269,7 +269,7 @@ def event():
     if 'eventPayload' in data:
         data['eventPayload'] = json.loads(data['eventPayload'])
 
-    pprint(data, indent=2, width=120)
+    pprint(data, indent=2, width=160)
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
