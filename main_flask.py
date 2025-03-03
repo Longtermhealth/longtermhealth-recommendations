@@ -353,7 +353,8 @@ def event():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
     data = request.get_json()
-    print("data", json.dumps(data, indent=4, sort_keys=True))
+    print("data raw", data)
+    print("data", json.dumps(data, indent=4))
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
