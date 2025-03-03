@@ -1941,7 +1941,7 @@ def schedule_all_weekly_challenges(final_action_plan, routines, routine_unique_i
 
 def main(host):
 
-    if host == "_d9b9-49-237-201-84.ngrok-free.app":
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
     else:
         app_env = "production"
@@ -1949,7 +1949,7 @@ def main(host):
 
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
 
-    account_id = 102
+
     print('account_id',account_id)
     print('daily_time',daily_time)
     print('health_scores',health_scores)
