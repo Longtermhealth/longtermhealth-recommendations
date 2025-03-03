@@ -358,7 +358,8 @@ def event():
         return jsonify({"error": "No JSON payload provided"}), 400
 
     insights, payload = process_event_data(data)
-    pretty_payload = json.dumps(payload, indent=4)
+    payload_str = json.loads(payload)
+    pretty_payload = json.dumps(payload_str, indent=4)
     print('pretty_payload', pretty_payload)
     if insights is not None:
         print("insights", json.dumps(insights, indent=4))
