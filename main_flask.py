@@ -261,46 +261,69 @@ def recalc_action_plan(data, host):
     return final_action_plan
 
 
+def compute_routine_completion(routine):
+    """
+    For a given routine, compute:
+      - scheduled: Number of scheduled instances (entries in completionStatistics).
+      - completed: Sum of completionRate values (as a proxy for completion count).
+      - percentage: (completed / (scheduled * max_rate)) * 100.
+    If there are no statistics, returns scheduled 0 and percentage as None.
+    """
+    stats = routine.get("completionStatistics", [])
+    if not stats:
+        return {
+            "scheduled": 0,
+            "completed": 0,
+            "percentage": None
+        }
+
+    rates = [int(stat.get("completionRate", 0)) for stat in stats]
+    scheduled = len(rates)
+    completed = sum(rates)
+    max_rate = max(rates) if rates else 0
+    max_possible = scheduled * max_rate
+    percentage = (completed / max_possible * 100) if max_possible > 0 else 0
+    return {
+        "scheduled": scheduled,
+        "completed": completed,
+        "percentage": percentage
+    }
+
+
 def get_insights(payload):
     """
-    Extract insights from the action plan payload.
-    This function processes the pillarCompletionStats to calculate:
-      - Number of routines per pillar.
-      - Average completion rate for each routine.
-      - Overall average completion rate per pillar.
+    Process the payload (the inner JSON in eventPayload) and for each routine
+    in every pillar, calculate:
+      - Scheduled count
+      - Completed total (sum of completionRate values)
+      - Completion percentage (as computed by compute_routine_completion)
     """
     insights = {}
 
     for pillar in payload.get("pillarCompletionStats", []):
         pillar_name = pillar.get("pillarEnum")
         routines = pillar.get("routineCompletionStats", [])
-        num_routines = len(routines)
-        total_pillar_rate = 0.0
-        routines_with_stats = 0
         routine_details = []
 
         for routine in routines:
-            stats = routine.get("completionStatistics", [])
-            routine_rate = None
-            if stats:
-                rates = [float(stat.get("completionRate", 0)) for stat in stats if stat.get("completionRate")]
-                if rates:
-                    routine_rate = sum(rates) / len(rates)
-                    total_pillar_rate += routine_rate
-                    routines_with_stats += 1
+            completion_stats = compute_routine_completion(routine)
 
-            routine_details.append({
+            rates = [int(stat.get("completionRate", 0)) for stat in routine.get("completionStatistics", [])]
+            avg_rate = sum(rates) / len(rates) if rates else None
+
+            detail = {
                 "routineId": routine.get("routineId"),
                 "displayName": routine.get("displayName"),
-                "averageCompletionRate": routine_rate,
-                "numStatistics": len(stats)
-            })
-
-        overall_avg_rate = total_pillar_rate / routines_with_stats if routines_with_stats > 0 else None
+                "scheduled": completion_stats["scheduled"],
+                "completed": completion_stats["completed"],
+                "completionPercentage": completion_stats["percentage"],
+                "averageCompletionRate": avg_rate,
+                "numStatistics": len(routine.get("completionStatistics", []))
+            }
+            routine_details.append(detail)
 
         insights[pillar_name] = {
-            "numRoutines": num_routines,
-            "overallAverageCompletionRate": overall_avg_rate,
+            "numRoutines": len(routines),
             "routines": routine_details
         }
 
@@ -309,8 +332,10 @@ def get_insights(payload):
 
 def process_event_data(event_data):
     """
-    Processes the outer event data.
-    Extracts and parses the JSON in 'eventPayload' then obtains insights.
+    Process the entire event data by:
+      1. Parsing the outer event.
+      2. Parsing the JSON string in 'eventPayload'.
+      3. Extracting routine insights.
     """
     payload_str = event_data.get("eventPayload", "")
     try:
@@ -321,6 +346,7 @@ def process_event_data(event_data):
 
     insights = get_insights(payload)
     return insights
+
 
 @app.route('/event', methods=['POST'])
 def event():

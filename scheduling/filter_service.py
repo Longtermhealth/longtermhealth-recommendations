@@ -626,7 +626,7 @@ def main(app_env):
     user_data = json.loads(output_json)
 
     account_id = answers.get('accountid', None)
-    print('answers',answers)
+    #print('answers',answers)
     mapping_daily_time =  answers.get("Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?", 0)
     if mapping_daily_time == '15-30 Minuten':
         daily_time = 20
