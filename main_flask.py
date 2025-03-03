@@ -260,6 +260,68 @@ def recalc_action_plan(data, host):
 
     return final_action_plan
 
+
+def get_insights(payload):
+    """
+    Extract insights from the action plan payload.
+    This function processes the pillarCompletionStats to calculate:
+      - Number of routines per pillar.
+      - Average completion rate for each routine.
+      - Overall average completion rate per pillar.
+    """
+    insights = {}
+
+    for pillar in payload.get("pillarCompletionStats", []):
+        pillar_name = pillar.get("pillarEnum")
+        routines = pillar.get("routineCompletionStats", [])
+        num_routines = len(routines)
+        total_pillar_rate = 0.0
+        routines_with_stats = 0
+        routine_details = []
+
+        for routine in routines:
+            stats = routine.get("completionStatistics", [])
+            routine_rate = None
+            if stats:
+                rates = [float(stat.get("completionRate", 0)) for stat in stats if stat.get("completionRate")]
+                if rates:
+                    routine_rate = sum(rates) / len(rates)
+                    total_pillar_rate += routine_rate
+                    routines_with_stats += 1
+
+            routine_details.append({
+                "routineId": routine.get("routineId"),
+                "displayName": routine.get("displayName"),
+                "averageCompletionRate": routine_rate,
+                "numStatistics": len(stats)
+            })
+
+        overall_avg_rate = total_pillar_rate / routines_with_stats if routines_with_stats > 0 else None
+
+        insights[pillar_name] = {
+            "numRoutines": num_routines,
+            "overallAverageCompletionRate": overall_avg_rate,
+            "routines": routine_details
+        }
+
+    return insights
+
+
+def process_event_data(event_data):
+    """
+    Processes the outer event data.
+    Extracts and parses the JSON in 'eventPayload' then obtains insights.
+    """
+    payload_str = event_data.get("eventPayload", "")
+    try:
+        payload = json.loads(payload_str)
+    except json.JSONDecodeError as e:
+        print("Error parsing eventPayload:", e)
+        return None
+
+    insights = get_insights(payload)
+    return insights
+
 @app.route('/event', methods=['POST'])
 def event():
     host = request.host
@@ -268,6 +330,10 @@ def event():
     print("data", json.dumps(data, indent=4, sort_keys=True))
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
+
+    insights = process_event_data(data)
+    if insights is not None:
+        print("insights", json.dumps(insights, indent=4))
 
     event_type = data.get('eventEnum')
     if not event_type:
