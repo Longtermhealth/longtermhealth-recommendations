@@ -265,9 +265,15 @@ def compute_routine_completion(routine):
     """
     For a given routine, compute:
       - scheduled: Number of scheduled instances (entries in completionStatistics).
-      - completed: Sum of completionRate values (as a proxy for completion count).
-      - percentage: (completed / (scheduled * max_rate)) * 100.
-    If there are no statistics, returns scheduled 0 and percentage as None.
+      - completed: Sum of actual completionRate values.
+      - percentage: Calculated against the expected progression.
+
+    The expected target is determined as follows:
+      - If all recorded completionRate values are identical (e.g. all "1"),
+        then the expected per period is that constant value.
+      - Otherwise, assume a progressive target:
+            For "WEEK" units: expected = min(periodSequenceNo, 4)
+            For "MONTH" units: expected = 4
     """
     stats = routine.get("completionStatistics", [])
     if not stats:
@@ -277,12 +283,29 @@ def compute_routine_completion(routine):
             "percentage": None
         }
 
-    rates = [int(stat.get("completionRate", 0)) for stat in stats]
-    scheduled = len(rates)
-    completed = sum(rates)
-    max_rate = max(rates) if rates else 0
-    max_possible = scheduled * max_rate
-    percentage = (completed / max_possible * 100) if max_possible > 0 else 0
+    actual_rates = [int(stat.get("completionRate", 0)) for stat in stats]
+    scheduled = len(actual_rates)
+    completed = sum(actual_rates)
+
+    unique_rates = set(actual_rates)
+    if len(unique_rates) == 1:
+        expected_total = unique_rates.pop() * scheduled
+    else:
+        expected_total = 0
+        for stat in stats:
+            unit = stat.get("completionRatePeriodUnit")
+            try:
+                seq = int(stat.get("periodSequenceNo", 0))
+            except (ValueError, TypeError):
+                seq = 0
+            if unit == "WEEK":
+                expected_total += min(seq, 4)
+            elif unit == "MONTH":
+                expected_total += 4
+            else:
+                expected_total += int(stat.get("completionRate", 0))
+
+    percentage = (completed / expected_total * 100) if expected_total > 0 else 0
     return {
         "scheduled": scheduled,
         "completed": completed,
@@ -296,7 +319,7 @@ def get_insights(payload):
     in every pillar, calculate:
       - Scheduled count
       - Completed total (sum of completionRate values)
-      - Completion percentage (as computed by compute_routine_completion)
+      - Completion percentage based on the progressive or fixed logic.
     """
     insights = {}
 
