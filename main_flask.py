@@ -340,6 +340,8 @@ def process_event_data(event_data):
     payload_str = event_data.get("eventPayload", "")
     try:
         payload = json.loads(payload_str)
+        pretty_payload = json.dumps(payload, indent=4)
+        print('pretty_payload',pretty_payload)
     except json.JSONDecodeError as e:
         print("Error parsing eventPayload:", e)
         return None
