@@ -262,31 +262,12 @@ def recalc_action_plan(data, host):
 
 
 def compute_routine_completion(routine):
-    """
-    For a given routine, compute:
-      - scheduled: Number of scheduled instances (entries in completionStatistics).
-      - completed: Sum of actual completionRate values.
-      - percentage: Calculated against the expected progression.
-
-    The expected target is determined as follows:
-      - If all recorded completionRate values are identical (e.g. all "1"),
-        then the expected per period is that constant value.
-      - Otherwise, assume a progressive target:
-            For "WEEK" units: expected = min(periodSequenceNo, 4)
-            For "MONTH" units: expected = 4
-    """
     stats = routine.get("completionStatistics", [])
     if not stats:
-        return {
-            "scheduled": 0,
-            "completed": 0,
-            "percentage": None
-        }
-
+        return {"scheduled": 0, "completed": 0, "percentage": None}
     actual_rates = [int(stat.get("completionRate", 0)) for stat in stats]
     scheduled = len(actual_rates)
     completed = sum(actual_rates)
-
     unique_rates = set(actual_rates)
     if len(unique_rates) == 1:
         expected_total = unique_rates.pop() * scheduled
@@ -304,36 +285,20 @@ def compute_routine_completion(routine):
                 expected_total += 4
             else:
                 expected_total += int(stat.get("completionRate", 0))
-
     percentage = (completed / expected_total * 100) if expected_total > 0 else 0
-    return {
-        "scheduled": scheduled,
-        "completed": completed,
-        "percentage": percentage
-    }
+    return {"scheduled": scheduled, "completed": completed, "percentage": percentage}
 
 
 def get_insights(payload):
-    """
-    Process the payload (the inner JSON in eventPayload) and for each routine
-    in every pillar, calculate:
-      - Scheduled count
-      - Completed total (sum of completionRate values)
-      - Completion percentage based on the progressive or fixed logic.
-    """
     insights = {}
-
     for pillar in payload.get("pillarCompletionStats", []):
         pillar_name = pillar.get("pillarEnum")
         routines = pillar.get("routineCompletionStats", [])
         routine_details = []
-
         for routine in routines:
             completion_stats = compute_routine_completion(routine)
-
             rates = [int(stat.get("completionRate", 0)) for stat in routine.get("completionStatistics", [])]
             avg_rate = sum(rates) / len(rates) if rates else None
-
             detail = {
                 "routineId": routine.get("routineId"),
                 "displayName": routine.get("displayName"),
@@ -344,14 +309,8 @@ def get_insights(payload):
                 "numStatistics": len(routine.get("completionStatistics", []))
             }
             routine_details.append(detail)
-
-        insights[pillar_name] = {
-            "numRoutines": len(routines),
-            "routines": routine_details
-        }
-
+        insights[pillar_name] = {"numRoutines": len(routines), "routines": routine_details}
     return insights
-
 
 def process_event_data(event_data):
     """
