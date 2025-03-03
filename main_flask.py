@@ -340,14 +340,12 @@ def process_event_data(event_data):
     payload_str = event_data.get("eventPayload", "")
     try:
         payload = json.loads(payload_str)
-        pretty_payload = json.dumps(payload, indent=4)
-        print('pretty_payload',pretty_payload)
     except json.JSONDecodeError as e:
         print("Error parsing eventPayload:", e)
         return None
 
     insights = get_insights(payload)
-    return insights
+    return insights, payload_str
 
 
 @app.route('/event', methods=['POST'])
@@ -355,11 +353,13 @@ def event():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
     data = request.get_json()
-    print("data", json.dumps(data, indent=3))
+    #print("data", json.dumps(data, indent=3))
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
-    insights = process_event_data(data)
+    insights, payload = process_event_data(data)
+    pretty_payload = json.dumps(payload, indent=4)
+    print('pretty_payload', pretty_payload)
     if insights is not None:
         print("insights", json.dumps(insights, indent=4))
 
