@@ -1949,7 +1949,7 @@ def main(host):
 
     account_id, daily_time, routines, health_scores, user_data, answers, gender, selected_packages = get_routines_with_defaults(app_env)
 
-
+    print('answers', answers)
     print('account_id',account_id)
     print('daily_time',daily_time)
     print('health_scores',health_scores)
