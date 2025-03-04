@@ -303,7 +303,7 @@
       }
     },
     {
-      "name": "Exclude Passive",
+      "name": "Exclude Office",
       "pillar": "MOVEMENT",
       "condition": {
         "field": "Geburtsjahr",
