@@ -34,17 +34,17 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
 
 def load_routines_staging() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
-    return load_json_data('./data/strapi_all_routines_staging.json')
+    return load_json_data('../data/strapi_all_routines_staging.json')
 
 def load_routines_dev() -> List[Dict[str, Any]]:
     """Load routines from the new JSON structure."""
-    return load_json_data('./data/strapi_all_routines_dev.json')
+    return load_json_data('../data/strapi_all_routines_dev.json')
 
 
 
 def new_load_rules() -> Dict[str, Any]:
     """Load new rules from a JSON file."""
-    return load_json_data('./data/rules.json')
+    return load_json_data('../data/rules.json')
 
 def calculate_bmi(weight: float, height: float) -> float:
     if height <= 0:
@@ -205,6 +205,142 @@ def ensure_default_fields(routines):
             attributes['score_rules'] = 1
         if 'score_rules_explanation' not in attributes:
             attributes['score_rules_explanation'] = "No inclusion rule applied"
+    return routines
+
+def map_movement_orders(answers: dict) -> dict:
+    """
+    Maps movement-related answers to individual order variables.
+
+    Expected keys in the answers dictionary:
+      - "Wie schätzt du deine Beweglichkeit ein?" is mapped to "order_mobility"
+      - "Wie oft in der Woche treibst du eine Cardio-Sportart?" is mapped to "order_cardio"
+      - "Wie schätzt du deine Kraft ein?" is mapped to "order_strength"
+
+    Returns:
+      A dictionary with keys:
+        - "order_mobility"
+        - "order_cardio"
+        - "order_strength"
+    """
+
+    def get_order(key: str) -> int:
+        try:
+            return int(answers.get(key, 3))
+        except (ValueError, TypeError):
+            return 3
+
+    return {
+        "order_mobility": get_order("Wie schätzt du deine Beweglichkeit ein?"),
+        "order_cardio": get_order("Wie oft in der Woche treibst du eine Cardio-Sportart?"),
+        "order_strength": get_order("Wie schätzt du deine Kraft ein?")
+    }
+
+def get_order(score: float) -> int:
+    """
+    Returns an order based on the score using fixed thresholds:
+      - score <= 16  => order 1
+      - score <= 32  => order 2
+      - score <= 48  => order 3
+      - score <= 64  => order 4
+      - otherwise    => order 5
+    """
+    if score <= 16:
+        return 1
+    elif score <= 32:
+        return 2
+    elif score <= 48:
+        return 3
+    elif score <= 64:
+        return 4
+    else:
+        return 5
+
+def filter_routines_by_display_order(routines: list, answers: dict, health_scores: dict) -> list:
+    """
+    For each routine, determine the pillar order and compare it with the allowed orders
+    specified in the routine's 'displayForOrder' attribute.
+
+    For the MOVEMENT pillar:
+      - It calls map_movement_orders(answers) to obtain orders for mobility, cardio, and strength.
+      - It uses the routine's 'movementType' (defaults to 'mobility') to select the appropriate order.
+
+    For all other pillars:
+      - It looks up the overall health score from the health_scores dictionary (using the pillar name as key)
+      - It computes the order using the fixed thresholds (via get_order(score)).
+      - It prints the health score, the thresholds, and the computed order.
+
+    Finally, the function prints the allowed orders (parsed from displayForOrder) and whether the routine is kept or excluded.
+    """
+    # Get movement orders from the answers dictionary.
+    movement_orders = map_movement_orders(answers)
+    print(f"Movement orders mapped from answers: {movement_orders}")
+
+    excluded_count = 0
+
+    for routine in routines:
+        attributes = routine.get("attributes", {})
+        pillar_info = attributes.get("pillar", {})
+        pillar = pillar_info.get("pillarEnum", "UNKNOWN")
+        computed_order = None
+        explanation = ""
+
+        if pillar == "MOVEMENT":
+            movement_type = attributes.get("movementType", "mobility").lower()
+            if movement_type == "cardio":
+                computed_order = movement_orders.get("order_cardio", 3)
+                explanation = (
+                    f"Using movementType 'cardio': 'Wie oft in der Woche treibst du eine Cardio-Sportart?' returned {computed_order}.")
+            elif movement_type == "strength":
+                computed_order = movement_orders.get("order_strength", 3)
+                explanation = (
+                    f"Using movementType 'strength': 'Wie schätzt du deine Kraft ein?' returned {computed_order}.")
+            else:
+                computed_order = movement_orders.get("order_mobility", 3)
+                explanation = (
+                    f"Defaulting to movementType 'mobility': 'Wie schätzt du deine Beweglichkeit ein?' returned {computed_order}.")
+            print(f"Routine ID {routine.get('id')}: Pillar '{pillar}' computed order: {computed_order}. {explanation}")
+        else:
+            pillar_score = health_scores.get(pillar)
+            if pillar_score is not None:
+                computed_order = get_order(pillar_score)
+                thresholds = ("Thresholds: score <= 16 => order 1, score <= 32 => order 2, "
+                              "score <= 48 => order 3, score <= 64 => order 4, otherwise order 5.")
+                explanation = (f"For pillar '{pillar}', the health score is {pillar_score}. {thresholds} "
+                               f"Computed order is {computed_order}.")
+            else:
+                computed_order = attributes.get("order")
+                thresholds = ("(No health score available; cannot show thresholds.)")
+                explanation = (f"For pillar '{pillar}', no health score found. "
+                               f"Using routine attribute 'order' = {computed_order}. {thresholds}")
+            print(f"Routine ID {routine.get('id')}: {explanation}")
+
+        display_for_order = attributes.get("displayForOrder")
+        if display_for_order and display_for_order.strip():
+            try:
+                allowed_orders = [int(num.strip()) for num in display_for_order.split(",")]
+                print(f"Routine ID {routine.get('id')}: Allowed orders from displayForOrder: {allowed_orders}")
+            except ValueError as e:
+                print(f"Routine ID {routine.get('id')}: Invalid displayForOrder '{display_for_order}': {e}")
+                continue
+
+            if computed_order not in allowed_orders:
+                attributes["rule_status"] = "excluded"
+                attributes["score_rules"] = 0
+                exclusion_reason = (
+                    f"Excluded because computed order {computed_order} is not in allowed orders {allowed_orders}. "
+                    f"Explanation: {explanation}")
+                attributes["score_rules_explanation"] = exclusion_reason
+                excluded_count += 1
+                print(f"Routine ID {routine.get('id')}: {exclusion_reason}")
+            else:
+                print(f"Routine ID {routine.get('id')}: Computed order {computed_order} is allowed by displayForOrder.")
+        else:
+            print(
+                f"Routine ID {routine.get('id')}: displayForOrder is not set or empty. Computed order remains {computed_order}.")
+
+        routine["attributes"] = attributes
+
+    print(f"Total routines excluded by displayForOrder filter: {excluded_count}")
     return routines
 
 
@@ -577,7 +713,9 @@ def exclude_movement_routines_by_equipment(routines: List[Dict[str, Any]]) -> Li
     )
     return routines
 
+
 def main(app_env):
+
 
     field_mapping = get_field_mapping(app_env)
     responses = get_responses(app_env)
@@ -586,8 +724,8 @@ def main(app_env):
         logger.error("No responses or field mapping available.")
         return "No responses or field mapping available.", 400
 
-
     answers = process_latest_response(responses, field_mapping)
+
 
     gender = answers.get('Welches Geschlecht ist in Ihren Dokumenten angegeben?', None)
     if not answers:
@@ -606,7 +744,7 @@ def main(app_env):
         integrated_data.get('cognition', 0),
     )
 
-    scores = {
+    health_scores = {
         "NUTRITION": float(assessment.nutrition_assessment.report()),
         "MOVEMENT": float(assessment.exercise_assessment.report()),
         "GRATITUDE": float(assessment.gratitude_assessment.report()),
@@ -618,15 +756,15 @@ def main(app_env):
 
 
     total_score = float(assessment.calculate_total_score())
-    scores["Total Score"] = total_score
+    health_scores["Total Score"] = total_score
 
 
 
-    output_json = map_answers(answers, scores)
+    output_json = map_answers(answers, health_scores)
     user_data = json.loads(output_json)
 
     account_id = answers.get('accountid', None)
-    #print('answers',answers)
+    #print('account_id',account_id)
     mapping_daily_time =  answers.get("Wie viel Zeit möchtest du am Tag ungefähr in deine Gesundheit investieren?", 0)
     if mapping_daily_time == '15-30 Minuten':
         daily_time = 20
@@ -691,12 +829,12 @@ def main(app_env):
 
 
     routines_with_defaults = ensure_default_fields(routines_with_exclusions)
+    routines_with_defaults_filtered_display_order = filter_routines_by_display_order(routines_with_defaults, answers, health_scores)
 
-
-    output_file_path = './data/routines_with_scores.json'
+    output_file_path = '../data/routines_with_scores.json'
     try:
         with open(output_file_path, 'w') as f:
-            json.dump(routines_with_defaults, f, ensure_ascii=False, indent=4)
+            json.dump(routines_with_defaults_filtered_display_order, f, ensure_ascii=False, indent=4)
         #print(f"Routines successfully saved to {output_file_path}")
     except Exception as e:
         logger.error(f"An error occurred while saving routines: {e}")
@@ -833,7 +971,7 @@ def main(app_env):
             logger.error(f"Error finding package in {pillar} - {subcategory}: {e}")
         return (None, None)
 
-    packages_file_path = "./data/packages.json"
+    packages_file_path = "../data/packages.json"
 
     packages_data = load_packages(packages_file_path)
     selected_packages = []
@@ -880,17 +1018,17 @@ def main(app_env):
         2: 11,
         3: 12
     }
-    movement_score = scores.get("MOVEMENT", 0)
+    movement_score = health_scores.get("MOVEMENT", 0)
     try:
         cardio_order = map_cardio_score_to_order(movement_score)
-        logger.debug(f"CARDIO Score: {movement_score}, Order: {cardio_order}")
+        print(f"CARDIO Score: {movement_score}, Order: {cardio_order}")
     except ValueError as ve:
         logger.error(f"Invalid CARDIO score: {ve}")
         cardio_order = None
 
     cardio_package_unique_id = ORDER_TO_PACKAGE_UNIQUE_ID.get(cardio_order, None)
     if cardio_package_unique_id:
-        logger.debug(f"Mapped Order {cardio_order} to packageUniqueId {cardio_package_unique_id} for 5 MINUTE CARDIO.")
+        print(f"Mapped Order {cardio_order} to packageUniqueId {cardio_package_unique_id} for 5 MINUTE CARDIO.")
     #else:
         #logger.warning(f"No packageUniqueId mapping found for CARDIO Order {cardio_order}.")
 
@@ -921,10 +1059,10 @@ def main(app_env):
         """
         try:
             nutrition_pillar = packages_data["packages"]["pillars"]["NUTRITION"]
-            logger.debug("Accessed 'NUTRITION' pillar.")
+            print("Accessed 'NUTRITION' pillar.")
 
             anti_inflammation_subcat = nutrition_pillar["ANTI INFLAMMATION"]
-            logger.debug("Accessed 'ANTI INFLAMMATION' subcategory.")
+            print("Accessed 'ANTI INFLAMMATION' subcategory.")
 
             inflammation_1 = anti_inflammation_subcat.get("Inflammation 1")
 
@@ -938,7 +1076,7 @@ def main(app_env):
                     "packageTag": "ANTI INFLAMMATION",
                     "selected_package": inflammation_1
                 })
-                logger.debug("'Inflammation 1' package appended to selected_packages.")
+                print("'Inflammation 1' package appended to selected_packages.")
             #else:
                 #logger.warning("Inflammation 1 package not found under 'ANTI INFLAMMATION'.")
 
@@ -974,14 +1112,14 @@ def main(app_env):
 
 
     score_order_list = []
-    for pillar, score in scores.items():
+    for pillar, score in health_scores.items():
         if pillar == "STRESS":
             order = stress_order
-            logger.debug(f"Pillar '{pillar}': Score={score}, Order={order} (based on meditation_answer)")
+            print(f"Pillar '{pillar}': Score={score}, Order={order} (based on meditation_answer)")
         else:
             try:
-                order = get_order(score)
-                logger.debug(f"Pillar '{pillar}': Score={score}, Order={order}")
+                order = map_cardio_score_to_order(score)
+                print(f"Pillar '{pillar}': Score={score}, Order={order}")
             except ValueError as e:
                 logger.error(f"Error determining order for {pillar}: {e}")
                 order = None
@@ -1071,6 +1209,7 @@ def main(app_env):
                     })
                     logger.info(f"Appended package for SLEEP BASICS: {pkg_key}")
                 """
+
                 sleep_room = packages_data.get("packages", {}).get("pillars", {}).get("SLEEP", {}).get("SLEEPING ROOM",
                                                                                                        {})
                 for pkg_key, pkg in sleep_room.items():
@@ -1095,7 +1234,6 @@ def main(app_env):
                         })
                         logger.info(f"Appended package for SLEEP PROBLEM: {pkg_key}")
 
-                # Skip further unconditional appends for SLEEP:
                 continue
 
 
@@ -1154,10 +1292,10 @@ def main(app_env):
                 #logger.warning(f"No package selected for Pillar: '{entry['pillar']}' with Order: {order}")
 
 
-    #print("\nSelected Packages:")
-    #print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
+    print("\nSelected Packages:")
+    print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
 
-    return account_id, daily_time, routines_with_defaults, scores, user_data, answers, gender, selected_packages
+    return account_id, daily_time, routines_with_defaults_filtered_display_order, health_scores, user_data, answers, gender, selected_packages
 
 if __name__ == '__main__':
     main()
