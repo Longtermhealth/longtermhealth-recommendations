@@ -343,8 +343,8 @@ def event():
     payload_str = json.loads(payload)
     pretty_payload = json.dumps(payload_str, indent=4)
     print('pretty_payload', pretty_payload)
-    if insights is not None:
-        print("insights", json.dumps(insights, indent=4))
+    #if insights is not None:
+        #print("insights", json.dumps(insights, indent=4))
 
     event_type = data.get('eventEnum')
     if not event_type:
