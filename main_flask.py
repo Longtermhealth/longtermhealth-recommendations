@@ -1,10 +1,11 @@
 # rule_based_system/main_flask.py
 import time
+import math
 import json
 import os
 from flask import Flask, jsonify, request
 from config import Config
-from utils.strapi_api import strapi_get_action_plan
+from utils.strapi_api import strapi_get_action_plan, strapi_get_health_scores
 from utils.typeform_api import (
     get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_followup
 )
@@ -29,6 +30,8 @@ LINK_SUMMARY_OPENAI_API_KEY = Config.LINK_SUMMARY_OPENAI_API_KEY
 
 app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
+
+k = 0.025
 
 
 def print_matching_routine_details(new_data, old_action_plan):
@@ -329,6 +332,190 @@ def process_event_data(event_data):
     insights = get_insights(payload)
     return insights, payload_str
 
+def compute_scheduled_by_pillar(action_plan_payload):
+    """
+    Compute scheduled occurrences per routine from the action plan
+    and aggregate them by pillar.
+
+    Returns:
+      dict: Mapping pillarEnum -> { "scheduled": total scheduled occurrences, "routines": [...] }
+    """
+    scheduled_by_pillar = {}
+    routines = action_plan_payload.get("data", {}).get("routines", [])
+    for routine in routines:
+        # Get pillar enum from the routine (assumes routine["pillar"] exists)
+        pillar = routine.get("pillar", {}).get("pillarEnum", "UNKNOWN")
+        schedule_days = routine.get("scheduleDays", [])
+        schedule_weeks = routine.get("scheduleWeeks", [])
+        total_occurrences = len(schedule_days) * len(schedule_weeks)
+        if pillar not in scheduled_by_pillar:
+            scheduled_by_pillar[pillar] = {"scheduled": 0, "routines": []}
+        scheduled_by_pillar[pillar]["scheduled"] += total_occurrences
+        scheduled_by_pillar[pillar]["routines"].append({
+            "routineId": routine["routineId"],
+            "displayName": routine.get("displayName", "Unknown Routine"),
+            "scheduled": total_occurrences
+        })
+    return scheduled_by_pillar
+
+
+def extract_pretty_completions(pretty_payload):
+    """
+    Extract completed counts from the pretty_payload and sum them by pillar.
+    For each pillar, iterate over all routines, filter for MONTH statistics,
+    and sum their completionRate values.
+
+    Returns:
+      dict: Mapping pillarEnum -> { "completed": total completions }
+    """
+    completions_by_pillar = {}
+    for pillar_entry in pretty_payload.get("pillarCompletionStats", []):
+        pillar = pillar_entry.get("pillarEnum", "UNKNOWN")
+        if pillar not in completions_by_pillar:
+            completions_by_pillar[pillar] = {"completed": 0}
+        for routine in pillar_entry.get("routineCompletionStats", []):
+            month_stats = [stat for stat in routine.get("completionStatistics", [])
+                           if stat.get("completionRatePeriodUnit") == "MONTH"]
+            if month_stats:
+                # Get the latest month entry based on periodSequenceNo
+                latest_stat = max(month_stats, key=lambda s: s.get("periodSequenceNo", 0))
+                completion = latest_stat.get("completionRate", 0)
+            else:
+                completion = 0
+            completions_by_pillar[pillar]["completed"] += completion
+    return completions_by_pillar
+
+def create_health_scores_with_structure(account_id, health_scores):
+    """
+    Builds the final health-scores structure (with interpretation) to post to Strapi.
+    """
+    score_interpretation_dict = {
+        "MOVEMENT": {
+            "AKTIONSBEFARF": "Es ist Zeit, mehr Bewegung in deinen Alltag zu integrieren. Kleine Schritte können einen großen Unterschied für deine Gesundheit machen!",
+            "AUSBAUFÄHIG": "Deine körperliche Aktivität ist gut! Mit ein wenig mehr Bewegung kannst du deine Fitness auf das nächste Level heben.",
+            "OPTIMAL": "Fantastische Leistung! Deine regelmäßige Bewegung stärkt deine Gesundheit optimal. Weiter so!"
+        },
+        "NUTRITION": {
+            "AKTIONSBEFARF": "Achte mehr auf eine ausgewogene Ernährung. Gesunde Essgewohnheiten geben dir Energie und Wohlbefinden.",
+            "AUSBAUFÄHIG": "Deine Ernährung ist auf einem guten Weg! Mit kleinen Anpassungen kannst du deine Nährstoffzufuhr weiter optimieren.",
+            "OPTIMAL": "Exzellente Ernährungsgewohnheiten! Du versorgst deinen Körper optimal mit wichtigen Nährstoffen. Weiter so!"
+        },
+        "SLEEP": {
+            "AKTIONSBEFARF": "Verbessere deine Schlafgewohnheiten für mehr Energie und bessere Gesundheit. Guter Schlaf ist essenziell!",
+            "AUSBAUFÄHIG": "Dein Schlaf ist gut! Ein paar Änderungen können dir helfen, noch erholsamer zu schlafen.",
+            "OPTIMAL": "Ausgezeichneter Schlaf! Du sorgst für optimale Erholung und Vitalität. Weiter so!"
+        },
+        "SOCIAL_ENGAGEMENT": {
+            "AKTIONSBEFARF": "Pflege deine sozialen Beziehungen. Verbindungen zu anderen sind wichtig für dein emotionales Wohlbefinden.",
+            "AUSBAUFÄHIG": "Deine sozialen Beziehungen sind gut! Mit ein wenig mehr Engagement kannst du deine Verbindungen weiter vertiefen.",
+            "OPTIMAL": "Starke und erfüllende soziale Beziehungen! Du pflegst wertvolle Verbindungen, die dein Leben bereichern. Weiter so!"
+        },
+        "STRESS": {
+            "AKTIONSBEFARF": "Es ist wichtig, Wege zu finden, um deinen Stress besser zu bewältigen. Kleine Pausen und Entspannungstechniken können helfen.",
+            "AUSBAUFÄHIG": "Dein Umgang mit Stress ist gut! Mit weiteren Strategien kannst du deine Stressresistenz weiter stärken.",
+            "OPTIMAL": "Du meisterst Stress hervorragend! Deine effektiven Bewältigungsstrategien tragen zu deinem Wohlbefinden bei. Weiter so!"
+        },
+        "GRATITUDE": {
+            "AKTIONSBEFARF": "Nimm dir Zeit, die positiven Dinge im Leben zu schätzen. Dankbarkeit kann dein Wohlbefinden erheblich steigern.",
+            "AUSBAUFÄHIG": "Du zeigst bereits Dankbarkeit! Mit kleinen Ergänzungen kannst du deine positive Einstellung noch weiter ausbauen.",
+            "OPTIMAL": "Eine wunderbare Haltung der Dankbarkeit! Deine positive Sicht bereichert dein Leben und das deiner Mitmenschen. Weiter so!"
+        },
+        "COGNITIVE_ENHANCEMENT": {
+            "AKTIONSBEFARF": "Fordere deinen Geist regelmäßig heraus. Neue Lernmöglichkeiten können deine geistige Fitness verbessern.",
+            "AUSBAUFÄHIG": "Deine kognitive Förderung ist gut! Mit zusätzlichen Aktivitäten kannst du deine geistige Leistungsfähigkeit weiter steigern.",
+            "OPTIMAL": "Hervorragende geistige Fitness! Du hältst deinen Verstand aktiv und stark. Weiter so!"
+        }
+    }
+
+    def get_score_details(pillar, score):
+        if score < 40:
+            rating = "AKTIONSBEFARF"
+        elif 40 <= score < 64:
+            rating = "AUSBAUFÄHIG"
+        else:
+            rating = "OPTIMAL"
+        return {
+            "ratingEnum": rating,
+            "displayName": rating.capitalize(),
+            "scoreInterpretation": score_interpretation_dict.get(pillar, {}).get(rating, "No interpretation available.")
+        }
+
+    total_score = sum(health_scores.values()) / len(health_scores)
+    pillars = []
+    for pillar_enum, score in health_scores.items():
+        details = get_score_details(pillar_enum, score)
+        pillars.append({
+            "pillar": {
+                "pillarEnum": pillar_enum,
+                "displayName": pillar_enum.replace("_", " ").capitalize()
+            },
+            "score": f"{score:.2f}",
+            "scoreInterpretation": details["scoreInterpretation"],
+            "rating": {
+                "ratingEnum": details["ratingEnum"],
+                "displayName": details["displayName"]
+            }
+        })
+    return {
+        "data": {
+            "totalScore": int(total_score),
+            "accountId": account_id,
+            "pillarScores": pillars
+        }
+    }
+
+
+def calculate_first_month_update_from_pretty_final(account_id, action_plan, pretty_payload, initial_health_scores):
+    """
+    Calculate first month health score update per pillar based on scheduled and completed counts.
+    Computes:
+      - delta_completed = 10 * dampening * (1 - exp(-k * completed_count))
+      - delta_not = 10 * dampening * (1 - exp(-k * not_completed_count))
+      - final_delta = delta_completed - (delta_not / 3)
+      - new_score = initial_health_score + final_delta
+    This function now also merges the delta values into the final structure.
+    """
+
+
+
+    action_plan_payload = json.load(action_plan)
+
+    scheduled_by_pillar = compute_scheduled_by_pillar(action_plan_payload)
+    completions_by_pillar = extract_pretty_completions(pretty_payload)
+
+    final_scores = {}
+    final_deltas = {}
+    print("First Month Health Score Update (Final combined score):")
+    for pillar in scheduled_by_pillar:
+        scheduled_total = scheduled_by_pillar[pillar]["scheduled"]
+        completed_count = completions_by_pillar.get(pillar, {}).get("completed", 0)
+        not_completed_count = scheduled_total - completed_count
+
+        # Retrieve the initial health score for the pillar (default to 50 if not provided)
+        init_score = initial_health_scores.get(pillar, 50)
+        dampening = (100 - init_score) / 90
+
+        delta_completed = 10 * dampening * (1 - math.exp(-k * completed_count))
+        delta_not = 10 * dampening * (1 - math.exp(-k * not_completed_count))
+        final_delta = delta_completed - (delta_not / 3)
+        new_score = init_score + final_delta
+        new_score = min(max(new_score, 0), 100)
+
+        final_scores[pillar] = new_score
+        final_deltas[pillar] = final_delta
+
+        print(f"{pillar}: Scheduled = {scheduled_total}, Completed = {completed_count}, Not Completed = {not_completed_count}")
+        print(f"  Delta Completed = {delta_completed:.4f}, Delta Not = {-delta_not / 3:.4f} (falling), Final Delta = {final_delta:.4f}")
+        print(f"  Initial Score = {init_score}, New Score = {new_score:.4f}")
+
+    # Build the final health score structure using your existing function.
+    base_structure = create_health_scores_with_structure(account_id, final_scores)
+    # Merge the delta values into the structure.
+    for entry in base_structure["data"]["pillarScores"]:
+        pillar_enum = entry["pillar"]["pillarEnum"]
+        entry["delta"] = round(final_deltas.get(pillar_enum, 0), 2)
+    return base_structure
+
 
 @app.route('/event', methods=['POST'])
 def event():
@@ -343,6 +530,21 @@ def event():
     payload_str = json.loads(payload)
     pretty_payload = json.dumps(payload_str, indent=4)
     print('pretty_payload', pretty_payload)
+
+
+    #
+    action_plan_id = pretty_payload.get('actionPlanUniqueId', 0)
+    account_id = pretty_payload.get('accountId', 0)
+    initial_health_scores = strapi_get_health_scores(account_id, host)
+    action_plan = strapi_get_action_plan(action_plan_id, host)
+    final_scores = calculate_first_month_update_from_pretty_final(
+        account_id=account_id,
+        action_plan=action_plan,
+        pretty_payload=pretty_payload,
+        initial_health_scores=initial_health_scores
+    )
+    print("Final Health Scores per Pillar:", final_scores)
+
     #if insights is not None:
         #print("insights", json.dumps(insights, indent=4))
 

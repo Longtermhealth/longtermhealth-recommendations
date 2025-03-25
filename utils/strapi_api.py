@@ -65,6 +65,36 @@ def strapi_get_action_plan(actionPlanId, host):
         print(f"Error while fetching the action plan for account {actionPlanId}: {e}")
         return None
 
+
+def strapi_get_health_scores(accountId, host):
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
+        app_env = "development"
+        base_url = DEV_HEALTH_SCORES_ENDPOINT
+    else:
+        app_env = "production"
+        base_url = STAGING_HEALTH_SCORES_ENDPOINT
+
+    params = {
+        "filters[accountId][$eq]": accountId
+    }
+
+    print('app_env', app_env)
+    print(f"accountId: {accountId}")
+    print("URL:", base_url)
+    try:
+        if app_env == "development":
+            response = requests.get(base_url, headers=DEV_HEADERS, params=params)
+        else:
+            response = requests.get(base_url, headers=STAGING_HEADERS, params=params)
+        response.raise_for_status()
+        result = response.json()
+        return result
+
+    except Exception as e:
+        print(f"Error while fetching the action plan for account {accountId}: {e}")
+        return None
+
+
 def strapi_get_all_routines():
     page = 1
     page_size = 100
