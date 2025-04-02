@@ -5,12 +5,13 @@ from typing import List, Dict, Any, Optional, Set
 from scheduling.filter_service import main as get_routines_with_defaults
 from utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
 
+
 SUPER_ROUTINE_CONFIG = {
     "sleep_superroutine": {
         "routineId": 998,
         "pillar": "SLEEP",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/998_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/998_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_sleep_998_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_sleep_998_16x9.webp",
         "description": (
             "Entwickle ein tägliches Schlafritual, um den Körper und Geist auf die "
             "anstehende Schlafphase vorzubereiten und so ein einfacheres Einschlafen zu fördern."
@@ -31,8 +32,8 @@ SUPER_ROUTINE_CONFIG = {
     "sleep_superroutine_sleeping_room": {
         "routineId": 964,
         "pillar": "SLEEP",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/964_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/964_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_sleep_964_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_sleep_964_16x9.webp",
         "description": (
             "Ein erholsamer Schlaf beginnt mit der richtigen Umgebung. Ein gut vorbereitetes Schlafzimmer hilft, schneller einzuschlafen und tiefer zu ruhen. Reduziere störende Faktoren und schaffe eine Atmosphäre, die deinen Schlaf fördert."
         ),
@@ -52,8 +53,8 @@ SUPER_ROUTINE_CONFIG = {
     "sleep_superroutine_sleep_problem": {
         "routineId": 963,
         "pillar": "SLEEP",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/963_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/963_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_sleep_963_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_sleep_963_16x9.webp",
         "description": (
             "Eine gute Schlafqualität ist entscheidend für Erholung und Gesundheit. Diese Routine bietet verschiedene Ansätze, um deinen Schlaf zu verbessern und besser ausgeruht in den Tag zu starten."
         ),
@@ -73,8 +74,8 @@ SUPER_ROUTINE_CONFIG = {
     "movement_superroutine": {
         "routineId": 997,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/997_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/997_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_997_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_997_16x9.webp",
         "description": (
             "Ein Fullbody Workout kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um "
             "den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen "
@@ -96,8 +97,8 @@ SUPER_ROUTINE_CONFIG = {
     "lower_body_strength_training_super_routine": {
         "routineId": 996,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/996_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/996_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_996_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_996_16x9.webp",
         "description": (
             "Ein Unterkörper-Krafttraining kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um "
             "den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen "
@@ -119,8 +120,8 @@ SUPER_ROUTINE_CONFIG = {
     "core_strength_training_super_routine": {
         "routineId": 994,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/994_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/994_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_994_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_994_16x9.webp",
         "description": (
             "Ein Core-Krafttraining kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um "
             "den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen "
@@ -142,8 +143,8 @@ SUPER_ROUTINE_CONFIG = {
     "upper_body_strength_training_super_routine": {
         "routineId": 995,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/995_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/995_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_995_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_995_16x9.webp",
         "description": (
             "Ein Oberkörper-Krafttraining kombiniert Warm-up, Cardio, Krafttraining und Cool-down, um "
             "den ganzen Körper effektiv zu trainieren. Nach einer kurzen Aufwärmphase folgen "
@@ -165,8 +166,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_1_superroutine": {
         "routineId": 988,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/988_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/988_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_988_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_988_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -185,8 +186,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_2_superroutine": {
         "routineId": 985,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/985_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/985_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_985_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_985_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -205,8 +206,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_3_superroutine": {
         "routineId": 984,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/984_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/984_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_984_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_984_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -225,8 +226,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_4_superroutine": {
         "routineId": 983,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/983_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/983_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_983_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_983_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -245,8 +246,8 @@ SUPER_ROUTINE_CONFIG = {
 "5_minute_cardio_5_superroutine": {
         "routineId": 982,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/982_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/982_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_982_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_982_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -265,8 +266,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_6_superroutine": {
         "routineId": 981,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/981_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/981_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_981_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_981_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -285,8 +286,8 @@ SUPER_ROUTINE_CONFIG = {
     "5_minute_cardio_7_superroutine": {
         "routineId": 980,
         "pillar": "MOVEMENT",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/980_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/980_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_movement_980_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_movement_980_16x9.webp",
         "description": (
             "Ein 5-minütiges Cardio-Workout steigert die Herzfrequenz, fördert die Durchblutung und verbrennt Kalorien in kurzer Zeit. Es verbessert Ausdauer, Energielevels und unterstützt die Fettverbrennung. Ideal für schnelle, effektive Fitnesseinheiten."
         ),
@@ -305,8 +306,8 @@ SUPER_ROUTINE_CONFIG = {
     "nutrition_super_routine": {
         "routineId": 999,
         "pillar": "NUTRITION",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/999_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/999_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_nutrition_999_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_nutrition_999_16x9.webp",
         "description": (
             "Eine gesunde Ernährung basiert auf einer ausgewogenen Mischung aus frischen, "
             "unverarbeiteten Lebensmitteln wie Obst, Gemüse, Vollkornprodukten, gesunden Fetten "
@@ -330,8 +331,8 @@ SUPER_ROUTINE_CONFIG = {
     "anti_inflammation_super_routine": {
         "routineId": 986,
         "pillar": "NUTRITION",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/986_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/986_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_nutrition_986_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_nutrition_986_16x9.webp",
         "description": (
             "Das Anti-Entzündungs-Paket umfasst gezielte Ernährung und Nahrungsergänzungsmittel, die entzündungshemmend wirken. Es fördert die Gelenkgesundheit, reduziert Entzündungen im Körper und unterstützt das allgemeine Wohlbefinden."
         ),
@@ -350,8 +351,8 @@ SUPER_ROUTINE_CONFIG = {
     "gratitude_super_routine": {
         "routineId": 990,
         "pillar": "GRATITUDE",
-        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/990_1x1.webp",
-        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/990_16x9.webp",
+        "imageUrl_1x1": "https://lthstore.blob.core.windows.net/images/routine_gratitude_990_1x1.webp",
+        "imageUrl_16x9": "https://lthstore.blob.core.windows.net/images/routine_gratitude_990_16x9.webp",
         "description": (
             "Das Dankbarkeitsritual stärkt positive Gedanken, steigert Wohlbefinden und Fokus. Es fördert Achtsamkeit, reduziert Stress und bringt mehr Freude in den Alltag."
         ),
