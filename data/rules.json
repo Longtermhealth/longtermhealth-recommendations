@@ -229,7 +229,7 @@
       "condition": {
         "field": "Praktizierst du Intervallfasten und auf welche Art?",
         "operator": "==",
-        "value": "16:8 (tägllich 14-16 Stunden fasten)"
+        "value": "16:8 (täglich 14-16 Stunden fasten)"
       },
       "action": {
         "field": "variations.variation",
