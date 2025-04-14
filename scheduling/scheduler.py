@@ -515,7 +515,7 @@ def add_individual_routine_entry(
     elif scheduleCategory == "WEEKLY_CHALLENGE":
         weeks_mapping = {1: 7, 2: 14, 3: 21, 4: 28}
         try:
-            scheduleWeeks_value = int(scheduleWeeks[0]) if isinstance(scheduleWeeks, list) and scheduleWeeks else int(scheduleWeeks)
+            scheduleWeeks_value = int(scheduleWeeks[0]) if (isinstance(scheduleWeeks, list) and scheduleWeeks) else int(scheduleWeeks)
         except ValueError:
             scheduleWeeks_value = 1
         expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
@@ -528,10 +528,6 @@ def add_individual_routine_entry(
         routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
     else:
         routine_class_display_name = 'DefaultDisplayName'
-
-    mapped_id = None
-    if parentRoutineId:
-        mapped_id = find_mapped_id(routine_unique_id_map, parentRoutineId)
 
     routine_unique = routine['attributes'].get("routineUniqueId")
     individual_entry = {
@@ -559,7 +555,7 @@ def add_individual_routine_entry(
         "scheduleCategory": scheduleCategory,
         "packageName": routine_class_display_name,
         "packageTag": packageTag,
-        "parentRoutineId": parentRoutineId,
+        "parentRoutineUniqueId": parentRoutineId,
         "sets": routine.get('attributes', {}).get('sets', 0),
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
@@ -575,7 +571,7 @@ def add_individual_routine_entry(
 
         super_routine_config = SUPER_ROUTINE_CONFIG[super_routine_key]
         super_routine_exists = any(
-            routine_entry.get('routineUniqueId') == mapped_id
+            routine_entry.get('routineUniqueId') == parentRoutineId
             for routine_entry in final_action_plan["data"]["routines"]
         )
         if not super_routine_exists:
@@ -586,7 +582,7 @@ def add_individual_routine_entry(
                 },
                 "imageUrl_1x1": super_routine_config.get("imageUrl_1x1") or "https://longtermhealth.de",
                 "imageUrl_16x9": super_routine_config.get("imageUrl_16x9") or "https://longtermhealth.de",
-                "routineId": super_routine_config["routineId"],
+                "routineId": parentRoutineId,
                 "durationCalculated": float(routine['attributes']['durationCalculated']),
                 "timeOfDay": super_routine_config.get("timeOfDay", "ANY"),
                 "goal": {
@@ -604,11 +600,11 @@ def add_individual_routine_entry(
                 "scheduleCategory": super_routine_config.get("scheduleCategory", "DAILY_ROUTINE"),
                 "packageName": routine_class_display_name,
                 "packageTag": packageTag,
-                "parentRoutineId": None,
+                "parentRoutineUniqueId": None,
                 "sets": routine.get('attributes', {}).get('sets', 0),
-                **({"expirationDate": calculate_expiration_date(days=28)} if super_routine_config.get("scheduleCategory") in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
+                **({"expirationDate": calculate_expiration_date(days=28)}
+                   if super_routine_config.get("scheduleCategory") in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
             }
-            super_routine_entry["routineId"] = mapped_id
             final_action_plan["data"]["routines"].append(super_routine_entry)
 
 
@@ -632,7 +628,7 @@ def add_individual_routine_entry_without_parent(
     elif scheduleCategory == "WEEKLY_CHALLENGE":
         weeks_mapping = {1: 7, 2: 14, 3: 21, 4: 28}
         try:
-            scheduleWeeks_value = int(scheduleWeeks[0]) if isinstance(scheduleWeeks, list) and scheduleWeeks else int(scheduleWeeks)
+            scheduleWeeks_value = int(scheduleWeeks[0]) if (isinstance(scheduleWeeks, list) and scheduleWeeks) else int(scheduleWeeks)
         except ValueError:
             scheduleWeeks_value = 1
         expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
@@ -645,10 +641,6 @@ def add_individual_routine_entry_without_parent(
         routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
     else:
         routine_class_display_name = 'DefaultDisplayName'
-
-    mapped_id = None
-    if parentRoutineId:
-        mapped_id = find_mapped_id(routine_unique_id_map, parentRoutineId)
 
     routine_unique = routine['attributes'].get("routineUniqueId")
     individual_entry = {
@@ -676,7 +668,7 @@ def add_individual_routine_entry_without_parent(
         "scheduleCategory": scheduleCategory,
         "packageName": routine_class_display_name,
         "packageTag": packageTag,
-        "parentRoutineId": mapped_id,
+        "parentRoutineUniqueId": parentRoutineId,
         "sets": routine.get('attributes', {}).get('sets', 0),
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
