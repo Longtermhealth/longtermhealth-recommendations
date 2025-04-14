@@ -506,77 +506,34 @@ def add_individual_routine_entry(
         routine_unique_id_map: Dict[int, int],
         parentRoutineId: Optional[int] = None,
 ) -> None:
-    """
-    Adds an individual routine entry to the final_action_plan by specifying the routine_id,
-    scheduleCategory, scheduleDays, scheduleWeeks, and conditionally parentRoutineId.
-    Also adds the corresponding super routine if parentRoutineId is provided.
-
-    Args:
-        final_action_plan (dict): The action plan to which the routine will be added.
-        routines (List[Dict[str, Any]]): List of all available routines.
-        routine_id (int): The unique ID of the routine to add.
-        scheduleCategory (str): The schedule category of the routine.
-        scheduleDays (str): The days on which the routine is scheduled.
-        scheduleWeeks (str): The weeks during which the routine is scheduled.
-        parentRoutineId (int, optional): The parent routine ID if applicable.
-
-    Returns:
-        None
-    """
-
     routine = next((r for r in routines if r['id'] == routine_id), None)
     if not routine:
-        ##print(f"Routine with id {routine_id} not found.")
         return
 
     if scheduleCategory == "MONTHLY_CHALLENGE":
         expiration_date = calculate_expiration_date(days=28)
     elif scheduleCategory == "WEEKLY_CHALLENGE":
-        weeks_mapping = {
-            1: 7,
-            2: 14,
-            3: 21,
-            4: 28
-        }
-
-        if isinstance(scheduleWeeks, list):
-            if scheduleWeeks:
-                scheduleWeeks_value = scheduleWeeks[0]
-            else:
-                scheduleWeeks_value = 1
-        else:
-            try:
-                scheduleWeeks_value = int(scheduleWeeks)
-            except ValueError:
-                scheduleWeeks_value = 1
-
+        weeks_mapping = {1: 7, 2: 14, 3: 21, 4: 28}
+        try:
+            scheduleWeeks_value = int(scheduleWeeks[0]) if isinstance(scheduleWeeks, list) and scheduleWeeks else int(scheduleWeeks)
+        except ValueError:
+            scheduleWeeks_value = 1
         expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
-        if scheduleWeeks_value in weeks_mapping:
-            expiration_date = calculate_expiration_date(days=expiration_days)
-            #print(f"Routine '{routine['attributes'].get('name')}' scheduled for {scheduleWeeks_value} week(s). Expiration set to {expiration_days} days.")
-        else:
-            #print("Unsupported number of weeks. Setting default expiration to 7 days.")
-            expiration_date = calculate_expiration_date(days=7)
+        expiration_date = calculate_expiration_date(days=expiration_days)
     else:
-        #print("Unknown schedule category or unsupported number of weeks. Setting default expiration to 7 days.")
         expiration_date = calculate_expiration_date(days=7)
 
     routine_class = routine.get('attributes', {}).get('routineClass')
     if routine_class and isinstance(routine_class, dict):
-        package_name = routine_class.get('routineClassEnum', 'DefaultEnum')
         routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
     else:
-        package_name = 'DefaultEnum'
         routine_class_display_name = 'DefaultDisplayName'
 
     mapped_id = None
     if parentRoutineId:
-        unique_id_to_find = parentRoutineId
-        #print('unique_id_to_find', unique_id_to_find)
-        mapped_id = find_mapped_id(routine_unique_id_map, unique_id_to_find)
-        #print(f"Mapped ID for Unique ID {unique_id_to_find}: {mapped_id}")
-        #print('Processing routine with parentRoutineId:', parentRoutineId)
+        mapped_id = find_mapped_id(routine_unique_id_map, parentRoutineId)
 
+    routine_unique = routine['attributes'].get("routineUniqueId")
     individual_entry = {
         "pillar": {
             "pillarEnum": routine['attributes']['pillar']['pillarEnum'],
@@ -584,7 +541,7 @@ def add_individual_routine_entry(
         },
         "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
         "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de",
-        "routineId": routine["id"],
+        "routineUniqueId": routine_unique,
         "durationCalculated": float(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
         "goal": {
@@ -602,11 +559,10 @@ def add_individual_routine_entry(
         "scheduleCategory": scheduleCategory,
         "packageName": routine_class_display_name,
         "packageTag": packageTag,
-        "parentRoutineId": mapped_id,
+        "parentRoutineId": parentRoutineId,
         "sets": routine.get('attributes', {}).get('sets', 0),
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
-    #print(f"Added individual routine with ID {routine_id} to the action plan.")
     final_action_plan["data"]["routines"].append(individual_entry)
 
     if parentRoutineId:
@@ -614,18 +570,14 @@ def add_individual_routine_entry(
             (key for key, config in SUPER_ROUTINE_CONFIG.items() if config["routineId"] == parentRoutineId),
             None
         )
-
         if not super_routine_key:
-            #print(f"Super routine configuration for routineId {parentRoutineId} not found.")
             return
 
         super_routine_config = SUPER_ROUTINE_CONFIG[super_routine_key]
-
         super_routine_exists = any(
-            routine_entry['routineId'] == mapped_id
+            routine_entry.get('routineUniqueId') == mapped_id
             for routine_entry in final_action_plan["data"]["routines"]
         )
-
         if not super_routine_exists:
             super_routine_entry = {
                 "pillar": {
@@ -647,21 +599,17 @@ def add_individual_routine_entry(
                 "description": super_routine_config.get("description", ""),
                 "displayName": super_routine_config.get("displayName", "Unnamed Super Routine"),
                 "alternatives": [],
-                "scheduleDays": super_routine_config.get("scheduleDays", [1,2,3,4,5,6,7]),
-                "scheduleWeeks": super_routine_config.get("scheduleWeeks", [1,2,3,4]),
+                "scheduleDays": super_routine_config.get("scheduleDays", [1, 2, 3, 4, 5, 6, 7]),
+                "scheduleWeeks": super_routine_config.get("scheduleWeeks", [1, 2, 3, 4]),
                 "scheduleCategory": super_routine_config.get("scheduleCategory", "DAILY_ROUTINE"),
                 "packageName": routine_class_display_name,
                 "packageTag": packageTag,
                 "parentRoutineId": None,
                 "sets": routine.get('attributes', {}).get('sets', 0),
-                **({"expirationDate": calculate_expiration_date(days=28)} if super_routine_config.get(
-                    "scheduleCategory") in ["MONTHLY_CHALLENGE", "WEEKLY_ROUTINE"] else {})
+                **({"expirationDate": calculate_expiration_date(days=28)} if super_routine_config.get("scheduleCategory") in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
             }
-            #print(f"Added super routine with ID {super_routine_config['routineId']} to the action plan.")
             super_routine_entry["routineId"] = mapped_id
             final_action_plan["data"]["routines"].append(super_routine_entry)
-        #else:
-            #print(f"Super routine with ID {super_routine_config['routineId']} already exists in the action plan.")
 
 
 def add_individual_routine_entry_without_parent(
@@ -675,63 +623,34 @@ def add_individual_routine_entry_without_parent(
         routine_unique_id_map: Dict[int, int],
         parentRoutineId: Optional[int] = None,
 ) -> None:
-    """
-    Adds an individual routine entry to the final_action_plan by specifying the routine_id,
-    scheduleCategory, scheduleDays, scheduleWeeks, and conditionally parentRoutineId.
-    Also adds the corresponding super routine if parentRoutineId is provided.
-    """
     routine = next((r for r in routines if r['id'] == routine_id), None)
     if not routine:
-        #print(f"Routine with id {routine_id} not found.")
         return
 
     if scheduleCategory == "MONTHLY_CHALLENGE":
         expiration_date = calculate_expiration_date(days=28)
     elif scheduleCategory == "WEEKLY_CHALLENGE":
-
-        weeks_mapping = {
-            1: 7,
-            2: 14,
-            3: 21,
-            4: 28
-        }
-        if isinstance(scheduleWeeks, list):
-            if scheduleWeeks:
-                try:
-                    scheduleWeeks_value = int(scheduleWeeks[0])
-                except (ValueError, TypeError):
-                    scheduleWeeks_value = 1
-            else:
-                scheduleWeeks_value = 1
-        else:
-            try:
-                scheduleWeeks_value = int(scheduleWeeks)
-            except ValueError:
-                scheduleWeeks_value = 1
-
+        weeks_mapping = {1: 7, 2: 14, 3: 21, 4: 28}
+        try:
+            scheduleWeeks_value = int(scheduleWeeks[0]) if isinstance(scheduleWeeks, list) and scheduleWeeks else int(scheduleWeeks)
+        except ValueError:
+            scheduleWeeks_value = 1
         expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
         expiration_date = calculate_expiration_date(days=expiration_days)
-        #print(f"Routine '{routine['attributes'].get('name')}' scheduled for {scheduleWeeks_value} week(s). Expiration set to {expiration_days} days.")
     else:
-        #print("Unknown schedule category or unsupported number of weeks. Setting default expiration to 7 days.")
         expiration_date = calculate_expiration_date(days=7)
 
     routine_class = routine.get('attributes', {}).get('routineClass')
     if routine_class and isinstance(routine_class, dict):
-        package_name = routine_class.get('routineClassEnum', 'DefaultEnum')
         routine_class_display_name = routine_class.get('displayName', 'DefaultDisplayName')
     else:
-        package_name = 'DefaultEnum'
         routine_class_display_name = 'DefaultDisplayName'
 
     mapped_id = None
     if parentRoutineId:
-        unique_id_to_find = parentRoutineId
-        #print('unique_id_to_find', unique_id_to_find)
-        mapped_id = find_mapped_id(routine_unique_id_map, unique_id_to_find)
-        #print(f"Mapped ID for Unique ID {unique_id_to_find}: {mapped_id}")
-        #print('Processing routine with parentRoutineId:', parentRoutineId)
+        mapped_id = find_mapped_id(routine_unique_id_map, parentRoutineId)
 
+    routine_unique = routine['attributes'].get("routineUniqueId")
     individual_entry = {
         "pillar": {
             "pillarEnum": routine['attributes']['pillar']['pillarEnum'],
@@ -739,7 +658,7 @@ def add_individual_routine_entry_without_parent(
         },
         "imageUrl_1x1": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_1x1") or "https://longtermhealth.de",
         "imageUrl_16x9": routine.get('attributes', {}).get("resources", [{}])[0].get("imageUrl_16x9") or "https://longtermhealth.de",
-        "routineId": routine["id"],
+        "routineUniqueId": routine_unique,
         "durationCalculated": float(routine['attributes']['durationCalculated']),
         "timeOfDay": "ANY",
         "goal": {
@@ -761,7 +680,6 @@ def add_individual_routine_entry_without_parent(
         "sets": routine.get('attributes', {}).get('sets', 0),
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
-    #print(f"Added individual routine with ID {routine_id} to the action plan.")
     final_action_plan["data"]["routines"].append(individual_entry)
 
 
