@@ -582,7 +582,7 @@ def add_individual_routine_entry(
                 },
                 "imageUrl_1x1": super_routine_config.get("imageUrl_1x1") or "https://longtermhealth.de",
                 "imageUrl_16x9": super_routine_config.get("imageUrl_16x9") or "https://longtermhealth.de",
-                "routineId": parentRoutineId,
+                "routineUniqueId": parentRoutineId,
                 "durationCalculated": float(routine['attributes']['durationCalculated']),
                 "timeOfDay": super_routine_config.get("timeOfDay", "ANY"),
                 "goal": {
