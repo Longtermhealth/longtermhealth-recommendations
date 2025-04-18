@@ -978,102 +978,39 @@ def get_all_present_tags(selected_packages: List[Dict[str, Any]]) -> Set[str]:
 
 def update_parent_durationCalculated_and_goal(
         final_action_plan: dict,
-        SUPER_ROUTINE_CONFIG: dict,
-        routine_unique_id_map: dict
-) -> None:
+        SUPER_ROUTINE_CONFIG: dict
+    ) -> None:
     """
-    Updates the durationCalculated and goal.value fields of parent routines in the final_action_plan.
-    The new value is the sum of durationCalculated from all child routines that belong to that parent,
-    plus a break time after each routine. The break time is 20 seconds per set, which is converted to minutes.
-
-    The parent routine is identified by its unique ID from SUPER_ROUTINE_CONFIG.
-    If a child routine stores a parentRoutineId that is not directly one of the tracked unique IDs,
-    the reverse mapping is used to convert it.
-
-    Both the durationCalculated field and the goal.value of the parent routine are updated.
-
-    Note: The routine durations are in minutes. Therefore, the 20-second break per set is converted to minutes.
-
-    Args:
-        final_action_plan (dict): The action plan containing routines.
-        SUPER_ROUTINE_CONFIG (dict): Dictionary containing superroutine configurations.
-        routine_unique_id_map (dict): Mapping from routine unique IDs to routine IDs.
-
-    Returns:
-        None. The function updates the final_action_plan in place.
+    For each super‑routine in SUPER_ROUTINE_CONFIG (keyed by unique ID),
+    sum all child durations + 20s-per-set breaks, and write back into the
+    super‑routine entry (matched by its routineUniqueId).
     """
-    #print("\n--- Updating durationCalculated and goal.value for parent routines ---")
+    routines = final_action_plan["data"]["routines"]
 
-    tracked_parent_ids = set(config['routineId'] for config in SUPER_ROUTINE_CONFIG.values())
-    #print("Tracked parent routine unique IDs from SUPER_ROUTINE_CONFIG:", tracked_parent_ids)
+    tracked_parent_uids = {cfg["routineId"] for cfg in SUPER_ROUTINE_CONFIG.values()}
 
-    reverse_map = {mapped: unique for unique, mapped in routine_unique_id_map.items()}
-    ##print("Reverse mapping (mapped id -> unique id):", reverse_map)
+    totals = {uid: 0.0 for uid in tracked_parent_uids}
 
-    parent_durations = {pid: 0.0 for pid in tracked_parent_ids}
+    for r in routines:
+        parent_uid = r.get("parentRoutineUniqueId")
+        if parent_uid in tracked_parent_uids:
+            dur = float(r.get("durationCalculated", 0.0))
+            sets = int(r.get("sets", 0) or 0)
+            brk = (sets * 20) / 60.0
+            contrib = dur + brk
+            totals[parent_uid] += contrib
 
-    routines = final_action_plan.get("data", {}).get("routines", [])
-    #print(f"Found {len(routines)} routines in final_action_plan.")
+    updated = 0
+    for r in routines:
+        uid = r.get("routineUniqueId")
+        if uid in totals:
+            new_total = totals[uid]
+            rounded = int(round(new_total))
 
-    for routine in routines:
-        stored_parent = routine.get("parentRoutineId")
-        child_duration = routine.get("durationCalculated", 0)
-
-        try:
-            sets = int(routine.get("sets", 0))
-        except (ValueError, TypeError):
-            sets = 1
-
-        if sets > 0:
-            break_time_minutes = (sets * 20) / 60.0
-        else:
-            break_time_minutes = 0.0
-
-
-        total_time = child_duration + break_time_minutes
-
-        if stored_parent is not None:
-            effective_parent = None
-            if stored_parent in tracked_parent_ids:
-                effective_parent = stored_parent
-            else:
-                effective_parent = reverse_map.get(stored_parent)
-                if effective_parent not in tracked_parent_ids:
-                    effective_parent = None
-            if effective_parent is not None:
-                parent_durations[effective_parent] += total_time
-                """
-                #print(
-                    f"Added {child_duration} (duration in minutes) + {break_time_minutes:.2f} (break in minutes) = "
-                    f"{total_time:.2f} from child (parentRoutineId: {stored_parent}) to parent unique id {effective_parent}. "
-                    f"Running total: {parent_durations[effective_parent]:.2f}"
-                )
-                """
-
-    #print("Computed total durations for parent routines (including breaks in minutes):", parent_durations)
-
-
-    updated_count = 0
-    for routine in routines:
-        routine_id = routine.get("routineId")
-        effective_parent = None
-        if routine_id in tracked_parent_ids:
-            effective_parent = routine_id
-        else:
-            candidate = reverse_map.get(routine_id)
-            if candidate in tracked_parent_ids:
-                effective_parent = candidate
-        if effective_parent is not None:
-            new_total = parent_durations.get(effective_parent, 0.0)
-
-            routine["durationCalculated"] = int(round(new_total))
-            if "goal" in routine and isinstance(routine["goal"], dict):
-                routine["goal"]["value"] = int(round(new_total))
-            updated_count += 1
-            #print(f"Updated parent routine (routineId {routine_id} → unique id {effective_parent}) with "f"durationCalculated = {new_total:.2f} minutes and goal.value = {new_total:.2f} minutes")
-
-    #print(f"Updated {updated_count} parent routines with new durationCalculated and goal.value values.")
-    #print("--- Finished updating parent routines ---\n")
+            r["durationCalculated"] = rounded
+            if isinstance(r.get("goal"), dict):
+                r["goal"]["value"] = rounded
+            updated += 1
 
 
 def convert_durations_to_int(action_plan: dict) -> None:
@@ -2232,7 +2169,7 @@ def main(host):
     schedule_all_daily_challenges(final_action_plan, filtered_routines, routine_unique_id_map, health_scores)
     schedule_all_weekly_challenges(final_action_plan, filtered_routines, routine_unique_id_map, health_scores)
 
-    update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG, routine_unique_id_map)
+    update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG)
     convert_durations_to_int(final_action_plan)
     update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)
 
