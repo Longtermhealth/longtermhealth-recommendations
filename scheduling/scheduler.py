@@ -510,12 +510,28 @@ def add_individual_routine_entry(
     if not routine:
         return
 
+    # Only check variations if packageTag is not "MOVEMENT BASICS"
+    if packageTag.upper() != "MOVEMENT BASICS":
+        routine_variations = routine.get('attributes', {}).get('variations', [])
+        variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
+        used_variations = set(final_action_plan["data"].get("usedVariations", []))
+
+        print(f"DEBUG: Routine ID {routine_id} variations: {variation_names}")
+        print(f"DEBUG: Currently used variations: {used_variations}")
+
+        if not used_variations.isdisjoint(variation_names):
+            print(f"DEBUG: Routine ID {routine_id} has overlapping variations {variation_names & used_variations}; skipping.")
+            return
+    else:
+        variation_names = set()
+        print(f"DEBUG: Skipping variation check for routine ID {routine_id} with package tag {packageTag}.")
+
     if scheduleCategory == "MONTHLY_CHALLENGE":
         expiration_date = calculate_expiration_date(days=28)
     elif scheduleCategory == "WEEKLY_CHALLENGE":
         weeks_mapping = {1: 7, 2: 14, 3: 21, 4: 28}
         try:
-            scheduleWeeks_value = int(scheduleWeeks[0]) if (isinstance(scheduleWeeks, list) and scheduleWeeks) else int(scheduleWeeks)
+            scheduleWeeks_value = int(scheduleWeeks[0]) if isinstance(scheduleWeeks, list) else int(scheduleWeeks)
         except ValueError:
             scheduleWeeks_value = 1
         expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
@@ -561,6 +577,12 @@ def add_individual_routine_entry(
     }
     final_action_plan["data"]["routines"].append(individual_entry)
 
+    # Only update used variations if not a workout routine
+    if packageTag.upper() != "MOVEMENT BASICS":
+        final_action_plan["data"]["usedVariations"].extend(list(variation_names))
+        print(f"DEBUG: Updated used variations list: {final_action_plan['data']['usedVariations']}")
+
+    # SUPER ROUTINE HANDLING: If a parent is provided, add its super routine if not already there.
     if parentRoutineId:
         super_routine_key = next(
             (key for key, config in SUPER_ROUTINE_CONFIG.items() if config["routineId"] == parentRoutineId),
@@ -623,12 +645,28 @@ def add_individual_routine_entry_without_parent(
     if not routine:
         return
 
+    # Only check variations if packageTag is not "MOVEMENT BASICS"
+    if packageTag.upper() != "MOVEMENT BASICS":
+        routine_variations = routine.get('attributes', {}).get('variations', [])
+        variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
+        used_variations = set(final_action_plan["data"].get("usedVariations", []))
+
+        print(f"DEBUG: Routine ID {routine_id} variations: {variation_names}")
+        print(f"DEBUG: Currently used variations: {used_variations}")
+
+        if not used_variations.isdisjoint(variation_names):
+            print(f"DEBUG: Routine ID {routine_id} has overlapping variations {variation_names & used_variations}; skipping.")
+            return
+    else:
+        variation_names = set()
+        print(f"DEBUG: Skipping variation check for routine ID {routine_id} with package tag {packageTag}.")
+
     if scheduleCategory == "MONTHLY_CHALLENGE":
         expiration_date = calculate_expiration_date(days=28)
     elif scheduleCategory == "WEEKLY_CHALLENGE":
         weeks_mapping = {1: 7, 2: 14, 3: 21, 4: 28}
         try:
-            scheduleWeeks_value = int(scheduleWeeks[0]) if (isinstance(scheduleWeeks, list) and scheduleWeeks) else int(scheduleWeeks)
+            scheduleWeeks_value = int(scheduleWeeks[0]) if isinstance(scheduleWeeks, list) else int(scheduleWeeks)
         except ValueError:
             scheduleWeeks_value = 1
         expiration_days = weeks_mapping.get(scheduleWeeks_value, 7)
@@ -673,6 +711,20 @@ def add_individual_routine_entry_without_parent(
         **({"expirationDate": expiration_date} if scheduleCategory in ["MONTHLY_CHALLENGE", "WEEKLY_CHALLENGE"] else {})
     }
     final_action_plan["data"]["routines"].append(individual_entry)
+
+    # Only update used variations if not a workout routine
+    if packageTag.upper() != "MOVEMENT BASICS":
+        final_action_plan["data"]["usedVariations"].extend(list(variation_names))
+        print(f"DEBUG: Updated used variations list: {final_action_plan['data']['usedVariations']}")
+
+
+def clean_final_action_plan(final_action_plan: dict) -> None:
+    """
+    Removes temporary fields (such as the used variations list) from the final action plan.
+    """
+    if "usedVariations" in final_action_plan["data"]:
+        del final_action_plan["data"]["usedVariations"]
+        print("DEBUG: Removed 'usedVariations' from final action plan.")
 
 
 def create_individual_routines(selected_pkgs, routines_data, target_package='GRATITUDE BASICS'):
@@ -1859,7 +1911,7 @@ def main(host):
             "routines": []
         }
     }
-
+    final_action_plan["data"]["usedVariations"] = []
 
     routine_unique_id_map = build_routine_unique_id_map(routines)
     #print("Routine Unique ID -> ID Mapping:", routine_unique_id_map)
@@ -2172,7 +2224,7 @@ def main(host):
     update_parent_durationCalculated_and_goal(final_action_plan, SUPER_ROUTINE_CONFIG)
     convert_durations_to_int(final_action_plan)
     update_duration_for_specific_routines(final_action_plan, routine_unique_id_map, daily_time)
-
+    clean_final_action_plan(final_action_plan)
     save_action_plan_json(final_action_plan)
     if app_env == "development":
         strapi_post_action_plan(final_action_plan, account_id, 'development')
