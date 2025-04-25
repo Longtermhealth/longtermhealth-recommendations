@@ -896,71 +896,172 @@ def target_order_for_tags(tags: List[str], movement_orders: dict) -> int:
     return 3
 
 
-def select_routines(tag_counts: Dict[str, int], routines: List[Dict[str, Any]], movement_orders: dict) -> List[Dict[str, Any]]:
+def select_routines(tag_counts: Dict[str, int],
+                    routines: List[Dict[str, Any]],
+                    movement_orders: dict) -> List[Dict[str, Any]]:
     """
-    Selects routines based on tag combinations and their required counts. For each tag combination, it:
-      - Finds matching routines using match_routines_by_tags.
-      - Computes a target order from the individual tags (using movement_orders).
-      - Sorts the matched routines by the absolute difference between their internal "order" and the target.
-      - Then selects routines while respecting variation constraints.
-    Finally, routines are reordered by primary muscle.
-    """
-    selected_routines = []
+    Selects routines according to the given tag_counts and movement_orders. This function:
+      - Finds routines whose tags match each combination and sorts them by closeness to a computed target order.
+      - Applies variation constraints to prevent duplicate or conflicting exercises.
+      - Detects left/right pairs by their 'name' field and schedules them consecutively, always inserting ‘links’ before ‘rechts’.
+      - Reorders the final selection by primary muscle group to balance the workout.
+     """
+    selected_routines: List[Dict[str, Any]] = []
     selected_ids: Set[int] = set()
     used_variations: Set[str] = set()
 
-    print("Starting select_routines with tag_counts:", tag_counts)
+    # print("DEBUG >>> enter select_routines")
+    # print(f"DEBUG: tag_counts = {tag_counts}")
 
-    # Process tag combinations in order of highest priority (most tags) first.
-    sorted_tag_combinations = sorted(tag_counts.keys(), key=lambda x: len(x.split(',')), reverse=True)
-    print("Sorted tag combinations:", sorted_tag_combinations)
+    sorted_tag_combinations = sorted(
+        tag_counts.keys(),
+        key=lambda x: len(x.split(',')),
+        reverse=True
+    )
+    # print(f"DEBUG: sorted_tag_combinations = {sorted_tag_combinations}")
 
-    for tag_combination in sorted_tag_combinations:
-        required_count = tag_counts[tag_combination]
-        tags = [tag.strip() for tag in tag_combination.split(',')]
-        print(
-            "Processing tag combination '%s' requiring %d routines; tags: %s" % (tag_combination, required_count, tags))
+    for combo in sorted_tag_combinations:
+        need = tag_counts[combo]
+        tags = [t.strip() for t in combo.split(',')]
+        # print(f"\nDEBUG --- combo '{combo}' needs {need}, tags={tags}")
 
         matched = match_routines_by_tags(routines, tags)
-        print("Found %d routines matching tags %s" % (len(matched), tags))
+        target = target_order_for_tags(tags, movement_orders)
+        # print(f"DEBUG: {len(matched)} matched; target_order = {target}")
 
-        # Compute target order based on the individual tags and movement_orders.
-        target_order = target_order_for_tags(tags, movement_orders)
+        matched.sort(
+            key=lambda r: abs(int(r.get("attributes", {}).get("order", 999)) - target)
+        )
+        # for r in matched:
+        #     print(f"DEBUG: matched ID {r['id']} order={r['attributes'].get('order','N/A')}")
 
-        # Sort matched routines by the absolute difference of their internal order to target_order.
-        matched = sorted(matched, key=lambda r: abs(int(r.get("attributes", {}).get("order", 999)) - target_order))
-        for r in matched:
-            order_val = r.get("attributes", {}).get("order", "N/A")
-            print("Routine ID %s has order %s (target %d)" % (r.get("id"), order_val, target_order))
-
-        count_added = 0
+        count = 0
 
         for routine in matched:
-            if count_added >= required_count:
+            if count >= need:
+                # print(f"DEBUG: reached required count={need}, break")
                 break
 
-            routine_id = routine.get('id')
-            if routine_id in selected_ids:
-                print("Routine ID %s already selected; skipping." % routine_id)
+            rid = routine['id']
+            name = routine['attributes'].get('name', '')
+            # print(f"\nDEBUG: Considering ID {rid} name='{name}'")
+
+            if rid in selected_ids:
+                # print(f"DEBUG: ID {rid} already selected — skip")
                 continue
 
-            routine_variations = routine.get('attributes', {}).get('variations', [])
-            variation_names = {variation['variation'] for variation in routine_variations if 'variation' in variation}
-            if not used_variations.isdisjoint(variation_names):
-                print("Routine ID %s has overlapping variations %s with already used %s; skipping." %
-                      (routine_id, variation_names, used_variations))
+            lower = name.lower()
+
+            if lower.endswith('links') or lower.endswith('rechts'):
+                base, side = name.rsplit(' ', 1)
+                other = 'rechts' if side.lower() == 'links' else 'links'
+                pair_name = f"{base} {other}"
+                # print(f"DEBUG: '{name}' ends with '{side}', looking for '{pair_name}'")
+
+                counterpart = next(
+                    (r for r in matched
+                     if r['attributes'].get('name', '') == pair_name),
+                    None
+                )
+                # if counterpart:
+                #     print(f"DEBUG: Found counterpart ID {counterpart['id']} name='{pair_name}'")
+                # else:
+                #     print(f"DEBUG: No counterpart found for '{name}'")
+
+                if counterpart:
+                    cid = counterpart['id']
+
+                    if cid not in selected_ids:
+                        # print("DEBUG: Neither side chosen yet → selecting BOTH")
+                        for side_routine in (routine, counterpart):
+                            sid = side_routine['id']
+                            sname = side_routine['attributes'].get('name', '')
+                            selected_routines.append(side_routine)
+                            selected_ids.add(sid)
+
+                            vars_ = side_routine['attributes'].get('variations', [])
+                            var_names = {v['variation'] for v in vars_ if 'variation' in v}
+                            used_variations.update(var_names)
+                            count += 1
+                            # print(f"DEBUG: paired select ID {sid} '{sname}', count={count}")
+                        continue
+
+
+                    else:
+                        idx_existing = next(
+                            i for i, r in enumerate(selected_routines)
+                            if r['id'] == cid
+                        )
+                        # print(f"DEBUG: counterpart already selected at idx={idx_existing} → inserting this one after")
+                        selected_routines.insert(idx_existing + 1, routine)
+                        selected_ids.add(rid)
+                        vars_ = routine['attributes'].get('variations', [])
+                        var_names = {v['variation'] for v in vars_ if 'variation' in v}
+                        used_variations.update(var_names)
+                        count += 1
+                        # print(f"DEBUG: inserted paired side ID {rid} at pos={idx_existing+1}, count={count}")
+                        continue
+
+
+            vars_ = routine['attributes'].get('variations', [])
+            var_names = {v['variation'] for v in vars_ if 'variation' in v}
+            overlap = var_names & used_variations
+            # print(f"DEBUG: variation_names={var_names}, used_variations={used_variations}")
+            if overlap:
+                # print(f"DEBUG: overlap {overlap} → skip ID {rid}")
                 continue
+
 
             selected_routines.append(routine)
-            selected_ids.add(routine_id)
-            used_variations.update(variation_names)
-            count_added += 1
-            print("Selected routine ID %s for tag combination '%s'. Total added: %d" % (
-            routine_id, tag_combination, count_added))
+            selected_ids.add(rid)
+            used_variations.update(var_names)
+            count += 1
+            # print(f"DEBUG: Selected single ID {rid}, count={count}")
 
-    reordered = reorder_by_primary_muscle(selected_routines)
-    print("After reordering, final selected routine IDs:", [r.get('id') for r in reordered])
-    return reordered
+        # print(f"DEBUG --- done combo '{combo}', got {count}")
+
+
+    # print(f"\nDEBUG: before reorder {[r['id'] for r in selected_routines]}")
+    result = reorder_by_primary_muscle(selected_routines)
+    # print(f"DEBUG: after reorder {[r['id'] for r in result]}")
+
+
+    pair_map: Dict[str, Dict[str, Dict[str, Any]]] = {}
+    for r in result:
+        nm = r['attributes'].get('name', '')
+        ln = nm.lower()
+        if ln.endswith('links') or ln.endswith('rechts'):
+            base, side = nm.rsplit(' ', 1)
+            pair_map.setdefault(base, {})[side.lower()] = r
+
+    for base, sides in pair_map.items():
+        if 'links' in sides and 'rechts' in sides:
+            left = sides['links']
+            right = sides['rechts']
+            i_l = result.index(left)
+            i_r = result.index(right)
+            if i_r != i_l + 1:
+                node = result.pop(i_r)
+                if i_r < i_l:
+                    i_l -= 1
+                result.insert(i_l + 1, node)
+                # print(f"DEBUG: moved '{right['attributes'].get('name')}' to idx={i_l+1}")
+
+
+    for base, sides in pair_map.items():
+        if 'links' in sides and 'rechts' in sides:
+            left = sides['links']
+            right = sides['rechts']
+            i_l = result.index(left)
+            i_r = result.index(right)
+            if i_l > i_r:
+                result[i_l], result[i_r] = result[i_r], result[i_l]
+                # print(f"DEBUG: swapped '{left['attributes'].get('name')}' and '{right['attributes'].get('name')}'")
+
+    # print(f"DEBUG: final order {[r['id'] for r in result]}")
+    # print("DEBUG <<< exit select_routines")
+    return result
+
 
 
 def match_routines_by_tags(routines: List[Dict[str, Any]], tags: List[str]) -> List[Dict[str, Any]]:
