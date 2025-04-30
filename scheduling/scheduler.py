@@ -2019,38 +2019,40 @@ def main(host):
 
 
     if daily_time == 20:
-
         full_body_training_tag_counts = {
             "parentRoutineId": 997,
             "tags": {
-                "warm-up": 2,
-                "lower_body_strength_training": 2,
-                "upper_body_strength_training": 2,
-                "core_strength_training": 2,
-                "mobility_sport": 2
+                "warm-up, 1set": 2,
+                "lower_body_strength_training, 3set": 2,
+                "upper_body_strength_training, 3set": 2,
+                "core_strength_training, 3set": 2,
+                "cooldown, 1set": 2,
             }
         }
 
         lower_body_strength_training_tag_counts = {
             "parentRoutineId": 996,
             "tags": {
-                "warm-up, lower body": 2,
-                "lower_body_strength_training": 6
+                "warm-up, lower body, 1set": 2,
+                "lower_body_strength_training, 3set": 5,
+                "cooldown, 1set": 2,
             }
         }
 
         upper_body_strength_training_tag_counts = {
             "parentRoutineId": 995,
             "tags": {
-                "warm-up, upper body": 2,
-                "upper_body_strength_training": 5
+                "warm-up, upper body, 1set": 2,
+                "upper_body_strength_training, 3set": 5,
+                "cooldown, 1set": 2,
             }
         }
         core_strength_training_tag_counts = {
             "parentRoutineId": 994,
             "tags": {
-                "warm-up": 2,
-                "core_strength_training": 5
+                "warm-up, 1set": 2,
+                "core_strength_training, 3set": 5,
+                "cooldown, 1set": 2,
             }
         }
     elif daily_time in (40, 50):
@@ -2058,34 +2060,37 @@ def main(host):
         full_body_training_tag_counts = {
             "parentRoutineId": 997,
             "tags": {
-                "warm-up": 2,
-                "lower_body_strength_training": 4,
-                "upper_body_strength_training": 4,
-                "core_strength_training": 4,
-                "mobility_sport": 2
+                "warm-up, 1set": 2,
+                "lower_body_strength_training, 3set": 4,
+                "upper_body_strength_training, 3set": 4,
+                "core_strength_training, 3set": 4,
+                "cooldown, 1set": 2
             }
         }
 
         lower_body_strength_training_tag_counts = {
             "parentRoutineId": 996,
             "tags": {
-                "warm-up, lower body": 2,
-                "lower_body_strength_training": 14
+                "warm-up, lower body, 1set": 2,
+                "lower_body_strength_training, 3set": 14,
+                "cooldown, 1set": 2
             }
         }
 
         upper_body_strength_training_tag_counts = {
             "parentRoutineId": 995,
             "tags": {
-                "warm-up, upper body": 2,
-                "upper_body_strength_training": 14
+                "warm-up, upper body, 1set": 2,
+                "upper_body_strength_training, 3set": 14,
+                "cooldown, 1set": 2
             }
         }
         core_strength_training_tag_counts = {
             "parentRoutineId": 994,
             "tags": {
-                "warm-up": 2,
-                "core_strength_training": 13
+                "warm-up, 1set": 2,
+                "core_strength_training, 3set": 14,
+                "cooldown, 1set": 2
             }
         }
     elif daily_time == 90:
@@ -2093,34 +2098,37 @@ def main(host):
         full_body_training_tag_counts = {
             "parentRoutineId": 997,
             "tags": {
-                "warm-up": 3,
-                "lower_body_strength_training": 5,
-                "upper_body_strength_training": 5,
-                "core_strength_training": 6,
-                "mobility_sport": 3
+                "warm-up, 1set": 3,
+                "lower_body_strength_training, 3set": 5,
+                "upper_body_strength_training, 3set": 5,
+                "core_strength_training, 3set": 5,
+                "cooldown, 1set": 3
             }
         }
 
         lower_body_strength_training_tag_counts = {
             "parentRoutineId": 996,
             "tags": {
-                "warm-up, lower body": 2,
-                "lower_body_strength_training": 18
+                "warm-up, lower body, 1set": 2,
+                "lower_body_strength_training, 3set": 18,
+                "cooldown, 1set": 2
             }
         }
 
         upper_body_strength_training_tag_counts = {
             "parentRoutineId": 995,
             "tags": {
-                "warm-up, upper body": 2,
-                "upper_body_strength_training": 18
+                "warm-up, upper body, 1set": 2,
+                "upper_body_strength_training, 3set": 18,
+                "cooldown, 1set": 2
             }
         }
         core_strength_training_tag_counts = {
             "parentRoutineId": 994,
             "tags": {
-                "warm-up": 2,
-                "core_strength_training": 18
+                "warm-up, 1set": 2,
+                "core_strength_training, 3set": 18,
+                "cooldown, 1set": 2
             }
         }
 
