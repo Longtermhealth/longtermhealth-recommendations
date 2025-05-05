@@ -563,16 +563,16 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
         completed_count = completions_by_pillar.get(pillar, {}).get("completed", 0)
         not_completed_count = scheduled_total - completed_count
         init_score = initial_health_scores.get(pillar, 50)
-        dampening = (100 - init_score) / 90
+        dampening = (100 - init_score) / 90.0
         delta_completed = 10 * dampening * (1 - math.exp(-k * completed_count))
         delta_not = 10 * dampening * (1 - math.exp(-k * not_completed_count))
-        final_delta = delta_completed - (delta_not / 3)
+        final_delta = delta_completed - (delta_not / 3.0)
         new_score = init_score + final_delta
         new_score = min(max(new_score, 0), 100)
         final_scores[pillar] = new_score
         final_deltas[pillar] = final_delta
         print(f"{pillar}: scheduled={scheduled_total}, completed={completed_count}, not_completed={not_completed_count}")
-        print(f"  delta_completed={delta_completed:.4f}, delta_not_component={-delta_not/3:.4f}, final_delta={final_delta:.4f}")
+        print(f"  delta_completed={delta_completed:.4f}, delta_not_component={-delta_not/3.0:.4f}, final_delta={final_delta:.4f}")
         print(f"  init_score={init_score}, new_score={new_score:.4f}")
     base_structure = create_health_scores_with_structure(account_id, final_scores)
     for entry in base_structure["data"]["pillarScores"]:
@@ -580,7 +580,6 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
         entry["delta"] = round(final_deltas.get(p, 0), 2)
     print(f"calculate_first_month_update_from_pretty_final end for account {account_id}")
     return base_structure
-
 
 @app.route('/event', methods=['POST'])
 def event():
