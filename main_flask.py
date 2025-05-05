@@ -196,113 +196,6 @@ def hello():
     return "Hello, Flask is working!"
 
 
-def recalc_action_plan(payload, host):
-    unique_id  = payload.get("actionPlanUniqueId")
-    account_id = payload.get("accountId")
-
-    if not unique_id:
-        app.logger.error("Missing actionPlanUniqueId in payload")
-        return {"error": "missing-action-plan-id"}
-
-    if account_id is None:
-        app.logger.error("Missing accountId in payload")
-        return {"error": "missing-account-id"}
-
-    try:
-        response = strapi_get_action_plan(unique_id, host)
-    except Exception as e:
-        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
-        return {"error": "strapi-fetch-failed"}
-
-    if not response or "data" not in response:
-        app.logger.error("No action plan found for uniqueId: %s", unique_id)
-        return {"error": "not-found"}
-
-    old_plan = response["data"]
-
-    routines = old_plan.get("routines")
-    if not isinstance(routines, list):
-        app.logger.error("Expected 'routines' list but got %s", type(routines))
-        routines = []
-
-    app.logger.info("Found %d routines in action plan %s", len(routines), unique_id)
-
-    for r in routines:
-        app.logger.debug("Routine loaded: id=%s, name=%s",
-                         r.get("routineId"), r.get("displayName"))
-
-    matching = print_matching_routine_details(
-        new_data=payload,
-        old_action_plan=old_plan
-    )
-    app.logger.info("Computed matching routines: %s", matching)
-
-    strapi_matches = list_strapi_matches_with_original(matching)
-    app.logger.info("Enriched Strapi matches: %s", strapi_matches)
-
-    return {
-        "actionPlanUniqueId": unique_id,
-        "matches": strapi_matches
-    }
-
-def renew_action_plan(payload, host):
-    unique_id = payload.get("actionPlanUniqueId")
-    if not unique_id:
-        app.logger.error("Missing actionPlanUniqueId in payload")
-        return {"error": "missing-action-plan-id"}
-
-    try:
-        response = strapi_get_action_plan(unique_id, host)
-    except Exception as e:
-        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
-        return {"error": "strapi-fetch-failed"}
-
-    if not response or "data" not in response:
-        app.logger.error("No action plan found for uniqueId: %s", unique_id)
-        return {"error": "not-found"}
-
-    old = response["data"]
-
-    new_plan = json.loads(json.dumps(old))
-    prev_id = old.get("actionPlanUniqueId")
-    new_id = str(uuid.uuid4())
-    new_plan["previousActionPlanUniqueId"] = prev_id
-    new_plan["actionPlanUniqueId"] = new_id
-    app.logger.info("Cloned plan %s → %s", prev_id, new_id)
-
-    latest_changes = {}
-    for ev in payload.get("changeLog", []):
-        if (
-            ev.get("eventEnum") == "ROUTINE_SCHEDULE_CHANGE"
-            and ev.get("changeTarget") == "ROUTINE"
-            and ev.get("eventDetails", {}).get("scheduleCategory") == "WEEKLY_ROUTINE"
-        ):
-            rid = int(ev.get("targetId", 0))
-            event_date = ev.get("eventDate")
-            for ch in ev.get("changes", []):
-                if ch.get("changedProperty") == "SCHEDULE_DAYS":
-                    # parse newValue into a list of ints
-                    try:
-                        days = json.loads(ch.get("newValue", "[]"))
-                    except (TypeError, json.JSONDecodeError):
-                        raw = ch.get("newValue", "")
-                        days = [int(c) for c in raw if c.isdigit()]
-                    # keep only the most recent change
-                    prev = latest_changes.get(rid)
-                    if not prev or event_date > prev["eventDate"]:
-                        latest_changes[rid] = {"scheduleDays": days, "eventDate": event_date}
-
-    for routine in new_plan.get("routines", []):
-        rid = routine.get("routineId") or routine.get("routineUniqueId")
-        if rid in latest_changes:
-            old_days = routine.get("scheduleDays", [])
-            new_days = latest_changes[rid]["scheduleDays"]
-            routine["scheduleDays"] = new_days
-            app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
-
-    return new_plan
-
-
 
 def compute_routine_completion(routine):
     stats = routine.get("completionStatistics", [])
@@ -577,47 +470,157 @@ def event():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
 
+    # 1) Parse and validate the outer envelope
     data = request.get_json()
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
-    insights, payload = process_event_data(data)
-    if payload is None:
-        return jsonify({"error": "Invalid eventPayload JSON"}), 400
+    event_type = data.get("eventEnum")
+    raw_payload = data.get("eventPayload")
+    if not event_type or raw_payload is None:
+        return jsonify({"error": "Missing eventEnum or eventPayload"}), 400
 
-    # log a pretty-printed payload for debugging
-    pretty_payload = json.dumps(payload, indent=4)
-    print('pretty_payload', pretty_payload)
+    # 2) Decode eventPayload (it may be JSON‐encoded string or dict)
+    if isinstance(raw_payload, str):
+        try:
+            payload = json.loads(raw_payload)
+        except json.JSONDecodeError as e:
+            app.logger.error("Invalid JSON in eventPayload: %s", e)
+            return jsonify({"error": "Invalid eventPayload JSON"}), 400
+    elif isinstance(raw_payload, dict):
+        payload = raw_payload
+    else:
+        return jsonify({"error": "Unexpected eventPayload type"}), 400
 
-    # now payload is a dict, so .get() works
-    action_plan_id = payload.get('actionPlanUniqueId', 0)
-    account_id     = payload.get('accountId', 0)
-
-    initial_health_scores = strapi_get_health_scores(account_id, host)
-    action_plan           = strapi_get_action_plan(action_plan_id, host)
-
-    final_scores = calculate_first_month_update_from_pretty_final(
+    # 3) (Optional) Compute and log your health‐score update:
+    account_id       = payload.get("accountId", 0)
+    action_plan_uid  = payload.get("actionPlanUniqueId", 0)
+    initial_scores   = strapi_get_health_scores(account_id, host)
+    action_plan_body = strapi_get_action_plan(action_plan_uid, host)
+    final_scores     = calculate_first_month_update_from_pretty_final(
         account_id=account_id,
-        action_plan=action_plan,
+        action_plan=action_plan_body,
         pretty_payload=payload,
-        initial_health_scores=initial_health_scores
+        initial_health_scores=initial_scores
     )
-    print("Final Health Scores per Pillar:", final_scores)
+    app.logger.info("Final Health Scores per Pillar: %s", final_scores)
 
-    event_type = data.get('eventEnum')
-    if not event_type:
-        return jsonify({"error": "Missing eventEnum in payload"}), 400
-
-    if event_type == 'RECALCULATE_ACTION_PLAN':
+    # 4) Branch on event type
+    if event_type == "RECALCULATE_ACTION_PLAN":
         result = recalc_action_plan(payload, host)
-        print('RECALCULATE_ACTION_PLAN')
-    elif event_type == 'RENEW_ACTION_PLAN':
-        print('RENEW_ACTION_PLAN')
+
+    elif event_type == "RENEW_ACTION_PLAN":
         result = renew_action_plan(payload, host)
+
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
 
     return jsonify(result), 200
+
+
+def recalc_action_plan(payload, host):
+    """
+    Compare incoming completion stats to the Strapi plan
+    and return any routines that match.
+    """
+    unique_id  = payload.get("actionPlanUniqueId")
+    account_id = payload.get("accountId")
+
+    if not unique_id:
+        app.logger.error("Missing actionPlanUniqueId in payload")
+        return {"error": "missing-action-plan-id"}
+    if account_id is None:
+        app.logger.error("Missing accountId in payload")
+        return {"error": "missing-account-id"}
+
+    try:
+        resp = strapi_get_action_plan(unique_id, host)
+    except Exception as e:
+        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
+        return {"error": "strapi-fetch-failed"}
+
+    if not resp or "data" not in resp:
+        app.logger.error("No action plan found for uniqueId: %s", unique_id)
+        return {"error": "not-found"}
+
+    plan = resp["data"]
+    routines = plan.get("routines") or []
+    if not isinstance(routines, list):
+        app.logger.error("Expected 'routines' list but got %s", type(routines))
+        routines = []
+
+    app.logger.info("Found %d routines in plan %s", len(routines), unique_id)
+
+    matches = print_matching_routine_details(new_data=payload, old_action_plan=plan)
+    app.logger.info("Computed matching routines: %s", matches)
+
+    enriched = list_strapi_matches_with_original(matches)
+    app.logger.info("Enriched Strapi matches: %s", enriched)
+
+    return {
+        "actionPlanUniqueId": unique_id,
+        "matches": enriched
+    }
+
+
+def renew_action_plan(payload, host):
+    """
+    Clone an existing action plan, apply any schedule changes,
+    and return the new plan.
+    """
+    unique_id = payload.get("actionPlanUniqueId")
+    if not unique_id:
+        app.logger.error("Missing actionPlanUniqueId in payload")
+        return {"error": "missing-action-plan-id"}
+
+    try:
+        resp = strapi_get_action_plan(unique_id, host)
+    except Exception as e:
+        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
+        return {"error": "strapi-fetch-failed"}
+
+    if not resp or "data" not in resp:
+        app.logger.error("No action plan found for uniqueId: %s", unique_id)
+        return {"error": "not-found"}
+
+    old = resp["data"]
+    new_plan = json.loads(json.dumps(old))  # deep copy
+    prev_id  = old.get("actionPlanUniqueId")
+    new_id   = str(uuid.uuid4())
+    new_plan["previousActionPlanUniqueId"] = prev_id
+    new_plan["actionPlanUniqueId"]         = new_id
+    app.logger.info("Cloned plan %s → %s", prev_id, new_id)
+
+    # Gather the most recent WEEKLY_ROUTINE scheduleDays changes
+    latest_changes = {}
+    for ev in payload.get("changeLog", []):
+        if (
+            ev.get("eventEnum") == "ROUTINE_SCHEDULE_CHANGE"
+            and ev.get("changeTarget") == "ROUTINE"
+            and ev.get("eventDetails", {}).get("scheduleCategory") == "WEEKLY_ROUTINE"
+        ):
+            rid = int(ev.get("targetId", 0))
+            ed  = ev.get("eventDate")
+            for ch in ev.get("changes", []):
+                if ch.get("changedProperty") == "SCHEDULE_DAYS":
+                    try:
+                        days = json.loads(ch.get("newValue", "[]"))
+                    except (TypeError, json.JSONDecodeError):
+                        days = [int(c) for c in (ch.get("newValue") or "") if c.isdigit()]
+                    prev = latest_changes.get(rid)
+                    if not prev or ed > prev["eventDate"]:
+                        latest_changes[rid] = {"scheduleDays": days, "eventDate": ed}
+
+    # Apply them
+    for r in new_plan.get("routines", []):
+        rid = r.get("routineId") or r.get("routineUniqueId")
+        if rid in latest_changes:
+            old_days = r.get("scheduleDays", [])
+            new_days = latest_changes[rid]["scheduleDays"]
+            r["scheduleDays"] = new_days
+            app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
+
+    return new_plan
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
