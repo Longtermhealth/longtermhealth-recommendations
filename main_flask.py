@@ -37,52 +37,47 @@ k = 0.025
 
 
 def print_matching_routine_details(new_data, old_action_plan):
-    """
-    Extracts routines from the new data that are also found in the old action plan,
-    then prints and returns a list of dictionaries with each routine's id, name,
-    and completion statistics.
+    old_routines = old_action_plan.get("routines", [])
+    print("DEBUG: total routines in old_plan:", len(old_routines))
+    for i, r in enumerate(old_routines[:5]):
+        print(f"DEBUG: old_routine[{i}]:", r)
 
-    Parameters:
-        new_data (dict): The incoming payload that includes 'pillarCompletionStats'
-                         with routine details.
-        old_action_plan (dict): The existing action plan retrieved from Strapi.
-
-    Returns:
-        list: A list of dictionaries. Each dictionary contains:
-              - "id": The routineId.
-              - "name": The routine's displayName.
-              - "statistics": The list of completion statistics (if any).
-    """
     old_routine_ids = set()
-    try:
-        old_routines = old_action_plan.get("routines", [])
-        for routine in old_routines:
-            rid = routine.get('routineId')
-            if rid is not None:
-                old_routine_ids.add(rid)
-    except (KeyError, TypeError) as e:
-        print("Error extracting routine IDs from old action plan:", e)
-        return []
-
-    matching_routines = []
+    for routine in old_routines:
+        # support either field name
+        rid = routine.get('routineUniqueId') or routine.get('routineId')
+        if rid is None:
+            print("⚠️  old routine missing both IDs:", routine)
+            continue
+        print(f"🔍 old routine id={rid}, name={routine.get('displayName','<no name>')}")
+        old_routine_ids.add(rid)
+    print("DEBUG: extracted old_routine_ids:", old_routine_ids)
 
     pillar_stats_list = new_data.get('pillarCompletionStats', [])
-    for pillar in pillar_stats_list:
-        routine_stats_list = pillar.get('routineCompletionStats', [])
-        for routine in routine_stats_list:
-            rid = routine.get('routineId')
+    print("DEBUG: payload has", len(pillar_stats_list), "pillars")
+    matching_routines = []
+
+    for pi, pillar in enumerate(pillar_stats_list):
+        print(f"DEBUG: pillar[{pi}] keys:", list(pillar.keys()))
+        routines_list = pillar.get('routineCompletionStats', [])
+        print(f"DEBUG: pillar[{pi}] has {len(routines_list)} routines")
+        for ri, routine in enumerate(routines_list):
+            rid = routine.get('routineUniqueId') or routine.get('routineId')
+            if rid is None:
+                print("⚠️  new payload routine missing both IDs:", routine)
+                continue
+            print(f"🔎 new routine[{pi}][{ri}] id={rid}, displayName={routine.get('displayName')}")
             if rid in old_routine_ids:
-                routine_details = {
+                print(f"✅ match on id={rid} name={routine.get('displayName')}")
+                matching_routines.append({
                     "id": rid,
                     "name": routine.get('displayName'),
                     "statistics": routine.get('completionStatistics', [])
-                }
-                matching_routines.append(routine_details)
+                })
 
     print("Matching routines (found in both new data and old action plan):")
-    for routine in matching_routines:
-        print("ID: {id}, Name: {name}, Statistics: {statistics}".format(**routine))
-
+    for m in matching_routines:
+        print(f"  → ID: {m['id']}, Name: {m['name']}")
     return matching_routines
 
 
@@ -197,48 +192,51 @@ def hello():
 
 
 def recalc_action_plan(payload, host):
+    """
+    Re-calculate an action plan by fetching the old plan from Strapi,
+    finding matching routines, and returning their enriched list.
+    """
+    print("=== RECALC_ACTION_PLAN DEBUG START ===")
+    print("Payload keys:", list(payload.keys()))
     unique_id  = payload.get("actionPlanUniqueId")
     account_id = payload.get("accountId")
-    app.logger.debug("recalc_action_plan: unique_id=%s account_id=%s", unique_id, account_id)
-    print('unique_id',unique_id)
-    print('account_id', account_id)
-    print('host', host)
+    print("  actionPlanUniqueId:", unique_id)
+    print("  accountId:", account_id)
+
     if not unique_id:
-        app.logger.error("Missing actionPlanUniqueId in payload")
+        print("ERROR: missing actionPlanUniqueId")
         return {"error": "missing-action-plan-id"}
     if account_id is None:
-        app.logger.error("Missing accountId in payload")
+        print("ERROR: missing accountId")
         return {"error": "missing-account-id"}
 
     try:
         old_plan = strapi_get_old_action_plan(unique_id, host)
     except Exception as e:
-        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
+        print("Exception fetching old_plan:", e)
         return {"error": "strapi-fetch-failed"}
-
     if not old_plan:
-        app.logger.error("No action plan found for uniqueId: %s", unique_id)
+        print("ERROR: strapi returned no plan for", unique_id)
         return {"error": "not-found"}
 
-    routines = old_plan.get("routines", [])
-    if not isinstance(routines, list):
-        app.logger.error("Expected 'routines' list but got %s", type(routines))
-        routines = []
+    print("DEBUG: old_plan top-level keys:", list(old_plan.keys()))
+    if "routines" in old_plan and isinstance(old_plan["routines"], list):
+        print("DEBUG: first 3 routines from old_plan:", old_plan["routines"][:3])
 
-    app.logger.info("Found %d routines in action plan %s", len(routines), unique_id)
+    print("––––– DEBUG: about to compute matching routines –––––")
+    sample_pillars = payload.get("pillarCompletionStats", [])[:3]
+    print("Payload pillarCompletionStats sample keys:", [list(p.keys()) for p in sample_pillars])
 
     matching = print_matching_routine_details(
         new_data=payload,
         old_action_plan=old_plan
     )
-    app.logger.info("Computed matching routines: %s", matching)
+    print("––––– DEBUG: matching routines computed:", matching)
 
-    strapi_matches = list_strapi_matches_with_original(matching)
-    app.logger.info("Enriched Strapi matches: %s", strapi_matches)
-
+    print("=== RECALC_ACTION_PLAN DEBUG END ===")
     return {
         "actionPlanUniqueId": unique_id,
-        "matches": strapi_matches
+        "matches": matching
     }
 
 
