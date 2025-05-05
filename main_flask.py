@@ -634,7 +634,7 @@ def event():
         return jsonify({"error": "Missing eventEnum in payload"}), 400
 
     if event_type == 'RECALCULATE_ACTION_PLAN':
-        result = renew_action_plan(payload, host)
+        result = recalc_action_plan(payload, host)
         print('RECALCULATE_ACTION_PLAN')
     elif event_type == 'RENEW_ACTION_PLAN':
         print('RENEW_ACTION_PLAN')
