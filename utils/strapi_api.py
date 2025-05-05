@@ -29,7 +29,7 @@ DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
 DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
 def strapi_get_action_plan(actionPlanId, host):
-    if host == "a941-2001-fb1-76-1958-c0d5-b18e-8957-9361.ngrok-free.app":
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
         base_url = DEV_ACTION_PLAN_ENDPOINT
     else:
@@ -65,8 +65,9 @@ def strapi_get_action_plan(actionPlanId, host):
         print(f"Error while fetching the action plan for account {actionPlanId}: {e}")
         return None
 
+
 def strapi_get_old_action_plan(actionPlanId, host):
-    if host == "a941-2001-fb1-76-1958-c0d5-b18e-8957-9361.ngrok-free.app":
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
         base_url = DEV_ACTION_PLAN_ENDPOINT
     else:
@@ -95,7 +96,7 @@ def strapi_get_old_action_plan(actionPlanId, host):
 
 
 def strapi_get_health_scores(accountId, host):
-    if host == "a941-2001-fb1-76-1958-c0d5-b18e-8957-9361.ngrok-free.app":
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
         base_url = DEV_HEALTH_SCORES_ENDPOINT
     else:
