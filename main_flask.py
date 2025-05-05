@@ -197,7 +197,7 @@ def hello():
 
 
 def recalc_action_plan(data, host):
-    action_plan_id = data.get('actionPlanId')
+    action_plan_id = data.get('actionPlanUniqueId')
     start_date = data.get('startDate')
     period_in_days = data.get('periodInDays')
 
@@ -453,6 +453,19 @@ def create_health_scores_with_structure(account_id, health_scores):
     """
     Builds the final health-scores structure (with interpretation) to post to Strapi.
     """
+    if not isinstance(health_scores, dict) or not health_scores:
+        app.logger.error(
+            "Empty or invalid health_scores for account %s; returning default structure",
+            account_id
+        )
+        return {
+            "data": {
+                "totalScore": 0,
+                "accountId": account_id,
+                "pillarScores": []
+            }
+        }
+
     score_interpretation_dict = {
         "MOVEMENT": {
             "AKTIONSBEFARF": "Es ist Zeit, mehr Bewegung in deinen Alltag zu integrieren. Kleine Schritte können einen großen Unterschied für deine Gesundheit machen!",
