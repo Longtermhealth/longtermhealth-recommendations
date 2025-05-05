@@ -199,7 +199,10 @@ def hello():
 def recalc_action_plan(payload, host):
     unique_id  = payload.get("actionPlanUniqueId")
     account_id = payload.get("accountId")
-
+    print('unique_id',unique_id)
+    print('account_id', account_id)
+    print('payload', payload)
+    print('host', host)
     if not unique_id:
         app.logger.error("Missing actionPlanUniqueId in payload")
         return {"error": "missing-action-plan-id"}
@@ -247,6 +250,11 @@ def recalc_action_plan(payload, host):
 
 def renew_action_plan(payload, host):
     unique_id = payload.get("actionPlanUniqueId")
+    account_id = payload.get("accountId")
+    print('unique_id',unique_id)
+    print('account_id', account_id)
+    print('payload', payload)
+    print('host', host)
     if not unique_id:
         app.logger.error("Missing actionPlanUniqueId in payload")
         return {"error": "missing-action-plan-id"}
@@ -438,6 +446,7 @@ def create_health_scores_with_structure(account_id, health_scores):
     """
     Builds the final health-scores structure (with interpretation) to post to Strapi.
     """
+    print('health_scores',health_scores)
     if not isinstance(health_scores, dict) or not health_scores:
         app.logger.error(
             "Empty or invalid health_scores for account %s; returning default structure",
