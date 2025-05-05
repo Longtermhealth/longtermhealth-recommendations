@@ -6,7 +6,7 @@ import uuid
 import os
 from flask import Flask, jsonify, request
 from config import Config
-from utils.strapi_api import strapi_get_action_plan, strapi_get_health_scores
+from utils.strapi_api import strapi_get_action_plan, strapi_get_old_action_plan, strapi_get_health_scores
 from utils.typeform_api import (
     get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_followup
 )
@@ -199,40 +199,33 @@ def hello():
 def recalc_action_plan(payload, host):
     unique_id  = payload.get("actionPlanUniqueId")
     account_id = payload.get("accountId")
+    app.logger.debug("recalc_action_plan: unique_id=%s account_id=%s", unique_id, account_id)
     print('unique_id',unique_id)
     print('account_id', account_id)
-    print('payload', payload)
     print('host', host)
     if not unique_id:
         app.logger.error("Missing actionPlanUniqueId in payload")
         return {"error": "missing-action-plan-id"}
-
     if account_id is None:
         app.logger.error("Missing accountId in payload")
         return {"error": "missing-account-id"}
 
     try:
-        response = strapi_get_action_plan(unique_id, host)
+        old_plan = strapi_get_old_action_plan(unique_id, host)
     except Exception as e:
         app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
         return {"error": "strapi-fetch-failed"}
 
-    if not response or "data" not in response:
+    if not old_plan:
         app.logger.error("No action plan found for uniqueId: %s", unique_id)
         return {"error": "not-found"}
 
-    old_plan = response["data"]
-
-    routines = old_plan.get("routines")
+    routines = old_plan.get("routines", [])
     if not isinstance(routines, list):
         app.logger.error("Expected 'routines' list but got %s", type(routines))
         routines = []
 
     app.logger.info("Found %d routines in action plan %s", len(routines), unique_id)
-
-    for r in routines:
-        app.logger.debug("Routine loaded: id=%s, name=%s",
-                         r.get("routineId"), r.get("displayName"))
 
     matching = print_matching_routine_details(
         new_data=payload,
@@ -248,36 +241,37 @@ def recalc_action_plan(payload, host):
         "matches": strapi_matches
     }
 
+
 def renew_action_plan(payload, host):
-    unique_id = payload.get("actionPlanUniqueId")
+    unique_id  = payload.get("actionPlanUniqueId")
     account_id = payload.get("accountId")
-    print('unique_id',unique_id)
-    print('account_id', account_id)
-    print('payload', payload)
-    print('host', host)
+    app.logger.debug("renew_action_plan: unique_id=%s account_id=%s", unique_id, account_id)
+
     if not unique_id:
         app.logger.error("Missing actionPlanUniqueId in payload")
         return {"error": "missing-action-plan-id"}
 
     try:
-        response = strapi_get_action_plan(unique_id, host)
+        old_plan = strapi_get_old_action_plan(unique_id, host)
     except Exception as e:
         app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
         return {"error": "strapi-fetch-failed"}
 
-    if not response or "data" not in response:
+    if not old_plan:
         app.logger.error("No action plan found for uniqueId: %s", unique_id)
         return {"error": "not-found"}
-
-    old = response["data"]
-
-    new_plan = json.loads(json.dumps(old))
-    prev_id = old.get("actionPlanUniqueId")
-    new_id = str(uuid.uuid4())
+    print("=== OLD Action Plan JSON ===")
+    print(json.dumps(old_plan, indent=4))
+    print("============================")
+    # deep‐copy the attributes dict
+    new_plan = json.loads(json.dumps(old_plan))
+    prev_id  = old_plan.get("actionPlanUniqueId")
+    new_id   = str(uuid.uuid4())
     new_plan["previousActionPlanUniqueId"] = prev_id
-    new_plan["actionPlanUniqueId"] = new_id
+    new_plan["actionPlanUniqueId"]         = new_id
     app.logger.info("Cloned plan %s → %s", prev_id, new_id)
 
+    # apply any schedule‐day changes from the changeLog
     latest_changes = {}
     for ev in payload.get("changeLog", []):
         if (
@@ -285,19 +279,19 @@ def renew_action_plan(payload, host):
             and ev.get("changeTarget") == "ROUTINE"
             and ev.get("eventDetails", {}).get("scheduleCategory") == "WEEKLY_ROUTINE"
         ):
-            rid = int(ev.get("targetId", 0))
+            rid        = int(ev.get("targetId", 0))
             event_date = ev.get("eventDate")
             for ch in ev.get("changes", []):
                 if ch.get("changedProperty") == "SCHEDULE_DAYS":
                     try:
                         days = json.loads(ch.get("newValue", "[]"))
                     except (TypeError, json.JSONDecodeError):
-                        raw = ch.get("newValue", "")
-                        days = [int(c) for c in raw if c.isdigit()]
+                        days = [int(c) for c in str(ch.get("newValue", "")) if c.isdigit()]
                     prev = latest_changes.get(rid)
                     if not prev or event_date > prev["eventDate"]:
                         latest_changes[rid] = {"scheduleDays": days, "eventDate": event_date}
 
+    # patch the routines array in our new_plan
     for routine in new_plan.get("routines", []):
         rid = routine.get("routineId") or routine.get("routineUniqueId")
         if rid in latest_changes:
@@ -305,9 +299,10 @@ def renew_action_plan(payload, host):
             new_days = latest_changes[rid]["scheduleDays"]
             routine["scheduleDays"] = new_days
             app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
-
+    print("=== New Action Plan JSON ===")
+    print(json.dumps(new_plan, indent=4))
+    print("============================")
     return new_plan
-
 
 
 def compute_routine_completion(routine):
@@ -537,25 +532,29 @@ def create_health_scores_with_structure(account_id, health_scores):
 
 
 def calculate_first_month_update_from_pretty_final(account_id, action_plan, pretty_payload, initial_health_scores):
+    print(f"calculate_first_month_update_from_pretty_final start for account {account_id}")
     if action_plan is None:
-        app.logger.error("Called calculate_first_month_update_from_pretty_final with no action_plan for account %s", account_id)
+        print(f"ERROR: no action_plan for account {account_id}")
         return {}
     if isinstance(action_plan, str):
         try:
             action_plan_payload = json.loads(action_plan)
+            print(f"Parsed action_plan string for account {account_id}: {action_plan_payload}")
         except json.JSONDecodeError as e:
-            app.logger.error("Failed to parse action_plan JSON: %s", e)
+            print(f"ERROR: Failed to parse action_plan JSON for account {account_id}: {e}")
             return {}
     elif isinstance(action_plan, dict):
         action_plan_payload = action_plan
+        print(f"Using action_plan dict for account {account_id}: {action_plan_payload}")
     else:
-        app.logger.error("Unexpected type for action_plan: %s", type(action_plan))
+        print(f"ERROR: Unexpected type for action_plan for account {account_id}: {type(action_plan)}")
         return {}
     scheduled_by_pillar = compute_scheduled_by_pillar(action_plan_payload)
+    print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
     completions_by_pillar = extract_pretty_completions(pretty_payload)
+    print(f"completions_by_pillar for account {account_id}: {completions_by_pillar}")
     final_scores = {}
     final_deltas = {}
-    print("First Month Health Score Update (Final combined score):")
     for pillar, info in scheduled_by_pillar.items():
         scheduled_total = info["scheduled"]
         completed_count = completions_by_pillar.get(pillar, {}).get("completed", 0)
@@ -569,13 +568,14 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
         new_score = min(max(new_score, 0), 100)
         final_scores[pillar] = new_score
         final_deltas[pillar] = final_delta
-        print(f"{pillar}: Scheduled = {scheduled_total}, Completed = {completed_count}, Not Completed = {not_completed_count}")
-        print(f"  Delta Completed = {delta_completed:.4f}, Delta Not = {-delta_not/3:.4f}, Final Delta = {final_delta:.4f}")
-        print(f"  Initial Score = {init_score}, New Score = {new_score:.4f}")
+        print(f"{pillar}: scheduled={scheduled_total}, completed={completed_count}, not_completed={not_completed_count}")
+        print(f"  delta_completed={delta_completed:.4f}, delta_not_component={-delta_not/3:.4f}, final_delta={final_delta:.4f}")
+        print(f"  init_score={init_score}, new_score={new_score:.4f}")
     base_structure = create_health_scores_with_structure(account_id, final_scores)
     for entry in base_structure["data"]["pillarScores"]:
         p = entry["pillar"]["pillarEnum"]
         entry["delta"] = round(final_deltas.get(p, 0), 2)
+    print(f"calculate_first_month_update_from_pretty_final end for account {account_id}")
     return base_structure
 
 
@@ -594,7 +594,6 @@ def event():
 
     # log a pretty-printed payload for debugging
     pretty_payload = json.dumps(payload, indent=4)
-    print('data', data)
     print('pretty_payload', pretty_payload)
 
     # now payload is a dict, so .get() works
@@ -602,7 +601,7 @@ def event():
     account_id     = payload.get('accountId', 0)
 
     initial_health_scores = strapi_get_health_scores(account_id, host)
-    action_plan           = strapi_get_action_plan(action_plan_id, host)
+    action_plan           = strapi_get_old_action_plan(action_plan_id, host)
 
     final_scores = calculate_first_month_update_from_pretty_final(
         account_id=account_id,
