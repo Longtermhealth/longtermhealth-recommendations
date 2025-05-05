@@ -384,31 +384,34 @@ def process_event_data(event_data):
     return insights, payload
 
 
-def compute_scheduled_by_pillar(action_plan_payload):
-    """
-    Compute scheduled occurrences per routine from the action plan
-    and aggregate them by pillar.
-
-    Returns:
-      dict: Mapping pillarEnum -> { "scheduled": total scheduled occurrences, "routines": [...] }
-    """
+def compute_scheduled_by_pillar(payload):
+    print("DEBUG: compute_scheduled_by_pillar called with payload keys:", list(payload.keys()))
     scheduled_by_pillar = {}
-    routines = action_plan_payload.get("data", {}).get("routines", [])
-    for routine in routines:
-        # Get pillar enum from the routine (assumes routine["pillar"] exists)
-        pillar = routine.get("pillar", {}).get("pillarEnum", "UNKNOWN")
-        schedule_days = routine.get("scheduleDays", [])
-        schedule_weeks = routine.get("scheduleWeeks", [])
-        total_occurrences = len(schedule_days) * len(schedule_weeks)
-        if pillar not in scheduled_by_pillar:
-            scheduled_by_pillar[pillar] = {"scheduled": 0, "routines": []}
-        scheduled_by_pillar[pillar]["scheduled"] += total_occurrences
-        scheduled_by_pillar[pillar]["routines"].append({
-            "routineId": routine["routineId"],
-            "displayName": routine.get("displayName", "Unknown Routine"),
-            "scheduled": total_occurrences
-        })
+    if "pillarCompletionStats" in payload:
+        print("DEBUG: detected webhook payload")
+        for pillar in payload["pillarCompletionStats"]:
+            pillar_enum = pillar.get("pillarEnum")
+            routines = pillar.get("routineCompletionStats", [])
+            print(f"DEBUG: adding {len(routines)} routines under pillar {pillar_enum}")
+            scheduled_by_pillar[pillar_enum] = routines
+        print("DEBUG: scheduled_by_pillar (webhook) =", scheduled_by_pillar)
+        return scheduled_by_pillar
+    data = payload.get("data", [])
+    print("DEBUG: detected Strapi payload, data length =", len(data))
+    if isinstance(data, list) and data:
+        attributes = data[0].get("attributes", {})
+        routines_list = attributes.get("routines", [])
+        print("DEBUG: routines_list length =", len(routines_list))
+    else:
+        routines_list = []
+        print("DEBUG: no routines_list found")
+    for r in routines_list:
+        pillar_enum = r.get("pillar", {}).get("pillarEnum")
+        scheduled_by_pillar.setdefault(pillar_enum, []).append(r)
+        print(f"DEBUG: appended routine {r.get('routineUniqueId')} to pillar {pillar_enum}")
+    print("DEBUG: scheduled_by_pillar (Strapi) =", scheduled_by_pillar)
     return scheduled_by_pillar
+
 
 
 def extract_pretty_completions(pretty_payload):
