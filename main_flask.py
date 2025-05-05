@@ -408,7 +408,7 @@ def compute_scheduled_by_pillar(payload):
     for r in routines_list:
         pillar_enum = r.get("pillar", {}).get("pillarEnum")
         scheduled_by_pillar.setdefault(pillar_enum, []).append(r)
-        print(f"DEBUG: appended routine {r.get('routineUniqueId')} to pillar {pillar_enum}")
+        #print(f"DEBUG: appended routine {r.get('routineUniqueId')} to pillar {pillar_enum}")
     #print("DEBUG: scheduled_by_pillar (Strapi) =", scheduled_by_pillar)
     return scheduled_by_pillar
 
@@ -553,7 +553,7 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
         print(f"ERROR: Unexpected type for action_plan for account {account_id}: {type(action_plan)}")
         return {}
     scheduled_by_pillar = compute_scheduled_by_pillar(action_plan_payload)
-    print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
+    #print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
     completions_by_pillar = extract_pretty_completions(pretty_payload)
     print(f"completions_by_pillar for account {account_id}: {completions_by_pillar}")
     final_scores = {}
@@ -625,7 +625,7 @@ def event():
         return jsonify({"error": "Missing eventEnum in payload"}), 400
 
     if event_type == 'RECALCULATE_ACTION_PLAN':
-        result = recalc_action_plan(payload, host)
+        result = renew_action_plan(payload, host)
         print('RECALCULATE_ACTION_PLAN')
     elif event_type == 'RENEW_ACTION_PLAN':
         print('RENEW_ACTION_PLAN')
