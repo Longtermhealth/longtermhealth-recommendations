@@ -261,49 +261,39 @@ def renew_action_plan(payload, host):
         app.logger.error("No action plan found for uniqueId: %s", unique_id)
         return {"error": "not-found"}
 
-    new_plan = json.loads(json.dumps(old_plan))
-    prev_id  = old_plan.get("actionPlanUniqueId")
-    new_id   = str(uuid.uuid4())
-    new_plan["previousActionPlanUniqueId"] = prev_id
-    new_plan["actionPlanUniqueId"]         = new_id
-    app.logger.info("Cloned plan %s → %s", prev_id, new_id)
+    data_list = old_plan.get("data")
+    if not isinstance(data_list, list) or not data_list:
+        app.logger.error("Unexpected Strapi payload—'data' missing or empty: %s", old_plan)
+        return {"error": "invalid-action-plan-payload"}
 
-    latest_changes = {}
-    for ev in payload.get("changeLog", []):
-        if (
-            ev.get("eventEnum") == "ROUTINE_SCHEDULE_CHANGE"
-            and ev.get("changeTarget") == "ROUTINE"
-            and ev.get("eventDetails", {}).get("scheduleCategory") == "WEEKLY_ROUTINE"
-        ):
-            rid        = int(ev.get("targetId", 0))
-            event_date = ev.get("eventDate")
-            for ch in ev.get("changes", []):
-                if ch.get("changedProperty") == "SCHEDULE_DAYS":
-                    try:
-                        days = json.loads(ch.get("newValue", "[]"))
-                    except (TypeError, json.JSONDecodeError):
-                        days = [int(c) for c in str(ch.get("newValue", "")) if c.isdigit()]
-                    prev = latest_changes.get(rid)
-                    if not prev or event_date > prev["eventDate"]:
-                        latest_changes[rid] = {"scheduleDays": days, "eventDate": event_date}
+    plan_entry = data_list[0]
+    attrs = plan_entry.get("attributes")
+    if not isinstance(attrs, dict):
+        app.logger.error("Unexpected Strapi payload—'attributes' missing or invalid: %s", plan_entry)
+        return {"error": "invalid-action-plan-payload"}
 
-    for routine in new_plan.get("routines", []):
-        rid = routine.get("routineId") or routine.get("routineUniqueId")
-        if rid in latest_changes:
-            old_days = routine.get("scheduleDays", [])
-            new_days = latest_changes[rid]["scheduleDays"]
-            routine["scheduleDays"] = new_days
-            app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
-    print('old plan: ', old_plan)
-    print('new plan: ', new_plan)
+    prev_id = attrs.get("actionPlanUniqueId")
+    new_id  = str(uuid.uuid4())
+
+    final_action_plan = {
+        "data": {
+            "actionPlanUniqueId":         new_id,
+            "previousActionPlanUniqueId": prev_id,
+            "accountId":                  attrs.get("accountId"),
+            "periodInDays":               attrs.get("periodInDays"),
+            "gender":                     attrs.get("gender", "").upper(),
+            "totalDailyTimeInMins":       attrs.get("totalDailyTimeInMins"),
+            "routines":                   attrs.get("routines", [])
+        }
+    }
+
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
     else:
         app_env = "production"
 
-    strapi_post_action_plan(new_plan, account_id, app_env)
-    return new_plan
-
+    strapi_post_action_plan(final_action_plan, account_id, app_env)
+    return final_action_plan
 
 def compute_routine_completion(routine):
     stats = routine.get("completionStatistics", [])
