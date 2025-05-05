@@ -2,6 +2,7 @@
 import time
 import math
 import json
+import uuid
 import os
 from flask import Flask, jsonify, request
 from config import Config
@@ -9,6 +10,7 @@ from utils.strapi_api import strapi_get_action_plan, strapi_get_health_scores
 from utils.typeform_api import (
     get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_followup
 )
+
 from utils.clickup_api import create_clickup_task
 from utils.data_processing import integrate_answers
 from assessments.health_assessment import HealthAssessment
@@ -263,6 +265,57 @@ def recalc_action_plan(data, host):
 
     return final_action_plan
 
+def renew_action_plan(data, host):
+    old_plan = strapi_get_action_plan(data['actionPlanUniqueId'], host)
+    if not old_plan or 'data' not in old_plan:
+        app.logger.error("No action plan for %s", data['actionPlanUniqueId'])
+        return {"error": "not-found"}
+
+    new_plan = json.loads(json.dumps(old_plan))
+
+    prev_id = old_plan['data']['actionPlanUniqueId']
+    new_id = str(uuid.uuid4())
+    new_plan['data']['previousActionPlanUniqueId'] = prev_id
+    new_plan['data']['actionPlanUniqueId'] = new_id
+    app.logger.info("Copied plan %s → %s", prev_id, new_id)
+
+    latest_schedule_changes = {}
+
+    for ev in data.get('changeLog', []):
+        if (
+            ev.get('eventEnum') == 'ROUTINE_SCHEDULE_CHANGE' and
+            ev.get('changeTarget') == 'ROUTINE' and
+            ev.get('eventDetails', {}).get('scheduleCategory') == 'WEEKLY_ROUTINE'
+        ):
+            rid = int(ev.get('targetId', 0))
+            event_date = ev.get('eventDate')
+
+            for change in ev.get('changes', []):
+                if change.get('changedProperty') == 'SCHEDULE_DAYS':
+
+                    if rid not in latest_schedule_changes or event_date > latest_schedule_changes[rid]['eventDate']:
+                        try:
+                            new_days = json.loads(change.get('newValue', '[]'))
+                        except json.JSONDecodeError:
+                            raw = change.get('newValue', '')
+                            new_days = [int(x) for x in raw if x.isdigit()] if isinstance(raw, str) else []
+
+                        latest_schedule_changes[rid] = {
+                            "scheduleDays": new_days,
+                            "eventDate": event_date
+                        }
+
+    for routine in new_plan['data'].get('routines', []):
+        rid = routine.get('routineId') or routine.get('routineUniqueId')
+        if rid in latest_schedule_changes:
+            old = routine.get('scheduleDays', [])
+            new = latest_schedule_changes[rid]['scheduleDays']
+            routine['scheduleDays'] = new
+            app.logger.info("Routine %s scheduleDays: %s → %s", rid, old, new)
+
+    return new_plan
+
+
 
 def compute_routine_completion(routine):
     stats = routine.get("completionStatistics", [])
@@ -321,16 +374,19 @@ def process_event_data(event_data):
       1. Parsing the outer event.
       2. Parsing the JSON string in 'eventPayload'.
       3. Extracting routine insights.
+
+    Returns:
+        tuple: (insights_dict, payload_dict) or (None, None) on JSON parse error.
     """
     payload_str = event_data.get("eventPayload", "")
     try:
         payload = json.loads(payload_str)
     except json.JSONDecodeError as e:
         print("Error parsing eventPayload:", e)
-        return None
+        return None, None
 
     insights = get_insights(payload)
-    return insights, payload_str
+    return insights, payload
 
 def compute_scheduled_by_pillar(action_plan_payload):
     """
@@ -521,32 +577,33 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
 def event():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
+
     data = request.get_json()
-    #print("data", json.dumps(data, indent=3))
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
 
     insights, payload = process_event_data(data)
-    payload_str = json.loads(payload)
-    pretty_payload = json.dumps(payload_str, indent=4)
+    if payload is None:
+        return jsonify({"error": "Invalid eventPayload JSON"}), 400
+
+    # log a pretty-printed payload for debugging
+    pretty_payload = json.dumps(payload, indent=4)
     print('pretty_payload', pretty_payload)
 
+    # now payload is a dict, so .get() works
+    action_plan_id = payload.get('actionPlanUniqueId', 0)
+    account_id     = payload.get('accountId', 0)
 
-    #
-    action_plan_id = pretty_payload.get('actionPlanUniqueId', 0)
-    account_id = pretty_payload.get('accountId', 0)
     initial_health_scores = strapi_get_health_scores(account_id, host)
-    action_plan = strapi_get_action_plan(action_plan_id, host)
+    action_plan           = strapi_get_action_plan(action_plan_id, host)
+
     final_scores = calculate_first_month_update_from_pretty_final(
         account_id=account_id,
         action_plan=action_plan,
-        pretty_payload=pretty_payload,
+        pretty_payload=payload,
         initial_health_scores=initial_health_scores
     )
     print("Final Health Scores per Pillar:", final_scores)
-
-    #if insights is not None:
-        #print("insights", json.dumps(insights, indent=4))
 
     event_type = data.get('eventEnum')
     if not event_type:
@@ -556,14 +613,12 @@ def event():
         result = recalc_action_plan(data, host)
         print('RECALCULATE_ACTION_PLAN')
     elif event_type == 'RENEWAL_ACTION_PLAN':
-        result = webhook()
         print('RENEWAL_ACTION_PLAN')
-        recalc_action_plan(data, host)
+        result = renew_action_plan(data, host)
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
 
     return jsonify(result), 200
-
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
