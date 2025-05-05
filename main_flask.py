@@ -294,7 +294,7 @@ def renew_action_plan(payload, host):
             new_days = latest_changes[rid]["scheduleDays"]
             routine["scheduleDays"] = new_days
             app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
-
+    print('new plan: ',json.dumps(new_plan, indent=4))
     return new_plan
 
 
