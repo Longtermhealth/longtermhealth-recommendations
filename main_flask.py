@@ -612,8 +612,8 @@ def event():
     if event_type == 'RECALCULATE_ACTION_PLAN':
         result = recalc_action_plan(data, host)
         print('RECALCULATE_ACTION_PLAN')
-    elif event_type == 'RENEWAL_ACTION_PLAN':
-        print('RENEWAL_ACTION_PLAN')
+    elif event_type == 'RENEW_ACTION_PLAN':
+        print('RENEW_ACTION_PLAN')
         result = renew_action_plan(data, host)
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
