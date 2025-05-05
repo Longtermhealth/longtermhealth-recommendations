@@ -371,22 +371,30 @@ def get_insights(payload):
 def process_event_data(event_data):
     """
     Process the entire event data by:
-      1. Parsing the outer event.
-      2. Parsing the JSON string in 'eventPayload'.
-      3. Extracting routine insights.
+      1. Extracting eventPayload (which may be a dict or a JSON‐encoded string).
+      2. Parsing it if necessary.
+      3. Computing routine insights.
 
     Returns:
         tuple: (insights_dict, payload_dict) or (None, None) on JSON parse error.
     """
-    payload_str = event_data.get("eventPayload", "")
-    try:
-        payload = json.loads(payload_str)
-    except json.JSONDecodeError as e:
-        print("Error parsing eventPayload:", e)
+    raw_payload = event_data.get("eventPayload")
+
+    if isinstance(raw_payload, str):
+        try:
+            payload = json.loads(raw_payload)
+        except json.JSONDecodeError as e:
+            app.logger.error(f"Invalid JSON in eventPayload: {raw_payload!r} – {e}")
+            return None, None
+    elif isinstance(raw_payload, dict):
+        payload = raw_payload
+    else:
+        app.logger.error(f"Unexpected type for eventPayload: {type(raw_payload).__name__}")
         return None, None
 
     insights = get_insights(payload)
     return insights, payload
+
 
 def compute_scheduled_by_pillar(action_plan_payload):
     """
