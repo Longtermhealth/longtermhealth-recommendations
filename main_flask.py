@@ -243,56 +243,75 @@ def recalc_action_plan(payload, host):
 
 
 def renew_action_plan(payload, host):
-    unique_id  = payload.get("actionPlanUniqueId")
+    unique_id = payload.get("actionPlanUniqueId")
     account_id = payload.get("accountId")
-    app.logger.debug("renew_action_plan: unique_id=%s account_id=%s", unique_id, account_id)
-
-    if not unique_id:
-        app.logger.error("Missing actionPlanUniqueId in payload")
-        return {"error": "missing-action-plan-id"}
-
+    print("renew_action_plan called with", unique_id, account_id)
+    if not unique_id or account_id is None:
+        print("Missing parameters:", "unique_id" if not unique_id else "", "account_id" if account_id is None else "")
+        return {"error": "missing-action-plan-id" if not unique_id else "missing-account-id"}
     try:
+        print("Fetching old plan for", unique_id)
         old_plan = strapi_get_old_action_plan(unique_id, host)
     except Exception as e:
-        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
+        print("Error fetching old plan:", e)
         return {"error": "strapi-fetch-failed"}
-
-    if not old_plan:
-        app.logger.error("No action plan found for uniqueId: %s", unique_id)
+    data_list = old_plan.get("data", [])
+    if not data_list:
+        print("No data in old plan")
         return {"error": "not-found"}
-
-    data_list = old_plan.get("data")
-    if not isinstance(data_list, list) or not data_list:
-        app.logger.error("Unexpected Strapi payload—'data' missing or empty: %s", old_plan)
-        return {"error": "invalid-action-plan-payload"}
-
-    plan_entry = data_list[0]
-    attrs = plan_entry.get("attributes")
-    if not isinstance(attrs, dict):
-        app.logger.error("Unexpected Strapi payload—'attributes' missing or invalid: %s", plan_entry)
-        return {"error": "invalid-action-plan-payload"}
-
+    attrs = data_list[0].get("attributes", {})
+    print("Old plan attributes:", attrs.keys())
     prev_id = attrs.get("actionPlanUniqueId")
-    new_id  = str(uuid.uuid4())
-
+    new_id = str(uuid.uuid4())
+    print("Cloning plan", prev_id, "→", new_id)
+    latest_changes = {}
+    for ev in payload.get("changeLog", []):
+        print("Processing event:", ev.get("eventEnum"), "for target", ev.get("targetId"))
+        if (
+            ev.get("eventEnum") == "ROUTINE_SCHEDULE_CHANGE"
+            and ev.get("changeTarget") == "ROUTINE"
+            and ev.get("eventDetails", {}).get("scheduleCategory") == "WEEKLY_ROUTINE"
+        ):
+            rid = int(ev.get("targetId", 0))
+            ed = ev.get("eventDate")
+            print("  schedule change on", ed, "for routine", rid)
+            for ch in ev.get("changes", []):
+                if ch.get("changedProperty") == "SCHEDULE_DAYS":
+                    raw = ch.get("newValue", "[]")
+                    try:
+                        days = json.loads(raw)
+                    except:
+                        days = [int(c) for c in str(raw) if c.isdigit()]
+                    print("    parsed days:", days, "from", raw)
+                    prev = latest_changes.get(rid)
+                    if not prev or ed > prev["eventDate"]:
+                        latest_changes[rid] = {"scheduleDays": days, "eventDate": ed}
+    print("Latest changes collected:", latest_changes)
+    routines = attrs.get("routines", [])
+    for r in routines:
+        rid = r.get("routineUniqueId")
+        old_days = r.get("scheduleDays")
+        print("Routine", rid, "old days:", old_days)
+        if rid in latest_changes:
+            new_days = latest_changes[rid]["scheduleDays"]
+            r["scheduleDays"] = new_days
+            print("  applied new days:", new_days)
     final_action_plan = {
         "data": {
-            "actionPlanUniqueId":         new_id,
+            "actionPlanUniqueId": new_id,
             "previousActionPlanUniqueId": prev_id,
-            "accountId":                  attrs.get("accountId"),
-            "periodInDays":               attrs.get("periodInDays"),
-            "gender":                     attrs.get("gender", "").upper(),
-            "totalDailyTimeInMins":       attrs.get("totalDailyTimeInMins"),
-            "routines":                   attrs.get("routines", [])
+            "accountId": attrs.get("accountId"),
+            "periodInDays": attrs.get("periodInDays"),
+            "gender": attrs.get("gender", "").upper(),
+            "totalDailyTimeInMins": attrs.get("totalDailyTimeInMins"),
+            "routines": routines
         }
     }
-
-    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
-        app_env = "development"
-    else:
-        app_env = "production"
-
+    print("Final action plan:", final_action_plan)
+    app_env = "development" if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net" else "production"
+    print("Posting to Strapi in", app_env)
     strapi_post_action_plan(final_action_plan, account_id, app_env)
+    print("Post complete")
     return final_action_plan
 
 def compute_routine_completion(routine):
