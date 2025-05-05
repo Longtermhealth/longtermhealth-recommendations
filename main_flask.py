@@ -470,7 +470,6 @@ def event():
     host = request.host
     app.logger.info("Received webhook on host: %s", host)
 
-    # 1) Parse and validate the outer envelope
     data = request.get_json()
     if not data:
         return jsonify({"error": "No JSON payload provided"}), 400
@@ -480,7 +479,6 @@ def event():
     if not event_type or raw_payload is None:
         return jsonify({"error": "Missing eventEnum or eventPayload"}), 400
 
-    # 2) Decode eventPayload (it may be JSON‐encoded string or dict)
     if isinstance(raw_payload, str):
         try:
             payload = json.loads(raw_payload)
@@ -492,7 +490,6 @@ def event():
     else:
         return jsonify({"error": "Unexpected eventPayload type"}), 400
 
-    # 3) (Optional) Compute and log your health‐score update:
     account_id       = payload.get("accountId", 0)
     action_plan_uid  = payload.get("actionPlanUniqueId", 0)
     initial_scores   = strapi_get_health_scores(account_id, host)
@@ -505,7 +502,6 @@ def event():
     )
     app.logger.info("Final Health Scores per Pillar: %s", final_scores)
 
-    # 4) Branch on event type
     if event_type == "RECALCULATE_ACTION_PLAN":
         result = recalc_action_plan(payload, host)
 
@@ -525,6 +521,10 @@ def recalc_action_plan(payload, host):
     """
     unique_id  = payload.get("actionPlanUniqueId")
     account_id = payload.get("accountId")
+    print('payload', payload)
+    print('host', host)
+    print('unique_id',unique_id)
+    print('account_id', account_id)
 
     if not unique_id:
         app.logger.error("Missing actionPlanUniqueId in payload")

@@ -29,94 +29,70 @@ DEV_ROUTINES_ENDPOINT = f"{DEV_BASE_URL}/routines"
 DEV_HEALTH_SCORES_ENDPOINT = f"{DEV_BASE_URL}/health-scores"
 
 def strapi_get_action_plan(actionPlanId, host):
-    if host.endswith("lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net"):
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
         base_url = DEV_ACTION_PLAN_ENDPOINT
-        headers  = DEV_HEADERS
     else:
         app_env = "production"
         base_url = STAGING_ACTION_PLAN_ENDPOINT
-        headers  = STAGING_HEADERS
-    params = {"filters[actionPlanUniqueId][$eq]": actionPlanId}
-    print(f"[DEBUG][strapi_get_action_plan] env={app_env}")
-    print(f"[DEBUG][strapi_get_action_plan] URL       = {base_url}")
-    print(f"[DEBUG][strapi_get_action_plan] headers   = {headers}")
-    print(f"[DEBUG][strapi_get_action_plan] params    = {params}")
+
+    params = {
+        "filters[actionPlanUniqueId][$eq]": actionPlanId
+    }
+
+    print('app_env', app_env)
+    print(f"actionPlanId: {actionPlanId}")
+    print("URL:", base_url)
     try:
-        response = requests.get(base_url, headers=headers, params=params)
-    except Exception as e:
-        print(f"[ERROR][strapi_get_action_plan] request exception: {e}")
-        return None
-    print(f"[DEBUG][strapi_get_action_plan] response.url         = {response.url}")
-    print(f"[DEBUG][strapi_get_action_plan] status_code          = {response.status_code}")
-    raw = response.text
-    snippet = (raw[:500] + "...") if len(raw) > 500 else raw
-    print(f"[DEBUG][strapi_get_action_plan] response.text (first 500 chars):\n{snippet}")
-    try:
+        if app_env == "development":
+            response = requests.get(base_url, headers=DEV_HEADERS, params=params)
+        else:
+            response = requests.get(base_url, headers=STAGING_HEADERS, params=params)
         response.raise_for_status()
-    except Exception as e:
-        print(f"[ERROR][strapi_get_action_plan] HTTP error: {e}")
-        return None
-    try:
         result = response.json()
-    except json.JSONDecodeError as e:
-        print(f"[ERROR][strapi_get_action_plan] JSON decode error: {e}")
+
+        if "data" in result and isinstance(result["data"], list) and len(result["data"]) > 0:
+            action_plan_record = result["data"][0]
+
+            if "attributes" in action_plan_record:
+                return action_plan_record["attributes"]
+            else:
+                return action_plan_record
+        else:
+            print("No matching action plan found.")
+            return None
+    except Exception as e:
+        print(f"Error while fetching the action plan for account {actionPlanId}: {e}")
         return None
-    print(f"[DEBUG][strapi_get_action_plan] parsed JSON keys: {list(result.keys())}")
-    data = result.get("data")
-    if isinstance(data, list):
-        print(f"[DEBUG][strapi_get_action_plan] data is list, length = {len(data)}")
-    else:
-        print(f"[DEBUG][strapi_get_action_plan] data is not list ({type(data)}) → returning None")
-        return None
-    if len(data) == 0:
-        print("[DEBUG][strapi_get_action_plan] No matching action plan found.")
-        return None
-    record = data[0]
-    attrs  = record.get("attributes")
-    if attrs is not None:
-        print(f"[DEBUG][strapi_get_action_plan] returning attributes: {json.dumps(attrs, indent=2)}")
-        return attrs
-    else:
-        print(f"[DEBUG][strapi_get_action_plan] no attributes key, returning full record: {json.dumps(record, indent=2)}")
-        return record
+
 
 def strapi_get_health_scores(accountId, host):
-    if host.endswith("lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net"):
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
         app_env = "development"
         base_url = DEV_HEALTH_SCORES_ENDPOINT
-        headers  = DEV_HEADERS
     else:
         app_env = "production"
         base_url = STAGING_HEALTH_SCORES_ENDPOINT
-        headers  = STAGING_HEADERS
-    params = {"filters[accountId][$eq]": accountId}
-    print(f"[DEBUG][strapi_get_health_scores] env={app_env}")
-    print(f"[DEBUG][strapi_get_health_scores] URL     = {base_url}")
-    print(f"[DEBUG][strapi_get_health_scores] headers = {headers}")
-    print(f"[DEBUG][strapi_get_health_scores] params  = {params}")
+
+    params = {
+        "filters[accountId][$eq]": accountId
+    }
+
+    print('app_env', app_env)
+    print(f"accountId: {accountId}")
+    print("URL:", base_url)
     try:
-        response = requests.get(base_url, headers=headers, params=params)
-    except Exception as e:
-        print(f"[ERROR][strapi_get_health_scores] request exception: {e}")
-        return None
-    print(f"[DEBUG][strapi_get_health_scores] response.url    = {response.url}")
-    print(f"[DEBUG][strapi_get_health_scores] status_code     = {response.status_code}")
-    raw = response.text
-    snippet = (raw[:500] + "...") if len(raw) > 500 else raw
-    print(f"[DEBUG][strapi_get_health_scores] response.text (first 500 chars):\n{snippet}")
-    try:
+        if app_env == "development":
+            response = requests.get(base_url, headers=DEV_HEADERS, params=params)
+        else:
+            response = requests.get(base_url, headers=STAGING_HEADERS, params=params)
         response.raise_for_status()
-    except Exception as e:
-        print(f"[ERROR][strapi_get_health_scores] HTTP error: {e}")
-        return None
-    try:
         result = response.json()
-    except json.JSONDecodeError as e:
-        print(f"[ERROR][strapi_get_health_scores] JSON decode error: {e}")
+        return result
+
+    except Exception as e:
+        print(f"Error while fetching the action plan for account {accountId}: {e}")
         return None
-    print(f"[DEBUG][strapi_get_health_scores] parsed JSON keys: {list(result.keys())}")
-    return result
 
 
 def strapi_get_all_routines():
