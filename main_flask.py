@@ -196,74 +196,54 @@ def hello():
     return "Hello, Flask is working!"
 
 
-def recalc_action_plan(data, host):
-    action_plan_id = data.get('actionPlanUniqueId')
-    start_date = data.get('startDate')
-    period_in_days = data.get('periodInDays')
+def recalc_action_plan(payload, host):
+    unique_id  = payload.get("actionPlanUniqueId")
+    account_id = payload.get("accountId")
 
-    app.logger.info("Action Plan ID: %s", action_plan_id)
-    app.logger.info("Start Date: %s", start_date)
-    app.logger.info("Period in Days: %s", period_in_days)
+    if not unique_id:
+        app.logger.error("Missing actionPlanUniqueId in payload")
+        return {"error": "missing-action-plan-id"}
 
-    old_action_plan = strapi_get_action_plan(action_plan_id, host)
-    if old_action_plan:
-        app.logger.info("Old action plan retrieved.")
-        routines = old_action_plan.get('routines', [])
-        if not isinstance(routines, list):
-            app.logger.error("Expected 'routines' to be a list but got: %s", type(routines))
-            routines = []
-        app.logger.info("Found %d routines in old action plan.", len(routines))
-        for routine in routines:
-            routine_id = routine.get('routineId')
-            display_name = routine.get('displayName')
-            app.logger.info("Routine ID: %s, Display Name: %s", routine_id, display_name)
+    if account_id is None:
+        app.logger.error("Missing accountId in payload")
+        return {"error": "missing-account-id"}
 
+    try:
+        response = strapi_get_action_plan(unique_id, host)
+    except Exception as e:
+        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
+        return {"error": "strapi-fetch-failed"}
 
-        matching_routines = print_matching_routine_details(data, old_action_plan)
-        app.logger.info("Matching routine details: %s", matching_routines)
-        strapi_matches = list_strapi_matches_with_original(matching_routines)
-        matches = list_strapi_matches(matching_routines)
-        app.logger.info("Strapi matches: %s", strapi_matches)
-    else:
-        app.logger.error("No old action plan found for actionPlanId: %s", action_plan_id)
+    if not response or "data" not in response:
+        app.logger.error("No action plan found for uniqueId: %s", unique_id)
+        return {"error": "not-found"}
 
-    pillar_stats_list = data.get('pillarCompletionStats', [])
-    for pillar in pillar_stats_list:
-        pillar_enum = pillar.get('pillarEnum')
-        app.logger.info("Pillar Enum: %s", pillar_enum)
+    old_plan = response["data"]
 
-        routine_stats_list = pillar.get('routineCompletionStats', [])
-        for routine in routine_stats_list:
-            routine_id = routine.get('routineId')
-            display_name = routine.get('displayName')
-            app.logger.info("Routine ID: %s, Display Name: %s", routine_id, display_name)
+    routines = old_plan.get("routines")
+    if not isinstance(routines, list):
+        app.logger.error("Expected 'routines' list but got %s", type(routines))
+        routines = []
 
-            completion_stats = routine.get('completionStatistics', [])
-            for stat in completion_stats:
-                completion_rate = stat.get('completionRate')
-                rate_period_unit = stat.get('completionRatePeriodUnit')
-                period_sequence_no = stat.get('periodSequenceNo')
-                completion_unit = stat.get('completionUnit')
-                completion_target = stat.get('completionTargetTotal', stat.get('completionTarget'))
-                completed_value = stat.get('completedValueTotal', stat.get('completedValue'))
+    app.logger.info("Found %d routines in action plan %s", len(routines), unique_id)
 
-                app.logger.info(
-                    "Stat - Completion Rate: %s, Period Unit: %s, Sequence: %s, Unit: %s, Target: %s, Completed: %s",
-                    completion_rate, rate_period_unit, period_sequence_no, completion_unit,
-                    completion_target, completed_value
-                )
+    for r in routines:
+        app.logger.debug("Routine loaded: id=%s, name=%s",
+                         r.get("routineId"), r.get("displayName"))
 
-                try:
-                    completion_rate_float = float(completion_rate)
-                    period_sequence_no_int = int(period_sequence_no)
-                except (ValueError, TypeError) as e:
-                    app.logger.error("Error converting values: %s", e)
+    matching = print_matching_routine_details(
+        new_data=payload,
+        old_action_plan=old_plan
+    )
+    app.logger.info("Computed matching routines: %s", matching)
 
-    final_action_plan = {
-        "actionPlanId": action_plan_id
+    strapi_matches = list_strapi_matches_with_original(matching)
+    app.logger.info("Enriched Strapi matches: %s", strapi_matches)
+
+    return {
+        "actionPlanUniqueId": unique_id,
+        "matches": strapi_matches
     }
-
-    return final_action_plan
 
 def renew_action_plan(payload, host):
     unique_id = payload.get("actionPlanUniqueId")
@@ -629,7 +609,7 @@ def event():
         return jsonify({"error": "Missing eventEnum in payload"}), 400
 
     if event_type == 'RECALCULATE_ACTION_PLAN':
-        result = recalc_action_plan(data, host)
+        result = recalc_action_plan(payload, host)
         print('RECALCULATE_ACTION_PLAN')
     elif event_type == 'RENEW_ACTION_PLAN':
         print('RENEW_ACTION_PLAN')
