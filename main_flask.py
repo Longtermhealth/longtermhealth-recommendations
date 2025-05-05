@@ -409,7 +409,7 @@ def compute_scheduled_by_pillar(payload):
         pillar_enum = r.get("pillar", {}).get("pillarEnum")
         scheduled_by_pillar.setdefault(pillar_enum, []).append(r)
         print(f"DEBUG: appended routine {r.get('routineUniqueId')} to pillar {pillar_enum}")
-    print("DEBUG: scheduled_by_pillar (Strapi) =", scheduled_by_pillar)
+    #print("DEBUG: scheduled_by_pillar (Strapi) =", scheduled_by_pillar)
     return scheduled_by_pillar
 
 
@@ -548,12 +548,12 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
             return {}
     elif isinstance(action_plan, dict):
         action_plan_payload = action_plan
-        print(f"Using action_plan dict for account {account_id}: {action_plan_payload}")
+        print(f"Using action_plan dict for account {account_id}")
     else:
         print(f"ERROR: Unexpected type for action_plan for account {account_id}: {type(action_plan)}")
         return {}
     scheduled_by_pillar = compute_scheduled_by_pillar(action_plan_payload)
-    print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
+    #print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
     completions_by_pillar = extract_pretty_completions(pretty_payload)
     print(f"completions_by_pillar for account {account_id}: {completions_by_pillar}")
     final_scores = {}
