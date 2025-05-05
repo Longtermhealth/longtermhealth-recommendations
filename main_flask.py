@@ -522,54 +522,45 @@ def create_health_scores_with_structure(account_id, health_scores):
 
 
 def calculate_first_month_update_from_pretty_final(account_id, action_plan, pretty_payload, initial_health_scores):
-    """
-    Calculate first month health score update per pillar based on scheduled and completed counts.
-    Computes:
-      - delta_completed = 10 * dampening * (1 - exp(-k * completed_count))
-      - delta_not = 10 * dampening * (1 - exp(-k * not_completed_count))
-      - final_delta = delta_completed - (delta_not / 3)
-      - new_score = initial_health_score + final_delta
-    This function now also merges the delta values into the final structure.
-    """
-
-
-
-    action_plan_payload = json.load(action_plan)
-
+    if action_plan is None:
+        app.logger.error("Called calculate_first_month_update_from_pretty_final with no action_plan for account %s", account_id)
+        return {}
+    if isinstance(action_plan, str):
+        try:
+            action_plan_payload = json.loads(action_plan)
+        except json.JSONDecodeError as e:
+            app.logger.error("Failed to parse action_plan JSON: %s", e)
+            return {}
+    elif isinstance(action_plan, dict):
+        action_plan_payload = action_plan
+    else:
+        app.logger.error("Unexpected type for action_plan: %s", type(action_plan))
+        return {}
     scheduled_by_pillar = compute_scheduled_by_pillar(action_plan_payload)
     completions_by_pillar = extract_pretty_completions(pretty_payload)
-
     final_scores = {}
     final_deltas = {}
     print("First Month Health Score Update (Final combined score):")
-    for pillar in scheduled_by_pillar:
-        scheduled_total = scheduled_by_pillar[pillar]["scheduled"]
+    for pillar, info in scheduled_by_pillar.items():
+        scheduled_total = info["scheduled"]
         completed_count = completions_by_pillar.get(pillar, {}).get("completed", 0)
         not_completed_count = scheduled_total - completed_count
-
-        # Retrieve the initial health score for the pillar (default to 50 if not provided)
         init_score = initial_health_scores.get(pillar, 50)
         dampening = (100 - init_score) / 90
-
         delta_completed = 10 * dampening * (1 - math.exp(-k * completed_count))
         delta_not = 10 * dampening * (1 - math.exp(-k * not_completed_count))
         final_delta = delta_completed - (delta_not / 3)
         new_score = init_score + final_delta
         new_score = min(max(new_score, 0), 100)
-
         final_scores[pillar] = new_score
         final_deltas[pillar] = final_delta
-
         print(f"{pillar}: Scheduled = {scheduled_total}, Completed = {completed_count}, Not Completed = {not_completed_count}")
-        print(f"  Delta Completed = {delta_completed:.4f}, Delta Not = {-delta_not / 3:.4f} (falling), Final Delta = {final_delta:.4f}")
+        print(f"  Delta Completed = {delta_completed:.4f}, Delta Not = {-delta_not/3:.4f}, Final Delta = {final_delta:.4f}")
         print(f"  Initial Score = {init_score}, New Score = {new_score:.4f}")
-
-    # Build the final health score structure using your existing function.
     base_structure = create_health_scores_with_structure(account_id, final_scores)
-    # Merge the delta values into the structure.
     for entry in base_structure["data"]["pillarScores"]:
-        pillar_enum = entry["pillar"]["pillarEnum"]
-        entry["delta"] = round(final_deltas.get(pillar_enum, 0), 2)
+        p = entry["pillar"]["pillarEnum"]
+        entry["delta"] = round(final_deltas.get(p, 0), 2)
     return base_structure
 
 
