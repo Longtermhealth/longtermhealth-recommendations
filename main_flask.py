@@ -6,7 +6,7 @@ import uuid
 import os
 from flask import Flask, jsonify, request
 from config import Config
-from utils.strapi_api import strapi_get_action_plan, strapi_get_old_action_plan, strapi_get_health_scores
+from utils.strapi_api import strapi_get_action_plan, strapi_post_action_plan, strapi_get_old_action_plan, strapi_get_health_scores
 from utils.typeform_api import (
     get_responses, get_field_mapping, process_latest_response, get_last_name, trigger_followup
 )
@@ -294,7 +294,14 @@ def renew_action_plan(payload, host):
             new_days = latest_changes[rid]["scheduleDays"]
             routine["scheduleDays"] = new_days
             app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
-    print('new plan: ',json.dumps(new_plan, indent=4))
+    print('old plan: ', old_plan)
+    print('new plan: ', new_plan)
+    if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":
+        app_env = "development"
+    else:
+        app_env = "production"
+
+    strapi_post_action_plan(new_plan, account_id, app_env)
     return new_plan
 
 
