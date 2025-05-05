@@ -260,10 +260,7 @@ def renew_action_plan(payload, host):
     if not old_plan:
         app.logger.error("No action plan found for uniqueId: %s", unique_id)
         return {"error": "not-found"}
-    print("=== OLD Action Plan JSON ===")
-    print(json.dumps(old_plan, indent=4))
-    print("============================")
-    # deep‐copy the attributes dict
+
     new_plan = json.loads(json.dumps(old_plan))
     prev_id  = old_plan.get("actionPlanUniqueId")
     new_id   = str(uuid.uuid4())
@@ -271,7 +268,6 @@ def renew_action_plan(payload, host):
     new_plan["actionPlanUniqueId"]         = new_id
     app.logger.info("Cloned plan %s → %s", prev_id, new_id)
 
-    # apply any schedule‐day changes from the changeLog
     latest_changes = {}
     for ev in payload.get("changeLog", []):
         if (
@@ -291,7 +287,6 @@ def renew_action_plan(payload, host):
                     if not prev or event_date > prev["eventDate"]:
                         latest_changes[rid] = {"scheduleDays": days, "eventDate": event_date}
 
-    # patch the routines array in our new_plan
     for routine in new_plan.get("routines", []):
         rid = routine.get("routineId") or routine.get("routineUniqueId")
         if rid in latest_changes:
@@ -299,9 +294,7 @@ def renew_action_plan(payload, host):
             new_days = latest_changes[rid]["scheduleDays"]
             routine["scheduleDays"] = new_days
             app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
-    print("=== New Action Plan JSON ===")
-    print(json.dumps(new_plan, indent=4))
-    print("============================")
+
     return new_plan
 
 
