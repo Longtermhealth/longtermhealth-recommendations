@@ -265,53 +265,60 @@ def recalc_action_plan(data, host):
 
     return final_action_plan
 
-def renew_action_plan(data, host):
-    old_plan = strapi_get_action_plan(data['actionPlanUniqueId'], host)
-    if not old_plan or 'data' not in old_plan:
-        app.logger.error("No action plan for %s", data['actionPlanUniqueId'])
+def renew_action_plan(payload, host):
+    unique_id = payload.get("actionPlanUniqueId")
+    if not unique_id:
+        app.logger.error("Missing actionPlanUniqueId in payload")
+        return {"error": "missing-action-plan-id"}
+
+    try:
+        response = strapi_get_action_plan(unique_id, host)
+    except Exception as e:
+        app.logger.exception("Error fetching action plan %s: %s", unique_id, e)
+        return {"error": "strapi-fetch-failed"}
+
+    if not response or "data" not in response:
+        app.logger.error("No action plan found for uniqueId: %s", unique_id)
         return {"error": "not-found"}
 
-    new_plan = json.loads(json.dumps(old_plan))
+    old = response["data"]
 
-    prev_id = old_plan['data']['actionPlanUniqueId']
+    new_plan = json.loads(json.dumps(old))
+    prev_id = old.get("actionPlanUniqueId")
     new_id = str(uuid.uuid4())
-    new_plan['data']['previousActionPlanUniqueId'] = prev_id
-    new_plan['data']['actionPlanUniqueId'] = new_id
-    app.logger.info("Copied plan %s → %s", prev_id, new_id)
+    new_plan["previousActionPlanUniqueId"] = prev_id
+    new_plan["actionPlanUniqueId"] = new_id
+    app.logger.info("Cloned plan %s → %s", prev_id, new_id)
 
-    latest_schedule_changes = {}
-
-    for ev in data.get('changeLog', []):
+    latest_changes = {}
+    for ev in payload.get("changeLog", []):
         if (
-            ev.get('eventEnum') == 'ROUTINE_SCHEDULE_CHANGE' and
-            ev.get('changeTarget') == 'ROUTINE' and
-            ev.get('eventDetails', {}).get('scheduleCategory') == 'WEEKLY_ROUTINE'
+            ev.get("eventEnum") == "ROUTINE_SCHEDULE_CHANGE"
+            and ev.get("changeTarget") == "ROUTINE"
+            and ev.get("eventDetails", {}).get("scheduleCategory") == "WEEKLY_ROUTINE"
         ):
-            rid = int(ev.get('targetId', 0))
-            event_date = ev.get('eventDate')
+            rid = int(ev.get("targetId", 0))
+            event_date = ev.get("eventDate")
+            for ch in ev.get("changes", []):
+                if ch.get("changedProperty") == "SCHEDULE_DAYS":
+                    # parse newValue into a list of ints
+                    try:
+                        days = json.loads(ch.get("newValue", "[]"))
+                    except (TypeError, json.JSONDecodeError):
+                        raw = ch.get("newValue", "")
+                        days = [int(c) for c in raw if c.isdigit()]
+                    # keep only the most recent change
+                    prev = latest_changes.get(rid)
+                    if not prev or event_date > prev["eventDate"]:
+                        latest_changes[rid] = {"scheduleDays": days, "eventDate": event_date}
 
-            for change in ev.get('changes', []):
-                if change.get('changedProperty') == 'SCHEDULE_DAYS':
-
-                    if rid not in latest_schedule_changes or event_date > latest_schedule_changes[rid]['eventDate']:
-                        try:
-                            new_days = json.loads(change.get('newValue', '[]'))
-                        except json.JSONDecodeError:
-                            raw = change.get('newValue', '')
-                            new_days = [int(x) for x in raw if x.isdigit()] if isinstance(raw, str) else []
-
-                        latest_schedule_changes[rid] = {
-                            "scheduleDays": new_days,
-                            "eventDate": event_date
-                        }
-
-    for routine in new_plan['data'].get('routines', []):
-        rid = routine.get('routineId') or routine.get('routineUniqueId')
-        if rid in latest_schedule_changes:
-            old = routine.get('scheduleDays', [])
-            new = latest_schedule_changes[rid]['scheduleDays']
-            routine['scheduleDays'] = new
-            app.logger.info("Routine %s scheduleDays: %s → %s", rid, old, new)
+    for routine in new_plan.get("routines", []):
+        rid = routine.get("routineId") or routine.get("routineUniqueId")
+        if rid in latest_changes:
+            old_days = routine.get("scheduleDays", [])
+            new_days = latest_changes[rid]["scheduleDays"]
+            routine["scheduleDays"] = new_days
+            app.logger.info("Routine %s scheduleDays: %s → %s", rid, old_days, new_days)
 
     return new_plan
 
