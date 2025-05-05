@@ -264,8 +264,8 @@ def renew_action_plan(payload, host):
     new_plan = json.loads(json.dumps(old_plan))
     prev_id  = old_plan.get("actionPlanUniqueId")
     new_id   = str(uuid.uuid4())
-    new_plan["attributes"]["previousActionPlanUniqueId"] = prev_id
-    new_plan["attributes"]["actionPlanUniqueId"]         = new_id
+    new_plan["previousActionPlanUniqueId"] = prev_id
+    new_plan["actionPlanUniqueId"]         = new_id
     app.logger.info("Cloned plan %s → %s", prev_id, new_id)
 
     latest_changes = {}
