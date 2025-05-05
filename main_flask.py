@@ -542,7 +542,7 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
     if isinstance(action_plan, str):
         try:
             action_plan_payload = json.loads(action_plan)
-            print(f"Parsed action_plan string for account {account_id}: {action_plan_payload}")
+            print(f"Parsed action_plan string for account {account_id}")
         except json.JSONDecodeError as e:
             print(f"ERROR: Failed to parse action_plan JSON for account {account_id}: {e}")
             return {}
@@ -553,13 +553,18 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
         print(f"ERROR: Unexpected type for action_plan for account {account_id}: {type(action_plan)}")
         return {}
     scheduled_by_pillar = compute_scheduled_by_pillar(action_plan_payload)
-    #print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
+    print(f"scheduled_by_pillar for account {account_id}: {scheduled_by_pillar}")
     completions_by_pillar = extract_pretty_completions(pretty_payload)
     print(f"completions_by_pillar for account {account_id}: {completions_by_pillar}")
     final_scores = {}
     final_deltas = {}
     for pillar, info in scheduled_by_pillar.items():
-        scheduled_total = info["scheduled"]
+        if isinstance(info, dict) and "scheduled" in info:
+            scheduled_total = info["scheduled"]
+        elif isinstance(info, list):
+            scheduled_total = len(info)
+        else:
+            scheduled_total = 0
         completed_count = completions_by_pillar.get(pillar, {}).get("completed", 0)
         not_completed_count = scheduled_total - completed_count
         init_score = initial_health_scores.get(pillar, 50)
@@ -580,6 +585,8 @@ def calculate_first_month_update_from_pretty_final(account_id, action_plan, pret
         entry["delta"] = round(final_deltas.get(p, 0), 2)
     print(f"calculate_first_month_update_from_pretty_final end for account {account_id}")
     return base_structure
+
+
 
 @app.route('/event', methods=['POST'])
 def event():
