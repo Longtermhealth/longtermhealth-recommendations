@@ -1938,8 +1938,6 @@ def schedule_all_weekly_challenges(final_action_plan, routines, routine_unique_i
             week_index += 1
     print("Weekly challenges scheduled.")
 
-
-
 def main(host):
 
     if host == "lthrecommendation-dev-g2g0hmcqdtbpg8dw.germanywestcentral-01.azurewebsites.net":

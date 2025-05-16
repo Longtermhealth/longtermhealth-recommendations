@@ -1292,8 +1292,8 @@ def main(app_env):
                 #logger.warning(f"No package selected for Pillar: '{entry['pillar']}' with Order: {order}")
 
 
-    print("\nSelected Packages:")
-    print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
+    #print("\nSelected Packages:")
+    #print(json.dumps(selected_packages, ensure_ascii=False, indent=2))
 
     return account_id, daily_time, routines_with_defaults_filtered_display_order, health_scores, user_data, answers, gender, selected_packages
 

@@ -47,9 +47,9 @@ def print_matching_routine_details(new_data, old_action_plan):
         # support either field name
         rid = routine.get('routineUniqueId') or routine.get('routineId')
         if rid is None:
-            print("⚠️  old routine missing both IDs:", routine)
+            print("old routine missing both IDs:", routine)
             continue
-        print(f"🔍 old routine id={rid}, name={routine.get('displayName','<no name>')}")
+        print(f"old routine id={rid}, name={routine.get('displayName','<no name>')}")
         old_routine_ids.add(rid)
     print("DEBUG: extracted old_routine_ids:", old_routine_ids)
 
