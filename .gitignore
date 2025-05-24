@@ -8,4 +8,4 @@ venv/
 env/
 rule_based_system/.env/
 *.env
-lth/
+lth/CLAUDE.md

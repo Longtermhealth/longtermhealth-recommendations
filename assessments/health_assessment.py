@@ -96,12 +96,11 @@ if __name__ == "__main__":
         'Wenn mir alles zu viel wird, greife ich manchmal zur Flasche oder Zigaretten.': '1'
     }
     gratitude = {
+        'Ich liebe mich so, wie ich bin.': 5,
         'Ich habe so viel im Leben, wofür ich dankbar sein kann.': 5,
-        'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': 5,
-        'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': 1,
-        'Ich bin vielen verschiedenen Menschen dankbar.': 5,
-        'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': 5,
-        'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': 1
+        'Jeder Tag ist eine Chance, es besser zu machen.': 5,
+        'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': 5,
+        'Ich bin vielen verschiedenen Menschen dankbar.': 5
     }
     cognition = {
         'Wie würdest du deine Vergesslichkeit einstufen?': '1',

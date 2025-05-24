@@ -47,17 +47,16 @@ def integrate_answers(answers):
                 'Wenn mir alles zu viel wird, neige ich zu ungesunden Verhaltensmustern, wie Alkohol, Tabak oder Frustessen.')
         },
         'gratitude': {
+            'Ich liebe mich so, wie ich bin.': answers.get(
+                'Ich liebe mich so, wie ich bin.'),
             'Ich habe so viel im Leben, wofür ich dankbar sein kann.': answers.get(
                 'Ich habe so viel im Leben, wofür ich dankbar sein kann.'),
-            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': answers.get('Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.'),
-            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': answers.get(
-                'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.'),
+            'Jeder Tag ist eine Chance, es besser zu machen.': answers.get(
+                'Jeder Tag ist eine Chance, es besser zu machen.'),
+            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': answers.get(
+                'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.'),
             'Ich bin vielen verschiedenen Menschen dankbar.': answers.get(
-                'Ich bin vielen verschiedenen Menschen dankbar.'),
-            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': answers.get(
-                'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.'),
-            'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': answers.get(
-                'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.')
+                'Ich bin vielen verschiedenen Menschen dankbar.')
         },
         'cognition': {
             'Wie würdest du deine Vergesslichkeit einstufen?': answers.get(

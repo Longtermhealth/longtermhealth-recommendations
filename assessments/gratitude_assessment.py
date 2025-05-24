@@ -4,12 +4,11 @@ from assessments.base_assessment import BaseAssessment
 
 class GratitudeAssessment(BaseAssessment):
     REQUIRED_KEYS = [
+        'Ich liebe mich so, wie ich bin.',
         'Ich habe so viel im Leben, wofür ich dankbar sein kann.',
-        'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.',
-        'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.',
-        'Ich bin vielen verschiedenen Menschen dankbar.',
-        'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.',
-        'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.'
+        'Jeder Tag ist eine Chance, es besser zu machen.',
+        'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.',
+        'Ich bin vielen verschiedenen Menschen dankbar.'
     ]
 
     def __init__(self, answers):
@@ -45,12 +44,11 @@ class GratitudeAssessment(BaseAssessment):
         :return: A list of scores for each gratitude-related question
         """
         gratitude = [
+            int(answers.get('Ich liebe mich so, wie ich bin.', 0)),
             int(answers.get('Ich habe so viel im Leben, wofür ich dankbar sein kann.', 0)),
-            int(answers.get('Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.', 0)),
-            int(answers.get('Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.', 0)),
-            int(answers.get('Ich bin vielen verschiedenen Menschen dankbar.', 0)),
-            int(answers.get('Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.', 0)),
-            int(answers.get('Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.', 0))
+            int(answers.get('Jeder Tag ist eine Chance, es besser zu machen.', 0)),
+            int(answers.get('Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.', 0)),
+            int(answers.get('Ich bin vielen verschiedenen Menschen dankbar.', 0))
         ]
         return gratitude
 
@@ -61,17 +59,10 @@ class GratitudeAssessment(BaseAssessment):
         :return: The calculated gratitude score as a float
         """
         gratitude = self.gratitude.copy()
-        if gratitude != [0, 0, 0, 0, 0, 0]:
-            # The 3rd question (index 2) and the 6th question (index 5) are reversed
-            # According to the logic: reversed scoring means 6 - given_answer
-            if len(gratitude) >= 3:
-                gratitude[2] = 6 - gratitude[2]
-                if len(gratitude) >= 6:
-                    gratitude[5] = 6 - gratitude[5]
-
+        if gratitude != [0, 0, 0, 0, 0]:
             total_gratitude_score = sum(gratitude)
             min_score = 5
-            max_score = 30
+            max_score = 25
             normalized_score = ((total_gratitude_score - min_score) / (max_score - min_score)) * 80
         else:
             normalized_score = 0

@@ -491,12 +491,11 @@ input_static_template = {
 
     },
     "GRATITUDE": {
+        "Ich liebe mich so, wie ich bin.": None,
         "Ich habe so viel im Leben, wofür ich dankbar sein kann.": None,
-        "Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.": None,
-        "Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.": None,
-        "Ich bin vielen verschiedenen Menschen dankbar.": None,
-        "Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.": None,
-        "Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.": None
+        "Jeder Tag ist eine Chance, es besser zu machen.": None,
+        "Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.": None,
+        "Ich bin vielen verschiedenen Menschen dankbar.": None
     },
     "COGNITIVE_ENHANCEMENT": {
         "Wie würdest du deine Vergesslichkeit einstufen?": None,
@@ -600,12 +599,11 @@ def map_answers(answers, scores):
         set_value(input_static_template['STRESS'], key, answers, default)
 
     gratitude_keys = [
+        ('Ich liebe mich so, wie ich bin.', None),
         ('Ich habe so viel im Leben, wofür ich dankbar sein kann.', None),
-        ('Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.', None),
-        ('Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.', None),
-        ('Ich bin vielen verschiedenen Menschen dankbar.', None),
-        ('Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.', None),
-        ('Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.', None)
+        ('Jeder Tag ist eine Chance, es besser zu machen.', None),
+        ('Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.', None),
+        ('Ich bin vielen verschiedenen Menschen dankbar.', None)
     ]
     for key, default in gratitude_keys:
         set_value(input_static_template['GRATITUDE'], key, answers, default)
