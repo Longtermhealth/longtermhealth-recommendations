@@ -3,13 +3,30 @@
 import json
 import logging
 from flask import Blueprint, jsonify, request, current_app
+from concurrent.futures import ThreadPoolExecutor
 
 from src.services.action_plan.action_plan_service import ActionPlanService
 from src.services.health.health_score_service import HealthScoreService
+from src.analytics import AnalyticsService
 from src.utils.strapi_api import strapi_get_health_scores, strapi_get_old_action_plan
 
 event_bp = Blueprint('event', __name__)
 logger = logging.getLogger(__name__)
+
+# Initialize analytics service
+analytics_service = AnalyticsService()
+executor = ThreadPoolExecutor(max_workers=2)
+
+
+def process_analytics_async(payload):
+    """Process analytics asynchronously"""
+    try:
+        analytics_result = analytics_service.process_event(payload)
+        logger.info(f"Analytics processed for account {payload.get('accountId')}")
+        return analytics_result
+    except Exception as e:
+        logger.error(f"Error in analytics processing: {e}", exc_info=True)
+        return None
 
 
 def process_event_data(event_data):
@@ -76,6 +93,14 @@ def event():
     )
     logger.info(f"Final Health Scores per Pillar: {final_scores}")
 
+    # Process analytics asynchronously
+    try:
+        analytics_future = executor.submit(process_analytics_async, payload)
+        logger.info("Analytics processing submitted")
+    except Exception as e:
+        logger.error(f"Failed to submit analytics processing: {e}")
+        analytics_future = None
+
     # Handle different event types
     event_type = data.get('eventEnum')
     if not event_type:
@@ -89,5 +114,21 @@ def event():
         result = ActionPlanService.renew_action_plan(payload, host)
     else:
         result = {"error": f"Unhandled event type: {event_type}"}
+
+    # Try to get analytics result (non-blocking)
+    if analytics_future:
+        try:
+            analytics_result = analytics_future.result(timeout=1)  # 1 second timeout
+            if analytics_result:
+                logger.info(f"Analytics insights: Engagement={analytics_result['metrics']['current']['engagement_score']:.1f}%, "
+                          f"Active pillars={analytics_result['summary']['active_pillars']}/{analytics_result['summary']['total_pillars']}")
+                
+                # Add top insights to result
+                result['analytics_insights'] = {
+                    'engagement_score': analytics_result['metrics']['current']['engagement_score'],
+                    'recommendation': analytics_result['recommendations'][0]['recommendation'] if analytics_result['recommendations'] else None
+                }
+        except Exception as e:
+            logger.warning(f"Analytics processing timeout or error: {e}")
 
     return jsonify(result), 200
