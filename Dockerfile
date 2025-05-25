@@ -5,44 +5,10 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
+# Install minimal system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    wget \
-    gnupg \
-    libnss3 \
-    libx11-6 \
-    libx11-xcb1 \
-    libxcb1 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxi6 \
-    libxrandr2 \
-    libxrender1 \
-    libxss1 \
-    libxtst6 \
-    fonts-liberation \
-    libappindicator3-1 \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libatk1.0-0 \
-    libcups2 \
-    libdbus-1-3 \
-    libgbm1 \
-    libgtk-3-0 \
-    libnspr4 \
-    libxkbcommon0 \
-    --no-install-recommends && \
-    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-    echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
-    apt-get update && apt-get install -y --no-install-recommends \
-        google-chrome-stable \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
-
-ENV BROWSER_PATH=/usr/bin/google-chrome
-
-ENV CHROME_FLAGS="--no-sandbox --disable-dev-shm-usage --disable-gpu --headless"
 
 COPY requirements.txt .
 RUN pip install --upgrade pip
@@ -84,6 +50,6 @@ ENV LINK_SUMMARY_OPENAI_API_KEY=$LINK_SUMMARY_OPENAI_API_KEY
 ENV AZURE_BLOB_CONNECTION_STRING=$AZURE_BLOB_CONNECTION_STRING
 ENV APP_ENV=${APP_ENV}
 
-EXPOSE 80
+EXPOSE 5003
 
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "--workers", "3", "main_flask:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5003", "--workers", "3", "src.app:app"]

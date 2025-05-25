@@ -1,0 +1,152 @@
+{
+  "account_id": 5,
+  "action_plan_id": "1fadcdea-1536-47b8-a39c-5de3ef85fcd1",
+  "timestamp": "2025-05-25T16:27:34.770864",
+  "summary": {
+    "total_pillars": 7,
+    "active_pillars": 4,
+    "total_routines": 54,
+    "engaged_routines": 14,
+    "total_completions": 60,
+    "average_engagement_rate": 0.2949907235621521,
+    "most_active_pillar": "GRATITUDE",
+    "least_active_pillar": "STRESS",
+    "overall_engagement_rate": 0.25925925925925924
+  },
+  "metrics": {
+    "current": {
+      "engagement_score": 44.17989417989418,
+      "overall_engagement_rate": 0.25925925925925924,
+      "active_pillars": 4,
+      "total_pillars": 7,
+      "habit_formation_index": 19.77746827766614,
+      "completion_velocity": "accelerating"
+    },
+    "historical_summary": {
+      "average_engagement": 44.17989417989418,
+      "peak_engagement": 44.17989417989418,
+      "lowest_engagement": 44.17989417989418,
+      "data_points": 2
+    }
+  },
+  "trends": {
+    "overall_direction": "stable",
+    "pillar_trends": {
+      "MOVEMENT": "stable",
+      "NUTRITION": "stable",
+      "STRESS": "stable",
+      "SLEEP": "stable",
+      "GRATITUDE": "stable",
+      "SOCIAL_ENGAGEMENT": "stable",
+      "COGNITIVE_ENHANCEMENT": "stable"
+    },
+    "momentum_analysis": {
+      "MOVEMENT": "neutral",
+      "NUTRITION": "neutral",
+      "STRESS": "neutral",
+      "SLEEP": "neutral",
+      "GRATITUDE": "neutral",
+      "SOCIAL_ENGAGEMENT": "neutral",
+      "COGNITIVE_ENHANCEMENT": "neutral"
+    },
+    "predictions": {
+      "status": "insufficient_data"
+    }
+  },
+  "insights": {
+    "executive_summary": {
+      "status": "needs_attention",
+      "message": "There's room for improvement. Let's focus on building consistency.",
+      "key_metrics": {
+        "overall_engagement": "44.2%",
+        "active_pillars": "57%",
+        "habit_formation": "19.8%",
+        "completion_velocity": "accelerating"
+      },
+      "trend_summary": "Your engagement is stable",
+      "focus_areas": [
+        "Improve STRESS engagement",
+        "Improve SOCIAL_ENGAGEMENT engagement",
+        "Build consistency in MOVEMENT, NUTRITION"
+      ]
+    },
+    "pillar_insights": {
+      "strengths": [
+        "MOVEMENT: 'Sprung-Ausfallschritte' is your star routine in MOVEMENT",
+        "NUTRITION: Strong performance in NUTRITION with 77% completion score",
+        "NUTRITION: '3 Handvoll Gem\u00fcse t\u00e4glich' is your star routine in NUTRITION",
+        "SLEEP: Strong performance in SLEEP with 80% completion score",
+        "SLEEP: 'Keine Elektroger\u00e4te im Schlafzimmer' is your star routine in SLEEP",
+        "GRATITUDE: Strong performance in GRATITUDE with 293% completion score",
+        "GRATITUDE: Excellent consistency in GRATITUDE routines",
+        "GRATITUDE: 'Maui-Gewohnheit' is your star routine in GRATITUDE"
+      ],
+      "opportunities": [],
+      "concerns": [
+        "MOVEMENT: Low engagement in MOVEMENT - only 3 of 22 routines active",
+        "STRESS: Low engagement in STRESS - only 0 of 5 routines active",
+        "SOCIAL_ENGAGEMENT: Low engagement in SOCIAL_ENGAGEMENT - only 0 of 4 routines active",
+        "COGNITIVE_ENHANCEMENT: Low engagement in COGNITIVE_ENHANCEMENT - only 0 of 3 routines active"
+      ]
+    },
+    "behavioral_patterns": [
+      {
+        "type": "pattern",
+        "category": "weekly",
+        "message": "You're most active on Sundays - plan important routines for this day"
+      }
+    ],
+    "achievements": [
+      {
+        "type": "consistency",
+        "title": "GRATITUDE Master",
+        "description": "Achieved 90%+ consistency in GRATITUDE"
+      },
+      {
+        "type": "streak",
+        "title": "Perfect Routine",
+        "description": "Consistent high completion of 'Maui-Gewohnheit'"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "engagement",
+      "recommendation": "Focus on STRESS pillar - it has the lowest engagement",
+      "expected_impact": "medium"
+    },
+    {
+      "priority": "high",
+      "category": "activation",
+      "recommendation": "Consider reducing the number of routines to improve focus and engagement",
+      "expected_impact": "medium"
+    },
+    {
+      "priority": "medium",
+      "category": "balance",
+      "recommendation": "Your engagement is heavily focused on one pillar - try to balance across all areas",
+      "expected_impact": "medium"
+    }
+  ],
+  "alerts": [
+    {
+      "severity": "high",
+      "type": "abandoned_pillar",
+      "message": "STRESS pillar has no active routines",
+      "action": "Consider reactivating at least one STRESS routine"
+    },
+    {
+      "severity": "high",
+      "type": "abandoned_pillar",
+      "message": "SOCIAL_ENGAGEMENT pillar has no active routines",
+      "action": "Consider reactivating at least one SOCIAL_ENGAGEMENT routine"
+    },
+    {
+      "severity": "high",
+      "type": "abandoned_pillar",
+      "message": "COGNITIVE_ENHANCEMENT pillar has no active routines",
+      "action": "Consider reactivating at least one COGNITIVE_ENHANCEMENT routine"
+    }
+  ]
+}

@@ -4,8 +4,11 @@ services:
   web:
     build: .
     ports:
-      - "5005:5005"
+      - "5003:5003"
     volumes:
       - .:/app
+    env_file:
+      - .env
     environment:
       - PYTHONPATH=/app
+      - FLASK_ENV=development

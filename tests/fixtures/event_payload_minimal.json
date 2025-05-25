@@ -1,0 +1,139 @@
+{
+  "actionPlanUniqueId": "test-123",
+  "accountId": 999,
+  "startDate": "2025-05-01T00:00:00.000Z",
+  "periodInDays": 28,
+  "pillarCompletionStats": [
+    {
+      "pillarEnum": "MOVEMENT",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 1,
+          "displayName": "Morning Jog",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 5,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 30,
+              "completedValueTotal": 150
+            },
+            {
+              "completionRate": 6,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 30,
+              "completedValueTotal": 180
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 2,
+          "displayName": "Evening Stretches",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 3,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 7,
+              "completedValueTotal": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pillarEnum": "NUTRITION",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 3,
+          "displayName": "Healthy Breakfast",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 7,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 7,
+              "completedValueTotal": 7
+            },
+            {
+              "completionRate": 7,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 7,
+              "completedValueTotal": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pillarEnum": "SLEEP",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 4,
+          "displayName": "No Screens Before Bed",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 4,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 7,
+              "completedValueTotal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pillarEnum": "STRESS",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 5,
+          "displayName": "Meditation",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        }
+      ]
+    },
+    {
+      "pillarEnum": "GRATITUDE",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 6,
+          "displayName": "Gratitude Journal",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 2,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 5,
+              "completedValueTotal": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pillarEnum": "SOCIAL_ENGAGEMENT",
+      "routineCompletionStats": []
+    },
+    {
+      "pillarEnum": "COGNITIVE_ENHANCEMENT",
+      "routineCompletionStats": []
+    }
+  ],
+  "changeLog": []
+}

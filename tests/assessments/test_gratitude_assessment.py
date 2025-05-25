@@ -1,35 +1,38 @@
 # rule_based_system/tests/test_gratitude_assessment_unittest.py
 
 import unittest
-from assessments.gratitude_assessment import GratitudeAssessment
+from rule_based_system.assessments.gratitude_assessment import GratitudeAssessment
 
 class TestGratitudeAssessment(unittest.TestCase):
 
     def test_valid_input(self):
         answers = {
-            'Ich liebe mich so, wie ich bin.': '5',
             'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '5',
-            'Jeder Tag ist eine Chance, es besser zu machen.': '5',
-            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': '5',
-            'Ich bin vielen verschiedenen Menschen dankbar.': '5'
+            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': '5',
+            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': '1',
+            'Ich bin vielen verschiedenen Menschen dankbar.': '5',
+            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': '5',
+            'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': '1'
         }
         # Calculation:
-        # Initial: [5,5,5,5,5]
-        # No reversed scoring
-        # sum=25
-        # min_score=5, max_score=25
-        # normalized=((25-5)/(25-5))*80=((20/20)*80)=80
+        # Initial: [5,5,1,5,5,1]
+        # Reverse index 2: 1 -> 6-1=5
+        # Reverse index 5: 1 -> 6-1=5
+        # Now: [5,5,5,5,5,5] sum=30
+        # min_score=5, max_score=30
+        # normalized=((30-5)/(30-5))*100=((25/25)*100)=100
         assessment = GratitudeAssessment(answers)
         score = assessment.calculate_gratitude_score()
-        self.assertAlmostEqual(score, 80.0, places=1)
+        self.assertAlmostEqual(score, 100.0, places=1)
 
     def test_missing_key(self):
         answers = {
             # Missing last key
-            'Ich liebe mich so, wie ich bin.': '5',
             'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '5',
-            'Jeder Tag ist eine Chance, es besser zu machen.': '5',
-            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': '5'
+            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': '5',
+            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': '1',
+            'Ich bin vielen verschiedenen Menschen dankbar.': '5',
+            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': '5'
         }
         with self.assertRaises(ValueError) as context:
             GratitudeAssessment(answers=answers)
@@ -37,11 +40,12 @@ class TestGratitudeAssessment(unittest.TestCase):
 
     def test_non_integer_value(self):
         answers = {
-            'Ich liebe mich so, wie ich bin.': '5',
-            'Ich habe so viel im Leben, wofür ich dankbar sein kann.': 'NotAnInt',
-            'Jeder Tag ist eine Chance, es besser zu machen.': '3',
-            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': '4',
-            'Ich bin vielen verschiedenen Menschen dankbar.': '2'
+            'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '5',
+            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': 'NotAnInt',
+            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': '3',
+            'Ich bin vielen verschiedenen Menschen dankbar.': '4',
+            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': '2',
+            'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': '1'
         }
         with self.assertRaises(ValueError) as context:
             GratitudeAssessment(answers=answers)
@@ -49,14 +53,15 @@ class TestGratitudeAssessment(unittest.TestCase):
 
     def test_all_zero(self):
         # If all are zero:
-        # [0,0,0,0,0]
+        # [0,0,0,0,0,0]
         # normalized_score=0
         answers = {
-            'Ich liebe mich so, wie ich bin.': '0',
             'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '0',
-            'Jeder Tag ist eine Chance, es besser zu machen.': '0',
-            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': '0',
-            'Ich bin vielen verschiedenen Menschen dankbar.': '0'
+            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': '0',
+            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': '0',
+            'Ich bin vielen verschiedenen Menschen dankbar.': '0',
+            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': '0',
+            'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': '0'
         }
         assessment = GratitudeAssessment(answers)
         score = assessment.calculate_gratitude_score()
@@ -64,36 +69,40 @@ class TestGratitudeAssessment(unittest.TestCase):
 
     def test_mixed_values(self):
         # Let's pick some values:
-        # [2,4,1,3,2]
-        # No reversed scoring
-        # sum=12
-        # normalized=((12-5)/(25-5))*80 = (7/20)*80=28.0
+        # [2,4,5,1,3,4]
+        # reverse index 2 (5-> 6-5=1)
+        # reverse index 5 (4-> 6-4=2)
+        # final: [2,4,1,1,3,2] sum=13
+        # normalized=((13-5)/25)*100 = (8/25)*100=32.0
         answers = {
-            'Ich liebe mich so, wie ich bin.': '2',
-            'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '4',
-            'Jeder Tag ist eine Chance, es besser zu machen.': '1',
-            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': '3',
-            'Ich bin vielen verschiedenen Menschen dankbar.': '2'
+            'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '2',
+            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': '4',
+            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': '5',
+            'Ich bin vielen verschiedenen Menschen dankbar.': '1',
+            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': '3',
+            'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': '4'
         }
         assessment = GratitudeAssessment(answers)
         score = assessment.calculate_gratitude_score()
-        self.assertAlmostEqual(score, 28.0, places=1)
+        self.assertAlmostEqual(score, 32.0, places=1)
 
     def test_medium_values(self):
-        # [3,3,3,3,3]
-        # No reversed scoring
-        # sum=15
-        # normalized=((15-5)/(25-5))*80=(10/20)*80=40.0
+        # [3,3,3,3,3,3]
+        # reverse index 2 (3->6-3=3)
+        # reverse index 5 (3->6-3=3)
+        # final: still [3,3,3,3,3,3] sum=18
+        # normalized=((18-5)/25)*100=(13/25)*100=52.0
         answers = {
-            'Ich liebe mich so, wie ich bin.': '3',
             'Ich habe so viel im Leben, wofür ich dankbar sein kann.': '3',
-            'Jeder Tag ist eine Chance, es besser zu machen.': '3',
-            'Im Nachhinein bin ich für jede Niederlage dankbar, denn sie haben mich weitergebracht.': '3',
-            'Ich bin vielen verschiedenen Menschen dankbar.': '3'
+            'Wenn ich alles auflisten müsste, wofür ich dankbar bin, wäre es eine sehr lange Liste.': '3',
+            'Wenn ich die Welt betrachte, sehe ich nicht viel, wofür ich dankbar sein könnte.': '3',
+            'Ich bin vielen verschiedenen Menschen dankbar.': '3',
+            'Je älter ich werde, desto mehr schätze ich die Menschen, Ereignisse und Situationen, die Teil meiner Lebensgeschichte waren.': '3',
+            'Es können lange Zeiträume vergehen, bevor ich etwas oder jemandem dankbar bin.': '3'
         }
         assessment = GratitudeAssessment(answers)
         score = assessment.calculate_gratitude_score()
-        self.assertAlmostEqual(score, 40.0, places=1)
+        self.assertAlmostEqual(score, 52.0, places=1)
 
 
 if __name__ == '__main__':

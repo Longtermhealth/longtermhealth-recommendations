@@ -1,0 +1,650 @@
+{
+  "actionPlanUniqueId": "1fadcdea-1536-47b8-a39c-5de3ef85fcd1",
+  "accountId": 5,
+  "startDate": "2025-05-16T00:00:00.000Z",
+  "periodInDays": 28,
+  "pillarCompletionStats": [
+    {
+      "pillarEnum": "MOVEMENT",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 461,
+          "displayName": "Sprung-Ausfallschritte",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "REPETITIONS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "REPETITIONS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 64,
+          "displayName": "Hampelmänner",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 368,
+          "displayName": "Einbeiniges Kreuzheben",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 115,
+          "displayName": "Seitliche Ausfallschritte",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 69,
+          "displayName": "Brücke (hoch und runter)",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "REPETITIONS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "REPETITIONS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 78,
+          "displayName": "Table Twist",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 103,
+          "displayName": "Brustöffner",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 38,
+          "displayName": "Flutter Kicks im Sitzen",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 413,
+          "displayName": "Scherenkicks",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 382,
+          "displayName": "Seitliche Plank mit Durchgriff links",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 401,
+          "displayName": "Herabschauender Hund in Plank",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 372,
+          "displayName": "Burpees",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 406,
+          "displayName": "Walk-outs",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 410,
+          "displayName": "Butterflies",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 419,
+          "displayName": "Vorgebeugtes Rumpfdrehen",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 453,
+          "displayName": "Squat Jumps",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 993,
+          "displayName": "Praktiziere deinen Cardio Sport",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 996,
+          "displayName": "Unterkörper-Krafttraining",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 995,
+          "displayName": "Oberkörper-Krafttraining",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 992,
+          "displayName": "Intervall-Cardio",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 994,
+          "displayName": "Core-Krafttraining",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 258,
+          "displayName": "Nicht lange sitzen",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        }
+      ]
+    },
+    {
+      "pillarEnum": "NUTRITION",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 124,
+          "displayName": "3 Handvoll Gemüse täglich",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 999,
+          "displayName": "Bewusste Ernährung",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 125,
+          "displayName": "2 Handvoll Obst täglich",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 348,
+          "displayName": "Rotes Fleisch reduzieren",
+          "scheduleCategory": "MONTHLY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 270,
+          "displayName": "Langsam essen",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 324,
+          "displayName": "Auf Weißmehlprodukte verzichten",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 320,
+          "displayName": "Alkoholfreie Woche",
+          "scheduleCategory": "WEEKLY_CHALLENGE",
+          "completionStatistics": []
+        }
+      ]
+    },
+    {
+      "pillarEnum": "STRESS",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 189,
+          "displayName": "Bewusst Pausen machen",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 356,
+          "displayName": "Tiefe Atemübung",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 358,
+          "displayName": "Meditationsstart",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 305,
+          "displayName": "Durch die Nase atmen",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 272,
+          "displayName": "Digital Detox Tag",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        }
+      ]
+    },
+    {
+      "pillarEnum": "SLEEP",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 141,
+          "displayName": "Keine Elektrogeräte im Schlafzimmer",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 964,
+          "displayName": "Schlafzimmer vorbereiten",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 142,
+          "displayName": "Heizung herunterdrehen",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 149,
+          "displayName": "Schlafzimmer nur zum Schlafen",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 148,
+          "displayName": "Dunkles Schlafzimmer",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 1,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "ROUTINE",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 143,
+          "displayName": "Kein schweres Essen am Abend",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 963,
+          "displayName": "Schlafqualität steigern",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 150,
+          "displayName": "Zimmer wechseln bei Schlaflosigkeit",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 151,
+          "displayName": "Beruhigende Musik bei Schlaflosigkeit",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 152,
+          "displayName": "Bei Schlaflosigkeit nicht auf die Uhr schauen",
+          "scheduleCategory": "WEEKLY_ROUTINE",
+          "completionStatistics": []
+        }
+      ]
+    },
+    {
+      "pillarEnum": "GRATITUDE",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 154,
+          "displayName": "Maui-Gewohnheit",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 3,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "SECONDS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 4,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "SECONDS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 7,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "SECONDS",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 990,
+          "displayName": "Gratitude Ritual",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 2,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 4,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 6,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        },
+        {
+          "routineUniqueId": 155,
+          "displayName": "Dankbarkeits-Journaling",
+          "scheduleCategory": "DAILY_ROUTINE",
+          "completionStatistics": [
+            {
+              "completionRate": 2,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 4,
+              "completionRatePeriodUnit": "WEEK",
+              "periodSequenceNo": 2,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            },
+            {
+              "completionRate": 6,
+              "completionRatePeriodUnit": "MONTH",
+              "periodSequenceNo": 1,
+              "completionUnit": "MINUTES",
+              "completionTargetTotal": 0,
+              "completedValueTotal": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pillarEnum": "SOCIAL_ENGAGEMENT",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 293,
+          "displayName": "Ein Kompliment machen",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 276,
+          "displayName": "In Kontakt bleiben",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 277,
+          "displayName": "Positives Lebenszeichen",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 278,
+          "displayName": "Freunde treffen",
+          "scheduleCategory": "WEEKLY_CHALLENGE",
+          "completionStatistics": []
+        }
+      ]
+    },
+    {
+      "pillarEnum": "COGNITIVE_ENHANCEMENT",
+      "routineCompletionStats": [
+        {
+          "routineUniqueId": 284,
+          "displayName": "Mache ein Wordle",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 288,
+          "displayName": "Gedicht lesen",
+          "scheduleCategory": "DAILY_CHALLENGE",
+          "completionStatistics": []
+        },
+        {
+          "routineUniqueId": 290,
+          "displayName": "Probiere dich in Poesie",
+          "scheduleCategory": "WEEKLY_CHALLENGE",
+          "completionStatistics": []
+        }
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "accountId": 5,
+      "eventEnum": "ROUTINE_SCHEDULE_CHANGE",
+      "eventDate": "2025-05-16T00:00:00.000Z",
+      "targetId": "993",
+      "changeTarget": "ROUTINE",
+      "eventDetails": {
+        "pillarEnum": "MOVEMENT",
+        "scheduleCategory": "WEEKLY_ROUTINE"
+      },
+      "changes": [
+        {
+          "accountId": 5,
+          "changedProperty": "SCHEDULE_DAYS",
+          "oldValue": "2",
+          "newValue": "7"
+        }
+      ]
+    }
+  ]
+}
