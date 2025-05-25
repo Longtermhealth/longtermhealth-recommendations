@@ -9,6 +9,7 @@ from src.api.routes.health_route import health_bp
 from src.api.routes.event_route import event_bp
 from src.api.routes.webhook_route import webhook_bp
 from src.api.routes.analytics_route import analytics_bp
+from src.api.routes.analytics_endpoint import analytics_endpoint_bp
 
 # Import utilities
 from src.utils.data_loader import list_strapi_matches, list_strapi_matches_with_original
@@ -43,6 +44,7 @@ def create_app(config_name=None):
     app.register_blueprint(event_bp)
     app.register_blueprint(webhook_bp)
     app.register_blueprint(analytics_bp)
+    app.register_blueprint(analytics_endpoint_bp)
     logger.info("All blueprints registered successfully")
     
     # Register error handlers
