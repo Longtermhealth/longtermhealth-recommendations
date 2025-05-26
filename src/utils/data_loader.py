@@ -4,12 +4,13 @@ import os
 import json
 import logging
 from typing import List, Dict, Any, Set
+from flask import current_app
 
 logger = logging.getLogger(__name__)
 
 
 def list_strapi_matches(matching_routines: List[Dict[str, Any]], 
-                       strapi_routines_file: str = "./data/strapi_all_routines.json") -> List[Dict[str, Any]]:
+                       strapi_routines_file: str = None) -> List[Dict[str, Any]]:
     """
     For each routine in `matching_routines`, search in the provided Strapi routines file
     for an entry with a matching `cleanedName` attribute. For every match found, print
@@ -24,6 +25,14 @@ def list_strapi_matches(matching_routines: List[Dict[str, Any]],
         list: A list of dictionaries. Each dictionary represents a matched routine with keys:
               "id", "name", and "order".
     """
+    # Use config file if no file specified
+    if strapi_routines_file is None:
+        try:
+            strapi_routines_file = current_app.config.get('STRAPI_ROUTINES_FILE', './data/strapi_all_routines.json')
+        except RuntimeError:
+            # Not in application context, use default
+            strapi_routines_file = './data/strapi_all_routines.json'
+    
     if not os.path.exists(strapi_routines_file):
         logger.error(f"Strapi routines file not found: {strapi_routines_file}")
         return []
@@ -62,7 +71,7 @@ def list_strapi_matches(matching_routines: List[Dict[str, Any]],
 
 
 def list_strapi_matches_with_original(matching_routines: List[Dict[str, Any]], 
-                                    strapi_routines_file: str = "./data/strapi_all_routines.json") -> List[Dict[str, Any]]:
+                                    strapi_routines_file: str = None) -> List[Dict[str, Any]]:
     """
     For each routine in `matching_routines`, search the Strapi routines file for an entry
     with a matching `cleanedName` attribute. For every match found, print and collect its id,
@@ -77,6 +86,14 @@ def list_strapi_matches_with_original(matching_routines: List[Dict[str, Any]],
         list: A list of dictionaries. Each dictionary represents a matched routine with keys:
               "id", "name", "order", and "original" (the full JSON object from Strapi).
     """
+    # Use config file if no file specified
+    if strapi_routines_file is None:
+        try:
+            strapi_routines_file = current_app.config.get('STRAPI_ROUTINES_FILE', './data/strapi_all_routines.json')
+        except RuntimeError:
+            # Not in application context, use default
+            strapi_routines_file = './data/strapi_all_routines.json'
+    
     if not os.path.exists(strapi_routines_file):
         logger.error(f"Strapi routines file not found: {strapi_routines_file}")
         return []

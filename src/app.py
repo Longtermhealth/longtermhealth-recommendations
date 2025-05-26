@@ -33,7 +33,18 @@ def create_app(config_name=None):
     
     # Load configuration
     config_name = config_name or os.getenv('FLASK_ENV', 'production')
-    app.config['DEBUG'] = config_name == 'development'
+    
+    # Import config classes
+    from src.config import DevelopmentConfig, ProductionConfig, TestingConfig
+    
+    config_mapping = {
+        'development': DevelopmentConfig,
+        'production': ProductionConfig,
+        'testing': TestingConfig
+    }
+    
+    config_class = config_mapping.get(config_name, ProductionConfig)
+    app.config.from_object(config_class)
     
     # Log startup info
     logger.info(f"Starting LTH Recommendation Service in {config_name} mode")

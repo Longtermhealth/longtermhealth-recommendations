@@ -31,7 +31,7 @@ class Config:
     AZURE_BLOB_CONNECTION_STRING = os.getenv("AZURE_BLOB_CONNECTION_STRING")
     
     # Data files
-    STRAPI_ROUTINES_FILE = "./data/strapi_all_routines.json"
+    STRAPI_ROUTINES_FILE = "./data/strapi_all_routines.json"  # Default/fallback
     
     # Calculation parameters
     SCORE_UPDATE_K = 0.025
@@ -56,6 +56,7 @@ class DevelopmentConfig(Config):
     
     # Development specific settings
     PROPAGATE_EXCEPTIONS = True
+    STRAPI_ROUTINES_FILE = "./data/environments/dev/strapi_all_routines_dev.json"
 
 
 class ProductionConfig(Config):
@@ -64,6 +65,7 @@ class ProductionConfig(Config):
     
     # Production specific settings
     PROPAGATE_EXCEPTIONS = False
+    STRAPI_ROUTINES_FILE = "./data/environments/staging/strapi_all_routines_staging.json"
 
 
 class TestingConfig(Config):

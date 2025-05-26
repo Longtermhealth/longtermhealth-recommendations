@@ -26,8 +26,15 @@ def load_json_data(file_path: str) -> List[Dict[str, Any]]:
         return []
 
 
-def new_load_routines() -> Dict[str, Dict[str, Any]]:
-    return load_json_data('./data/strapi_all_routines.json')
+def new_load_routines(app_env: str = None) -> Dict[str, Dict[str, Any]]:
+    """Load routines based on environment"""
+    if app_env == "development":
+        return load_json_data('./data/environments/dev/strapi_all_routines_dev.json')
+    elif app_env == "production" or app_env == "staging":
+        return load_json_data('./data/environments/staging/strapi_all_routines_staging.json')
+    else:
+        # Fallback to default
+        return load_json_data('./data/strapi_all_routines.json')
 
 def new_load_rules() -> Dict[str, Any]:
     return load_json_data('./data/rules.json')
