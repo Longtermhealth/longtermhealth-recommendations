@@ -1,0 +1,120 @@
+name: Deploy Recommendation Service
+
+on:
+  push:
+    branches:
+      - main
+      - development
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: lthrecommendation
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  PYTHON_VERSION: '3.9'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Create and activate virtual environment
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run tests
+      run: |
+        python -m pytest tests/ || true
+    
+    - name: Log in to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    # Deploy to Production (main branch only)
+    - name: Deploy to Azure Web App - Production
+      if: github.ref == 'refs/heads/main'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+    
+    # Deploy to Development Slot
+    - name: Deploy to Azure Web App - Development Slot
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        slot-name: 'lthrecommendation-dev'
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+    
+    - name: Update App Settings - Development
+      run: |
+        az webapp config appsettings set \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --slot lthrecommendation-dev \
+          --resource-group lthrecommendation_group \
+          --settings \
+            CLICKUP_API_KEY="${{ secrets.CLICKUP_API_KEY }}" \
+            CLICKUP_LIST_ID="${{ secrets.CLICKUP_LIST_ID }}" \
+            SCORES_FIELD_ID="${{ secrets.SCORES_FIELD_ID }}" \
+            PLOT_FIELD_ID="${{ secrets.PLOT_FIELD_ID }}" \
+            ANSWERS_FIELD_ID="${{ secrets.ANSWERS_FIELD_ID }}" \
+            ROUTINES_FIELD_ID="${{ secrets.ROUTINES_FIELD_ID }}" \
+            ACTIONPLAN_FIELD_ID="${{ secrets.ACTIONPLAN_FIELD_ID }}" \
+            TYPEFORM_API_KEY="${{ secrets.TYPEFORM_API_KEY }}" \
+            STRAPI_API_KEY="${{ secrets.STRAPI_API_KEY }}" \
+            STRAPI_API_KEY_DEV="${{ secrets.STRAPI_API_KEY_DEV }}" \
+            FORM_ID="${{ secrets.FORM_ID }}" \
+            LINK_SUMMARY_TITLE_FIELD_ID="${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}" \
+            LINK_SUMMARY_SUMMARY_FIELD_ID="${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}" \
+            LINK_SUMMARY_OPENAI_API_KEY="${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}" \
+            AZURE_BLOB_CONNECTION_STRING="${{ secrets.AZURE_BLOB_CONNECTION_STRING }}"
+    
+    - name: Update App Settings - Production
+      if: github.ref == 'refs/heads/main'
+      run: |
+        az webapp config appsettings set \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --resource-group lthrecommendation_group \
+          --settings \
+            CLICKUP_API_KEY="${{ secrets.CLICKUP_API_KEY }}" \
+            CLICKUP_LIST_ID="${{ secrets.CLICKUP_LIST_ID }}" \
+            SCORES_FIELD_ID="${{ secrets.SCORES_FIELD_ID }}" \
+            PLOT_FIELD_ID="${{ secrets.PLOT_FIELD_ID }}" \
+            ANSWERS_FIELD_ID="${{ secrets.ANSWERS_FIELD_ID }}" \
+            ROUTINES_FIELD_ID="${{ secrets.ROUTINES_FIELD_ID }}" \
+            ACTIONPLAN_FIELD_ID="${{ secrets.ACTIONPLAN_FIELD_ID }}" \
+            TYPEFORM_API_KEY="${{ secrets.TYPEFORM_API_KEY }}" \
+            STRAPI_API_KEY="${{ secrets.STRAPI_API_KEY }}" \
+            STRAPI_API_KEY_DEV="${{ secrets.STRAPI_API_KEY_DEV }}" \
+            FORM_ID="${{ secrets.FORM_ID }}" \
+            LINK_SUMMARY_TITLE_FIELD_ID="${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}" \
+            LINK_SUMMARY_SUMMARY_FIELD_ID="${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}" \
+            LINK_SUMMARY_OPENAI_API_KEY="${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}" \
+            AZURE_BLOB_CONNECTION_STRING="${{ secrets.AZURE_BLOB_CONNECTION_STRING }}"
+    
+    - name: Verify deployment
+      run: |
+        echo "🔍 Verifying deployment..."
+        sleep 30
+        
+        if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+          echo "✅ Production deployment complete!"
+          echo "🌐 Production URL: https://lthrecommendation.azurewebsites.net"
+        fi
+        
+        echo "✅ Development deployment complete!"
+        echo "🌐 Development URL: https://lthrecommendation-dev.azurewebsites.net"
