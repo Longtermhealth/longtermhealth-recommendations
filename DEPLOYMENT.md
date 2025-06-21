@@ -13,7 +13,7 @@ This guide explains how to deploy the LTH Recommendation Service and User Test S
 ```bash
 # Replace with your values
 SUBSCRIPTION_ID="your-subscription-id"
-RESOURCE_GROUP="lthrecommendation_group"
+RESOURCE_GROUP="rg-sponsorship"
 APP_NAME="lthrecommendation"
 
 # Create service principal
@@ -130,13 +130,13 @@ git push origin development
 # Recommendation service logs
 az webapp log tail \
   --name lthrecommendation \
-  --resource-group lthrecommendation_group
+  --resource-group rg-sponsorship
 
 # User test service logs
 az webapp log tail \
   --name lthrecommendation \
   --slot usertest-dev \
-  --resource-group lthrecommendation_group
+  --resource-group rg-sponsorship
 ```
 
 ### Check Deployment Status
@@ -144,14 +144,14 @@ az webapp log tail \
 # List deployment slots
 az webapp deployment slot list \
   --name lthrecommendation \
-  --resource-group lthrecommendation_group \
+  --resource-group rg-sponsorship \
   -o table
 
 # Show slot configuration
 az webapp show \
   --name lthrecommendation \
   --slot usertest-dev \
-  --resource-group lthrecommendation_group
+  --resource-group rg-sponsorship
 ```
 
 ## Troubleshooting
@@ -179,20 +179,20 @@ az webapp show \
 az webapp restart \
   --name lthrecommendation \
   --slot usertest-dev \
-  --resource-group lthrecommendation_group
+  --resource-group rg-sponsorship
 
 # Update app settings
 az webapp config appsettings set \
   --name lthrecommendation \
   --slot usertest-dev \
-  --resource-group lthrecommendation_group \
+  --resource-group rg-sponsorship \
   --settings KEY=VALUE
 
 # SSH into container (if enabled)
 az webapp ssh \
   --name lthrecommendation \
   --slot usertest-dev \
-  --resource-group lthrecommendation_group
+  --resource-group rg-sponsorship
 ```
 
 ## Security Notes

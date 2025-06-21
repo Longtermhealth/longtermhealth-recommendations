@@ -65,7 +65,7 @@ jobs:
         az webapp config appsettings set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot lthrecommendation-dev \
-          --resource-group lthrecommendation_group \
+          --resource-group rg-sponsorship \
           --settings \
             CLICKUP_API_KEY="${{ secrets.CLICKUP_API_KEY }}" \
             CLICKUP_LIST_ID="${{ secrets.CLICKUP_LIST_ID }}" \
@@ -88,7 +88,7 @@ jobs:
       run: |
         az webapp config appsettings set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
-          --resource-group lthrecommendation_group \
+          --resource-group rg-sponsorship \
           --settings \
             CLICKUP_API_KEY="${{ secrets.CLICKUP_API_KEY }}" \
             CLICKUP_LIST_ID="${{ secrets.CLICKUP_LIST_ID }}" \

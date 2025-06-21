@@ -50,11 +50,11 @@ jobs:
     - name: Create deployment slot for user-test service (if not exists)
       run: |
         # Check if slot exists
-        if ! az webapp deployment slot list --name ${{ env.AZURE_WEBAPP_NAME }} --resource-group lthrecommendation_group --query "[?name=='usertest-dev']" | grep -q "usertest-dev"; then
+        if ! az webapp deployment slot list --name ${{ env.AZURE_WEBAPP_NAME }} --resource-group rg-sponsorship --query "[?name=='usertest-dev']" | grep -q "usertest-dev"; then
           echo "Creating usertest-dev deployment slot..."
           az webapp deployment slot create \
             --name ${{ env.AZURE_WEBAPP_NAME }} \
-            --resource-group lthrecommendation_group \
+            --resource-group rg-sponsorship \
             --slot usertest-dev
         else
           echo "Slot usertest-dev already exists"
@@ -77,7 +77,7 @@ jobs:
         az webapp config appsettings set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot usertest-dev \
-          --resource-group lthrecommendation_group \
+          --resource-group rg-sponsorship \
           --settings \
             CLICKUP_API_KEY="${{ secrets.USER_TEST_CLICKUP_API_KEY }}" \
             CLICKUP_LIST_ID="${{ secrets.USER_TEST_CLICKUP_LIST_ID }}" \
@@ -93,7 +93,7 @@ jobs:
         az webapp config set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot usertest-dev \
-          --resource-group lthrecommendation_group \
+          --resource-group rg-sponsorship \
           --startup-file "cd /home/site/wwwroot && python src/app.py"
     
     - name: Restart the slot
@@ -101,7 +101,7 @@ jobs:
         az webapp restart \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot usertest-dev \
-          --resource-group lthrecommendation_group
+          --resource-group rg-sponsorship
     
     - name: Verify deployment
       run: |
