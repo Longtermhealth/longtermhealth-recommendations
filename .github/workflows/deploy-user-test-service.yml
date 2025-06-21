@@ -1,0 +1,71 @@
+name: Deploy User Test Service
+
+on:
+  push:
+    branches:
+      - development
+    paths:
+      - 'user-test-service/**'
+      - '.github/workflows/deploy-user-test-service.yml'
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: lthrecommendation
+  PYTHON_VERSION: '3.9'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Log in to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Deploy to Azure Web App
+      run: |
+        cd user-test-service
+        zip -r ../deploy.zip . -x "*.pyc" -x "__pycache__/*" -x ".env*"
+        cd ..
+        
+        az webapp deployment source config-zip \
+          --resource-group rg-sponsorship \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --slot usertest-dev \
+          --src deploy.zip
+    
+    - name: Configure App Settings
+      run: |
+        az webapp config appsettings set \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --slot usertest-dev \
+          --resource-group rg-sponsorship \
+          --settings \
+            CLICKUP_API_KEY="${{ secrets.USER_TEST_CLICKUP_API_KEY }}" \
+            CLICKUP_LIST_ID="${{ secrets.USER_TEST_CLICKUP_LIST_ID }}" \
+            KEY_FEEDBACK_FIELD_ID="${{ secrets.USER_TEST_KEY_FEEDBACK_FIELD_ID }}" \
+            EMAIL_FIELD_ID="${{ secrets.USER_TEST_EMAIL_FIELD_ID }}" \
+            TYPEFORM_API_TOKEN="${{ secrets.USER_TEST_TYPEFORM_API_TOKEN }}" \
+            USER_TEST_SERVICE_PORT="8000" \
+            SCM_DO_BUILD_DURING_DEPLOYMENT="true" \
+            WEBSITE_RUN_FROM_PACKAGE="1"
+    
+    - name: Restart and verify deployment
+      run: |
+        az webapp restart \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --slot usertest-dev \
+          --resource-group rg-sponsorship
+        
+        echo "✅ Deployment complete!"
+        echo "🌐 Service URL: https://lthrecommendation-usertest-dev.azurewebsites.net"
+        echo "📝 Typeform Webhook URL: https://lthrecommendation-usertest-dev.azurewebsites.net/survey"
