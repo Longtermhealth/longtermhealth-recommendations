@@ -1,5 +1,6 @@
 trigger:
 - main
+- development
 
 resources:
   - repo: self
@@ -8,14 +9,21 @@ variables:
   dockerRegistryServiceConnection: 'a4f04d2d-a3e1-40ae-80aa-321005f23c28'
   containerRegistry: 'lthrecommendations.azurecr.io'
 
+  # Recommendation Service
   imageRepositoryMain: 'lthrecommendations_main'
   dockerfileMain: '$(Build.SourcesDirectory)/Dockerfile.main'
+  
+  # User Test Service
+  imageRepositoryUserTest: 'lthusertest'
+  dockerfileUserTest: '$(Build.SourcesDirectory)/user-test-service/Dockerfile'
+  
   tag: '$(Build.BuildId)'
   vmImageName: 'ubuntu-latest'
 
   lthproductionAppName: 'lthrecommendation'
   lthdevSlotName: 'lthrecommendation-dev'
 
+  # Recommendation Service Environment Variables
   CLICKUP_API_KEY: $(CLICKUP_API_KEY)
   CLICKUP_LIST_ID: $(CLICKUP_LIST_ID)
   SCORES_FIELD_ID: $(SCORES_FIELD_ID)
@@ -31,19 +39,28 @@ variables:
   LINK_SUMMARY_SUMMARY_FIELD_ID: $(LINK_SUMMARY_SUMMARY_FIELD_ID)
   LINK_SUMMARY_OPENAI_API_KEY: $(LINK_SUMMARY_OPENAI_API_KEY)
   AZURE_BLOB_CONNECTION_STRING: $(AZURE_BLOB_CONNECTION_STRING)
+  
+  # User Test Service Environment Variables
+  USER_TEST_CLICKUP_API_KEY: $(USER_TEST_CLICKUP_API_KEY)
+  USER_TEST_CLICKUP_LIST_ID: $(USER_TEST_CLICKUP_LIST_ID)
+  USER_TEST_KEY_FEEDBACK_FIELD_ID: $(USER_TEST_KEY_FEEDBACK_FIELD_ID)
+  USER_TEST_EMAIL_FIELD_ID: $(USER_TEST_EMAIL_FIELD_ID)
+  USER_TEST_TYPEFORM_API_TOKEN: $(USER_TEST_TYPEFORM_API_TOKEN)
 
 stages:
 - stage: Build
   displayName: Build and Push Stage
   jobs:
-  - job: Build
-    displayName: Build Docker Image
+  # Build Recommendation Service
+  - job: BuildRecommendation
+    displayName: Build Recommendation Service
+    condition: not(contains(variables['Build.SourceVersionMessage'], '[user-test-only]'))
     pool:
       vmImage: $(vmImageName)
     steps:
     - checkout: self
     - task: Docker@2
-      displayName: Build and push main_flask image
+      displayName: Build and push recommendation service image
       inputs:
         command: buildAndPush
         containerRegistry: $(dockerRegistryServiceConnection)
@@ -69,33 +86,101 @@ stages:
           LINK_SUMMARY_OPENAI_API_KEY=$(LINK_SUMMARY_OPENAI_API_KEY)
           AZURE_BLOB_CONNECTION_STRING=$(AZURE_BLOB_CONNECTION_STRING)
 
+  # Build User Test Service
+  - job: BuildUserTest
+    displayName: Build User Test Service
+    condition: |
+      or(
+        contains(variables['Build.SourceVersionMessage'], '[user-test]'),
+        contains(variables['Build.SourceVersionMessage'], '[deploy-all]'),
+        contains(variables['Build.SourceBranch'], 'development')
+      )
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - checkout: self
+    - task: Docker@2
+      displayName: Build and push user test service image
+      inputs:
+        command: buildAndPush
+        containerRegistry: $(dockerRegistryServiceConnection)
+        repository: $(imageRepositoryUserTest)
+        dockerfile: $(dockerfileUserTest)
+        tags: |
+          $(tag)
+        buildContext: '$(Build.SourcesDirectory)/user-test-service'
+
 - stage: Deploy
   displayName: Deploy Stage
   dependsOn: Build
   jobs:
-  - job: DeployProduction
-    displayName: Deploy to Production Slot
+  # Deploy Recommendation Service to Production
+  - job: DeployRecommendationProduction
+    displayName: Deploy Recommendation Service to Production
+    condition: |
+      and(
+        succeeded(),
+        eq(variables['Build.SourceBranch'], 'refs/heads/main'),
+        not(contains(variables['Build.SourceVersionMessage'], '[user-test-only]'))
+      )
     pool:
       vmImage: $(vmImageName)
     steps:
     - task: AzureWebAppContainer@1
-      displayName: Deploy main_flask image to Production
+      displayName: Deploy recommendation service to Production
       inputs:
         azureSubscription: '$(dockerRegistryServiceConnection)'
         appName: '$(lthproductionAppName)'
         containers: |
           $(containerRegistry)/$(imageRepositoryMain):$(tag)
 
-  - job: DeployDev
-    displayName: Deploy to Dev Slot
+  # Deploy Recommendation Service to Dev Slot
+  - job: DeployRecommendationDev
+    displayName: Deploy Recommendation Service to Dev Slot
+    condition: |
+      and(
+        succeeded(),
+        not(contains(variables['Build.SourceVersionMessage'], '[user-test-only]'))
+      )
     pool:
       vmImage: $(vmImageName)
     steps:
     - task: AzureWebAppContainer@1
-      displayName: Deploy main_flask image to Dev Slot
+      displayName: Deploy recommendation service to Dev Slot
       inputs:
         azureSubscription: '$(dockerRegistryServiceConnection)'
         appName: '$(lthproductionAppName)'
         slotName: '$(lthdevSlotName)'
         containers: |
           $(containerRegistry)/$(imageRepositoryMain):$(tag)
+
+  # Deploy User Test Service (Development only for now)
+  - job: DeployUserTestDev
+    displayName: Deploy User Test Service to Dev
+    condition: |
+      and(
+        succeeded(),
+        or(
+          contains(variables['Build.SourceVersionMessage'], '[user-test]'),
+          contains(variables['Build.SourceVersionMessage'], '[deploy-all]'),
+          eq(variables['Build.SourceBranch'], 'refs/heads/development')
+        )
+      )
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: AzureWebAppContainer@1
+      displayName: Deploy user test service to Dev Slot
+      inputs:
+        azureSubscription: '$(dockerRegistryServiceConnection)'
+        appName: '$(lthproductionAppName)'
+        slotName: 'usertest-dev'
+        containers: |
+          $(containerRegistry)/$(imageRepositoryUserTest):$(tag)
+        appSettings: |
+          -CLICKUP_API_KEY $(USER_TEST_CLICKUP_API_KEY)
+          -CLICKUP_LIST_ID $(USER_TEST_CLICKUP_LIST_ID)
+          -KEY_FEEDBACK_FIELD_ID $(USER_TEST_KEY_FEEDBACK_FIELD_ID)
+          -EMAIL_FIELD_ID $(USER_TEST_EMAIL_FIELD_ID)
+          -TYPEFORM_API_TOKEN $(USER_TEST_TYPEFORM_API_TOKEN)
+          -USER_TEST_SERVICE_PORT 5001
