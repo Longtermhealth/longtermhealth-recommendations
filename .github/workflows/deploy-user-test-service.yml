@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - development
+      - main
     paths:
       - 'user-test-service/**'
       - '.github/workflows/deploy-user-test-service.yml'
@@ -11,61 +12,83 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: lthrecommendation
-  PYTHON_VERSION: '3.9'
+  CONTAINER_REGISTRY: lthrecommendations.azurecr.io
+  IMAGE_NAME: lthusertest
+  RESOURCE_GROUP: rg-sponsorship
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
     
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
-    
     - name: Log in to Azure
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
-    - name: Deploy to Azure Web App
+    - name: Log in to Azure Container Registry
+      run: |
+        az acr login --name lthrecommendations
+    
+    - name: Build and push Docker image
       run: |
         cd user-test-service
-        zip -r ../deploy.zip . -x "*.pyc" -x "__pycache__/*" -x ".env*"
-        cd ..
+        docker build -t ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
+        docker push ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
         
-        az webapp deployment source config-zip \
-          --resource-group rg-sponsorship \
-          --name ${{ env.AZURE_WEBAPP_NAME }} \
-          --slot usertest-dev \
-          --src deploy.zip
+        # Also tag as latest for development branch
+        if [[ "${{ github.ref }}" == "refs/heads/development" ]]; then
+          docker tag ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          docker push ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        fi
     
     - name: Configure App Settings
       run: |
         az webapp config appsettings set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot usertest-dev \
-          --resource-group rg-sponsorship \
+          --resource-group ${{ env.RESOURCE_GROUP }} \
           --settings \
             CLICKUP_API_KEY="${{ secrets.USER_TEST_CLICKUP_API_KEY }}" \
             CLICKUP_LIST_ID="${{ secrets.USER_TEST_CLICKUP_LIST_ID }}" \
             KEY_FEEDBACK_FIELD_ID="${{ secrets.USER_TEST_KEY_FEEDBACK_FIELD_ID }}" \
             EMAIL_FIELD_ID="${{ secrets.USER_TEST_EMAIL_FIELD_ID }}" \
             TYPEFORM_API_TOKEN="${{ secrets.USER_TEST_TYPEFORM_API_TOKEN }}" \
-            USER_TEST_SERVICE_PORT="8000" \
-            SCM_DO_BUILD_DURING_DEPLOYMENT="true" \
-            WEBSITE_RUN_FROM_PACKAGE="1"
+            USER_TEST_SERVICE_PORT="5001" \
+            WEBSITES_PORT="5001"
+    
+    - name: Deploy container to Azure Web App
+      run: |
+        az webapp config container set \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --slot usertest-dev \
+          --resource-group ${{ env.RESOURCE_GROUP }} \
+          --docker-custom-image-name ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
     
     - name: Restart and verify deployment
       run: |
         az webapp restart \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot usertest-dev \
-          --resource-group rg-sponsorship
+          --resource-group ${{ env.RESOURCE_GROUP }}
         
         echo "✅ Deployment complete!"
+        echo "🐳 Docker image: ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
         echo "🌐 Service URL: https://lthrecommendation-usertest-dev.azurewebsites.net"
         echo "📝 Typeform Webhook URL: https://lthrecommendation-usertest-dev.azurewebsites.net/survey"
+        echo ""
+        echo "⏳ Waiting for service to start (30 seconds)..."
+        sleep 30
+        
+        echo "🔍 Checking service health..."
+        HEALTH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://lthrecommendation-usertest-dev.azurewebsites.net/health || echo "000")
+        
+        if [ "$HEALTH_STATUS" = "200" ]; then
+          echo "✅ Service is healthy!"
+        else
+          echo "⚠️ Service returned status: $HEALTH_STATUS"
+          echo "📋 Check logs with: az webapp log tail --name ${{ env.AZURE_WEBAPP_NAME }} --slot usertest-dev --resource-group ${{ env.RESOURCE_GROUP }}"
+        fi

@@ -1,0 +1,1 @@
+cd /home/site/wwwroot && export PYTHONPATH=/home/site/wwwroot/src && gunicorn --bind 0.0.0.0:8000 --timeout 600 --workers 1 --chdir src app:app

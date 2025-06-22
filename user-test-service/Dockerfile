@@ -21,9 +21,10 @@ RUN mkdir -p /app/cache
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 ENV FLASK_APP=src/app.py
+ENV PYTHONPATH=/app/src:$PYTHONPATH
 
 # Expose port
 EXPOSE 5001
 
-# Run the application
-CMD ["python", "src/app.py"]
+# Run the application with gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:5001", "--timeout", "600", "--access-logfile", "-", "--error-logfile", "-", "--chdir", "src", "app:app"]
