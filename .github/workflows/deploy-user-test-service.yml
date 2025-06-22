@@ -57,16 +57,51 @@ jobs:
             KEY_FEEDBACK_FIELD_ID="${{ secrets.USER_TEST_KEY_FEEDBACK_FIELD_ID }}" \
             EMAIL_FIELD_ID="${{ secrets.USER_TEST_EMAIL_FIELD_ID }}" \
             TYPEFORM_API_TOKEN="${{ secrets.USER_TEST_TYPEFORM_API_TOKEN }}" \
-            USER_TEST_SERVICE_PORT="5001" \
-            WEBSITES_PORT="5001"
+            WEBSITES_PORT="5001" \
+            PORT="5001"
+    
+    - name: Configure Container Registry Access
+      run: |
+        # Ensure managed identity is assigned
+        IDENTITY=$(az webapp identity show \
+          --name ${{ env.AZURE_WEBAPP_NAME }} \
+          --slot usertest-dev \
+          --resource-group ${{ env.RESOURCE_GROUP }} \
+          --query principalId -o tsv || echo "")
+        
+        if [ -z "$IDENTITY" ]; then
+          echo "Assigning managed identity..."
+          IDENTITY=$(az webapp identity assign \
+            --name ${{ env.AZURE_WEBAPP_NAME }} \
+            --slot usertest-dev \
+            --resource-group ${{ env.RESOURCE_GROUP }} \
+            --query principalId -o tsv)
+        fi
+        
+        echo "Managed Identity: $IDENTITY"
+        
+        # Grant ACR pull permission
+        ACR_ID=$(az acr show --name lthrecommendations --query id -o tsv)
+        az role assignment create \
+          --assignee $IDENTITY \
+          --scope $ACR_ID \
+          --role "AcrPull" 2>/dev/null || echo "Role already assigned"
     
     - name: Deploy container to Azure Web App
       run: |
+        # Get ACR credentials
+        ACR_USERNAME=$(az acr credential show --name lthrecommendations --query username -o tsv)
+        ACR_PASSWORD=$(az acr credential show --name lthrecommendations --query "passwords[0].value" -o tsv)
+        
+        # Configure container with credentials
         az webapp config container set \
           --name ${{ env.AZURE_WEBAPP_NAME }} \
           --slot usertest-dev \
           --resource-group ${{ env.RESOURCE_GROUP }} \
-          --docker-custom-image-name ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          --docker-custom-image-name ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
+          --docker-registry-server-url https://${{ env.CONTAINER_REGISTRY }} \
+          --docker-registry-server-user $ACR_USERNAME \
+          --docker-registry-server-password "$ACR_PASSWORD"
     
     - name: Restart and verify deployment
       run: |
