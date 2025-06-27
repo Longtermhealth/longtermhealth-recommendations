@@ -3,7 +3,7 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any, Optional, Set
 from src.scheduling.filter_service import main as get_routines_with_defaults
-from src.utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores
+from src.utils.strapi_api import strapi_post_action_plan, strapi_post_health_scores, post_health_scores_to_internal_endpoint
 
 
 SUPER_ROUTINE_CONFIG = {
@@ -2336,9 +2336,13 @@ def main(host):
     if app_env == "development":
         strapi_post_action_plan(final_action_plan, account_id, 'development')
         strapi_post_health_scores(health_scores_with_tag, 'development')
+        # Also post to internal endpoint
+        post_health_scores_to_internal_endpoint(health_scores_with_tag, 'development')
     else:
         strapi_post_action_plan(final_action_plan, account_id, 'production')
         strapi_post_health_scores(health_scores_with_tag, 'production')
+        # Also post to internal endpoint
+        post_health_scores_to_internal_endpoint(health_scores_with_tag, 'production')
 
 
     return final_action_plan
