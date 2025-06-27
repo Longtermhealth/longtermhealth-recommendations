@@ -42,6 +42,9 @@ jobs:
             LINK_SUMMARY_TITLE_FIELD_ID=${{ secrets.LINK_SUMMARY_TITLE_FIELD_ID }}
             LINK_SUMMARY_SUMMARY_FIELD_ID=${{ secrets.LINK_SUMMARY_SUMMARY_FIELD_ID }}
             LINK_SUMMARY_OPENAI_API_KEY=${{ secrets.LINK_SUMMARY_OPENAI_API_KEY }}
+            INTERNAL_API_KEY_DEV=${{ secrets.INTERNAL_API_KEY_DEV }}
+            INTERNAL_API_KEY_STAGING=${{ secrets.INTERNAL_API_KEY_STAGING }}
+            AZURE_BLOB_CONNECTION_STRING=${{ secrets.AZURE_BLOB_CONNECTION_STRING }}
 
   deploy-production:
     if: github.ref == 'refs/heads/main'

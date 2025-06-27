@@ -83,3 +83,9 @@ lth/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+.env
+*.xml
+*.json
+COMPLETE_FINAL_SECRETS.md
+ALL_SECRETS_COMPLETE.md
+FINAL_ALL_SECRETS.md
