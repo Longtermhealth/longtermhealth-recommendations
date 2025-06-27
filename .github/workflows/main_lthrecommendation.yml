@@ -18,13 +18,13 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: 'https://lthrecommendations.azurecr.io'
-          username: ${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}
-          password: ${{ secrets.AzureAppService_ContainerPassword_f3b8cef230df4aad84209450f8dad3d6 }}
+          username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_88A5EB09FFD74A65809ED3D9CBE17E99 }}
+          password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD_F3B8CEF230DF4AAD84209450F8DAD3D6 }}
       - name: Build and push container image
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}
+          tags: lthrecommendations.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_88A5EB09FFD74A65809ED3D9CBE17E99 }}/lthrecommendations:${{ github.sha }}
           file: ./Dockerfile
           build-args: |
             APP_ENV=${{ startsWith(github.ref, 'refs/heads/development') && 'Development' || 'Production' }}            
@@ -53,7 +53,7 @@ jobs:
         with:
           app-name: 'lthrecommendation'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PRODUCTION }}
-          images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
+          images: 'lthrecommendations.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_88A5EB09FFD74A65809ED3D9CBE17E99 }}/lthrecommendations:${{ github.sha }}'
 
   deploy-development:
     if: github.ref == 'refs/heads/development'
@@ -66,4 +66,4 @@ jobs:
           app-name: 'lthrecommendation'
           slot-name: 'dev'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DEV }}
-          images: 'lthrecommendations.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_88a5eb09ffd74a65809ed3d9cbe17e99 }}/lthrecommendations:${{ github.sha }}'
+          images: 'lthrecommendations.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_88A5EB09FFD74A65809ED3D9CBE17E99 }}/lthrecommendations:${{ github.sha }}'
