@@ -268,3 +268,51 @@ def strapi_post_health_scores(healthscores_with_tags, environment):
             print("Response is not JSON, raw content:", response.text)
         print("================================")
 
+
+def post_health_scores_to_internal_endpoint(healthscores_with_tags, environment):
+    """Post health scores to the new internal endpoint"""
+    # Get internal API keys from environment
+    INTERNAL_API_KEY_DEV = os.getenv("INTERNAL_API_KEY_DEV")
+    INTERNAL_API_KEY_STAGING = os.getenv("INTERNAL_API_KEY_STAGING")
+    
+    # Extract account ID from the health scores data
+    account_id = healthscores_with_tags.get('data', {}).get('accountId')
+    if not account_id:
+        print("ERROR: No accountId found in health scores data")
+        return None
+    
+    # Determine environment and set appropriate values
+    if environment == 'development':
+        base_url = "https://bluesphere.dev.longtermhealth.de"
+        api_key = INTERNAL_API_KEY_DEV
+    else:
+        base_url = "https://bluesphere.staging.longtermhealth.de"
+        api_key = INTERNAL_API_KEY_STAGING
+    
+    # Construct the endpoint URL
+    internal_endpoint = f"{base_url}/account/{account_id}/health-score"
+    
+    # Set headers with the internal API key
+    headers = {
+        'INTERNAL_API_KEY': api_key,
+        'Content-Type': 'application/json'
+    }
+    
+    print(f"=== Posting to Internal Health Score Endpoint ({environment}) ===")
+    print(f"URL: {internal_endpoint}")
+    print(f"Account ID: {account_id}")
+    
+    try:
+        response = requests.post(internal_endpoint, headers=headers, json=healthscores_with_tags)
+        print(f"Response Status: {response.status_code}")
+        
+        if response.status_code == 200:
+            print("Successfully posted to internal endpoint")
+        else:
+            print(f"Error response: {response.text}")
+            
+        return response
+    except Exception as e:
+        print(f"Error posting to internal endpoint: {e}")
+        return None
+
