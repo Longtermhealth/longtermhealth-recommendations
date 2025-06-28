@@ -11,7 +11,7 @@ variables:
 
   # Recommendation Service
   imageRepositoryMain: 'lthrecommendations_main'
-  dockerfileMain: '$(Build.SourcesDirectory)/Dockerfile.main'
+  dockerfileMain: '$(Build.SourcesDirectory)/docker/Dockerfile.main'
   
   # User Test Service
   imageRepositoryUserTest: 'lthusertest'

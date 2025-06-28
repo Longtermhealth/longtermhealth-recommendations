@@ -25,7 +25,7 @@ jobs:
         with:
           push: true
           tags: lthrecommendations.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME_88A5EB09FFD74A65809ED3D9CBE17E99 }}/lthrecommendations:${{ github.sha }}
-          file: ./Dockerfile
+          file: ./docker/Dockerfile
           build-args: |
             APP_ENV=${{ startsWith(github.ref, 'refs/heads/development') && 'Development' || 'Production' }}            
             CLICKUP_API_KEY=${{ secrets.CLICKUP_API_KEY }}
