@@ -89,3 +89,9 @@ dmypy.json
 COMPLETE_FINAL_SECRETS.md
 ALL_SECRETS_COMPLETE.md
 FINAL_ALL_SECRETS.md
+REPOSITORY_MANAGEMENT_GUIDE.md
+scripts/
+collected_secrets/
+archive_unused/
+.DS_Store
+.coverage
